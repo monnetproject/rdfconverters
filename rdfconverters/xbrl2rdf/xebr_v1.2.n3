@@ -1,0 +1,1054 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+@prefix skos: <http://www.dfki.de/lt/skos.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+xebr:CompanyHistoryReport rdf:type owl:Class .
+<http://www.w3.org/2001/XMLSchema#monetary> rdf:type <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+xebr:Report rdf:type owl:Class .
+xebr:partOf rdf:type owl:ObjectProperty .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#domain> owl:Class .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#range> owl:Class .
+xebr:hasCompanyHistoryReport rdf:type owl:ObjectProperty .
+xebr:hasCompanyHistoryReport <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Report .
+xebr:hasCompanyHistoryReport <http://www.w3.org/2000/01/rdf-schema#range> xebr:CompanyHistoryReport .
+xebr:hasCompanyHistoryReport <http://www.w3.org/2000/01/rdf-schema#label> "company history [report]"@en .
+xebr:CompanyHistoryReport <http://www.w3.org/2000/01/rdf-schema#label> "company history [report]"@en .
+xebr:MainEventsPresentation xebr:partOf xebr:CompanyHistoryReport .
+xebr:MainEventsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyHistoryReport .
+xebr:MainEventsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "main events [presentation]"@en .
+xebr:MainEventsPresentation rdf:type owl:Class .
+xebr:CompanyHistoryEventList xebr:partOf xebr:CompanyHistoryReport .
+xebr:CompanyHistoryEventList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyHistoryReport .
+xebr:CompanyHistoryEventList <http://www.w3.org/2000/01/rdf-schema#label> "company history event [list]"@en .
+xebr:CompanyHistoryEventList rdf:type owl:Class .
+xebr:belongsTo rdf:type owl:ObjectProperty .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Class .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#range> xebr:Class .
+xebr:Class rdf:type owl:Class .
+xebr:CompanyHistoryReport <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:hasRegistrationDate rdf:type owl:FunctionalProperty .
+xebr:hasRegistrationDate rdf:type owl:DatatypeProperty .
+xebr:hasRegistrationDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasRegistrationDate <http://www.w3.org/2000/01/rdf-schema#label> "registration date"@en .
+xebr:hasRegistrationDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasLiquidationDate rdf:type owl:FunctionalProperty .
+xebr:hasLiquidationDate rdf:type owl:DatatypeProperty .
+xebr:hasLiquidationDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasLiquidationDate <http://www.w3.org/2000/01/rdf-schema#label> "liquidation date"@en .
+xebr:hasLiquidationDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasIncorporationDate rdf:type owl:FunctionalProperty .
+xebr:hasIncorporationDate rdf:type owl:DatatypeProperty .
+xebr:hasIncorporationDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasIncorporationDate <http://www.w3.org/2000/01/rdf-schema#label> "incorporation date"@en .
+xebr:hasIncorporationDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasIncorporationPlace rdf:type owl:FunctionalProperty .
+xebr:hasIncorporationPlace rdf:type owl:DatatypeProperty .
+xebr:hasIncorporationPlace <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasIncorporationPlace <http://www.w3.org/2000/01/rdf-schema#label> "incorporation place"@en .
+xebr:hasIncorporationPlace <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasBalanceSheetDate rdf:type owl:FunctionalProperty .
+xebr:hasBalanceSheetDate rdf:type owl:DatatypeProperty .
+xebr:hasBalanceSheetDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasBalanceSheetDate <http://www.w3.org/2000/01/rdf-schema#label> "balance sheet date"@en .
+xebr:hasBalanceSheetDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasLastBalanceSheetPublished rdf:type owl:FunctionalProperty .
+xebr:hasLastBalanceSheetPublished rdf:type owl:DatatypeProperty .
+xebr:hasLastBalanceSheetPublished <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainEventsPresentation .
+xebr:hasLastBalanceSheetPublished <http://www.w3.org/2000/01/rdf-schema#label> "last balance sheet published"@en .
+xebr:hasLastBalanceSheetPublished <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:EventDatePresentation xebr:partOf xebr:CompanyHistoryEventList .
+xebr:EventDatePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyHistoryEventList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EventDatePresentation <http://www.w3.org/2000/01/rdf-schema#label> "event date [presentation]"@en .
+xebr:hasDateOfEvent rdf:type owl:FunctionalProperty .
+xebr:hasDateOfEvent rdf:type owl:DatatypeProperty .
+xebr:hasDateOfEvent <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDatePresentation .
+xebr:hasDateOfEvent <http://www.w3.org/2000/01/rdf-schema#label> "date of event"@en .
+xebr:hasDateOfEvent <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasRegistrationDateOfEvent rdf:type owl:FunctionalProperty .
+xebr:hasRegistrationDateOfEvent rdf:type owl:DatatypeProperty .
+xebr:hasRegistrationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDatePresentation .
+xebr:hasRegistrationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#label> "registration date of event"@en .
+xebr:hasRegistrationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasPublicationDateOfEvent rdf:type owl:FunctionalProperty .
+xebr:hasPublicationDateOfEvent rdf:type owl:DatatypeProperty .
+xebr:hasPublicationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDatePresentation .
+xebr:hasPublicationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#label> "publication date of event"@en .
+xebr:hasPublicationDateOfEvent <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:EventDescriptionPresentation xebr:partOf xebr:CompanyHistoryEventList .
+xebr:EventDescriptionPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyHistoryEventList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EventDescriptionPresentation <http://www.w3.org/2000/01/rdf-schema#label> "event description [presentation]"@en .
+xebr:hasCompanyEventText rdf:type owl:FunctionalProperty .
+xebr:hasCompanyEventText rdf:type owl:DatatypeProperty .
+xebr:hasCompanyEventText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDescriptionPresentation .
+xebr:hasCompanyEventText <http://www.w3.org/2000/01/rdf-schema#label> "company event, text"@en .
+xebr:hasCompanyEventText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyEventLanguage rdf:type owl:FunctionalProperty .
+xebr:hasCompanyEventLanguage rdf:type owl:DatatypeProperty .
+xebr:hasCompanyEventLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDescriptionPresentation .
+xebr:hasCompanyEventLanguage <http://www.w3.org/2000/01/rdf-schema#label> "company event, language"@en .
+xebr:hasCompanyEventLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyEventInformationSource rdf:type owl:FunctionalProperty .
+xebr:hasCompanyEventInformationSource rdf:type owl:DatatypeProperty .
+xebr:hasCompanyEventInformationSource <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventDescriptionPresentation .
+xebr:hasCompanyEventInformationSource <http://www.w3.org/2000/01/rdf-schema#label> "company event, information source"@en .
+xebr:hasCompanyEventInformationSource <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:EventCategoryPresentation xebr:partOf xebr:CompanyHistoryEventList .
+xebr:EventCategoryPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyHistoryEventList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EventCategoryPresentation <http://www.w3.org/2000/01/rdf-schema#label> "event category [presentation]"@en .
+xebr:hasCategoryOfEventValue rdf:type owl:FunctionalProperty .
+xebr:hasCategoryOfEventValue rdf:type owl:DatatypeProperty .
+xebr:hasCategoryOfEventValue <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventCategoryPresentation .
+xebr:hasCategoryOfEventValue <http://www.w3.org/2000/01/rdf-schema#label> "category of event, value"@en .
+xebr:hasCategoryOfEventValue <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCategoryOfEventCode rdf:type owl:FunctionalProperty .
+xebr:hasCategoryOfEventCode rdf:type owl:DatatypeProperty .
+xebr:hasCategoryOfEventCode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventCategoryPresentation .
+xebr:hasCategoryOfEventCode <http://www.w3.org/2000/01/rdf-schema#label> "category of event, code"@en .
+xebr:hasCategoryOfEventCode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCategoryOfEventType rdf:type owl:FunctionalProperty .
+xebr:hasCategoryOfEventType rdf:type owl:DatatypeProperty .
+xebr:hasCategoryOfEventType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EventCategoryPresentation .
+xebr:hasCategoryOfEventType <http://www.w3.org/2000/01/rdf-schema#label> "category of event, type"@en .
+xebr:hasCategoryOfEventType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:CompanyIdentificationReport rdf:type owl:Class .
+<http://www.w3.org/2001/XMLSchema#monetary> rdf:type <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+xebr:Report rdf:type owl:Class .
+xebr:partOf rdf:type owl:ObjectProperty .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#domain> owl:Class .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#range> owl:Class .
+xebr:hasCompanyIdentificationReport rdf:type owl:ObjectProperty .
+xebr:hasCompanyIdentificationReport <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Report .
+xebr:hasCompanyIdentificationReport <http://www.w3.org/2000/01/rdf-schema#range> xebr:CompanyIdentificationReport .
+xebr:hasCompanyIdentificationReport <http://www.w3.org/2000/01/rdf-schema#label> "company identification [report]"@en .
+xebr:CompanyIdentificationReport <http://www.w3.org/2000/01/rdf-schema#label> "company identification [report]"@en .
+xebr:CompanyIdNumberList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyIdNumberList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyIdNumberList <http://www.w3.org/2000/01/rdf-schema#label> "company id number [list]"@en .
+xebr:CompanyIdNumberList rdf:type owl:Class .
+xebr:CompanyNameList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyNameList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyNameList <http://www.w3.org/2000/01/rdf-schema#label> "company name [list]"@en .
+xebr:CompanyNameList rdf:type owl:Class .
+xebr:CompanyLegalFormList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyLegalFormList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyLegalFormList <http://www.w3.org/2000/01/rdf-schema#label> "company legal form [list]"@en .
+xebr:CompanyLegalFormList rdf:type owl:Class .
+xebr:CompanyActivityList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyActivityList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyActivityList <http://www.w3.org/2000/01/rdf-schema#label> "company activity [list]"@en .
+xebr:CompanyActivityList rdf:type owl:Class .
+xebr:CompanyAddressList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyAddressList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyAddressList <http://www.w3.org/2000/01/rdf-schema#label> "company address [list]"@en .
+xebr:CompanyAddressList rdf:type owl:Class .
+xebr:CompanyContactPointList xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyContactPointList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyContactPointList <http://www.w3.org/2000/01/rdf-schema#label> "company contact point [list]"@en .
+xebr:CompanyContactPointList rdf:type owl:Class .
+xebr:CompanyDataValidityPresentation xebr:partOf xebr:CompanyIdentificationReport .
+xebr:CompanyDataValidityPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyIdentificationReport .
+xebr:CompanyDataValidityPresentation <http://www.w3.org/2000/01/rdf-schema#label> "company data validity [presentation]"@en .
+xebr:CompanyDataValidityPresentation rdf:type owl:Class .
+xebr:belongsTo rdf:type owl:ObjectProperty .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Class .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#range> xebr:Class .
+xebr:Class rdf:type owl:Class .
+xebr:CompanyIdentificationReport <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:hasCompanyIdValue rdf:type owl:FunctionalProperty .
+xebr:hasCompanyIdValue rdf:type owl:DatatypeProperty .
+xebr:hasCompanyIdValue <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdNumberList .
+xebr:hasCompanyIdValue <http://www.w3.org/2000/01/rdf-schema#label> "company id, value"@en .
+xebr:hasCompanyIdValue <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyIdType rdf:type owl:FunctionalProperty .
+xebr:hasCompanyIdType rdf:type owl:DatatypeProperty .
+xebr:hasCompanyIdType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdNumberList .
+xebr:hasCompanyIdType <http://www.w3.org/2000/01/rdf-schema#label> "company id, type"@en .
+xebr:hasCompanyIdType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:CompanyIdCityOfRegistrationList xebr:partOf xebr:CompanyIdNumberList .
+xebr:CompanyIdCityOfRegistrationList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyIdNumberList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyIdCityOfRegistrationList <http://www.w3.org/2000/01/rdf-schema#label> "company id, city of registration [list]"@en .
+xebr:hasCityNameText rdf:type owl:FunctionalProperty .
+xebr:hasCityNameText rdf:type owl:DatatypeProperty .
+xebr:hasCityNameText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdCityOfRegistrationList .
+xebr:hasCityNameText <http://www.w3.org/2000/01/rdf-schema#label> "city name, text"@en .
+xebr:hasCityNameText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCityNameLanguage rdf:type owl:FunctionalProperty .
+xebr:hasCityNameLanguage rdf:type owl:DatatypeProperty .
+xebr:hasCityNameLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdCityOfRegistrationList .
+xebr:hasCityNameLanguage <http://www.w3.org/2000/01/rdf-schema#label> "city name, language"@en .
+xebr:hasCityNameLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCityCodeValue rdf:type owl:FunctionalProperty .
+xebr:hasCityCodeValue rdf:type owl:DatatypeProperty .
+xebr:hasCityCodeValue <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdCityOfRegistrationList .
+xebr:hasCityCodeValue <http://www.w3.org/2000/01/rdf-schema#label> "city code, value"@en .
+xebr:hasCityCodeValue <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCityCodeType rdf:type owl:FunctionalProperty .
+xebr:hasCityCodeType rdf:type owl:DatatypeProperty .
+xebr:hasCityCodeType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyIdCityOfRegistrationList .
+xebr:hasCityCodeType <http://www.w3.org/2000/01/rdf-schema#label> "city code, type"@en .
+xebr:hasCityCodeType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyNameText rdf:type owl:FunctionalProperty .
+xebr:hasCompanyNameText rdf:type owl:DatatypeProperty .
+xebr:hasCompanyNameText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyNameList .
+xebr:hasCompanyNameText <http://www.w3.org/2000/01/rdf-schema#label> "company name, text"@en .
+xebr:hasCompanyNameText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyNameLanguage rdf:type owl:FunctionalProperty .
+xebr:hasCompanyNameLanguage rdf:type owl:DatatypeProperty .
+xebr:hasCompanyNameLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyNameList .
+xebr:hasCompanyNameLanguage <http://www.w3.org/2000/01/rdf-schema#label> "company name, language"@en .
+xebr:hasCompanyNameLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyNameType rdf:type owl:FunctionalProperty .
+xebr:hasCompanyNameType rdf:type owl:DatatypeProperty .
+xebr:hasCompanyNameType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyNameList .
+xebr:hasCompanyNameType <http://www.w3.org/2000/01/rdf-schema#label> "company name, type"@en .
+xebr:hasCompanyNameType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasMainNameFlag rdf:type owl:FunctionalProperty .
+xebr:hasMainNameFlag rdf:type owl:DatatypeProperty .
+xebr:hasMainNameFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyNameList .
+xebr:hasMainNameFlag <http://www.w3.org/2000/01/rdf-schema#label> "main name [flag]"@en .
+xebr:hasMainNameFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:hasLegalFormText rdf:type owl:FunctionalProperty .
+xebr:hasLegalFormText rdf:type owl:DatatypeProperty .
+xebr:hasLegalFormText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalFormText <http://www.w3.org/2000/01/rdf-schema#label> "legal form, text"@en .
+xebr:hasLegalFormText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasLegalFormLangage rdf:type owl:FunctionalProperty .
+xebr:hasLegalFormLangage rdf:type owl:DatatypeProperty .
+xebr:hasLegalFormLangage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalFormLangage <http://www.w3.org/2000/01/rdf-schema#label> "legal form, langage"@en .
+xebr:hasLegalFormLangage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasLegalFormCode rdf:type owl:FunctionalProperty .
+xebr:hasLegalFormCode rdf:type owl:DatatypeProperty .
+xebr:hasLegalFormCode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalFormCode <http://www.w3.org/2000/01/rdf-schema#label> "legal form, code"@en .
+xebr:hasLegalFormCode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasLegalFormType rdf:type owl:FunctionalProperty .
+xebr:hasLegalFormType rdf:type owl:DatatypeProperty .
+xebr:hasLegalFormType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalFormType <http://www.w3.org/2000/01/rdf-schema#label> "legal form, type"@en .
+xebr:hasLegalFormType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasMainFormFlag rdf:type owl:FunctionalProperty .
+xebr:hasMainFormFlag rdf:type owl:DatatypeProperty .
+xebr:hasMainFormFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasMainFormFlag <http://www.w3.org/2000/01/rdf-schema#label> "main form [flag]"@en .
+xebr:hasMainFormFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:hasLegalStatusCode rdf:type owl:FunctionalProperty .
+xebr:hasLegalStatusCode rdf:type owl:DatatypeProperty .
+xebr:hasLegalStatusCode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalStatusCode <http://www.w3.org/2000/01/rdf-schema#label> "legal status, code"@en .
+xebr:hasLegalStatusCode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasLegalStatusType rdf:type owl:FunctionalProperty .
+xebr:hasLegalStatusType rdf:type owl:DatatypeProperty .
+xebr:hasLegalStatusType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyLegalFormList .
+xebr:hasLegalStatusType <http://www.w3.org/2000/01/rdf-schema#label> "legal status, type"@en .
+xebr:hasLegalStatusType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasActivityText rdf:type owl:FunctionalProperty .
+xebr:hasActivityText rdf:type owl:DatatypeProperty .
+xebr:hasActivityText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyActivityList .
+xebr:hasActivityText <http://www.w3.org/2000/01/rdf-schema#label> "activity, text"@en .
+xebr:hasActivityText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasActivityLanguage rdf:type owl:FunctionalProperty .
+xebr:hasActivityLanguage rdf:type owl:DatatypeProperty .
+xebr:hasActivityLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyActivityList .
+xebr:hasActivityLanguage <http://www.w3.org/2000/01/rdf-schema#label> "activity, language"@en .
+xebr:hasActivityLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasActivityCode rdf:type owl:FunctionalProperty .
+xebr:hasActivityCode rdf:type owl:DatatypeProperty .
+xebr:hasActivityCode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyActivityList .
+xebr:hasActivityCode <http://www.w3.org/2000/01/rdf-schema#label> "activity, code"@en .
+xebr:hasActivityCode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasActivityType rdf:type owl:FunctionalProperty .
+xebr:hasActivityType rdf:type owl:DatatypeProperty .
+xebr:hasActivityType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyActivityList .
+xebr:hasActivityType <http://www.w3.org/2000/01/rdf-schema#label> "activity, type"@en .
+xebr:hasActivityType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasMainActivityFlag rdf:type owl:FunctionalProperty .
+xebr:hasMainActivityFlag rdf:type owl:DatatypeProperty .
+xebr:hasMainActivityFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyActivityList .
+xebr:hasMainActivityFlag <http://www.w3.org/2000/01/rdf-schema#label> "main activity [flag]"@en .
+xebr:hasMainActivityFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:CompanyAddressDetailsPresentation xebr:partOf xebr:CompanyAddressList .
+xebr:CompanyAddressDetailsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressDetailsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "company address, details [presentation]"@en .
+xebr:hasCompanyStreetNumber rdf:type owl:FunctionalProperty .
+xebr:hasCompanyStreetNumber rdf:type owl:DatatypeProperty .
+xebr:hasCompanyStreetNumber <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressDetailsPresentation .
+xebr:hasCompanyStreetNumber <http://www.w3.org/2000/01/rdf-schema#label> "company street number"@en .
+xebr:hasCompanyStreetNumber <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyStreetType rdf:type owl:FunctionalProperty .
+xebr:hasCompanyStreetType rdf:type owl:DatatypeProperty .
+xebr:hasCompanyStreetType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressDetailsPresentation .
+xebr:hasCompanyStreetType <http://www.w3.org/2000/01/rdf-schema#label> "company street type"@en .
+xebr:hasCompanyStreetType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyStreetName rdf:type owl:FunctionalProperty .
+xebr:hasCompanyStreetName rdf:type owl:DatatypeProperty .
+xebr:hasCompanyStreetName <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressDetailsPresentation .
+xebr:hasCompanyStreetName <http://www.w3.org/2000/01/rdf-schema#label> "company street name"@en .
+xebr:hasCompanyStreetName <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyStreetComplement rdf:type owl:FunctionalProperty .
+xebr:hasCompanyStreetComplement rdf:type owl:DatatypeProperty .
+xebr:hasCompanyStreetComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressDetailsPresentation .
+xebr:hasCompanyStreetComplement <http://www.w3.org/2000/01/rdf-schema#label> "company street complement"@en .
+xebr:hasCompanyStreetComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyPostalBox rdf:type owl:FunctionalProperty .
+xebr:hasCompanyPostalBox rdf:type owl:DatatypeProperty .
+xebr:hasCompanyPostalBox <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressDetailsPresentation .
+xebr:hasCompanyPostalBox <http://www.w3.org/2000/01/rdf-schema#label> "company postal box"@en .
+xebr:hasCompanyPostalBox <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:CompanyAddressComplementPresentation xebr:partOf xebr:CompanyAddressList .
+xebr:CompanyAddressComplementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressComplementPresentation <http://www.w3.org/2000/01/rdf-schema#label> "company address, complement [presentation]"@en .
+xebr:hasCompanyAddressComplement rdf:type owl:FunctionalProperty .
+xebr:hasCompanyAddressComplement rdf:type owl:DatatypeProperty .
+xebr:hasCompanyAddressComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressComplementPresentation .
+xebr:hasCompanyAddressComplement <http://www.w3.org/2000/01/rdf-schema#label> "company address complement"@en .
+xebr:hasCompanyAddressComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:CompanyAddressCityPresentation xebr:partOf xebr:CompanyAddressList .
+xebr:CompanyAddressCityPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyAddressCityPresentation <http://www.w3.org/2000/01/rdf-schema#label> "company address, city [presentation]"@en .
+xebr:hasCompanyPostcode rdf:type owl:FunctionalProperty .
+xebr:hasCompanyPostcode rdf:type owl:DatatypeProperty .
+xebr:hasCompanyPostcode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressCityPresentation .
+xebr:hasCompanyPostcode <http://www.w3.org/2000/01/rdf-schema#label> "company postcode"@en .
+xebr:hasCompanyPostcode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyCity rdf:type owl:FunctionalProperty .
+xebr:hasCompanyCity rdf:type owl:DatatypeProperty .
+xebr:hasCompanyCity <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressCityPresentation .
+xebr:hasCompanyCity <http://www.w3.org/2000/01/rdf-schema#label> "company city"@en .
+xebr:hasCompanyCity <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyCityComplement rdf:type owl:FunctionalProperty .
+xebr:hasCompanyCityComplement rdf:type owl:DatatypeProperty .
+xebr:hasCompanyCityComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressCityPresentation .
+xebr:hasCompanyCityComplement <http://www.w3.org/2000/01/rdf-schema#label> "company city complement"@en .
+xebr:hasCompanyCityComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyAddressCountyState rdf:type owl:FunctionalProperty .
+xebr:hasCompanyAddressCountyState rdf:type owl:DatatypeProperty .
+xebr:hasCompanyAddressCountyState <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressList .
+xebr:hasCompanyAddressCountyState <http://www.w3.org/2000/01/rdf-schema#label> "company address, county state"@en .
+xebr:hasCompanyAddressCountyState <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyAddressCountry rdf:type owl:FunctionalProperty .
+xebr:hasCompanyAddressCountry rdf:type owl:DatatypeProperty .
+xebr:hasCompanyAddressCountry <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressList .
+xebr:hasCompanyAddressCountry <http://www.w3.org/2000/01/rdf-schema#label> "company address, country"@en .
+xebr:hasCompanyAddressCountry <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyAddressLanguage rdf:type owl:FunctionalProperty .
+xebr:hasCompanyAddressLanguage rdf:type owl:DatatypeProperty .
+xebr:hasCompanyAddressLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressList .
+xebr:hasCompanyAddressLanguage <http://www.w3.org/2000/01/rdf-schema#label> "company address, language"@en .
+xebr:hasCompanyAddressLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyAddressType rdf:type owl:FunctionalProperty .
+xebr:hasCompanyAddressType rdf:type owl:DatatypeProperty .
+xebr:hasCompanyAddressType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressList .
+xebr:hasCompanyAddressType <http://www.w3.org/2000/01/rdf-schema#label> "company address, type"@en .
+xebr:hasCompanyAddressType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasMainCompanyAddressFlag rdf:type owl:FunctionalProperty .
+xebr:hasMainCompanyAddressFlag rdf:type owl:DatatypeProperty .
+xebr:hasMainCompanyAddressFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyAddressList .
+xebr:hasMainCompanyAddressFlag <http://www.w3.org/2000/01/rdf-schema#label> "main company address [flag]"@en .
+xebr:hasMainCompanyAddressFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:hasCompanyContactPointDescription rdf:type owl:FunctionalProperty .
+xebr:hasCompanyContactPointDescription rdf:type owl:DatatypeProperty .
+xebr:hasCompanyContactPointDescription <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyContactPointList .
+xebr:hasCompanyContactPointDescription <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, description"@en .
+xebr:hasCompanyContactPointDescription <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyContactPointValue rdf:type owl:FunctionalProperty .
+xebr:hasCompanyContactPointValue rdf:type owl:DatatypeProperty .
+xebr:hasCompanyContactPointValue <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyContactPointList .
+xebr:hasCompanyContactPointValue <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, value"@en .
+xebr:hasCompanyContactPointValue <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasCompanyContactPointLanguage rdf:type owl:FunctionalProperty .
+xebr:hasCompanyContactPointLanguage rdf:type owl:DatatypeProperty .
+xebr:hasCompanyContactPointLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyContactPointList .
+xebr:hasCompanyContactPointLanguage <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, language"@en .
+xebr:hasCompanyContactPointLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyContactPointType rdf:type owl:FunctionalProperty .
+xebr:hasCompanyContactPointType rdf:type owl:DatatypeProperty .
+xebr:hasCompanyContactPointType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyContactPointList .
+xebr:hasCompanyContactPointType <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, type"@en .
+xebr:hasCompanyContactPointType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasCompanyIdentificationStartingDate rdf:type owl:FunctionalProperty .
+xebr:hasCompanyIdentificationStartingDate rdf:type owl:DatatypeProperty .
+xebr:hasCompanyIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyDataValidityPresentation .
+xebr:hasCompanyIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#label> "company identification, starting date"@en .
+xebr:hasCompanyIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasCompanyIdentificationEndingDate rdf:type owl:FunctionalProperty .
+xebr:hasCompanyIdentificationEndingDate rdf:type owl:DatatypeProperty .
+xebr:hasCompanyIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyDataValidityPresentation .
+xebr:hasCompanyIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#label> "company identification, ending date"@en .
+xebr:hasCompanyIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:CompanyOfficialsReport rdf:type owl:Class .
+<http://www.w3.org/2001/XMLSchema#monetary> rdf:type <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+xebr:Report rdf:type owl:Class .
+xebr:partOf rdf:type owl:ObjectProperty .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#domain> owl:Class .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#range> owl:Class .
+xebr:hasCompanyOfficialsReport rdf:type owl:ObjectProperty .
+xebr:hasCompanyOfficialsReport <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Report .
+xebr:hasCompanyOfficialsReport <http://www.w3.org/2000/01/rdf-schema#range> xebr:CompanyOfficialsReport .
+xebr:hasCompanyOfficialsReport <http://www.w3.org/2000/01/rdf-schema#label> "company officials [report]"@en .
+xebr:CompanyOfficialsReport <http://www.w3.org/2000/01/rdf-schema#label> "company officials [report]"@en .
+xebr:MainOfficialPresentation xebr:partOf xebr:CompanyOfficialsReport .
+xebr:MainOfficialPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyOfficialsReport .
+xebr:MainOfficialPresentation <http://www.w3.org/2000/01/rdf-schema#label> "main official [presentation]"@en .
+xebr:MainOfficialPresentation rdf:type owl:Class .
+xebr:CompanyOfficialList xebr:partOf xebr:CompanyOfficialsReport .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:CompanyOfficialsReport .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#label> "company official [list]"@en .
+xebr:CompanyOfficialList rdf:type owl:Class .
+xebr:belongsTo rdf:type owl:ObjectProperty .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Class .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#range> xebr:Class .
+xebr:Class rdf:type owl:Class .
+xebr:CompanyOfficialsReport <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:hasPresident rdf:type owl:FunctionalProperty .
+xebr:hasPresident rdf:type owl:DatatypeProperty .
+xebr:hasPresident <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainOfficialPresentation .
+xebr:hasPresident <http://www.w3.org/2000/01/rdf-schema#label> "president"@en .
+xebr:hasPresident <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasDirector rdf:type owl:FunctionalProperty .
+xebr:hasDirector rdf:type owl:DatatypeProperty .
+xebr:hasDirector <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainOfficialPresentation .
+xebr:hasDirector <http://www.w3.org/2000/01/rdf-schema#label> "director"@en .
+xebr:hasDirector <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasAccountant rdf:type owl:FunctionalProperty .
+xebr:hasAccountant rdf:type owl:DatatypeProperty .
+xebr:hasAccountant <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainOfficialPresentation .
+xebr:hasAccountant <http://www.w3.org/2000/01/rdf-schema#label> "accountant"@en .
+xebr:hasAccountant <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasContact rdf:type owl:FunctionalProperty .
+xebr:hasContact rdf:type owl:DatatypeProperty .
+xebr:hasContact <http://www.w3.org/2000/01/rdf-schema#domain> xebr:MainOfficialPresentation .
+xebr:hasContact <http://www.w3.org/2000/01/rdf-schema#label> "contact"@en .
+xebr:hasContact <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialNamePresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialNamePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialNamePresentation <http://www.w3.org/2000/01/rdf-schema#label> "official name [presentation]"@en .
+xebr:hasOfficialTitleOrGender rdf:type owl:FunctionalProperty .
+xebr:hasOfficialTitleOrGender rdf:type owl:DatatypeProperty .
+xebr:hasOfficialTitleOrGender <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialNamePresentation .
+xebr:hasOfficialTitleOrGender <http://www.w3.org/2000/01/rdf-schema#label> "official title or gender"@en .
+xebr:hasOfficialTitleOrGender <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialFamilyName rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFamilyName rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFamilyName <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialNamePresentation .
+xebr:hasOfficialFamilyName <http://www.w3.org/2000/01/rdf-schema#label> "official family name"@en .
+xebr:hasOfficialFamilyName <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialMarriedName rdf:type owl:FunctionalProperty .
+xebr:hasOfficialMarriedName rdf:type owl:DatatypeProperty .
+xebr:hasOfficialMarriedName <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialNamePresentation .
+xebr:hasOfficialMarriedName <http://www.w3.org/2000/01/rdf-schema#label> "official married name"@en .
+xebr:hasOfficialMarriedName <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialFirstAndMiddleNamesList xebr:partOf xebr:OfficialNamePresentation .
+xebr:OfficialFirstAndMiddleNamesList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialNamePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialFirstAndMiddleNamesList <http://www.w3.org/2000/01/rdf-schema#label> "official first and middle names [list]"@en .
+xebr:hasOfficialFirstName rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFirstName rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFirstName <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFirstAndMiddleNamesList .
+xebr:hasOfficialFirstName <http://www.w3.org/2000/01/rdf-schema#label> "official first name"@en .
+xebr:hasOfficialFirstName <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialDateOfBirth rdf:type owl:FunctionalProperty .
+xebr:hasOfficialDateOfBirth rdf:type owl:DatatypeProperty .
+xebr:hasOfficialDateOfBirth <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialNamePresentation .
+xebr:hasOfficialDateOfBirth <http://www.w3.org/2000/01/rdf-schema#label> "official date of birth"@en .
+xebr:hasOfficialDateOfBirth <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:OfficialPlaceOfBirthPresentation xebr:partOf xebr:OfficialNamePresentation .
+xebr:OfficialPlaceOfBirthPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialNamePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialPlaceOfBirthPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official place of birth [presentation]"@en .
+xebr:hasOfficialCityOfBirth rdf:type owl:FunctionalProperty .
+xebr:hasOfficialCityOfBirth rdf:type owl:DatatypeProperty .
+xebr:hasOfficialCityOfBirth <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialPlaceOfBirthPresentation .
+xebr:hasOfficialCityOfBirth <http://www.w3.org/2000/01/rdf-schema#label> "official city of birth"@en .
+xebr:hasOfficialCityOfBirth <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialCountryOfBirth rdf:type owl:FunctionalProperty .
+xebr:hasOfficialCountryOfBirth rdf:type owl:DatatypeProperty .
+xebr:hasOfficialCountryOfBirth <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialPlaceOfBirthPresentation .
+xebr:hasOfficialCountryOfBirth <http://www.w3.org/2000/01/rdf-schema#label> "official country of birth"@en .
+xebr:hasOfficialCountryOfBirth <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialNationality rdf:type owl:FunctionalProperty .
+xebr:hasOfficialNationality rdf:type owl:DatatypeProperty .
+xebr:hasOfficialNationality <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialPlaceOfBirthPresentation .
+xebr:hasOfficialNationality <http://www.w3.org/2000/01/rdf-schema#label> "official nationality"@en .
+xebr:hasOfficialNationality <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialIdNumberList xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialIdNumberList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialIdNumberList <http://www.w3.org/2000/01/rdf-schema#label> "official id number [list]"@en .
+xebr:hasOfficialIdValue rdf:type owl:FunctionalProperty .
+xebr:hasOfficialIdValue rdf:type owl:DatatypeProperty .
+xebr:hasOfficialIdValue <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialIdNumberList .
+xebr:hasOfficialIdValue <http://www.w3.org/2000/01/rdf-schema#label> "official id, value"@en .
+xebr:hasOfficialIdValue <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialIdType rdf:type owl:FunctionalProperty .
+xebr:hasOfficialIdType rdf:type owl:DatatypeProperty .
+xebr:hasOfficialIdType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialIdNumberList .
+xebr:hasOfficialIdType <http://www.w3.org/2000/01/rdf-schema#label> "official id, type"@en .
+xebr:hasOfficialIdType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialIsACompanyFlag rdf:type owl:FunctionalProperty .
+xebr:hasOfficialIsACompanyFlag rdf:type owl:DatatypeProperty .
+xebr:hasOfficialIsACompanyFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialIdNumberList .
+xebr:hasOfficialIsACompanyFlag <http://www.w3.org/2000/01/rdf-schema#label> "official is a company [flag]"@en .
+xebr:hasOfficialIsACompanyFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:OfficialFunctionList xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialFunctionList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialFunctionList <http://www.w3.org/2000/01/rdf-schema#label> "official function [list]"@en .
+xebr:hasOfficialFunctionText rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFunctionText rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFunctionText <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasOfficialFunctionText <http://www.w3.org/2000/01/rdf-schema#label> "official function, text"@en .
+xebr:hasOfficialFunctionText <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialFunctionLanguage rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFunctionLanguage rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFunctionLanguage <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasOfficialFunctionLanguage <http://www.w3.org/2000/01/rdf-schema#label> "official function, language"@en .
+xebr:hasOfficialFunctionLanguage <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasOfficialFunctionType rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFunctionType rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFunctionType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasOfficialFunctionType <http://www.w3.org/2000/01/rdf-schema#label> "official function, type"@en .
+xebr:hasOfficialFunctionType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+xebr:hasOfficialFunctionStartingDate rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFunctionStartingDate rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFunctionStartingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasOfficialFunctionStartingDate <http://www.w3.org/2000/01/rdf-schema#label> "official function, starting date"@en .
+xebr:hasOfficialFunctionStartingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasOfficialFunctionEndingDate rdf:type owl:FunctionalProperty .
+xebr:hasOfficialFunctionEndingDate rdf:type owl:DatatypeProperty .
+xebr:hasOfficialFunctionEndingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasOfficialFunctionEndingDate <http://www.w3.org/2000/01/rdf-schema#label> "official function, ending date"@en .
+xebr:hasOfficialFunctionEndingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasSigningAuthorityFlag rdf:type owl:FunctionalProperty .
+xebr:hasSigningAuthorityFlag rdf:type owl:DatatypeProperty .
+xebr:hasSigningAuthorityFlag <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialFunctionList .
+xebr:hasSigningAuthorityFlag <http://www.w3.org/2000/01/rdf-schema#label> "signing authority [flag]"@en .
+xebr:hasSigningAuthorityFlag <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+xebr:OfficialAddressDetailsPresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialAddressDetailsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialAddressDetailsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official address, details [presentation]"@en .
+xebr:hasOfficialStreetNumber rdf:type owl:FunctionalProperty .
+xebr:hasOfficialStreetNumber rdf:type owl:DatatypeProperty .
+xebr:hasOfficialStreetNumber <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressDetailsPresentation .
+xebr:hasOfficialStreetNumber <http://www.w3.org/2000/01/rdf-schema#label> "official street number"@en .
+xebr:hasOfficialStreetNumber <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialStreetType rdf:type owl:FunctionalProperty .
+xebr:hasOfficialStreetType rdf:type owl:DatatypeProperty .
+xebr:hasOfficialStreetType <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressDetailsPresentation .
+xebr:hasOfficialStreetType <http://www.w3.org/2000/01/rdf-schema#label> "official street type"@en .
+xebr:hasOfficialStreetType <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialStreetName rdf:type owl:FunctionalProperty .
+xebr:hasOfficialStreetName rdf:type owl:DatatypeProperty .
+xebr:hasOfficialStreetName <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressDetailsPresentation .
+xebr:hasOfficialStreetName <http://www.w3.org/2000/01/rdf-schema#label> "official street name"@en .
+xebr:hasOfficialStreetName <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialStreetComplement rdf:type owl:FunctionalProperty .
+xebr:hasOfficialStreetComplement rdf:type owl:DatatypeProperty .
+xebr:hasOfficialStreetComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressDetailsPresentation .
+xebr:hasOfficialStreetComplement <http://www.w3.org/2000/01/rdf-schema#label> "official street complement"@en .
+xebr:hasOfficialStreetComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialPostalBox rdf:type owl:FunctionalProperty .
+xebr:hasOfficialPostalBox rdf:type owl:DatatypeProperty .
+xebr:hasOfficialPostalBox <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressDetailsPresentation .
+xebr:hasOfficialPostalBox <http://www.w3.org/2000/01/rdf-schema#label> "official postal box"@en .
+xebr:hasOfficialPostalBox <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialAddressComplementPresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialAddressComplementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialAddressComplementPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official address, complement [presentation]"@en .
+xebr:hasOfficialAddressComplement rdf:type owl:FunctionalProperty .
+xebr:hasOfficialAddressComplement rdf:type owl:DatatypeProperty .
+xebr:hasOfficialAddressComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressComplementPresentation .
+xebr:hasOfficialAddressComplement <http://www.w3.org/2000/01/rdf-schema#label> "official address complement"@en .
+xebr:hasOfficialAddressComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialAddressCityOrTownPresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialAddressCityOrTownPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialAddressCityOrTownPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official address, city or town [presentation]"@en .
+xebr:hasOfficialPostcode rdf:type owl:FunctionalProperty .
+xebr:hasOfficialPostcode rdf:type owl:DatatypeProperty .
+xebr:hasOfficialPostcode <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressCityOrTownPresentation .
+xebr:hasOfficialPostcode <http://www.w3.org/2000/01/rdf-schema#label> "official postcode"@en .
+xebr:hasOfficialPostcode <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialCityOrTown rdf:type owl:FunctionalProperty .
+xebr:hasOfficialCityOrTown rdf:type owl:DatatypeProperty .
+xebr:hasOfficialCityOrTown <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressCityOrTownPresentation .
+xebr:hasOfficialCityOrTown <http://www.w3.org/2000/01/rdf-schema#label> "official city or town"@en .
+xebr:hasOfficialCityOrTown <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialCityComplement rdf:type owl:FunctionalProperty .
+xebr:hasOfficialCityComplement rdf:type owl:DatatypeProperty .
+xebr:hasOfficialCityComplement <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialAddressCityOrTownPresentation .
+xebr:hasOfficialCityComplement <http://www.w3.org/2000/01/rdf-schema#label> "official city complement"@en .
+xebr:hasOfficialCityComplement <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialAddressCountyState rdf:type owl:FunctionalProperty .
+xebr:hasOfficialAddressCountyState rdf:type owl:DatatypeProperty .
+xebr:hasOfficialAddressCountyState <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyOfficialList .
+xebr:hasOfficialAddressCountyState <http://www.w3.org/2000/01/rdf-schema#label> "official address, county state"@en .
+xebr:hasOfficialAddressCountyState <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasOfficialAddressCountry rdf:type owl:FunctionalProperty .
+xebr:hasOfficialAddressCountry rdf:type owl:DatatypeProperty .
+xebr:hasOfficialAddressCountry <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CompanyOfficialList .
+xebr:hasOfficialAddressCountry <http://www.w3.org/2000/01/rdf-schema#label> "official address, country"@en .
+xebr:hasOfficialAddressCountry <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:OfficialShareholdingPresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialShareholdingPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialShareholdingPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official shareholding [presentation]"@en .
+xebr:hasDescriptionOfSharesOrDebentures rdf:type owl:FunctionalProperty .
+xebr:hasDescriptionOfSharesOrDebentures rdf:type owl:DatatypeProperty .
+xebr:hasDescriptionOfSharesOrDebentures <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialShareholdingPresentation .
+xebr:hasDescriptionOfSharesOrDebentures <http://www.w3.org/2000/01/rdf-schema#label> "description of shares or debentures"@en .
+xebr:hasDescriptionOfSharesOrDebentures <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+xebr:hasNumberOfShares rdf:type owl:FunctionalProperty .
+xebr:hasNumberOfShares rdf:type owl:DatatypeProperty .
+xebr:hasNumberOfShares <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialShareholdingPresentation .
+xebr:hasNumberOfShares <http://www.w3.org/2000/01/rdf-schema#label> "number of shares"@en .
+xebr:hasNumberOfShares <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+xebr:OfficialDataValidityPresentation xebr:partOf xebr:CompanyOfficialList .
+xebr:OfficialDataValidityPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CompanyOfficialList <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OfficialDataValidityPresentation <http://www.w3.org/2000/01/rdf-schema#label> "official data validity [presentation]"@en .
+xebr:hasOfficialIdentificationStartingDate rdf:type owl:FunctionalProperty .
+xebr:hasOfficialIdentificationStartingDate rdf:type owl:DatatypeProperty .
+xebr:hasOfficialIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialDataValidityPresentation .
+xebr:hasOfficialIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#label> "official identification, starting date"@en .
+xebr:hasOfficialIdentificationStartingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:hasOfficialIdentificationEndingDate rdf:type owl:FunctionalProperty .
+xebr:hasOfficialIdentificationEndingDate rdf:type owl:DatatypeProperty .
+xebr:hasOfficialIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OfficialDataValidityPresentation .
+xebr:hasOfficialIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#label> "official identification, ending date"@en .
+xebr:hasOfficialIdentificationEndingDate <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+xebr:KeyBalanceSheetFiguresReport rdf:type owl:Class .
+<http://www.w3.org/2001/XMLSchema#monetary> rdf:type <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+xebr:Report rdf:type owl:Class .
+xebr:partOf rdf:type owl:ObjectProperty .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#domain> owl:Class .
+xebr:partOf <http://www.w3.org/2000/01/rdf-schema#range> owl:Class .
+xebr:hasKeyBalanceSheetFiguresReport rdf:type owl:ObjectProperty .
+xebr:hasKeyBalanceSheetFiguresReport <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Report .
+xebr:hasKeyBalanceSheetFiguresReport <http://www.w3.org/2000/01/rdf-schema#range> xebr:KeyBalanceSheetFiguresReport .
+xebr:hasKeyBalanceSheetFiguresReport <http://www.w3.org/2000/01/rdf-schema#label> "key balance sheet figures [report]"@en .
+xebr:KeyBalanceSheetFiguresReport <http://www.w3.org/2000/01/rdf-schema#label> "key balance sheet figures [report]"@en .
+xebr:AssetsPresentation xebr:partOf xebr:KeyBalanceSheetFiguresReport .
+xebr:AssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:KeyBalanceSheetFiguresReport .
+xebr:AssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "assets [presentation]"@en .
+xebr:AssetsPresentation rdf:type owl:Class .
+xebr:EquityAndLiabilitiesPresentation xebr:partOf xebr:KeyBalanceSheetFiguresReport .
+xebr:EquityAndLiabilitiesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:KeyBalanceSheetFiguresReport .
+xebr:EquityAndLiabilitiesPresentation <http://www.w3.org/2000/01/rdf-schema#label> "equity and liabilities [presentation]"@en .
+xebr:EquityAndLiabilitiesPresentation rdf:type owl:Class .
+xebr:IncomeStatementPresentation xebr:partOf xebr:KeyBalanceSheetFiguresReport .
+xebr:IncomeStatementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:KeyBalanceSheetFiguresReport .
+xebr:IncomeStatementPresentation <http://www.w3.org/2000/01/rdf-schema#label> "income statement [presentation]"@en .
+xebr:IncomeStatementPresentation rdf:type owl:Class .
+xebr:belongsTo rdf:type owl:ObjectProperty .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#domain> xebr:Class .
+xebr:belongsTo <http://www.w3.org/2000/01/rdf-schema#range> xebr:Class .
+xebr:Class rdf:type owl:Class .
+xebr:KeyBalanceSheetFiguresReport <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FixedAssetsPresentation xebr:partOf xebr:AssetsPresentation .
+xebr:FixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "fixed assets [presentation]"@en .
+xebr:IntangibleFixedAssetsPresentation xebr:partOf xebr:FixedAssetsPresentation .
+xebr:IntangibleFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:IntangibleFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "intangible fixed assets [presentation]"@en .
+xebr:hasIntangibleFixedAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasIntangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasIntangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:IntangibleFixedAssetsPresentation .
+xebr:hasIntangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "intangible fixed assets [total]"@en .
+xebr:hasIntangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:TangibleFixedAssetsPresentation xebr:partOf xebr:FixedAssetsPresentation .
+xebr:TangibleFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:TangibleFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "tangible fixed assets [presentation]"@en .
+xebr:PropertyPlantAndEquipmentPresentation xebr:partOf xebr:TangibleFixedAssetsPresentation .
+xebr:PropertyPlantAndEquipmentPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:TangibleFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:PropertyPlantAndEquipmentPresentation <http://www.w3.org/2000/01/rdf-schema#label> "property, plant, and equipment [presentation]"@en .
+xebr:hasLandAndBuildings rdf:type owl:FunctionalProperty .
+xebr:hasLandAndBuildings rdf:type owl:DatatypeProperty .
+xebr:hasLandAndBuildings <http://www.w3.org/2000/01/rdf-schema#domain> xebr:PropertyPlantAndEquipmentPresentation .
+xebr:hasLandAndBuildings <http://www.w3.org/2000/01/rdf-schema#label> "land and buildings"@en .
+xebr:hasLandAndBuildings <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasPlantAndMachinery rdf:type owl:FunctionalProperty .
+xebr:hasPlantAndMachinery rdf:type owl:DatatypeProperty .
+xebr:hasPlantAndMachinery <http://www.w3.org/2000/01/rdf-schema#domain> xebr:PropertyPlantAndEquipmentPresentation .
+xebr:hasPlantAndMachinery <http://www.w3.org/2000/01/rdf-schema#label> "plant and machinery"@en .
+xebr:hasPlantAndMachinery <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasFurnitureFixturesAndEquipment rdf:type owl:FunctionalProperty .
+xebr:hasFurnitureFixturesAndEquipment rdf:type owl:DatatypeProperty .
+xebr:hasFurnitureFixturesAndEquipment <http://www.w3.org/2000/01/rdf-schema#domain> xebr:PropertyPlantAndEquipmentPresentation .
+xebr:hasFurnitureFixturesAndEquipment <http://www.w3.org/2000/01/rdf-schema#label> "furniture, fixtures, and equipment"@en .
+xebr:hasFurnitureFixturesAndEquipment <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOtherPropertyPlantAndEquipment rdf:type owl:FunctionalProperty .
+xebr:hasOtherPropertyPlantAndEquipment rdf:type owl:DatatypeProperty .
+xebr:hasOtherPropertyPlantAndEquipment <http://www.w3.org/2000/01/rdf-schema#domain> xebr:PropertyPlantAndEquipmentPresentation .
+xebr:hasOtherPropertyPlantAndEquipment <http://www.w3.org/2000/01/rdf-schema#label> "other property, plant, and equipment"@en .
+xebr:hasOtherPropertyPlantAndEquipment <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasPropertyPlantAndEquipmentTotal rdf:type owl:FunctionalProperty .
+xebr:hasPropertyPlantAndEquipmentTotal rdf:type owl:DatatypeProperty .
+xebr:hasPropertyPlantAndEquipmentTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:PropertyPlantAndEquipmentPresentation .
+xebr:hasPropertyPlantAndEquipmentTotal <http://www.w3.org/2000/01/rdf-schema#label> "property, plant, and equipment [total]"@en .
+xebr:hasPropertyPlantAndEquipmentTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOtherTangibleAssets rdf:type owl:FunctionalProperty .
+xebr:hasOtherTangibleAssets rdf:type owl:DatatypeProperty .
+xebr:hasOtherTangibleAssets <http://www.w3.org/2000/01/rdf-schema#domain> xebr:TangibleFixedAssetsPresentation .
+xebr:hasOtherTangibleAssets <http://www.w3.org/2000/01/rdf-schema#label> "other tangible assets"@en .
+xebr:hasOtherTangibleAssets <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasTangibleFixedAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasTangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasTangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:TangibleFixedAssetsPresentation .
+xebr:hasTangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "tangible fixed assets [total]"@en .
+xebr:hasTangibleFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:FinancialFixedAssetsPresentation xebr:partOf xebr:FixedAssetsPresentation .
+xebr:FinancialFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FinancialFixedAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "financial fixed assets [presentation]"@en .
+xebr:hasAffiliatedEnterprises rdf:type owl:FunctionalProperty .
+xebr:hasAffiliatedEnterprises rdf:type owl:DatatypeProperty .
+xebr:hasAffiliatedEnterprises <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FinancialFixedAssetsPresentation .
+xebr:hasAffiliatedEnterprises <http://www.w3.org/2000/01/rdf-schema#label> "affiliated enterprises"@en .
+xebr:hasAffiliatedEnterprises <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOtherFinancialAssets rdf:type owl:FunctionalProperty .
+xebr:hasOtherFinancialAssets rdf:type owl:DatatypeProperty .
+xebr:hasOtherFinancialAssets <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FinancialFixedAssetsPresentation .
+xebr:hasOtherFinancialAssets <http://www.w3.org/2000/01/rdf-schema#label> "other financial assets"@en .
+xebr:hasOtherFinancialAssets <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasFinancialFixedAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasFinancialFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasFinancialFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FinancialFixedAssetsPresentation .
+xebr:hasFinancialFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "financial fixed assets [total]"@en .
+xebr:hasFinancialFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasFixedAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FixedAssetsPresentation .
+xebr:hasFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "fixed assets [total]"@en .
+xebr:hasFixedAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:CurrentAssetsPresentation xebr:partOf xebr:AssetsPresentation .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "current assets [presentation]"@en .
+xebr:AmountsReceivablePresentation xebr:partOf xebr:CurrentAssetsPresentation .
+xebr:AmountsReceivablePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsReceivablePresentation <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable [presentation]"@en .
+xebr:hasAmountsReceivableAfterMoreThanOneYear rdf:type owl:FunctionalProperty .
+xebr:hasAmountsReceivableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsReceivablePresentation .
+xebr:hasAmountsReceivableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable after more than one year"@en .
+xebr:hasAmountsReceivableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAmountsReceivableWithinOneYear rdf:type owl:FunctionalProperty .
+xebr:hasAmountsReceivableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsReceivablePresentation .
+xebr:hasAmountsReceivableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable within one year"@en .
+xebr:hasAmountsReceivableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAmountsReceivableTotal rdf:type owl:FunctionalProperty .
+xebr:hasAmountsReceivableTotal rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsReceivablePresentation .
+xebr:hasAmountsReceivableTotal <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable [total]"@en .
+xebr:hasAmountsReceivableTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:StocksPresentation xebr:partOf xebr:CurrentAssetsPresentation .
+xebr:StocksPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:StocksPresentation <http://www.w3.org/2000/01/rdf-schema#label> "stocks [presentation]"@en .
+xebr:hasStockRawMaterialsAndConsumables rdf:type owl:FunctionalProperty .
+xebr:hasStockRawMaterialsAndConsumables rdf:type owl:DatatypeProperty .
+xebr:hasStockRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#domain> xebr:StocksPresentation .
+xebr:hasStockRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#label> "stock raw materials and consumables"@en .
+xebr:hasStockRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasWorkInProgress rdf:type owl:FunctionalProperty .
+xebr:hasWorkInProgress rdf:type owl:DatatypeProperty .
+xebr:hasWorkInProgress <http://www.w3.org/2000/01/rdf-schema#domain> xebr:StocksPresentation .
+xebr:hasWorkInProgress <http://www.w3.org/2000/01/rdf-schema#label> "work in progress"@en .
+xebr:hasWorkInProgress <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOtherStock rdf:type owl:FunctionalProperty .
+xebr:hasOtherStock rdf:type owl:DatatypeProperty .
+xebr:hasOtherStock <http://www.w3.org/2000/01/rdf-schema#domain> xebr:StocksPresentation .
+xebr:hasOtherStock <http://www.w3.org/2000/01/rdf-schema#label> "other stock"@en .
+xebr:hasOtherStock <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasStocksTotal rdf:type owl:FunctionalProperty .
+xebr:hasStocksTotal rdf:type owl:DatatypeProperty .
+xebr:hasStocksTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:StocksPresentation .
+xebr:hasStocksTotal <http://www.w3.org/2000/01/rdf-schema#label> "stocks [total]"@en .
+xebr:hasStocksTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:LiquidAssetsPresentation xebr:partOf xebr:CurrentAssetsPresentation .
+xebr:LiquidAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:LiquidAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#label> "liquid assets [presentation]"@en .
+xebr:hasLiquidAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasLiquidAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasLiquidAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:LiquidAssetsPresentation .
+xebr:hasLiquidAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "liquid assets [total]"@en .
+xebr:hasLiquidAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:DeferredChargesAndAccruedIncomePresentation xebr:partOf xebr:CurrentAssetsPresentation .
+xebr:DeferredChargesAndAccruedIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:CurrentAssetsPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:DeferredChargesAndAccruedIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "deferred charges and accrued income [presentation]"@en .
+xebr:hasDeferredChargesAndAccruedIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasDeferredChargesAndAccruedIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasDeferredChargesAndAccruedIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:DeferredChargesAndAccruedIncomePresentation .
+xebr:hasDeferredChargesAndAccruedIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "deferred charges and accrued income [total]"@en .
+xebr:hasDeferredChargesAndAccruedIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasCurrentAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasCurrentAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasCurrentAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:CurrentAssetsPresentation .
+xebr:hasCurrentAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "current assets [total]"@en .
+xebr:hasCurrentAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAssetsTotal rdf:type owl:FunctionalProperty .
+xebr:hasAssetsTotal rdf:type owl:DatatypeProperty .
+xebr:hasAssetsTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AssetsPresentation .
+xebr:hasAssetsTotal <http://www.w3.org/2000/01/rdf-schema#label> "assets [total]"@en .
+xebr:hasAssetsTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:EquityPresentation xebr:partOf xebr:EquityAndLiabilitiesPresentation .
+xebr:EquityPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EquityAndLiabilitiesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EquityPresentation <http://www.w3.org/2000/01/rdf-schema#label> "equity [presentation]"@en .
+xebr:hasCapital rdf:type owl:FunctionalProperty .
+xebr:hasCapital rdf:type owl:DatatypeProperty .
+xebr:hasCapital <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityPresentation .
+xebr:hasCapital <http://www.w3.org/2000/01/rdf-schema#label> "capital"@en .
+xebr:hasCapital <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasReserves rdf:type owl:FunctionalProperty .
+xebr:hasReserves rdf:type owl:DatatypeProperty .
+xebr:hasReserves <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityPresentation .
+xebr:hasReserves <http://www.w3.org/2000/01/rdf-schema#label> "reserves"@en .
+xebr:hasReserves <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasProfitLossBroughtForward rdf:type owl:FunctionalProperty .
+xebr:hasProfitLossBroughtForward rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossBroughtForward <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityPresentation .
+xebr:hasProfitLossBroughtForward <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) brought forward"@en .
+xebr:hasProfitLossBroughtForward <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasProfitLossForThePeriod rdf:type owl:FunctionalProperty .
+xebr:hasProfitLossForThePeriod rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossForThePeriod <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityPresentation .
+xebr:hasProfitLossForThePeriod <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) for the period"@en .
+xebr:hasProfitLossForThePeriod <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasEquityTotal rdf:type owl:FunctionalProperty .
+xebr:hasEquityTotal rdf:type owl:DatatypeProperty .
+xebr:hasEquityTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityPresentation .
+xebr:hasEquityTotal <http://www.w3.org/2000/01/rdf-schema#label> "equity [total]"@en .
+xebr:hasEquityTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:ProvisionsAndDeferredTaxesPresentation xebr:partOf xebr:EquityAndLiabilitiesPresentation .
+xebr:ProvisionsAndDeferredTaxesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EquityAndLiabilitiesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:ProvisionsAndDeferredTaxesPresentation <http://www.w3.org/2000/01/rdf-schema#label> "provisions and deferred taxes [presentation]"@en .
+xebr:hasProvisionsForLiabilitiesAndCharges rdf:type owl:FunctionalProperty .
+xebr:hasProvisionsForLiabilitiesAndCharges rdf:type owl:DatatypeProperty .
+xebr:hasProvisionsForLiabilitiesAndCharges <http://www.w3.org/2000/01/rdf-schema#domain> xebr:ProvisionsAndDeferredTaxesPresentation .
+xebr:hasProvisionsForLiabilitiesAndCharges <http://www.w3.org/2000/01/rdf-schema#label> "provisions for liabilities and charges"@en .
+xebr:hasProvisionsForLiabilitiesAndCharges <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasDeferredTaxes rdf:type owl:FunctionalProperty .
+xebr:hasDeferredTaxes rdf:type owl:DatatypeProperty .
+xebr:hasDeferredTaxes <http://www.w3.org/2000/01/rdf-schema#domain> xebr:ProvisionsAndDeferredTaxesPresentation .
+xebr:hasDeferredTaxes <http://www.w3.org/2000/01/rdf-schema#label> "deferred taxes"@en .
+xebr:hasDeferredTaxes <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasProvisionsAndDeferredTaxesTotal rdf:type owl:FunctionalProperty .
+xebr:hasProvisionsAndDeferredTaxesTotal rdf:type owl:DatatypeProperty .
+xebr:hasProvisionsAndDeferredTaxesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:ProvisionsAndDeferredTaxesPresentation .
+xebr:hasProvisionsAndDeferredTaxesTotal <http://www.w3.org/2000/01/rdf-schema#label> "provisions and deferred taxes [total]"@en .
+xebr:hasProvisionsAndDeferredTaxesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:AmountsPayablePresentation xebr:partOf xebr:EquityAndLiabilitiesPresentation .
+xebr:AmountsPayablePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:EquityAndLiabilitiesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayablePresentation <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable [presentation]"@en .
+xebr:AmountsPayableAfterMoreThanOneYearPresentation xebr:partOf xebr:AmountsPayablePresentation .
+xebr:AmountsPayableAfterMoreThanOneYearPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayablePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayableAfterMoreThanOneYearPresentation <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable after more than one year [presentation]"@en .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear rdf:type owl:FunctionalProperty .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableAfterMoreThanOneYearPresentation .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#label> "financial debts payable after more than one year"@en .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear rdf:type owl:FunctionalProperty .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableAfterMoreThanOneYearPresentation .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#label> "trade debts payable after more than one year"@en .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear rdf:type owl:FunctionalProperty .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableAfterMoreThanOneYearPresentation .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#label> "taxes, remuneration, and social security payable after more than one year"@en .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal rdf:type owl:FunctionalProperty .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableAfterMoreThanOneYearPresentation .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable after more than one year [total]"@en .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:AmountsPayableWithinOneYearPresentation xebr:partOf xebr:AmountsPayablePresentation .
+xebr:AmountsPayableWithinOneYearPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayablePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayableWithinOneYearPresentation <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable within one year [presentation]"@en .
+xebr:hasFinancialDebtsPayableWithinOneYear rdf:type owl:FunctionalProperty .
+xebr:hasFinancialDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasFinancialDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableWithinOneYearPresentation .
+xebr:hasFinancialDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#label> "financial debts payable within one year"@en .
+xebr:hasFinancialDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasTradeDebtsPayableWithinOneYear rdf:type owl:FunctionalProperty .
+xebr:hasTradeDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTradeDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableWithinOneYearPresentation .
+xebr:hasTradeDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#label> "trade debts payable within one year"@en .
+xebr:hasTradeDebtsPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear rdf:type owl:FunctionalProperty .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableWithinOneYearPresentation .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#label> "taxes, remuneration and social security payable within one year"@en .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAmountsPayableWithinOneYearTotal rdf:type owl:FunctionalProperty .
+xebr:hasAmountsPayableWithinOneYearTotal rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableWithinOneYearTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayableWithinOneYearPresentation .
+xebr:hasAmountsPayableWithinOneYearTotal <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable within one year [total]"@en .
+xebr:hasAmountsPayableWithinOneYearTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasAmountsPayableTotal rdf:type owl:FunctionalProperty .
+xebr:hasAmountsPayableTotal rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AmountsPayablePresentation .
+xebr:hasAmountsPayableTotal <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable [total]"@en .
+xebr:hasAmountsPayableTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:AccruedChargesAndDeferredIncomePresentation xebr:partOf xebr:AmountsPayablePresentation .
+xebr:AccruedChargesAndDeferredIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AmountsPayablePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:AccruedChargesAndDeferredIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "accrued charges and deferred income [presentation]"@en .
+xebr:hasAccruedChargesAndDeferredIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasAccruedChargesAndDeferredIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasAccruedChargesAndDeferredIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:AccruedChargesAndDeferredIncomePresentation .
+xebr:hasAccruedChargesAndDeferredIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "accrued charges and deferred income [total]"@en .
+xebr:hasAccruedChargesAndDeferredIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasEquityAndLiabilitiesTotal rdf:type owl:FunctionalProperty .
+xebr:hasEquityAndLiabilitiesTotal rdf:type owl:DatatypeProperty .
+xebr:hasEquityAndLiabilitiesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:EquityAndLiabilitiesPresentation .
+xebr:hasEquityAndLiabilitiesTotal <http://www.w3.org/2000/01/rdf-schema#label> "equity and liabilities [total]"@en .
+xebr:hasEquityAndLiabilitiesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:NetOperatingIncomePresentation xebr:partOf xebr:IncomeStatementPresentation .
+xebr:NetOperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:IncomeStatementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetOperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "net operating income [presentation]"@en .
+xebr:OperatingIncomePresentation xebr:partOf xebr:NetOperatingIncomePresentation .
+xebr:OperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetOperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "operating income [presentation]"@en .
+xebr:hasOperatingIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasOperatingIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasOperatingIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingIncomePresentation .
+xebr:hasOperatingIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "operating income [total]"@en .
+xebr:hasOperatingIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:OperatingChargesPresentation xebr:partOf xebr:NetOperatingIncomePresentation .
+xebr:OperatingChargesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetOperatingIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:OperatingChargesPresentation <http://www.w3.org/2000/01/rdf-schema#label> "operating charges [presentation]"@en .
+xebr:hasRawMaterialsAndConsumables rdf:type owl:FunctionalProperty .
+xebr:hasRawMaterialsAndConsumables rdf:type owl:DatatypeProperty .
+xebr:hasRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingChargesPresentation .
+xebr:hasRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#label> "raw materials and consumables"@en .
+xebr:hasRawMaterialsAndConsumables <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasWagesAndSalaries rdf:type owl:FunctionalProperty .
+xebr:hasWagesAndSalaries rdf:type owl:DatatypeProperty .
+xebr:hasWagesAndSalaries <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingChargesPresentation .
+xebr:hasWagesAndSalaries <http://www.w3.org/2000/01/rdf-schema#label> "wages and salaries"@en .
+xebr:hasWagesAndSalaries <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasPensionsAndSimilarCommitments rdf:type owl:FunctionalProperty .
+xebr:hasPensionsAndSimilarCommitments rdf:type owl:DatatypeProperty .
+xebr:hasPensionsAndSimilarCommitments <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingChargesPresentation .
+xebr:hasPensionsAndSimilarCommitments <http://www.w3.org/2000/01/rdf-schema#label> "pensions and similar commitments"@en .
+xebr:hasPensionsAndSimilarCommitments <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOtherOperatingCharges rdf:type owl:FunctionalProperty .
+xebr:hasOtherOperatingCharges rdf:type owl:DatatypeProperty .
+xebr:hasOtherOperatingCharges <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingChargesPresentation .
+xebr:hasOtherOperatingCharges <http://www.w3.org/2000/01/rdf-schema#label> "other operating charges"@en .
+xebr:hasOtherOperatingCharges <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOperatingChargesTotal rdf:type owl:FunctionalProperty .
+xebr:hasOperatingChargesTotal rdf:type owl:DatatypeProperty .
+xebr:hasOperatingChargesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:OperatingChargesPresentation .
+xebr:hasOperatingChargesTotal <http://www.w3.org/2000/01/rdf-schema#label> "operating charges [total]"@en .
+xebr:hasOperatingChargesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasOperatingProfitLossTotal rdf:type owl:FunctionalProperty .
+xebr:hasOperatingProfitLossTotal rdf:type owl:DatatypeProperty .
+xebr:hasOperatingProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:NetOperatingIncomePresentation .
+xebr:hasOperatingProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#label> "operating profit (loss) [total]"@en .
+xebr:hasOperatingProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:NetFinancialIncomePresentation xebr:partOf xebr:IncomeStatementPresentation .
+xebr:NetFinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:IncomeStatementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetFinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "net financial income [presentation]"@en .
+xebr:FinancialIncomePresentation xebr:partOf xebr:NetFinancialIncomePresentation .
+xebr:FinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetFinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "financial income [presentation]"@en .
+xebr:hasFinancialIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasFinancialIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasFinancialIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FinancialIncomePresentation .
+xebr:hasFinancialIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "financial income [total]"@en .
+xebr:hasFinancialIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:FinancialChargesPresentation xebr:partOf xebr:NetFinancialIncomePresentation .
+xebr:FinancialChargesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetFinancialIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:FinancialChargesPresentation <http://www.w3.org/2000/01/rdf-schema#label> "financial charges [presentation]"@en .
+xebr:hasFinancialChargesTotal rdf:type owl:FunctionalProperty .
+xebr:hasFinancialChargesTotal rdf:type owl:DatatypeProperty .
+xebr:hasFinancialChargesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:FinancialChargesPresentation .
+xebr:hasFinancialChargesTotal <http://www.w3.org/2000/01/rdf-schema#label> "financial charges [total]"@en .
+xebr:hasFinancialChargesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasFinancialProfitLossTotal rdf:type owl:FunctionalProperty .
+xebr:hasFinancialProfitLossTotal rdf:type owl:DatatypeProperty .
+xebr:hasFinancialProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:NetFinancialIncomePresentation .
+xebr:hasFinancialProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#label> "financial profit (loss) [total]"@en .
+xebr:hasFinancialProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:NetExtraordinaryIncomePresentation xebr:partOf xebr:IncomeStatementPresentation .
+xebr:NetExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:IncomeStatementPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "net extraordinary income [presentation]"@en .
+xebr:ExtraordinaryIncomePresentation xebr:partOf xebr:NetExtraordinaryIncomePresentation .
+xebr:ExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:ExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary income [presentation]"@en .
+xebr:hasExtraordinaryIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasExtraordinaryIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasExtraordinaryIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:ExtraordinaryIncomePresentation .
+xebr:hasExtraordinaryIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary income [total]"@en .
+xebr:hasExtraordinaryIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:ExtraordinaryChargesPresentation xebr:partOf xebr:NetExtraordinaryIncomePresentation .
+xebr:ExtraordinaryChargesPresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:NetExtraordinaryIncomePresentation <http://www.w3.org/2000/01/rdf-schema#subClassOf> xebr:Class .
+xebr:ExtraordinaryChargesPresentation <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary charges [presentation]"@en .
+xebr:hasExtraordinaryChargesTotal rdf:type owl:FunctionalProperty .
+xebr:hasExtraordinaryChargesTotal rdf:type owl:DatatypeProperty .
+xebr:hasExtraordinaryChargesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:ExtraordinaryChargesPresentation .
+xebr:hasExtraordinaryChargesTotal <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary charges [total]"@en .
+xebr:hasExtraordinaryChargesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasExtraordinaryProfitLossTotal rdf:type owl:FunctionalProperty .
+xebr:hasExtraordinaryProfitLossTotal rdf:type owl:DatatypeProperty .
+xebr:hasExtraordinaryProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:NetExtraordinaryIncomePresentation .
+xebr:hasExtraordinaryProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary profit (loss) [total]"@en .
+xebr:hasExtraordinaryProfitLossTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasIncomeTotal rdf:type owl:FunctionalProperty .
+xebr:hasIncomeTotal rdf:type owl:DatatypeProperty .
+xebr:hasIncomeTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:IncomeStatementPresentation .
+xebr:hasIncomeTotal <http://www.w3.org/2000/01/rdf-schema#label> "income [total]"@en .
+xebr:hasIncomeTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasChargesTotal rdf:type owl:FunctionalProperty .
+xebr:hasChargesTotal rdf:type owl:DatatypeProperty .
+xebr:hasChargesTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:IncomeStatementPresentation .
+xebr:hasChargesTotal <http://www.w3.org/2000/01/rdf-schema#label> "charges [total]"@en .
+xebr:hasChargesTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasIncomeTaxes rdf:type owl:FunctionalProperty .
+xebr:hasIncomeTaxes rdf:type owl:DatatypeProperty .
+xebr:hasIncomeTaxes <http://www.w3.org/2000/01/rdf-schema#domain> xebr:IncomeStatementPresentation .
+xebr:hasIncomeTaxes <http://www.w3.org/2000/01/rdf-schema#label> "income taxes"@en .
+xebr:hasIncomeTaxes <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+xebr:hasProfitLossForThePeriodTotal rdf:type owl:FunctionalProperty .
+xebr:hasProfitLossForThePeriodTotal rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossForThePeriodTotal <http://www.w3.org/2000/01/rdf-schema#domain> xebr:IncomeStatementPresentation .
+xebr:hasProfitLossForThePeriodTotal <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) for the period [total]"@en .
+xebr:hasProfitLossForThePeriodTotal <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .

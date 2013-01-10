@@ -1,0 +1,245 @@
+@prefix cp: <http://www.dfki.de/lt/companyprofile.owl#> .
+@prefix if: <http://www.dfki.de/lt/if.owl#> .
+@prefix cfi: <http://www.dfki.de/lt/cfi.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/#> .
+
+cp: a owl:Ontology;
+    rdfs:comment "Monnet ontology" .
+
+# Company Profile
+
+cp:CompanyProfile a owl:Class .
+
+cp:isin a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range xsd:string;
+    rdfs:label "ISIN"@en .
+
+
+cp:instant a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range xsd:dateTime;
+    rdfs:label "Instant"@en .
+
+cp:source a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range xsd:anyURI;
+    rdfs:label "Source"@en .
+
+cp:description a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range xsd:string;
+    rdfs:label "Description"@en .
+
+cp:cfi a owl:ObjectProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cfi:CFI;
+    rdfs:label "CFI"@en .
+
+cp:stockExchange a owl:ObjectProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cfi:CFI;
+    rdfs:label "CFI"@en .
+
+# Values
+
+cp:SourceType a owl:Class .
+cp:Unstructured a owl:Class;
+    rdfs:subClassOf cp:SourceType .
+cp:SemiStructured a owl:Class;
+    rdfs:subClassOf cp:SourceType .
+cp:Structured a owl:Class;
+    rdfs:subClassOf cp:SourceType .
+
+cp:annotation a owl:DatatypeProperty;
+    rdfs:domain cp:Unstructured;
+    rdfs:range xsd:string;
+    rdfs:label "Annotation"@en .
+
+
+
+cp:ValueContainer a owl:Class .
+cp:sourceType a owl:ObjectProperty;
+    rdfs:domain cp:ValueContainer;
+    rdfs:range cp:SourceType;
+    rdfs:label "Source Type"@en .
+
+cp:PersonValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:firstName a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:PersonValue;
+    rdfs:range xsd:string;
+    rdfs:label "First Name"@en .
+cp:lastName a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:PersonValue;
+    rdfs:range xsd:string;
+    rdfs:label "Last Name"@en .
+cp:function a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:PersonValue;
+    rdfs:range xsd:string;
+    rdfs:label "Function"@en .
+cp:title a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:PersonValue;
+    rdfs:range xsd:string;
+    rdfs:label "Title"@en .
+
+cp:ShareholderValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:shareholderName a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:ShareholderValue;
+    rdfs:range xsd:string;
+    rdfs:label "Name"@en .
+cp:percentage a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:ShareholderValue;
+    rdfs:range xsd:float;
+    rdfs:label "Percentage Ownership"@en .
+
+cp:StringValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:stringValue a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:StringValue;
+    rdfs:range xsd:string .
+
+cp:NumberTextValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:number a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:NumberTextValue;
+    rdfs:range xsd:integer .
+cp:text a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:NumberTextValue;
+    rdfs:range xsd:string .
+
+cp:SectorValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:sectorValue a owl:ObjectProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:SectorValue;
+    rdfs:range if:Sector;
+    rdfs:label "CFI"@en .
+
+cp:MonetaryValue a owl:Class;
+    rdfs:subClassOf cp:ValueContainer .
+cp:amount a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:MonetaryValue;
+    rdfs:range xsd:monetary .
+cp:date a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:MonetaryValue;
+    rdfs:range xsd:gYear .
+
+#
+# Properties from CompanyProfile to ValueContainer subclasses
+#
+
+cp:person a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:PersonValue;
+    rdfs:label "Person"@en .
+
+cp:shareholder a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:ShareholderValue;
+    rdfs:label "Shareholder"@en .
+
+cp:name a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Name"@en .
+cp:shortName a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Abbreviated Name"@en .
+cp:phone a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Phone"@en .
+cp:fax a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Fax"@en .
+cp:street a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Street"@en .
+cp:city a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "City"@en .
+cp:country a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Country"@en .
+cp:email a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "E-mail"@en .
+cp:location a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Location"@en .
+cp:website a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Website"@en .
+cp:symbol a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:StringValue;
+    rdfs:label "Ticker Symbol"@en .
+
+cp:customers a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:NumberTextValue;
+    rdfs:label "Customers"@en .
+cp:employees a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:NumberTextValue;
+    rdfs:label "Employees"@en .
+
+cp:sector a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:SectorValue;
+    rdfs:label "Sector"@en .
+
+cp:revenue a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Revenue"@en .
+cp:profit a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Profit"@en .
+cp:income a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Income"@en .
+cp:sales a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Sales"@en .
+cp:turnover a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Turnover"@en .
+cp:activity a owl:ObjectProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range cp:MonetaryValue;
+    rdfs:label "Activity"@en .

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<companyprofile>
+    <company name="Deutsche Bank">
+        <annotation>
+            Deutsche Bank
+        </annotation>
+    </company>
+    <activity id="40203010 " label=" Asset Management &amp; Custody Banks ">
+        <annotation>
+            leading global investment bank
+        </annotation>
+        <annotation>
+            the world
+        </annotation>
+        <annotation>
+            financial solutions, creating lasting value
+        </annotation>
+    </activity>
+    <location value="Germany, Europe, North America, Asia">
+        <annotation>
+            leader in Germany and Europe
+        </annotation>
+        <annotation>
+            growing in North America, Asia
+        </annotation>
+    </location>
+    <employees number="100000">
+        <annotation>
+            100,000 employees
+        </annotation>
+    </employees>
+</companyprofile>
