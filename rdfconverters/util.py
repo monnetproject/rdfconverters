@@ -1,5 +1,6 @@
 import os
 import argparse
+import traceback
 from rdflib import Namespace
 
 # To avoid duplication of namespaces across converters
@@ -11,7 +12,10 @@ NS = {
    'rdf': Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
    'xsd': Namespace("http://www.w3.org/2001/XMLSchema#"),
    'cp': Namespace("http://www.dfki.de/lt/companyprofile.owl#"),
-   'icb': Namespace("http://www.dfki.de/lt/icb.owl#")
+   'icb': Namespace("http://www.dfki.de/lt/icb.owl#"),
+   'dc': Namespace("http://www.dfki.de/lt/dc.owl#"),
+   'xebr': Namespace('http://www.dfki.de/lt/xebr.owl#'),
+   'skos': Namespace('http://www.dfki.de/lt/skos.owl#')
 }
 
 def write_graph(graph, outputfile=None, format='n3'):
@@ -95,6 +99,7 @@ class CommandBuilder:
             write_graph(graph, args.output, args.format or default_format)
 
         self.commands['convert'] = command
+        return parser_convert
 
     def add_batch_convert(self, convert_function, extension, default_format='n3'):
         self.__add_format_arg()
@@ -106,12 +111,23 @@ class CommandBuilder:
 
         def command(args):
             if not os.path.isdir(args.input):
-                raise IOError("Input directory does not exist or is not a directory")
+                raise IOError("Input directory does not exist or is not a directory: %s" % args.input)
             if not os.path.isdir(args.output):
-                raise IOError("Output directory does not exist or is not a directory")
+                raise IOError("Output directory does not exist or is not a directory: %s" % args.output)
 
+            succeeded, failed = 0, 0
             for inputfile, outputfile in traverse_mirror(args.input, args.output, extension, args.format):
                 print(inputfile + " -> " + outputfile)
-                graph = convert_function(inputfile)
-                write_graph(graph, outputfile, args.format or default_format)
+                try:
+                    graph = convert_function(inputfile)
+                    write_graph(graph, outputfile, args.format or default_format)
+                    succeeded += 1
+                except KeyboardInterrupt:
+                    failed += 1
+                    break
+                except:
+                    traceback.print_exc()
+                    failed += 1
+            print ("%d Converted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
         self.commands['batchconvert'] = command
+        return parser_batchconvert

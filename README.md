@@ -17,6 +17,7 @@ The command line tools should then be available.
 * `gate2rdf` - Convert GATE XML files to the CompanyProfile ontology RDF format.
 * `merge_graphs` - Utility to merge all RDF graphs in a directory into one file
 * `daxquintuples2rdf` - Converts Deutsche Borse quintuple data from DFKI into triples.
+* `xbrl2rdf` - Convert local XBRL formats into RDF (using the MFO ontologies).
 
 
 # Usage

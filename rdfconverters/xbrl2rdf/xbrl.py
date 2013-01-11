@@ -1,5 +1,24 @@
-from lxml import etree
-from gaap_xebr_mapper import XBRL2XEBR
+from rdfconverters.xbrl2rdf.xbrl2xebr import XBRL2XEBR
+
+class XBRLFactory:
+
+    @staticmethod
+    def from_name(tree, name):
+        if name == "es-pgc":
+            return XBRLSpanishPGC(tree)
+        elif name == "be":
+            return XBRLBelgian(tree)
+
+    @staticmethod
+    def detect_and_instantiate(tree):
+        nsmap = tree.getroot().nsmap
+        # Belgian - The 'c' prefix is for corrections to accounts (currently not parsed)
+        if 'pfs' in nsmap and not 'c' in nsmap:
+            return XBRLBelgian(tree)
+        # Spanish pgc07
+        if any(map(lambda k: k.startswith('pgc07'), nsmap.keys())):
+            return XBRLSpanishPGC(tree)
+
 
 class XBRLInstance:
     '''
@@ -14,15 +33,15 @@ class XBRLInstance:
     }
 
     The source attribute should be a tuple with the containing value and uri of a datatype
-'''
+    '''
+
     def get_filings_list():
         raise NotImplementedError()
 
-    def __init__(self, xbrlfile, namespace):
+    def __init__(self, xmltree, namespace):
         self.x2x = XBRL2XEBR(namespace)
 
-        with open(xbrlfile) as f:
-            self.tree = etree.parse(f)
+        self.tree = xmltree
         self.root = self.tree.getroot()
         self.ns = self.root.nsmap
 
@@ -41,7 +60,7 @@ class XBRLInstance:
                merged.update(items[context])
         return merged
 
-    def _contract(self, s):
+    def _prefix(self, s):
         '''Utility method. Convert string containing full URIs to prefixes'''
         for k, v in self.root.nsmap.items():
             s = s.replace("{%s}" % v, k + ':')
@@ -88,7 +107,7 @@ class XBRLInstance:
 
         return contexts
 
-class XBRLSpanish(XBRLInstance):
+class XBRLSpanishPGC(XBRLInstance):
 
     def __init__(self, xbrlfile):
         super().__init__(xbrlfile, "http://www.dfki.de/lt/xbrl_es.owl#")
@@ -160,13 +179,21 @@ class XBRLSpanish(XBRLInstance):
         items = {}
         # Extract financial data items
         for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
-            key = self._contract(item.tag)
+            key = self._prefix(item.tag)
             cr = item.attrib['contextRef']
             if cr not in items:
                 items[cr] = {}
             items[cr][key] = item.text + self.units[item.attrib['unitRef']] # e.g. 100EUR
 
         return items
+
+    def __str__(self):
+        s = "Spanish PGC"
+        if hasattr(self, 'current_filing') and self.current_filing:
+            s += ' (%s)' % (self.current_filing['metadata']['id'])
+        return s
+
+
 
 class XBRLBelgian(XBRLInstance):
 
@@ -238,7 +265,7 @@ class XBRLBelgian(XBRLInstance):
         items = {}
         # Extract financial data items
         for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
-            key = self._contract(item.tag)
+            key = self._prefix(item.tag)
             cr = item.attrib['contextRef']
             if cr not in items:
                 items[cr] = {}
@@ -246,3 +273,9 @@ class XBRLBelgian(XBRLInstance):
                 items[cr][key] = item.text + self.units[item.attrib['unitRef']] # e.g. 100EUR
 
         return items
+
+    def __str__(self):
+        s = "Belgian GAAP"
+        if hasattr(self, 'current_filing') and self.current_filing:
+            s += ' (%s)' % (self.current_filing['metadata']['id'])
+        return s

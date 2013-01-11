@@ -1,5 +1,13 @@
-from rdflib import Graph, Namespace
-from util import RDFUtil
+from rdflib import Graph
+from rdfconverters.util import NS
+from os.path import dirname, abspath
+from pkg_resources import resource_stream
+
+XEBR2XBRL_PATH = resource_stream(__name__, 'schemas/xebr2xbrl.n3')
+x2x_graph = Graph()
+x2x_graph.parse(XEBR2XBRL_PATH, format="n3")
+for n in NS:
+    x2x_graph.bind(n, NS[n])
 
 class XBRL2XEBR:
     '''
@@ -12,26 +20,22 @@ class XBRL2XEBR:
     is the name of the tag used in the XBRL XML file, including the namespace prefix, e.g.
       get("pfs-07-b:ActivoCurriando") ----> "FixedAssets"
     '''
-    XEBR2XBRL_PATH = 'schemas/xebr2xbrl.n3'
-    NS = {
-        'skos': Namespace('http://www.dfki.de/lt/skos.owl#')
-    }
+
+    def __rdf_name_to_xml_name(self, rdf_name):
+        rdf_name = rdf_name.rsplit("#")[1]
+        rdf_name = rdf_name.replace('_', ':', 1).replace(':has', ':', 1)
+        return rdf_name
 
     def __init__(self, namespace):
-        # Load XEBR2XBRL schema
         self.namespace = namespace
-        self.g = Graph()
-        self.g.parse(self.XEBR2XBRL_PATH, format="n3")
-        for n in self.NS:
-            self.g.bind(n, self.NS[n])
         self.mapping = self._generate_mapping()
 
     def _generate_mapping(self):
         mapping={}
-        for s, _, o in self.g.triples((None, self.NS['skos']['exactMatch'], None)):
+        for s, _, o in x2x_graph.triples((None, NS['skos']['exactMatch'], None)):
             if s.format().startswith(self.namespace):
-                s_xml = RDFUtil.rdf_name_to_xml_name(s)
-                mapping[s_xml] = RDFUtil.uri_to_concept(o)
+                s_xml = self.__rdf_name_to_xml_name(s)
+                mapping[s_xml] = o.rsplit("#")[1]
         return mapping
 
     def get(self, gaap_concept_xml):

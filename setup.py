@@ -4,7 +4,13 @@ setup(
     version = "0.1",
     packages = find_packages(),
 
+    include_package_data = True,
+    package_data = {
+        'rdfconverters.xbrl2rdf': ['schemas/*.n3'],
+    },
+
     install_requires = [
+        'setuptools',
         'rdflib >= 3.2.3',
         'beautifulsoup4',
         'lxml',
@@ -16,6 +22,7 @@ setup(
             'gate2rdf = rdfconverters.gate2rdf.gate2rdf:main',
             'merge_graphs = rdfconverters.merge_graphs:main',
             'daxquintuples2rdf = rdfconverters.daxquintuples2rdf.daxquintuples2rdf:main',
+            'xbrl2rdf = rdfconverters.xbrl2rdf.xbrl2rdf:main',
         ]
     }
 )
