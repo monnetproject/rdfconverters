@@ -50,7 +50,7 @@ class RDFConverter:
                                 value = filing['items'][concept]
                                 if value is not None:
                                     # Don't put datatype on strings
-                                    if concepts[concept] == URIRef("http://www.w3.org/2001/xsdchema#string"):
+                                    if concepts[concept] == URIRef("http://www.w3.org/2001/XMLschema#string"):
                                         datatype=None
                                     else:
                                         datatype=concepts[concept]

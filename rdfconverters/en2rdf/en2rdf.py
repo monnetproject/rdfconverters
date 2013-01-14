@@ -1,3 +1,6 @@
+import os
+import pickle
+import sys
 from bs4 import BeautifulSoup
 import requests
 from pprint import pprint
@@ -6,9 +9,11 @@ import itertools
 import re
 import time
 import json
+import argparse
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import XSD
-from util import NS
+from rdfconverters import util
+from rdfconverters.util import NS
 
 logging.basicConfig(format='%(module)s %(levelname)s: %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -18,42 +23,14 @@ class Fetcher:
     Responsible for fetching EuroNext HTML data.
     """
 
-    # Caching is just for development, to avoid scraping the site while testing code
-    CACHED_ISIN="BE0003764785"
-    CACHED_MIC="XBRU"
-    CACHED_LANG="en"
-    CACHES = {
-        'https://europeanequities.nyx.com/%s/nyx-company-profile/ajax?instrument_id=%s-%s' % (CACHED_LANG, CACHED_ISIN, CACHED_MIC): 'cached_table.html',
-        'https://europeanequities.nyx.com/%s/factsheet-ajax?instrument_id=%s-%s&instrument_type=equities' % (CACHED_LANG, CACHED_ISIN, CACHED_MIC): 'cached_factsheet.html',
-        'https://europeanequities.nyx.com/%s/nyx_eu_listings/real-time/quote?isin=%s&mic=%s' % (CACHED_LANG, CACHED_ISIN, CACHED_MIC): 'cached_quote.html',
-        'https://europeanequities.nyx.com/%s/markets/nyse-euronext/brussels/product-directory' % (CACHED_LANG): 'cached_search.html'
-    }
-    
     BASE = "https://europeanequities.nyx.com"
 
-    def __init__(self, use_cache=False):
-        self.use_cache = use_cache
-
     def fetch(self, url, params=None):
-        in_cache=self.use_cache and url in self.CACHES
-        if in_cache and params is None:
-            try:
-                with open(self.CACHES[url], "r") as f:
-                    logger.info("Fetching %s from cache %s..." % (url, self.CACHES[url]))
-                    return f.read()
-            except IOError:
-                in_cache=False
+        logger.info("Fetching %s from web..." % url)
+        rq = requests.get(url, params=params)
+        return rq.text
 
-        if not in_cache or params:
-            logger.info("Fetching %s from web..." % url)
-            rq = requests.get(url, params=params)
-            if url in self.CACHES:
-                with open(self.CACHES[url], "w") as f:
-                    f.write(rq.text)
-            return rq.text
-
-    def get_source_url(self, isin, mic, lang):
-        '''Returns the URL of the HTML page where the data can be viewed by a human'''
+    def get_user_friendly_source_url(self, isin, mic, lang):
         return "%s/%s/products/equities/%s-%s" % (self.BASE, lang, isin, mic)
     
     def fetch_company_profile(self, isin, mic, lang):
@@ -68,30 +45,35 @@ class Fetcher:
         url = "%s/%s/nyx_eu_listings/real-time/quote?isin=%s&mic=%s" % (self.BASE, lang, isin, mic)
         return self.fetch(url)
 
-class Parser:
+class Scraper:
     """
-    Convert EuroNext html data into Python data structures
+    Fetch EuroNext html data and convert into Python data structures
     e.g.
-    > fetcher = Fetcher(use_cache=False)
-    > parser = Parser(fetcher)
-    > parser.parse("BE0003764785", "XBRU", "en")
+    > fetcher = Fetcher()
+    > scraper = Scraper(fetcher)
+    > scraper.scrape("BE0003764785", "XBRU", "en")
       { ....... }
     """
 
     def __init__(self, fetcher):
         self.fetcher = fetcher
 
-    def parse(self, isin, mic, lang):
-        lang = lang.lower()
+    def scrape(self, isin, mic, langs=["en", "pt-pt", "nl", "fr"], timestamp=int(time.time())*1000):
+        if isinstance(langs, str):
+            langs = [langs]
         result = {}
-        result.update( {'source': self.fetcher.get_source_url(isin, mic, lang) } )
-        result.update( self._parse_company_profile(isin, mic, lang) )
-        result.update( self._parse_factsheet(isin, mic, lang) )
-        result.update( self._parse_quote(isin, mic, lang) )
-        result.update( {'isin': isin, 'mic': mic, 'lang': lang} )
+        result.update( {'sources': {lang:self.fetcher.get_user_friendly_source_url(isin, mic, lang) for lang in langs} } )
+
+        result['profile'] = {}
+        for lang in langs:
+            result['profile'][lang] = self._scrape_company_profile(isin, mic, lang)
+        result['factsheet'] = self._scrape_factsheet(isin, mic, "en")
+        result['quote'] = self._scrape_quote(isin, mic, "en")
+        result['timestamp'] = timestamp 
+        result.update( {'isin': isin, 'mic': mic} )
         return result
 
-    def _parse_company_profile(self, isin, mic, lang):
+    def _scrape_company_profile(self, isin, mic, lang):
         html = self.fetcher.fetch_company_profile(isin, mic, lang)
         soup = BeautifulSoup(html)
 
@@ -157,7 +139,7 @@ class Parser:
 
         return data
 
-    def _parse_factsheet(self, isin, mac, lang):
+    def _scrape_factsheet(self, isin, mic, lang):
         html = self.fetcher.fetch_factsheet(isin, mic, lang)
         soup = BeautifulSoup(html)
         factsheet = {}
@@ -174,7 +156,7 @@ class Parser:
 
         return factsheet
 
-    def _parse_quote(self, isin, mic, lang):
+    def _scrape_quote(self, isin, mic, lang):
         html = self.fetcher.fetch_quote(isin, mic, lang)
         soup = BeautifulSoup(html)
 
@@ -183,8 +165,6 @@ class Parser:
 
         return quote
         
-
-
     def _table_to_2d_array(self, table):
         data=[]
         for tr in table.find_all('tr'):
@@ -196,6 +176,18 @@ class Searcher:
     """
     Search for companies by keyword or ICB
     """
+
+    @staticmethod
+    def print_search_results(results):
+        if not results:
+            print("No results found")
+            return
+
+        col=(13, 5, 30)
+        print("%*s%*s%*s" % (col[0],'ISIN',col[1],'MIC',col[2],'NAME'))
+        print('-'*(sum(col)))
+        for r in results:
+            print('%*s%*s%*s' % (col[0],r['isin'],col[1],r['mic'],col[2],r['name']))
 
     def search(self, keyword='', icb=None):
         # Get the CSRF token
@@ -236,108 +228,213 @@ class Searcher:
                 result = dict(
                     name = re.search("_blank\">\s*(.*?)\s*</a>", company[0]).group(1),
                     isin = company[1],
-                    mic = company[2]
+                    mic = re.search(r'/[A-Z]{2}\d+-([A-Z]{4})"', company[0]).group(1)
                 )
                 companies.append(result)
         return companies
 
 class RDFConverter:
-    def __init__(self):
-        pass
+    '''
+    Converts output from Scraper to RDF. 
+    '''
 
-    def parsed_to_rdf(self, parsed, timestamp=int(time.time()*1000)):
-        ''' Convert the output of the parser into an RDF graph '''
+    def __init__(self, scraped):
+        self.scraped = scraped
+        id = "%s_%s" % (self.scraped['isin'], self.scraped['timestamp'])
+        self.id_node = NS['en'][id]
 
-        g = Graph()
+        self.g = Graph()
         for ns in NS:
-            g.bind(ns, NS[ns])
+            self.g.bind(ns, NS[ns])
 
-        id = "%s_%s" % (parsed['isin'], timestamp)
-        id_node = NS['en'][id]
-        a = NS['rdf']['type']
-        
-        g.add((id_node, a, NS['en']['Company']))
-        g.add((id_node, NS['cp']['StockExchange'], NS['if']['euronext_singleton']))
+        self.en2xml_langs = {'en': 'en', 'pt-pt': 'pt', 'nl': 'nl', 'fr': 'fr'}
 
-        g.add((id_node, NS['cp']['source'], Literal(parsed['source'], lang=parsed['lang'])))
-        g.add((id_node, NS['cp']['isin'], Literal(parsed['isin'])))
-    
-        if 'symbol' in parsed:
-            g.add((id_node, NS['cp']['symbol'], Literal(parsed['symbol'])))
-        if 'profile' in parsed:
-            g.add((id_node, NS['cp']['profile'], Literal(parsed['profile'], lang=parsed['lang'])))
+    def _write_quote(self):
+        quote = self.scraped['quote']
+        if 'symbol' in quote:
+            self.g.add((self.id_node, NS['cp']['symbol'], Literal(quote['symbol'])))
 
-        # Address
-        for addr in parsed['address']:
-            lang = parsed['lang'] if addr in ['city', 'country'] else None
-            g.add((id_node, NS['cp'][addr], Literal(parsed['address'][addr], lang=lang)))
+    def _write_profile(self):
+        for lang, profile in self.scraped['profile'].items():
+            lang = self.en2xml_langs[lang]
 
-        # Management
-        for manager in parsed['management']:
-            node = NS['en']["%s_%d" % (manager['name'].replace(' ', '_'), timestamp)]
+            # Unstructured text
+            if 'profile' in profile:
+                self.g.add((self.id_node, NS['cp']['profile'], Literal(profile['profile'], lang=lang)))
 
-            fln = manager['name'].index(' ')
-            if fln:
-                first, last = manager['name'][:fln], manager['name'][fln+1:]
-            else:
-                first, last = None, None
+            # Address
+            for addr in profile['address']:
+                clang = lang if addr in ['city', 'country'] else None
+                self.g.add((self.id_node, NS['cp'][addr], Literal(profile['address'][addr], lang=clang)))
 
-            g.add((id_node, NS['en']['topManagement'], node))
-            g.add((node, a, NS['en']['person']))
-            g.add((node, NS['en']['name'], Literal(manager['name'])))
-            g.add((node, NS['en']['function'], Literal(manager['function'], lang=parsed['lang'])))
-            if first:
-                g.add((node, NS['en']['firstName'], Literal(first)))
-            if last:
-                g.add((node, NS['en']['lastName'], Literal(last)))
+            # Management
+            for manager in profile['management']:
+                node = NS['en']["%s_%d" % (manager['name'].replace(' ', '_'), self.scraped['timestamp'])]
 
+                fln = manager['name'].index(' ')
+                if fln:
+                    first, last = manager['name'][:fln], manager['name'][fln+1:]
+                else:
+                    first, last = None, None
+
+                self.g.add((self.id_node, NS['en']['topManagement'], node))
+                self.g.add((node, NS['rdf']['type'], NS['en']['person']))
+                self.g.add((node, NS['en']['name'], Literal(manager['name'])))
+                self.g.add((node, NS['en']['function'], Literal(manager['function'], lang=lang)))
+                if first:
+                    self.g.add((node, NS['en']['firstName'], Literal(first)))
+                if last:
+                    self.g.add((node, NS['en']['lastName'], Literal(last)))
+
+        # Only do English for shareholders
         # Shareholders
-        for shareholder in parsed['shareholders']:
-            node = NS['en']["%s_%d" % (shareholder['name'].replace(' ', '_'), timestamp)] 
-            g.add((id_node, NS['en']['shareholderValue'], node))
-            g.add((node, NS['en']['name'], Literal(shareholder['name'])))
-            g.add((node, NS['en']['value'], Literal(shareholder['value'], datatype=XSD.float)))
+        for shareholder in self.scraped['profile']['en']['shareholders']:
+            node = NS['en']["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])] 
+            self.g.add((self.id_node, NS['en']['shareholderValue'], node))
+            self.g.add((node, NS['en']['name'], Literal(shareholder['name'])))
+            self.g.add((node, NS['en']['value'], Literal(shareholder['value'], datatype=XSD.float)))
 
+    def _write_factsheet(self):
+        factsheet = self.scraped['factsheet'] 
         # CFI
-        if 'cfi' in parsed:
-            cfi_singleton = NS['cfi'][parsed['cfi'][:2].lower() + "_singleton"]
+        if 'cfi' in factsheet:
+            cfi_singleton = NS['cfi'][factsheet['cfi'].lower() + "_singleton"]
+            self.g.add((self.id_node, NS['en']['cfi'], cfi_singleton))
             fields = ('category', 'group', 'first', 'second', 'third', 'fourth')
-            for value, field in zip(parsed['cfi'], fields):
-                g.add((cfi_singleton, NS['cfi'][field], Literal(value)))
+            for value, field in zip(factsheet['cfi'], fields):
+                self.g.add((cfi_singleton, NS['cfi'][field], Literal(value)))
 
         # ICB
-        if 'icb' in parsed:
-            g.add((id_node, a, NS['icb']['ICB'+parsed['icb'][0]]))
+        if 'icb' in factsheet:
+            self.g.add((self.id_node, NS['rdf']['type'], NS['icb']['ICB'+factsheet['icb'][0]]))
 
-        return g
+    def to_rdf(self):
+        a = NS['rdf']['type']
+        
+        self.g.add((self.id_node, a, NS['en']['Company']))
+        self.g.add((self.id_node, NS['cp']['StockExchange'], NS['if']['euronext_singleton']))
+        self.g.add((self.id_node, NS['cp']['isin'], Literal(self.scraped['isin'])))
+        for lang, source in self.scraped['sources'].items():
+            self.g.add((self.id_node, NS['cp']['source'], Literal(source, lang=self.en2xml_langs[lang])))
+
+        self._write_quote()
+        self._write_profile()
+        self._write_factsheet()
+        return self.g
+
+def search(keyword=None, icb=None, outputfile=None):
+    searcher = Searcher()
+    if icb:
+        print("Searching by ICB code %s" % icb)
+        results = searcher.search(icb=icb)
+    elif keyword:
+        print("Searching by keyword %s" % keyword)
+        results = searcher.search(keyword)
+    
+    Searcher.print_search_results(results)
+
+    if outputfile:
+        with open(outputfile, "w") as f:
+            print("Writing ISIN and MICs to %s" % output)
+            for r in results:
+                f.write('%s %s\n' % (r['isin'], r['mic']))
+
+def scrape(isin, mic, outputfile, pickled=False, timestamp=None):
+    fetcher = Fetcher()
+    scraper = Scraper(fetcher)
+    if timestamp:
+        scraped = scraper.scrape(isin, mic, timestamp=timestamp)
+    else:
+        scraped = scraper.scrape(isin, mic)
+
+    if pickled:
+        with open(outputfile, 'wb') as f:
+            sys.setrecursionlimit(2000) 
+            pickle.dump(scraped, f, pickle.DEFAULT_PROTOCOL)
+    else:
+        rdfconvert(scraped, outputfile)
+
+def rdfconvert(scraped, outputfile):
+    r = RDFConverter(scraped)
+    graph = r.to_rdf()
+    if outputfile:
+        with open(outputfile, 'wb') as f:
+            f.write(graph.serialize(format='n3'))
+    return graph
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='Searcher, scraper and RDF converter for EuroNext.'
+    )
+        
+    subparser = parser.add_subparsers(help='commands', dest='command')
+
+    # Search command
+    search_command = subparser.add_parser('search', help='Search EuroNext website')
+    search_subcommands = search_command.add_subparsers(help='Search commands', dest='search_subcommand')
+    search_command.add_argument('-o', dest='output', help='Write search results to file, which can be used as input to the scrape command')
+
+    keyword_command = search_subcommands.add_parser('keyword', help='Search EuroNext website by keyword')
+    keyword_command.add_argument('keyword', help='Keyword to search by')
+    icb_command = search_subcommands.add_parser('icb', help='Search EuroNext website by ICB code')
+    icb_command.add_argument('icb', help='ICB code to search by (e.g. 7000 will find all matching 7XXX)')
+
+    # Scrape commands
+    scrapeone_command = subparser.add_parser('scrapeone', help='Scrape a page from EuroNext given ISIN and MIC')
+    scrapeone_command.add_argument('isin', help='ISIN number of company')
+    scrapeone_command.add_argument('mic', help='ISO-10383 MIC for company (in URL of source URL)')
+    scrapeone_command.add_argument('outputfile', help='Path to a writable output file')
+    scrapeone_command.add_argument('--pickle',action='store_true', default=False, 
+        help='Output as pickled objects. Can be converted to RDF using the " + \
+       "rdfconvert command. Used to allow changes to the RDF format without having to write converters for RDF output files')
+
+    scrape_command = subparser.add_parser('scrape', help='Scrape from a file')
+    scrape_command.add_argument('inputfile', help='Path to file containing space-separated ISINs and MICs, one per line.' + \
+      " Can be generated with the 'search' command.")
+    scrape_command.add_argument('outputdir', help='Path to a writeable output directory')
+    scrape_command.add_argument('--pickle', action='store_true', default=False,
+        help='Output as pickled objects. Can later be converted to RDF using the " + \
+            "rdfconvert command. Used to allow changes to the RDF format without having to write converters for those changes.')
+
+    # rdfconvert command
+    rdfconvert_command = subparser.add_parser('rdfconvert', help='Convert pickled objects to RDF')
+    rdfconvert_command.add_argument('inputpath', help='Source file or folder (if --batch)')
+    rdfconvert_command.add_argument('outputpath', help='Destination file or folder (if --batch)')
+    rdfconvert_command.add_argument('--batch', action='store_true', default=False, help='Convert all .pickle files recursively in "inputpath"')
+    
+    args = parser.parse_args()
+
+    if args.command == 'search':
+        if hasattr(args, 'keyword'):
+            search(keyword=args.keyword, outputfile=args.output)
+        elif hasattr(args, 'icb'):
+            search(icb=args.icb, outputfile=args.output)
+    elif args.command == 'scrapeone':
+        scrape(args.isin, args.mic, args.outputfile, args.pickle) 
+    elif args.command == 'scrape':
+        with open(args.inputfile) as f:
+            isins_mics = (line.split(' ') for line in f.read().strip().split('\n'))
+        for isin_mic in isins_mics:
+            extension = 'pickle' if args.pickle else 'n3'
+            timestamp = int(time.time() * 1000)
+            outputfile = "%s/%s-%s-%s.%s" % (args.outputdir, isin_mic[0], isin_mic[1], timestamp, extension)
+            print("Scraping %s, %s to %s" % (isin_mic[0], isin_mic[1], outputfile))
+            scrape(isin_mic[0], isin_mic[1], outputfile, args.pickle, timestamp=timestamp)
+    elif args.command == 'rdfconvert':
+        if args.batch:
+            files = list(util.traverse_mirror(args.inputpath, args.outputpath, '.pickle', '.n3'))
+        else:
+            files = [(args.inputpath, args.outputpath)]
+
+        for inputfile, outputfile in files:
+            print("Converting %s to %s" % (inputfile, outputfile))
+            with open(inputfile, 'rb') as f:
+                scraped = pickle.load(f)
+                rdfconvert(scraped, outputfile)
+
         
 
+if __name__=='__main__':
+    main()
 
-isin, mic = "BE0003764785", "XBRU"
-lang = "en"
-langs = ["en", "fr", "pt", "nl"]
-
-fetcher = Fetcher(use_cache=True)
-parser = Parser(fetcher)
-
-# Example of scraping and converting to RDF
-parsed = parser.parse(isin, mic, lang)
-#pprint(parsed)
-
-r = RDFConverter()
-graph = r.parsed_to_rdf(parsed)
-print (graph.serialize(format='n3').decode('utf-8'))
-
-
-'''
-# Example of searching
-searcher = Searcher()
-# By keyword
-results = searcher.search("4ENERGY")
-logger.info("Search results by keyword:")
-pp(results)
-# By ICB sector code
-results = searcher.search(icb='7000')
-logger.info("Search results by ICB code")
-pp(results)
-'''

@@ -11,6 +11,7 @@ setup(
 
     install_requires = [
         'setuptools',
+        'requests',
         'rdflib >= 3.2.3',
         'beautifulsoup4',
         'lxml',
@@ -23,6 +24,7 @@ setup(
             'merge_graphs = rdfconverters.merge_graphs:main',
             'daxquintuples2rdf = rdfconverters.daxquintuples2rdf.daxquintuples2rdf:main',
             'xbrl2rdf = rdfconverters.xbrl2rdf.xbrl2rdf:main',
+            'en2rdf = rdfconverters.en2rdf.en2rdf:main',
         ]
     }
 )
