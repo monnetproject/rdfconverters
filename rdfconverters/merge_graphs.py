@@ -16,16 +16,7 @@ def main():
     if not os.path.isdir(args.input):
         raise IOError("Input directory does not exist or is not a directory")
 
-    graph=Graph()
-    for root, file_ in util.traverse(args.input):
-        extension = os.path.splitext(file_)[1].lstrip('.')
-        if extension in types:
-            inputfile = root + file_
-            graph.parse(inputfile, format=extension)
-
-    rdf = graph.serialize(format=args.format)
-    with open(args.output, "wb") as f:
-        f.write(rdf)
+    util.merge_graphs_in_directory(args.input, args.output, format=args.format)
 
 if __name__ == '__main__':
     main()

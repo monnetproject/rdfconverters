@@ -20,18 +20,28 @@ class QuintupleReader:
         s = s.replace('&quot;', '\\"')
         s = html.parser.HTMLParser().unescape(s)
 
+        s = s.encode('unicode-escape').decode('utf8') \
+                .replace('\\n', '\n').replace('\\"', '\"')
+
         # Replace dodgy prefixes
         for n in NS:
             s = s.replace('<%s:' % n, '<%s' % NS[n])
+
+        # Encode UTF-8 profiles to unicode-escape (ntriples format requires unicode-escape)
+        def encode_correctly(m):
+            g = m.group(0)
+            g = g.encode('unicode-escape').decode('utf8')
+            g = g.replace('\\n', '\n').replace('\\"', '\"')
+            return g
+
+        #s = re.sub(r'#portrait> ".*"@', encode_correctly, s)
+        #print(s)
         return s
 
     def read(self, filename):
-        # Data is encoded in mac_latin2 (ntriples requires unicode-escape)
+        # Data is encoded in mac_latin2
         with open(filename, encoding="mac_latin2") as f:
             quintuples = f.read()
-        # Encode UTF-8 to unicode-escape
-        quintuples = quintuples.encode('unicode-escape').decode('utf8')
-        quintuples = quintuples.replace('\\n', '\n').replace('\\"', '\"')
         return self.__clean(quintuples)
 
 
@@ -62,9 +72,35 @@ class QuintuplesToTriples:
             g.bind(n, NS[n])
         g.parse(data=triples, format=format)
 
-        subject = next(g.subjects(NS['if']['origin'], None))
+        # Replace dax: id with cp: id
+        dax_id = next(g.subjects(NS['if']['origin'], None))
+        cp_id = NS['cp'][dax_id.rsplit('#')[1]]
+        triple = (dax_id, None, None)
+        for s, p, o in g.triples(triple):
+            g.add((cp_id, p, o))
+        g.remove(triple)
+        # Replace dax:isin with cp:isin
+        triple = (None, NS['dax']['isin'], None)
+        for s, p, o in g.triples(triple):
+            g.add((s, NS['cp']['isin'], o))
+        g.remove(triple)
+        # Replace dax:portrait with cp:profile
+        triple = (None, NS['dax']['portrait'], None)
+        for s, p, o in g.triples(triple):
+            g.add((s, NS['cp']['profile'], o))
+        g.remove(triple)
+        # Replace dax:source with cp:source
+        triple = (None, NS['dax']['source'], None)
+        for s, p, o in g.triples(triple):
+            g.add((s, NS['cp']['source'], o))
+        g.remove(triple)
+        # Add cp:stockExchange (equals if:origin)
+        triple = (None, NS['if']['origin'], None)
+        for s, p, o in g.triples(triple):
+            g.add((s, NS['cp']['stockExchange'], o))
+
         instant = self.__extract_instant(quintuples)
-        g.add((subject, NS['cp']['instant'],
+        g.add((cp_id, NS['cp']['instant'],
             Literal(instant, datatype=XSD.dateTime)))
 
         return g

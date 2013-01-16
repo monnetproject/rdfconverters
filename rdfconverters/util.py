@@ -1,7 +1,7 @@
 import os
 import argparse
 import traceback
-from rdflib import Namespace
+from rdflib import Namespace, Graph
 
 # To avoid duplication of namespaces across converters
 NS = {
@@ -24,12 +24,23 @@ def write_graph(graph, outputfile=None, format='n3'):
     '''
     rdf = graph.serialize(format=format)
     if not outputfile:
-        # NTriples requires unicode-escape format, it would be prettier to use UTF-8 here,
-        # but there is a risk that the output may be piped into a file, so it should be valid
-        print(rdf.decode('unicode-escape'))
+        print(rdf.decode('utf-8'))
     else:
         with open(outputfile, "wb") as f:
             f.write(rdf)
+
+def merge_graphs_in_directory(directory, outputfile, format='n3'):
+    with open(outputfile, "wb") as f:
+        graph=Graph()
+        for root, file_ in traverse(directory):
+            extension = os.path.splitext(file_)[1].lstrip('.')
+            if extension in ['n3', 'xml', 'nt']:
+                inputfile = root + file_
+                graph.parse(inputfile, format=extension)
+
+        rdf = graph.serialize(format=format)
+
+        f.write(rdf)
 
 def traverse(inputdir, extension=''):
    """
@@ -109,11 +120,13 @@ class CommandBuilder:
         parser_batchconvert.add_argument('input', help='Input directory')
         parser_batchconvert.add_argument('output', help='Output directory')
 
+        parser_batchconvert.add_argument('--merge', dest='merge', help="Merge to file")
+
         def command(args):
             if not os.path.isdir(args.input):
                 raise IOError("Input directory does not exist or is not a directory: %s" % args.input)
             if not os.path.isdir(args.output):
-                raise IOError("Output directory does not exist or is not a directory: %s" % args.output)
+                os.path.mkdir(args.output)
 
             succeeded, failed = 0, 0
             for inputfile, outputfile in traverse_mirror(args.input, args.output, extension, args.format):
@@ -129,5 +142,10 @@ class CommandBuilder:
                     traceback.print_exc()
                     failed += 1
             print ("%d Converted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
+
+            if args.merge:
+                print("Merging graphs to %s" % (args.merge))
+                merge_graphs_in_directory(args.output, args.merge, format=args.format)
+
         self.commands['batchconvert'] = command
         return parser_batchconvert
