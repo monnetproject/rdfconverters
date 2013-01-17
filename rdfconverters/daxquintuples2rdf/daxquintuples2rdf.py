@@ -7,6 +7,7 @@ import os
 import html.parser
 import argparse
 from rdfconverters import util
+from rdfconverters.cputil import CPNodeBuilder
 from rdfconverters.util import NS
 
 
@@ -79,6 +80,22 @@ class QuintuplesToTriples:
         for s, p, o in g.triples(triple):
             g.add((cp_id, p, o))
         g.remove(triple)
+        # Encapsulate dax sector in a cp node
+        triple = (cp_id, NS['rdf']['type'], None)
+        _, _, sector_value = next(g.triples(triple))
+        g.remove(triple)
+        CPNodeBuilder(g, cp_id).structured().sector_value('sector', sector_value)
+        # Replace dax:name and dax:shortName with cp:companyName
+        used_names = set()
+        for triple in ((cp_id, NS['dax']['name'], None), (cp_id, NS['dax']['shortName'], None)):
+            for _, _, company_name in g.triples(triple):
+                if company_name.upper() not in used_names:
+                    CPNodeBuilder(g, cp_id).structured().string_value('companyName', company_name)
+                    g.remove(triple)
+                    used_names.add(company_name.upper())
+
+        # Use cp:CompanyProfile as the rdf type instead of DAX sector
+        g.add((cp_id, NS['rdf']['type'], NS['cp']['CompanyProfile']))
         # Replace dax:isin with cp:isin
         triple = (None, NS['dax']['isin'], None)
         for s, p, o in g.triples(triple):

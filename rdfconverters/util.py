@@ -125,8 +125,8 @@ class CommandBuilder:
         def command(args):
             if not os.path.isdir(args.input):
                 raise IOError("Input directory does not exist or is not a directory: %s" % args.input)
-            if not os.path.isdir(args.output):
-                os.path.mkdir(args.output)
+            if not os.path.exists(args.output):
+                os.makedirs(args.output)
 
             succeeded, failed = 0, 0
             for inputfile, outputfile in traverse_mirror(args.input, args.output, extension, args.format):
@@ -136,11 +136,11 @@ class CommandBuilder:
                     write_graph(graph, outputfile, args.format or default_format)
                     succeeded += 1
                 except KeyboardInterrupt:
-                    failed += 1
-                    break
+                    return
                 except:
                     traceback.print_exc()
                     failed += 1
+
             print ("%d Converted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
 
             if args.merge:

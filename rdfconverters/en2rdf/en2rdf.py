@@ -11,9 +11,10 @@ import time
 import json
 import argparse
 from datetime import datetime
-from rdflib import Graph, Namespace, Literal, URIRef, BNode
+from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import XSD
 from rdfconverters import util
+from rdfconverters.cputil import CPNodeBuilder
 from rdfconverters.util import NS
 
 logging.basicConfig(format='%(module)s %(levelname)s: %(message)s', level=logging.INFO)
@@ -292,13 +293,9 @@ class RDFConverter:
                     self.g.add((node, NS['en']['lastName'], Literal(last)))
 
         # Company name
-        companyName = self.scraped['profile']['en']['address'].get('companyName')
-        if companyName:
-            b = BNode()
-            self.g.add((b, NS['rdf']['type'], NS['cp']['Structured']))
-            self.g.add((b, NS['rdf']['type'], NS['cp']['StringValue']))
-            self.g.add((b, NS['cp']['stringValue'], Literal(companyName)))
-            self.g.add((self.id_node, NS['cp']['companyName'], b))
+        company_name = self.scraped['profile']['en']['address'].get('companyName')
+        if company_name:
+            CPNodeBuilder(self.g, self.id_node).structured().string_value('companyName', company_name)
 
         # Shareholders
         for shareholder in self.scraped['profile']['en']['shareholders']:
@@ -319,11 +316,8 @@ class RDFConverter:
 
         # ICB
         if 'icb' in factsheet:
-            b = BNode()
-            self.g.add((b, NS['rdf']['type'], NS['cp']['Structured']))
-            self.g.add((b, NS['rdf']['type'], NS['cp']['SectorValue']))
-            self.g.add((b, NS['cp']['sectorValue'], NS['icb']['ICB'+factsheet['icb'][0]]))
-            self.g.add((self.id_node, NS['cp']['sector'], b))
+            sector_value = NS['icb']['ICB'+factsheet['icb'][0]]
+            CPNodeBuilder(self.g, self.id_node).structured().sector_value('sector', sector_value)
 
     def to_rdf(self):
         a = NS['rdf']['type']
