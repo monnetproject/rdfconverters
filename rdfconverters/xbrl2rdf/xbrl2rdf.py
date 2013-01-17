@@ -5,7 +5,7 @@ from rdfconverters import util
 from rdfconverters.xbrl2rdf.xbrl import *
 from rdfconverters.xbrl2rdf.converter import RDFConverter
 
-r = RDFConverter()
+rdf_converter = RDFConverter()
 
 def convert(inputfile, taxonomy=None):
     with open(inputfile) as f:
@@ -20,7 +20,9 @@ def convert(inputfile, taxonomy=None):
             raise Exception("Could not detect taxonomy in %s" % inputfile)
         print("Detected %s as '%s':" % (os.path.basename(inputfile), xbrl_instance))
 
-    graph = r.convert(xbrl_instance)
+    xbrl_instance.parse_report()
+
+    graph = rdf_converter.convert(xbrl_instance)
 
     return graph
 

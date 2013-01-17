@@ -1,5 +1,5 @@
 from rdflib import Namespace, Graph
-from os.path import dirname, abspath
+from pkg_resources import resource_stream
 
 class XEBRConceptTraverser:
     '''
@@ -8,7 +8,7 @@ class XEBRConceptTraverser:
     See the "xEBR Matrix" sheet in "xEBR v7.0-Financial Figures-rdf-mappings.xls" file for the
     report taxonomy. Run `cat notes/structure` for the MFO version of that excel sheet.
     '''
-    XEBR_PATH = dirname(abspath(__file__))+'/schemas/xebr.n3'
+    XEBR_PATH = resource_stream(__name__, '/schemas/xebr_v1.2.n3')
     NS = {
         'rdf': Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
         'rdfs': Namespace("http://www.w3.org/2000/01/rdf-schema#"),
@@ -22,7 +22,7 @@ class XEBRConceptTraverser:
         self.gx.parse(self.XEBR_PATH, format="n3")
         for n in self.NS:
             self.gx.bind(n, self.NS[n])
-        
+
         # This is an instance variable for optimisation reasons
         self.range_triples = list(
             (self.__uri_to_concept(s), t) for s, _, t in self.gx.triples((None, self.NS['rdfs']['range'], None))
@@ -61,7 +61,7 @@ class XEBRConceptTraverser:
         haslist = set(self.__uri_to_concept(s) for s in self.gx.subjects(domain, self.NS['xebr'][abstract_concept]))
         # Map has* properties to data type
         has = {}
-        
+
         for s, t in self.range_triples:
             if s in haslist:
                 has[ s ] = t

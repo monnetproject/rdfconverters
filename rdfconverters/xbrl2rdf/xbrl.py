@@ -35,7 +35,10 @@ class XBRLInstance:
     The source attribute should be a tuple with the containing value and uri of a datatype
     '''
 
-    def get_filings_list():
+    def _extract_company_info(self):
+        raise NotImplementedError()
+
+    def get_filings_list(self):
         raise NotImplementedError()
 
     def __init__(self, xmltree, namespace):
@@ -44,6 +47,57 @@ class XBRLInstance:
         self.tree = xmltree
         self.root = self.tree.getroot()
         self.ns = self.root.nsmap
+
+        # To be set by implementation if using default parse_report function
+        self.previous_duration = None
+        self.previous_instant = None
+        self.current_duration = None
+        self.current_instant = None
+
+    def parse_report(self):
+        '''Default implementation which works for Spanish PGC and Belgium. Other taxonomies likely
+            need to override this'''
+        self.units = self._extract_units()
+        self.contexts = self._extract_contexts()
+        self.items = self._extract_financial_items()
+
+        self.previous_items = self._merge_contexts(self.items, [self.previous_duration, self.previous_instant])
+        self.previous_items_xebr = self._items_to_xebr(self.previous_items)
+        self.previous_items_xebr.update(self._extract_company_info(self.current_duration))
+        self.current_items = self._merge_contexts(self.items, [self.current_duration, self.current_instant])
+        self.current_items_xebr = self._items_to_xebr(self.current_items)
+        self.current_items_xebr.update(self._extract_company_info(self.current_duration))
+
+        previous_id = self.root.find('./xbrli:context[@id="%s"]//xbrli:identifier' % self.previous_instant,
+                        namespaces=self.ns)
+        current_id = self.root.find('./xbrli:context[@id="%s"]//xbrli:identifier' % self.current_instant,
+                        namespaces=self.ns)
+
+        if previous_id is not None:
+            self.previous_filing = {
+                'metadata': {
+                    'id': previous_id.text,
+                    'start': self.contexts[self.previous_duration]['start'],
+                    'end': self.contexts[self.previous_duration]['end'],
+                    'source': ("www.fgov.be", 'http://www.w3.org/2001/XMLSchema#anyURI')
+                },
+                'items': self.previous_items_xebr
+            }
+        else:
+            self.previous_filing = None
+
+        if current_id is not None:
+            self.current_filing = {
+                'metadata': {
+                    'id': current_id.text,
+                    'start': self.contexts[self.current_duration]['start'],
+                    'end': self.contexts[self.current_duration]['end'],
+                    'source': ("www.fgov.be", 'http://www.w3.org/2001/XMLSchema#anyURI')
+                },
+                'items': self.current_items_xebr
+            }
+        else:
+            self.current_filing = None
 
     def _merge_contexts(self, items, contexts):
         '''
@@ -107,47 +161,46 @@ class XBRLInstance:
 
         return contexts
 
+    def _normalise_decimal_value(self, decimals_str, value):
+        try:
+            decimals = int(decimals_str)
+        except ValueError:
+            return value
+
+        if decimals < 0:
+            return value[:decimals]
+        else:
+            return value
+
+    def _extract_financial_items(self):
+        items = {}
+        for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
+            tag_name = self._prefix(item.tag)
+            context_ref = item.attrib['contextRef']
+            if context_ref not in items:
+                items[context_ref] = {}
+            if 'unitRef' in item.attrib:
+                iso4217_currency = self.units[item.attrib['unitRef']]
+                monetary_value = self._normalise_decimal_value(item.attrib['decimals'], item.text)
+                items[context_ref][tag_name] = monetary_value + iso4217_currency
+
+        return items
+
+
 class XBRLSpanishPGC(XBRLInstance):
 
     def __init__(self, xbrlfile):
         super().__init__(xbrlfile, "http://www.dfki.de/lt/xbrl_es.owl#")
 
-        self.units = self._extract_units()
-        self.contexts = self._extract_contexts()
-        self.items = self._extract_data()
-
-        self.previous_items = self._merge_contexts(self.items, ['D.ANTERIOR', 'I.ANTERIOR'])
-        self.previous_items_xebr = self._items_to_xebr(self.previous_items)
-        self.previous_items_xebr.update(self._extract_company_info('D.ANTERIOR'))
-        self.current_items = self._merge_contexts(self.items, ['D.ACTUAL', 'I.ACTUAL'])
-        self.current_items_xebr = self._items_to_xebr(self.current_items)
-        self.current_items_xebr.update(self._extract_company_info('D.ACTUAL'))
-
-        previous_id = self.root.find('./xbrli:context[@id="I.ANTERIOR"]//xbrli:identifier',
-                        namespaces=self.ns).text
-        current_id = self.root.find('./xbrli:context[@id="I.ACTUAL"]//xbrli:identifier',
-                        namespaces=self.ns).text
-
-        self.previous_filing = {
-            'metadata': {
-                'id': previous_id,
-                'start': self.contexts['D.ANTERIOR']['start'],
-                'end': self.contexts['D.ANTERIOR']['end'],
-            },
-            'items': self.previous_items_xebr
-        }
-
-        self.current_filing = {
-            'metadata': {
-                'id': current_id,
-                'start': self.contexts['D.ACTUAL']['start'],
-                'end': self.contexts['D.ACTUAL']['end'],
-            },
-            'items': self.current_items_xebr
-        }
+    def parse_report(self):
+        self.previous_duration = 'D.ANTERIOR'
+        self.previous_instant = 'I.ANTERIOR'
+        self.current_duration = 'D.ACTUAL'
+        self.current_instant = 'I.ACTUAL'
+        super().parse_report()
 
     def get_filings_list(self):
-        return [self.current_filing, self.previous_filing]
+        return [f for f in [self.current_filing, self.previous_filing] if f is not None]
 
     def _extract_company_info(self, contextRef):
         # Quick'n'dirty solution to manually extract company information
@@ -175,18 +228,6 @@ class XBRLSpanishPGC(XBRLInstance):
             return info
         return {}
 
-    def _extract_data(self):
-        items = {}
-        # Extract financial data items
-        for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
-            key = self._prefix(item.tag)
-            cr = item.attrib['contextRef']
-            if cr not in items:
-                items[cr] = {}
-            items[cr][key] = item.text + self.units[item.attrib['unitRef']] # e.g. 100EUR
-
-        return items
-
     def __str__(self):
         s = "Spanish PGC"
         if hasattr(self, 'current_filing') and self.current_filing:
@@ -194,60 +235,23 @@ class XBRLSpanishPGC(XBRLInstance):
         return s
 
 
-
 class XBRLBelgian(XBRLInstance):
+
+    def parse_report(self):
+        self.previous_duration = 'PrecedingDuration'
+        self.previous_instant = 'PrecedingInstant'
+        self.current_duration = 'CurrentDuration'
+        self.current_instant = 'CurrentInstant'
+        super().parse_report()
 
     def __init__(self, xbrlfile):
         super().__init__(xbrlfile, "http://www.dfki.de/lt/xbrl_be.owl#")
 
-        self.units = self._extract_units()
-        self.contexts = self._extract_contexts()
-        self.items = self._extract_data()
-
-        self.previous_items = self._merge_contexts(self.items, ['PrecedingDuration', 'PrecedingInstant'])
-        self.previous_items_xebr = self._items_to_xebr(self.previous_items)
-        self.previous_items_xebr.update(self._extract_company_info('CurrentDuration'))
-        self.current_items = self._merge_contexts(self.items, ['CurrentDuration', 'CurrentInstant'])
-        self.current_items_xebr = self._items_to_xebr(self.current_items)
-        self.current_items_xebr.update(self._extract_company_info('CurrentDuration'))
-
-        previous_id = self.root.find('./xbrli:context[@id="PrecedingInstant"]//xbrli:identifier',
-                        namespaces=self.ns)
-        current_id = self.root.find('./xbrli:context[@id="CurrentInstant"]//xbrli:identifier',
-                        namespaces=self.ns)
-
-        if previous_id is not None:
-           self.previous_filing = {
-               'metadata': {
-                   'id': previous_id.text,
-                   'start': self.contexts['PrecedingDuration']['start'],
-                   'end': self.contexts['PrecedingDuration']['end'],
-                   'source': ("www.fgov.be", 'http://www.w3.org/2001/XMLSchema#anyURI')
-               },
-               'items': self.previous_items_xebr
-           }
-        else:
-          self.previous_filing = None
-
-        if current_id is not None:
-           self.current_filing = {
-               'metadata': {
-                   'id': current_id.text,
-                   'start': self.contexts['CurrentDuration']['start'],
-                   'end': self.contexts['CurrentDuration']['end'],
-                   'source': ("www.fgov.be", 'http://www.w3.org/2001/XMLSchema#anyURI')
-               },
-               'items': self.current_items_xebr
-           }
-        else:
-          self.current_filing = None
 
     def get_filings_list(self):
         return [f for f in [self.current_filing, self.previous_filing] if f is not None]
 
     def _extract_company_info(self, contextRef):
-        # Quick'n'dirty solution to manually extract company information
-        # (no formal mapping system exists at time of writing)
         def __get(s):
             n = self.root.find(".//%s[@contextRef='%s']" % (s, contextRef), namespaces=self.ns)
             if n is not None:
@@ -260,19 +264,6 @@ class XBRLBelgian(XBRLInstance):
         }
 
         return info
-
-    def _extract_data(self):
-        items = {}
-        # Extract financial data items
-        for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
-            key = self._prefix(item.tag)
-            cr = item.attrib['contextRef']
-            if cr not in items:
-                items[cr] = {}
-            if 'unitRef' in item.attrib:
-                items[cr][key] = item.text + self.units[item.attrib['unitRef']] # e.g. 100EUR
-
-        return items
 
     def __str__(self):
         s = "Belgian GAAP"
