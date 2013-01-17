@@ -10,7 +10,8 @@ import re
 import time
 import json
 import argparse
-from rdflib import Graph, Namespace, Literal, URIRef
+from datetime import datetime
+from rdflib import Graph, Namespace, Literal, URIRef, BNode
 from rdflib.namespace import XSD
 from rdfconverters import util
 from rdfconverters.util import NS
@@ -32,7 +33,7 @@ class Fetcher:
 
     def get_user_friendly_source_url(self, isin, mic, lang):
         return "%s/%s/products/equities/%s-%s" % (self.BASE, lang, isin, mic)
-    
+
     def fetch_company_profile(self, isin, mic, lang):
         url = "%s/%s/nyx-company-profile/ajax?instrument_id=%s-%s" % (self.BASE, lang, isin, mic)
         return self.fetch(url)
@@ -69,7 +70,7 @@ class Scraper:
             result['profile'][lang] = self._scrape_company_profile(isin, mic, lang)
         result['factsheet'] = self._scrape_factsheet(isin, mic, "en")
         result['quote'] = self._scrape_quote(isin, mic, "en")
-        result['timestamp'] = timestamp 
+        result['timestamp'] = timestamp
         result.update( {'isin': isin, 'mic': mic} )
         return result
 
@@ -107,6 +108,7 @@ class Scraper:
         # Address
         address={}
         groups = soup.find('div', {'id':'company-profile-address'}).findAll('div', {'class':'address-group'})
+
         if groups:
             txt = [n.strip() for n in groups.pop(0).findAll(text=True) if len(n.strip())]
             if txt:
@@ -164,7 +166,7 @@ class Scraper:
         quote['symbol'] = soup.find('div', {'class': 'sub-container'}).find('div', {'class': 'first-column box-column'}).span.string
 
         return quote
-        
+
     def _table_to_2d_array(self, table):
         data=[]
         for tr in table.find_all('tr'):
@@ -235,7 +237,7 @@ class Searcher:
 
 class RDFConverter:
     '''
-    Converts output from Scraper to RDF. 
+    Converts output from Scraper to RDF.
     '''
 
     def __init__(self, scraped):
@@ -263,9 +265,12 @@ class RDFConverter:
                 self.g.add((self.id_node, NS['cp']['profile'], Literal(profile['profile'], lang=lang)))
 
             # Address
-            for addr in profile['address']:
-                clang = lang if addr in ['city', 'country'] else None
-                self.g.add((self.id_node, NS['cp'][addr], Literal(profile['address'][addr], lang=clang)))
+            if 'street' in profile['address']:
+                self.g.add((self.id_node, NS['en']['street'], Literal(profile['address']['street'])))
+            if 'city' in profile['address']:
+                self.g.add((self.id_node, NS['en']['city'], Literal(profile['address']['city'], lang=lang)))
+            if 'country' in profile['address']:
+                self.g.add((self.id_node, NS['en']['country'], Literal(profile['address']['country'], lang=lang)))
 
             # Management
             for manager in profile['management']:
@@ -286,16 +291,24 @@ class RDFConverter:
                 if last:
                     self.g.add((node, NS['en']['lastName'], Literal(last)))
 
-        # Only do English for shareholders
+        # Company name
+        companyName = self.scraped['profile']['en']['address'].get('companyName')
+        if companyName:
+            b = BNode()
+            self.g.add((b, NS['rdf']['type'], NS['cp']['Structured']))
+            self.g.add((b, NS['rdf']['type'], NS['cp']['StringValue']))
+            self.g.add((b, NS['cp']['stringValue'], Literal(companyName)))
+            self.g.add((self.id_node, NS['cp']['companyName'], b))
+
         # Shareholders
         for shareholder in self.scraped['profile']['en']['shareholders']:
-            node = NS['en']["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])] 
+            node = NS['en']["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])]
             self.g.add((self.id_node, NS['en']['shareholderValue'], node))
             self.g.add((node, NS['en']['name'], Literal(shareholder['name'])))
             self.g.add((node, NS['en']['value'], Literal(shareholder['value'], datatype=XSD.float)))
 
     def _write_factsheet(self):
-        factsheet = self.scraped['factsheet'] 
+        factsheet = self.scraped['factsheet']
         # CFI
         if 'cfi' in factsheet:
             cfi_singleton = NS['cfi'][factsheet['cfi'].lower() + "_singleton"]
@@ -306,14 +319,22 @@ class RDFConverter:
 
         # ICB
         if 'icb' in factsheet:
-            self.g.add((self.id_node, NS['rdf']['type'], NS['icb']['ICB'+factsheet['icb'][0]]))
+            b = BNode()
+            self.g.add((b, NS['rdf']['type'], NS['cp']['Structured']))
+            self.g.add((b, NS['rdf']['type'], NS['cp']['SectorValue']))
+            self.g.add((b, NS['cp']['sectorValue'], NS['icb']['ICB'+factsheet['icb'][0]]))
+            self.g.add((self.id_node, NS['cp']['sector'], b))
 
     def to_rdf(self):
         a = NS['rdf']['type']
-        
+
         self.g.add((self.id_node, a, NS['en']['Company']))
-        self.g.add((self.id_node, NS['cp']['StockExchange'], NS['if']['euronext_singleton']))
+        self.g.add((self.id_node, NS['cp']['stockExchange'], NS['if']['euronext_singleton']))
+        # Use both cp:stockExchange and if:origin while transitioning to cp: ontology
+        self.g.add((self.id_node, NS['if']['origin'], NS['if']['euronext_singleton']))
         self.g.add((self.id_node, NS['cp']['isin'], Literal(self.scraped['isin'])))
+        dt = datetime.fromtimestamp(int(self.scraped['timestamp']/1000)).isoformat()
+        self.g.add((self.id_node, NS['cp']['instant'], Literal(dt, datatype=XSD.dateTime)))
         for lang, source in self.scraped['sources'].items():
             self.g.add((self.id_node, NS['cp']['source'], Literal(source, lang=self.en2xml_langs[lang])))
 
@@ -330,12 +351,12 @@ def search(keyword=None, icb=None, outputfile=None):
     elif keyword:
         print("Searching by keyword %s" % keyword)
         results = searcher.search(keyword)
-    
+
     Searcher.print_search_results(results)
 
     if outputfile:
         with open(outputfile, "w") as f:
-            print("Writing ISIN and MICs to %s" % output)
+            print("Writing ISIN and MICs to %s" % outputfile)
             for r in results:
                 f.write('%s %s\n' % (r['isin'], r['mic']))
 
@@ -349,7 +370,7 @@ def scrape(isin, mic, outputfile, pickled=False, timestamp=None):
 
     if pickled:
         with open(outputfile, 'wb') as f:
-            sys.setrecursionlimit(2000) 
+            sys.setrecursionlimit(2000)
             pickle.dump(scraped, f, pickle.DEFAULT_PROTOCOL)
     else:
         rdfconvert(scraped, outputfile)
@@ -367,7 +388,7 @@ def main():
     parser = argparse.ArgumentParser(
         description='Searcher, scraper and RDF converter for EuroNext.'
     )
-        
+
     subparser = parser.add_subparsers(help='commands', dest='command')
 
     # Search command
@@ -385,7 +406,7 @@ def main():
     scrapeone_command.add_argument('isin', help='ISIN number of company')
     scrapeone_command.add_argument('mic', help='ISO-10383 MIC for company (in URL of source URL)')
     scrapeone_command.add_argument('outputfile', help='Path to a writable output file')
-    scrapeone_command.add_argument('--pickle',action='store_true', default=False, 
+    scrapeone_command.add_argument('--pickle',action='store_true', default=False,
         help='Output as pickled objects. Can be converted to RDF using the " + \
        "rdfconvert command. Used to allow changes to the RDF format without having to write converters for RDF output files')
 
@@ -394,15 +415,15 @@ def main():
       " Can be generated with the 'search' command.")
     scrape_command.add_argument('outputdir', help='Path to a writeable output directory')
     scrape_command.add_argument('--pickle', action='store_true', default=False,
-        help='Output as pickled objects. Can later be converted to RDF using the " + \
-            "rdfconvert command. Used to allow changes to the RDF format without having to write converters for those changes.')
+        help='Output as pickled objects. Can later be converted to RDF using the' + \
+            ' rdfconvert command. Used to allow changes to the RDF format without having to write converters for those changes.')
 
     # rdfconvert command
     rdfconvert_command = subparser.add_parser('rdfconvert', help='Convert pickled objects to RDF')
     rdfconvert_command.add_argument('inputpath', help='Source file or folder (if --batch)')
     rdfconvert_command.add_argument('outputpath', help='Destination file or folder (if --batch)')
     rdfconvert_command.add_argument('--batch', action='store_true', default=False, help='Convert all .pickle files recursively in "inputpath"')
-    
+
     args = parser.parse_args()
 
     if args.command == 'search':
@@ -411,7 +432,7 @@ def main():
         elif hasattr(args, 'icb'):
             search(icb=args.icb, outputfile=args.output)
     elif args.command == 'scrapeone':
-        scrape(args.isin, args.mic, args.outputfile, args.pickle) 
+        scrape(args.isin, args.mic, args.outputfile, args.pickle)
     elif args.command == 'scrape':
         with open(args.inputfile) as f:
             isins_mics = (line.split(' ') for line in f.read().strip().split('\n'))
@@ -433,7 +454,7 @@ def main():
                 scraped = pickle.load(f)
                 rdfconvert(scraped, outputfile)
 
-        
+
 
 if __name__=='__main__':
     main()
