@@ -15,6 +15,8 @@ NS = {
    'icb': Namespace("http://www.dfki.de/lt/icb.owl#"),
    'dc': Namespace("http://www.dfki.de/lt/dc.owl#"),
    'xebr': Namespace('http://www.dfki.de/lt/xebr.owl#'),
+   'xbrl_be': Namespace('http://www.dfki.de/lt/xbrl_be.owl#'),
+   'xbrl_es': Namespace('http://www.dfki.de/lt/xbrl_es.owl#'),
    'skos': Namespace('http://www.dfki.de/lt/skos.owl#')
 }
 
@@ -129,6 +131,7 @@ class CommandBuilder:
                 os.makedirs(args.output)
 
             succeeded, failed = 0, 0
+            failures = {}
             for inputfile, outputfile in traverse_mirror(args.input, args.output, extension, args.format):
                 print(inputfile + " -> " + outputfile)
                 try:
@@ -137,11 +140,17 @@ class CommandBuilder:
                     succeeded += 1
                 except KeyboardInterrupt:
                     return
-                except:
+                except Exception as e:
                     traceback.print_exc()
+                    failures[inputfile] = str(e)
                     failed += 1
 
             print ("%d Converted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
+            if failed > 0:
+                print("---------\nFailures:\n---------")
+                for filename, error in failures.items():
+                    print("%s: %s" % (filename, error))
+
 
             if args.merge:
                 print("Merging graphs to %s" % (args.merge))

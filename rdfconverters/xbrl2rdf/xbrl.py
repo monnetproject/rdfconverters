@@ -111,7 +111,7 @@ class XBRLInstance:
         merged = {}
         for context in contexts:
             if context in items:
-               merged.update(items[context])
+                merged.update(items[context])
         return merged
 
     def _prefix(self, s):
@@ -247,7 +247,6 @@ class XBRLBelgian(XBRLInstance):
     def __init__(self, xbrlfile):
         super().__init__(xbrlfile, "http://www.dfki.de/lt/xbrl_be.owl#")
 
-
     def get_filings_list(self):
         return [f for f in [self.current_filing, self.previous_filing] if f is not None]
 
@@ -256,13 +255,13 @@ class XBRLBelgian(XBRLInstance):
             n = self.root.find(".//%s[@contextRef='%s']" % (s, contextRef), namespaces=self.ns)
             if n is not None:
                 return n.text
+            raise Exception("Couldn't find " + s)
 
         info = {
-            'hasCompanyIdValue': __get("pfs-gcd:IdentifierValue"),
-            'hasCompanyNameText': __get("pfs-gcd:EntityCurrentLegalName"),
+            'hasCompanyIdValue': __get("pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue"),
+            'hasCompanyNameText': __get("pfs-gcd:EntityInformation//pfs-gcd:EntityCurrentLegalName"),
             'hasLegalFormCode': __get('pfs-gcd:EntityForm/*')
         }
-
         return info
 
     def __str__(self):

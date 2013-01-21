@@ -1,4 +1,18 @@
 import argparse
+# Superhack! Workaround for https://github.com/lxml/lxml/issues/95.
+# If that issue is resolved, set the version as a minimum dependency in setup.py and remove this.
+import lxml._elementpath
+class FakeDictionary:
+    def clear(self):
+        pass
+    def __getitem__(self, item): 
+        raise KeyError()
+    def __setitem__(self, blah, blahhh): 
+        pass
+    def __len__(self):
+        return 0
+lxml._elementpath._cache = FakeDictionary()
+
 from lxml import etree
 import os
 from rdfconverters import util

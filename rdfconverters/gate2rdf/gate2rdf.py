@@ -20,8 +20,8 @@ class GATE2RDF:
         for n in NS:
             self.g.bind(n, NS[n])
 
-        # TODO: Currently GATE files do not have any representation of the
-        # structured data's isin or timestamp
+        # Note: Filename is used as the identifier of the node, so filename should be
+        # the same as the structured instance.
         self.cp = NS['cp'][os.path.splitext(os.path.basename(file_))[0]]
         self.g.add((self.cp, NS['rdf']['type'], NS['cp']['CompanyProfile']))
 
