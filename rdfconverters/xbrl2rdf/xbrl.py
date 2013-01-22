@@ -185,6 +185,13 @@ class XBRLInstance:
                 items[context_ref][tag_name] = monetary_value + iso4217_currency
 
         return items
+    
+    def _humanize_name(self, name):
+        if len(name)<=4: # Ignore probable abbreviations
+            return name
+        if name.isupper():
+            return name.title()
+        return name
 
 
 class XBRLSpanishPGC(XBRLInstance):
@@ -216,7 +223,7 @@ class XBRLSpanishPGC(XBRLInstance):
 
             info = {
                 'hasCompanyIdValue': __get("dgi-est-gen:IdentifierValue"),
-                'hasCompanyNameText': __get("dgi-est-gen:LegalNameValue"),
+                'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalNameValue")),
                 'hasCompanyPostcode': __get("dgi-est-gen:ZipPostalCode"),
                 'hasCompanyContactPointValue': __get("dgi-est-gen:CommunicationValue")
             }
@@ -259,7 +266,7 @@ class XBRLBelgian(XBRLInstance):
 
         info = {
             'hasCompanyIdValue': __get("pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue"),
-            'hasCompanyNameText': __get("pfs-gcd:EntityInformation//pfs-gcd:EntityCurrentLegalName"),
+            'hasCompanyNameText': self._humanize_name(__get("pfs-gcd:EntityInformation//pfs-gcd:EntityCurrentLegalName")),
             'hasLegalFormCode': __get('pfs-gcd:EntityForm/*')
         }
         return info
