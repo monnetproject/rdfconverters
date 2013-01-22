@@ -243,8 +243,8 @@ class RDFConverter:
 
     def __init__(self, scraped):
         self.scraped = scraped
-        id = "%s_%s" % (self.scraped['isin'], self.scraped['timestamp'])
-        self.id_node = NS['en'][id]
+        id = "%s_%s_%s" % (self.scraped['isin'], self.scraped['mic'], self.scraped['timestamp'])
+        self.id_node = NS['cp'][id]
 
         self.g = Graph()
         for ns in NS:
@@ -395,28 +395,37 @@ def main():
     icb_command = search_subcommands.add_parser('icb', help='Search EuroNext website by ICB code')
     icb_command.add_argument('icb', help='ICB code to search by (e.g. 7000 will find all matching 7XXX)')
 
+    def add_pickle_argument(command):
+        command.add_argument('--pickle',action='store_true', default=False,
+            help='Output as pickled objects. Can be converted to RDF using the " + \
+           "rdfconvert command. Used to allow changes to the RDF format without having to write converters for RDF output files')
+    def add_extract_profiles_argument(command):
+        command.add_argument('--extract-profiles', dest='extract_profiles',
+            help='Extract cp:profile as text files into the given folder, which can then be processed with GATE.')
+
     # Scrape commands
     scrapeone_command = subparser.add_parser('scrapeone', help='Scrape a page from EuroNext given ISIN and MIC')
     scrapeone_command.add_argument('isin', help='ISIN number of company')
     scrapeone_command.add_argument('mic', help='ISO-10383 MIC for company (in URL of source URL)')
     scrapeone_command.add_argument('outputfile', help='Path to a writable output file')
-    scrapeone_command.add_argument('--pickle',action='store_true', default=False,
-        help='Output as pickled objects. Can be converted to RDF using the " + \
-       "rdfconvert command. Used to allow changes to the RDF format without having to write converters for RDF output files')
+    add_pickle_argument(scrapeone_command)
 
     scrape_command = subparser.add_parser('scrape', help='Scrape from a file')
     scrape_command.add_argument('inputfile', help='Path to file containing space-separated ISINs and MICs, one per line.' + \
       " Can be generated with the 'search' command.")
     scrape_command.add_argument('outputdir', help='Path to a writeable output directory')
-    scrape_command.add_argument('--pickle', action='store_true', default=False,
-        help='Output as pickled objects. Can later be converted to RDF using the' + \
-            ' rdfconvert command. Used to allow changes to the RDF format without having to write converters for those changes.')
+    add_pickle_argument(scrape_command)
 
     # rdfconvert command
     rdfconvert_command = subparser.add_parser('rdfconvert', help='Convert pickled objects to RDF')
     rdfconvert_command.add_argument('inputpath', help='Source file or folder (if --batch)')
     rdfconvert_command.add_argument('outputpath', help='Destination file or folder (if --batch)')
     rdfconvert_command.add_argument('--batch', action='store_true', default=False, help='Convert all .pickle files recursively in "inputpath"')
+
+    extract_profiles_command = subparser.add_parser('extractprofiles',
+      help='Extract cp:profile as text files into the given folder, which can then be processed with GATE')
+    extract_profiles_command.add_argument('inputdir', help='Directory containing cp:graphs')
+    extract_profiles_command.add_argument('outputdir', help='Output directory')
 
     args = parser.parse_args()
 
@@ -447,7 +456,22 @@ def main():
             with open(inputfile, 'rb') as f:
                 scraped = pickle.load(f)
                 rdfconvert(scraped, outputfile)
+    elif args.command == 'extractprofiles':
+        for directory, file in util.traverse(args.inputdir, '.n3'):
+            # Output into language-specific folder
+            inputfile = directory + os.sep + file
+            g = Graph()
+            g.parse(inputfile, format='n3')
+            for cp_id, _, profile in g.triples((None, NS['cp']['profile'], None)):
+                outdir = args.outputdir + os.sep + profile.language
+                if not os.path.exists(outdir):
+                    os.makedirs(outdir)
 
+                id = cp_id.split('#')[1]
+                outputfile = "%s/%s.txt" % (outdir, id)
+                print(inputfile, "->", outputfile)
+                with open(outputfile, "w") as f:
+                    f.write(profile)
 
 
 if __name__=='__main__':
