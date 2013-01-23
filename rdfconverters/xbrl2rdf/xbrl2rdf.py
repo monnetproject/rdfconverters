@@ -5,9 +5,9 @@ import lxml._elementpath
 class FakeDictionary:
     def clear(self):
         pass
-    def __getitem__(self, item): 
+    def __getitem__(self, item):
         raise KeyError()
-    def __setitem__(self, blah, blahhh): 
+    def __setitem__(self, blah, blahhh):
         pass
     def __len__(self):
         return 0
@@ -29,12 +29,12 @@ def convert(inputfile, taxonomy=None):
         xbrl_instance = XBRLFactory.from_name(tree, taxonomy)
         print("Interpreted %s as '%s':" % (os.path.basename(inputfile), xbrl_instance))
     else:
-        xbrl_instance = XBRLFactory.detect_and_instantiate(tree)
+        xbrl_instance = XBRLFactory.from_autodetected(tree)
         if xbrl_instance is None:
             raise Exception("Could not detect taxonomy in %s" % inputfile)
         print("Detected %s as '%s':" % (os.path.basename(inputfile), xbrl_instance))
 
-    xbrl_instance.parse_report()
+    xbrl_instance.parse_filings()
 
     graph = rdf_converter.convert(xbrl_instance)
 
