@@ -5,6 +5,142 @@
 @prefix skos: <http://www.dfki.de/lt/skos.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xbrl_es_cnmv: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
+
+xbrl_es_cnmv:es-be-fs_CapitalFondoDotacion a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:es-be-fs_ResultadoEjercicioBalance a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriod;
+    skos:prefLabel "VII. Resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+
+xbrl_es_cnmv:ifrs-gp_CashAndCashEquivalents a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente efectivo y otros activos líquidos equivalentes"@es;
+    skos:exactMatch xebr:hasLiquidAssetsTotal;
+    skos:prefLabel "efectivo y otros activos líquidos equivalentes"@es;
+    owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_DeferredTaxLiabilities a owl:DatatypeProperty;
+    skos:altLabel "Pasivo no corriente pasivos por impuesto diferido"@es;
+    skos:exactMatch xebr:hasDeferredTaxes;
+    skos:prefLabel "IV. Pasivos por impuesto diferido"@es;
+    owl:equivalentProperty xebr:hasDeferredTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IncomeTaxExpenseIncome a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "impuestos sobre beneficios"@es;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IssuedCapital a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ifrs-gp_OtherFinancialAssetsNonCurrent a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inversiones financieras a largo plazo"@es;
+    skos:exactMatch xebr:hasOtherFinancialAssets;
+    skos:prefLabel "V. Inversiones financieras a largo plazo"@es;
+    owl:equivalentProperty xebr:hasOtherFinancialAssets .
+
+xbrl_es_cnmv:ifrs-gp_ProfitLoss a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ifrs-gp_PropertyPlantAndEquipmentNet a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inmovilizado material"@es;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "II. Inmovilizado material"@es;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_TradeAndOtherReceivablesNetCurrent a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente deudores comerciales y otras cuentas a cobrar"@es;
+    skos:exactMatch xebr:hasAmountsReceivableTotal;
+    skos:prefLabel "deudores comerciales y otras cuentas a cobrar"@es;
+    owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+
+xbrl_es_cnmv:ipp-com_CapitalPasivoPatrimonioNeto a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ipp-gen_ActivoCorrienteNacional a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente"@es;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "B) ACTIVO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_ActivoNoCorrienteNacional a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente"@es;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "A) ACTIVO NO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_FondosPropiosNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios"@es;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "A-1) Fondos propios"@es;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_es_cnmv:ipp-gen_IngresosFinancieros a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es;
+    skos:exactMatch xebr:hasFinancialIncomeTotal;
+    skos:prefLabel "ingresos financieros"@es;
+    owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+
+xbrl_es_cnmv:ipp-gen_InversionesEmpresasGrupoAsociadasLargoPlazo a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo "@es;
+    skos:exactMatch xebr:hasAffiliatedEnterprises;
+    skos:prefLabel "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioNacional a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioProcedenteOperacionesContinuadasNacional a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoFinanciero a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado financiero"@es;
+    skos:exactMatch xebr:hasFinancialProfitLossTotal;
+    skos:prefLabel "resultado financiero"@es;
+    owl:equivalentProperty xebr:hasFinancialProfitLossTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalActivoNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalPatrimonioNetoPasivoNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
 
 skos:exactMatch rdf:type owl:ObjectProperty .
 skos:prefLabel rdf:type owl:AnnotationProperty .

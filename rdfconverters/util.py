@@ -17,7 +17,8 @@ NS = {
    'xebr': Namespace('http://www.dfki.de/lt/xebr.owl#'),
    'xbrl_be': Namespace('http://www.dfki.de/lt/xbrl_be.owl#'),
    'xbrl_es': Namespace('http://www.dfki.de/lt/xbrl_es.owl#'),
-   'skos': Namespace('http://www.dfki.de/lt/skos.owl#')
+   'skos': Namespace('http://www.dfki.de/lt/skos.owl#'),
+   'owl': Namespace('http://www.w3.org/2002/07/owl#')
 }
 
 def write_graph(graph, outputfile=None, format='n3'):
