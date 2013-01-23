@@ -1,0 +1,503 @@
+/* Noëmi Aepli
+JAPE rules to extract information concerning 
+company name, activity, customer, employee, location, monetary values
+*/
+
+/* +++++++++++++++++++++++++++++++++++++++++++ PHASE 1 +++++++++++++++++++++++++++++++++++++++++++ */
+
+Phase: CompanyProfile
+Input: Lookup Token
+Options: control = appelt
+
+Macro: AND
+(
+  ({Token.category==","})?
+  ({Token.string=="and"}|{Token.string ==","}|{Token.string=="&"}|{Token.string=="as"}{Token.string=="well"}{Token.string=="as"})
+)
+
+Macro: CARD
+(
+  (
+    {Token.category == CD}
+    ({Token.string == ","}|{Token.string == "."}|{Token.string == "'"})
+  )?
+  ({Token.category == CD})+
+)
+
+Macro: YEAR
+(
+  {Token.category == CD, Token.length == 4, Token.string =~ "20[01][0123456789]"}
+)
+
+
+
+Macro: JJCHUNK
+(
+  ({Token.category=~JJ}|{Token.affix==ing}|{Token.affix==ed})
+  (
+    (AND)?
+    ({Token.category=~JJ}|{Token.affix==ing}|{Token.affix==ed})
+  )*
+)
+
+Macro: NPCHUNK
+(
+  ({Token.category == DT})?
+  ((JJCHUNK)|{Token.category==NN})?
+  ({Token.category==NN}|{Token.category==NNS})+
+  (
+    (
+      (AND)
+      ({Token.category == DT})?
+      ((JJCHUNK)|{Token.category==NN})?
+      ({Token.category==NN}|{Token.category==NNS})+
+    )+
+  )?
+)
+
+
+/*Macro: NPCOORD
+(
+  (NPCHUNK)
+  (
+    (AND)
+    (NPCHUNK)
+  )+
+  ({Token.category==NN}|{Token.category== NNS}/*|{Token.affix==ing})? 
+  ({Token.category==","})?
+  ({Token.string=="and"}|{Token.category==","}|{Token.string=="&"}|{Token.string=="as"}{Token.string=="well"}{Token.string=="as"})
+  ({Token.category == DT})?
+  ({Token.category=~JJ}|{Token.affix==ing}|{Token.category==NN})?
+  ({Token.category==NN}|{Token.category==NNS})
+)*/
+
+Macro: PPCHUNK
+(
+  {Token.category=="IN"}
+  (NPCHUNK)
+//({Token.category=~JJ}|{Token.category==NN}|{Token.affix==ing})?
+//({Token.category==NN}|{Token.category== NNS})
+)
+
+
+/* ------------------------------ IS A - ACTIVITY & COMPANY NAME ------------------------------ */
+
+Rule: PN_isa_ACT
+(
+  (({Token.category =~ NN})+):name
+  {Token.string =="is"}
+  ({Token.string =="a"}|{Token.string == "one"}{Token.string == "of"}{Token.string == "the"}{Token.category =~ JJ})
+  (
+    ((NPCHUNK)|(PPCHUNK)|{Lookup.majorType == act}|{Lookup.majorType == gics})+
+    ({Lookup.majorType == act}|{Lookup.majorType == gics})
+  ):activity
+)
+-->
+:name.Company = {rule = "PN_isa_ACT"},
+:activity.Activity = {rule = "PN_isa_ACT"}
+
+
+/* ------------------------------ ACTIVITY ------------------------------ */
+
+
+Rule: Activity_P1
+Priority: 20
+(
+  {Lookup.majorType == act_p, Token.category =~ NN}
+  {Token.category ==IN}
+  ((NPCHUNK)+):activity
+)
+-->
+:activity.Activity = {rule = "Activity_P1"}
+
+
+Rule: Activity1
+(
+  ({Lookup.majorType == gics, Token.category =~ NN})+
+  {Lookup.majorType == act}
+):activity
+
+-->
+:activity.Activity = {rule = "Activity1"}
+
+
+Rule: Activity2
+(
+  ({Token.category == IN})?
+  (
+    (NPCHUNK)+
+    {Lookup.majorType == act}
+  ):activity
+)
+-->
+:activity.Activity = {rule = "Activity2"} 
+
+/* ------------------------------ CUSTOMERS ------------------------------ */
+
+Rule: Customer1
+Priority: 10
+(
+  ({Token.root == "help"}|{Token.root == "product"}|{Token.root == "service"}|{Token.root == "good"}|{Token.root == "solution"})?
+  ({Token.string == "for"}|{Token.string == "to"})?
+  (
+    (CARD)?
+    (NPCHUNK)
+    ({Token.root =~ "client"}|{Token.root =~ "customer"}|{Token.root =~ "consumer"}|{Token.root == "patient"})
+  ):cust
+)
+-->
+:cust.Customer = {rule = "Customer1"}
+
+Rule: Customer2
+(
+  ({Token.category == IN})?
+  (CARD)
+  (JJCHUNK)?
+  ({Token.root =~ "client"}|{Token.string == "customer"}|{Token.root =~ "consumer"}|{Token.root == "patient"})
+):cust
+-->
+:cust.Customer = {rule = "Customer2"}
+
+/* ------------------------------ EMPLOYEES ------------------------------ */
+
+
+Rule: Employee1
+(
+  (CARD)
+  {Token.root == "employee"}
+):employee
+-->
+:employee.Employee = {rule = "Employee1"} 
+
+Rule: Employee2
+(
+  {Token.root == "employ"}
+  ({Token.category == RB}|{Token.category == DT}|{Token.category =~ JJ}{Token.category == IN})?
+  (CARD)
+  {Token.category =~ NN}
+):employee
+-->
+:employee.Employee = {rule = "Employee2"} 
+
+Rule: Employee3
+(
+  (
+    (CARD)
+    {Token.category =~ NN, Token.root != "country"}
+  ):employee
+  {Token.root == "work"}
+)
+-->
+:employee.Employee = {rule = "Employee3"} 
+
+
+/* ------------------------------ LOCATIONS ------------------------------ */
+
+Rule: Location1
+(
+  {Lookup.majorType == location}
+  {Token.string == "market"}
+):loc
+-->
+:loc.Location = {rule = "Location1"} 
+
+Rule: Location2
+(
+  ({Token.root == "position"}|{Token.root =~ "headquarter"}|{Token.root == "subsidary"}|{Token.root == "location"}|{Token.root == "office"}|{Token.root == "site"}|{Token.root == "clinic"}|{Token.root == "producer"}|{Token.root == "leader"}|{Token.root == "grow"}|{Token.root == "represent"})
+  {Token.category == IN}
+  ( 
+    (
+      ({Token.category == "NNP"})+
+      ( 
+        ((AND)?
+        ({Token.category == "NNP"})+)+
+      )?
+    )
+    |
+    (
+      ({Token.category == "DT"})?
+      ({Lookup.majorType == loc_key})?
+      (AND)?
+      ({Lookup.majorType == location})+
+      (
+        (AND)?
+        ({Token.category == "DT"})?
+        ({Lookup.majorType == location})+
+      )?
+    )+
+  )
+):loc
+-->
+:loc.Location = {rule = "Location2"}
+
+/* ------------------------------ MONETARY VALUE ------------------------------ */
+
+Rule: Monetary_Value1
+(
+  (
+    {Token.category == IN}
+    ({Token.category == DT})?
+    ({Token.string == "financial"}{Token.string == "year"}|{Token.string == "financial"}{Token.string == "year"})?
+    (YEAR)
+    ({Token.string == "financial"}{Token.string == "year"}|{Token.string == "fiscal"}{Token.string == "year"})?
+  )?
+  (JJCHUNK)?
+ /* ({Token.root == "profit"}|{Token.root == "turnover"}|{Token.root == "revenue"}|{Token.string == "operating"}{Token.root == "result"}|{Token.root == "sale"}|{Token.root == "income"}) */
+  {Token.category =~ NN}
+  (
+    ({Token.root == "amount"}{Token.category == TO})
+    |
+    (
+      ({Token.category == IN})+
+      ({Token.category == CD, Token.length == 4, Token.string =~ "20[01][0123456789]"}({Token.string == ":"})?)?
+    )
+    |
+    ({Token.root == "total"})
+  )
+  ({Token.category == RB})?
+  (
+    (
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Lookup.majorType == currency_unit}|{Token.string == "Euro"}|{Token.string == "USD"}|{Token.string == "euro"})
+      (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+    ) |
+    (
+      (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Lookup.majorType == currency_unit}|{Token.string == "Euro"}|{Token.string == "euro"})
+    )
+  )
+  (
+    {Token.category == IN}
+    ({Token.category == DT})?
+    ({Token.string == "financial"}{Token.string == "year"}|{Token.string == "financial"}{Token.string == "year"})?
+    (YEAR)
+    ({Token.string == "financial"}{Token.string == "year"}|{Token.string == "fiscal"}{Token.string == "year"})?
+  )?
+):monetval
+-->
+:monetval.MonetaryValue = {rule = "MonetaryValue1"} 
+
+Rule: Monetary_Value2
+(
+  (
+    (JJCHUNK)?
+    {Token.category == NN}|{Token.category == NNS}
+    {Token.string == "of"})?
+  (CARD)
+  ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+  ({Token.string == "EUR"}|{Token.string == "USD"}|{Token.string == "euro"}|{Lookup.majorType == currency_unit})
+):monetval
+-->
+:monetval.MonetaryValue = {rule = "MonetaryValue2"} 
+
+
+Rule: Monetary_Value3
+(
+  {Token.category == IN}
+  ({Token.category == DT})?
+  ({Token.string == "fiscal"}({Token.string == "year"})?|{Token.string == "financial"}{Token.string == "year"})?
+  (YEAR)
+  ({Token.string == "fiscal"}({Token.string == "year"})?|{Token.string == "financial"}{Token.string == "year"})?
+  ({Token.string =~ ".*"})[1,5]
+  (
+    (
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Token.string == "euro"}|{Lookup.majorType == currency_unit})
+      (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+    )
+    |
+    (
+  	  (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Token.string == "euro"}|{Lookup.majorType == currency_unit})
+    )
+  )
+  (
+    {Token.category == IN}
+    (JJCHUNK)?
+    ({Token.root == "sale"}|{Token.root == "revenue"})
+    (
+      {Token.category == IN}
+      (YEAR)
+    )?
+  )?
+):monetval
+-->
+:monetval.MonetaryValue = {rule = "MonetaryValue3"}
+
+Rule: Monetary_Value4
+(
+  (
+    (
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Token.string == "euro"}|{Lookup.majorType == currency_unit})
+      (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+    )
+    |
+    (
+  	  (CARD)
+      ({Lookup.majorType == number}|{Token.string == "m"}|{Token.string == "bn"})?
+      ({Token.string == "EUR"}|{Token.string == "USD"}|{Token.string == "euro"}|{Lookup.majorType == currency_unit})
+    )
+  )
+  {Token.category == IN}
+  (JJCHUNK)?
+  ({Token.root == "sale"}|{Token.root == "revenue"})
+  (
+    {Token.category == IN}
+    (YEAR)
+  )?
+):monetval
+-->
+:monetval.MonetaryValue = {rule = "MonetaryValue4"}
+
+
+
+/* ------------------------------ COMPANY ------------------------------ */
+
+/* Rule: Company
+(
+  ({Lookup.majorType == organization, Lookup.minorType == company})+
+):name
+-->
+:name.Company = {rule = "Company"} */
+
+Rule: Company1
+(
+  ({Token.string == "The", Token.orth == upperInitial})?
+  ({Token.category =~ NNP, Token.orth == upperInitial}|{Token.category == NNP, Token.orth == allCaps})+
+  ({Token.root == "group"}|{Token.string == "AG"}|{Token.string == "&"}{Token.string == "Co."})
+):name
+-->
+:name.Company = {rule = "Company1"} 
+
+
+Rule: Company3
+(
+  ( 
+    ({Token.string == "The", Token.orth == upperInitial})?
+    ({Token.category =~ NNP, Token.orth == upperInitial, Token.length > 1}|{Token.category == NNP, Token.orth == allCaps, Token.length > 1}|{Token.category == NNP, Token.orth == mixedCaps, Token.length > 1})+
+  ):name
+  ({Token.root == "be"}{Token.string == "one"}|{Token.root == "be"}{Token.string == "the"})
+)
+-->
+:name.Company = {rule = "Company3"} 
+
+Rule: Company4
+(
+  ({Token.string == "The", Token.orth == upperInitial})
+  ({Token.category =~ NN})+
+  ({Token.root == "group"}|{Token.string == "AG"}|{Token.string == "&"}{Token.string == "Co."})
+):name
+-->
+:name.Company = {rule = "Company4"} 
+
+Rule: Company5
+(
+  ({Token.string == "The", Token.orth == upperInitial})
+  ({Token.category =~ NNP})[2,4]
+):name
+-->
+:name.Company = {rule = "Company5"} 
+
+
+/* Rule: Company6
+(
+  (
+    ({Token.string == "The", Token.orth == upperInitial})?
+    {Token.category =~ NNP, Token.orth == mixedCaps}
+  ):name
+)
+-->
+:name.Company = {rule = "Company6"} */
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++ PHASE 2 - CHECK +++++++++++++++++++++++++++++++++++++++++++ */
+
+Phase: CompanyProfileStep2 
+Input: Lookup Token Activity Company
+Options: control = appelt
+
+Rule: ActivityStep2_SUCH
+(
+  {Activity}
+  ({Token.category==","})?
+  ({Token.string == "such"}{Token.string == "as"}|{Token.string == "including"})
+  (
+    ((NPCHUNK)|(PPCHUNK)|(JJCHUNK))+
+  ):activity
+)
+-->
+:activity.Activity = {rule = "ActivityStep2_SUCH"}
+
+Rule: ActivityStep2_OFF
+(
+  ({Company}|{Token.string == "The"}{Token.string == "Group"})
+  ({Token.root == "offer"}|{Token.root == "help"}|{Token.root == "provide"})
+  (
+    ((NPCHUNK)|(PPCHUNK)|(JJCHUNK))+
+  ):activity
+)
+-->
+:activity.Activity = {rule = "ActivityStep2_OFF"}
+
+Rule: LocationStep2
+(
+  {Company}
+  ({Token.string == ","})?
+  (
+    ({Token.category == NNP})?
+    ({Token.string == ","})?
+    {Lookup.majorType == location}
+  ):loc
+)
+-->
+:loc.Location = {rule = "LocationStep2"} 
+
+Rule: LocationStep2_ACT
+Priority: 10
+(
+  {Activity contains {Lookup.majorType == country_adj}}
+):notActivity
+-->
+{
+AnnotationSet matchedSet = bindings.get("notActivity"); 
+AnnotationSet notActivities = matchedSet.get("Activity");
+//get all Activity annotations within the matched span
+outputAS.removeAll(notActivities);
+//instruct GATE API to remove the annotations from the output AS.
+},
+:notActivity.Location = {rule = "LocationStep2_ACT"}
+
+
+/*Rule: RemoveActivity
+
+({Activity notContains {Lookup.majorType == gics}}):notActivity
+-->
+:notActivity.Removed = {rule = "!inGics-Removed"},
+{
+AnnotationSet matchedSet = bindings.get("notActivity"); 
+AnnotationSet notActivities = matchedSet.get("Activity");
+//get all Activity annotations within the matched span
+outputAS.removeAll(notActivities);
+//instruct GATE API to remove the annotations from the output AS.
+}*/
+
+
+Rule: CustomerStep2
+Priority: 10
+(
+  {Activity contains {Token.root == "client"}}|{Activity contains {Token.root == "customer"}}|{Activity contains {Token.root == "consumer"}}
+):notActivity
+-->
+{
+AnnotationSet matchedSet = bindings.get("notActivity"); 
+AnnotationSet notActivities = matchedSet.get("Activity");
+//get all Activity annotations within the matched span
+outputAS.removeAll(notActivities);
+//instruct GATE API to remove the annotations from the output AS.
+},
+:notActivity.Customer = {rule = "CustomerStep2"}
+

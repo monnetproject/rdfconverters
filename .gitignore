@@ -1,6 +1,8 @@
 *.py[cod]
 *.swp
 temp
+.classpath
+.project
 cached*
 *.py~
 __pycache__

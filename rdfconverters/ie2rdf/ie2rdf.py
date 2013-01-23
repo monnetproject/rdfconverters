@@ -10,7 +10,7 @@ from rdfconverters.util import NS
 import argparse
 
 
-class GATE2RDF:
+class IE2RDF:
     def __init__(self, file_):
         with open(file_, "r") as f:
             self.tree = etree.parse(f)
@@ -49,7 +49,7 @@ class GATE2RDF:
             if el.tag == 'company':
                 name = pop(el, 'name')
                 attr = {'stringValue': Literal(name)}
-                node = self.__make_bnode('name', 'StringValue', attr)
+                node = self.__make_bnode('companyName', 'StringValue', attr)
             elif el.tag == 'activity':
                 id_ = pop(el, 'id')
                 label = pop(el, 'label')
@@ -95,12 +95,12 @@ class GATE2RDF:
 
 
 def convert(inputfile):
-    g = GATE2RDF(inputfile)
+    g = IE2RDF(inputfile)
     graph = g.convert()
     return graph
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert GATE XML files to the CP ontology RDF format')
+    parser = argparse.ArgumentParser(description='Convert XML files from information extraction to the CP ontology RDF format')
     command_builder = util.CommandBuilder(parser)
     command_builder.add_convert(convert)
     command_builder.add_batch_convert(convert, 'xml')

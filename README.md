@@ -14,7 +14,7 @@ The command line tools should then be available.
 
 # Tools
 
-* `gate2rdf` - Convert GATE XML files to the CompanyProfile ontology RDF format.
+* `ie2rdf` - Convert XML files from information extraction to the CompanyProfile ontology RDF format. See the README.md in the ie2rdf directory for more details
 * `merge_graphs` - Utility to merge all RDF graphs in a directory into one file
 * `daxquintuples2rdf` - Converts Deutsche Borse quintuple data from DFKI into triples.
 * `xbrl2rdf` - Convert local XBRL formats into RDF (using the MFO ontologies).
@@ -24,8 +24,8 @@ The command line tools should then be available.
 
 Use the `-h` option to get a list of commands, e.g:
 
-    gate2rdf -h
+    ie2rdf -h
 
 All tools except `merge_graphs` are command-based, and the `-h` option will print a list of commands. You can also get help about a specific command, e.g: 
 
-    gate2rdf batchconvert -h
+    ie2rdf batchconvert -h

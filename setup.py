@@ -20,7 +20,7 @@ setup(
 
     entry_points = {
         'console_scripts': [
-            'gate2rdf = rdfconverters.gate2rdf.gate2rdf:main',
+            'ie2rdf = rdfconverters.ie2rdf.ie2rdf:main',
             'merge_graphs = rdfconverters.merge_graphs:main',
             'daxquintuples2rdf = rdfconverters.daxquintuples2rdf.daxquintuples2rdf:main',
             'xbrl2rdf = rdfconverters.xbrl2rdf.xbrl2rdf:main',

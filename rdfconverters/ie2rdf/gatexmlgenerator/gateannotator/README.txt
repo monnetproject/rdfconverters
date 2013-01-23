@@ -1,0 +1,1 @@
+Change the `gateHome` property in src/main/resources/gateannotator.properties to the root of your GATE installation. 
