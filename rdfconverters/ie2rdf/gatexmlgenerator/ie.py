@@ -30,6 +30,48 @@ def convert_file(filename):
   xml_str = convert(document)
   return xml_str
 
+#Convert human-readable number representation to monetary or numeric value
+def normaliseMonetaryValue(m):
+  m = re.sub(r'[\s,]', '', m)
+  for c in ['EUR', 'USD', 'Euros', 'euros', 'Euro', 'euro']:
+      if re.search(c, m):
+          currency = c
+          m = m.replace(currency, '')
+          cu = re.sub('[Ee]uros?', 'EUR', c)
+          currency = cu
+          break
+  else:
+      currency=''
+  r = re.search('\d+\.(\d+)', m)
+  if r is not None:
+      m = m.replace('.', '')
+      numbers_after_decimals = len(r.group(1))
+  else:
+      numbers_after_decimals = 0
+      
+  multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
+  for phrase, multiplier in multipliers:
+      m = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), m, flags=re.IGNORECASE)
+  return m+currency
+  
+def normaliseNumber(n):
+  if re.search("[0-9,\'\.]+m", n):
+      n = re.sub('m ','million', n)
+  n = re.search("[0-9,\'\.]+( billion| million|bn|m)?", n).group()
+  n = re.sub(r'[\s,]', '', n)
+  
+  r = re.search('\d+\.(\d+)', n)
+  if r is not None:
+      n = n.replace('.', '')
+      numbers_after_decimals = len(r.group(1))
+  else:
+      numbers_after_decimals = 0
+  
+  multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
+  for phrase, multiplier in multipliers:
+      n = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), n, flags=re.IGNORECASE)
+  return n
+
 def convert(document):
 
   # most frequent stopwords in DAX
@@ -63,47 +105,6 @@ def convert(document):
   customerList = []
   [customerList.append(cus.text) for cus in customer]
 
-  #Convert human-readable number representation to monetary or numeric value
-  def normaliseMonetaryValue(m):
-      m = re.sub(r'[\s,]', '', m)
-      for c in ['EUR', 'USD', 'euros', 'Euro', 'euro']:
-          if re.search(c, m):
-              currency = c
-              m = m.replace(currency, '')
-              cu = re.sub('[Ee]uros?', 'EUR', c)
-              currency = cu
-              break
-      else:
-          currency=''
-      r = re.search('\d+\.(\d+)', m)
-      if r is not None:
-          m = m.replace('.', '')
-          numbers_after_decimals = len(r.group(1))
-      else:
-          numbers_after_decimals = 0
-          
-      multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
-      for phrase, multiplier in multipliers:
-          m = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), m, flags=re.IGNORECASE)
-      return m+currency
-      
-  def normaliseNumber(n):
-      if re.search("[0-9,\'\.]+m", n):
-          n = re.sub('m ','million', n)
-      n = re.search("[0-9,\'\.]+( billion| million|bn|m)?", n).group()
-      n = re.sub(r'[\s,]', '', n)
-      
-      r = re.search('\d+\.(\d+)', n)
-      if r is not None:
-          n = n.replace('.', '')
-          numbers_after_decimals = len(r.group(1))
-      else:
-          numbers_after_decimals = 0
-      
-      multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
-      for phrase, multiplier in multipliers:
-          n = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), n, flags=re.IGNORECASE)
-      return n
 
   # Company - Name -------------------------------------------------------------------------
   comDict = defaultdict(int)
@@ -174,8 +175,8 @@ def convert(document):
   resultDict = defaultdict(int)
 
   for mon in monetaryValueList:
-      if re.search("(EUR|EUR || |[eE]uro)[0-9,\'\.]+ ?([mb]illion|m|bn)( euros)?", mon):
-          v = re.search("(EUR|EUR || |[eE]uro )[0-9,\'\.]+ ?([mb]illion|m|bn)( euros)?", mon).group()
+      if re.search("(EUR|EUR || |[eE]uro)[0-9,\'\.]+ ?([mb]illion|m|bn)( [eE]uro)?", mon):
+          v = re.search("(EUR|EUR || |[eE]uro )[0-9,\'\.]+ ?([mb]illion|m|bn)( [eE]uro)?", mon).group()
       else:
           v = ""
       value = normaliseMonetaryValue(v)
@@ -313,3 +314,6 @@ def convert(document):
               annotation.appendChild(annotationText)
   
   return doc.toprettyxml(indent="  ")
+
+if __name__=='__main__':
+  print(convert_file(sys.argv[1])) 

@@ -29,18 +29,22 @@ public class GateAnnotatorCommandLine {
 		@SuppressWarnings("unchecked")
 		Iterator<File> files = FileUtils.iterateFiles(inputDir, null, true);
 		while(files.hasNext()) {
-			File file = files.next();
+                        try {
+                            File file = files.next();
 
-			String dirDiff = FilenameUtils.getFullPath(file.getAbsolutePath()).substring(pathLength);
-			
-			File outDir = new File(args[2] + File.separator + dirDiff);
-			outDir.mkdirs();
-			File outFile = new File(outDir + File.separator + FilenameUtils.getBaseName(file.getAbsolutePath()) + ".xml"); 
-			System.out.println("Processing " + file.getName() + " -> " + outFile);
+                            String dirDiff = FilenameUtils.getFullPath(file.getAbsolutePath()).substring(pathLength);
+                            
+                            File outDir = new File(args[2] + File.separator + dirDiff);
+                            outDir.mkdirs();
+                            File outFile = new File(outDir + File.separator + FilenameUtils.getBaseName(file.getAbsolutePath()) + ".xml"); 
+                            System.out.println("Processing " + file.getName() + " -> " + outFile);
 
-			String text = FileUtils.readFileToString(file);
-			String xml = batchProcessApp.annotate(text);
-			FileUtils.writeStringToFile(outFile, xml);
+                            String text = FileUtils.readFileToString(file);
+                            String xml = batchProcessApp.annotate(text);
+                            FileUtils.writeStringToFile(outFile, xml);
+                        } catch(Exception e) {
+                            e.printStackTrace();
+                        }
 		}
 	}
 }
