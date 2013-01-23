@@ -1,13 +1,16 @@
 from rdfconverters.xbrl2rdf.xbrl2xebr import XBRL2XEBR
+from lxml import etree
 
 class XBRLFactory:
 
     @staticmethod
     def from_named_taxonomy(tree, name):
+        if name == "es-cnmv":
+            return XBRLSpainCNMV(tree)
         if name == "es-pgc":
-            return XBRLSpanishPGC(tree)
+            return XBRLSpainPGC(tree)
         elif name == "be":
-            return XBRLBelgian(tree)
+            return XBRLBelgium(tree)
 
     @staticmethod
     def from_autodetected(tree):
@@ -17,7 +20,7 @@ class XBRLFactory:
             return XBRLBelgium(tree)
         # Spanish CNMV
         if 'ipp-gen' in nsmap:
-            pass#return XBRLSpanishCNMV(tree)
+            return XBRLSpainCNMV(tree)
         # Spanish pgc07
         if any(map(lambda k: k.startswith('pgc07'), nsmap.keys())):
             return XBRLSpainPGC(tree)
@@ -48,7 +51,7 @@ class XBRLReport:
 
     The _make_filing utility method assists in constructing this.
 
-    - 'id' should be an ISIN (or at least it is in all the reports we have available).
+    - 'id' should be a unique identifier for the company.
     - The "source" attribute is optional, but can contain a tuple with the
       containing value and uri of a datatype (e.g. xsd:anyURI)
     - The "is_previous" attribute is a boolean that indicates whether the filing is the latest one
@@ -106,7 +109,7 @@ class XBRLReport:
 
     def __extract_financial_items(self):
         items = {}
-        for item in self.root.findall("./*[@contextRef]", namespaces=self.ns):
+        for item in (i for i in self.root.iter(tag=etree.Element) if 'contextRef' in i.attrib):
             tag_name = self._expanded_xml_tag_to_prefixed(item.tag)
             context_ref = item.attrib['contextRef']
             if context_ref not in items:
@@ -166,6 +169,18 @@ class XBRLReport:
             if k_xebr is not None:
                 items_xebr[k_xebr] = v
         return items_xebr
+
+    def _get_contexts_by_end(self):
+        '''Utility method. Get a dictionary of context names with keys as instant or end date'''
+
+        by_end = {}
+        for name, data in self.contexts.items():
+            date = data['instant'] if 'instant' in data else data['end']
+            if not date in by_end:
+                by_end[date] = []
+            by_end[date].append(name)
+        return by_end
+
 
     def _create_filing(self, contexts, identifier, is_previous=False, source=None):
         '''Utility method to construct a filing in the expected format.'''
@@ -275,6 +290,7 @@ class XBRLSpainPGC(XBRLReport):
             n = self.root.find(xpath_prefix+s, namespaces=self.ns)
             if n is not None:
                 return n.text
+            raise Exception("Couldn't find " + s)
 
         info = {
             'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalNameValue")),
@@ -290,3 +306,50 @@ class XBRLSpainPGC(XBRLReport):
 
     def __str__(self):
         return "Spain PGC"
+
+
+class XBRLSpainCNMV(XBRLReport):
+
+    def __init__(self, xmltree):
+        super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_es_cnmv.owl#")
+
+    def parse_filings(self):
+        id_expression = ".//dgi-est-gen:IdentifierCode/dgi-est-gen:IdentifierValue"
+        identifier = self.root.find(id_expression, namespaces=self.ns).text
+        company_info = self._extract_company_info()
+        filings = []
+
+        # Contexts are dynamically named, figure them out by dates
+        by_end = self._get_contexts_by_end()
+        by_end_ordered_keys = sorted(by_end)
+
+        if len(by_end) > 2:
+            raise Exception("Too many dates found in report to infer contexts")
+        elif len(by_end) == 2:
+            previous_contexts = by_end[by_end_ordered_keys.pop(0)]
+            previous_filing = self._create_filing(previous_contexts, identifier, is_previous=True)
+            previous_filing['items'].update(company_info)
+            filings.append(previous_filing)
+
+        current_context = by_end[by_end_ordered_keys[0]]
+        current_filing = self._create_filing(current_context, identifier)
+        current_filing['items'].update(company_info)
+        filings.append(current_filing)
+
+        self.filings = filings
+
+    def _extract_company_info(self):
+        def __get(s):
+            n = self.root.find('.//'+s, namespaces=self.ns)
+            if n is not None:
+                return n.text
+            raise Exception("Couldn't find " + s)
+
+        info = {
+            'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalName/dgi-est-gen:LegalNameValue")),
+        }
+
+        return info
+
+    def __str__(self):
+        return "Spain CNMV"
