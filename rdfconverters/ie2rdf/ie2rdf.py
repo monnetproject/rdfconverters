@@ -11,7 +11,8 @@ import argparse
 
 
 class IE2RDF:
-    def __init__(self, file_):
+    def __init__(self, file_, lang="en"):
+        self.lang = lang
         with open(file_, "r") as f:
             self.tree = etree.parse(f)
         self.root = self.tree.getroot()
@@ -21,7 +22,7 @@ class IE2RDF:
             self.g.bind(n, NS[n])
 
         # Note: Filename is used as the identifier of the node, so filename should be
-        # the same as the structured instance.
+        # the same as the structured instance cp: identifier.
         self.cp = NS['cp'][os.path.splitext(os.path.basename(file_))[0]]
         self.g.add((self.cp, NS['rdf']['type'], NS['cp']['CompanyProfile']))
 
@@ -39,7 +40,7 @@ class IE2RDF:
     def __annotate(self, node, annotations):
         self.g.add((node, NS['rdf']['type'], NS['cp']['Unstructured']))
         for annotation in annotations:
-            self.g.add((node, NS['cp']['annotation'], Literal(annotation)))
+            self.g.add((node, NS['cp']['annotation'], Literal(annotation, lang=self.lang)))
 
     def convert(self):
         def pop(el, attr):
@@ -94,16 +95,22 @@ class IE2RDF:
         return self.g
 
 
-def convert(inputfile):
-    g = IE2RDF(inputfile)
-    graph = g.convert()
-    return graph
 
 def main():
+    def convert(inputfile):
+        g = IE2RDF(inputfile, args.lang)
+        graph = g.convert()
+        return graph
+    
     parser = argparse.ArgumentParser(description='Convert XML files from information extraction to the CP ontology RDF format')
+    
     command_builder = util.CommandBuilder(parser)
-    command_builder.add_convert(convert)
-    command_builder.add_batch_convert(convert, 'xml')
+    convert_command = command_builder.add_convert(convert)
+    convert_command.add_argument('lang', help="xml:lang code to be used for annotations")
+
+    batchconvert_command = command_builder.add_batch_convert(convert, 'xml')
+    batchconvert_command.add_argument('lang', help="xml:lang code to be used for annotations")
+    
     args = parser.parse_args()
     command_builder.execute(args)
 
