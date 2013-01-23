@@ -5,9 +5,9 @@ class XBRLFactory:
     @staticmethod
     def from_named_taxonomy(tree, name):
         if name == "es-pgc":
-            pass#return XBRLSpanishPGC(tree)
+            return XBRLSpanishPGC(tree)
         elif name == "be":
-            pass#return XBRLBelgian(tree)
+            return XBRLBelgian(tree)
 
     @staticmethod
     def from_autodetected(tree):
