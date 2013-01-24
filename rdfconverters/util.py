@@ -146,11 +146,11 @@ class CommandBuilder:
                     failures[inputfile] = str(e)
                     failed += 1
 
-            print ("%d Converted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
+            print ("%d Attempted; %d Successes; %d Failures" % (succeeded+failed, succeeded, failed))
             if failed > 0:
                 print("---------\nFailures:\n---------")
-                for filename, error in failures.items():
-                    print("%s: %s" % (filename, error))
+                for filename in sorted(failures):
+                    print("%s: %s" % (filename, failures[filename]))
 
 
             if args.merge:

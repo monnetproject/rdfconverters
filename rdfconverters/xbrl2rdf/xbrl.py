@@ -1,5 +1,6 @@
 from rdfconverters.xbrl2rdf.xbrl2xebr import XBRL2XEBR
 from lxml import etree
+from pprint import pprint as pp
 
 class XBRLFactory:
 
@@ -34,10 +35,12 @@ class XBRLReport:
     more filings. Each filing consists of a dictionary of item names and values
     belonging to one or more XBRL contexts.
 
-    Each implementation of XBRLReport must implement parse_filings, which sets the self.filings
-    list.
+    Each implementation of XBRLReport must implement get_identifier, which uniquely identifies the
+    company (can generally be obtained through an XPath expression), and extract_company_info,
+    which extracts xEBR fields such as company name, address (which have no formal mapping system
+    at the time of writing).
 
-    The filings should be of the following format:
+    Filings are of the following format:
     {
         'metadata': {
             'id': "...",
@@ -49,15 +52,12 @@ class XBRLReport:
         'items': { 'hasAssetsTotal': "1234EUR", 'hasEquityTotal': "5678EUR", .... }
     }
 
-    The _make_filing utility method assists in constructing this.
-
     - 'id' should be a unique identifier for the company.
     - The "source" attribute is optional, but can contain a tuple with the
       containing value and uri of a datatype (e.g. xsd:anyURI)
     - The "is_previous" attribute is a boolean that indicates whether the filing is the latest one
       in the report. For example, if a report contains filings for 2010 and 2011, is_previous
       should be True for 2010 and False for 2011.
-
     """
 
     def __init__(self, xmltree, xebr_namespace):
@@ -72,8 +72,29 @@ class XBRLReport:
 
         self.x2x = XBRL2XEBR(xebr_namespace)
 
-    def parse_filings(self):
+    def get_identifier(self):
         raise NotImplementedError()
+
+    def extract_company_info(self):
+        raise NotImplementedError()
+
+    def parse_filings(self):
+        filings = []
+        identifier = self.get_identifier()
+        company_info = self.extract_company_info()
+
+        # Figure out contexts by date
+        by_end = self._get_contexts_by_end()
+        by_end_ordered_keys = sorted(by_end)
+
+        for key in by_end_ordered_keys:
+            contexts = by_end[key]
+            filing = self._create_filing(contexts, identifier, is_previous=(key!=by_end_ordered_keys[-1]))
+            if(filing) is not None:
+                filing['items'].update(company_info)
+                filings.append(filing)
+
+        self.filings = filings
 
     def get_filings_list(self):
         return self.filings
@@ -84,25 +105,25 @@ class XBRLReport:
         either instant or start/end dates.
         '''
         contexts = {}
-        for context in self.root.findall("./xbrli:context", namespaces=self.ns):
+        for context in self.root.findall("./{http://www.xbrl.org/2003/instance}context", namespaces=self.ns):
             c = contexts[context.attrib['id']] = {}
 
-            instant = context.find('.//xbrli:instant', namespaces=self.ns)
+            instant = context.find('.//{http://www.xbrl.org/2003/instance}instant', namespaces=self.ns)
             if instant is not None:
                 c['instant'] = instant.text
             else:
-                c['start'] = context.find('.//xbrli:startDate', namespaces=self.ns).text
-                c['end'] = context.find('.//xbrli:endDate', namespaces=self.ns).text
+                c['start'] = context.find('.//{http://www.xbrl.org/2003/instance}startDate', namespaces=self.ns).text
+                c['end'] = context.find('.//{http://www.xbrl.org/2003/instance}endDate', namespaces=self.ns).text
 
         return contexts
 
     def __extract_units(self):
         units = {}
-        for unit in self.root.findall('./xbrli:unit', namespaces=self.ns):
+        for unit in self.root.findall('./{http://www.xbrl.org/2003/instance}unit', namespaces=self.ns):
             key = unit.attrib['id']
 
             # Extract currency code as value or empty for pure units
-            mesaure_text = unit.find('.//xbrli:measure', namespaces=self.ns).text
+            mesaure_text = unit.find('.//{http://www.xbrl.org/2003/instance}measure', namespaces=self.ns).text
             measure = mesaure_text.rsplit(":")[1] if mesaure_text.startswith("iso4217:") else ''
             units[key] = measure
         return units
@@ -193,14 +214,14 @@ class XBRLReport:
                 start = self.contexts[context]['start']
                 break
         else:
-            raise Exception("Start date not found in contexts %s" % contexts)
+            return None
         # Get end date from contexts
         for context in contexts:
             if 'end' in self.contexts[context]:
                 end = self.contexts[context]['end']
                 break
         else:
-            raise Exception("End date not found in contexts %s" % contexts)
+            return None
 
         filing = {
             'metadata': {
@@ -224,28 +245,12 @@ class XBRLBelgium(XBRLReport):
     def __init__(self, xmltree):
         super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_be.owl#")
 
-
-    def parse_filings(self):
+    def get_identifier(self):
         identifier = self.root.find(".//pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue",
             namespaces=self.ns).text
-        src = ("www.fgov.be", 'http://www.w3.org/2001/XMLSchema#anyURI')
-        company_info = self._extract_company_info()
+        return identifier
 
-        filings = []
-
-        if 'PrecedingDuration' in self.contexts:
-            previous_filing = self._create_filing(['PrecedingDuration', 'PrecedingInstant'], identifier,
-                is_previous=True, source=src)
-            previous_filing['items'].update(company_info)
-            filings.append(previous_filing)
-
-        current_filing = self._create_filing(['CurrentDuration', 'CurrentInstant'], identifier, source=src)
-        current_filing['items'].update(company_info)
-        filings.append(current_filing)
-
-        self.filings = filings
-
-    def _extract_company_info(self):
+    def extract_company_info(self):
         def __get(s):
             n = self.root.find(".//%s[@contextRef='CurrentDuration']" % (s), namespaces=self.ns)
             if n is not None:
@@ -267,24 +272,12 @@ class XBRLSpainPGC(XBRLReport):
     def __init__(self, xmltree):
         super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_es.owl#")
 
-    def parse_filings(self):
-        identifier = self.root.find(".//pgc07mc-apdo0:IdentificacionEmpresaTupla/dgi-est-gen:IdentifierValue[@contextRef='D.ACTUAL']",
-            namespaces=self.ns).text
-        company_info = self._extract_company_info()
+    def get_identifier(self):
+        id_expression = ".//dgi-est-gen:IdentifierCode/dgi-est-gen:IdentifierValue"
+        identifier = self.root.find(id_expression, namespaces=self.ns).text
+        return identifier
 
-        filings = []
-        if 'D.ANTERIOR' in self.contexts:
-            previous_filing = self._create_filing(['D.ANTERIOR', 'I.ANTERIOR'], identifier, is_previous=True)
-            previous_filing['items'].update(company_info)
-            filings.append(previous_filing)
-
-        current_filing = self._create_filing(['D.ACTUAL', 'I.ACTUAL'], identifier)
-        current_filing['items'].update(company_info)
-        filings.append(current_filing)
-
-        self.filings = filings
-
-    def _extract_company_info(self):
+    def extract_company_info(self):
         def __get(s):
             xpath_prefix = './/pgc07mc-apdo0:IdentificacionEmpresaTupla/'
             n = self.root.find(xpath_prefix+s, namespaces=self.ns)
@@ -313,32 +306,12 @@ class XBRLSpainCNMV(XBRLReport):
     def __init__(self, xmltree):
         super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_es_cnmv.owl#")
 
-    def parse_filings(self):
+    def get_identifier(self):
         id_expression = ".//dgi-est-gen:IdentifierCode/dgi-est-gen:IdentifierValue"
         identifier = self.root.find(id_expression, namespaces=self.ns).text
-        company_info = self._extract_company_info()
-        filings = []
+        return identifier
 
-        # Contexts are dynamically named, figure them out by dates
-        by_end = self._get_contexts_by_end()
-        by_end_ordered_keys = sorted(by_end)
-
-        if len(by_end) > 2:
-            raise Exception("Too many dates found in report to infer contexts")
-        elif len(by_end) == 2:
-            previous_contexts = by_end[by_end_ordered_keys.pop(0)]
-            previous_filing = self._create_filing(previous_contexts, identifier, is_previous=True)
-            previous_filing['items'].update(company_info)
-            filings.append(previous_filing)
-
-        current_context = by_end[by_end_ordered_keys[0]]
-        current_filing = self._create_filing(current_context, identifier)
-        current_filing['items'].update(company_info)
-        filings.append(current_filing)
-
-        self.filings = filings
-
-    def _extract_company_info(self):
+    def extract_company_info(self):
         def __get(s):
             n = self.root.find('.//'+s, namespaces=self.ns)
             if n is not None:
