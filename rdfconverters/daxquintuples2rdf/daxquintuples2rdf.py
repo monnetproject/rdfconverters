@@ -20,7 +20,6 @@ class QuintupleReader:
         # Decode HTML entities
         s = s.replace('&quot;', '\\"')
         s = html.parser.HTMLParser().unescape(s)
-
         s = s.encode('unicode-escape').decode('utf8') \
                 .replace('\\n', '\n').replace('\\"', '\"')
 
@@ -28,15 +27,6 @@ class QuintupleReader:
         for n in NS:
             s = s.replace('<%s:' % n, '<%s' % NS[n])
 
-        # Encode UTF-8 profiles to unicode-escape (ntriples format requires unicode-escape)
-        def encode_correctly(m):
-            g = m.group(0)
-            g = g.encode('unicode-escape').decode('utf8')
-            g = g.replace('\\n', '\n').replace('\\"', '\"')
-            return g
-
-        #s = re.sub(r'#portrait> ".*"@', encode_correctly, s)
-        #print(s)
         return s
 
     def read(self, filename):
@@ -87,6 +77,7 @@ class QuintuplesToTriples:
         CPNodeBuilder(g, cp_id).structured().sector_value('sector', sector_value)
         # Replace dax:name and dax:shortName with cp:companyName
         used_names = set()
+        
         for triple in ((cp_id, NS['dax']['name'], None), (cp_id, NS['dax']['shortName'], None)):
             for _, _, company_name in g.triples(triple):
                 if company_name.upper() not in used_names:

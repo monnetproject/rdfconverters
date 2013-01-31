@@ -16,10 +16,11 @@ class RDFConverter:
             g.bind(n, NS[n])
 
         for filing in xbrl_instance.get_filings_list():
-            identifier = "%s_%s" % ( filing['metadata']['id'], filing['metadata']['end'] )
+            id = filing['metadata']['id']
+            identifier = "%s_%s" % ( id, filing['metadata']['end'] )
 
             # Add report instance to graph, with start/end metadata
-            rep = URIRef('rep_'+identifier)
+            rep = NS['xebr']['rep_'+identifier]
             metadata = filing['metadata']
             g.add((rep, NS['rdf']['type'], NS['xebr']['Report']))
             g.add((rep, NS['xebr']['start'], Literal(metadata['start'],datatype=XSD.date)))
@@ -31,7 +32,7 @@ class RDFConverter:
             # Traverse concepts and add to graph
             for report_type in self.traverser.report_type_iterator():
                 for report in self.traverser.report_iterator(report_type):
-                    node_belongsTo = URIRef("%s_%s" % (self._abbreviate(report), identifier))
+                    node_belongsTo = NS['xebr']["%s_%s" % (self._abbreviate(report), identifier)]
                     empty_report=True
                     for abstract_concept, concepts, depth in self.traverser.concept_iterator(report):
                         concepts_in_filing = set(filing['items']) & set(concepts.keys())
@@ -39,7 +40,7 @@ class RDFConverter:
                         # Add concepts to graph
                         if len(concepts_in_filing) > 0:
                             empty_report=False
-                            ab = URIRef("%s_%s" % (self._abbreviate(abstract_concept), identifier))
+                            ab = NS['xebr']["%s_%s" % (self._abbreviate(abstract_concept), identifier)]
 
                             # Add abstract_concept and report relationships
                             g.add((ab, NS['rdf']['type'], NS['xebr'][abstract_concept]))

@@ -21,6 +21,11 @@ cp:isin a owl:DatatypeProperty;
     rdfs:domain cp:CompanyProfile;
     rdfs:range xsd:string;
     rdfs:label "ISIN"@en .
+cp:companyId a owl:DatatypeProperty;
+    a owl:FunctionalProperty;
+    rdfs:domain cp:CompanyProfile;
+    rdfs:range xsd:string;
+    rdfs:label "Company Identifier"@en .
 
 
 cp:instant a owl:DatatypeProperty;
