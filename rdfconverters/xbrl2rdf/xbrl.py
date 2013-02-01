@@ -259,7 +259,7 @@ class XBRLBelgium(XBRLReport):
 
         info = {
             'hasCompanyIdValue': __get("pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue"),
-            'hasCompanyNameText': self._humanize_name(__get("pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue")),
+            'hasCompanyNameText': self._humanize_name(__get("pfs-gcd:EntityInformation//pfs-gcd:EntityCurrentLegalName")),
             'hasLegalFormCode': __get('pfs-gcd:EntityForm/*')
         }
         return info
