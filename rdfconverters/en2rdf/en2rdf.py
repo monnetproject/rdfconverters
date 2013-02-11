@@ -192,7 +192,7 @@ class Searcher:
         for r in results:
             print('%*s%*s%*s' % (col[0],r['isin'],col[1],r['mic'],col[2],r['name']))
 
-    def search(self, keyword='', icb=None):
+    def search(self, keyword='', icb=None, maxresults=None):
         # Get the CSRF token
         url = "https://europeanequities.nyx.com/en/markets/nyse-euronext/product-directory"
         html = requests.get(url).text
@@ -229,10 +229,17 @@ class Searcher:
         while offset < total:
             jsonresponse = requests.post(url, {'sEcho': 1, 'iDisplayStart': offset, 'iDisplayLength': results_per_page})
             jsonobj = json.loads(jsonresponse.text)
+            pprint(jsonobj)
 
             total = jsonobj['iTotalDisplayRecords']
-            offset += len(jsonobj['aaData'])
-            searchData += jsonobj['aaData']
+            
+            num_results = len(jsonobj['aaData'])
+            if maxresults is not None and offset + num_results >= maxresults:
+                searchData += jsonobj['aaData'][:maxresults-offset]
+                break
+            else:
+                offset += num_results
+                searchData += jsonobj['aaData']
 
 	# Create list of results containing company name, isin and mic
         companies=[]
@@ -347,14 +354,14 @@ class RDFConverter:
         self._write_factsheet()
         return self.g
 
-def search(keyword=None, icb=None, outputfile=None):
+def search(keyword=None, icb=None, outputfile=None, maxresults=None):
     searcher = Searcher()
     if icb:
         print("Searching by ICB code %s" % icb)
-        results = searcher.search(icb=icb)
+        results = searcher.search(icb=icb, maxresults=maxresults)
     elif keyword:
         print("Searching by keyword %s" % keyword)
-        results = searcher.search(keyword)
+        results = searcher.search(keyword, maxresults=maxresults)
 
     Searcher.print_search_results(results)
 
@@ -399,6 +406,7 @@ def main():
     search_command = subparser.add_parser('search', help='Search EuroNext website')
     search_subcommands = search_command.add_subparsers(help='Search commands', dest='search_subcommand')
     search_command.add_argument('-o', dest='output', help='Write search results to file, which can be used as input to the scrape command')
+    search_command.add_argument('--max-results', default=None, type=int, dest='maxresults', help='Maximum results from search')
 
     keyword_command = search_subcommands.add_parser('keyword', help='Search EuroNext website by keyword')
     keyword_command.add_argument('keyword', help='Keyword to search by')
@@ -441,9 +449,9 @@ def main():
 
     if args.command == 'search':
         if hasattr(args, 'keyword'):
-            search(keyword=args.keyword, outputfile=args.output)
+            search(keyword=args.keyword, outputfile=args.output, maxresults=args.maxresults)
         elif hasattr(args, 'icb'):
-            search(icb=args.icb, outputfile=args.output)
+            search(icb=args.icb, outputfile=args.output, maxresults=args.maxresults)
     elif args.command == 'scrapeone':
         scrape(args.isin, args.mic, args.outputfile, args.pickle)
     elif args.command == 'scrape':
