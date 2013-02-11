@@ -291,7 +291,7 @@ class RDFConverter:
                 self.g.add((self.id_node, NS['en']['country'], Literal(profile['address']['country'], lang=lang)))
 
             # Management
-            for manager in profile['management']:
+            for manager in profile.get('management', []):
                 node = NS['en']["%s_%d" % (manager['name'].replace(' ', '_'), self.scraped['timestamp'])]
 
                 fln = manager['name'].index(' ')
@@ -462,7 +462,10 @@ def main():
             timestamp = int(time.time() * 1000)
             outputfile = "%s/%s-%s-%s.%s" % (args.outputdir, isin_mic[0], isin_mic[1], timestamp, extension)
             print("Scraping %s, %s to %s" % (isin_mic[0], isin_mic[1], outputfile))
-            scrape(isin_mic[0], isin_mic[1], outputfile, args.pickle, timestamp=timestamp)
+            try:
+                scrape(isin_mic[0], isin_mic[1], outputfile, args.pickle, timestamp=timestamp)
+            except Exception as e:
+                logger.exception("Failed to scrape " + isin_mic) 
     elif args.command == 'rdfconvert':
         if args.batch:
             files = list(util.traverse_mirror(args.inputpath, args.outputpath, '.pickle', '.n3'))
