@@ -46,8 +46,9 @@ class XBRLReport:
             'id': "...",
             'start': "yyyy-mm-dd",
             'end': "yyyy-mm-dd",
-            'source': ...
-            'is_previous': ...
+            'taxonomy': ...,
+            'source': ...,
+            'is_previous': ...,
         },
         'items': { 'hasAssetsTotal': "1234EUR", 'hasEquityTotal': "5678EUR", .... }
     }
@@ -60,7 +61,8 @@ class XBRLReport:
       should be True for 2010 and False for 2011.
     """
 
-    def __init__(self, xmltree, xebr_namespace):
+    def __init__(self, xmltree, source_taxonomy):
+        self.source_taxonomy = source_taxonomy
         self.root = xmltree.getroot()
         self.ns = self.root.nsmap
 
@@ -70,7 +72,7 @@ class XBRLReport:
         self.contexts = self.__extract_contexts()
         self.items = self.__extract_financial_items()
 
-        self.x2x = XBRL2XEBR(xebr_namespace)
+        self.x2x = XBRL2XEBR(source_taxonomy)
 
     def get_identifier(self):
         raise NotImplementedError()
@@ -227,6 +229,7 @@ class XBRLReport:
             'metadata': {
                 'id': identifier,
                 'start': start,
+                'taxonomy': self.source_taxonomy,
                 'end': end,
                 'is_previous': is_previous
             },

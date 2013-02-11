@@ -1,11 +1,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema> .
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 @prefix xbrl_be: <http://www.dfki.de/lt/xbrl_be.owl#> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 @prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es.owl#> .
 @prefix skos: <http://www.dfki.de/lt/skos.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xbrl_es_cnmv: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
+
+xbrl_be: a xebr:LocalTaxonomy;
+    skos:prefLabel "Belgium PFS"@en .
+xbrl_es: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain PGC"@en .
+xbrl_es_cnmv: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain IPP-GEN"@en .
 
 xbrl_es_cnmv:es-be-fs_CapitalFondoDotacion a owl:DatatypeProperty;
     skos:altLabel "Patrimonio neto fondos propios capital"@es;

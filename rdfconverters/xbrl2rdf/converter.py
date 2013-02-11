@@ -23,6 +23,7 @@ class RDFConverter:
             rep = NS['xebr']['rep_'+identifier]
             metadata = filing['metadata']
             g.add((rep, NS['rdf']['type'], NS['xebr']['Report']))
+            g.add((rep, NS['xebr']['sourceTaxonomy'], URIRef(metadata['taxonomy'])))
             g.add((rep, NS['xebr']['start'], Literal(metadata['start'],datatype=XSD.date)))
             g.add((rep, NS['xebr']['end'], Literal(metadata['end'],datatype=XSD.date)))
             if 'source' in metadata:
