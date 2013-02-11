@@ -194,7 +194,7 @@ class Searcher:
 
     def search(self, keyword='', icb=None):
         # Get the CSRF token
-        url = "https://europeanequities.nyx.com/en/markets/nyse-euronext/brussels/product-directory"
+        url = "https://europeanequities.nyx.com/en/markets/nyse-euronext/product-directory"
         html = requests.get(url).text
         soup = BeautifulSoup(html)
         csrf = soup.find('form', {'id': 'filters_block_form'}).find('input', {'name': 'form_build_id'})['value']
@@ -221,17 +221,27 @@ class Searcher:
 
         # Make the AJAX request to get the JSON results
         url="https://europeanequities.nyx.com/pd/stocks/data?formKey="+key
-        jsonresponse = requests.post(url, {'iDisplayLength': 100})
-        jsonobj = json.loads(jsonresponse.text)
+
+        total = 1
+        offset = 0
+        results_per_page = 20 # Seems to be the maximum supported
+        searchData = []
+        while offset < total:
+            jsonresponse = requests.post(url, {'sEcho': 1, 'iDisplayStart': offset, 'iDisplayLength': results_per_page})
+            jsonobj = json.loads(jsonresponse.text)
+
+            total = jsonobj['iTotalDisplayRecords']
+            offset += len(jsonobj['aaData'])
+            searchData += jsonobj['aaData']
 
 	# Create list of results containing company name, isin and mic
         companies=[]
-        for company in jsonobj['aaData']:
+        for company in searchData:
             if isinstance(company, (list, tuple)):
                 result = dict(
                     name = re.search("_blank\">\s*(.*?)\s*</a>", company[0]).group(1),
                     isin = company[1],
-                    mic = re.search(r'/[A-Z]{2}\d+-([A-Z]{4})"', company[0]).group(1)
+                    mic = re.search(r'/[A-Z0-9]{12}-([A-Z]{4})"', company[0]).group(1)
                 )
                 companies.append(result)
         return companies
