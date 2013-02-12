@@ -61,7 +61,7 @@ class XBRLReport:
       should be True for 2010 and False for 2011.
     """
 
-    def __init__(self, xmltree, source_taxonomy):
+    def __init__(self, xmltree, source_taxonomy, only_year_boundaries=False):
         self.source_taxonomy = source_taxonomy
         self.root = xmltree.getroot()
         self.ns = self.root.nsmap
@@ -69,7 +69,7 @@ class XBRLReport:
         self.filings = None
 
         self.units = self.__extract_units()
-        self.contexts = self.__extract_contexts()
+        self.contexts = self.__extract_contexts(only_year_boundaries)
         self.items = self.__extract_financial_items()
 
         self.x2x = XBRL2XEBR(source_taxonomy)
@@ -101,14 +101,14 @@ class XBRLReport:
     def get_filings_list(self):
         return self.filings
 
-    def __extract_contexts(self):
+    def __extract_contexts(self, only_year_boundaries):
         '''
         Returns a dictionary of XBRL contexts with the context id attribute as a key and
         either instant or start/end dates.
         '''
         contexts = {}
         for context in self.root.findall("./{http://www.xbrl.org/2003/instance}context", namespaces=self.ns):
-            c = contexts[context.attrib['id']] = {}
+            c = {}
 
             instant = context.find('.//{http://www.xbrl.org/2003/instance}instant', namespaces=self.ns)
             if instant is not None:
@@ -116,6 +116,9 @@ class XBRLReport:
             else:
                 c['start'] = context.find('.//{http://www.xbrl.org/2003/instance}startDate', namespaces=self.ns).text
                 c['end'] = context.find('.//{http://www.xbrl.org/2003/instance}endDate', namespaces=self.ns).text
+            
+            if (not only_year_boundaries) or c.get('instant','').endswith("12-31") or (c.get('start','').endswith("01-01") and c.get('end','').endswith("12-31")):
+                contexts[context.attrib['id']] = c
 
         return contexts
 
@@ -307,7 +310,7 @@ class XBRLSpainPGC(XBRLReport):
 class XBRLSpainCNMV(XBRLReport):
 
     def __init__(self, xmltree):
-        super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_es_cnmv.owl#")
+        super().__init__(xmltree, "http://www.dfki.de/lt/xbrl_es_cnmv.owl#", only_year_boundaries=True)
 
     def get_identifier(self):
         id_expression = ".//dgi-est-gen:IdentifierCode/dgi-est-gen:IdentifierValue"
