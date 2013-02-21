@@ -1,0 +1,1341 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:xebr="http://www.dfki.de/lt/xebr.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="file:/Users/krieger/Desktop/MONNET/ontology/XEBR/XEBRv1.1/xebr.owl">
+  <owl:Ontology rdf:about="file:/Users/krieger/Desktop/MONNET/ontology/XEBR/XEBRv1.1/xebr.owl"/>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#monetary"/>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#Class"/>
+    </rdfs:subClassOf>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">official first and middle names [list]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">company official [list]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">official name [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList">
+    <rdfs:label xml:lang="en">official function [list]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyNameList">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">company name [list]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">equity [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation">
+    <rdfs:label xml:lang="en">extraordinary income [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport">
+    <rdfs:label xml:lang="en">company history [report]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList">
+    <rdfs:label xml:lang="en">company id, city of registration [list]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">company data validity [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">net extraordinary income [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">company address, city [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyActivityList">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">company activity [list]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport">
+    <rdfs:label xml:lang="en">key balance sheet figures [report]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">net financial income [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation"/>
+    <rdfs:label xml:lang="en">financial charges [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">amounts payable after more than one year [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">official shareholding [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation">
+    <rdfs:label xml:lang="en">amounts payable within one year [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport"/>
+    <rdfs:label xml:lang="en">main events [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation">
+    <rdfs:label xml:lang="en">official place of birth [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation">
+    <rdfs:label xml:lang="en">official data validity [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">company officials [report]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList">
+    <rdfs:label xml:lang="en">company id number [list]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">official address, city or town [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">amounts receivable [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport"/>
+    <rdfs:label xml:lang="en">main official [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">provisions and deferred taxes [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">official address, details [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">current assets [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">operating income [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation">
+    <rdfs:label xml:lang="en">net operating income [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EventDatePresentation">
+    <rdfs:label xml:lang="en">event date [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">event description [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation">
+    <rdfs:label xml:lang="en">official address, complement [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">company address, complement [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation">
+    <rdfs:label xml:lang="en">company address, details [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation">
+    <rdfs:label xml:lang="en">accrued charges and deferred income [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation">
+    <rdfs:label xml:lang="en">amounts payable [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">intangible fixed assets [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AssetsPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <rdfs:label xml:lang="en">assets [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">financial fixed assets [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation"/>
+    <rdfs:label xml:lang="en">operating charges [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">fixed assets [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyAddressList">
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">company address [list]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation">
+    <rdfs:label xml:lang="en">property, plant, and equipment [presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyContactPointList">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">company contact point [list]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport"/>
+    <rdfs:label xml:lang="en">company history event [list]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList">
+    <rdfs:label xml:lang="en">company legal form [list]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <xebr:partOf>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation"/>
+    <rdfs:label xml:lang="en">deferred charges and accrued income [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">extraordinary charges [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation">
+    <rdfs:label xml:lang="en">event category [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">tangible fixed assets [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">official id number [list]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport">
+    <rdfs:label xml:lang="en">company identification [report]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">financial income [presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation">
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <rdfs:label xml:lang="en">income statement [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation">
+    <rdfs:label xml:lang="en">liquid assets [presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#Report"/>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation">
+    <rdfs:label xml:lang="en">equity and liabilities [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#StocksPresentation">
+    <rdfs:subClassOf rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:label xml:lang="en">stocks [presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyOfficialsReport">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#Report"/>
+    <rdfs:label xml:lang="en">company officials [report]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#partOf">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#belongsTo">
+    <rdfs:range rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#Class"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyHistoryReport">
+    <rdfs:label xml:lang="en">company history [report]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#Report"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport">
+    <rdfs:label xml:lang="en">key balance sheet figures [report]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#Report"/>
+    <rdfs:range rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationReport">
+    <rdfs:label xml:lang="en">company identification [report]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#Report"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalFormCode">
+    <rdfs:label xml:lang="en">legal form, code</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalStatusType">
+    <rdfs:label xml:lang="en">legal status, type</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">company street name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">affiliated enterprises</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">assets [total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes">
+    <rdfs:label xml:lang="en">deferred taxes</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes">
+    <rdfs:label xml:lang="en">income taxes</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company identification, starting date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasActivityCode">
+    <rdfs:label xml:lang="en">activity, code</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyActivityList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">amounts payable after more than one year [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalFormText">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">legal form, text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">company event, language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation"/>
+    <rdfs:label xml:lang="en">financial income [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">signing authority [flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasActivityType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">activity, type</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyActivityList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">financial fixed assets [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName">
+    <rdfs:label xml:lang="en">official first name</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">plant and machinery</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">company contact point, value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType">
+    <rdfs:label xml:lang="en">official function, type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyIdType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company id, type</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal">
+    <rdfs:label xml:lang="en">current assets [total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCityCodeValue">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList"/>
+    <rdfs:label xml:lang="en">city code, value</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLiquidationDate">
+    <rdfs:label xml:lang="en">liquidation date</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAccountant">
+    <rdfs:label xml:lang="en">accountant</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company address, language</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">company event, information source</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company postcode</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIncomeTotal">
+    <rdfs:label xml:lang="en">income [total]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">profit (loss) for the period</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation"/>
+    <rdfs:label xml:lang="en">category of event, value</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox">
+    <rdfs:label xml:lang="en">company postal box</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">official function, starting date</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation"/>
+    <rdfs:label xml:lang="en">provisions and deferred taxes [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasNumberOfShares">
+    <rdfs:label xml:lang="en">number of shares</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDatePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">publication date of event</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList"/>
+    <rdfs:label xml:lang="en">official is a company [flag]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    <rdfs:label xml:lang="en">company address, type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear">
+    <rdfs:label xml:lang="en">financial debts payable within one year</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation"/>
+    <rdfs:label xml:lang="en">description of shares or debentures</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">official address complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyCity">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">company city</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation"/>
+    <rdfs:label xml:lang="en">operating profit (loss) [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyContactPointList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">company contact point, description</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+    <rdfs:label xml:lang="en">official married name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPresident">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">president</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official function, language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges">
+    <rdfs:label xml:lang="en">provisions for liabilities and charges</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasRegistrationDate">
+    <rdfs:label xml:lang="en">registration date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCapital">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">capital</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables">
+    <rdfs:label xml:lang="en">raw materials and consumables</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal">
+    <rdfs:label xml:lang="en">extraordinary charges [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">trade debts payable within one year</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">company street complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">category of event, type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyActivityList"/>
+    <rdfs:label xml:lang="en">main activity [flag]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">taxes, remuneration and social security payable within one year</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">tangible fixed assets [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">official identification, starting date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal">
+    <rdfs:label xml:lang="en">amounts payable [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">taxes, remuneration, and social security payable after more than one year</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDirector">
+    <rdfs:label xml:lang="en">director</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">liquid assets [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">profit (loss) for the period [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">amounts receivable within one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasMainFormFlag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">main form [flag]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company address, country</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDatePresentation"/>
+    <rdfs:label xml:lang="en">registration date of event</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">wages and salaries</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">financial profit (loss) [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">official address, county state</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation"/>
+    <rdfs:label xml:lang="en">official postcode</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasWorkInProgress">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#StocksPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">work in progress</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDateOfEvent">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDatePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">date of event</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">official postal box</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">extraordinary profit (loss) [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">company street type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">equity and liabilities [total]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">operating income [total]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode">
+    <rdfs:label xml:lang="en">category of event, code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherStock">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#StocksPresentation"/>
+    <rdfs:label xml:lang="en">other stock</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished">
+    <rdfs:label xml:lang="en">last balance sheet published</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">fixed assets [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">accrued charges and deferred income [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company name, language</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyNameList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official city complement</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment">
+    <rdfs:label xml:lang="en">other property, plant, and equipment</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyNameText">
+    <rdfs:label xml:lang="en">company name, text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyNameList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">financial debts payable after more than one year</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation"/>
+    <rdfs:label xml:lang="en">operating charges [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">stock raw materials and consumables</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#StocksPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments">
+    <rdfs:label xml:lang="en">pensions and similar commitments</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasMainNameFlag">
+    <rdfs:label xml:lang="en">main name [flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyNameList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialIdType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">official id, type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName">
+    <rdfs:label xml:lang="en">official family name</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasChargesTotal">
+    <rdfs:label xml:lang="en">charges [total]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">official function, text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment">
+    <rdfs:label xml:lang="en">furniture, fixtures, and equipment</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">other tangible assets</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList"/>
+    <rdfs:label xml:lang="en">official id, value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+    <rdfs:label xml:lang="en">official title or gender</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official address, country</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyOfficialList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasActivityText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">activity, text</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyActivityList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIncorporationDate">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">incorporation date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdfs:label xml:lang="en">legal form, langage</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">main company address [flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation"/>
+    <rdfs:label xml:lang="en">amounts payable within one year [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company address, county state</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">extraordinary income [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasActivityLanguage">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyActivityList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">activity, language</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">profit (loss) brought forward</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">company contact point, language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage">
+    <rdfs:label xml:lang="en">city name, language</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">official identification, ending date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">intangible fixed assets [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official function, ending date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official city or town</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation"/>
+    <rdfs:label xml:lang="en">financial charges [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">property, plant, and equipment [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCityCodeType">
+    <rdfs:label xml:lang="en">city code, type</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth">
+    <rdfs:label xml:lang="en">official country of birth</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">official date of birth</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCityNameText">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">city name, text</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalFormType">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">legal form, type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">other operating charges</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate">
+    <rdfs:label xml:lang="en">company identification, ending date</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">other financial assets</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasContact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">contact</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official street name</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyNameType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyNameList"/>
+    <rdfs:label xml:lang="en">company name, type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation"/>
+    <rdfs:label xml:lang="en">amounts receivable [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation"/>
+    <rdfs:label xml:lang="en">deferred charges and accrued income [total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">trade debts payable after more than one year</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode">
+    <rdfs:label xml:lang="en">legal status, code</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation"/>
+    <rdfs:label xml:lang="en">amounts receivable after more than one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasStocksTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#StocksPresentation"/>
+    <rdfs:label xml:lang="en">stocks [total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation"/>
+    <rdfs:label xml:lang="en">official city of birth</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasReserves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">reserves</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyEventText">
+    <rdfs:label xml:lang="en">company event, text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialNationality">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">official nationality</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">official street complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">land and buildings</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasEquityTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">equity [total]</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber">
+    <rdfs:label xml:lang="en">company street number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+    <rdfs:label xml:lang="en">balance sheet date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber">
+    <rdfs:label xml:lang="en">official street number</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace">
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">incorporation place</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">official street type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">company id, value</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation"/>
+    <rdfs:label xml:lang="en">company city complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">company address complement</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://www.dfki.de/lt/xebr.owl#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">company contact point, type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

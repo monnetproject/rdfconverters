@@ -1,0 +1,1048 @@
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2001/XMLSchema#monetary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.dfki.de/lt/xebr.owl#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyHistoryReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyHistoryReport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Report> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyHistoryReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyHistoryReport> <http://www.w3.org/2000/01/rdf-schema#label> "company history [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> <http://www.w3.org/2000/01/rdf-schema#label> "company history [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> .
+<http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> .
+<http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "main events [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/2000/01/rdf-schema#label> "company history event [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDate> <http://www.w3.org/2000/01/rdf-schema#label> "registration date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidationDate> <http://www.w3.org/2000/01/rdf-schema#label> "liquidation date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationDate> <http://www.w3.org/2000/01/rdf-schema#label> "incorporation date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace> <http://www.w3.org/2000/01/rdf-schema#label> "incorporation place"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIncorporationPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate> <http://www.w3.org/2000/01/rdf-schema#label> "balance sheet date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasBalanceSheetDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainEventsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished> <http://www.w3.org/2000/01/rdf-schema#label> "last balance sheet published"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLastBalanceSheetPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#EventDatePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> .
+<http://www.dfki.de/lt/xebr.owl#EventDatePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EventDatePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "event date [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDatePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#label> "date of event"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDatePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#label> "registration date of event"@en .
+<http://www.dfki.de/lt/xebr.owl#hasRegistrationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDatePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#label> "publication date of event"@en .
+<http://www.dfki.de/lt/xebr.owl#hasPublicationDateOfEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> .
+<http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "event description [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventText> <http://www.w3.org/2000/01/rdf-schema#label> "company event, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "company event, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventDescriptionPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource> <http://www.w3.org/2000/01/rdf-schema#label> "company event, information source"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyEventInformationSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> .
+<http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyHistoryEventList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "event category [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue> <http://www.w3.org/2000/01/rdf-schema#label> "category of event, value"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode> <http://www.w3.org/2000/01/rdf-schema#label> "category of event, code"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EventCategoryPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType> <http://www.w3.org/2000/01/rdf-schema#label> "category of event, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCategoryOfEventType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2001/XMLSchema#monetary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.dfki.de/lt/xebr.owl#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationReport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Report> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationReport> <http://www.w3.org/2000/01/rdf-schema#label> "company identification [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> <http://www.w3.org/2000/01/rdf-schema#label> "company identification [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> <http://www.w3.org/2000/01/rdf-schema#label> "company id number [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyNameList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyNameList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyNameList> <http://www.w3.org/2000/01/rdf-schema#label> "company name [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyNameList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> <http://www.w3.org/2000/01/rdf-schema#label> "company legal form [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyActivityList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyActivityList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyActivityList> <http://www.w3.org/2000/01/rdf-schema#label> "company activity [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyActivityList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/2000/01/rdf-schema#label> "company address [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> <http://www.w3.org/2000/01/rdf-schema#label> "company contact point [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "company data validity [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdentificationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue> <http://www.w3.org/2000/01/rdf-schema#label> "company id, value"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdType> <http://www.w3.org/2000/01/rdf-schema#label> "company id, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdNumberList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> <http://www.w3.org/2000/01/rdf-schema#label> "company id, city of registration [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameText> <http://www.w3.org/2000/01/rdf-schema#label> "city name, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "city name, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCityNameLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeValue> <http://www.w3.org/2000/01/rdf-schema#label> "city code, value"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyIdCityOfRegistrationList> .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeType> <http://www.w3.org/2000/01/rdf-schema#label> "city code, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCityCodeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyNameList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameText> <http://www.w3.org/2000/01/rdf-schema#label> "company name, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyNameList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "company name, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyNameList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameType> <http://www.w3.org/2000/01/rdf-schema#label> "company name, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyNameType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasMainNameFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainNameFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainNameFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyNameList> .
+<http://www.dfki.de/lt/xebr.owl#hasMainNameFlag> <http://www.w3.org/2000/01/rdf-schema#label> "main name [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasMainNameFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormText> <http://www.w3.org/2000/01/rdf-schema#label> "legal form, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage> <http://www.w3.org/2000/01/rdf-schema#label> "legal form, langage"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormLangage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormCode> <http://www.w3.org/2000/01/rdf-schema#label> "legal form, code"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormType> <http://www.w3.org/2000/01/rdf-schema#label> "legal form, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalFormType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasMainFormFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainFormFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainFormFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasMainFormFlag> <http://www.w3.org/2000/01/rdf-schema#label> "main form [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasMainFormFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode> <http://www.w3.org/2000/01/rdf-schema#label> "legal status, code"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyLegalFormList> .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusType> <http://www.w3.org/2000/01/rdf-schema#label> "legal status, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLegalStatusType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyActivityList> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityText> <http://www.w3.org/2000/01/rdf-schema#label> "activity, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasActivityText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyActivityList> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "activity, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasActivityLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyActivityList> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityCode> <http://www.w3.org/2000/01/rdf-schema#label> "activity, code"@en .
+<http://www.dfki.de/lt/xebr.owl#hasActivityCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyActivityList> .
+<http://www.dfki.de/lt/xebr.owl#hasActivityType> <http://www.w3.org/2000/01/rdf-schema#label> "activity, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasActivityType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyActivityList> .
+<http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag> <http://www.w3.org/2000/01/rdf-schema#label> "main activity [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasMainActivityFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "company address, details [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber> <http://www.w3.org/2000/01/rdf-schema#label> "company street number"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType> <http://www.w3.org/2000/01/rdf-schema#label> "company street type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName> <http://www.w3.org/2000/01/rdf-schema#label> "company street name"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement> <http://www.w3.org/2000/01/rdf-schema#label> "company street complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyStreetComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox> <http://www.w3.org/2000/01/rdf-schema#label> "company postal box"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostalBox> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "company address, complement [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressComplementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement> <http://www.w3.org/2000/01/rdf-schema#label> "company address complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "company address, city [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode> <http://www.w3.org/2000/01/rdf-schema#label> "company postcode"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyPostcode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCity> <http://www.w3.org/2000/01/rdf-schema#label> "company city"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressCityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement> <http://www.w3.org/2000/01/rdf-schema#label> "company city complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyCityComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#label> "company address, county state"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "company address, country"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "company address, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType> <http://www.w3.org/2000/01/rdf-schema#label> "company address, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyAddressType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyAddressList> .
+<http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag> <http://www.w3.org/2000/01/rdf-schema#label> "main company address [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasMainCompanyAddressFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription> <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, description"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue> <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, value"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyContactPointList> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType> <http://www.w3.org/2000/01/rdf-schema#label> "company contact point, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyContactPointType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#label> "company identification, starting date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyDataValidityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#label> "company identification, ending date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2001/XMLSchema#monetary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.dfki.de/lt/xebr.owl#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyOfficialsReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyOfficialsReport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Report> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyOfficialsReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> .
+<http://www.dfki.de/lt/xebr.owl#hasCompanyOfficialsReport> <http://www.w3.org/2000/01/rdf-schema#label> "company officials [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> <http://www.w3.org/2000/01/rdf-schema#label> "company officials [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> .
+<http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> .
+<http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "main official [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#label> "company official [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialsReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasPresident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPresident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPresident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasPresident> <http://www.w3.org/2000/01/rdf-schema#label> "president"@en .
+<http://www.dfki.de/lt/xebr.owl#hasPresident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasDirector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDirector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDirector> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasDirector> <http://www.w3.org/2000/01/rdf-schema#label> "director"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDirector> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasAccountant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAccountant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAccountant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAccountant> <http://www.w3.org/2000/01/rdf-schema#label> "accountant"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAccountant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#MainOfficialPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasContact> <http://www.w3.org/2000/01/rdf-schema#label> "contact"@en .
+<http://www.dfki.de/lt/xebr.owl#hasContact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official name [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender> <http://www.w3.org/2000/01/rdf-schema#label> "official title or gender"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialTitleOrGender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName> <http://www.w3.org/2000/01/rdf-schema#label> "official family name"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFamilyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName> <http://www.w3.org/2000/01/rdf-schema#label> "official married name"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialMarriedName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList> <http://www.w3.org/2000/01/rdf-schema#label> "official first and middle names [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFirstAndMiddleNamesList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName> <http://www.w3.org/2000/01/rdf-schema#label> "official first name"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFirstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "official date of birth"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialDateOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> .
+<http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialNamePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official place of birth [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "official city of birth"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "official country of birth"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCountryOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialNationality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialPlaceOfBirthPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialNationality> <http://www.w3.org/2000/01/rdf-schema#label> "official nationality"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialNationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> <http://www.w3.org/2000/01/rdf-schema#label> "official id number [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue> <http://www.w3.org/2000/01/rdf-schema#label> "official id, value"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdType> <http://www.w3.org/2000/01/rdf-schema#label> "official id, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialIdNumberList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag> <http://www.w3.org/2000/01/rdf-schema#label> "official is a company [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIsACompanyFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> <http://www.w3.org/2000/01/rdf-schema#label> "official function [list]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText> <http://www.w3.org/2000/01/rdf-schema#label> "official function, text"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "official function, language"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType> <http://www.w3.org/2000/01/rdf-schema#label> "official function, type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate> <http://www.w3.org/2000/01/rdf-schema#label> "official function, starting date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionStartingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate> <http://www.w3.org/2000/01/rdf-schema#label> "official function, ending date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialFunctionEndingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialFunctionList> .
+<http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag> <http://www.w3.org/2000/01/rdf-schema#label> "signing authority [flag]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasSigningAuthorityFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official address, details [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber> <http://www.w3.org/2000/01/rdf-schema#label> "official street number"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType> <http://www.w3.org/2000/01/rdf-schema#label> "official street type"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName> <http://www.w3.org/2000/01/rdf-schema#label> "official street name"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement> <http://www.w3.org/2000/01/rdf-schema#label> "official street complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialStreetComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressDetailsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox> <http://www.w3.org/2000/01/rdf-schema#label> "official postal box"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostalBox> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official address, complement [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressComplementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement> <http://www.w3.org/2000/01/rdf-schema#label> "official address complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official address, city or town [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode> <http://www.w3.org/2000/01/rdf-schema#label> "official postcode"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialPostcode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown> <http://www.w3.org/2000/01/rdf-schema#label> "official city or town"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityOrTown> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialAddressCityOrTownPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement> <http://www.w3.org/2000/01/rdf-schema#label> "official city complement"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialCityComplement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#label> "official address, county state"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountyState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "official address, country"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialAddressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official shareholding [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures> <http://www.w3.org/2000/01/rdf-schema#label> "description of shares or debentures"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDescriptionOfSharesOrDebentures> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.dfki.de/lt/xebr.owl#hasNumberOfShares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasNumberOfShares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasNumberOfShares> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialShareholdingPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasNumberOfShares> <http://www.w3.org/2000/01/rdf-schema#label> "number of shares"@en .
+<http://www.dfki.de/lt/xebr.owl#hasNumberOfShares> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> .
+<http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CompanyOfficialList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "official data validity [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#label> "official identification, starting date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationStartingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OfficialDataValidityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#label> "official identification, ending date"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOfficialIdentificationEndingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2001/XMLSchema#monetary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.dfki.de/lt/xebr.owl#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Report> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/2000/01/rdf-schema#label> "key balance sheet figures [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> <http://www.w3.org/2000/01/rdf-schema#label> "key balance sheet figures [report]"@en .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "equity and liabilities [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "income statement [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "fixed assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "intangible fixed assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#IntangibleFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "intangible fixed assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "tangible fixed assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "property, plant, and equipment [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/2000/01/rdf-schema#label> "land and buildings"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/2000/01/rdf-schema#label> "plant and machinery"@en .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "furniture, fixtures, and equipment"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "other property, plant, and equipment"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#PropertyPlantAndEquipmentPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal> <http://www.w3.org/2000/01/rdf-schema#label> "property, plant, and equipment [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasPropertyPlantAndEquipmentTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/2000/01/rdf-schema#label> "other tangible assets"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#TangibleFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "tangible fixed assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "financial fixed assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/2000/01/rdf-schema#label> "affiliated enterprises"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/2000/01/rdf-schema#label> "other financial assets"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FinancialFixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "financial fixed assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FixedAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "fixed assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "current assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable after more than one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable within one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsReceivablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/2000/01/rdf-schema#label> "amounts receivable [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#StocksPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#StocksPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#StocksPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "stocks [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#StocksPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#label> "stock raw materials and consumables"@en .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#StocksPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/2000/01/rdf-schema#label> "work in progress"@en .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherStock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherStock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherStock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#StocksPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherStock> <http://www.w3.org/2000/01/rdf-schema#label> "other stock"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOtherStock> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#StocksPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/2000/01/rdf-schema#label> "stocks [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "liquid assets [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#LiquidAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "liquid assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "deferred charges and accrued income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#DeferredChargesAndAccruedIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "deferred charges and accrued income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#CurrentAssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "current assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#label> "assets [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#EquityPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#EquityPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "equity [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/2000/01/rdf-schema#label> "capital"@en .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/2000/01/rdf-schema#label> "reserves"@en .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) brought forward"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) for the period"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/2000/01/rdf-schema#label> "equity [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "provisions and deferred taxes [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/2000/01/rdf-schema#label> "provisions for liabilities and charges"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/2000/01/rdf-schema#label> "deferred taxes"@en .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#ProvisionsAndDeferredTaxesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "provisions and deferred taxes [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable after more than one year [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "financial debts payable after more than one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "trade debts payable after more than one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "taxes, remuneration, and social security payable after more than one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableAfterMoreThanOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable after more than one year [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable within one year [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "financial debts payable within one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "trade debts payable within one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#label> "taxes, remuneration and social security payable within one year"@en .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayableWithinOneYearPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable within one year [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/2000/01/rdf-schema#label> "amounts payable [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> .
+<http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AmountsPayablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "accrued charges and deferred income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#AccruedChargesAndDeferredIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "accrued charges and deferred income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "equity and liabilities [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "net operating income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "operating income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "operating income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "operating charges [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#label> "raw materials and consumables"@en .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/2000/01/rdf-schema#label> "wages and salaries"@en .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments> <http://www.w3.org/2000/01/rdf-schema#label> "pensions and similar commitments"@en .
+<http://www.dfki.de/lt/xebr.owl#hasPensionsAndSimilarCommitments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/2000/01/rdf-schema#label> "other operating charges"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#OperatingChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "operating charges [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#NetOperatingIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#label> "operating profit (loss) [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "net financial income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "financial income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FinancialIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "financial income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "financial charges [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#FinancialChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "financial charges [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#NetFinancialIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#label> "financial profit (loss) [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "net extraordinary income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary income [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#ExtraordinaryIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation> <http://www.dfki.de/lt/xebr.owl#partOf> <http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.dfki.de/lt/xebr.owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary charges [presentation]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#ExtraordinaryChargesPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary charges [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#NetExtraordinaryIncomePresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#label> "extraordinary profit (loss) [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryProfitLossTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#label> "income [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasChargesTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasChargesTotal> <http://www.w3.org/2000/01/rdf-schema#label> "charges [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasChargesTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/2000/01/rdf-schema#label> "income taxes"@en .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/2000/01/rdf-schema#label> "profit (loss) for the period [total]"@en .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#monetary> .

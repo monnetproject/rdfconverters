@@ -232,7 +232,7 @@ class Searcher:
             pprint(jsonobj)
 
             total = jsonobj['iTotalDisplayRecords']
-            
+
             num_results = len(jsonobj['aaData'])
             if maxresults is not None and offset + num_results >= maxresults:
                 searchData += jsonobj['aaData'][:maxresults-offset]
@@ -465,7 +465,7 @@ def main():
             try:
                 scrape(isin_mic[0], isin_mic[1], outputfile, args.pickle, timestamp=timestamp)
             except Exception as e:
-                logger.exception("Failed to scrape " + isin_mic) 
+                logger.exception("Failed to scrape " + isin_mic)
     elif args.command == 'rdfconvert':
         if args.batch:
             files = list(util.traverse_mirror(args.inputpath, args.outputpath, '.pickle', '.n3'))

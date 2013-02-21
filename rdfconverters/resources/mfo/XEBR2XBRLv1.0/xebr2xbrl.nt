@@ -1,0 +1,783 @@
+<http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/skos.owl#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.dfki.de/lt/skos.owl#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Aktiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Aktiva - Titel"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Assets - Title"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Actif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Actif - Titre"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Activa - Titel"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Passiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Passiva - Titel"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Equity and Liabilities"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Equity and Liabilities - Title"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Passif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Passif - Titre"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#prefLabel> "Passiva"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle> <http://www.dfki.de/lt/skos.owl#altLabel> "Passiva - Titel"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#prefLabel> "Schema der Ergebnisrechnung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#altLabel> "Schema der Ergebnisrechnung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#prefLabel> "Income statement"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#altLabel> "Income statement"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#prefLabel> "Compte de résultats"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#altLabel> "Compte de résultats"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#prefLabel> "Resultatenrekening"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement> <http://www.dfki.de/lt/skos.owl#altLabel> "Resultatenrekening"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bilanz nach Ergebnisverwendung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Bilanz"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balance sheet after appropriation"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Balance sheet"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bilan après répartition"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Bilan"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balans na winstverdeling"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Balans"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Rechnungsabgrenzungsposten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Rechnungsabgrenzungsposten - Passiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Accruals and deferred income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Accrued charges and deferred income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Comptes de régularisation"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Comptes de régularisation - Passif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Overlopende rekeningen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Overlopende rekeningen - Passiva"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbundene Unternehmen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#altLabel> "Beteiligungen und Forderungen an verbundenen Unternehmen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#prefLabel> "Affiliated enterprises"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#altLabel> "Participating interests and amounts receivable in affiliated enterprises"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#prefLabel> "Entreprises liées"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#altLabel> "Participations et créances dans les entreprises liées"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbonden ondernemingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises> <http://www.dfki.de/lt/skos.owl#altLabel> "Deelnemingen in en vorderingen op verbonden ondernemingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Amounts payable after more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Amounts payable after more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Schulden op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Schulden op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#prefLabel> "Amounts payable"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#altLabel> "Amounts payable"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#prefLabel> "Schulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable> <http://www.dfki.de/lt/skos.owl#altLabel> "Schulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Amounts payable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Amounts payable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Schulden op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Schulden op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Amounts receivable after more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Amounts receivable after more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Créances à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Créances à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Vorderingen op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Vorderingen op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Amounts receivable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Amounts receivable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Créances à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Créances à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Vorderingen op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Vorderingen op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Summe der Aktiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Aktiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Total assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Total de l'actif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Actif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Totaal van de activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasCapital> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasCapital> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#prefLabel> "Kapital"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#altLabel> "Kapital"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#prefLabel> "Capital"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#altLabel> "Capital"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#prefLabel> "Capital"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#altLabel> "Capital"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#prefLabel> "Kapitaal"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital> <http://www.dfki.de/lt/skos.owl#altLabel> "Kapitaal"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Umlaufvermögen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Umlaufvermögen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Current assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Current assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Actifs circulants"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Actifs circulants"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Vlottende activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Vlottende activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Rechnungsabgrenzungsposten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Rechnungsabgrenzungsposten - Aktiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Deferred charges and accrued income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Deferred charges and accrued income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Comptes de régularisation"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Comptes de régularisation - Actif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Overlopende rekeningen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Overlopende rekeningen - Activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Aufgeschobene Steuern"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Aufgeschobene Steuern"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Deferred taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Deferred taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Impôts différés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Impôts différés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Uitgestelde belastingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Uitgestelde belastingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#prefLabel> "Summe der Passiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#altLabel> "Passiva"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#prefLabel> "Total liabilities"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#altLabel> "Equity and Liabilities"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#prefLabel> "Total du passif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#altLabel> "Passif"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#prefLabel> "Totaal van de passiva"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities> <http://www.dfki.de/lt/skos.owl#altLabel> "Passiva"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasEquityTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasEquityTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Eigenkapital"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#altLabel> "Eigenkapital"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Equity"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#altLabel> "Equity"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Capitaux propres"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#altLabel> "Capitaux propres"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Eigen vermogen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity> <http://www.dfki.de/lt/skos.owl#altLabel> "Eigen vermogen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Außerordentliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Außerordentliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Extraordinary charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Extraordinary charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Charges exceptionnelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Charges exceptionnelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Uitzonderlijke kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Uitzonderlijke kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Außerordentliche Erträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Außerordentliche Erträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Extraordinary income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Extraordinary income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Produits exceptionnels"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Produits exceptionnels"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Uitzonderlijke opbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Uitzonderlijke opbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Finanzaufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Finanzaufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financial charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Financial charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Charges financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Charges financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financiêle kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Financiêle kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Finanzverbindlichkeiten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Finanzverbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financial debts"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Financial debts with a remaining term of more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes financières à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financiêle schulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Financiêle schulden op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Finanzverbindlichkeiten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Finanzverbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financial debts"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Financial debts payable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes financières à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financiêle schulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Financiêle schulden op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Finanzanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Finanzanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financial fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Financial fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Immobilisations financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Immobilisations financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Financiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Finanzerträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Finanzerträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financial income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Financial income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Produits financiers"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Produits financiers"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Financiêle opbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Financiêle opbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Anlagevermögen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Anlagevermögen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Actifs immobilisés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Actifs immobilisés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#prefLabel> "Geschäftsausstattung und Fuhrpark"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#altLabel> "Geschäftsausstattung und Fuhrpark"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#prefLabel> "Furniture and vehicles"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#altLabel> "Furniture and vehicles"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#prefLabel> "Mobilier et matériel roulant"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#altLabel> "Mobilier et matériel roulant"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#prefLabel> "Meubilair en rollend materieel"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles> <http://www.dfki.de/lt/skos.owl#altLabel> "Meubilair en rollend materieel"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Steuern auf das Ergebnis"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Steuern auf das Ergebnis"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Income taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Income taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Impôts sur le résultat"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Impôts sur le résultat"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Belastingen op het resultaat"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Belastingen op het resultaat"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Immaterielle Anlagewerte"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Immaterielle Anlagewerte"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Intangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Intangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Immobilisations incorporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Immobilisations incorporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Immateriêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Immateriêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#prefLabel> "Grundstücke und Bauten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#altLabel> "Grundstücke und Bauten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#prefLabel> "Land and buildings"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#altLabel> "Land and buildings"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#prefLabel> "Terrains et constructions"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#altLabel> "Terrains et constructions"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#prefLabel> "Terreinen en gebouwen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings> <http://www.dfki.de/lt/skos.owl#altLabel> "Terreinen en gebouwen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Betriebliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Betriebliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Operating charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Operating charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Coût des ventes et des prestations"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Coût des ventes et des prestations"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bedrijfskosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Bedrijfskosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Betriebliche Erträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Betriebliche Erträge"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Operating income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Operating income"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Ventes et prestations"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Ventes et prestations"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bedrijfsopbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome> <http://www.dfki.de/lt/skos.owl#altLabel> "Bedrijfsopbrengsten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#prefLabel> "Betriebsgewinn (Betriebsverlust)"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#altLabel> "Betriebsgewinn (Betriebsverlust)"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#prefLabel> "Operating profit (loss)"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#altLabel> "Operating profit (loss)"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bénéfice (Perte) d'exploitation"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#altLabel> "Bénéfice (Perte) d'exploitation"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bedrijfswinst (Bedrijfsverlies)"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss> <http://www.dfki.de/lt/skos.owl#altLabel> "Bedrijfswinst (Bedrijfsverlies)"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Sonstige Finanzanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Sonstige Finanzanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Other financial assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Other financial assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Autres immobilisations financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Autres immobilisations financières"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Andere financiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Andere financiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Sonstige betriebliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Übrige betriebliche Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Other operating charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Miscellaneous operating charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Autres charges d'exploitation"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Charges d'exploitation diverses"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Andere bedrijfskosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Diverse bedrijfskosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#prefLabel> "Leasing und ähnliche Rechten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#altLabel> "Leasing und ähnliche Rechten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#prefLabel> "Leasing and similar rights"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#altLabel> "Leasing and similar rights"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#prefLabel> "Location-financement et droits similaires"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#altLabel> "Location-financement et droits similaires"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#prefLabel> "Leasing en soortgelijke rechten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights> <http://www.dfki.de/lt/skos.owl#altLabel> "Leasing en soortgelijke rechten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Sonstige Sachanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Sonstige Sachanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Other tangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Other tangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Autres immobilisations corporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Autres immobilisations corporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Overige materiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Overige materiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#prefLabel> "Anlagen, Maschinen und Betriebsausstattung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#altLabel> "Anlagen, Maschinen und Betriebsausstattung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#prefLabel> "Plant, machinery and equipment"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#altLabel> "Plant, machinery and equipment"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#prefLabel> "Installations, machines et outillage"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#altLabel> "Installations, machines et outillage"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#prefLabel> "Installaties, machines en uitrusting"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment> <http://www.dfki.de/lt/skos.owl#altLabel> "Installaties, machines en uitrusting"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#prefLabel> "Gewinn (Verlust) des Geschäftsjahres"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#altLabel> "Gewinn (Verlust) des Geschäftsjahres"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#prefLabel> "Gain (loss) of the period"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#altLabel> "Gain (loss) of the period"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bénéfice (Perte) de l'exercice"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#altLabel> "Bénéfice (Perte) de l'exercice"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#prefLabel> "Winst (Verlies) van het boekjaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod> <http://www.dfki.de/lt/skos.owl#altLabel> "Winst (Verlies) van het boekjaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Rückstellungen und Aufgeschobene Steuern"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Rückstellungen und Aufgeschobene Steuern"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Provisions and deferred taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Provisions and deferred taxes"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Provisions et impôts différés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Provisions et impôts différés"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#prefLabel> "Voorzieningen en uitgestelde belastingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes> <http://www.dfki.de/lt/skos.owl#altLabel> "Voorzieningen en uitgestelde belastingen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Rückstellungen für Risiken und Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Rückstellungen für Risiken und Aufwendungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Provisions for liabilities and charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Provisions for liabilities and charges"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Provisions pour risques et charges"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Provisions pour risques et charges"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#prefLabel> "Voorzieningen voor risico's en kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges> <http://www.dfki.de/lt/skos.owl#altLabel> "Voorzieningen voor risico's en kosten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#prefLabel> "Waren, Roh-, Hilfs- und Betriebsstoffe"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#altLabel> "Waren, Roh-, Hilfs- und Betriebsstoffe"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#prefLabel> "Raw materials, consumables"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#altLabel> "Raw materials, consumables"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#prefLabel> "Approvisionnements et marchandises"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#altLabel> "Approvisionnements et marchandises"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#prefLabel> "Handelsgoederen, grond- en hulpstoffen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables> <http://www.dfki.de/lt/skos.owl#altLabel> "Handelsgoederen, grond- en hulpstoffen"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasReserves> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasReserves> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#prefLabel> "Rücklagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#altLabel> "Rücklagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#prefLabel> "Reserves"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#altLabel> "Reserves"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#prefLabel> "Réserves"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#altLabel> "Réserves"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#prefLabel> "Reserves"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves> <http://www.dfki.de/lt/skos.owl#altLabel> "Reserves"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasStocksTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasStocksTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Vorräte und in Ausführung befindliche Bestellungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Vorräte und in Ausführung befindliche Bestellungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Stocks and contracts in progress"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Stocks and contracts in progress"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Stocks et commandes en cours d'exécution"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Stocks et commandes en cours d'exécution"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Voorraden en bestellingen in uitvoering"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Voorraden en bestellingen in uitvoering"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Sachanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Sachanlagen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Tangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Tangible fixed assets"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Immobilisations corporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Immobilisations corporelles"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#prefLabel> "Materiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets> <http://www.dfki.de/lt/skos.owl#altLabel> "Materiêle vaste activa"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Taxes, remuneration and social security"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#altLabel> "Taxes, remuneration and social security"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes fiscales, salariales et sociales"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes fiscales, salariales et sociales"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#prefLabel> "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity> <http://www.dfki.de/lt/skos.owl#altLabel> "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten aus Lieferungen und Leistungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Trade debts"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Trade debts on more than one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes commerciales"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes commerciales à plus d'un an"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Handelsschulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Handelsschulden op meer dan één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Verbindlichkeiten aus Lieferungen und Leistungen"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Trade debts"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Trade debts payable within one year"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Dettes commerciales"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Dettes commerciales à un an au plus"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#prefLabel> "Handelsschulden"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear> <http://www.dfki.de/lt/skos.owl#altLabel> "Handelsschulden op ten hoogste één jaar"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Unfertige Erzeugnisse"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Unfertige Erzeugnisse"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Work in progress"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Work in progress"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "En-cours de fabrication"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "En-cours de fabrication"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#prefLabel> "Goederen in bewerking"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress> <http://www.dfki.de/lt/skos.owl#altLabel> "Goederen in bewerking"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bilanz nach Ergebnisverwendung"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Bilanz"@de .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balance sheet after appropriation"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Balance sheet"@en .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Bilan après répartition"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Bilan"@fr .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balans na winstverdeling"@nl .
+<http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet> <http://www.dfki.de/lt/skos.owl#altLabel> "Balans"@nl .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#AssetsPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#AssetsPresentation> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion> <http://www.dfki.de/lt/skos.owl#prefLabel> "ACTIVO"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion> <http://www.dfki.de/lt/skos.owl#prefLabel> "Perdidas y Ganancias Presentaciòn"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion> <http://www.dfki.de/lt/skos.owl#altLabel> "CUENTA DE PÈRDIDAS Y GANANCIAS CORRESPONDIENTE AL EJERCICIO"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balance Situaciòn Presentaciòn"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#altLabel> "BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo> <http://www.dfki.de/lt/skos.owl#prefLabel> "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo "@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar> <http://www.dfki.de/lt/skos.owl#prefLabel> "deudores comerciales y otras cuentas a cobrar"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente deudores comerciales y otras cuentas a cobrar"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo> <http://www.dfki.de/lt/skos.owl#prefLabel> "TOTAL ACTIVO (A + B)"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo> <http://www.dfki.de/lt/skos.owl#altLabel> "Total activo"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasCapital> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasCapital> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital> <http://www.dfki.de/lt/skos.owl#prefLabel> "I. Capital"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto fondos propios capital"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente> <http://www.dfki.de/lt/skos.owl#prefLabel> "B) ACTIVO CORRIENTE"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido> <http://www.dfki.de/lt/skos.owl#prefLabel> "IV. Pasivos por impuesto diferido"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido> <http://www.dfki.de/lt/skos.owl#altLabel> "Pasivo no corriente pasivos por impuesto diferido"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal> <http://www.dfki.de/lt/skos.owl#prefLabel> "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto y pasivo total"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasEquityTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasEquityTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasEquityTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios> <http://www.dfki.de/lt/skos.owl#prefLabel> "A-1) Fondos propios"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto fondos propios"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros> <http://www.dfki.de/lt/skos.owl#prefLabel> "gastos financieros"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias operaciones continuadas gastos financieros"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros> <http://www.dfki.de/lt/skos.owl#prefLabel> "ingresos financieros"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero> <http://www.dfki.de/lt/skos.owl#prefLabel> "resultado financiero"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias resultado financiero"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente> <http://www.dfki.de/lt/skos.owl#prefLabel> "A) ACTIVO NO CORRIENTE"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios> <http://www.dfki.de/lt/skos.owl#prefLabel> "impuestos sobre beneficios"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible> <http://www.dfki.de/lt/skos.owl#prefLabel> "I. Inmovilizado intangible"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente inmovilizado intangible"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones> <http://www.dfki.de/lt/skos.owl#prefLabel> "1. Terrenos y construcciones"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente inmovilizado material terrenos y construcciones"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes> <http://www.dfki.de/lt/skos.owl#prefLabel> "efectivo y otros activos líquidos equivalentes"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente efectivo y otros activos líquidos equivalentes"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo> <http://www.dfki.de/lt/skos.owl#prefLabel> "V. Inversiones financieras a largo plazo"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente inversiones financieras a largo plazo"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores> <http://www.dfki.de/lt/skos.owl#prefLabel> "V. Resultados de ejercicios anteriores"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto fondos propios resultados de ejercicios anteriores"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#prefLabel> "VII. Resultado del ejercicio"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto fondos propios resultado del ejercicio"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#prefLabel> "resultado del ejercicio"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias resultado del ejercicio"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasReserves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasReserves> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasReserves> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas> <http://www.dfki.de/lt/skos.owl#prefLabel> "III. Reservas"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas> <http://www.dfki.de/lt/skos.owl#altLabel> "Patrimonio neto fondos propios reservas"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos> <http://www.dfki.de/lt/skos.owl#prefLabel> "2. Materias primas y otros aprovisionamientos"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente existencias de materias primas y otros aprovisionamientos"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasStocksTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasStocksTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasStocksTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias> <http://www.dfki.de/lt/skos.owl#prefLabel> "II. Existencias"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente existencias"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial> <http://www.dfki.de/lt/skos.owl#prefLabel> "II. Inmovilizado material"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo no corriente inmovilizado material"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados> <http://www.dfki.de/lt/skos.owl#prefLabel> "a) Sueldos, salarios y asimilados"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados> <http://www.dfki.de/lt/skos.owl#altLabel> "Cuenta de pérdidas y ganancias operaciones continuadas gastos de personal sueldos, salarios y asimilados"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasWorkInProgress> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso> <http://www.dfki.de/lt/skos.owl#prefLabel> "3. Productos en curso"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso> <http://www.dfki.de/lt/skos.owl#altLabel> "Activo corriente existencias de productos en curso"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#exactMatch> <http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport> .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#prefLabel> "Balance Situaciòn Presentaciòn"@es .
+<http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion> <http://www.dfki.de/lt/skos.owl#altLabel> "BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION"@es .

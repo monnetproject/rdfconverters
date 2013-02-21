@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://www.dfki.de/lt/dc.owl#"
+    xmlns:tei="http://www.dfki.de/lt/tei.owl#"
+  xml:base="http://www.dfki.de/lt/dc.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >(C) Hans-Ulrich Krieger, DFKI-LT</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Resource"/>
+  <owl:AnnotationProperty rdf:ID="date">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value should usually be an atom of type xsd:date</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="source">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value should usually be an atom of type xsd:anyURI</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:ID="publisher">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value should usually be an atom of type xsd:string</rdfs:comment>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://www.dfki.de/lt/tei.owl#segment">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value should usually be an atom of type xsd:string</rdfs:comment>
+  </owl:AnnotationProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

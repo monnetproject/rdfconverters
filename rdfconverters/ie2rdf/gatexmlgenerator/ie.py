@@ -10,14 +10,11 @@ Usage: python ie.py FileIn
 from xml.etree import cElementTree
 from collections import defaultdict
 import re
+from pprint import pprint as pp
 import sys
 import operator
-import codecs
+import icbnltk
 from xml.dom.minidom import Document
-from pkg_resources import resource_string
-
-gics_file = resource_string(__name__, 'gics-nr-descr.txt')
-gics = gics_file.decode('utf-8').split('\n')
 
 def convert_string(s):
   document = cElementTree.fromstring(s)
@@ -48,25 +45,25 @@ def normaliseMonetaryValue(m):
       numbers_after_decimals = len(r.group(1))
   else:
       numbers_after_decimals = 0
-      
+
   multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
   for phrase, multiplier in multipliers:
       m = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), m, flags=re.IGNORECASE)
   return m+currency
-  
+
 def normaliseNumber(n):
   if re.search("[0-9,\'\.]+m", n):
       n = re.sub('m ','million', n)
   n = re.search("[0-9,\'\.]+( billion| million|bn|m)?", n).group()
   n = re.sub(r'[\s,]', '', n)
-  
+
   r = re.search('\d+\.(\d+)', n)
   if r is not None:
       n = n.replace('.', '')
       numbers_after_decimals = len(r.group(1))
   else:
       numbers_after_decimals = 0
-  
+
   multipliers = (('bn', 9), ('billion', 9), ('mn', 6), ('million', 6), ('m', 6))
   for phrase, multiplier in multipliers:
       n = re.sub(phrase, '0'*(multiplier-numbers_after_decimals), n, flags=re.IGNORECASE)
@@ -74,16 +71,12 @@ def normaliseNumber(n):
 
 def convert(document):
 
-  # most frequent stopwords in DAX
-  stopwords = ["#", "and", "of", "&", "in", "the", "or", "not", "that", "to", "a", "for", "--", "also", "with", "are", "as", "but", "it", "from", "on", "an", "at", "one"]
-
   activity = document.findall('.//Activity')
   company = document.findall('.//Company')
   employee = document.findall('.//Employee')
   monetaryValue = document.findall('.//MonetaryValue')
   location = document.findall('.//Location')
   customer = document.findall('.//Customer')
-  customerNr = document.findall('.//CustomerNr')
 
   activityList = []
   [activityList.append(act.text) for act in activity]
@@ -117,24 +110,9 @@ def convert(document):
   else:
       companyName = ""
 
-  # Activity - Gics ------------------------------------------------------------------------
-  activitySet = set()
-  [activitySet.add(token.lower()) for act in activityList for token in act.split()]
+  # Activity - ------------------------------------------------------------------------
+  activities = {a: icbnltk.icb_matches(a) for a in activityList}
 
-  countDict = defaultdict(int)
-  for line in gics:
-      count = 0
-      for token in line.lower().split():
-          if token not in stopwords and token in activitySet:
-              count += 1
-      countDict[line] = count
-  if max(countDict.items(), key=operator.itemgetter(1))[1] != 0:
-      description = max(countDict.items(), key=operator.itemgetter(1))[0]
-      gicsActivity = description.split("#")[1]
-      gicsNumber = description.split("#")[0]
-  else:
-      gicsActivity = ""
-      gicsNumber = "" 
 
   # Employee - number ----------------------------------------------------------------------
 
@@ -152,7 +130,7 @@ def convert(document):
           customerNumber = normaliseNumber(cust)
       else:
           customerNumber = ''
-      
+
       kindC = re.findall('(\w+|\w+ and \w+) (?:customers|clients|consumers|patients)', cust)
       if re.search('\d', " ".join(kindC)) == None and "million" not in kindC and "billion" not in kindC:
           customerKind = ", ".join(kindC)
@@ -180,7 +158,7 @@ def convert(document):
       else:
           v = ""
       value = normaliseMonetaryValue(v)
-      
+
       if re.search('\d{4}', mon):
           date = re.search('\d{4}', mon).group()
       else:
@@ -200,7 +178,7 @@ def convert(document):
           kind = "unknownMonetaryValue"
 
       resultDict[value] = (kind, date, mon)
-          
+
   # print output on standard output	
   print("ANNOTATIONS-----------------------------------------------")
   print("{0: <20}{1}".format("Company:", companyList))
@@ -212,8 +190,7 @@ def convert(document):
 
   print("TEMPLATE--------------------------------------------------")
   print("{0: <30}{1}".format("Company:", companyName))
-  print("{0: <30}{1}".format("Activity - GICS_label:", gicsActivity.strip()))
-  print("{0: <30}{1}".format("Activity - GICS_id:", gicsNumber))
+  print("{0: <30}{1}".format("Activity:", activities))
   print("{0: <30}{1}".format("Location:", locResult))
   if len(resultDict) > 0:
       for key in resultDict:
@@ -254,17 +231,26 @@ def convert(document):
           annotationText = doc.createTextNode(element)
           annotation.appendChild(annotationText)
 
+  def make_element(tag_name, **attributes):
+      el = doc.createElement(tag_name)
+      for att, val in attributes.items():
+          el.setAttribute(att, val)
+      return el
+
+  def make_annotation(value):
+      annotation = doc.createElement("annotation")
+      annotationText = doc.createTextNode(source_text)
+      annotation.appendChild(annotationText)
+      return annotation
+
   #Activity
-  if gicsActivity != "":
-      activity = doc.createElement("activity")
-      activity.setAttribute("label", gicsActivity)
-      activity.setAttribute("id", gicsNumber)
-      cp.appendChild(activity)
-      for element in activityList:
-          annotation = doc.createElement("annotation")
-          activity.appendChild(annotation)
-          annotationText = doc.createTextNode(element)
-          annotation.appendChild(annotationText)
+  if len(activities) > 0:
+      for source_text, matches in activities.items():
+          for icb_number, icb_activity in matches:
+              el = make_element("activity", label=icb_activity, id=icb_number)
+              annotation = make_annotation(source_text)
+              el.appendChild(annotation)
+              cp.appendChild(el)
 
   # Location
   if locResult != "":
@@ -312,8 +298,8 @@ def convert(document):
               customers.appendChild(annotation)
               annotationText = doc.createTextNode(c)
               annotation.appendChild(annotationText)
-  
+
   return doc.toprettyxml(indent="  ")
 
 if __name__=='__main__':
-  print(convert_file(sys.argv[1])) 
+  print(convert_file(sys.argv[1]))

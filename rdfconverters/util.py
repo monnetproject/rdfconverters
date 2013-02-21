@@ -10,6 +10,7 @@ NS = {
    'cfi': Namespace("http://www.dfki.de/lt/cfi.owl#"),
    'if': Namespace("http://www.dfki.de/lt/if.owl#"),
    'rdf': Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
+   'rdfs': Namespace("http://www.w3.org/2000/01/rdf-schema#"),
    'xsd': Namespace("http://www.w3.org/2001/XMLSchema#"),
    'cp': Namespace("http://www.dfki.de/lt/companyprofile.owl#"),
    'icb': Namespace("http://www.dfki.de/lt/icb.owl#"),

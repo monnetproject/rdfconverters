@@ -1,0 +1,1682 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:icb="http://www.dfki.de/lt/icb.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.dfki.de/lt/icb.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >(C) Hans-Ulrich Krieger, DFKI-LT</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="ICB3747">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Spielzeug und Video- bzw. Computerspielen, u.a. auch Kartenspiele, Brettspiele, Plüschtiere und Puppen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de juguetes y juegos de video/computadora,lo que incluye juguetes y juegos como barajas, juegosde mesa, animales de peluche y muñecas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of toys and video/computer games, including such toys and games as playing cards, board games, stuffed animals and dolls.</rdfs:definition>
+    <rdfs:label xml:lang="de">Spielzeug</rdfs:label>
+    <rdfs:label xml:lang="es">Juguetes</rdfs:label>
+    <rdfs:label xml:lang="en">Toys</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3740"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7570">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB7500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Erdgas, Wasser und kombinierte Energieerzeugung</rdfs:label>
+    <rdfs:label xml:lang="es">Gas, agua y servicios múltiples</rdfs:label>
+    <rdfs:label xml:lang="en">Gas, Water &amp; Multi-utilities</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2777">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2770"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Transportdienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de transporte</rdfs:label>
+    <rdfs:label xml:lang="en">Transportation Services</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Dienstleistungen für den kommerziellen Transport anbieten. Dazu zählen Unternehmen, die Flughäfen, Zugbetriebshöfe, Straßen, Brücken, Tunnel sowie Häfen verwalten, und sowohl solche, die Logistikdienstleistungen für den Gütertransport anbieten, als auch Unternehmen, die Flugzeug- und Fahrzeugwartungsdienstleistungen erbringen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas proveedoras de servicios para el sector de transporteindustrial, incluidas las que administran aeropuertos, estacionesde ferrocarriles, caminos, puentes, túneles, puertos y proveedoresde servicios de logística a despachantes de productos. Incluyeempresas que proveen servicios de mantenimiento de avionesy vehículos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing services to the Industrial Transportation sector, including companies that manage airports, train depots, roads, bridges, tunnels, ports, and providers of logistic services to shippers of goods. Includes companies that provide aircraft and vehicle maintenance services.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8671">
+    <rdfs:label xml:lang="de">Industrielle und Büro-REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) industrial y de oficinas</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial &amp; Office REITs</rdfs:label>
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Büro-, Industrie- und flexible Immobilien investieren.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (Real Estate Investment Trust,REIT) o fondos de inversión cotizados en bolsa (Listed PropertyTrusts, LPT) que invierten principalmente en oficinas, propiedadesindustriales y espacios modulares flexibles.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in office, industrial and flex properties.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8670"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3537">
+    <rdfs:label xml:lang="de">Alkoholfreie Getränke</rdfs:label>
+    <rdfs:label xml:lang="es">Bebidas no alcohólicas</rdfs:label>
+    <rdfs:label xml:lang="en">Soft Drinks</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller, Abfüller und Händler von alkoholfreien Getränken, z.B. Limonaden, Fruchtsäfte, Tee, Kaffee und Mineralwasser.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes, embotelladoras y distribuidores de bebidas noalcohólicas, tales como refrescos, jugo de frutas, té, café yagua embotellada.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers, bottlers and distributors of non-alcoholic beverages, such as soda, fruit juices, tea, coffee and bottled water.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3530"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1000">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Grundstoffe</rdfs:label>
+    <rdfs:label xml:lang="es">Materias básicas</rdfs:label>
+    <rdfs:label xml:lang="en">Basic Materials</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1750">
+    <rdfs:label xml:lang="de">Industrielle Metalle und Bergbau</rdfs:label>
+    <rdfs:label xml:lang="es">Metales industriales y minería</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Metals &amp; Mining</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB1700"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4573">
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Erforschung und Entwicklung von biologischen Substanzen für die Neuentwicklung von Arzneimitteln und Diagnoseverfahren tätig sind und die ihren Umsatz hauptsächlich aus dem Verkauf oder der Lizenzvergabe dieser Arzneimittel oder Diagnosemittel erzielen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que se dedican a la investigación y desarrollo desustancias biológicas para propósitos de descubrimiento demedicamentos y desarrollo de métodos de diagnóstico, y queobtienen la mayor parte de sus ingresos de la venta o licenciade estos medicamentos o herramientas de diagnóstico.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in research into and development of biological substances for the purposes of drug discovery and diagnostic development, and which derive the majority of their revenue from either the sale or licensing of these drugs and diagnostic tools.</rdfs:definition>
+    <rdfs:label xml:lang="de">Biotechnologie</rdfs:label>
+    <rdfs:label xml:lang="es">Biotecnología</rdfs:label>
+    <rdfs:label xml:lang="en">Biotechnology</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB4570"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8600">
+    <rdfs:label xml:lang="de">Immobilien</rdfs:label>
+    <rdfs:label xml:lang="es">Bienes raíces</rdfs:label>
+    <rdfs:label xml:lang="en">Real Estate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1353">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Gebrauchschemikalien</rdfs:label>
+    <rdfs:label xml:lang="es">Productos químicos básicos</rdfs:label>
+    <rdfs:label xml:lang="en">Commodity Chemicals</rdfs:label>
+    <rdfs:definition xml:lang="de">Erzeuger und Händler von einfachen chemischen Produkten, die in erster Linie für die Herstellung komplexer Chemikalien oder Produkte genutzt werden. Dazu zählen Kunststoffe und Gummi in ihrer Rohform, Glasfasern und Synthetikfasern.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores y distribuidores de productos químicos simples queson usados principalmente para formular químicos o productosmás complejos, lo que incluye plásticos y goma en bruto, fibra devidrio y fibras sintéticas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers and distributors of simple chemical products that are primarily used to formulate more complex chemicals or products, including plastics and rubber in their raw form, fibreglass and synthetic fibres.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB1350"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4000">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Gesundheitswesen</rdfs:label>
+    <rdfs:label xml:lang="es">Atención de la salud</rdfs:label>
+    <rdfs:label xml:lang="en">Health Care</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8633">
+    <rdfs:label xml:lang="de">Besitz und Erschließung von Immobilien</rdfs:label>
+    <rdfs:label xml:lang="es">Propiedad y desarrolloinmobiliario</rdfs:label>
+    <rdfs:label xml:lang="en">Real Estate Holding &amp; Development</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8630"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Firmen, die direkt oder indirekt in Immobilien investieren durch: Erschließung, Investition oder Besitz. Ausgeschlossen sind Immobilienfonds und ähnliche Gebilde, die als Immobilienfonds zu klassifizieren sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que invierten directa o indirectamente en bienes raícesa través de la construcción, la inversión o la propiedad. Excluyefondos de inversión inmobiliaria y entidades similares, que seclasifican como Fondos de inversión inmobiliaria.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that invest directly or indirectly in real estate through development, investment or ownership. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5753">
+    <rdfs:label xml:lang="de">Hotels</rdfs:label>
+    <rdfs:label xml:lang="es">Hoteles</rdfs:label>
+    <rdfs:label xml:lang="en">Hotels</rdfs:label>
+    <rdfs:definition xml:lang="de">Betreiber und Geschäftsführer von Hotels, Motels, Gasthäusern, Ferienanlagen, Wellness-Centern und Campingplätzen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Operadores y administradores de hoteles, moteles, posadas,centros turísticos, balnearios y áreas para acampar.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Operators and managers of hotels, motels, lodges, resorts, spas and campgrounds.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5750"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2790">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2700"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Supportleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de apoyo</rdfs:label>
+    <rdfs:label xml:lang="en">Support Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8500">
+    <rdfs:label xml:lang="de">Versicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros</rdfs:label>
+    <rdfs:label xml:lang="en">Insurance</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3577">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3570"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Nahrungsmittel</rdfs:label>
+    <rdfs:label xml:lang="es">Productos alimenticios</rdfs:label>
+    <rdfs:label xml:lang="en">Food Products</rdfs:label>
+    <rdfs:definition xml:lang="de">Nahrungsmittelproduzenten für u.a. Fleischwaren, Snacks, Obst, Gemüse, Milchprodukte und gefrorene Meeresprodukte. Dazu zählen Hersteller von Tierfutter und Nahrungsergänzungsmitteln, Vitaminen und ähnlichen Produkten. Ausgeschlossen sind Hersteller von Fruchtsäften, Tee, Kaffee, Mineralwasser und anderen alkoholfreien Getränken (siehe: Softdrinks).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que se dedican al cultivo y la crianza de ganado,operan pesquerías o son dueñas de plantaciones no tabacaleras.Incluye productores de forraje para ganado y semillas y otrosproductos agrícolas (Strichpunkt) pero excluye fabricantes de fertilizantesy pesticidas, que están clasificados bajo Productos químicosespecializados.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Food producers, including meatpacking, snacks, fruits, vegetables, dairy products and frozen seafood. Includes producers of pet food and manufacturers of dietary supplements, vitamins and related items. Excludes producers of fruit juices, tea, coffee, bottled water and other non-alcoholic beverages, which are classified under Soft Drinks.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8570">
+    <rdfs:subClassOf rdf:resource="#ICB8500"/>
+    <rdfs:label xml:lang="de">Lebensversicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros de vida</rdfs:label>
+    <rdfs:label xml:lang="en">Life Insurance</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3355">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3350"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Autoteile</rdfs:label>
+    <rdfs:label xml:lang="es">Repuestos de automóviles</rdfs:label>
+    <rdfs:label xml:lang="en">Auto Parts</rdfs:label>
+    <rdfs:definition xml:lang="de">Vertriebsgesellschaften und Hersteller von Neu- und Ersatzteilen für Motorräder und Automobile wie Motoren, Vergaser und Batterien. Ausgeschlossen sind Reifenhersteller. Diese werden unter Reifen klassifiziert.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de piezas nuevas y repuestos paramotocicletas y automóviles, tales como motores, carburadoresy baterías. Excluye productores de neumáticos, que estánclasificadas bajo Neumáticos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of new and replacement parts for motorcycles and automobiles, such as engines, carburettors and batteries. Excludes producers of tires, which are classified under Tires.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0530">
+    <rdfs:label xml:lang="de">Erdöl- und Erdgasproduzenten</rdfs:label>
+    <rdfs:label xml:lang="es">Productores de petróleo y gas</rdfs:label>
+    <rdfs:label xml:lang="en">Oil &amp; Gas Producers</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB0500"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3740">
+    <rdfs:label xml:lang="de">Freizeitgüter</rdfs:label>
+    <rdfs:label xml:lang="es">Productos de ocio</rdfs:label>
+    <rdfs:label xml:lang="en">Leisure Goods</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3700"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3530">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Getränke</rdfs:label>
+    <rdfs:label xml:lang="es">Bebidas</rdfs:label>
+    <rdfs:label xml:lang="en">Beverages</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >the most-general synthetic subclass, subsuming each of the 10 industry classes</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2770">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2700"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Transport</rdfs:label>
+    <rdfs:label xml:lang="es">Transporte industrial</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Transportation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8672">
+    <rdfs:label xml:lang="de">Einzelhandels-REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) minoristas</rdfs:label>
+    <rdfs:label xml:lang="en">Retail REITs</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8670"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Einzelhandelsimmobilien investieren. Einschließlich Malls, Einkaufszentren, Einkaufspassagen und Fabrik-Outlets.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades minoristas. Incluye grandes superficies comerciales,centros comerciales, minicentros comerciales y tiendas defábrica (outlets).</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in retail properties. Includes malls, shopping centres, strip centres and factory outlets.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2797">
+    <rdfs:label xml:lang="de">Industrielieferanten</rdfs:label>
+    <rdfs:label xml:lang="es">Proveedores industriales</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Suppliers</rdfs:label>
+    <rdfs:definition xml:lang="de">Händler und Großhändler, einschließlich Bauhändler, verschiedener Produkte und Ausrüstungen, die hauptsächlich im Handel und in der Industrie genutzt werden.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Distribuidores y mayoristas de productos diversificadosy equipos utilizados principalmente en los sectorescomercial e industrial. Incluye distribuidores demateriales de construcción.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Distributors and wholesalers of diversified products and equipment primarily used in the commercial and industrial sectors. Includes builders merchants.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB2790"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0537">
+    <rdfs:definition xml:lang="de">Mit der Suche nach und der Bohrung, Produktion und Raffinierung sowie dem Vertrieb und Einzelhandelsverkauf von Öl und Gasprodukten befasste integrierte Öl- und Gasgesellschaften.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas integradas de petróleo y gas dedicadas a la exploracióny extracción, producción, refinación, distribución y ventasminoristas de productos petroleros y de gas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Integrated oil and gas companies engaged in the exploration for and drilling, production, refining, distribution and retail sales of oil and gas products.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB0530"/>
+    <rdfs:label xml:lang="de">Integrierte Erdöl- und Erdgasgesellschaften</rdfs:label>
+    <rdfs:label xml:lang="es">Petróleo y gas integrado</rdfs:label>
+    <rdfs:label xml:lang="en">Integrated Oil &amp; Gas</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9533">
+    <rdfs:definition xml:lang="de">Unternehmen, die IT-Consulting für andere Firmen anbieten. Dies umfasst Unternehmen mit folgendem Angebot: Entwicklung von Computersystemen, Systemintegration, Netzwerk- und Systembetrieb, Datenverwaltung und -archivierung, Reparatur und technischer Support.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen servicios de consultoría a otrasempresas en relación con la tecnología de la información.Incluye a proveedores de diseño de sistemas computacionales,integración de sistemas, operaciones de redes y sistemas,administración y almacenamiento de datos, servicios dereparación y asistencia técnica.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that provide consulting services to other businesses relating to information technology. Includes providers of computer-system design, systems integration, network and systems operations, data management and storage, repair services and technical support.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB9530"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Computer-Dienstleister</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios informáticos</rdfs:label>
+    <rdfs:label xml:lang="en">Computer Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8538">
+    <rdfs:label xml:lang="de">Rückversicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Reaseguro</rdfs:label>
+    <rdfs:label xml:lang="en">Reinsurance</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8530"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Unternehmen, die hauptsächlich im Bereich Rückversicherung tätig sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas principalmente al reaseguro.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged principally in reinsurance.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3760">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB3700"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Persönliche Güter</rdfs:label>
+    <rdfs:label xml:lang="es">Artículos personales</rdfs:label>
+    <rdfs:label xml:lang="en">Personal Goods</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8900">
+    <rdfs:label xml:lang="en">Equity/Non-Equity Investment Instruments</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8775">
+    <rdfs:label xml:lang="de">Spezielle Finanzdienste</rdfs:label>
+    <rdfs:label xml:lang="es">Finanzas especializadas</rdfs:label>
+    <rdfs:label xml:lang="en">Specialty Finance</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8770"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Alle Unternehmen, die in anderen, noch nicht beschriebenen Finanzbereichen tätig sind. Dazu zählen Unternehmen, die nicht unter Kapitalinvestitionen oder Investionen ohne Kapitalbeteiligung aufgeführt sind und die hauptsächlich Anteile an verschiedenen Unternehmen halten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a actividades financieras no especificadasen otra parte. Incluye las empresas que no están clasificadas bajoInstrumentos de inversión de renta variable e Instrumentos deinversión de renta fija, dedicadas principalmente a tener participacionesen una gama diversa de empresas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in financial activities not specified elsewhere. Includes companies not classified under Equity Investment Instruments or Nonequity Investment Instruments engaged primarily in owning stakes in a diversified range of companies.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3780">
+    <rdfs:label xml:lang="de">Tabakwaren</rdfs:label>
+    <rdfs:label xml:lang="es">Tabaco</rdfs:label>
+    <rdfs:label xml:lang="en">Tobacco</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB3700"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3728">
+    <rdfs:definition xml:lang="de">Bauunternehmen für Wohnhäuser, z.B. Fertighäuser und “Mobile Homes”.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Constructores de viviendas, lo que incluye fabricantes decasas móviles y prefabricadas diseñadas para ser usadas enun lugar fijo.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Constructors of residential homes, including manufacturers of mobile and prefabricated homes intended for use in one place.</rdfs:definition>
+    <rdfs:label xml:lang="de">Hausbau</rdfs:label>
+    <rdfs:label xml:lang="es">Construcción de viviendas</rdfs:label>
+    <rdfs:label xml:lang="en">Home Construction</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3720"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5375">
+    <rdfs:definition xml:lang="de">Einzelhändler und Großhändler, die sich auf den Verkauf von Produkten, wie z. B. Gartengeräte und -materialien, Teppiche, Tapeten, Farbe, Möbel, Gardinen und Vorhänge sowie Baustoffe, spezialisiert haben.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Minoristas y mayoristas concentrados en la venta de productospara mejoras en el hogar, lo que incluye equipos de jardinería,alfombras, papel tapiz, pintura, muebles para el hogar, persianasy cortinas, y materiales de construcción.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Retailers and wholesalers concentrating on the sale of home improvement products, including garden equipment, carpets, wallpaper, paint, home furniture, blinds and curtains, and building materials.</rdfs:definition>
+    <rdfs:label xml:lang="de">Heimwerkermärkte</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas de materiales paramejoras en el hogar</rdfs:label>
+    <rdfs:label xml:lang="en">Home Improvement Retailers</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5370"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9572">
+    <rdfs:label xml:lang="de">Hardware</rdfs:label>
+    <rdfs:label xml:lang="es">Hardware</rdfs:label>
+    <rdfs:label xml:lang="en">Computer Hardware</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Computern, Servern, Mainframes, Workstations sowie anderer Computer-Hardware und Teilsysteme, wie z.B. Massenspeichersysteme, Tastaturen, Drucker und andere Peripheriegeräte.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de computadores, servidores,mainframes, estaciones de trabajo y otro tipo de hardware ysubsistemas, tales como unidades de almacenamiento masivo,ratones, teclados e impresoras.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of computers, servers, mainframes, workstations and other computer hardware and subsystems, such as mass-storage drives, mice, keyboards and printers.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB9570"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1770">
+    <rdfs:label xml:lang="de">Bergbau</rdfs:label>
+    <rdfs:label xml:lang="es">Minería</rdfs:label>
+    <rdfs:label xml:lang="en">Mining</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB1700"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1777">
+    <rdfs:definition xml:lang="de">Prospektoren, Abbauer oder Veredler von goldhaltigen Erzen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Exploradores y extractores o refinadores de minerales auríferos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Prospectors for and extractors or refiners of gold-bearing ores.</rdfs:definition>
+    <rdfs:label xml:lang="de">Gold</rdfs:label>
+    <rdfs:label xml:lang="es">Minería de oro</rdfs:label>
+    <rdfs:label xml:lang="en">Gold Mining</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1770"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3720">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB3700"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Haushaltsgeräte und Wohnbau</rdfs:label>
+    <rdfs:label xml:lang="es">Artículos para el hogar yconstrucción de viviendas</rdfs:label>
+    <rdfs:label xml:lang="en">Household Goods &amp; Home Construction</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB4570">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB4500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Arzneimittel und Biotechnologie</rdfs:label>
+    <rdfs:label xml:lang="es">Fármacos y biotecnología</rdfs:label>
+    <rdfs:label xml:lang="en">Pharmaceuticals &amp; Biotechnology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3767">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Kosmetika, Toilettenartikeln und persönlichen Pflege- und Hygieneprodukten, z.B. Deodorants, Zahnpasta, Parfum, Windeln, Seife, Shampoo, Rasierklingen und Intimpflegeprodukte. Dazu zählen Hersteller von Empfängnisverhütungsmitteln. Dies gilt nicht für orale Kontrazeptiva (siehe: Arzneimittel).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de cosméticos, artículos detocador y productos para el cuidado personal y la higiene, loque incluye desodorantes, jabones, pastas dentales, perfumes,pañales, champúes, maquinillas de afeitar y productos dehigiene femenina. Incluye fabricantes de anticonceptivos,excepto anticonceptivos orales, que están clasificados bajoProductos farmacéuticos</rdfs:definition>
+    <rdfs:definition xml:lang="en">Makers and distributors of cosmetics, toiletries and personal-care and hygiene products, including deodorants, soaps, toothpaste, perfumes, diapers, shampoos, razors and feminine-hygiene products. Includes makers of contraceptives other than oral contraceptives, which are classified under Pharmaceuticals.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB3760"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Personal Products</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5555">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5550"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Medienagenturen</rdfs:label>
+    <rdfs:label xml:lang="es">Agencias de medios</rdfs:label>
+    <rdfs:label xml:lang="en">Media Agencies</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Dienstleistungen in den Bereichen Werbung, Public Relations und Marketing anbieten. Dazu zählen u.a. Anbieter von Werbetafeln sowie Telemarketingunternehmen</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen servicios publicitarios, de relacionespúblicas y marketing. Incluye proveedores de vallas publicitariasy empresas dedicadas a las ventas por teléfono.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing advertising, public relations and marketing services. Includes billboard providers and telemarketers.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1757">
+    <rdfs:subClassOf rdf:resource="#ICB1750"/>
+    <rdfs:label xml:lang="de">Eisen und Stahl</rdfs:label>
+    <rdfs:label xml:lang="es">Hierro y acero</rdfs:label>
+    <rdfs:label xml:lang="en">Iron &amp; Steel</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller und Aktionäre von primären Eisen- und Stahlprodukten wie z.B. Rohre, Leitungsdrähte, Blechteile und Eisenbarren, die alle Prozesse von der Schmelze in Hochöfen bis zu den Walzwerken und Gießereien umfassen. Einschließlich Firmen, deren Hauptgeschäft der Abbau von Eisenerz ist.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y accionistas de productos primarios de hierro yacero, como tubos, alambres, láminas y barras, incluidos todoslos procesos desde la fundición en altos hornos hasta laminadorasy fundiciones. Incluye empresas que extraen principalmenteminerales de hierro.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and stockholders of primary iron and steel products such as pipes, wires, sheets and bars, encompassing all processes from smelting in blast furnaces to rolling mills and foundries. Includes companies that primarily mine iron ores.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4530">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB4500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Pflegeausstattung und Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios y equipos de atenciónde la salud</rdfs:label>
+    <rdfs:label xml:lang="en">Health Care Equipment &amp; Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5550">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Medien</rdfs:label>
+    <rdfs:label xml:lang="es">Medios de comunicación</rdfs:label>
+    <rdfs:label xml:lang="en">Media</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1300">
+    <rdfs:label xml:lang="de">Chemie</rdfs:label>
+    <rdfs:label xml:lang="es">Productos químicos</rdfs:label>
+    <rdfs:label xml:lang="en">Chemicals</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1000"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1737">
+    <rdfs:label xml:lang="de">Papierindustrie</rdfs:label>
+    <rdfs:label xml:lang="es">Papel</rdfs:label>
+    <rdfs:label xml:lang="en">Paper</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller, Verarbeiter, Händler und Vertriebshändler für alle Papiersorten. Ausgeschlossen sind Hersteller von gedruckten Produkten (siehe: Business Support Services) sowie Hersteller von Papierprodukten, wie z.B. Pappbecher und Papierservietten (siehe: Kurzlebige Haushaltwaren).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores, convertidores, comerciantes y distribuidores depapeles de todos los grados. Excluye fabricantes de formulariosimpresos, que están clasificados bajo Servicios de apoyoempresarial, y fabricantes de artículos de papel como vasosy servilletas, que están clasificados bajo Artículos para el hogarno duraderos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers, converters, merchants and distributors of all grades of paper. Excludes makers of printed forms, which are classified under Business Support Services, and manufacturers of paper items such as cups and napkins, which are classified under Nondurable Household Products.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB1730"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2713">
+    <rdfs:label xml:lang="de">Luftfahrt</rdfs:label>
+    <rdfs:label xml:lang="es">Aeroespacial</rdfs:label>
+    <rdfs:label xml:lang="en">Aerospace</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2710"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:definition xml:lang="de">Hersteller, Montagefirmen und Händler von Flugzeugen und Flugzeugteilen, die in erster Linie im kommerziellen oder privaten Lufttransport eingesetzt werden. Ausgeschlossen sind Hersteller von Kommunikationssatelliten (siehe: Telekommunikationsausrüstung).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes, ensambladores y distribuidores de aviones ypartes de aviones utilizadas principalmente en el transporteaéreo comercial y privado. Excluye a fabricantes de satélitesde comunicaciones, que están clasificados bajo Equipos detelecomunicaciones.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers, assemblers and distributors of aircraft and aircraft parts primarily used in commercial or private air transport. Excludes manufacturers of communications satellites, which are classified under Telecommunications Equipment.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8700">
+    <rdfs:label xml:lang="es">Servicios financieros</rdfs:label>
+    <rdfs:label xml:lang="en">Financial Services</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8530">
+    <rdfs:label xml:lang="de">Andere Versicherungen als Lebensversicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros de no vida</rdfs:label>
+    <rdfs:label xml:lang="en">Nonlife Insurance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8500"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2775">
+    <rdfs:definition xml:lang="de">Anbieter von Gütertransporten auf Schienen und Bahnlinien. Ausgeschlossen sind Bahngesellschaften für den Personentransport (siehe: Reisen und Tourismus) sowie Schienenfahrzeughersteller (siehe: Nutzfahrzeuge und LKW).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de transporte ferroviario industrial y líneasferroviarias. Excluye empresas de ferrocarriles de pasajeros,que están clasificadas bajo Viajes y turismo, y fabricantesde vagones de trenes, que están clasificados bajo Vehículosy camiones comerciales.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of industrial railway transportation and railway lines. Excludes passenger railway companies, which are classified under Travel &amp; Tourism, and manufacturers of rail cars, which are classified under Commercial Vehicles &amp; Trucks.</rdfs:definition>
+    <rdfs:label xml:lang="de">Eisenbahn</rdfs:label>
+    <rdfs:label xml:lang="es">Ferrocarriles</rdfs:label>
+    <rdfs:label xml:lang="en">Railroads</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2770"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0570">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB0500"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:definition>
+    <rdfs:label xml:lang="de">Ausrüstung, Dienstleistungen und Versorgung</rdfs:label>
+    <rdfs:label xml:lang="es">Equipos, servicios ydistribución petrolera</rdfs:label>
+    <rdfs:label xml:lang="en">Oil Equipment, Services &amp; Distribution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2723">
+    <rdfs:label xml:lang="de">Container und Verpackungen</rdfs:label>
+    <rdfs:label xml:lang="es">Envases y embalajes</rdfs:label>
+    <rdfs:label xml:lang="en">Containers &amp; Packaging</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2720"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Verpackungsmaterialien wie Kartons, Taschen, Schac, Schachteln, Dosen, Fässern, Flaschen, Gläsern und Glas als Verpackungsmaterial.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de cajas de cartón, bolsas, cajas, latas,tambores, botellas y frascos, y vidrio usados para embalaje.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Makers and distributors of cardboard, bags, boxes, cans, drums, bottles and jars and glass used for packaging.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7000">
+    <rdfs:label xml:lang="de">Versorger</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios públicos</rdfs:label>
+    <rdfs:label xml:lang="en">Utilities</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB1700">
+    <rdfs:subClassOf rdf:resource="#ICB1000"/>
+    <rdfs:label xml:lang="de">Rohstoffe</rdfs:label>
+    <rdfs:label xml:lang="es">Recursos básicos</rdfs:label>
+    <rdfs:label xml:lang="en">Basic Resources</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5759">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5750"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Reisen und Tourismus</rdfs:label>
+    <rdfs:label xml:lang="es">Viajes y turismo</rdfs:label>
+    <rdfs:label xml:lang="en">Travel &amp; Tourism</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Reise- und Tourismusdienstleistungen anbieten, u.a. Reisebüros, Online-Reservierungsdienste, Mietwagenfirmen und Unternehmen, die hauptsächlich im Personenverkehr tätig sind, z.B. Bus-, Taxi-, Bahn- und Fährunternehmen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen viajes y servicios de turismo relacionados,lo que incluye agencias de viaje, servicios de reservas de viajespor Internet, compañías de arriendo de automóviles y empresasque principalmente ofrecen transporte de pasajeros, tales comoempresas de autobuses, taxis, ferrocarriles y transbordadores.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing travel and tourism related services, including travel agents, online travel reservation services, automobile rental firms and companies that primarily provide passenger transportation, such as buses, taxis, passenger rail and ferry companies.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9000">
+    <rdfs:label xml:lang="de">Technologie</rdfs:label>
+    <rdfs:label xml:lang="es">Tecnología</rdfs:label>
+    <rdfs:label xml:lang="en">Technology</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7577">
+    <rdfs:subClassOf rdf:resource="#ICB7570"/>
+    <rdfs:label xml:lang="de">Wasser</rdfs:label>
+    <rdfs:label xml:lang="es">Agua</rdfs:label>
+    <rdfs:label xml:lang="en">Water</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Endverbraucher mit Wasser versorgen, u.a. auch Wasseraufbereitungsanlagen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen agua a usuarios finales, lo que incluyeplantas de tratamiento de agua.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing water to end users, including water treatment plants.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8350">
+    <rdfs:label xml:lang="de">Banken</rdfs:label>
+    <rdfs:label xml:lang="es">Bancos</rdfs:label>
+    <rdfs:label xml:lang="en">Banks</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8300"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8300">
+    <rdfs:label xml:lang="de">Banken</rdfs:label>
+    <rdfs:label xml:lang="es">Bancos</rdfs:label>
+    <rdfs:label xml:lang="en">Banks</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0577">
+    <rdfs:definition xml:lang="de">Betreiber von Pipelines für den Transport von Erdöl, Erdgas und anderen Brennstoffarten. Ausgeschlossen sind Pipeline- Betreiber, die ihren Umsatz hauptsächlich aus dem Direktverkauf an Endverbraucher erzielen (siehe: Gasversorgung).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Operadores de ductos para el transporte de petróleo, gasu otras formas de combustible. Excluye los operadores deductos que obtienen la mayor parte de sus ingresos de lasventas directas a usuarios finales, los que están clasificadosbajo Distribución de gas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Operators of pipelines carrying oil, gas or other forms of fuel. Excludes pipeline operators that derive the majority of their revenues from direct sales to end users, which are classified under Gas Distribution.</rdfs:definition>
+    <rdfs:label xml:lang="de">Pipelines</rdfs:label>
+    <rdfs:label xml:lang="es">Ductos</rdfs:label>
+    <rdfs:label xml:lang="en">Pipelines</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB0570"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8630">
+    <rdfs:label xml:lang="de">Immobilienanlagen und Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Inversiones y serviciosinmobiliarios</rdfs:label>
+    <rdfs:label xml:lang="en">Real Estate Investment &amp; Services</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8600"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3570">
+    <rdfs:label xml:lang="de">Nahrungsmittelproduktion</rdfs:label>
+    <rdfs:label xml:lang="en">Food Producers</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB3500"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2353">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2350"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Hersteller von Materialien, die für Bau und Sanierung von Gebäuden und Komplexen genutzt werden. Dazu zählen Zement und andere Zuschlagstoffe, Holzbalken und Rahmen, Farbe, Glas, Dach- und Fußbodenmaterial mit Ausnahme von Teppichboden. Einschließlich der Hersteller von Badezimmer- und Küchenbefestigungen, Klempnermaterial sowie Elementen für Klima- und Heizungsanlagen. Ausgeschlossen sind Rohholzproduzenten (siehe: Fortwirtschaft).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores de materiales usados en la construcción yrenovación de edificios y estructuras, incluidos el cementoy otros agregados, vigas y marcos de madera, pintura, vidrio,materiales para techos y pisos, excluidas las alfombras. Incluyeproductores de instalaciones fijas de baño y cocina, materialesde plomería y equipos de aire acondicionado y calefaccióncentral. Excluye productores de madera en bruto, que estánclasificados bajo Silvicultura.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers of materials used in the construction and refurbishment of buildings and structures, including cement and other aggregates, wooden beams and frames, paint, glass, roofing and flooring materials other than carpets. Includes producers of bathroom and kitchen fixtures, plumbing supplies and central air-conditioning and heating equipment. Excludes producers of raw lumber, which are classified under Forestry.</rdfs:definition>
+    <rdfs:label xml:lang="de">Baustoffe und Befestigungen</rdfs:label>
+    <rdfs:label xml:lang="es">Materiales de construcción einstalaciones fijas</rdfs:label>
+    <rdfs:label xml:lang="en">Building Materials &amp; Fixtures</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5751">
+    <rdfs:definition xml:lang="de">Unternehmen für den Personentransport per Flugzeug Strichpunkt ausgeschlossen sind Flughäfen ( siehe: Transportdienstleistungen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen principalmente transporte aéreo depasajeros. Excluye aeropuertos, que están clasificados bajoServicios de transporte.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing primarily passenger air transport. Excludes airports, which are classified under Transportation Services.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5750"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Fluggesellschaften</rdfs:label>
+    <rdfs:label xml:lang="es">Líneas aéreas</rdfs:label>
+    <rdfs:label xml:lang="en">Airlines</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2000">
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Industrieunternehmen</rdfs:label>
+    <rdfs:label xml:lang="es">Productos industriales</rdfs:label>
+    <rdfs:label xml:lang="en">Industrials</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3357">
+    <rdfs:definition xml:lang="de">Vertriebsgesellschaften, Zwischenhändler und Hersteller von Motorrad- und Automobilreifen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes, distribuidores y recauchadoras de neumáticos paraautomóviles, camiones y motocicletas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers, distributors and retreaders of automobile, truck and motorcycle tires.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB3350"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Reifen</rdfs:label>
+    <rdfs:label xml:lang="es">Neumáticos</rdfs:label>
+    <rdfs:label xml:lang="en">Tires</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7535">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB7530"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Firmen, die Strom durch Verbrennung von fossilen Brennstoffen wie z. B. Kohle, Erdöl und Erdgas und mittels Atomenergie erzeugen und vertreiben.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que generan y distribuyen electricidad mediante lacombustión de combustibles fósiles, como carbón, petróleo ygas natural, y mediante energía nuclear.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies generating and distributing electricity through the burning of fossil fuels such as coal, petroleum and natural gas, and through nuclear energy.</rdfs:definition>
+    <rdfs:label xml:lang="de">Herkömmliche Stromerzeugung</rdfs:label>
+    <rdfs:label xml:lang="es">Electricidad convencional</rdfs:label>
+    <rdfs:label xml:lang="en">Conventional Electricity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0583">
+    <rdfs:definition xml:lang="de">Firmen, die erneuerbare, auf Solar-, Wind-, Gezeiten-, Wasser- und Wellenkraft sowie geothermischer Energie beruhende Anlagen entwickeln oder herstellen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que desarrollan o fabrican equipos de energíasrenovables, los cuales utilizan fuentes como la energía solar,eólica, mareomotriz, geotérmica, hídrica y de las olas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that develop or manufacture renewable energy equipment utilizing sources such as solar, wind, tidal, geothermal, hydro and waves.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB0580"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Erneuerbare Energieanlagen</rdfs:label>
+    <rdfs:label xml:lang="es">Equipos de energías renovables</rdfs:label>
+    <rdfs:label xml:lang="en">Renewable Energy Equipment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8670">
+    <rdfs:subClassOf rdf:resource="#ICB8600"/>
+    <rdfs:label xml:lang="de">Immobilienfonds</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria</rdfs:label>
+    <rdfs:label xml:lang="en">Real Estate Investment Trusts</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9535">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB9530"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Internet</rdfs:label>
+    <rdfs:label xml:lang="es">Internet</rdfs:label>
+    <rdfs:label xml:lang="en">Internet</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Internetdienste anbieten, u.a. Internetprovider und Suchmaschinen, sowie Anbieter von Website-Design, Webhosting, Domainregistrierung sowie E-Mail-Dienste.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen servicios relacionados con Internet, talescomo proveedores de acceso a Internet y motores de búsqueda,y proveedores de diseño de sitios web, servicios de servidoresweb (web hosting), registro de nombres de dominio y serviciosde correo electrónico.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing Internet-related services, such as Internet access providers and search engines and providers of Web site design, Web hosting, domain-name registration and e-mail services.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB6000">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecommunicaciones</rdfs:label>
+    <rdfs:label xml:lang="en">Telecommunications</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2795">
+    <rdfs:subClassOf rdf:resource="#ICB2790"/>
+    <rdfs:definition xml:lang="de">Unternehmen, die Transaktionsverarbeitung, Datenübertragungs- und Informationsdienste anbieten, u.a. auch Gehaltsabrechnung, Zahlungssysteme und Vorsorgeleistungen für Beschäftigte.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de procesamiento computarizado de transacciones,y servicios de comunicación de datos e información, incluidoslos servicios de pagos de nómina, facturas y prestaciones paraempleados.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of computerized transaction processing, data communication and information services, including payroll, bill payment and employee benefit services.</rdfs:definition>
+    <rdfs:label xml:lang="de">Finanzverwaltung</rdfs:label>
+    <rdfs:label xml:lang="es">Administración financiera</rdfs:label>
+    <rdfs:label xml:lang="en">Financial Administration</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5377">
+    <rdfs:definition xml:lang="de">Anbieter von Verbraucherdiensten, wie z.B. Auktionshäuser, Tagespflegeeinrichtungen, Anbieter für chemische Reinigung, Schulen, Vermietungsunternehmen, veterinärmedizinische Einrichtungen, Friseursalons, Bestattungsunternehmer, Landschaftsbau- sowie Lagerunternehmen, Dienstleister für Heizungs- und Klimaanlagenbau sowie Klempnerarbeiten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de servicios para el consumidor, tales como casasde subastas, guarderías, tintorerías, escuelas, empresas dealquiler de bienes de consumo, clínicas veterinarias, salones debelleza y proveedores de servicios funerarios, mantenimiento dejardines, almacenamiento para el consumidor, servicios de instalaciónde calefacción y refrigeración, y servicios de plomería.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of consumer services such as auction houses, day-care centres, dry cleaners, schools, consumer rental companies, veterinary clinics, hair salons and providers of funeral, lawn-maintenance, consumer-storage, heating and cooling installation and plumbing services.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5370"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Spezielle Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios al consumidorespecializados</rdfs:label>
+    <rdfs:label xml:lang="en">Specialized Consumer Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB6575">
+    <rdfs:label xml:lang="de">Mobil-Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecomunicaciones móviles</rdfs:label>
+    <rdfs:label xml:lang="en">Mobile Telecommunications</rdfs:label>
+    <rdfs:definition xml:lang="de">Anbieter von Mobiltelefondienstleistungen, einschließlich Handy-, Satelliten- und Paging-Dienste. Einschließlich Betreiber von drahtlosen Sendemasten, die Mobilfunk- Sendemasten besitzen und betreiben, die an mehrere Drahtlos-Dienste vermietet werden.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de servicios de telefonía móvil, lo que incluye telefoníacelular y satelital y servicios de buscapersonas. Incluyeempresas de torres de telecomunicaciones inalámbricasque son propietarias, operan y arriendan torres paramúltiples proveedores de servicios inalámbricos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of mobile telephone services, including cellular, satellite and paging services. Includes wireless tower companies that own, operate and lease mobile site towers to multiple wireless service providers.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB6570"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9574">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB9570"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von elektronischer Büroausstattung, einschließlich Fotokopierer und Faxgeräte.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de equipo electrónico de oficina, lo queincluye fotocopiadoras y aparatos de fax.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of electronic office equipment, including photocopiers and fax machines.</rdfs:definition>
+    <rdfs:label xml:lang="de">Elektronische Büroausstattung</rdfs:label>
+    <rdfs:label xml:lang="es">Equipo electrónico de oficina</rdfs:label>
+    <rdfs:label xml:lang="en">Electronic Office Equipment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5500">
+    <rdfs:label xml:lang="de">Medien</rdfs:label>
+    <rdfs:label xml:lang="es">Medios de comunicación</rdfs:label>
+    <rdfs:label xml:lang="en">Media</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2733">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von elektrischen Bauteilen für Endprodukte, Ausrüstungselemente z.B. gedruckte Leiterplatten für Radios, Fernseher und andere Elektronikgeräte. Dazu zählen zudem Hersteller von Kabeln, Drähten, Keramikkondensatoren, Transistoren, elektrischen Adaptern, Brennstoffzellen und Sicherheitskameras.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de partes eléctricas de productosterminados, como las tarjetas de circuitos impresos para radios,televisores y otros bienes de consumo electrónicos. Incluyefabricantes de cables, alambres, cerámica, transistores, adaptadoreseléctricos, pilas de combustible y cámaras de seguridad.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Makers and distributors of electrical parts for finished products, such as printed circuit boards for radios, televisions and other consumer electronics. Includes makers of cables, wires, ceramics, transistors, electric adapters and security cameras.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2730"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Elektrische Bauteile und Ausrüstungselemente</rdfs:label>
+    <rdfs:label xml:lang="es">Componentes y equiposeléctricos</rdfs:label>
+    <rdfs:label xml:lang="en">Electrical Components &amp; Equipment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8777">
+    <rdfs:definition xml:lang="de">Unternehmen, die eine Reihe von speziellen Finanzdiensten anbieten, u.a. Wertpapierbroker und - händler, Online-Broker und Wertpapier- sowie Warenbörsen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proporcionan una gama de servicios financierosespecializados, lo que incluye corredores y agentes de valores,corredores en línea y bolsas de valores o materias primas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies providing a range of specialized financial services, including securities brokers and dealers, online brokers and security or commodity exchanges.</rdfs:definition>
+    <rdfs:label xml:lang="de">Investment-Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de inversión</rdfs:label>
+    <rdfs:label xml:lang="en">Investment Services</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8770"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5752">
+    <rdfs:label xml:lang="de">Spielhallen</rdfs:label>
+    <rdfs:label xml:lang="es">Juegos de azar</rdfs:label>
+    <rdfs:label xml:lang="en">Gambling</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5750"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Betreiber von Spielhallen und Kasinos Strichpunkt dazu zählen Online- Kasinos, Rennbahnen sowie Hersteller von Flipperautomaten und Kasinosowie Lotterieausrüstung.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de juegos de azar y casinos. Incluye casinos enlínea, hipódromos y fabricantes de máquinas de pachinko yequipos para casinos y loterías.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of gambling and casino facilities. Includes online casinos, racetracks and the manufacturers of pachinko machines and casino and lottery equipment.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8532">
+    <rdfs:definition xml:lang="de">Versicherungsgesellschaften, die ein ausgeglichenes Verhältnis von Lebens-, Kranken-, Sach- und Unfall- sowie Rückversicherungen anbieten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Aseguradoras con participaciones en seguros de vida, salud,bienes y accidentes, y en reaseguro, sin predominio de ninguno.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Insurance companies with life, health, property &amp; casualty and reinsurance interests, no one of which predominates.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8530"/>
+    <rdfs:label xml:lang="de">Globalversicherungsgesellschaften</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros diversificados</rdfs:label>
+    <rdfs:label xml:lang="en">Full Line Insurance</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5700">
+    <rdfs:label xml:lang="de">Reisen und Freizeit</rdfs:label>
+    <rdfs:label xml:lang="es">Viajes y ocio</rdfs:label>
+    <rdfs:label xml:lang="en">Travel &amp; Leisure</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5000"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1775">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#ICB1770"/>
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Exploration, Gewinnung oder Veredelung von Mineralien tätig und in keinem anderen Bereich unter Bergbau definiert sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la exploración, extracción o refinaciónde minerales no definidos en otras categorías dentro del sectorMinería.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the exploration, extraction or refining of minerals not defined elsewhere within the Mining sector.</rdfs:definition>
+    <rdfs:label xml:lang="de">Allgemeiner Bergbau</rdfs:label>
+    <rdfs:label xml:lang="es">Minería general</rdfs:label>
+    <rdfs:label xml:lang="en">General Mining</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2753">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB2750"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Hersteller und Vertreiber von Nutzfahrzeugen und schweren landwirtschaftlichen Maschinen und Baumaschinen, einschließlich Schienenfahrzeuge, Traktoren, Planierraupen, Kräne, Busse und industrielle Rasenmäher. Einschließlich nichtmilitärische Schiffbauer wie z. B. Erbauer von Kreuzfahrtschiffen und Fähren.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de vehículos comerciales ymaquinaria pesada agrícola y para la construcción, lo queincluye vagones de ferrocarril, tractores, máquinas excavadoras,grúas, autobuses y cortadoras de césped industriales. Incluyeconstructores de buques no militares, tales como constructoresde buques para cruceros y transbordadores.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of commercial vehicles and heavy agricultural and construction machinery, including rail cars, tractors, bulldozers, cranes, buses and industrial lawn mowers. Includes non-military shipbuilders, such as builders of cruise ships and ferries.</rdfs:definition>
+    <rdfs:label xml:lang="de">Nutzfahrzeuge und LKW</rdfs:label>
+    <rdfs:label xml:lang="es">Vehículos y camionescomerciales</rdfs:label>
+    <rdfs:label xml:lang="en">Commercial Vehicles &amp; Trucks</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8990">
+    <rdfs:label xml:lang="de">Investitionen ohne Kapitalbeteiligung</rdfs:label>
+    <rdfs:label xml:lang="es">Instrumentos de inversión derenta fija</rdfs:label>
+    <rdfs:label xml:lang="en">Nonequity Investment Instruments</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8900"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4537">
+    <rdfs:subClassOf rdf:resource="#ICB4530"/>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von medizinischen Produkten, die vom medizinischen Personal und den Patienten benutzt werden. Dazu zählen Hersteller von Kontaktlinsen, Brillengläsern und anderenmedizinischen Einwegartikeln.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de insumos médicos empleados porproveedores de atención de la salud y público general. Incluyefabricantes de lentes de contacto, lentes para anteojos, vendasy otros insumos médicos desechables.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of medical supplies used by health care providers and the general public. Includes makers of contact lenses, eyeglass lenses, bandages and other disposable medical supplies.</rdfs:definition>
+    <rdfs:label xml:lang="de">Medizinische Produkte</rdfs:label>
+    <rdfs:label xml:lang="es">Insumos médicos</rdfs:label>
+    <rdfs:label xml:lang="en">Medical Supplies</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8985">
+    <rdfs:label xml:lang="de">Kapitalinvestitionen</rdfs:label>
+    <rdfs:label xml:lang="es">Instrumentos de inversión derenta variable</rdfs:label>
+    <rdfs:label xml:lang="en">Equity Investment Instruments</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB8980"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Unternehmensinvestmentfonds mit begrenzter Emissionshöhe, die verschiedenen Gesetzgebungen unterliegen, z.B. Investmentfonds und Risikokapitalanlagen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Entidades de inversión cerrada corporativas identificadas bajouna legislación distintiva, tales como fondos fiduciarios de inversióny fondos de capital de riesgo.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Corporate closed-ended investment entities identified under distinguishing legislation, such as investment trusts and venture capital trusts.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1755">
+    <rdfs:label xml:lang="de">Nichteisenhaltige Metalle</rdfs:label>
+    <rdfs:label xml:lang="es">Metales no ferrosos</rdfs:label>
+    <rdfs:label xml:lang="en">Nonferrous Metals</rdfs:label>
+    <rdfs:definition xml:lang="de">Produzenten und Händler von Metallen und Neumetallen mit Ausnahme von Eisen, Aluminium und Stahl. Ausgeschlossen sind Hersteller von Fertigprodukten: diese werden nach Endprodukttyp klassifiziert.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores y comerciantes de metales y productos metálicosprimarios, excluidos el hierro, el aluminio y el acero. Excluye aempresas que fabrican productos terminados, que se clasificansegún el tipo de producto final.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers and traders of metals and primary metal products other than iron, aluminium and steel. Excludes companies that make finished products, which are categorized according to the type of end product.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB1750"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3722">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Haushaltsgeräten, Beleuchtungselementen, Handwerkzeugen und Maschinen, Haushaltwaren, Essbesteck, Tischwaren, Gartenausstattung, Gepäck, Handtücher und Bettwäsche.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de aparatos electrodomésticos,iluminación, herramientas manuales y eléctricas, artículos deferretería, cubiertos, vajillas, equipos de jardinería, valijas, toallasy ropa de cama y mantelería.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of domestic appliances, lighting, hand tools and power tools, hardware, cutlery, tableware, garden equipment, luggage, towels and linens.</rdfs:definition>
+    <rdfs:label xml:lang="de">Langlebige Haushaltsprodukte</rdfs:label>
+    <rdfs:label xml:lang="es">Productos para el hogarduraderos</rdfs:label>
+    <rdfs:label xml:lang="en">Durable Household Products</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3720"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5553">
+    <rdfs:definition xml:lang="de">Produzenten, Betreiber und Sender von Radio- und Fernsehprogrammen, Unterhaltungsmusik und -filmen. Ausgeschlossen sind Kinos (siehe: Freizeitanlagen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores, operadores y difusores de radio, televisión, músicay entretenimiento filmado. Excluye salas de cine, que estánclasificados bajo Servicios recreativos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers, operators and broadcasters of radio, television, music and filmed entertainment. Excludes movie theatres, which are classified under Recreational Services.</rdfs:definition>
+    <rdfs:label xml:lang="de">Radio, TV und Unterhaltung</rdfs:label>
+    <rdfs:label xml:lang="es">Programación y entretenimiento</rdfs:label>
+    <rdfs:label xml:lang="en">Broadcasting &amp; Entertainment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB5550"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB1730">
+    <rdfs:label xml:lang="de">Forstwirtschaft und Papierindustrie</rdfs:label>
+    <rdfs:label xml:lang="es">Silvicultura y papel</rdfs:label>
+    <rdfs:label xml:lang="en">Forestry &amp; Paper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1700"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8575">
+    <rdfs:label xml:lang="de">Lebensversicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros de vida</rdfs:label>
+    <rdfs:label xml:lang="en">Life Insurance</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die in erster Linie Lebens- und Krankenversicherungen anbieten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas principalmente a seguros de vida y salud.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged principally in life and health insurance.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8570"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8637">
+    <rdfs:label xml:lang="de">Dienstleistungen für Immobilien</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios inmobiliarios</rdfs:label>
+    <rdfs:label xml:lang="en">Real Estate Services</rdfs:label>
+    <rdfs:definition xml:lang="de">Firmen, die Dienstleistungen an Immobilienfirmen erbringen, ohne diese selbst zu besitzen. Einschließlich Agenturen, Vermittler, Leasinggesellschaften, Verwaltungsgesellschaften und Beratungsdienste. Ausgeschlossen sind Immobilienfonds und ähnliche Gebilde, die als Immobilienfonds zu klassifizieren sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que prestan servicios a empresas de bienes raíces, peroque no son dueñas de las propiedades. Incluye agencias, agentes,empresas de arrendamiento, de administración y servicios deasesoría. Excluye fondos de inversión inmobiliaria y entidadessimilares, clasificados como Fondos de inversión inmobiliaria.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that provide services to real estate companies but do not own the properties themselves. Includes agencies, brokers, leasing companies, management companies and advisory services. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8630"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5757">
+    <rdfs:definition xml:lang="de">Betreiber von Restaurants, Fast-Food-Restaurants, Cafés und Bars. Dazu zählen auch angeschlossene Brauereien und Bringdienste.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Operadores de restaurantes, instalaciones de comida rápida,cafeterías y bares. Incluye empresas cerveceras integradas y decatering.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Operators of restaurants, fast-food facilities, coffee shops and bars. Includes integrated brewery companies and catering companies.</rdfs:definition>
+    <rdfs:label xml:lang="de">Restaurants und Bars</rdfs:label>
+    <rdfs:label xml:lang="es">Restaurantes y bares</rdfs:label>
+    <rdfs:label xml:lang="en">Restaurants &amp; Bars</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5750"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3743">
+    <rdfs:label xml:lang="de">Unterhaltungselektronik</rdfs:label>
+    <rdfs:label xml:lang="es">Bienes de consumo electrónicos</rdfs:label>
+    <rdfs:label xml:lang="en">Consumer Electronics</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Unterhaltungselektronik, wie z.B Fernseher, Videorecorder, DVD-Player, HiFi-Geräte, Kabelanschlussgeräte, Taschenrechner und Camcorder</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de artículos electrónicos de consumo,tales como televisores, videograbadoras, reproductores deDVD, equipos de audio, sintonizadores de televisión por cable,calculadoras y cámaras de vídeo.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of consumer electronics, such as TVs, VCRs, DVD players, audio equipment, cable boxes, calculators and camcorders.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB3740"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3573">
+    <rdfs:definition xml:lang="de">Unternehmen, die Getreide anbauen oder Nutzvieh züchten, Fischereien betreiben oder Pflanzungen (keine Tabakplantagen) besitzen. Dazu zählen Hersteller von Tierfutter und Saatgut sowie anderen Agrarprodukten. Ausgeschlossen sind Düngemittel- oder Pestizidhersteller (siehe: Spezielle Chemikalien).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que se dedican al cultivo y la crianza de ganado,operan pesquerías o son dueñas de plantaciones no tabacaleras.Incluye productores de forraje para ganado y semillas y otrosproductos agrícolas (Strichpunkt) pero excluye fabricantes de fertilizantesy pesticidas, que están clasificados bajo Productos químicosespecializados.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that grow crops or raise livestock, operate fisheries or own nontobacco plantations. Includes manufacturers of livestock feeds and seeds and other agricultural products but excludes manufacturers of fertilizers or pesticides, which are classified under Specialty Chemicals.</rdfs:definition>
+    <rdfs:label xml:lang="de">Land- und Fischwirtschaft</rdfs:label>
+    <rdfs:label xml:lang="es">Agricultura y ganadería eindustria pesquera</rdfs:label>
+    <rdfs:label xml:lang="en">Farming &amp; Fishing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3570"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3763">
+    <rdfs:subClassOf rdf:resource="#ICB3760"/>
+    <rdfs:label xml:lang="de">Bekleidung und Accessoires</rdfs:label>
+    <rdfs:label xml:lang="es">Ropa y accesorios</rdfs:label>
+    <rdfs:label xml:lang="en">Clothing &amp; Accessories</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Bekleidung, Schmuck, Uhren und Textilien, u.a. Sportbekleidung, Sonnenbrillen, Brillengestelle, Lederbekleidung und Lederwaren Strichpunkt sowie andere, lederverarbeitende Betriebe.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de todo tipo de ropa, joyas, relojeso textiles. Incluye ropa deportiva, anteojos de sol, monturaspara anteojos, ropa y otros artículos de cuero, y procesadoresde pieles y cueros.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of all types of clothing, jewellery, watches or textiles. Includes sportswear, sunglasses, eyeglass frames, leather clothing and goods, and processors of hides and skins.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4577">
+    <rdfs:subClassOf rdf:resource="#ICB4570"/>
+    <rdfs:definition xml:lang="de">Hersteller von verschreibungspflichtigen oder frei verkäuflichen Arzneimitteln, wie z.B. Aspirin, Erkältungsmittel und die Antibabypille. Dazu zählen auch Hersteller von Impfstoffen, nicht aber Hersteller von Vitaminpräparaten (siehe: Nahrungsmittel).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes de medicamentos de venta con y sin recetamédica, tales como la Aspirina, remedios para el resfrío ypíldoras anticonceptivas. Incluye productores de vacunas (Strichpunkt) pero excluye productores de vitaminas, que están clasificadosbajo Productos alimenticios.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers of prescription or over-the-counter drugs, such as aspirin, cold remedies and birth control pills. Includes vaccine producers but excludes vitamin producers, which are classified under Food Products.</rdfs:definition>
+    <rdfs:label xml:lang="de">Arzneimittel</rdfs:label>
+    <rdfs:label xml:lang="es">Fármacos</rdfs:label>
+    <rdfs:label xml:lang="en">Pharmaceuticals</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3350">
+    <rdfs:label xml:lang="de">Automobilhersteller und Zulieferer</rdfs:label>
+    <rdfs:label xml:lang="es">Automóviles y repuestos</rdfs:label>
+    <rdfs:label xml:lang="en">Automobiles &amp; Parts</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB3300"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5371">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5370"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Einzelhändler für Bekleidung und Accessoires</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas de ropa</rdfs:label>
+    <rdfs:label xml:lang="en">Apparel Retailers</rdfs:label>
+    <rdfs:definition xml:lang="de">Einzelhändler und Großhändler, die sich hauptsächlich auf Bekleidung, Schuhe, Schmuck, Sonnenbrillen und andere Accessoires spezialisiert haben.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Minoristas y mayoristas especializados principalmente en ropa,calzado, joyas, anteojos de sol y otros accesorios.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Retailers and wholesalers specializing mainly in clothing, shoes, jewellery, sunglasses and other accessories.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1357">
+    <rdfs:label xml:lang="de">Spezielle Chemikalien</rdfs:label>
+    <rdfs:label xml:lang="es">Productos químicosespecializados</rdfs:label>
+    <rdfs:label xml:lang="en">Specialty Chemicals</rdfs:label>
+    <rdfs:definition xml:lang="de">Erzeuger und Händler von Fertigchemikalien für Industrie oder Endverbraucher, einschließlich Farben, zellulare Polymere, Beschichtungen, Spezialkunststoffe und andere Chemikalien für spezielle Anwendungen. Dazu zählen Hersteller von Farb-, Aroma- und Duftstoffen, Düngemitteln, Pestiziden, Chemikalien für die Medikamentenherstellung, Farbe in pigmentierter Form und Glas in unbearbeiteter Form. Ausgeschlossen sind Hersteller von Farb- und Glasprodukten für das Baugewerbe (siehe: Baustoffe und Befestigungen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores y distribuidores de productos químicos terminadospara industrias o usuarios finales, incluidas tinturas, polímeroscelulares, revestimientos de protección, plásticos especialesy otros productos químicos para aplicaciones especializadas.Incluye a los fabricantes de colorantes, saborizantes y fragancias,fertilizantes, pesticidas, productos químicos utilizadospara fabricar medicamentos, pintura en su forma de pigmentoy vidrio en su forma no terminada. Excluye productores depintura y productos de vidrio utilizados en la construcción, quese encuentran clasificados bajo Materiales de construcción einstalaciones fijas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers and distributors of finished chemicals for industries or end users, including dyes, cellular polymers, coatings, special plastics and other chemicals for specialized applications. Includes makers of colourings, flavours and fragrances, fertilizers, pesticides, chemicals used to make drugs, paint in its pigment form and glass in its unfinished form. Excludes producers of paint and glass products used for construction, which are classified under Building Materials &amp; Fixtures.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB1350"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8771">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8770"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Unternehmen, die Vermögensverwaltungs-, Treuhand- und andere treuhänderische Dienstleistungen anbieten, u.a. auch Gesellschaften für die Investmentfondsverwaltung.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proporcionan servicios de custodia, fiduciarios yotros servicios fideicomisarios relacionados. Incluye empresas deadministración de fondos de inversión.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that provide custodial, trustee and other related fiduciary services. Includes mutual fund management companies.</rdfs:definition>
+    <rdfs:label xml:lang="de">Vermögensverwaltung</rdfs:label>
+    <rdfs:label xml:lang="es">Administradores de activos</rdfs:label>
+    <rdfs:label xml:lang="en">Asset Managers</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0001">
+    <rdfs:label xml:lang="de">Erdöl und Erdgas</rdfs:label>
+    <rdfs:label xml:lang="es">Petróleo y gas</rdfs:label>
+    <rdfs:label xml:lang="en">Oil &amp; Gas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7575">
+    <rdfs:subClassOf rdf:resource="#ICB7570"/>
+    <rdfs:definition xml:lang="de">Versorgungsunternehmen mit starker Präsenz in mehr als nur einem Bereich der Energiegewinnung.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas de servicios públicos con presencia significativa enmás de un servicio.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Utility companies with significant presence in more than one utility.</rdfs:definition>
+    <rdfs:label xml:lang="de">Kombinierte Energieerzeugung</rdfs:label>
+    <rdfs:label xml:lang="es">Multiservicios</rdfs:label>
+    <rdfs:label xml:lang="en">Multi-utilities</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9576">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Halbleitern und anderen integrierten Chips, einschließlich anderer Produkte für die Halbleiterindustrie, wie z.B. Basiselemente für die Halbleiterindustrie sowie Hauptplatinen. Ausgeschlossen sind Leiterplatten (siehe: Elektrische Bauteile und Ausrüstungselemente).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores y distribuidores de semiconductores y otros chipsintegrados, lo que incluye otros productos relacionados con laindustria de semiconductores, tales como bienes de capital para laproducción de semiconductores y tarjetas madre. Excluye fabricantesde tarjetas de circuitos impresos, clasificados bajo Componentes yequipos eléctricos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers and distributors of semiconductors and other integrated chips, including other products related to the semiconductor industry, such as semiconductor capital equipment and motherboards. Excludes makers of printed circuit boards, which are classified under Electrical Components &amp; Equipment.</rdfs:definition>
+    <rdfs:label xml:lang="de">Halbleiter</rdfs:label>
+    <rdfs:label xml:lang="es">Semiconductores</rdfs:label>
+    <rdfs:label xml:lang="en">Semiconductors</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB9570"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8676">
+    <rdfs:label xml:lang="de">Hypotheken-REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) hipotecarios</rdfs:label>
+    <rdfs:label xml:lang="en">Mortgage REITs</rdfs:label>
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die sich direkt mit Darlehen an Immobilieneigentümer und -betreiber oder indirekt mit dem Kauf von Hypotheken oder Hypothekenpfandbriefen befassen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) dedicados directamente al préstamo dedinero a propietarios y operadores de bienes raíces, o indirectamentea través de la compra de hipotecas o valores respaldadoscon hipotecas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that are directly involved in lending money to real estate owners and operators or indirectly through the purchase of mortgages or mortgage backed securities.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8670"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5330">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB5300"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Nahrungsmittel- und Arzneimitteleinzelhändler</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas de alimentos ymedicamentos</rdfs:label>
+    <rdfs:label xml:lang="en">Food &amp; Drug Retailers</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5000">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Verbraucherservice</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios al consumidor</rdfs:label>
+    <rdfs:label xml:lang="en">Consumer Services</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8000">
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Finanz-Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios financieros</rdfs:label>
+    <rdfs:label xml:lang="en">Financials</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9500">
+    <rdfs:subClassOf rdf:resource="#ICB9000"/>
+    <rdfs:label xml:lang="de">Technologie</rdfs:label>
+    <rdfs:label xml:lang="es">Tecnología</rdfs:label>
+    <rdfs:label xml:lang="en">Technology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2300">
+    <rdfs:subClassOf rdf:resource="#ICB2000"/>
+    <rdfs:label xml:lang="de">Bauwesen und Materialien</rdfs:label>
+    <rdfs:label xml:lang="es">Construcción y materiales</rdfs:label>
+    <rdfs:label xml:lang="en">Construction &amp; Materials</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB7500">
+    <rdfs:label xml:lang="de">Energieversorgung</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios públicos</rdfs:label>
+    <rdfs:label xml:lang="en">Utilities</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB7000"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1753">
+    <rdfs:subClassOf rdf:resource="#ICB1750"/>
+    <rdfs:label xml:lang="de">Aluminium</rdfs:label>
+    <rdfs:label xml:lang="es">Aluminio</rdfs:label>
+    <rdfs:label xml:lang="en">Aluminium</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Bauxit abbauen oder verarbeiten sowie Aluminiumträger, -stangen oder andere Produkte für die Nutzung in anderen Industriezweigen herstellen oder vertreiben. Ausgeschlossen sind Hersteller von Fertigprodukten aus Aluminium, z.B. Gleise, die in der Kategorie des jeweiligen Endprodukts aufgeführt sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que extraen o procesan bauxita o fabrican ydistribuyen barras, varillas y otros productos para su uso enotras industrias. Excluye a fabricantes de productos de aluminioterminados, tales como revestimientos, que se clasificansegún el tipo de producto final.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that mine or process bauxite or manufacture and distribute aluminium bars, rods and other products for use by other industries. Excludes manufacturers of finished aluminium products, such as siding, which are categorized according to the type of end product.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB6535">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB6530"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Festnetz-Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecomunicaciones de línea fija</rdfs:label>
+    <rdfs:label xml:lang="en">Fixed Line Telecommunications</rdfs:label>
+    <rdfs:definition xml:lang="de">Dienstleister für telefonische Festnetze, einschließlich Regional- und Ferngespräche. Einschließlich Firmen, die hauptsächlich Telefondienste über das Internet anbieten. Ausgeschlossen sind Firmen, deren primäres Geschäft der Zugang zum Internet ist und die unter Internet zu klassifizieren sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de servicios de telefonía de línea fija,incluida la regional y de larga distancia. Incluye empresas queproveen principalmente servicios telefónicos a través de Internet.Excluye empresas cuyo principal negocio es el acceso a Internet,que se encuentran clasificadas bajo Internet.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of fixed-line telephone services, including regional and long-distance. Includes companies that primarily provides telephone services through the internet. Excludes companies whose primary business is Internet access, which are classified under Internet.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB0500">
+    <rdfs:label xml:lang="de">Erdöl und Erdgas</rdfs:label>
+    <rdfs:label xml:lang="es">Petróleo y gas</rdfs:label>
+    <rdfs:label xml:lang="en">Oil &amp; Gas</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#ICB0001"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5379">
+    <rdfs:label xml:lang="de">Facheinzelhändler</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas especializados</rdfs:label>
+    <rdfs:label xml:lang="en">Specialty Retailers</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5370"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Einzelhändler und Großhändler, die sich auf eine Art von Gütern, wie z.B. Elektrogeräte, Bücher, Autoersatzteile oder Ausverkäufe spezialisiert haben. Dazu zählen Autohändler, Videoverleiher, Discounter, Duty-free-Shops und Tankstellen, deren Eigentümer keine Ölgesellschaft ist.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Minoristas y mayoristas concentrados en un solo tipo de producto,tales como electrónica, libros, repuestos de automóviles yliquidaciones. Incluye concesionarios automotrices, tiendas dearriendo de videos, tiendas de dólar, tiendas libres de impuestosy estaciones de servicio que no son propiedad de compañíaspetroleras.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Retailers and wholesalers concentrating on a single class of goods, such as electronics, books, automotive parts or closeouts. Includes automobile dealerships, video rental stores, dollar stores, duty-free shops and automotive fuel stations not owned by oil companies.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5337">
+    <rdfs:subClassOf rdf:resource="#ICB5330"/>
+    <rdfs:label xml:lang="de">Einzel- und Großhändler für Nahrungsmittel</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas y mayoristasde alimentos</rdfs:label>
+    <rdfs:label xml:lang="en">Food Retailers &amp; Wholesalers</rdfs:label>
+    <rdfs:definition xml:lang="de">Supermärkte, Einzelhandelsgeschäfte und andere Einzelhändler und Vertriebshändler, die Nahrungsmittel anbieten. Dazu zählen auch Einzelhändler für Nahrungsergänzungsmittel und Vitamine.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Supermercados, tiendas de barrio orientadas a laalimentación y otros minoristas y distribuidores de alimentos.Incluye minoristas de suplementos dietéticos y vitaminas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Supermarkets, food-oriented convenience stores and other food retailers and distributors. Includes retailers of dietary supplements and vitamins.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8779">
+    <rdfs:label xml:lang="de">Hypothekenfinanzierung</rdfs:label>
+    <rdfs:label xml:lang="es">Finanzas hipotecarias</rdfs:label>
+    <rdfs:label xml:lang="en">Mortgage Finance</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Hypotheken, Hypothekenversicherungen und ähnliche Dienstleistungen anbieten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proporcionan hipotecas, seguros hipotecarios yotros servicios relacionados.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that provide mortgages, mortgage insurance and other related services.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB8770"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7537">
+    <rdfs:definition xml:lang="de">Firmen, die Strom aus erneuerbaren Quellen erzeugen und vertreiben. Einschließlich Firmen, die Solar-, Wasser- und Windenergie sowie geothermische Energie erzeugen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que generan y distribuyen electricidad proveniente deuna fuente renovable. Incluye empresas que producen energíasolar, hidroeléctrica, eólica y geotérmica.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies generating and distributing electricity from a renewable source. Includes companies that produce solar, water, wind and geothermal electricity.</rdfs:definition>
+    <rdfs:label xml:lang="de">Alternative Stromerzeugung</rdfs:label>
+    <rdfs:label xml:lang="es">Electricidad alternativa</rdfs:label>
+    <rdfs:label xml:lang="en">Alternative Electricity</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB7530"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB6530">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ICB6500"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Festnetz-Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecomunicaciones de línea fija</rdfs:label>
+    <rdfs:label xml:lang="en">Fixed Line Telecommunications</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8534">
+    <rdfs:subClassOf rdf:resource="#ICB8530"/>
+    <rdfs:label xml:lang="de">Versicherungsmakler</rdfs:label>
+    <rdfs:label xml:lang="es">Agentes de seguros</rdfs:label>
+    <rdfs:label xml:lang="en">Insurance Brokers</rdfs:label>
+    <rdfs:definition xml:lang="de">Versicherungsmakler und -agenturen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Corredores y agentes de seguros.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Insurance brokers and agencies.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9578">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB9570"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Hightech-Kommunikationsprodukten, wie z.B. Satelliten, Mobiltelefone, Lichtwellenleiter, Schaltzentralen, LAN und WAN, Telekonferenz-Ausrüstung und Verbindungselemente für Computer, einschließlich Hubs und Router.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de productos de telecomunicaciones dealta tecnología, lo que incluye satélites, teléfonos celulares, fibraóptica, dispositivos de conmutación, redes de área local y de áreaamplia, equipo de teleconferencias y dispositivos de conectividadpara computadoras, incluidos los nodos y enrutadores.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Makers and distributors of high-technology communication products, 
+    including satellites, mobile telephones, fibres optics, switching devices, 
+    local and wide-area networks, teleconferencing equipment and connectivity 
+    devices for computers, including hubs and routers.</rdfs:definition>
+    <rdfs:label xml:lang="de">Telekommunikationsausrüstung</rdfs:label>
+    <rdfs:label xml:lang="es">Equipo de telecomunicaciones</rdfs:label>
+    <rdfs:label xml:lang="en">Telecommunications Equipment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2793">
+    <rdfs:definition xml:lang="de">Unternehmen, die Business- und Management-Schulungen anbieten, sowie Arbeitsvermittler.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de cursos de formación empresarial o administrativay servicios de colocación de personal.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of business or management training courses and employment services.</rdfs:definition>
+    <rdfs:label xml:lang="de">Anbieter von Business-Lehrgängen und private Arbeitsvermittler</rdfs:label>
+    <rdfs:label xml:lang="es">Agencias de formaciónempresarial y de colocaciones</rdfs:label>
+    <rdfs:label xml:lang="en">Business Training &amp; Employment Agencies</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2790"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0533">
+    <rdfs:label xml:lang="de">Exploration und Produktion</rdfs:label>
+    <rdfs:label xml:lang="es">Exploración y producción</rdfs:label>
+    <rdfs:label xml:lang="en">Exploration &amp; Production</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Erdöl- und Erdgasexploration tätig sind (Bohrung, Produktion, Raffinerierung von und Versorgung mit Erdöl- und Erdgasprodukten).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la exploración y extracción, producción,refinación y abastecimiento de productos petroleros y de gas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the exploration for and drilling, production, refining and supply of oil and gas products.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB0530"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3000">
+    <rdfs:subClassOf rdf:resource="#ICB"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Vverbrauchsgüter</rdfs:label>
+    <rdfs:label xml:lang="es">Bienes de consumo</rdfs:label>
+    <rdfs:label xml:lang="en">Consumer Goods</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB6500">
+    <rdfs:label xml:lang="de">Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecomunicaciones</rdfs:label>
+    <rdfs:label xml:lang="en">Telecommunications</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB6000"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8770">
+    <rdfs:subClassOf rdf:resource="#ICB8700"/>
+    <rdfs:label xml:lang="de">Finanzdienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios financieros</rdfs:label>
+    <rdfs:label xml:lang="en">Financial Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5370">
+    <rdfs:label xml:lang="de">Allgemeine Einzelhändler</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas generales</rdfs:label>
+    <rdfs:label xml:lang="en">General Retailers</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB5300"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3533">
+    <rdfs:label xml:lang="de">Brauereien</rdfs:label>
+    <rdfs:label xml:lang="es">Cerveceras</rdfs:label>
+    <rdfs:label xml:lang="en">Brewers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3530"/>
+    <rdfs:definition xml:lang="de">Hersteller und Transporteure von Apfelwein- und Malzprodukten, z.B. helles und dunkles Bier.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y transportadores de productos de cidra y malta,tales como cerveza, ale y stout.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and shippers of cider or malt products such as beer, ale and stout.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2773">
+    <rdfs:label xml:lang="de">Seetransport</rdfs:label>
+    <rdfs:label xml:lang="es">Transporte marítimo</rdfs:label>
+    <rdfs:label xml:lang="en">Marine Transportation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2770"/>
+    <rdfs:definition xml:lang="de">Anbieter im kommerziellen Seefrachtversand, z.B. Containerversand. Ausgeschlossen sind Häfen (siehe: Transportdienstleistungen) und Werften (siehe: Nutzfahrzeuge und LKW).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de transporte por agua para mercados comerciales,tales como transporte de contenedores. Excluye puertos, queestán clasificados bajo Servicios de transporte, y constructoresde buques, que están clasificados bajo Vehículos y camionescomerciales.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of on-water transportation for commercial markets, such as container shipping. Excludes ports, which are classified under Transportation Services, and shipbuilders, which are classified under Commercial Vehicles &amp; Trucks.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3724">
+    <rdfs:subClassOf rdf:resource="#ICB3720"/>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Schreibutensilien, Papierwaren, Batterien, Glühlampen, Stoffen, Toilettenpapier und Reinigungsprodukten wie Seife und Poliermittel.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores y distribuidores de lápices, artículos de papel,baterías, bombillas eléctricas, pañuelos de papel, papel higiénicoy productos de limpieza, como jabones y cera para muebles.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers and distributors of pens, paper goods, batteries, light bulbs, tissues, toilet paper and cleaning products such as soaps and polishes.</rdfs:definition>
+    <rdfs:label xml:lang="de">Kurzlebige Haushaltsprodukte Hersteller</rdfs:label>
+    <rdfs:label xml:lang="es">Artículos para el hogar noduraderos</rdfs:label>
+    <rdfs:label xml:lang="en">Nondurable Household Products</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB1350">
+    <rdfs:label xml:lang="de">Chemie</rdfs:label>
+    <rdfs:label xml:lang="es">Productos químicos</rdfs:label>
+    <rdfs:label xml:lang="en">Chemicals</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1300"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8677">
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Hotels oder in Immobilien der Beherbergungsbranche investieren.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente en propiedadeshoteleras o de alojamiento.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in hotels or lodging properties.</rdfs:definition>
+    <rdfs:label xml:lang="de">Hotel- und Beherbergungs-REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) hoteleros y de alojamiento</rdfs:label>
+    <rdfs:label xml:lang="en">Hotel &amp; Lodging REITs</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8670"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3300">
+    <rdfs:label xml:lang="de">Automobilhersteller und Zulieferer</rdfs:label>
+    <rdfs:label xml:lang="es">Automóviles y repuestos</rdfs:label>
+    <rdfs:label xml:lang="en">Automobiles &amp; Parts</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3000"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1773">
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Exploration und Gewinnung von Diamanten und anderen Edelsteinen tätig sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la exploración y producción de diamantesy otras piedras preciosas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the exploration for and production of diamonds and other gemstones.</rdfs:definition>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Diamanten und Edelsteine</rdfs:label>
+    <rdfs:label xml:lang="es">Diamantes y piedras preciosas</rdfs:label>
+    <rdfs:label xml:lang="en">Diamonds &amp; Gemstones</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1770"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4535">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von medizinischen Geräten und Produkten, wie z.B. Kernspintomographen, Prothesen, Herzschrittmacher, Röntgengeräte und andere medizinische Geräte für den Mehrfachgebrauch.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de aparatos médicos tales comoequipos para imágenes por resonancia magnética, prótesis,marcapasos, aparatos de rayos X y otros dispositivos médicosno desechables.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of medical devices such as MRI scanners, prosthetics, pacemakers, X-ray machines and other non-disposable medical devices.</rdfs:definition>
+    <rdfs:label xml:lang="de">Medizinische Geräte</rdfs:label>
+    <rdfs:label xml:lang="es">Equipo médico</rdfs:label>
+    <rdfs:label xml:lang="en">Medical Equipment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB4530"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5750">
+    <rdfs:subClassOf rdf:resource="#ICB5700"/>
+    <rdfs:label xml:lang="de">Reisen und Freizeit</rdfs:label>
+    <rdfs:label xml:lang="es">Viajes y ocio</rdfs:label>
+    <rdfs:label xml:lang="en">Travel &amp; Leisure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB9537">
+    <rdfs:label xml:lang="de">Software</rdfs:label>
+    <rdfs:label xml:lang="es">Software</rdfs:label>
+    <rdfs:label xml:lang="en">Software</rdfs:label>
+    <rdfs:definition xml:lang="de">Herausgeber und Händler von Computersoftware für den Privat- und Geschäftsgebrauch. Ausgeschlossen sind Hersteller von Computerspielen (siehe: Spielzeug).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Compañías editoras y distribuidoras de software computacionalpara uso doméstico y empresarial. Excluye productores de juegoscomputacionales, clasificados bajo Juguetes.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Publishers and distributors of computer software for home or corporate use. Excludes computer game producers, which are classified under Toys.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB9530"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5333">
+    <rdfs:subClassOf rdf:resource="#ICB5330"/>
+    <rdfs:definition xml:lang="de">Betreiber von Apotheken, einschließlich Großhändler und Händler, die diese Geschäfte beliefern.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Operadores de farmacias, lo que incluye mayoristas ydistribuidores que atienden a estos negocios.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Operators of pharmacies, including wholesalers and distributors catering to these businesses.</rdfs:definition>
+    <rdfs:label xml:lang="de">Arzneimitteleinzelhändler</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas de medicamentos</rdfs:label>
+    <rdfs:label xml:lang="en">Drug Retailers</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3700">
+    <rdfs:subClassOf rdf:resource="#ICB3000"/>
+    <rdfs:label xml:lang="de">Persönliche und Haushaltsgegenstände</rdfs:label>
+    <rdfs:label xml:lang="es">Artículos personales y parael hogar</rdfs:label>
+    <rdfs:label xml:lang="en">Personal &amp; Household Goods</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2727">
+    <rdfs:definition xml:lang="de">Industrieunternehmen, die in drei oder mehr, verschiedenen Geschäftszweigen innerhalb einer Branche tätig sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas industriales dedicadas a tres o más clases denegocios dentro del sector industrial que difieren de manerasustancial entre sí.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Industrial companies engaged in three or more classes of business within the Industrial industry that differ substantially from each other.</rdfs:definition>
+    <rdfs:label xml:lang="de">Diversifizierte Gewerbe</rdfs:label>
+    <rdfs:label xml:lang="es">Actividad industrial diversificada</rdfs:label>
+    <rdfs:label xml:lang="en">Diversified Industrials</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2720"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2357">
+    <rdfs:label xml:lang="de">Hoch- und Tiefbau</rdfs:label>
+    <rdfs:label xml:lang="es">Construcción pesada</rdfs:label>
+    <rdfs:label xml:lang="en">Heavy Construction</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2350"/>
+    </rdfs:subClassOf>
+    <rdfs:definition xml:lang="de">Unternehmen, die im Bau von Geschäftsgebäuden und der Schaffung von Infrastrukturen wie Straßen, Brücken und Wohngebäuden tätig sind, sowie Unternehmen, die Dienstleistungen für Baufirmen anbieten, z.B. Architekten, Handwerker, Klempner und Elektriker.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la construcción de edificios comerciales,infraestructura del tipo de caminos y puentes, edificios deapartamentos residenciales y proveedores de servicios paraempresas de construcción, tales como arquitectos, albañiles,plomeros y contratistas eléctricos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the construction of commercial buildings, infrastructure such as roads and bridges, residential apartment buildings, and providers of services to construction companies, such as architects, masons, plumbers and electrical contractors.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5755">
+    <rdfs:subClassOf rdf:resource="#ICB5750"/>
+    <rdfs:label xml:lang="de">Freizeitanlagen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios recreativos</rdfs:label>
+    <rdfs:label xml:lang="en">Recreational Services</rdfs:label>
+    <rdfs:definition xml:lang="de">Fitness-Center, Kreuzfahrtgesellschaften, Kinos und Sportvereine.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de instalaciones y servicios para el ocio, incluidosgimnasios, empresas de cruceros, salas de cine y equiposdeportivos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of leisure facilities and services, including fitness centres, cruise lines, movie theatres and sports teams.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2730">
+    <rdfs:label xml:lang="de">Elektronische und elektrische Ausrüstungselemente</rdfs:label>
+    <rdfs:label xml:lang="es">Equipos eléctricos yelectrónicos</rdfs:label>
+    <rdfs:label xml:lang="en">Electronic &amp; Electrical Equipment</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2700"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2717">
+    <rdfs:definition xml:lang="de">Hersteller von Bauteilen und Ausrüstung für die Verteidigungsindustrie, einschließlich Militärflugzeuge, Radarausrüstung und Waffen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores de componentes y equipo para la industria de ladefensa, incluidos los aviones militares, equipos de radary armas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers of components and equipment for the defense industry, including military aircraft, radar equipment and weapons.</rdfs:definition>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2710"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Verteidigung</rdfs:label>
+    <rdfs:label xml:lang="es">Defensa</rdfs:label>
+    <rdfs:label xml:lang="en">Defense</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1733">
+    <rdfs:definition xml:lang="de">Eigentümer und Betreiber von Nutzwaldflächen, Baumschulen und Sägemühlen. Ausgeschlossen sind Lieferanten von Holzfertigprodukten, wie Holzbalken (siehe: Baustoffe und Befestigungen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Propietarios y operadores de plantaciones forestales, viverosde árboles forestales y aserraderos. Excluye proveedores deproductos de madera terminados tales como vigas de madera,que están clasificadas bajo Materiales de construcción einstalaciones fijas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Owners and operators of timber tracts, forest tree nurseries and sawmills. Excludes providers of finished wood products such as wooden beams, which are classified under Building Materials &amp; Fixtures.</rdfs:definition>
+    <rdfs:label xml:lang="de">Forstwirtschaft</rdfs:label>
+    <rdfs:label xml:lang="es">Silvicultura</rdfs:label>
+    <rdfs:label xml:lang="en">Forestry</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1730"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8773">
+    <rdfs:label xml:lang="de">Privatkundengeschäft</rdfs:label>
+    <rdfs:label xml:lang="es">Financiamiento del consumo</rdfs:label>
+    <rdfs:label xml:lang="en">Consumer Finance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8770"/>
+    <rdfs:definition xml:lang="de">Kreditkartengesellschaften und Anbieter von individuellen Finanzdiensten, wie z.B. Kreditunternehmen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas de tarjetas de crédito y proveedores de servicios definanzas personales, tales como empresas de créditos personalesy de cobro de cheques.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Credit card companies and providers of personal finance services such as personal loans and check cashing companies.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5373">
+    <rdfs:label xml:lang="de">Einzelhändler ohne Spezialisierung</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas diversificados</rdfs:label>
+    <rdfs:label xml:lang="en">Broadline Retailers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB5370"/>
+    <rdfs:definition xml:lang="de">Einzelhandelsgeschäfte oder Großhändler, die eine große Produktvielfalt anbieten, die von Gebrauchsgütern bis hin zu Textilien reicht.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Minoristas de descuento y mayoristas que ofrecen una ampliagama de productos, lo que incluye bienes de consumo duraderosy no duraderos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Retail outlets and wholesalers offering a wide variety of products including both hard goods and soft goods.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB0580">
+    <rdfs:label xml:lang="es">Alternative Energiequellen</rdfs:label>
+    <rdfs:label xml:lang="es">Energía alternativa</rdfs:label>
+    <rdfs:label xml:lang="en">Alternative Energy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB0500"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8673">
+    <rdfs:subClassOf rdf:resource="#ICB8670"/>
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in private Wohnimmobilien investieren. Einschließlich Wohnanlagen und Wohngemeinschaften.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades residenciales. Incluye edificios de apartamentos ycomunidades residenciales.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in residential home properties. Includes apartment buildings and residential communities.</rdfs:definition>
+    <rdfs:label xml:lang="de">Wohnungs-REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) residenciales</rdfs:label>
+    <rdfs:label xml:lang="en">Residential REITs</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3745">
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Freizeitprodukten, wie z.B. Musikinstrumente, Fotoausrüstung und -material, Wohnmobile, vierrädrige Motorräder und Wasserfahrzeuge, z.B. Jachten, Schlauchboote und Schnellboote.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de equipos recreativos.Incluye instrumentos musicales, equipos y suministros fotográficos,caravanas, vehículos todoterreno y vehículos recreativosmarinos, tales como yates, botes y lanchas a motor.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of recreational equipment. Includes musical instruments, photographic equipment and supplies, RVs, ATVs and marine recreational vehicles such as yachts, dinghies and speedboats.</rdfs:definition>
+    <rdfs:label xml:lang="de">Freizeitprodukte</rdfs:label>
+    <rdfs:label xml:lang="es">Productos recreativos</rdfs:label>
+    <rdfs:label xml:lang="en">Recreational Products</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3740"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3765">
+    <rdfs:subClassOf rdf:resource="#ICB3760"/>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Schuhen, Stiefeln, Sandalen, Turnschuhen und anderen Formen von Schuhen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de zapatos, botas, sandalias, zapatillasdeportivas y otros tipos de calzado.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of shoes, boots, sandals, sneakers and other types of footwear.</rdfs:definition>
+    <rdfs:label xml:lang="de">Schuhe</rdfs:label>
+    <rdfs:label xml:lang="es">Calzado</rdfs:label>
+    <rdfs:label xml:lang="en">Footwear</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2779">
+    <rdfs:definition xml:lang="de">Unternehmen, die LKW-Transportleistungen für den Handel anbieten. Ausgeschlossen sind Betreiber von Straßen und Tunnel (siehe: Transportdienstleistungen) sowie Mietwagenund Fuhrunternehmen (siehe: Reisen und Tourismus).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que proveen servicios de transporte comercial encamión. Excluye operadores de caminos y túneles, que estánclasificados bajo Servicios de transporte, y empresas dearriendo de vehículos y taxis, que están clasificadas bajoViajes y turismo.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that provide commercial trucking services. Excludes road and tunnel operators, which are classified under Transportation Services, and vehicle rental and taxi companies, which are classified under Travel &amp; Tourism.</rdfs:definition>
+    <rdfs:label xml:lang="de">LKW-Transport</rdfs:label>
+    <rdfs:label xml:lang="es">Transporte en camión</rdfs:label>
+    <rdfs:label xml:lang="en">Trucking</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2770"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0587">
+    <rdfs:label xml:lang="de">Alternative Kraftstoffe</rdfs:label>
+    <rdfs:label xml:lang="es">Combustibles alternativos</rdfs:label>
+    <rdfs:label xml:lang="en">Alternative Fuels</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB0580"/>
+    <rdfs:definition xml:lang="de">Firmen, die alternative Kraftstoffe wie Ethanol, Methanol, Wasserstoff und Bio-Kraftstoffe produzieren, die hauptsächlich zum Antrieb von Fahrzeugen benutzt werden und Firmen, die mit der Produktion von Kraftstoffzellen und/ oder mit der Entwicklung der Infrastruktur für alternative Kraftstoffe befasst sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas que producen combustibles alternativos, comoetanol, metanol, hidrógeno y biocombustibles, que se utilizanprincipalmente en vehículos (Strichpunkt) y empresas que se dedican ala producción de celdas de combustible para vehículos y aldesarrollo de infraestructura para combustibles alternativos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies that produce alternative fuels such as ethanol, methanol, hydrogen and bio-fuels that are mainly used to power vehicles, and companies that are involved in the production of vehicle fuel cells and/or the development of alternative fuelling infrastructure.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB0573">
+    <rdfs:label xml:lang="de">Ausrüstung und Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Equipos y servicios petroleros</rdfs:label>
+    <rdfs:label xml:lang="en">Oil Equipment &amp; Services</rdfs:label>
+    <rdfs:definition xml:lang="de">Anbieter von Ausrüstung und Dienstleistungen für Ölfelder und Offshore-Plattformen (Bohrung, Exploration, Erdbebeninformationen und Plattformbau).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de equipos y servicios para yacimientos petroleros yplataformas marinas, tales como extracción, exploración,servicios de información sísmica y construcción de plataformas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Suppliers of equipment and services to oil fields and offshore platforms, such as drilling, exploration, seismic-information services and platform construction.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB0570"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3353">
+    <rdfs:subClassOf rdf:resource="#ICB3350"/>
+    <rdfs:definition xml:lang="de">Hersteller von Motorrädern, Personenkraftwagen, inklusive Automobile, Geländelimousinen (SUV) und leichte Nutzfahrzeuge. Ausgeschlossen sind Hersteller von Schwerfahrzeugen, die als Lastkraftwagen klassifiziert werden, sowie Hersteller von Freizeitfahrzeugen (Wohnmobile und Geländewagen), die unter Freizeitprodukte zu klassifizieren sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes de motocicletas y vehículos de pasajeros, incluidosautomóviles, vehículos utilitarios deportivos (SUV) y camionesligeros. Excluye fabricantes de camiones pesados, que estánclasificados bajo Vehículos y camiones comerciales, y fabricantesde vehículos recreativos como caravanas y todoterrenos (RV yATV), que están clasificados bajo Productos recreativos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Makers of motorcycles and passenger vehicles, including cars, sport utility vehicles (SUVs) and light trucks. Excludes makers of heavy trucks, which are classified under Commercial Vehicles &amp;amp; Trucks, and makers of recreational vehicles (RVs and ATVs), which are classified under Recreational Products.</rdfs:definition>
+    <rdfs:label xml:lang="de">Automobile</rdfs:label>
+    <rdfs:label xml:lang="es">Automóviles</rdfs:label>
+    <rdfs:label xml:lang="en">Automobiles</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2799">
+    <rdfs:label xml:lang="de">Abfall- und Entsorgungsdienstleister</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de eliminaciónde desechos</rdfs:label>
+    <rdfs:label xml:lang="en">Waste &amp; Disposal Services</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2790"/>
+    <rdfs:definition xml:lang="de">Anbieter von Dienstleistungen für Schadstoffbegrenzung und Umweltschutz im Bereich Verwaltung, Rückgewinnung und Entsorgung von festen Abfällen und Gefahrstoffen, wie z.B. Mülldeponien und Recyclinghöfe. Ausgeschlossen sind Hersteller von industriellen Luft- und Wasserfiltersystemen (siehe: Industriemaschinen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de servicios ambientales y de control de la poluciónpara el manejo, recuperación y eliminación de materiales dedesecho sólidos y peligrosos, tales como vertederos y centrosde reciclaje. Excluye fabricantes de equipo de filtración industrialde aire y agua, que están clasificados bajo Maquinaria industrial.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of pollution control and environmental services for the management, recovery and disposal of solid and hazardous waste materials, such as landfills and recycling centres. Excludes manufacturers of industrial air and water filtration equipment, which are classified under Industrial Machinery.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3785">
+    <rdfs:definition xml:lang="de">Hersteller und Händler (einschließlich Tabakplantagen) von Zigaretten, Zigarren und anderen Tabakprodukten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de cigarrillos, puros y otros productosde tabaco. Incluye plantaciones de tabaco.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of cigarettes, cigars and other tobacco products. Includes tobacco plantations.</rdfs:definition>
+    <rdfs:label xml:lang="de">Tabakwaren</rdfs:label>
+    <rdfs:label xml:lang="es">Tabaco</rdfs:label>
+    <rdfs:label xml:lang="en">Tobacco</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3780"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8355">
+    <rdfs:label xml:lang="de">Banken</rdfs:label>
+    <rdfs:label xml:lang="es">Bancos</rdfs:label>
+    <rdfs:label xml:lang="en">Banks</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8350"/>
+    <rdfs:definition xml:lang="de">Banken, die ein großes Angebot an Finanzdienstleistungen bieten, u.a. Privatkundengeschäfte, Kredite und Geldtransfer.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Bancos que proporcionan una amplia gama de serviciosfinancieros, lo que incluye banca minorista, préstamos ytransferencias de dinero.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Banks providing a broad range of financial services, including retail banking, loans and money transmissions.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB9570">
+    <rdfs:subClassOf rdf:resource="#ICB9500"/>
+    <rdfs:label xml:lang="de">Hardware und Ausrüstung</rdfs:label>
+    <rdfs:label xml:lang="es">Hardware y equipo dealtatecnología</rdfs:label>
+    <rdfs:label xml:lang="en">Technology Hardware &amp; Equipment</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2750">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICB2700"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Produktionstechnik</rdfs:label>
+    <rdfs:label xml:lang="es">Ingeniería industrial</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2791">
+    <rdfs:subClassOf rdf:resource="#ICB2790"/>
+    <rdfs:definition xml:lang="de">Anbieter von nichtfinanziellen Dienstleistungen für ein breites Spektrum von Industrieunternehmen und Behörden. Dazu zählen Unternehmen im Druckgewerbe, Management-Consultants, Reinigungsunternehmen und Unternehmen, die Alarm- und Sicherheitssysteme installieren, warten und überwachen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Proveedores de servicios no financieros a una amplia gamade empresas industriales y gobiernos. Incluye proveedores deservicios de impresión, consultores de gestión, serviciosde limpieza de oficinas y empresas que instalan, mantienen ymonitorizan sistemas de alarma y seguridad.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Providers of nonfinancial services to a wide range of industrial enterprises and governments. Includes providers of printing services, management consultants, office cleaning services, and companies that install, service and monitor alarm and security systems.</rdfs:definition>
+    <rdfs:label xml:lang="de">Business-Supportleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de apoyo empresarial</rdfs:label>
+    <rdfs:label xml:lang="en">Business Support Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1779">
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Exploration und Produktion von Platin, Silber und anderen Edelmetallen tätig und nicht an anderer Stelle definiert sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la exploración y producción de platino,plata y otros metales preciosos no definidos en otras categorías.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the exploration for and production of platinum, silver and other precious metals not defined elsewhere.</rdfs:definition>
+    <rdfs:label xml:lang="de">Platin und Edelmetalle</rdfs:label>
+    <rdfs:label xml:lang="es">Platino y metales preciosos</rdfs:label>
+    <rdfs:label xml:lang="en">Platinum &amp; Precious Metals</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB1770"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8536">
+    <rdfs:definition xml:lang="de">Unternehmen, die hauptsächlich Unfall-, Feuer- und Autoversicherungen sowie Versicherungen gegen Schiffsunfälle, Kunstfehler- und andere Arten von Versicherungen (keine Lebensversicherungen) anbieten.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas principalmente a seguros contra accidentes,incendio, automotrices, marítimos, de responsabilidad civil yotras clases de seguros distintos a los de vida.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged principally in accident, fire, automotive, marine, malpractice and other classes of nonlife insurance.</rdfs:definition>
+    <rdfs:label xml:lang="de">Sach- und Unfallversicherungen</rdfs:label>
+    <rdfs:label xml:lang="es">Seguros de propiedad y dañosa terceros</rdfs:label>
+    <rdfs:label xml:lang="en">Property &amp; Casualty Insurance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB8530"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB5300">
+    <rdfs:subClassOf rdf:resource="#ICB5000"/>
+    <rdfs:label xml:lang="de">Einzelhandel</rdfs:label>
+    <rdfs:label xml:lang="es">Minoristas</rdfs:label>
+    <rdfs:label xml:lang="en">Retail</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB7573">
+    <rdfs:subClassOf rdf:resource="#ICB7570"/>
+    <rdfs:label xml:lang="de">Gasversorgung</rdfs:label>
+    <rdfs:label xml:lang="es">Distribución de gas</rdfs:label>
+    <rdfs:label xml:lang="en">Gas Distribution</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die Endverbraucher mit Erdgas versorgen. Energieerzeugung Ausgeschlossen sind Lieferanten von Erdgas als Betriebsmittel (siehe: Erdöl und Erdgas).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Distribuidores de gas a usuarios finales. Excluye proveedores degas natural como materia prima, que se encuentra clasificadobajo Petróleo y gas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Distributors of gas to end users. Excludes providers of natural gas as a commodity, which are classified under the Oil &amp; Gas industry.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB8980">
+    <rdfs:subClassOf rdf:resource="#ICB8900"/>
+    <rdfs:label xml:lang="de">Kapitalinvestitionen</rdfs:label>
+    <rdfs:label xml:lang="es">Instrumentos de inversión derenta variable</rdfs:label>
+    <rdfs:label xml:lang="en">Equity Investment Instruments</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8674">
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die in eine Vielzahl von Immobilien investieren, ohne sich auf irgendeinen bestimmten Typ zu konzentrieren.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en diversos tipos depropiedades sin concentrarse en un tipo específico.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that invest in a variety of property types without a concentration on any single type.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8670"/>
+    <rdfs:label xml:lang="de">Diversifizierte REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) diversificados</rdfs:label>
+    <rdfs:label xml:lang="en">Diversified REITs</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB6570">
+    <rdfs:label xml:lang="de">Mobil-Telekommunikation</rdfs:label>
+    <rdfs:label xml:lang="es">Telecomunicaciones móviles</rdfs:label>
+    <rdfs:label xml:lang="en">Mobile Telecommunications</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB6500"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB1771">
+    <rdfs:subClassOf rdf:resource="#ICB1770"/>
+    <rdfs:label xml:lang="de">Kohle</rdfs:label>
+    <rdfs:label xml:lang="es">Carbón</rdfs:label>
+    <rdfs:label xml:lang="en">Coal</rdfs:label>
+    <rdfs:definition xml:lang="de">Unternehmen, die in der Kohleexploration oder -gewinnung tätig sind.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Empresas dedicadas a la exploración o extracción de carbón.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Companies engaged in the exploration for or mining of coal.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8675">
+    <rdfs:subClassOf rdf:resource="#ICB8670"/>
+    <rdfs:label xml:lang="de">Spezielle REITs</rdfs:label>
+    <rdfs:label xml:lang="es">Fondos de inversión inmobiliaria(REIT) especializados</rdfs:label>
+    <rdfs:label xml:lang="en">Specialty REITs</rdfs:label>
+    <rdfs:definition xml:lang="de">Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die in Selbstlagerzentren, Immobilien der Gesundheitsfürsorge wie z. B. Krankenhäuser, Langzeitbetreuungsanlagen und Pflegelabors sowie andere Spezialimmobilien wie z. B. Autohändlerimmobilien, Bauholzimmobilien und Netzvermietungsimmobilien investieren.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en propiedades deminibodegas para consumidores (Strichpunkt) propiedades en el sector dela atención de la salud, como hospitales, centros con asistenciay laboratorios clínicos, y otras propiedades especializadas, comoinstalaciones para concesionarios automotrices, propiedadesmadereras y propiedades en régimen de alquiler neto.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that invest in self storage properties, properties in the health care industry such as hospitals, assisted living facilities and health care laboratories, and other specialized properties such as auto dealership facilities, timber properties and net lease properties.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB7530">
+    <rdfs:subClassOf rdf:resource="#ICB7500"/>
+    <rdfs:label xml:lang="de">Elektrizität</rdfs:label>
+    <rdfs:label xml:lang="es">Electricidad</rdfs:label>
+    <rdfs:label xml:lang="en">Electricity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3726">
+    <rdfs:label xml:lang="de">Möbel</rdfs:label>
+    <rdfs:label xml:lang="es">Muebles</rdfs:label>
+    <rdfs:label xml:lang="en">Furnishings</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB3720"/>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von Möbeln (einschließlich Stühle, Tische, Schreibtische, Teppichboden, Tapete und Büromöbel).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de muebles, lo que incluye sillas,mesas, escritorios, alfombras, papel tapiz y muebles de oficina.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of furniture, including chairs, tables, desks, carpeting, wallpaper and office furniture.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2771">
+    <rdfs:definition xml:lang="de">Betreiber von Post- und Paketlieferdiensten für Handel und Privatkunden. Dazu zählen zudem Zustell- und Logistikdienstleistungen, die hauptsächlich durch Lufttransport realisiert werden.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Operadores de servicios de correo y entrega de paquetes parauso comercial y de consumo. Incluye servicios de mensajería ylogística que involucran principalmente el transporte aéreo.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Operators of mail and package delivery services for commercial and consumer use. Includes courier and logistic services primarily involving air transportation.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB2770"/>
+    <rdfs:label xml:lang="de">Versanddienst</rdfs:label>
+    <rdfs:label xml:lang="es">Servicios de entrega</rdfs:label>
+    <rdfs:label xml:lang="en">Delivery Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2737">
+    <rdfs:subClassOf rdf:resource="#ICB2730"/>
+    <rdfs:label xml:lang="de">Elektronische Ausrüstungselemente</rdfs:label>
+    <rdfs:label xml:lang="es">Equipos electrónicos</rdfs:label>
+    <rdfs:label xml:lang="en">Electronic Equipment</rdfs:label>
+    <rdfs:definition xml:lang="de">Hersteller und Händler von elektronischen Produkten, die in verschiedenen Industriezweigen genutzt werden. Dazu zählen u.a. Hersteller von Laser-, Chipkarten- und Barcodescanner, Ausrüstung zur Erkennung von Fingerabdrücken und anderen elektronischen Werksausrüstungen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Fabricantes y distribuidores de productos electrónicos usadosen distintas industrias. Incluye fabricantes de láseres, tarjetasinteligentes, lectores de código de barras, lectores de huellasdigitales y otros equipos de fábrica electrónicos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Manufacturers and distributors of electronic products used in different industries. Includes makers of lasers, smart cards, bar scanners, fingerprinting equipment and other electronic factory equipment.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB4500">
+    <rdfs:subClassOf rdf:resource="#ICB4000"/>
+    <rdfs:label xml:lang="de">Gesundheit</rdfs:label>
+    <rdfs:label xml:lang="es">Atención de la salud</rdfs:label>
+    <rdfs:label xml:lang="en">Health Care</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB9530">
+    <rdfs:subClassOf rdf:resource="#ICB9500"/>
+    <rdfs:label xml:lang="de">Software- und Computer-Dienstleister</rdfs:label>
+    <rdfs:label xml:lang="es">Software y serviciosinformáticos</rdfs:label>
+    <rdfs:label xml:lang="en">Software &amp; Computer Services</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB5557">
+    <rdfs:definition xml:lang="de">Herausgeber von Informationen über Print- oder elektronische Medien.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Editores de información a través de medios impresoso electrónicos.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Publishers of information via printed or electronic media.</rdfs:definition>
+    <rdfs:label xml:lang="de">Verlagswesen</rdfs:label>
+    <rdfs:label xml:lang="es">Editoriales</rdfs:label>
+    <rdfs:label xml:lang="en">Publishing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB5550"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB3535">
+    <rdfs:subClassOf rdf:resource="#ICB3530"/>
+    <rdfs:label xml:lang="de">Brennereien und Winzer</rdfs:label>
+    <rdfs:label xml:lang="es">Destilerías y vinicultores</rdfs:label>
+    <rdfs:label xml:lang="en">Distillers &amp; Vintners</rdfs:label>
+    <rdfs:definition xml:lang="de">Erzeuger, Brennereien, Winzer, Mischer und Transporteure von Wein und Spirituosen, wie Whisky, Brandy, Rum, Gin oder Liköre.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Productores, destiladores, vinicultores y transportadores de vinoy licores, tales como whisky, brandy, ron, ginebra y licores.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Producers, distillers, vintners, blenders and shippers of wine and spirits such as whisky, brandy, rum, gin or liqueurs.</rdfs:definition>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2700">
+    <rdfs:label xml:lang="de">Industriegüter und Dienstleistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Bienes y servicios industriales</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Goods &amp; Services</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2000"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2710">
+    <rdfs:subClassOf rdf:resource="#ICB2700"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <rdfs:label xml:lang="de">Luftfahrt und Verteidigung</rdfs:label>
+    <rdfs:label xml:lang="es">Aeroespacial y defensa</rdfs:label>
+    <rdfs:label xml:lang="en">Aerospace &amp; Defense</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB2757">
+    <rdfs:definition xml:lang="de">Entwickler, Hersteller und Händler von sowie Montagefirmen für Industriemaschinen und Werksausrüstungen, z.B. Werkzeugmaschinen, Drehmaschinen, Pressen und Montagestraßenausrüstung. Dazu zählen zudem Hersteller von Steuerausrüstung zur Regulierung der Schadstoffemission, Gussformen, Pressformen, geschmiedeten Formen, Strukturstahlarbeiten, Kompressoren, Pumpen, Lagern, Fahrstühlen und Rolltreppen.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Diseñadores, fabricantes, distribuidores e instaladoresde maquinaria industrial y equipo de fábrica, tales comomáquinas herramienta, tornos, prensas y equipos de líneasde ensamblaje. Incluye fabricantes de equipos de control dela polución, fundición, prensado, uniones soldadas, aceroestructural, compresores, bombas, rodamientos, elevadoresy escaleras mecánicas.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Designers, manufacturers, distributors and installers of industrial machinery and factory equipment, such as machine tools, lathes, presses and assembly line equipment. Includes makers of pollution control equipment, castings, pressings, welded shapes, structural steelwork, compressors, pumps, bearings, elevators and escalators.</rdfs:definition>
+    <rdfs:label xml:lang="de">Industriemaschinen</rdfs:label>
+    <rdfs:label xml:lang="es">Maquinaria industrial</rdfs:label>
+    <rdfs:label xml:lang="en">Industrial Machinery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICB2750"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB3500">
+    <rdfs:subClassOf rdf:resource="#ICB3000"/>
+    <rdfs:label xml:lang="de">Nahrungsmittel und Getränke</rdfs:label>
+    <rdfs:label xml:lang="es">Alimentos y bebidas</rdfs:label>
+    <rdfs:label xml:lang="en">Food &amp; Beverage</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB8995">
+    <rdfs:definition xml:lang="de">Nicht-unternehmensbezogene Investmentanlagen mit unbegrenzter Emissionshöhe, z.B. Investmentgesellschaften und -fonds mit unbegrenzter Emissionshöhe, Anlagefonds, börsengehandelte Fonds, Währungsfonds und Split-Capital-Trusts.</rdfs:definition>
+    <rdfs:definition xml:lang="es">Instrumentos de inversión abiertos no corporativos, tales comoempresas y fondos de inversión abiertos, fondos comunes,fondos cotizados en bolsa (Exchange Traded Fund, ETF), fondosunitarios y fondos de capital mixto.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Noncorporate, open-ended investment instruments such as open-ended investment companies and funds, unit trusts, ETFs and currency funds and split capital trusts.</rdfs:definition>
+    <rdfs:subClassOf rdf:resource="#ICB8990"/>
+    <rdfs:label xml:lang="de">Investitionen ohne Kapitalbeteiligung</rdfs:label>
+    <rdfs:label xml:lang="es">Instrumentos de inversión derenta fija</rdfs:label>
+    <rdfs:label xml:lang="en">Nonequity Investment Instruments</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ICB4533">
+    <rdfs:subClassOf rdf:resource="#ICB4530"/>
+    <rdfs:definition xml:lang="de">Eigentümer und Betreiber von Gesundheitseinrichtungen, Krankenhäusern sowie Kliniken, Zahnärzte, Augenoptiker, Pflegeheime, Rehabilitationszentren und Altersheime. Ausgeschlossen sind veterinärmedizinische Einrichtungen (siehe: Spezielle Dienstleistungen).</rdfs:definition>
+    <rdfs:definition xml:lang="es">Propietarios y operadores de organizaciones de mantenimientode la salud, hospitales, clínicas, dentistas, oculistas, casasde reposo, centros de rehabilitación y hogares para jubilados.Excluye servicios veterinarios, que están clasificados bajoServicios al consumidor especializados.</rdfs:definition>
+    <rdfs:definition xml:lang="en">Owners and operators of health maintenance organizations, hospitals, clinics, dentists, opticians, nursing homes, rehabilitation and retirement centres. Excludes veterinary services, which are classified under Specialized Consumer Services.</rdfs:definition>
+    <rdfs:label xml:lang="de">Medizinische Leistungen</rdfs:label>
+    <rdfs:label xml:lang="es">Proveedores de atenciónde la salud</rdfs:label>
+    <rdfs:label xml:lang="en">Health Care Providers</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2720">
+    <rdfs:subClassOf rdf:resource="#ICB2700"/>
+    <rdfs:label xml:lang="de">Allgemeine Industrieunternehmen</rdfs:label>
+    <rdfs:label xml:lang="es">Productos industriales generales</rdfs:label>
+    <rdfs:label xml:lang="en">General Industrials</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ICB2350">
+    <rdfs:subClassOf rdf:resource="#ICB2300"/>
+    <rdfs:label xml:lang="de">Bauwesen und Materialien</rdfs:label>
+    <rdfs:label xml:lang="es">Construcción y materiales</rdfs:label>
+    <rdfs:label xml:lang="en">Construction &amp; Materials</rdfs:label>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#definition">
+    <rdfs:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:definition>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >even though rdfs:definition is not an original member of the RDFS namespace, since it is related to the rdfs:label value</rdfs:label>
+  </owl:AnnotationProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

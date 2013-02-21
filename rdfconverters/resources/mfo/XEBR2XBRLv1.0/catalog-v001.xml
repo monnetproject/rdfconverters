@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1354140921705" name="file:/Users/krieger/Desktop/MONNET/ontology/XEBR2XBRL/XEBR2XBRLv1.0/xebr2xbrl.owl" uri="xebr2xbrl.owl"/>
+    </group>
+</catalog>

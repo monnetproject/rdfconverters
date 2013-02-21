@@ -16,7 +16,12 @@ setup(
         'rdflib >= 3.2.3',
         'beautifulsoup4',
         'lxml',
-        'distribute'
+        'distribute',
+        'nltk >= 2.0.4'
+    ],
+
+    dependency_links = [
+        'http://github.com/nltk/nltk/tarball/2and3#egg=nltk'
     ],
 
     entry_points = {

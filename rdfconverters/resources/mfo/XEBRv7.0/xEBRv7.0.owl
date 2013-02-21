@@ -1,0 +1,2240 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:xebr="http://www.dfki.de/lt/xebr.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.dfki.de/lt/xebr.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >(C) Hans-Ulrich Krieger</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >v7.0</owl:versionInfo>
+  </owl:Ontology>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#monetary"/>
+  <owl:Class rdf:ID="OfficialFirstAndMiddleNamesList">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Class"/>
+    </rdfs:subClassOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:ID="OfficialNamePresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Official first and middle names [List]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyOfficialList">
+    <xebr:partOf>
+      <owl:Class rdf:ID="CompanyOfficialsReport"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyOfficialsReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Company Official [List]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#OfficialNamePresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official name [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialFunctionList">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official function [List]</rdfs:label>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyNameList">
+    <xebr:partOf>
+      <owl:Class rdf:ID="CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Company name [List]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyHistoryReport">
+    <rdfs:label xml:lang="en">COMPANY HISTORY [Report]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="EquityPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Equity [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:ID="EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ExtraordinaryIncomePresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Extraordinary income [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:ID="NetExtraordinaryIncomePresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyDataValidityPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Company data validity [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="SubscribedCapitalUnpaidPresentation">
+    <rdfs:label xml:lang="en">Subscribed capital unpaid [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:ID="AssetsPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="#NetExtraordinaryIncomePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:ID="IncomeStatementPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Net extraordinary income [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyActivityList">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Company activity [List]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="KeyBalanceSheetFiguresReport">
+    <rdfs:label xml:lang="en">KEY BALANCE SHEET FIGURES [Report]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NetFinancialIncomePresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#IncomeStatementPresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Net financial income [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CollectiveProcedurePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Collective procedure [Presentation]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="FinancialChargesPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#NetFinancialIncomePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Financial charges [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AmountsPayableAfterMoreThanOneYearPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Amounts payable after more than one year [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:ID="AmountsPayablePresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialShareholdingPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official shareholding [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AmountsPayableWithinOneYearPresentation">
+    <rdfs:label xml:lang="en">Amounts payable within one year [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="#AmountsPayablePresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="MainEventsPresentation">
+    <xebr:partOf rdf:resource="#CompanyHistoryReport"/>
+    <rdfs:label xml:lang="en">Main events [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:subClassOf rdf:resource="#CompanyHistoryReport"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialPlaceOfBirthPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official place of birth [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#OfficialNamePresentation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TradeDebtsPayableWithinOneYearPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <rdfs:label xml:lang="en">Trade debts payable within one year [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialDataValidityPresentation">
+    <rdfs:label xml:lang="en">Official data validity [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CompanyOfficialsReport">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">COMPANY OFFICIALS [Report]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ProvisionsForLiabilitiesAndChargesPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:ID="ProvisionsAndDeferredTaxesPresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Provisions for liabilities and charges  [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialAddressCityOrTownPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official address, City or town [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyIdNumberList">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company ID number [List]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AmountsReceivablePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:ID="CurrentAssetsPresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Amounts receivable [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="StaffCostsPresentation">
+    <rdfs:label xml:lang="en">Staff costs [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:ID="OperatingChargesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MainOfficialPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf rdf:resource="#CompanyOfficialsReport"/>
+    <rdfs:subClassOf rdf:resource="#CompanyOfficialsReport"/>
+    <rdfs:label xml:lang="en">Main official [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OperatingBachRatiosPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:ID="NetOperatingIncomePresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Operating Bach Ratios [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ProvisionsAndDeferredTaxesPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Provisions and deferred taxes [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="#EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CashAtBankAndInHandPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:ID="LiquidAssetsPresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Cash at bank and in hand [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherOperatingChargesAndTaxesPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Other operating charges and taxes [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="#OperatingChargesPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialAddressDetailsPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">Official address, Details [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CurrentAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#AssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Current assets [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyAddressTownPresentation">
+    <rdfs:label xml:lang="en">Company address, Town [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:ID="CompanyAddressList"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OperatingIncomePresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="#NetOperatingIncomePresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Operating income [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="InterestAndSimilarChargesPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#FinancialChargesPresentation"/>
+    <rdfs:label xml:lang="en">Interest and similar charges [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:about="#NetOperatingIncomePresentation">
+    <rdfs:label xml:lang="en">Net operating income [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#IncomeStatementPresentation"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EventDatePresentation">
+    <rdfs:label xml:lang="en">Event date [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:ID="CompanyHistoryEventList"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EventDescriptionPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyHistoryEventList"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Event description [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyAddressComplementPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Company address, Complement [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyAddressList"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialAddressComplementPresentation">
+    <rdfs:label xml:lang="en">Official address, Complement [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyAddressDetailsPresentation">
+    <rdfs:label xml:lang="en">Company address, Details [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyAddressList"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AmountsPayablePresentation">
+    <rdfs:label xml:lang="en">Amounts payable [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#EquityAndLiabilitiesPresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="AccruedChargesAndDeferredIncomePresentation">
+    <rdfs:label xml:lang="en">Accrued charges and deferred income [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf rdf:resource="#AmountsPayablePresentation"/>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IntangibleFixedAssetsPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:ID="FixedAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Intangible fixed assets [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CostOfMaterialsAndConsumablesPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf>
+      <owl:Class rdf:about="#OperatingChargesPresentation"/>
+    </xebr:partOf>
+    <rdfs:label xml:lang="en">Cost of materials and consumables [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:about="#AssetsPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+    <xebr:partOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+    <rdfs:label xml:lang="en">Assets [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="FinancialFixedAssetsPresentation">
+    <xebr:partOf>
+      <owl:Class rdf:about="#FixedAssetsPresentation"/>
+    </xebr:partOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Financial fixed assets [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#OperatingChargesPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#NetOperatingIncomePresentation"/>
+    <rdfs:label xml:lang="en">Operating charges [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#FixedAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Fixed assets [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf rdf:resource="#AssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ValueAdjustmentsOnNonFinancialAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#NetOperatingIncomePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Value adjustments on non financial assets [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#CompanyAddressList">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Company address [List]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PropertyPlantAndEquipmentPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Property, plant, and equipment [Presentation]</rdfs:label>
+    <xebr:partOf>
+      <owl:Class rdf:ID="TangibleFixedAssetsPresentation"/>
+    </xebr:partOf>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyContactPointList">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Company contact point [List]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyIdTownOfRegistrationList">
+    <rdfs:label xml:lang="en">Company ID, Town of registration [List]</rdfs:label>
+    <xebr:partOf rdf:resource="#CompanyIdNumberList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CompanyHistoryEventList">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf rdf:resource="#CompanyHistoryReport"/>
+    <xebr:partOf rdf:resource="#CompanyHistoryReport"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Company history event [List]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CompanyLegalFormList">
+    <rdfs:label xml:lang="en">Company legal form [List]</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </rdfs:subClassOf>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf>
+      <owl:Class rdf:about="#CompanyIdentificationReport"/>
+    </xebr:partOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeferredChargesAndAccruedIncomePresentation">
+    <xebr:partOf rdf:resource="#CurrentAssetsPresentation"/>
+    <rdfs:label xml:lang="en">Deferred charges and accrued income [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="ExtraordinaryChargesPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#NetExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">Extraordinary charges [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EventCategoryPresentation">
+    <rdfs:label xml:lang="en">Event category [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#CompanyHistoryEventList"/>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:about="#TangibleFixedAssetsPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Tangible fixed assets [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <xebr:partOf rdf:resource="#FixedAssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficialIdNumberList">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">Official ID number [List]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:about="#CompanyIdentificationReport">
+    <rdfs:label xml:lang="en">COMPANY IDENTIFICATION [Report]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="FinancialIncomePresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf rdf:resource="#NetFinancialIncomePresentation"/>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Financial income [Presentation]</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#IncomeStatementPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <xebr:partOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+    <rdfs:label xml:lang="en">Income statement [Presentation]</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Report"/>
+  <owl:Class rdf:about="#LiquidAssetsPresentation">
+    <rdfs:label xml:lang="en">Liquid assets [Presentation]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <xebr:partOf rdf:resource="#CurrentAssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EquityAndLiabilitiesPresentation">
+    <rdfs:label xml:lang="en">Equity and Liabilities [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:subClassOf rdf:resource="#KeyBalanceSheetFiguresReport"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TradeDebtsPayableAfterMoreThanOneYearPresentation">
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Trade debts payable after more than one year [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:Class>
+  <owl:Class rdf:ID="StocksPresentation">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:subClassOf rdf:resource="#Class"/>
+    <rdfs:label xml:lang="en">Stocks [Presentation]</rdfs:label>
+    <xebr:partOf rdf:resource="#CurrentAssetsPresentation"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasCompanyOfficialsReport">
+    <rdfs:domain rdf:resource="#Report"/>
+    <rdfs:label xml:lang="en">COMPANY OFFICIALS [Report]</rdfs:label>
+    <rdfs:range rdf:resource="#CompanyOfficialsReport"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="partOf">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCompanyHistoryReport">
+    <rdfs:label xml:lang="en">COMPANY HISTORY [Report]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="#CompanyHistoryReport"/>
+    <rdfs:domain rdf:resource="#Report"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasKeyBalanceSheetFiguresReport">
+    <rdfs:label xml:lang="en">KEY BALANCE SHEET FIGURES [Report]</rdfs:label>
+    <rdfs:domain rdf:resource="#Report"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="#KeyBalanceSheetFiguresReport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCompanyIdentificationReport">
+    <rdfs:label xml:lang="en">COMPANY IDENTIFICATION [Report]</rdfs:label>
+    <rdfs:range rdf:resource="#CompanyIdentificationReport"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#Report"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalStatusType">
+    <rdfs:label xml:lang="en">Legal status, Type</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAffiliatedEnterprises">
+    <rdfs:domain rdf:resource="#FinancialFixedAssetsPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Affiliated enterprises</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIncomeTaxes">
+    <rdfs:label xml:lang="en">Income taxes</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#IncomeStatementPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalFormText">
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Legal form, Text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyEventLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#EventDescriptionPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Company event, Language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Financial fixed assets [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#FinancialFixedAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasActivityType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">Activity, Type</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyActivityList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPlantAndMachinery">
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Plant and machinery</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTradeDebtors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Trade debtors</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AmountsReceivablePresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyIdType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Company ID, Type</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyIdNumberList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLiquidationDate">
+    <rdfs:label xml:lang="en">Liquidation date</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIncomeTotal">
+    <rdfs:label xml:lang="en">Income [Total]</rdfs:label>
+    <rdfs:domain rdf:resource="#IncomeStatementPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyPostcode">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Company postcode</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyAddressTownPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDebentureLoansAfterMoreThanOneYear">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Debenture loans after more than one year</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasValueAdjustmentsOnNonFinancialAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Value adjustments on non financial assets [Total]</rdfs:label>
+    <rdfs:domain rdf:resource="#ValueAdjustmentsOnNonFinancialAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyEventInformationSource">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Company event, Information source</rdfs:label>
+    <rdfs:domain rdf:resource="#EventDescriptionPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasValueAdjustmentsOnFinancialAssets">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#FinancialChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Value adjustments on financial assets</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherFinancialCreditorsAfterMoreThanOneYear">
+    <rdfs:domain rdf:resource="#TradeDebtsPayableAfterMoreThanOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Other financial creditors after more than one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialDebtsPayableWithinOneYear">
+    <rdfs:label xml:lang="en">Financial debts payable within one year</rdfs:label>
+    <rdfs:domain rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDescriptionOfSharesOrDebentures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialShareholdingPresentation"/>
+    <rdfs:label xml:lang="en">Description of shares or debentures</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCostOfMaterialsAndConsumablesTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Cost of materials and consumables [Total]</rdfs:label>
+    <rdfs:domain rdf:resource="#CostOfMaterialsAndConsumablesPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPaymentsReceivedOnAccountsOfOrderWithinOneYear">
+    <rdfs:label xml:lang="en">Payments received on accounts of order within one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTownNameLanguage">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">Town name, Language</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyIdTownOfRegistrationList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyContactPointDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyContactPointList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company contact point, Description</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSocialSecurityCosts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#StaffCostsPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Social security costs</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialMarriedName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialNamePresentation"/>
+    <rdfs:label xml:lang="en">Official married name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCollectiveProcedureDate">
+    <rdfs:domain rdf:resource="#CollectiveProcedurePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Collective procedure, Date</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTownNameText">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Town name, Text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyIdTownOfRegistrationList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFunctionLanguage">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official function, Language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCapital">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Capital</rdfs:label>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherValueAdjustmentsAndProvisions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Other value adjustments and provisions</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#ValueAdjustmentsOnNonFinancialAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasExtraordinaryChargesTotal">
+    <rdfs:label xml:lang="en">Extraordinary charges [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#ExtraordinaryChargesPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyAddressCountyOrState">
+    <rdfs:label xml:lang="en">Company address, County or State</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyAddressList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMainActivityFlag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyActivityList"/>
+    <rdfs:label xml:lang="en">Main activity [Flag]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyTownComplement">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyAddressTownPresentation"/>
+    <rdfs:label xml:lang="en">Company town complement</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialIdentificationStartingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Official identification, Starting date</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Taxes, remuneration, and social security payable after more than one year</rdfs:label>
+    <rdfs:domain rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProfitLossForThePeriodTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Profit (loss) for the period [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#IncomeStatementPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsReceivableWithinOneYear">
+    <rdfs:domain rdf:resource="#AmountsReceivablePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Amounts receivable within one year </rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMainFormFlag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Main form [Flag]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDepreciationOnIntangibleAndTangibleFixedAssets">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Depreciation on intangible and tangible fixed assets</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#ValueAdjustmentsOnNonFinancialAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyAddressCountry">
+    <rdfs:domain rdf:resource="#CompanyAddressList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company address, Country</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasWagesAndSalaries">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#StaffCostsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Wages and salaries</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialProfitLossTotal">
+    <rdfs:domain rdf:resource="#NetFinancialIncomePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Financial profit (loss) [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialPostcode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialAddressCityOrTownPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official postcode</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDateOfEvent">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#EventDatePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Date of event</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialPostalBox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">Official postal box</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTownCodeValue">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Town code, Value</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyIdTownOfRegistrationList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyStreetType">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">Company street type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLastBalanceSheetPublished">
+    <rdfs:label xml:lang="en">Last balance sheet published</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAccruedChargesAndDeferredIncomeTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:domain rdf:resource="#AccruedChargesAndDeferredIncomePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Accrued charges and deferred income [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasInterestAndSimilarChargesTotal">
+    <rdfs:label xml:lang="en">Interest and similar charges [Total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#InterestAndSimilarChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyNameLanguage">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Company name, Language</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyNameList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherOperatingIncome">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Other operating income</rdfs:label>
+    <rdfs:domain rdf:resource="#OperatingIncomePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherOperatingChargesAndTaxesTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#OtherOperatingChargesAndTaxesPresentation"/>
+    <rdfs:label xml:lang="en">Other operating charges and taxes [Total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialDebtsPayableAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Financial debts payable after more than one year</rdfs:label>
+    <rdfs:domain rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasNetTurnover">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Net turnover</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#OperatingIncomePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPaymentsOnAccount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#StocksPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Payments on account</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPensionsAndSimilarCommitments">
+    <rdfs:label xml:lang="en">Pensions and similar commitments</rdfs:label>
+    <rdfs:domain rdf:resource="#StaffCostsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMainNameFlag">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Main name [Flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyNameList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialIdType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialIdNumberList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Official ID, Type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasChargesTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Charges [Total]</rdfs:label>
+    <rdfs:domain rdf:resource="#IncomeStatementPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFamilyName">
+    <rdfs:label xml:lang="en">Official family name</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialNamePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFunctionText">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official function, Text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProvisionsForLiabilitiesAndChargesTotal">
+    <rdfs:domain rdf:resource="#ProvisionsForLiabilitiesAndChargesPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Provisions for liabilities and charges [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialIdValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialIdNumberList"/>
+    <rdfs:label xml:lang="en">Official ID, Value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIncorporationDate">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Incorporation date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasMainCompanyAddressFlag">
+    <rdfs:domain rdf:resource="#CompanyAddressList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">Main company address [Flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherNonFinancialCreditorsWithinOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableWithinOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Other non financial creditors  within one year</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherIntangibleFixedAssets">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#IntangibleFixedAssetsPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Other intangible fixed assets</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsPayableWithinOneYearTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Amounts payable within one year [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasExtraordinaryIncomeTotal">
+    <rdfs:domain rdf:resource="#ExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">Extraordinary income [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherFinancialCharges">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Other financial charges</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#InterestAndSimilarChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyContactPointLanguage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">Company contact point, Language</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialIdentificationEndingDate">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Official identification, Ending date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherCreditorsWithinOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableWithinOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Other creditors  within one year</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIntangibleFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#IntangibleFixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Intangible fixed assets [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialDateOfBirth">
+    <rdfs:domain rdf:resource="#OfficialNamePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Official date of birth</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalFormType">
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Legal form, Type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyIdentificationEndingDate">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company identification, Ending date</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyDataValidityPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsOwedToCreditInstitutionsAfterMoreThanOneYear">
+    <rdfs:label xml:lang="en">Amounts owed to credit institutions after more than one year</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyNameType">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#CompanyNameList"/>
+    <rdfs:label xml:lang="en">Company name, Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDeferredChargesAndAccruedIncomeTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#DeferredChargesAndAccruedIncomePresentation"/>
+    <rdfs:label xml:lang="en">Deferred charges and accrued income [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsReceivableAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#AmountsReceivablePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+    <rdfs:label xml:lang="en">Amounts receivable after more than one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialNationality">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Official nationality</rdfs:label>
+    <rdfs:domain rdf:resource="#OfficialPlaceOfBirthPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLandAndBuildings">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Land and buildings</rdfs:label>
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasEquityTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Equity [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasIncorporationPlace">
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Incorporation place</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialStreetNumber">
+    <rdfs:label xml:lang="en">Official street number</rdfs:label>
+    <rdfs:domain rdf:resource="#OfficialAddressDetailsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyIdValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Company ID, Value</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyIdNumberList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalFormCode">
+    <rdfs:label xml:lang="en">Legal form, Code</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsOwedToCreditInstitutionsWithinOneYear">
+    <rdfs:label xml:lang="en">Amounts owed to credit institutions within one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyStreetName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">Company street name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherExternalCharges">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Other external charges</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CostOfMaterialsAndConsumablesPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Assets [Total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#AssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDeferredTaxes">
+    <rdfs:label xml:lang="en">Deferred taxes</rdfs:label>
+    <rdfs:domain rdf:resource="#ProvisionsAndDeferredTaxesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasActivityCode">
+    <rdfs:label xml:lang="en">Activity, Code</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyActivityList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPaymentsOnAccountAndAssetsInConstruction">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Payments on account and assets in construction</rdfs:label>
+    <rdfs:domain rdf:resource="#TangibleFixedAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyIdentificationStartingDate">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyDataValidityPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Company identification, Starting date</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsPayableAfterMoreThanOneYearTotal">
+    <rdfs:domain rdf:resource="#AmountsPayableAfterMoreThanOneYearPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Amounts payable after more than one year [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAddedValueBachS-5-8">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Added value BACH (S - 5 - 8)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OperatingBachRatiosPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialIncomeTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#FinancialIncomePresentation"/>
+    <rdfs:label xml:lang="en">Financial income [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSigningAuthorityFlag">
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">Signing authority [Flag]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProfitOrLossOnOrdinaryActivitiesBeforeTaxes">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Profit or loss on ordinary activities before taxes</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#IncomeStatementPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFirstName">
+    <rdfs:label xml:lang="en">Official first name</rdfs:label>
+    <rdfs:domain rdf:resource="#OfficialFirstAndMiddleNamesList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyContactPointValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">Company contact point, Value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFunctionType">
+    <rdfs:label xml:lang="en">Official function, Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSharePremiumAccount">
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:label xml:lang="en">Share premium account</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCurrentAssetsTotal">
+    <rdfs:label xml:lang="en">Current assets [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CurrentAssetsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSubscribedCapitalUnpaidTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Subscribed capital unpaid [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#SubscribedCapitalUnpaidPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasVariationInStocksOfFinishedGoodsAndWorkInProgress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Variation in stocks of finished goods and work in progress</rdfs:label>
+    <rdfs:domain rdf:resource="#OperatingIncomePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyAddressLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company address, Language</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#CompanyAddressList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProfitLossForThePeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Profit (loss) for the period</rdfs:label>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCategoryOfEventValue">
+    <rdfs:domain rdf:resource="#EventCategoryPresentation"/>
+    <rdfs:label xml:lang="en">Category of event, Value</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyPostalBox">
+    <rdfs:label xml:lang="en">Company postal box</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyAddressDetailsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherFinancialCreditorsWithinOneYear">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableWithinOneYearPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Other financial creditors  within one year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyIdProfileUrl">
+    <rdfs:label xml:lang="en">Company ID, Profile URL</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyIdNumberList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFunctionStartingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">Official function, Starting date</rdfs:label>
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPublicationDateOfEvent">
+    <rdfs:domain rdf:resource="#EventDatePresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Publication date of event</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProvisionsAndDeferredTaxesTotal">
+    <rdfs:domain rdf:resource="#ProvisionsAndDeferredTaxesPresentation"/>
+    <rdfs:label xml:lang="en">Provisions and deferred taxes [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasNumberOfShares">
+    <rdfs:label xml:lang="en">Number of shares</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialShareholdingPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialIsACompanyFlag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialIdNumberList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official is a company [Flag]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyAddressType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#CompanyAddressList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Company address, Type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalFormLanguage">
+    <rdfs:label xml:lang="en">Legal form, Language</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialAddressComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OfficialAddressComplementPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official address complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOperatingProfitLossTotal">
+    <rdfs:domain rdf:resource="#NetOperatingIncomePresentation"/>
+    <rdfs:label xml:lang="en">Operating profit (loss) [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCollectiveProcedureIndicator">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#CollectiveProcedurePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Collective procedure, Indicator</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPresident">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#MainOfficialPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">President</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCapitalisedProduction">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#OperatingIncomePresentation"/>
+    <rdfs:label xml:lang="en">Capitalised production</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasRegistrationDate">
+    <rdfs:label xml:lang="en">Registration date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasStaffCostsTotal">
+    <rdfs:label xml:lang="en">Staff costs [Total]</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#StaffCostsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherFixtures">
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:label xml:lang="en">Other fixtures</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasRawMaterialsAndConsumables">
+    <rdfs:label xml:lang="en">Raw materials and consumables</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CostOfMaterialsAndConsumablesPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProvisionsForPensionsAndSimilarObligations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Provisions for pensions and similar obligations</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#ProvisionsForLiabilitiesAndChargesPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyStreetComplement">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">Company street complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasInterestPaidOnFinancialDebts">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Interest paid on financial debts</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#InterestAndSimilarChargesPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCategoryOfEventType">
+    <rdfs:domain rdf:resource="#EventCategoryPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Category of event, Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#AmountsPayableWithinOneYearPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Taxes, remuneration and social security payable within one year</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCurrentInvestmentsPresentation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CurrentAssetsPresentation"/>
+    <rdfs:label xml:lang="en">Current investments [Presentation]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTangibleFixedAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+    <rdfs:domain rdf:resource="#TangibleFixedAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Tangible fixed assets [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsPayableTotal">
+    <rdfs:label xml:lang="en">Amounts Payable [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#AmountsPayablePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDirector">
+    <rdfs:label xml:lang="en">Director</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#MainOfficialPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLiquidAssetsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#LiquidAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Liquid assets [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCurrentInvestmentsTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#CurrentAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Current investments [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasRegistrationDateOfEvent">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#EventDatePresentation"/>
+    <rdfs:label xml:lang="en">Registration date of event</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherTangibleFixedAssets">
+    <rdfs:label xml:lang="en">Other tangible fixed assets</rdfs:label>
+    <rdfs:domain rdf:resource="#TangibleFixedAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialAddressCountyState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyOfficialList"/>
+    <rdfs:label xml:lang="en">Official address, County/State</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasWorkInProgress">
+    <rdfs:domain rdf:resource="#StocksPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Work in progress</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherStocks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Other stocks</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#StocksPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasExtraordinaryProfitLossTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#NetExtraordinaryIncomePresentation"/>
+    <rdfs:label xml:lang="en">Extraordinary profit (loss) [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasEquityAndLiabilitiesTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Equity and Liabilities [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#EquityAndLiabilitiesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOperatingIncomeTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Operating income [Total]</rdfs:label>
+    <rdfs:domain rdf:resource="#OperatingIncomePresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCategoryOfEventCode">
+    <rdfs:label xml:lang="en">Category of event, Code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#EventCategoryPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTradeDebtsPayableAfterMoreThanOneYearTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableAfterMoreThanOneYearPresentation"/>
+    <rdfs:label xml:lang="en">Trade debts payable after more than one year [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFixedAssetsTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#FixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Fixed assets [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTownCodeType">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Town code, Type</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyIdTownOfRegistrationList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGrossOperatingProfitT-6">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#OperatingBachRatiosPresentation"/>
+    <rdfs:label xml:lang="en">Gross operating profit (T - 6)</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialCityComplement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official city complement</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialAddressCityOrTownPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherPropertyPlantAndEquipment">
+    <rdfs:label xml:lang="en">Other property, plant, and equipment</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyNameText">
+    <rdfs:label xml:lang="en">Company name, Text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyNameList"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOperatingChargesTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#OperatingChargesPresentation"/>
+    <rdfs:label xml:lang="en">Operating charges [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasStockRawMaterialsAndConsumables">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Stock Raw materials and consumables</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#StocksPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFurnitureFixturesAndEquipment">
+    <rdfs:label xml:lang="en">Furniture, fixtures, and equipment</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialTitleOrGender">
+    <rdfs:domain rdf:resource="#OfficialNamePresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official title or gender</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialAddressCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official address, Country</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyOfficialList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasActivityText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Activity, Text</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyActivityList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherNonFinancialCreditorsAfterMoreThanOneYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Other non financial creditors after more than one year</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableAfterMoreThanOneYearPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyTown">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyAddressTownPresentation"/>
+    <rdfs:label xml:lang="en">Company town</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherProvisions">
+    <rdfs:label xml:lang="en">Other provisions</rdfs:label>
+    <rdfs:domain rdf:resource="#ProvisionsForLiabilitiesAndChargesPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasActivityLanguage">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#CompanyActivityList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Activity, Language</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasProfitLossBroughtForward">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V3</xebr:version>
+    <rdfs:label xml:lang="en">Profit (loss) brought forward</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherCreditorsAfterMoreThanOneYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableAfterMoreThanOneYearPresentation"/>
+    <rdfs:label xml:lang="en">Other creditors after more than one year</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFormationPreliminaryExpenses">
+    <rdfs:label xml:lang="en">Formation (preliminary) expenses</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#IntangibleFixedAssetsPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialFunctionEndingDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official function, Ending date</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#OfficialFunctionList"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCashAtBankAndInHandTotal">
+    <rdfs:domain rdf:resource="#CashAtBankAndInHandPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Cash at bank and in hand [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasFinancialChargesTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:domain rdf:resource="#FinancialChargesPresentation"/>
+    <rdfs:label xml:lang="en">Financial charges [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialCityOrTown">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialAddressCityOrTownPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official city or town</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPropertyPlantAndEquipmentTotal">
+    <rdfs:domain rdf:resource="#PropertyPlantAndEquipmentPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:label xml:lang="en">Property, plant, and equipment [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialCountryOfBirth">
+    <rdfs:label xml:lang="en">Official country of birth</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialPlaceOfBirthPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherFinancialAssets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#FinancialFixedAssetsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V2</xebr:version>
+    <rdfs:label xml:lang="en">Other financial assets</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTradeDebtsPayableWithinOneYearTotal">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#TradeDebtsPayableWithinOneYearPresentation"/>
+    <rdfs:label xml:lang="en">Trade debts payable within one year [Total]</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialStreetName">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Official street name</rdfs:label>
+    <rdfs:domain rdf:resource="#OfficialAddressDetailsPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOtherDebtors">
+    <rdfs:label xml:lang="en">Other debtors</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+    <rdfs:domain rdf:resource="#AmountsReceivablePresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasAmountsReceivableTotal">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#AmountsReceivablePresentation"/>
+    <rdfs:label xml:lang="en">Amounts receivable [Total]</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLegalStatusCode">
+    <rdfs:label xml:lang="en">Legal status, Code</rdfs:label>
+    <rdfs:domain rdf:resource="#CompanyLegalFormList"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasStocksTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#StocksPresentation"/>
+    <rdfs:label xml:lang="en">Stocks [Total]</rdfs:label>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialCityOfBirth">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:domain rdf:resource="#OfficialPlaceOfBirthPresentation"/>
+    <rdfs:label xml:lang="en">Official city of birth</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasReserves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Reserves</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasRevaluationReserve">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#monetary"/>
+    <rdfs:label xml:lang="en">Revaluation reserve</rdfs:label>
+    <rdfs:domain rdf:resource="#EquityPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V4</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyEventText">
+    <rdfs:label xml:lang="en">Company event, Text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#EventDescriptionPresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialStreetComplement">
+    <rdfs:domain rdf:resource="#OfficialAddressDetailsPresentation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdfs:label xml:lang="en">Official street complement</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyStreetNumber">
+    <rdfs:label xml:lang="en">Company street number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#CompanyAddressDetailsPresentation"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasBalanceSheetDate">
+    <rdfs:domain rdf:resource="#MainEventsPresentation"/>
+    <rdfs:label xml:lang="en">Balance sheet date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasOfficialStreetType">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V5</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#OfficialAddressDetailsPresentation"/>
+    <rdfs:label xml:lang="en">Official street type</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyAddressComplement">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">Company address complement</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CompanyAddressComplementPresentation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCompanyContactPointType">
+    <xebr:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >V1</xebr:version>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#CompanyContactPointList"/>
+    <rdfs:label xml:lang="en">Company contact point, Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="end">
+    <rdfs:domain rdf:resource="#Report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="start">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="belongsTo">
+    <rdfs:range rdf:resource="#Class"/>
+    <rdfs:domain rdf:resource="#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AnnotationProperty rdf:ID="version"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

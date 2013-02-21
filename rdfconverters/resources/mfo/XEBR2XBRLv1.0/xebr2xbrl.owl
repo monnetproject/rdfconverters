@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.dfki.de/lt/skos.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="file:/Users/krieger/Desktop/MONNET/ontology/XEBR2XBRL/XEBR2XBRLv1.0/xebr2xbrl.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="file:/Users/krieger/Desktop/MONNET/ontology/XEBR2XBRL/XEBR2XBRLv1.0/xebr2xbrl.owl">
+  <owl:Ontology rdf:about="file:/Users/krieger/Desktop/MONNET/ontology/XEBR2XBRL/XEBR2XBRLv1.0/xebr2xbrl.owl"/>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_IncomeStatement">
+    <skos:exactMatch>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="fr">Compte de résultats</skos:altLabel>
+    <skos:altLabel xml:lang="en">Income statement</skos:altLabel>
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    <skos:prefLabel xml:lang="fr">Compte de résultats</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Resultatenrekening</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Resultatenrekening</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Schema der Ergebnisrechnung</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Schema der Ergebnisrechnung</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Income statement</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_AssetsTitle">
+    <skos:prefLabel xml:lang="nl">Activa</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Aktiva - Titel</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Assets</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Activa - Titel</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Actif</skos:prefLabel>
+    <owl:equivalentClass>
+      <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+    </owl:equivalentClass>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+    <skos:prefLabel xml:lang="de">Aktiva</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Assets - Title</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Actif - Titre</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_PerdidasGananciasPresentacion">
+    <skos:altLabel xml:lang="es">CUENTA DE PÈRDIDAS Y GANANCIAS CORRESPONDIENTE AL EJERCICIO</skos:altLabel>
+    <skos:prefLabel xml:lang="es">Perdidas y Ganancias Presentaciòn</skos:prefLabel>
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#IncomeStatementPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_BalanceSituacionPresentacion">
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <skos:altLabel xml:lang="es">BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION</skos:altLabel>
+    <skos:prefLabel xml:lang="es">Balance Situaciòn Presentaciòn</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_BalanceSheet">
+    <skos:prefLabel xml:lang="de">Bilanz nach Ergebnisverwendung</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Balans na winstverdeling</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Bilanz</skos:altLabel>
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <skos:prefLabel xml:lang="en">Balance sheet after appropriation</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Bilan</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Bilan après répartition</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Balans</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#KeyBalanceSheetFiguresReport"/>
+    <skos:altLabel xml:lang="en">Balance sheet</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_ActivoPresentacion">
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+    <skos:altLabel xml:lang="es">Activo</skos:altLabel>
+    <skos:prefLabel xml:lang="es">ACTIVO</skos:prefLabel>
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#AssetsPresentation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_EquityLiabilitiesTitle">
+    <skos:altLabel xml:lang="fr">Passif - Titre</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Passiva</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Passiva</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Equity and Liabilities - Title</skos:altLabel>
+    <owl:equivalentClass rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    <skos:prefLabel xml:lang="fr">Passif</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Passiva - Titel</skos:altLabel>
+    <skos:altLabel xml:lang="de">Passiva - Titel</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#EquityAndLiabilitiesPresentation"/>
+    <skos:prefLabel xml:lang="en">Equity and Liabilities</skos:prefLabel>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/skos.owl#exactMatch"/>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasBalanceSheet">
+    <skos:prefLabel xml:lang="de">Bilanz nach Ergebnisverwendung</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Bilanz</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Balance sheet after appropriation</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Balans na winstverdeling</skos:prefLabel>
+    <skos:exactMatch>
+      <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="fr">Bilan</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Balans</skos:altLabel>
+    <skos:altLabel xml:lang="en">Balance sheet</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Bilan après répartition</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasBalanceSituacionPresentacion">
+    <skos:prefLabel xml:lang="es">Balance Situaciòn Presentaciòn</skos:prefLabel>
+    <skos:altLabel xml:lang="es">BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport"/>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasKeyBalanceSheetFiguresReport"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasMiscellaneousOperatingCharges">
+    <skos:altLabel xml:lang="fr">Charges d'exploitation diverses</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Autres charges d'exploitation</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Andere bedrijfskosten</skos:prefLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="nl">Diverse bedrijfskosten</skos:altLabel>
+    <skos:altLabel xml:lang="en">Miscellaneous operating charges</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sonstige betriebliche Aufwendungen</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherOperatingCharges"/>
+    <skos:prefLabel xml:lang="en">Other operating charges</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Übrige betriebliche Aufwendungen</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros">
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="es">gastos financieros</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal"/>
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias operaciones continuadas gastos financieros</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoPasivoTotal">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal"/>
+    </skos:exactMatch>
+    <skos:prefLabel xml:lang="es">TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal"/>
+    <skos:altLabel xml:lang="es">Patrimonio neto y pasivo total</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryIncome">
+    <skos:prefLabel xml:lang="nl">Uitzonderlijke opbrengsten</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Uitzonderlijke opbrengsten</skos:altLabel>
+    <skos:altLabel xml:lang="en">Extraordinary income</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Produits exceptionnels</skos:prefLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="de">Außerordentliche Erträge</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Extraordinary income</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Produits exceptionnels</skos:altLabel>
+    <skos:altLabel xml:lang="de">Außerordentliche Erträge</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryIncomeTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="es">Activo no corriente inmovilizado material</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal"/>
+    <skos:prefLabel xml:lang="es">II. Inmovilizado material</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteExistencias">
+    <skos:prefLabel xml:lang="es">II. Existencias</skos:prefLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasStocksTotal"/>
+    </owl:equivalentProperty>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasStocksTotal"/>
+    <skos:altLabel xml:lang="es">Activo corriente existencias</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIntangibleFixedAssets">
+    <skos:altLabel xml:lang="de">Immaterielle Anlagewerte</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Intangible fixed assets</skos:prefLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal"/>
+    </skos:exactMatch>
+    <skos:prefLabel xml:lang="fr">Immobilisations incorporelles</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Immobilisations incorporelles</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Immaterielle Anlagewerte</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Immateriêle vaste activa</skos:altLabel>
+    <skos:altLabel xml:lang="en">Intangible fixed assets</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Immateriêle vaste activa</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo">
+    <skos:prefLabel xml:lang="es">V. Inversiones financieras a largo plazo</skos:prefLabel>
+    <skos:altLabel xml:lang="es">Activo no corriente inversiones financieras a largo plazo</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets"/>
+    </owl:equivalentProperty>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionsDeferredTaxes">
+    <skos:prefLabel xml:lang="en">Provisions and deferred taxes</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Rückstellungen und Aufgeschobene Steuern</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Rückstellungen und Aufgeschobene Steuern</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Provisions and deferred taxes</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="nl">Voorzieningen en uitgestelde belastingen</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Provisions et impôts différés</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProvisionsAndDeferredTaxesTotal"/>
+    <skos:prefLabel xml:lang="fr">Provisions et impôts différés</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Voorzieningen en uitgestelde belastingen</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingProfitLoss">
+    <skos:altLabel xml:lang="fr">Bénéfice (Perte) d'exploitation</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Bénéfice (Perte) d'exploitation</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Bedrijfswinst (Bedrijfsverlies)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Operating profit (loss)</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Operating profit (loss)</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Bedrijfswinst (Bedrijfsverlies)</skos:altLabel>
+    <skos:altLabel xml:lang="de">Betriebsgewinn (Betriebsverlust)</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Betriebsgewinn (Betriebsverlust)</skos:prefLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal"/>
+    </skos:exactMatch>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOperatingProfitLossTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasRawMaterialsConsumables">
+    <skos:altLabel xml:lang="en">Raw materials, consumables</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="de">Waren, Roh-, Hilfs- und Betriebsstoffe</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Waren, Roh-, Hilfs- und Betriebsstoffe</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Handelsgoederen, grond- en hulpstoffen</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Approvisionnements et marchandises</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasRawMaterialsAndConsumables"/>
+    <skos:prefLabel xml:lang="nl">Handelsgoederen, grond- en hulpstoffen</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Approvisionnements et marchandises</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Raw materials, consumables</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasIncomeTaxes">
+    <skos:prefLabel xml:lang="en">Income taxes</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes"/>
+    <skos:prefLabel xml:lang="fr">Impôts sur le résultat</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Belastingen op het resultaat</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes"/>
+    <skos:altLabel xml:lang="nl">Belastingen op het resultaat</skos:altLabel>
+    <skos:altLabel xml:lang="en">Income taxes</skos:altLabel>
+    <skos:altLabel xml:lang="de">Steuern auf das Ergebnis</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Steuern auf das Ergebnis</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Impôts sur le résultat</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialCharges">
+    <skos:altLabel xml:lang="fr">Charges financières</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal"/>
+    <skos:altLabel xml:lang="de">Finanzaufwendungen</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Finanzaufwendungen</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Financial charges</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Financial charges</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Charges financières</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Financiêle kosten</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialChargesTotal"/>
+    <skos:prefLabel xml:lang="nl">Financiêle kosten</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLeasingSimilarRights">
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="en">Leasing and similar rights</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherPropertyPlantAndEquipment"/>
+    <skos:prefLabel xml:lang="de">Leasing und ähnliche Rechten</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Leasing en soortgelijke rechten</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Location-financement et droits similaires</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Leasing en soortgelijke rechten</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Leasing und ähnliche Rechten</skos:altLabel>
+    <skos:altLabel xml:lang="en">Leasing and similar rights</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Location-financement et droits similaires</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas">
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasReserves"/>
+    </owl:equivalentProperty>
+    <skos:altLabel xml:lang="es">Patrimonio neto fondos propios reservas</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasReserves"/>
+    <skos:prefLabel xml:lang="es">III. Reservas</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod"/>
+    <skos:prefLabel xml:lang="es">VII. Resultado del ejercicio</skos:prefLabel>
+    <skos:altLabel xml:lang="es">Patrimonio neto fondos propios resultado del ejercicio</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriod"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasPlantMachineryEquipment">
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery"/>
+    <skos:altLabel xml:lang="fr">Installations, machines et outillage</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Installaties, machines en uitrusting</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Installations, machines et outillage</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Plant, machinery and equipment</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Anlagen, Maschinen und Betriebsausstattung</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Installaties, machines en uitrusting</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasPlantAndMachinery"/>
+    <skos:prefLabel xml:lang="en">Plant, machinery and equipment</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Anlagen, Maschinen und Betriebsausstattung</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsRemainingTermMoreOneYear">
+    <skos:prefLabel xml:lang="en">Financial debts</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Finanzverbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="en">Financial debts with a remaining term of more than one year</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableAfterMoreThanOneYear"/>
+    <skos:altLabel xml:lang="nl">Financiêle schulden op meer dan één jaar</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Dettes financières</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Dettes financières à plus d'un an</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Financiêle schulden</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Finanzverbindlichkeiten</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasExtraordinaryCharges">
+    <skos:altLabel xml:lang="fr">Charges exceptionnelles</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal"/>
+    </skos:exactMatch>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasExtraordinaryChargesTotal"/>
+    <skos:prefLabel xml:lang="nl">Uitzonderlijke kosten</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Außerordentliche Aufwendungen</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Extraordinary charges</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Extraordinary charges</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Außerordentliche Aufwendungen</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Uitzonderlijke kosten</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Charges exceptionnelles</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="es">Patrimonio neto fondos propios resultados de ejercicios anteriores</skos:altLabel>
+    <skos:prefLabel xml:lang="es">V. Resultados de ejercicios anteriores</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossBroughtForward"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCurrentsAssets">
+    <skos:altLabel xml:lang="de">Umlaufvermögen</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Actifs circulants</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Current assets</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Vlottende activa</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Current assets</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Umlaufvermögen</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Actifs circulants</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vlottende activa</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorriente">
+    <skos:altLabel xml:lang="es">Activo no corriente</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal"/>
+    </skos:exactMatch>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal"/>
+    <skos:prefLabel xml:lang="es">A) ACTIVO NO CORRIENTE</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasCapital"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStockWorkProgress">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasWorkInProgress"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="de">Unfertige Erzeugnisse</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Work in progress</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Goederen in bewerking</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasWorkInProgress"/>
+    <skos:prefLabel xml:lang="de">Unfertige Erzeugnisse</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">En-cours de fabrication</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">En-cours de fabrication</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Work in progress</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Goederen in bewerking</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAssets">
+    <skos:altLabel xml:lang="de">Aktiva</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Total assets</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Actif</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Summe der Aktiva</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Activa</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal"/>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal"/>
+    <skos:prefLabel xml:lang="nl">Totaal van de activa</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Total de l'actif</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Assets</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorriente">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCurrentAssetsTotal"/>
+    <skos:prefLabel xml:lang="es">B) ACTIVO CORRIENTE</skos:prefLabel>
+    <skos:altLabel xml:lang="es">Activo corriente</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries"/>
+    </skos:exactMatch>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasWagesAndSalaries"/>
+    <skos:prefLabel xml:lang="es">a) Sueldos, salarios y asimilados</skos:prefLabel>
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias operaciones continuadas gastos de personal sueldos, salarios y asimilados</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingIncome">
+    <skos:prefLabel xml:lang="fr">Ventes et prestations</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Ventes et prestations</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Bedrijfsopbrengsten</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Bedrijfsopbrengsten</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Operating income</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Betriebliche Erträge</skos:altLabel>
+    <skos:altLabel xml:lang="en">Operating income</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Betriebliche Erträge</skos:prefLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal"/>
+    </owl:equivalentProperty>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOperatingIncomeTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayable">
+    <skos:altLabel xml:lang="nl">Schulden</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Dettes</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal"/>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableTotal"/>
+    <skos:prefLabel xml:lang="en">Amounts payable</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Dettes</skos:altLabel>
+    <skos:altLabel xml:lang="en">Amounts payable</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Schulden</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero">
+    <skos:prefLabel xml:lang="es">resultado financiero</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialProfitLossTotal"/>
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias resultado financiero</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFixedAssets">
+    <skos:altLabel xml:lang="de">Anlagevermögen</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Vaste activa</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal"/>
+    <skos:prefLabel xml:lang="nl">Vaste activa</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Fixed assets</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Fixed assets</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Actifs immobilisés</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Anlagevermögen</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFixedAssetsTotal"/>
+    <skos:altLabel xml:lang="fr">Actifs immobilisés</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOperatingCharges">
+    <skos:prefLabel xml:lang="fr">Coût des ventes et des prestations</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Betriebliche Aufwendungen</skos:altLabel>
+    <skos:altLabel xml:lang="en">Operating charges</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal"/>
+    </owl:equivalentProperty>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOperatingChargesTotal"/>
+    <skos:prefLabel xml:lang="nl">Bedrijfskosten</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Betriebliche Aufwendungen</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Coût des ventes et des prestations</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Operating charges</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Bedrijfskosten</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises">
+    <skos:altLabel xml:lang="en">Participating interests and amounts receivable in affiliated enterprises</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises"/>
+    <skos:altLabel xml:lang="de">Beteiligungen und Forderungen an verbundenen Unternehmen</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Affiliated enterprises</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Verbundene Unternehmen</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Deelnemingen in en vorderingen op verbonden ondernemingen</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Entreprises liées</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Participations et créances dans les entreprises liées</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Verbonden ondernemingen</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableWithinOneYear">
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="en">Amounts payable within one year</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Amounts payable within one year</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Dettes à un an au plus</skos:altLabel>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Schulden op ten hoogste één jaar</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Schulden op ten hoogste één jaar</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Dettes à un an au plus</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableWithinOneYearTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherTangibleAssets">
+    <skos:prefLabel xml:lang="fr">Autres immobilisations corporelles</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Sonstige Sachanlagen</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Overige materiêle vaste activa</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Overige materiêle vaste activa</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="de">Sonstige Sachanlagen</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherTangibleAssets"/>
+    <skos:prefLabel xml:lang="en">Other tangible fixed assets</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Autres immobilisations corporelles</skos:altLabel>
+    <skos:altLabel xml:lang="en">Other tangible fixed assets</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasLandBuildings">
+    <skos:altLabel xml:lang="en">Land and buildings</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Grundstücke und Bauten</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Land and buildings</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Terreinen en gebouwen</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Grundstücke und Bauten</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings"/>
+    </owl:equivalentProperty>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings"/>
+    <skos:altLabel xml:lang="nl">Terreinen en gebouwen</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Terrains et constructions</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Terrains et constructions</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTaxesRemunerationSocialSecurity">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear"/>
+    <skos:altLabel xml:lang="nl">Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Dettes fiscales, salariales et sociales</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Dettes fiscales, salariales et sociales</skos:altLabel>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Taxes, remuneration and social security</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Taxes, remuneration and social security</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsMoreOneYear">
+    <skos:prefLabel xml:lang="fr">Dettes commerciales</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Handelsschulden</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten aus Lieferungen und Leistungen</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Trade debts on more than one year</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Trade debts</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Handelsschulden op meer dan één jaar</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Dettes commerciales à plus d'un an</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit von mehr als einem Jahr</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableAfterMoreThanOneYear"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFurnitureVehicles">
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="nl">Meubilair en rollend materieel</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Furniture and vehicles</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Mobilier et matériel roulant</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Geschäftsausstattung und Fuhrpark</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Meubilair en rollend materieel</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Geschäftsausstattung und Fuhrpark</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFurnitureFixturesAndEquipment"/>
+    <skos:prefLabel xml:lang="en">Furniture and vehicles</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Mobilier et matériel roulant</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="es">Activo corriente deudores comerciales y otras cuentas a cobrar</skos:altLabel>
+    <skos:prefLabel xml:lang="es">deudores comerciales y otras cuentas a cobrar</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal"/>
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros</skos:altLabel>
+    <skos:prefLabel xml:lang="es">ingresos financieros</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasStocksContractsProgress">
+    <skos:prefLabel xml:lang="nl">Voorraden en bestellingen in uitvoering</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasStocksTotal"/>
+    <skos:altLabel xml:lang="nl">Voorraden en bestellingen in uitvoering</skos:altLabel>
+    <skos:altLabel xml:lang="de">Vorräte und in Ausführung befindliche Bestellungen</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Stocks et commandes en cours d'exécution</skos:altLabel>
+    <skos:altLabel xml:lang="en">Stocks and contracts in progress</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasStocksTotal"/>
+    <skos:prefLabel xml:lang="en">Stocks and contracts in progress</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Stocks et commandes en cours d'exécution</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Vorräte und in Ausführung befindliche Bestellungen</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables"/>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsPayableMoreOneYear">
+    <skos:prefLabel xml:lang="nl">Schulden op meer dan één jaar</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Dettes à plus d'un an</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal"/>
+    <skos:prefLabel xml:lang="en">Amounts payable after more than one year</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Schulden op meer dan één jaar</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Amounts payable after more than one year</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsPayableAfterMoreThanOneYearTotal"/>
+    <skos:prefLabel xml:lang="fr">Dettes à plus d'un an</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableMoreOneYear">
+    <skos:prefLabel xml:lang="en">Amounts receivable after more than one year</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Vorderingen op meer dan één jaar</skos:altLabel>
+    <skos:altLabel xml:lang="de">Forderungen mit einer Restlaufzeit von mehr als einem Jahr</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Forderungen mit einer Restlaufzeit von mehr als einem Jahr</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Créances à plus d'un an</skos:altLabel>
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear"/>
+    </skos:exactMatch>
+    <skos:prefLabel xml:lang="nl">Vorderingen op meer dan één jaar</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Créances à plus d'un an</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableAfterMoreThanOneYear"/>
+    <skos:altLabel xml:lang="en">Amounts receivable after more than one year</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropios">
+    <skos:exactMatch>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasEquityTotal"/>
+    </skos:exactMatch>
+    <skos:altLabel xml:lang="es">Patrimonio neto fondos propios</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityTotal"/>
+    <skos:prefLabel xml:lang="es">A-1) Fondos propios</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredChargesAccruedIncome">
+    <skos:prefLabel xml:lang="fr">Comptes de régularisation</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Overlopende rekeningen - Activa</skos:altLabel>
+    <owl:equivalentProperty>
+      <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal"/>
+    </owl:equivalentProperty>
+    <skos:prefLabel xml:lang="de">Rechnungsabgrenzungsposten</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasDeferredChargesAndAccruedIncomeTotal"/>
+    <skos:prefLabel xml:lang="en">Deferred charges and accrued income</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Rechnungsabgrenzungsposten - Aktiva</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Overlopende rekeningen</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Comptes de régularisation - Actif</skos:altLabel>
+    <skos:altLabel xml:lang="en">Deferred charges and accrued income</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasReserves">
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasReserves"/>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasReserves"/>
+    <skos:prefLabel xml:lang="nl">Reserves</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Rücklagen</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Reserves</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Reserves</skos:altLabel>
+    <skos:altLabel xml:lang="en">Reserves</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Réserves</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Réserves</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Rücklagen</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasCapital">
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCapital"/>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCapital"/>
+    <skos:prefLabel xml:lang="fr">Capital</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Capital</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Kapitaal</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Kapital</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Capital</skos:altLabel>
+    <skos:altLabel xml:lang="en">Capital</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Kapitaal</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Kapital</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquity">
+    <skos:altLabel xml:lang="fr">Capitaux propres</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Eigen vermogen</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Eigenkapital</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Equity</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityTotal"/>
+    <skos:prefLabel xml:lang="en">Equity</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Eigen vermogen</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Capitaux propres</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityTotal"/>
+    <skos:altLabel xml:lang="de">Eigenkapital</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCapital"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasCapital"/>
+    <skos:altLabel xml:lang="es">Patrimonio neto fondos propios capital</skos:altLabel>
+    <skos:prefLabel xml:lang="es">I. Capital</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasProvisionLiabilitiesCharges">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges"/>
+    <skos:altLabel xml:lang="fr">Provisions pour risques et charges</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Voorzieningen voor risico's en kosten</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Rückstellungen für Risiken und Aufwendungen</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Voorzieningen voor risico's en kosten</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Rückstellungen für Risiken und Aufwendungen</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProvisionsForLiabilitiesAndCharges"/>
+    <skos:prefLabel xml:lang="en">Provisions for liabilities and charges</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Provisions pour risques et charges</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Provisions for liabilities and charges</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasProductosCurso">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasWorkInProgress"/>
+    <skos:prefLabel xml:lang="es">3. Productos en curso</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasWorkInProgress"/>
+    <skos:altLabel xml:lang="es">Activo corriente existencias de productos en curso</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible">
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal"/>
+    <skos:altLabel xml:lang="es">Activo no corriente inmovilizado intangible</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIntangibleFixedAssetsTotal"/>
+    <skos:prefLabel xml:lang="es">I. Inmovilizado intangible</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio">
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias resultado del ejercicio</skos:altLabel>
+    <skos:prefLabel xml:lang="es">resultado del ejercicio</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises"/>
+    <skos:altLabel xml:lang="es">Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo </skos:altLabel>
+    <skos:prefLabel xml:lang="es">IV. Inversiones en empresas del grupo y asociadas a largo plazo</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAffiliatedEnterprises"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasDeferredTaxes">
+    <skos:prefLabel xml:lang="nl">Uitgestelde belastingen</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Impôts différés</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Aufgeschobene Steuern</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Deferred taxes</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes"/>
+    <skos:altLabel xml:lang="de">Aufgeschobene Steuern</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Impôts différés</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Uitgestelde belastingen</skos:altLabel>
+    <skos:altLabel xml:lang="en">Deferred taxes</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasDeferredTaxes"/>
+    <skos:prefLabel xml:lang="es">IV. Pasivos por impuesto diferido</skos:prefLabel>
+    <skos:altLabel xml:lang="es">Pasivo no corriente pasivos por impuesto diferido</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialIncome">
+    <skos:prefLabel xml:lang="de">Finanzerträge</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal"/>
+    <skos:altLabel xml:lang="de">Finanzerträge</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Produits financiers</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialIncomeTotal"/>
+    <skos:altLabel xml:lang="en">Financial income</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Financiêle opbrengsten</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Financiêle opbrengsten</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Produits financiers</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Financial income</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTradeDebtsPayableWithinOneYear">
+    <skos:prefLabel xml:lang="de">Verbindlichkeiten aus Lieferungen und Leistungen</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear"/>
+    <skos:altLabel xml:lang="en">Trade debts payable within one year</skos:altLabel>
+    <skos:altLabel xml:lang="de">Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit bis zu einem Jahr</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Dettes commerciales à un an au plus</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Handelsschulden</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Trade debts</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTradeDebtsPayableWithinOneYear"/>
+    <skos:altLabel xml:lang="nl">Handelsschulden op ten hoogste één jaar</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Dettes commerciales</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasTotalActivo">
+    <skos:prefLabel xml:lang="es">TOTAL ACTIVO (A + B)</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal"/>
+    <skos:altLabel xml:lang="es">Total activo</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasGainLossPeriod">
+    <skos:altLabel xml:lang="de">Gewinn (Verlust) des Geschäftsjahres</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Gewinn (Verlust) des Geschäftsjahres</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Winst (Verlies) van het boekjaar</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Gain (loss) of the period</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal"/>
+    <skos:altLabel xml:lang="nl">Winst (Verlies) van het boekjaar</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Bénéfice (Perte) de l'exercice</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasProfitLossForThePeriodTotal"/>
+    <skos:prefLabel xml:lang="fr">Bénéfice (Perte) de l'exercice</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Gain (loss) of the period</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasTangibleFixedAssets">
+    <skos:prefLabel xml:lang="en">Tangible fixed assets</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Sachanlagen</skos:prefLabel>
+    <skos:prefLabel xml:lang="nl">Materiêle vaste activa</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Materiêle vaste activa</skos:altLabel>
+    <skos:altLabel xml:lang="en">Tangible fixed assets</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Immobilisations corporelles</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal"/>
+    <skos:prefLabel xml:lang="fr">Immobilisations corporelles</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Sachanlagen</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasTangibleFixedAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialFixedAssets">
+    <skos:prefLabel xml:lang="nl">Financiêle vaste activa</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Immobilisations financières</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Finanzanlagen</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Immobilisations financières</skos:altLabel>
+    <skos:prefLabel xml:lang="en">Financial fixed assets</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal"/>
+    <skos:altLabel xml:lang="en">Financial fixed assets</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Financiêle vaste activa</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Finanzanlagen</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialFixedAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios">
+    <skos:altLabel xml:lang="es">Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes"/>
+    <skos:prefLabel xml:lang="es">impuestos sobre beneficios</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasIncomeTaxes"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasEquityLiabilities">
+    <skos:altLabel xml:lang="nl">Passiva</skos:altLabel>
+    <skos:altLabel xml:lang="de">Passiva</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal"/>
+    <skos:altLabel xml:lang="fr">Passif</skos:altLabel>
+    <skos:altLabel xml:lang="en">Equity and Liabilities</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Total du passif</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasEquityAndLiabilitiesTotal"/>
+    <skos:prefLabel xml:lang="nl">Totaal van de passiva</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Summe der Passiva</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Total liabilities</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos">
+    <skos:prefLabel xml:lang="es">2. Materias primas y otros aprovisionamientos</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables"/>
+    <skos:altLabel xml:lang="es">Activo corriente existencias de materias primas y otros aprovisionamientos</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasStockRawMaterialsAndConsumables"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasFinancialDebtsPayableWithinOneYear">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear"/>
+    <skos:altLabel xml:lang="en">Financial debts payable within one year</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Dettes financières</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Financial debts</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Finanzverbindlichkeiten</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasFinancialDebtsPayableWithinOneYear"/>
+    <skos:prefLabel xml:lang="nl">Financiêle schulden</skos:prefLabel>
+    <skos:altLabel xml:lang="fr">Dettes financières à un an au plus</skos:altLabel>
+    <skos:altLabel xml:lang="de">Finanzverbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr</skos:altLabel>
+    <skos:altLabel xml:lang="nl">Financiêle schulden op ten hoogste één jaar</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAmountsReceivableWithinOneYear">
+    <skos:altLabel xml:lang="nl">Vorderingen op ten hoogste één jaar</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear"/>
+    <skos:prefLabel xml:lang="nl">Vorderingen op ten hoogste één jaar</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Amounts receivable within one year</skos:prefLabel>
+    <skos:altLabel xml:lang="de">Forderungen mit einer Restlaufzeit bis zu einem Jahr</skos:altLabel>
+    <skos:altLabel xml:lang="fr">Créances à un an au plus</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Forderungen mit einer Restlaufzeit bis zu einem Jahr</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAmountsReceivableWithinOneYear"/>
+    <skos:altLabel xml:lang="en">Amounts receivable within one year</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Créances à un an au plus</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasLandAndBuildings"/>
+    <skos:altLabel xml:lang="es">Activo no corriente inmovilizado material terrenos y construcciones</skos:altLabel>
+    <skos:prefLabel xml:lang="es">1. Terrenos y construcciones</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_es.owl#pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes">
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal"/>
+    <skos:altLabel xml:lang="es">Activo corriente efectivo y otros activos líquidos equivalentes</skos:altLabel>
+    <skos:prefLabel xml:lang="es">efectivo y otros activos líquidos equivalentes</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasLiquidAssetsTotal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasAccruedChargesDeferredIncome">
+    <skos:prefLabel xml:lang="en">Accruals and deferred income</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Comptes de régularisation</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Accrued charges and deferred income</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Overlopende rekeningen</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal"/>
+    <skos:altLabel xml:lang="fr">Comptes de régularisation - Passif</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Rechnungsabgrenzungsposten</skos:prefLabel>
+    <skos:altLabel xml:lang="nl">Overlopende rekeningen - Passiva</skos:altLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasAccruedChargesAndDeferredIncomeTotal"/>
+    <skos:altLabel xml:lang="de">Rechnungsabgrenzungsposten - Passiva</skos:altLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dfki.de/lt/xbrl_be.owl#pfs_hasOtherFinancialAssets">
+    <skos:altLabel xml:lang="nl">Andere financiêle vaste activa</skos:altLabel>
+    <skos:prefLabel xml:lang="de">Sonstige Finanzanlagen</skos:prefLabel>
+    <owl:equivalentProperty rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets"/>
+    <skos:exactMatch rdf:resource="http://www.dfki.de/lt/xebr.owl#hasOtherFinancialAssets"/>
+    <skos:altLabel xml:lang="fr">Autres immobilisations financières</skos:altLabel>
+    <skos:prefLabel xml:lang="nl">Andere financiêle vaste activa</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Other financial assets</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Other financial assets</skos:altLabel>
+    <skos:altLabel xml:lang="de">Sonstige Finanzanlagen</skos:altLabel>
+    <skos:prefLabel xml:lang="fr">Autres immobilisations financières</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://www.dfki.de/lt/skos.owl#prefLabel"/>
+  <owl:AnnotationProperty rdf:about="http://www.dfki.de/lt/skos.owl#altLabel"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->

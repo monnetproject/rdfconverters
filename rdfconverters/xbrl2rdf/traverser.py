@@ -1,5 +1,6 @@
 from rdflib import Namespace, Graph
 from pkg_resources import resource_stream
+from rdfconverters.util import NS
 
 class XEBRConceptTraverser:
     '''
@@ -9,23 +10,17 @@ class XEBRConceptTraverser:
     report taxonomy. Run `cat notes/structure` for the MFO version of that excel sheet.
     '''
     XEBR_PATH = resource_stream(__name__, '/schemas/xebr_v1.2.n3')
-    NS = {
-        'rdf': Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
-        'rdfs': Namespace("http://www.w3.org/2000/01/rdf-schema#"),
-        'xebr': Namespace('http://www.dfki.de/lt/xebr.owl#'),
-        'skos': Namespace('http://www.dfki.de/lt/skos.owl#')
-    }
 
     def __init__(self):
         # Load XEBR schema
         self.gx = Graph()
         self.gx.parse(self.XEBR_PATH, format="n3")
-        for n in self.NS:
-            self.gx.bind(n, self.NS[n])
+        for n in NS:
+            self.gx.bind(n, NS[n])
 
         # This is an instance variable for optimisation reasons
         self.range_triples = list(
-            (self.__uri_to_concept(s), t) for s, _, t in self.gx.triples((None, self.NS['rdfs']['range'], None))
+            (self.__uri_to_concept(s), t) for s, _, t in self.gx.triples((None, NS['rdfs']['range'], None))
         )
 
 
@@ -34,9 +29,9 @@ class XEBRConceptTraverser:
 
     def all_report_types(self):
         '''Query XEBR ontology for all report types'''
-        report = self.NS['xebr']['Report']
-        domain = self.NS['rdfs']['domain']
-        range_ = self.NS['rdfs']['range']
+        report = NS['xebr']['Report']
+        domain = NS['rdfs']['domain']
+        range_ = NS['rdfs']['range']
         reports=[]
         for s in self.gx.subjects(domain, report):
             for o in self.gx.objects(s, range_):
@@ -48,8 +43,8 @@ class XEBRConceptTraverser:
             yield self.__uri_to_concept(report_type)
 
     def report_iterator(self, report_type):
-        partOf = self.NS['xebr']['partOf']
-        for report in self.gx.subjects(partOf, self.NS['xebr'][report_type]):
+        partOf = NS['xebr']['partOf']
+        for report in self.gx.subjects(partOf, NS['xebr'][report_type]):
             yield self.__uri_to_concept(report)
 
     def _generate_concepts_dict(self, abstract_concept):
@@ -57,8 +52,8 @@ class XEBRConceptTraverser:
         Given an XEBR abstract concept, returns a dict of has* concepts as keys with their data type
         as values.
         '''
-        domain = self.NS['rdfs']['domain']
-        haslist = set(self.__uri_to_concept(s) for s in self.gx.subjects(domain, self.NS['xebr'][abstract_concept]))
+        domain = NS['rdfs']['domain']
+        haslist = set(self.__uri_to_concept(s) for s in self.gx.subjects(domain, NS['xebr'][abstract_concept]))
         # Map has* properties to data type
         has = {}
 
@@ -72,12 +67,12 @@ class XEBRConceptTraverser:
         Recursively iterate through the XEBR concept tree, returning a tuple containing
         each abstract concept, its list of has* concepts, and its depth in the tree.
         '''
-        partOf = self.NS['xebr']['partOf']
+        partOf = NS['xebr']['partOf']
 
         concepts = self._generate_concepts_dict(abstract_concept)
         yield (abstract_concept, concepts, depth)
 
-        for abstract_concept_child_url in self.gx.subjects(partOf, self.NS['xebr'][abstract_concept]):
+        for abstract_concept_child_url in self.gx.subjects(partOf, NS['xebr'][abstract_concept]):
             abstract_concept = self.__uri_to_concept(abstract_concept_child_url)
 
             # Yield recursively
