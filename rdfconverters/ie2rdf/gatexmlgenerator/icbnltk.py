@@ -78,7 +78,7 @@ def stem(word):
 def tokenize_words(text):
     words = tokenize.word_tokenize(text.lower())
     # Remove stopwords and punctuation
-    stop = stopwords.words("english") + list(";:'\".,&")
+    stop = stopwords.words("english") + list(";:'\".,&()")
     words = (w for w in words if w not in stop)
     # Get lemmas of words
     words = [stem(w) for w in words]
@@ -98,9 +98,12 @@ def is_excluded(definition, word_list):
 def count_total_occurences(lst, word_set):
     return sum(lst.count(word) for word in word_set)
 
-def score(label, definition, word_set):
+def score(label, definition, word_set, exclude_labels=False):
     included = definition[0] if definition else []
-    score = 2*count_total_occurences(list(set(label)), word_set)
+    if exclude_labels:
+        score = 0
+    else:
+        score = 2*count_total_occurences(list(set(label)), word_set)
     score += count_total_occurences(list(set(included)), word_set)
     return score
 
@@ -112,7 +115,7 @@ icb = parse_icb_graph()
 labels = get_icb_labels(icb)
 definitions = get_icb_definitions(icb)
 
-def icb_matches(phrase):
+def icb_matches(phrase, exclude_labels=False):
     '''
     phrase: String to perform matching on
     returns: tuple containing ICB code and english label
@@ -131,7 +134,7 @@ def icb_matches(phrase):
         if definition and is_excluded(definition, word_list):
             icb_score = -1
         else:
-            icb_score = score(label, definition, word_set)
+            icb_score = score(label, definition, word_set, exclude_labels=exclude_labels)
 
         scores[icb_uri] = icb_score
 
