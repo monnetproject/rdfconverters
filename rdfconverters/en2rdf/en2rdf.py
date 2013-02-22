@@ -76,10 +76,12 @@ class Scraper:
         return result
 
     def _scrape_company_profile(self, isin, mic, lang):
-        html = self.fetcher.fetch_company_profile(isin, mic, lang)
-        soup = BeautifulSoup(html)
-
         data = {}
+
+        html = self.fetcher.fetch_company_profile(isin, mic, lang)
+        if not html:
+            return data
+        soup = BeautifulSoup(html)
 
         # Profile
         profile = ''.join([str(a) for a in soup.find('div', {'class': 'detail'})]).strip()
@@ -165,6 +167,7 @@ class Scraper:
 
         quote = {}
         quote['symbol'] = soup.find('div', {'class': 'sub-container'}).find('div', {'class': 'first-column box-column'}).span.string
+        quote['name'] = soup.find('span', {'class': 'instrument-name'}).string
 
         return quote
 
@@ -271,11 +274,19 @@ class RDFConverter:
 
     def _write_quote(self):
         quote = self.scraped['quote']
+        # Ticker symbol
         if 'symbol' in quote:
             self.g.add((self.id_node, NS['cp']['symbol'], Literal(quote['symbol'])))
 
+        # Company name
+        if 'name' in quote:
+            company_name = quote['name']
+            CPNodeBuilder(self.g, self.id_node).structured().string_value('companyName', company_name)
+
     def _write_profile(self):
         for lang, profile in self.scraped['profile'].items():
+            if not profile:
+                continue
             lang = self.en2xml_langs[lang]
 
             # Unstructured text
@@ -309,17 +320,13 @@ class RDFConverter:
                 if last:
                     self.g.add((node, NS['en']['lastName'], Literal(last)))
 
-        # Company name
-        company_name = self.scraped['profile']['en']['address'].get('companyName')
-        if company_name:
-            CPNodeBuilder(self.g, self.id_node).structured().string_value('companyName', company_name)
-
-        # Shareholders
-        for shareholder in self.scraped['profile']['en']['shareholders']:
-            node = NS['en']["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])]
-            self.g.add((self.id_node, NS['en']['shareholderValue'], node))
-            self.g.add((node, NS['en']['name'], Literal(shareholder['name'])))
-            self.g.add((node, NS['en']['value'], Literal(shareholder['value'], datatype=XSD.float)))
+            # Shareholders - only English as nothing useful is translated
+            if lang=='en':
+                for shareholder in self.scraped['profile'][lang]['shareholders']:
+                    node = NS[lang]["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])]
+                    self.g.add((self.id_node, NS[lang]['shareholderValue'], node))
+                    self.g.add((node, NS[lang]['name'], Literal(shareholder['name'])))
+                    self.g.add((node, NS[lang]['value'], Literal(shareholder['value'], datatype=XSD.float)))
 
     def _write_factsheet(self):
         factsheet = self.scraped['factsheet']
@@ -456,7 +463,10 @@ def main():
         scrape(args.isin, args.mic, args.outputfile, args.pickle)
     elif args.command == 'scrape':
         with open(args.inputfile) as f:
-            isins_mics = (line.split(' ') for line in f.read().strip().split('\n'))
+            isins_mics = (line for line in f.read().strip().split('\n'))
+            # Filter comments
+            isins_mics = [l for l in isins_mics if not l.startswith('#')]
+            isins_mics = [l.split(' ') for l in isins_mics]
         for isin_mic in isins_mics:
             extension = 'pickle' if args.pickle else 'n3'
             timestamp = int(time.time() * 1000)
@@ -465,7 +475,7 @@ def main():
             try:
                 scrape(isin_mic[0], isin_mic[1], outputfile, args.pickle, timestamp=timestamp)
             except Exception as e:
-                logger.exception("Failed to scrape " + isin_mic)
+                logger.exception("Failed to scrape %s" % isin_mic)
     elif args.command == 'rdfconvert':
         if args.batch:
             files = list(util.traverse_mirror(args.inputpath, args.outputpath, '.pickle', '.n3'))
