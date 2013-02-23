@@ -268,7 +268,7 @@ def search_index_constituents(isin, output_file=None):
 
     if output_file:
         logger.info("Writing results to %s" % output_file)
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w+') as f:
             for result in results:
                 f.write(' '.join(result) + '\n')
 
@@ -292,7 +292,7 @@ def rdfconvert(scraped, outputfile):
     r = RDFConverter()
     graph = r.to_rdf(scraped)
     if outputfile:
-        with open(outputfile, 'wb') as f:
+        with open(outputfile, 'wb+') as f:
             f.write(graph.serialize(format='n3'))
     return graph
 

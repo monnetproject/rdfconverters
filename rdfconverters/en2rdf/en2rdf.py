@@ -16,9 +16,17 @@ from rdflib.namespace import XSD
 from rdfconverters import util
 from rdfconverters.cputil import CPNodeBuilder
 from rdfconverters.util import NS
+from pkg_resources import resource_string
 
 logging.basicConfig(format='%(module)s %(levelname)s: %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+f = resource_string('rdfconverters.resources', 'isin_companyid_map.txt').decode('utf-8')
+isin_companyid_map = {}
+for entry in f.split('\n'):
+    if len(entry.strip()) > 0:
+        isin, companyid = entry.split(' ')
+        isin_companyid_map[isin] = companyid
 
 class Fetcher:
     """
@@ -351,6 +359,11 @@ class RDFConverter:
         # Use both cp:stockExchange and if:origin while transitioning to cp: ontology
         self.g.add((self.id_node, NS['if']['origin'], NS['if']['euronext_singleton']))
         self.g.add((self.id_node, NS['cp']['isin'], Literal(self.scraped['isin'])))
+
+        # Add companyId if available
+        if self.scraped['isin'] in isin_companyid_map.keys():
+            self.g.add((self.id_node, NS['cp']['companyId'], Literal(isin_companyid_map[self.scraped['isin']])))
+
         dt = util.timestamp_to_datetime(self.scraped['timestamp'])
         self.g.add((self.id_node, NS['cp']['instant'], Literal(dt, datatype=XSD.dateTime)))
 
@@ -499,7 +512,7 @@ def main():
                 id = cp_id.split('#')[1]
                 outputfile = "%s/%s.txt" % (outdir, id)
                 print(inputfile, "->", outputfile)
-                with open(outputfile, "w") as f:
+                with open(outputfile, "w+") as f:
                     f.write(profile)
 
 
