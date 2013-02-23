@@ -80,7 +80,8 @@ class IE2RDF:
                 date = pop(el, 'date')
                 value = pop(el, 'value')
                 if not re.match('^\d+[A-Z]{3}', value):
-                    raise Exception("Invalid monetary value %s" % value)
+                    print("WARNING: Ignoring node. Invalid monetary value %s" % value)
+                    continue
                 attr = {'date': Literal(date, datatype=XSD.gYear),
                     'monetaryValue': Literal(value, datatype=XSD.monetary)}
                 node = self.__make_bnode(el.tag, 'MonetaryValue', attr)

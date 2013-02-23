@@ -1,0 +1,838 @@
+@prefix dax: <http://www.dfki.de/lt/dax.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/dax.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+dax:AdvancedIndustrialEquipment a owl:Class;
+    rdfs:label "Advanced Industrial Equipment"@en,
+        "High-Tech Industrieanlagen"@de;
+    rdfs:definition "Companies using sophisticated technology or providing engineering for the production of high-tech industrial goods (for example, producers of lasers, robots or optical storage media)"@en,
+        "Unternehmen, die hoch entwickelte Technologien zur Erstellung industrieller High-Tech-Produkte einsetzen oder im Anlagenbau für solche Produkte tätig sind. Beispiele hierfür sind Hersteller von Lasern, Robotern, optischen Speichermedien"@de;
+    rdfs:subClassOf dax:Industrial .
+
+dax:Advertising a owl:Class;
+    rdfs:label "Advertising"@en,
+        "Werbung"@de;
+    rdfs:definition "Companies offering advertising, marketing and/or public relations services"@en,
+        "Unternehmen, die Werbe-, Marketing- und/oder PR-Dienste anbieten"@de;
+    rdfs:subClassOf dax:Media .
+
+dax:Airlines a owl:Class;
+    rdfs:label "Airlines"@en,
+        "Fluggesellschaften"@de;
+    rdfs:definition "Aviation companies mainly carrying passengers"@en,
+        "Unternehmen, die vorwiegend im Passagierflugverkehr tätig sind"@de;
+    rdfs:subClassOf dax:TransportationAndLogistics .
+
+dax:AutoPartsAndEquipment a owl:Class;
+    rdfs:label "Auto Parts & Equipment"@en,
+        "Autoteile und -zubehör"@de;
+    rdfs:definition "Hersteller von Teilen und Zubehör für Automobile und Motorräder, inkl. Reifen und Batterien"@de,
+        "Producers of parts and accessories for motor vehicles and motorcycles (including tyres and batteries)"@en;
+    rdfs:subClassOf dax:Automobile .
+
+dax:AutomobileManufacturers a owl:Class;
+    rdfs:label "Automobile Manufacturers"@en,
+        "Automobilhersteller"@de;
+    rdfs:definition "Companies primarily active in the production of passenger vehicles, small lorries and motorcycles"@en,
+        "Unternehmen, die hauptsächlich Personenfahrzeuge, Kleinlastwagen und Motorräder herstellen"@de;
+    rdfs:subClassOf dax:Automobile .
+
+dax:Beverages a owl:Class;
+    rdfs:label "Beverages"@en,
+        "Getränke"@de;
+    rdfs:definition "Producers of beverages of all kinds"@en,
+        "Unternehmen, die Getränke aller Art herstellen"@de;
+    rdfs:subClassOf dax:FoodAndBeverages .
+
+dax:Biotechnology a owl:Class;
+    rdfs:label "Biotechnologie"@de,
+        "Biotechnology"@en;
+    rdfs:comment ""^^xsd:string;
+    rdfs:definition "Companies mainly active in developing, producing, marketing or licensing products based on biotechnological research"@en,
+        "Unternehmen, die hauptsächlich in der Entwicklung, Herstellung, Vermarktung oder Lizenzierung von Produkten tätig sind, die auf biotechnologischer Forschung beruhen"@de;
+    rdfs:subClassOf dax:PharmaAndHealthcare .
+
+dax:Broadcasting a owl:Class;
+    rdfs:label "Broadcasting"@en,
+        "Rundfunk & Fernsehen"@de;
+    rdfs:definition "Anbieter von Kabel und Satellitenübertragungsdiensten, sowie von Radio- und Fernsehprogrammen"@de,
+        "Providers of cable and satellite transmission services, and radio/television broadcasters"@en;
+    rdfs:subClassOf dax:Media .
+
+dax:BuildingMaterials a owl:Class;
+    rdfs:label "Baumaterialien"@de,
+        "Building Materials"@en;
+    rdfs:definition "Hersteller von Grundbaukomponenten für die Bauindustrie wie Zement, Bodenbeläge, Türen, Fenster u. ä."@de,
+        "Producers of basic construction materials, such as cement, flooring, doors, windows, etc."@en;
+    rdfs:subClassOf dax:Construction .
+
+dax:ChemicalsCommodity a owl:Class;
+    rdfs:label "Chemicals, Commodity"@en,
+        "Chemieprodukte, Zwischenerzeugnisse"@de;
+    rdfs:definition "Producers of simple, standardized chemical products"@en,
+        "Unternehmen, die vorwiegend einfache, normierte chemische Produkte herstellen"@de;
+    rdfs:subClassOf dax:Chemicals .
+
+dax:ChemicalsSpeciality a owl:Class;
+    rdfs:label "Chemicals, Speciality"@en,
+        "Spezial-Chemieprodukte"@de;
+    rdfs:definition "Producers of non-standard, specialty chemical products"@en,
+        "Unternehmen, die vorwiegend nicht normierte, chemische Spezialprodukte herstellen"@de;
+    rdfs:subClassOf dax:Chemicals .
+
+dax:ClothingAndFootwear a owl:Class;
+    rdfs:label "Clothing & Footwear"@en,
+        "Kleidung & Schuhe"@de;
+    rdfs:definition "Companies producing mainly textile goods and shoes, including related cleaning services"@en,
+        "Unternehmen, die hauptsächlich Textilien und Schuhe herstellen oder Pflegedienstleistungen für diese Produkte anbieten"@de;
+    rdfs:subClassOf dax:Consumer .
+
+dax:CommunicationsTechnology a owl:Class;
+    rdfs:label "Communications Technology"@en,
+        "Kommunikationstechnologie"@de;
+    rdfs:definition "Companies developing telecommunications technology and/or products (such as user devices or network components)"@en,
+        "Unternehmen, die im Bereich der Telekommunikation Technologien und/oder Produkte entwickeln (z. B. Endgeräte und Netzwerkkomponenten)"@de;
+    rdfs:subClassOf dax:Technology .
+
+dax:ConstructionAndEngineering a owl:Class;
+    rdfs:label "Bau- und Ingenieurswesen"@de,
+        "Construction & Engineering"@en;
+    rdfs:definition "Companies active in the development and construction of buildings and infrastructure projects (e.g. roads) (excluding prefabricated homes)"@en,
+        "Unternehmen, die in der Entwicklung und dem Bau von Gebäuden und Infrastruktur (Straßenbau) tätig sind (außer Fertighäuser)"@de;
+    rdfs:subClassOf dax:Construction .
+
+dax:ConsumerElectronics a owl:Class;
+    rdfs:label "Consumer Electronics"@en,
+        "Unterhaltungselektronik"@de;
+    rdfs:definition "Companies producing mainly consumer electronics goods (such as TV sets, VCRs/camcorders HiFi equipment, etc.) (This excludes producers focusing on computers and telecommunications equipment.)"@en,
+        "Unternehmen, die hauptsächlich Unterhaltungselektronik (TV, Video- und Camcorder, HIFI etc.) herstellen. Ausgeschlossen sind Firmen, die  vorwiegend Computer- und Telekommunikationsprodukte erzeugen"@de;
+    rdfs:subClassOf dax:Consumer .
+
+dax:ContainersAndPackaging a owl:Class;
+    rdfs:label "Container & Verpackungen"@de,
+        "Containers & Packaging"@en;
+    rdfs:definition "Companies specializing in all kinds of packaging"@en,
+        "Unternehmen, die sich auf Verpackungen aller Art spezialisiert haben"@de;
+    rdfs:subClassOf dax:Industrial .
+
+dax:CreditBanks a owl:Class;
+    rdfs:label "Credit Banks"@en,
+        "Kreditbanken"@de;
+    rdfs:definition "Commercial and universal banks which do not fall into the categories of \"Mortgage Banks\" or \"Financial Services Providers\""@en,
+        "Kredit- und Universalbanken, die nicht aufgrund ihres Schwerpunkts unter Hypothekenbanken oder Finanzdienstleistern eingeordnet sind"@de;
+    rdfs:subClassOf dax:Banks .
+
+dax:DiversifiedFinancial a owl:Class;
+    rdfs:label "Allgemeine Finanzdienstleister"@de,
+        "Diversified Financial"@en;
+    rdfs:definition "Financial services providers that do not have universal bank status, but who distribute a range of financial services"@en,
+        "Finanzdienstleister, die keine Universalbank sind, aber eine Palette von Finanzdienstleistungen vertreiben"@de;
+    rdfs:subClassOf dax:FinancialServices .
+
+dax:Electricity a owl:Class;
+    rdfs:label "Electricity"@en,
+        "Elektrizitätsversorgung"@de;
+    rdfs:definition """Companies generating and/or distributing electricity (including operators 
+    of power stations)"""@en,
+        "Unternehmen, die Strom erzeugen und/oder vertreiben. Hierzu gehören auch Betreiber von Kernkraftwerken"@de;
+    rdfs:subClassOf dax:Utilities .
+
+dax:ElectronicComponentsAndHardware a owl:Class;
+    rdfs:label "Electronic Components & Hardware"@en,
+        "Elektronische Komponenten & Hardware"@de;
+    rdfs:definition "Producers of electronic components (printed circuit boards, integrated circuits, smart cards) or computer hardware (PCs, monitors, etc.)"@en,
+        "Unternehmen, die elektronische Bauelemente (Leiterplatten, integrierte Schaltkreise, Smart Cards) oder Computerhardware PCs, Monitore etc.) produzieren"@de;
+    rdfs:subClassOf dax:Technology .
+
+dax:FixedLineTelecommunication a owl:Class;
+    rdfs:label "Festnetz-Telekommunikation"@de,
+        "Fixed-Line Telecommunication"@en;
+    rdfs:definition "Telecommunications carriers mainly providing fixed-line local and long-distance services"@en,
+        "Unternehmen, die vorwiegend im Festnetzbereich Orts- und Ferngespräche anbieten"@de;
+    rdfs:subClassOf dax:Telecommunication .
+
+dax:Food a owl:Class;
+    rdfs:label "Food"@en,
+        "Nahrungsmittel, Tabak"@de;
+    rdfs:definition "Hersteller von Nahrungsmitteln und Tabakwaren jeder Art"@de,
+        "Producers of food and tobacco products of all kinds"@en;
+    rdfs:subClassOf dax:FoodAndBeverages .
+
+dax:ForestAndPaperProducts a owl:Class;
+    rdfs:label "Forest & Paper Products"@en,
+        "Forst- und Papierprodukte"@de;
+    rdfs:definition "Hersteller von Holz und Holzprodukten in Rohform, sowie Produzenten von Papier"@de,
+        "Producers of wood or basic wood products, and paper producers"@en;
+    rdfs:subClassOf dax:BasicResources .
+
+dax:Healthcare a owl:Class;
+    rdfs:label "Gesundheitswesen"@de,
+        "Healthcare"@en;
+    rdfs:definition "Besitzer und Betreiber von Einrichtungen des Gesundheitswesens wie Krankenhäuser und Pflegeheime, sowie Dienstleister im Bereich Gesundheit (z. B. Dialyse) und Anbieter von medizinischen Hilfsprodukten (z. B. Spritzen und Tupfer)"@de,
+        "Owners/operators of healthcare institutions (such as hospitals or nursing homes), providers of healthcare services (e.g. dialysis) and providers of medical material (such as syringes, swabs, etc.)"@en;
+    rdfs:subClassOf dax:PharmaAndHealthcare .
+
+dax:HeavyMachinery a owl:Class;
+    rdfs:label "Großmaschinenbau"@de,
+        "Heavy Machinery"@en;
+    rdfs:definition "Hersteller von Großmaschinen, die nicht nur für den Einsatz an einem festen Ort bestimmt sind. Hierzu gehören Lastkraftwagen, Schiffe, landwirtschaftliche Maschinen u. ä."@de,
+        "Producers of large but mobile machinery, such as heavy goods vehicles, ships, agricultural machines, etc."@en;
+    rdfs:subClassOf dax:Industrial .
+
+dax:HomeConstructionAndFurnishings a owl:Class;
+    rdfs:label "Eigenheimbau & Möbel"@de,
+        "Home Construction & Furnishings"@en;
+    rdfs:definition "Hersteller von Fertighäusern, Heimwerkerbedarf und Einrichtungsgegenständen wie Möbel und Lampen"@de,
+        "Producers of prefabricated homes, DIY products and furnishings (such as furniture or lighting)"@en;
+    rdfs:subClassOf dax:Consumer .
+
+dax:HouseholdAppliancesAndHouseware a owl:Class;
+    rdfs:label "Haushaltsgeräte und - waren"@de,
+        "Household Appliances & Houseware"@en;
+    rdfs:definition "Hersteller von Haushalts- und Gartenartikeln (Besteck, Geschirr, Reinigungsmittel) und Haushaltsgeräten (Küchenmaschinen)"@de,
+        "Producers of household and garden products (such as cutlery, dishes or cleaning products), or of household appliances (\"white goods\")"@en;
+    rdfs:subClassOf dax:Consumer .
+
+dax:ITServices a owl:Class;
+    rdfs:label "IT-Dienstleistungen"@de,
+        "IT-Services"@en;
+    rdfs:definition "Companies active in IT consulting, IT operations, systems integration, etc."@en,
+        "Unternehmen, die in den Bereichen IT- Beratung, IT-Betrieb, Systemintegration u. ä. tätig sind"@de;
+    rdfs:subClassOf dax:Software .
+
+dax:IndustrialDiversified a owl:Class;
+    rdfs:label "Allgemeine Industrieunternehmen"@de,
+        "Industrial, Diversified"@en;
+    rdfs:definition "Companies with activities across various industrial sectors (including holding companies investing in different sectors)"@en,
+        "Unternehmen, die in mehreren verschiedenen industriellen Bereichen tätig sind. Hierzu gehören auch Beteiligungsunternehmen, die in unterschiedlichen Branchen investieren"@de;
+    rdfs:subClassOf dax:Industrial .
+
+dax:IndustrialGases a owl:Class;
+    rdfs:label "Industrial Gases"@en,
+        "Industriegase"@de;
+    rdfs:definition "Hersteller von Industriegasen"@de,
+        "Producers of industrial gases"@en;
+    rdfs:subClassOf dax:Chemicals .
+
+dax:IndustrialMachinery a owl:Class;
+    rdfs:label "Industrial Machinery"@en,
+        "Industriemaschinenbau"@de;
+    rdfs:definition "Hersteller von Industriemaschinen und - komponenten. Hierzu gehören u. a. Hersteller von Werkzeugmaschinen, Kompressoren, Druckmaschinen u. ä."@de,
+        "Producers of industrial machinery or related components, such as machine tools, compressors, printing machines, etc."@en;
+    rdfs:subClassOf dax:Industrial .
+
+dax:IndustrialProductsAndServices a owl:Class;
+    rdfs:label "Industrial Products & Services"@en,
+        "Industrieprodukte & Dienstleistungen"@de;
+    rdfs:definition "Hersteller von sonstigen Produkten und Dienstleistungen zum Einsatz in der Industrie (z. B. Marktforschung, Personaldienstleistungen, industrieller Großhandel oder Entsorgung)"@de,
+        "Producers/providers of other industrial products or services (e.g. market research, human resources, industrial wholesalers, waste disposal)"@en;
+    rdfs:subClassOf dax:Industrial .
+
+dax:Internet a owl:Class;
+    rdfs:label "Internet"@de,
+        "Internet"@en;
+    rdfs:definition "Companies providing and developing Internet infrastructure (Internet access, portals, software, etc.)"@en,
+        "Unternehmen, die Internet-Infrastruktur (Internet-Zugang, -Portale, -Software etc.) bereitstellen und entwickeln"@de;
+    rdfs:subClassOf dax:Software .
+
+dax:LeisureGoodsAndServices a owl:Class;
+    rdfs:label "Freizeitgüter & Dienstleistungen"@de,
+        "Leisure Goods & Services"@en;
+    rdfs:definition "Hersteller von Freizeitartikeln (Sportausstattung, Spielzeug, Fahrräder) sowie Restaurant-, Hotel- und Casinobetreiber"@de,
+        "Producers of leisure goods (such as sports equipment, toys, bicycles), as well as restaurant, hotel or casino operators"@en;
+    rdfs:subClassOf dax:Consumer .
+
+dax:Logistics a owl:Class;
+    rdfs:label "Logistics"@en,
+        "Logistik"@de;
+    rdfs:definition "Providers of industrial transport services (land transport/aviation cargo/freight shipping)"@en,
+        "Unternehmen, die im industriellen Transport via Land, Luft und Wasser tätig sind"@de;
+    rdfs:subClassOf dax:TransportationAndLogistics .
+
+dax:MedicalTechnology a owl:Class;
+    rdfs:label "Medical Technology"@en,
+        "Medizintechnik"@de;
+    rdfs:definition "Hersteller von technologischen Produkten und Apparaten für den Gesundheitsbereich, wie Herzschrittmacher, Dialysegeräte, UV-Therapie-Systeme"@de,
+        "Producers of technological products and devices used in healthcare, such as pacemakers, dialysis equipment or UV therapy systems"@en;
+    rdfs:subClassOf dax:PharmaAndHealthcare .
+
+dax:Mining a owl:Class;
+    rdfs:label "Bergbau"@de,
+        "Mining"@en;
+    rdfs:definition "Companies extracting commodities such as iron ore, minerals, aluminium, coal, diamonds or similar substances"@en,
+        "Unternehmen, die Rohstoffe (Eisenerz, Mineralstoffe, Aluminium, Kohle, Diamanten etc.) aus der Erde abbauen"@de;
+    rdfs:subClassOf dax:BasicResources .
+
+dax:MortgageBanks a owl:Class;
+    rdfs:label "Hypothekenbanken"@de,
+        "Mortgage Banks"@en;
+    rdfs:definition "Specialist banks exclusively (or predominantly) extending longterm loans against liens on real property, or communal loan"@en,
+        "Spezialbanken, die ausschließlich oder vorwiegend langfristige Kredite gegen Grundpfandrechte oder Kommunaldarlehen gewähren"@de;
+    rdfs:subClassOf dax:Banks .
+
+dax:MoviesAndEntertainment a owl:Class;
+    rdfs:label "Film & Unterhaltung"@de,
+        "Movies & Entertainment"@en;
+    rdfs:definition "Companies producing (or trading in) entertainment products and services, including producers, distributors and broadcasters of feature films and television shows, music producers and distributors, theatre operators and sports teams"@en,
+        "Unternehmen, die in der Herstellung von oder dem Handel mit Unterhaltungsprodukten und -diensten tätig sind, einschließlich Unternehmen, die Spielfilme und Fernsehshows produzieren, vertreiben und ausstrahlen, Musik-Produzenten und -vertreiber, Theater und Sportmannschaften"@de;
+    rdfs:subClassOf dax:Media .
+
+dax:MultiUtilites a owl:Class;
+    rdfs:label "Allgemeine Energieversorgung"@de,
+        "Multi-Utilites"@en;
+    rdfs:definition "Companies active across various energy sectors"@en,
+        "Unternehmen, die in verschiedenen Branchen der Energieversorgung tätig sind"@de;
+    rdfs:subClassOf dax:Utilities .
+
+dax:OilAndGas a owl:Class;
+    rdfs:label "Oil & Gas"@en,
+        "Öl & Erdgas"@de;
+    rdfs:definition "Companies drilling for oil and gas, which do not fall under the \"Oil & Gas Distribution\" category"@en,
+        "Unternehmen, die Öl und Gas fördern und nicht der Industriegruppe \"Öl und Gas, Distribution\" angehören"@de;
+    rdfs:subClassOf dax:BasicResources .
+
+dax:OilAndGasDistribution a owl:Class;
+    rdfs:label "Oil & Gas Distribution"@en,
+        "Öl- und Gasversorgung"@de;
+    rdfs:definition "Unternehmen, die vorwiegend Energie in Form von Öl und Gas vertreiben"@de,
+        "Utilities mainly providing energy in the form of oil and gas"@en;
+    rdfs:subClassOf dax:Utilities .
+
+dax:PersonalProducts a owl:Class;
+    rdfs:label "Kosmetika"@de,
+        "Personal Products"@en;
+    rdfs:definition "Hersteller von Kosmetik- und Körperpflegeprodukten"@de,
+        "Producers of cosmetics and personal care products"@en;
+    rdfs:subClassOf dax:Consumer .
+
+dax:Pharmaceuticals a owl:Class;
+    rdfs:label "Pharmaceuticals"@en,
+        "Pharmazeutika"@de;
+    rdfs:definition "Companies researching, developing or producing pharmaceuticals (including veterinary products)"@en,
+        "Unternehmen, die in der Erforschung, Entwicklung oder Herstellung von Pharmazeutika tätig sind. Hierzu gehören auch veterinärmedizinische Präparate"@de;
+    rdfs:subClassOf dax:PharmaAndHealthcare .
+
+dax:PlainInsurance a owl:Class;
+    rdfs:label "Insurance"@en,
+        "Versicherungen"@de;
+    rdfs:definition "Companies mainly underwriting policies for life, accident, health or home contents cover"@en,
+        "Unternehmen, die hauptsächlich Lebens-, Unfall-, Kranken-, Hausratversicherungen etc. abschließen"@de;
+    rdfs:subClassOf dax:Insurance .
+
+dax:PlainSoftware a owl:Class;
+    rdfs:label "Software"@de,
+        "Software"@en;
+    rdfs:definition "Companies focused on the development of standard or specialized software solutions"@en,
+        "Unternehmen, die hauptsächlich Standard- oder Spezialsoftware entwickeln"@de;
+    rdfs:subClassOf dax:Software .
+
+dax:PrivateEquityAndVentureCapital a owl:Class;
+    rdfs:label "Private Equity & Venture Capital"@de,
+        "Private Equity & Venture Capital"@en;
+    rdfs:definition "Beteiligungsunternehmen, die in diversifizierte Geschäftsfelder investieren"@de,
+        "Holding companies investing in diversified business areas"@en;
+    rdfs:subClassOf dax:FinancialServices .
+
+dax:PublishingAndPrinting a owl:Class;
+    rdfs:label "Publishing & Printing"@en,
+        "Verlags- und Druckereiwesen"@de;
+    rdfs:definition "Herausgeber von Zeitungen, Zeitschriften und Büchern, und Anbieter von Informationen in gedruckter oder elektronischer Form, sowie Dienstleister in diesem Gebiet (einschließlich Bildungseinrichtungen)"@de,
+        "Publishers of newspapers, magazines and books, and providers of printed or electronic information; including providers of related services (including educational institutions)"@en;
+    rdfs:subClassOf dax:Media .
+
+dax:ReInsurance a owl:Class;
+    rdfs:label "Re-Insurance"@en,
+        "Rückversicherungen"@de;
+    rdfs:definition "Companies mainly underwriting reinsurance cover"@en,
+        "Unternehmen, die hauptsachlich Rückversicherungen abschließen"@de;
+    rdfs:subClassOf dax:Insurance .
+
+dax:RealEstate a owl:Class;
+    rdfs:label "Immobilien"@de,
+        "Real Estate"@en;
+    rdfs:definition "Companies investing in property/real estate (directly or indirectly)"@en,
+        "Gesellschaften, die direkt oder indirekt in Immobilien investieren"@de;
+    rdfs:subClassOf dax:FinancialServices .
+
+dax:RenewableEnergies a owl:Class;
+    rdfs:label "Erneuerbare Energien"@de,
+        "Renewable Energies"@en;
+    rdfs:definition "Companies developing equipment for alternative and/or renewable energy generation, such as solar technology or wind-powered turbines"@en,
+        "Unternehmen, die im Bereich der Entwicklung von Anlagen für alternative und/oder erneuerbare Energien (Solartechnik, Windkraftanlagen etc.) tätig sind"@de;
+    rdfs:subClassOf dax:Industrial .
+
+dax:RetailCatalog a owl:Class;
+    rdfs:label "Retail, Catalog"@en,
+        "Versandhandel"@de;
+    rdfs:definition "Retailers selling mainly by mail order, which are not categorized under \"Retail, Internet\""@en,
+        "Unternehmen des Einzelhandels, die ihre Güter vorwiegend über Versand anbieten, und nicht zur Branche \"Internethandel\" gehören"@de;
+    rdfs:subClassOf dax:Retail .
+
+dax:RetailFoodAndDrug a owl:Class;
+    rdfs:label "Lebensmittel- und Drogeriemärkte, Apotheken"@de,
+        "Retail, Food & Drug"@en;
+    rdfs:definition "Besitzer und Betreiber von Lebensmittelgeschäften, Apotheken und Drogerien (Groß- und Einzelhandel)"@de,
+        "Owners/operators of food stores, pharmacies and drugstores (wholesale and retail)"@en;
+    rdfs:subClassOf dax:Retail .
+
+dax:RetailInternet a owl:Class;
+    rdfs:label "Internethandel"@de,
+        "Retail, Internet"@en;
+    rdfs:definition "Retailers selling their goods or services mainly over the Internet"@en,
+        "Unternehmen des Einzelhandels, die ihre Güter oder Services vorwiegend über das Internet vertreiben"@de;
+    rdfs:subClassOf dax:Retail .
+
+dax:RetailMultiline a owl:Class;
+    rdfs:label "Kaufhäuser"@de,
+        "Retail, Multiline"@en;
+    rdfs:definition "Retail companies with a broad product range (department stores)"@en,
+        "Unternehmen des Einzelhandels mit einem breitgefächerten Produktangebot (Kaufhäuser)"@de;
+    rdfs:subClassOf dax:Retail .
+
+dax:RetailSpecialty a owl:Class;
+    rdfs:label "Retail, Specialty"@en,
+        "Spezialisierter Einzelhandel"@de;
+    rdfs:definition "Retail companies with a very specific product range (such as fashion, electronics, etc.)"@en,
+        "Unternehmen des Einzelhandels mit einem sehr speziellen Produktangebot (z. B. Mode und Elektronik)"@de;
+    rdfs:subClassOf dax:Retail .
+
+dax:SecuritiesBrokers a owl:Class;
+    rdfs:label "Securities Brokers"@en,
+        "Wertpapierhandel"@de;
+    rdfs:definition "Companies active in the securities business, such as brokers, online banks, exchanges, etc."@en,
+        "Unternehmen, die im Wertpapiergeschäft tätig sind wie Broker, Online-Banken, Börsen u. a."@de;
+    rdfs:subClassOf dax:FinancialServices .
+
+dax:Semiconductors a owl:Class;
+    rdfs:label "Halbleiterprodukte"@de,
+        "Semiconductors"@en;
+    rdfs:definition "Hersteller und Entwickler von Halbleitern und ähnlichen Produkten"@de,
+        "Producers and developers of semiconductors or similar products"@en;
+    rdfs:subClassOf dax:Technology .
+
+dax:SteelAndOtherMetals a owl:Class;
+    rdfs:label "Stahl & Metalle"@de,
+        "Steel & Other Metals"@en;
+    rdfs:definition "Producers of steel or related in-process products; producers of iron, non-iron metals or precious metals"@en,
+        "Unternehmen, die Stahl und Stahlzwischenprodukte herstellen, sowie Erzeuger von Eisen-, Nicht-Eisen- und Edelmetallen"@de;
+    rdfs:subClassOf dax:BasicResources .
+
+dax:TelecommunicationServices a owl:Class;
+    rdfs:label "Telecommunication Services"@en,
+        "Telekommunikations-Dienstleistungen"@de;
+    rdfs:definition "Services Providers of ancillary or specialized telecommunications services"@en,
+        "Unternehmen, die Neben- und Spezialdienstleistungen im Telekommunikationsbereich anbieten"@de;
+    rdfs:subClassOf dax:Telecommunication .
+
+dax:TransportationServices a owl:Class;
+    rdfs:label "Transport-Dienstleistungen"@de,
+        "Transportation Services"@en;
+    rdfs:definition "Providers of infrastructural or other specialized transport services (including airport operators, road or rail networks, tour operators, etc.)"@en,
+        "Unternehmen, die Infrastruktur- und Spezialdienstleistungen im Transportbereich anbieten. Hierzu gehören Flughafen-, Strassen- und Schienennetzbetreiber, Tourismus- Unternehmen u. a."@de;
+    rdfs:subClassOf dax:TransportationAndLogistics .
+
+dax:Water a owl:Class;
+    rdfs:label "Wasserversorgung"@de,
+        "Water"@en;
+    rdfs:definition "Providers of water to end-users (this segment includes operators of purification plants)"@en,
+        """Unternehmen, die Wasser an den Endverbraucher vertreiben. Hierzu geh&#246;ren 
+    auch Kl&#228;rwerksbetreiber"""@de;
+    rdfs:subClassOf dax:Utilities .
+
+dax:WirelessTelecommunication a owl:Class;
+    rdfs:label "Mobilfunk-Telekommunikation"@de,
+        "Wireless Telecommunication"@en;
+    rdfs:definition "Telecommunications carriers mainly providing wireless/mobile service"@en,
+        "Unternehmen, die vorwiegend drahtlose und mobile Telekommunikationsdienste anbieten"@de;
+    rdfs:subClassOf dax:Telecommunication .
+
+dax:accountingStandard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:label "Rechnungslegungsart"@de,
+        "accounting standard"@en;
+    rdfs:domain dax:Company;
+    rdfs:range dax:AccountingStandard .
+
+dax:accounting_standard_singleton a dax:AccountingStandard .
+
+dax:admissionDate a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Beginn der Börsennotierung"@de,
+        "admission date"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:date .
+
+dax:city a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment "a multi-lingual property"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:country a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment "a multi-lingual property"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:email a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:label "Kontakt"@de,
+        "contact"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:endOfBusinessYear a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Ende des Geschäftsjahres"@de,
+        "end of business year"@en;
+    rdfs:comment "only month and day information is relevant"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:gMonthDay .
+
+dax:entry_standard_singleton a dax:EntryStandard;
+    rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
+
+dax:executiveBoard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:label "Vorstand"@de,
+        "executive board"@en;
+    rdfs:domain dax:Company;
+    rdfs:range dax:Person;
+    rdfs:subPropertyOf dax:hasEmployed .
+
+dax:fax a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:label "Fax"@de,
+        "fax"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:firstName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain dax:Person;
+    rdfs:range xsd:string .
+
+dax:first_quotation_board_singleton a dax:FirstQuotationBoard;
+    rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
+
+dax:foundedIn a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Gründungsjahr"@de,
+        "established"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:gYear .
+
+dax:function a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "e.g., \"chairman\" or \"vice chairman\" or \"Vorsitzender\"; use language tag to have multilingual information"^^xsd:string;
+    rdfs:domain dax:Person;
+    rdfs:range xsd:string .
+
+dax:gaap_singleton a dax:GAAP .
+
+dax:general_standard_singleton a dax:GeneralStandard;
+    rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
+
+dax:homepage a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:label "Internet"@de,
+        "internet"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:ifrs_singleton a dax:IFRS .
+
+dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "international securities identification number"@en;
+    rdfs:comment "should not change over time, but who knows ..."^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:lastName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain dax:Person;
+    rdfs:range xsd:string .
+
+dax:marketSegment a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:comment "I do assume that this is a temporal functional property"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range dax:MarketSegment .
+
+dax:market_segment_singleton a dax:MarketSegment .
+
+dax:name a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Name"@de,
+        "name"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:open_market_singleton a dax:OpenMarket;
+    rdfs:comment "we need to have only one instance for each market segment"^^xsd:string .
+
+dax:phone a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:label "Telefon"@de,
+        "telephone"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:portrait a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:label "Kurzportrait"^^xsd:string,
+        "short portrait"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:prime_standard_singleton a dax:PrimeStandard;
+    rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
+
+dax:regulated_market_singleton a dax:RegulatedMarket;
+    rdfs:comment "we need to have only one instance for each market segment"^^xsd:string .
+
+dax:shortName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Name"@de,
+        "name"@en;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:source a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment """although an http address, we use xsd:string here to address the fact that the pages are language-specific;
+a multi-lingual property"""^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:street a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:supervisoryBoard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:label "Aufsichtsrat"@de,
+        "supervisory board"@en;
+    rdfs:domain dax:Company;
+    rdfs:range dax:Person;
+    rdfs:subPropertyOf dax:hasEmployed .
+
+dax:symbol a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Kürzel"@de,
+        "symbol"@en;
+    rdfs:comment "called mnemo in EuroNext"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+dax:title a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:domain dax:Person;
+    rdfs:range xsd:string .
+
+dax:totalCapitalStock a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Gesamtes Grundkapital"@de,
+        "total capital stock"@en;
+    rdfs:comment "the value needs to be normalized"^^xsd:string;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:monetary .
+
+dax:transparencyStandard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:label "Aktueller Transparenzstandard"@de,
+        "current transparency standard"@en;
+    rdfs:domain dax:Company;
+    rdfs:range dax:TransparencyStandard .
+
+dax:transparency_standard_singleton a dax:TransparencyStandard .
+
+dax:wkn a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain dax:Company;
+    rdfs:range xsd:string .
+
+rdfs:definition a owl:AnnotationProperty .
+
+dax:EntryStandard a owl:Class;
+    rdfs:subClassOf dax:TransparencyStandard .
+
+dax:FirstQuotationBoard a owl:Class;
+    rdfs:subClassOf dax:TransparencyStandard .
+
+dax:GAAP a owl:Class;
+    rdfs:subClassOf dax:AccountingStandard .
+
+dax:IFRS a owl:Class;
+    rdfs:subClassOf dax:AccountingStandard .
+
+dax:PrimeStandard a owl:Class;
+    rdfs:subClassOf dax:GeneralStandard .
+
+dax:worksFor a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain dax:Person;
+    rdfs:range dax:Company;
+    owl:inverseOf dax:hasEmployed .
+
+xsd:monetary a rdfs:Datatype .
+
+dax:Automobile a owl:Class;
+    rdfs:label "Automobilbranche"@de,
+        "Automobile"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:Banks a owl:Class;
+    rdfs:label "Banken"@de,
+        "Banks"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:Construction a owl:Class;
+    rdfs:label "Bauindustrie"@de,
+        "Construction"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:FoodAndBeverages a owl:Class;
+    rdfs:label "Food & Beverages"@en,
+        "Nahrungsmittel"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:GeneralStandard a owl:Class;
+    rdfs:subClassOf dax:TransparencyStandard .
+
+dax:Insurance a owl:Class;
+    rdfs:label "Insurance"@en,
+        "Versicherungen"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:OpenMarket a owl:Class;
+    rdfs:label "Freiverkehr"@de,
+        "open market"@en;
+    rdfs:subClassOf dax:MarketSegment;
+    owl:disjointWith dax:RegulatedMarket .
+
+dax:RegulatedMarket a owl:Class;
+    rdfs:label "regulated market"@en;
+    rdfs:subClassOf dax:MarketSegment;
+    owl:disjointWith dax:OpenMarket .
+
+<http://www.dfki.de/lt/time.owl#SynchronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property .
+
+dax:Chemicals a owl:Class;
+    rdfs:label "Chemicals"@en,
+        "Chemie"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:Software a owl:Class;
+    rdfs:label "Software"@de,
+        "Software"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:Technology a owl:Class;
+    rdfs:label "Technologie"@de,
+        "Technology"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:Telecommunication a owl:Class;
+    rdfs:label "Telecommunication"@en,
+        "Telekommunikation"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:TransportationAndLogistics a owl:Class;
+    rdfs:label "Transport & Logistik"@de,
+        "Transportation & Logistics"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:hasEmployed a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain dax:Company;
+    rdfs:range dax:Person;
+    owl:inverseOf dax:worksFor .
+
+dax:AccountingStandard a owl:Class .
+
+dax:BasicResources a owl:Class;
+    rdfs:label "Basic Resources"@en,
+        "Energie & Rohstoffe"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:FinancialServices a owl:Class;
+    rdfs:label "Financial Services"@en,
+        "Finanzdienstleistungen"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:MarketSegment a owl:Class;
+    rdfs:label "Börsensegment"@de,
+        "market segment"@en .
+
+dax:Media a owl:Class;
+    rdfs:label "Media"@en,
+        "Medien"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:PharmaAndHealthcare a owl:Class;
+    rdfs:label "Pharma & Gesundheit"@de,
+        "Pharma & Healthcare"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:Utilities a owl:Class;
+    rdfs:label "Utilities"@en,
+        "Versorger"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:Retail a owl:Class;
+    rdfs:label "Handel"@de,
+        "Retail"@en;
+    rdfs:subClassOf dax:Company .
+
+dax:TransparencyStandard a owl:Class .
+
+dax:Consumer a owl:Class;
+    rdfs:label "Consumer"@en,
+        "Konsumgüter"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:Industrial a owl:Class;
+    rdfs:label "Industrial"@en,
+        "Industrie"@de;
+    rdfs:subClassOf dax:Company .
+
+dax:Person a owl:Class;
+    rdfs:label "Person"@de,
+        "person"@en .
+
+<http://www.dfki.de/lt/time.owl#DiachronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property .
+
+dax:Company a owl:Class;
+    rdfs:label "Firma"@de,
+        "Unternehmen"@de,
+        "company"@en;
+    rdfs:comment "DAX comes with a defined string-valued set of 18 industry sectors and 63 sub-sectors which we make subclasses of Company"^^xsd:string .
+

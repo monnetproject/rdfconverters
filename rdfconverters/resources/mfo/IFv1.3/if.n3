@@ -1,0 +1,113 @@
+@prefix cfi: <http://www.dfki.de/lt/cfi.owl#> .
+@prefix dax: <http://www.dfki.de/lt/dax.owl#> .
+@prefix dc: <http://www.dfki.de/lt/dc.owl#> .
+@prefix en: <http://www.dfki.de/lt/en.owl#> .
+@prefix icb: <http://www.dfki.de/lt/icb.owl#> .
+@prefix if: <http://www.dfki.de/lt/if.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dax:Person a owl:Class;
+    owl:equivalentClass en:Person .
+
+dax:RenewableEnergies owl:equivalentClass icb:ICB0580 .
+dax:FixedLineTelecommunication owl:equivalentClass icb:ICB6535 .
+dax:WirelessTelecommunication owl:equivalentClass icb:ICB6575 .
+dax:BuildingMaterials owl:equivalentClass icb:ICB2353 .
+dax:ConstructionAndEngineering owl:equivalentClass icb:ICB2357 .
+
+dax:city owl:equivalentProperty en:city .
+dax:country owl:equivalentProperty en:country .
+dax:email owl:equivalentProperty en:email .
+dax:fax owl:equivalentProperty en:fax .
+dax:firstName owl:equivalentProperty en:firstName .
+dax:function owl:equivalentProperty en:function .
+dax:homepage owl:equivalentProperty en:website .
+dax:isin owl:equivalentProperty en:isin .
+dax:lastName owl:equivalentProperty en:lastName .
+dax:name owl:equivalentProperty en:companyName .
+dax:phone owl:equivalentProperty en:phoneNumber .
+dax:portrait owl:equivalentProperty en:activity .
+dax:source owl:equivalentProperty en:source .
+dax:street owl:equivalentProperty en:street .
+dax:symbol owl:equivalentProperty en:mnemo .
+dax:title owl:equivalentProperty en:title .
+dax:worksFor owl:equivalentProperty en:worksFor .
+
+en:cfi rdfs:range cfi:CFI .
+
+<http://www.dfki.de/lt/if.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+if:dax_singleton a if:DAX;
+    rdfs:label "DAX"^^xsd:string .
+
+if:euronext_singleton a if:Euronext;
+    rdfs:label "Euronext"^^xsd:string .
+
+if:hasReport a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:domain dax:Company;
+    rdfs:range xebr:Report .
+
+if:mdax_singleton a if:MDAX;
+    rdfs:label "MDAX"^^xsd:string .
+
+if:origin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:domain dax:Company;
+    rdfs:range if:StockExchange .
+
+if:sdax_singleton a if:SDAX;
+    rdfs:label "SDAX"^^xsd:string .
+
+if:tecdax_singleton a if:TecDAX;
+    rdfs:label "TecDAX"^^xsd:string .
+
+cfi:CFI a owl:Class .
+
+en:Company a owl:Class;
+    owl:equivalentClass icb:ICB .
+
+en:Person a owl:Class .
+
+icb:ICB a owl:Class .
+
+if:DAX a owl:Class;
+    rdfs:subClassOf if:XETRA .
+
+if:Euronext a owl:Class;
+    rdfs:subClassOf if:NYSE .
+
+if:MDAX a owl:Class;
+    rdfs:subClassOf if:XETRA .
+
+if:NYSE a owl:Class;
+    rdfs:subClassOf if:StockExchange .
+
+if:SDAX a owl:Class;
+    rdfs:subClassOf if:XETRA .
+
+if:TecDAX a owl:Class;
+    rdfs:subClassOf if:XETRA .
+
+<http://www.dfki.de/lt/nace.owl#IndustrySector> a owl:Class .
+
+xebr:Report rdfs:subClassOf dc:Resource .
+
+dax:Company a owl:Class;
+    owl:equivalentClass en:Company,
+        <http://www.dfki.de/lt/nace.owl#IndustrySector> .
+
+<http://www.dfki.de/lt/time.owl#DiachronicProperty> rdfs:subClassOf rdf:Property .
+
+if:StockExchange a owl:Class .
+
+if:XETRA a owl:Class;
+    rdfs:subClassOf if:StockExchange .
+

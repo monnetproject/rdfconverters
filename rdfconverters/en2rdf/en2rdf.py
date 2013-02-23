@@ -295,11 +295,11 @@ class RDFConverter:
 
             # Address
             if 'street' in profile['address']:
-                self.g.add((self.id_node, NS['en']['street'], Literal(profile['address']['street'])))
+                self.g.add((self.id_node, NS['cp']['street'], Literal(profile['address']['street'])))
             if 'city' in profile['address']:
-                self.g.add((self.id_node, NS['en']['city'], Literal(profile['address']['city'], lang=lang)))
+                self.g.add((self.id_node, NS['cp']['city'], Literal(profile['address']['city'], lang=lang)))
             if 'country' in profile['address']:
-                self.g.add((self.id_node, NS['en']['country'], Literal(profile['address']['country'], lang=lang)))
+                self.g.add((self.id_node, NS['cp']['country'], Literal(profile['address']['country'], lang=lang)))
 
             # Management
             for manager in profile.get('management', []):
@@ -351,8 +351,9 @@ class RDFConverter:
         # Use both cp:stockExchange and if:origin while transitioning to cp: ontology
         self.g.add((self.id_node, NS['if']['origin'], NS['if']['euronext_singleton']))
         self.g.add((self.id_node, NS['cp']['isin'], Literal(self.scraped['isin'])))
-        dt = datetime.fromtimestamp(int(self.scraped['timestamp']/1000)).isoformat()
+        dt = util.timestamp_to_datetime(self.scraped['timestamp'])
         self.g.add((self.id_node, NS['cp']['instant'], Literal(dt, datatype=XSD.dateTime)))
+
         for lang, source in self.scraped['sources'].items():
             self.g.add((self.id_node, NS['cp']['source'], Literal(source, lang=self.en2xml_langs[lang])))
 
@@ -463,10 +464,7 @@ def main():
         scrape(args.isin, args.mic, args.outputfile, args.pickle)
     elif args.command == 'scrape':
         with open(args.inputfile) as f:
-            isins_mics = (line for line in f.read().strip().split('\n'))
-            # Filter comments
-            isins_mics = [l for l in isins_mics if not l.startswith('#')]
-            isins_mics = [l.split(' ') for l in isins_mics]
+            isins_mics = util.read_space_delimited_file(f)
         for isin_mic in isins_mics:
             extension = 'pickle' if args.pickle else 'n3'
             timestamp = int(time.time() * 1000)

@@ -1,6 +1,7 @@
 import os
 import argparse
 import traceback
+from datetime import datetime
 from rdflib import Namespace, Graph
 
 # To avoid duplication of namespaces across converters
@@ -22,6 +23,13 @@ NS = {
    'owl': Namespace('http://www.w3.org/2002/07/owl#')
 }
 
+def timestamp_to_datetime(timestamp):
+    return datetime.fromtimestamp(int(timestamp/1000)).isoformat()
+
+def read_space_delimited_file(f, delimiter=' ', comment='#'):
+    lines = (l for l in f.read().strip().split('\n') if not l.startswith(comment))
+    return (l.split(delimiter) for l in lines)
+
 def write_graph(graph, outputfile=None, format='n3'):
     '''
     Write graph to stdout, or to a file if outputfile is specified.
@@ -34,7 +42,7 @@ def write_graph(graph, outputfile=None, format='n3'):
             f.write(rdf)
 
 def merge_graphs_in_directory(directory, outputfile, format='n3'):
-    with open(outputfile, "wb") as f:
+    with open(outputfile, "wb+") as f:
         graph=Graph()
         for root, file_ in traverse(directory):
             extension = os.path.splitext(file_)[1].lstrip('.')
