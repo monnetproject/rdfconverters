@@ -3,7 +3,7 @@ from rdfconverters.util import NS
 from os.path import dirname, abspath
 from pkg_resources import resource_stream
 
-XEBR2XBRL_PATH = resource_stream(__name__, 'schemas/xebr2xbrl.n3')
+XEBR2XBRL_PATH = resource_stream('rdfconverters.resources', 'mfo/XEBR2XBRLv1.0/xebr2xbrl.n3')
 x2x_graph = Graph()
 x2x_graph.parse(XEBR2XBRL_PATH, format="n3")
 for n in NS:

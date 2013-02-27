@@ -1,0 +1,1512 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.dfki.de/lt/skos.owl#> .
+@prefix xbrl_be: <http://www.dfki.de/lt/xbrl_be.owl#> .
+@prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es.owl#> .
+@prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
+@prefix xbrl_it: <http://www.dfki.de/lt/xbrl_it.owl#> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+
+xbrl_es_cnmv:es-be-fs_CapitalFondoDotacion skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:es-be-fs_ResultadoEjercicioBalance skos:altLabel "Patrimonio neto fondos propios resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriod;
+    skos:prefLabel "VII. Resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+
+xbrl_es_cnmv:ifrs-gp_CashAndCashEquivalents skos:altLabel "Activo corriente efectivo y otros activos líquidos equivalentes"@es;
+    skos:exactMatch xebr:hasLiquidAssetsTotal;
+    skos:prefLabel "efectivo y otros activos líquidos equivalentes"@es;
+    owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_DeferredTaxLiabilities skos:altLabel "Pasivo no corriente pasivos por impuesto diferido"@es;
+    skos:exactMatch xebr:hasDeferredTaxes;
+    skos:prefLabel "IV. Pasivos por impuesto diferido"@es;
+    owl:equivalentProperty xebr:hasDeferredTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IncomeTaxExpenseIncome skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "20. Impuestos sobre beneficios"@es;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IssuedCapital skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ifrs-gp_OtherFinancialAssetsNonCurrent skos:altLabel "Activo no corriente inversiones financieras a largo plazo"@es;
+    skos:exactMatch xebr:hasOtherFinancialAssets;
+    skos:prefLabel "V. Inversiones financieras a largo plazo"@es;
+    owl:equivalentProperty xebr:hasOtherFinancialAssets .
+
+xbrl_es_cnmv:ifrs-gp_ProfitLoss skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ifrs-gp_PropertyPlantAndEquipmentNet skos:altLabel "Activo no corriente inmovilizado material"@es;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "II. Inmovilizado material"@es;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_RevenueTotalByNature skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas importe neto de la cifra de negocios"@es;
+    skos:exactMatch xebr:hasNetTurnover;
+    skos:prefLabel "1. Importe neto de la cifra de negocios"@es;
+    owl:equivalentProperty xebr:hasNetTurnover .
+
+xbrl_es_cnmv:ifrs-gp_SharePremiumTotal skos:altLabel "Patrimonio neto fondos propios prima de emisión"@es;
+    skos:exactMatch xebr:hasSharePremiumAccount;
+    skos:prefLabel "II. Prima de emisión"@es;
+    owl:equivalentProperty xebr:hasSharePremiumAccount .
+
+xbrl_es_cnmv:ifrs-gp_TradeAndOtherReceivablesNetCurrent skos:altLabel "Activo corriente deudores comerciales y otras cuentas a cobrar"@es;
+    skos:exactMatch xebr:hasAmountsReceivableTotal;
+    skos:prefLabel "III. Deudores comerciales y otras cuentas a cobrar"@es;
+    owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+
+xbrl_es_cnmv:ipp-com_CapitalPasivoPatrimonioNeto skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ipp-gen_ActivoCorrienteNacional skos:altLabel "Activo corriente"@es;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "B) ACTIVO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_ActivoNoCorrienteNacional skos:altLabel "Activo no corriente"@es;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "A) ACTIVO NO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_FondosPropiosNacional skos:altLabel "Patrimonio neto fondos propios"@es;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "A-1) Fondos propios"@es;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_es_cnmv:ipp-gen_IngresosFinancieros skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es;
+    skos:exactMatch xebr:hasFinancialIncomeTotal;
+    skos:prefLabel "14. Ingresos financieros"@es;
+    owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+
+xbrl_es_cnmv:ipp-gen_InversionesEmpresasGrupoAsociadasLargoPlazo skos:altLabel "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    skos:exactMatch xebr:hasAffiliatedEnterprises;
+    skos:prefLabel "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioNacional skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioProcedenteOperacionesContinuadasNacional skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoFinanciero skos:altLabel "Cuenta de pérdidas y ganancias resultado financiero"@es;
+    skos:exactMatch xebr:hasFinancialProfitLossTotal;
+    skos:prefLabel "resultado financiero"@es;
+    owl:equivalentProperty xebr:hasFinancialProfitLossTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalActivoNacional skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalPatrimonioNetoPasivoNacional skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
+
+
+
+xbrl_be:pfs_AccruedChargesDeferredIncome skos:altLabel "Accrued charges and deferred income"@en,
+        "Comptes de régularisation - Passif"@fr,
+        "Overlopende rekeningen - Passiva"@nl,
+        "Rechnungsabgrenzungsposten - Passiva"@de;
+    skos:exactMatch xebr:hasAccruedChargesAndDeferredIncomeTotal;
+    skos:prefLabel "Accruals and deferred income"@en,
+        "Comptes de régularisation"@fr,
+        "Overlopende rekeningen"@nl,
+        "Rechnungsabgrenzungsposten"@de;
+    owl:equivalentProperty xebr:hasAccruedChargesAndDeferredIncomeTotal .
+
+xbrl_be:pfs_AmountsPayable skos:altLabel "Amounts payable"@en,
+        "Dettes"@fr,
+        "Schulden"@nl,
+        "Verbindlichkeiten"@de;
+    skos:exactMatch xebr:hasAmountsPayableTotal;
+    skos:prefLabel "Amounts payable"@en,
+        "Dettes"@fr,
+        "Schulden"@nl,
+        "Verbindlichkeiten"@de;
+    owl:equivalentProperty xebr:hasAmountsPayableTotal .
+
+xbrl_be:pfs_AmountsPayableMoreOneYear skos:altLabel "Amounts payable after more than one year"@en,
+        "Dettes à plus d'un an"@fr,
+        "Schulden op meer dan één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de;
+    skos:exactMatch xebr:hasAmountsPayableAfterMoreThanOneYearTotal;
+    skos:prefLabel "Amounts payable after more than one year"@en,
+        "Dettes à plus d'un an"@fr,
+        "Schulden op meer dan één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de;
+    owl:equivalentProperty xebr:hasAmountsPayableAfterMoreThanOneYearTotal .
+
+xbrl_be:pfs_AmountsPayableWithinOneYear skos:altLabel "Amounts payable within one year"@en,
+        "Dettes à un an au plus"@fr,
+        "Schulden op ten hoogste één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de;
+    skos:exactMatch xebr:hasAmountsPayableWithinOneYearTotal;
+    skos:prefLabel "Amounts payable within one year"@en,
+        "Dettes à un an au plus"@fr,
+        "Schulden op ten hoogste één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de;
+    owl:equivalentProperty xebr:hasAmountsPayableWithinOneYearTotal .
+
+xbrl_be:pfs_AmountsReceivableMoreOneYear skos:altLabel "Amounts receivable after more than one year"@en,
+        "Créances à plus d'un an"@fr,
+        "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de,
+        "Vorderingen op meer dan één jaar"@nl;
+    skos:exactMatch xebr:hasAmountsReceivableAfterMoreThanOneYear;
+    skos:prefLabel "Amounts receivable after more than one year"@en,
+        "Créances à plus d'un an"@fr,
+        "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de,
+        "Vorderingen op meer dan één jaar"@nl;
+    owl:equivalentProperty xebr:hasAmountsReceivableAfterMoreThanOneYear .
+
+xbrl_be:pfs_AmountsReceivableWithinOneYear skos:altLabel "Amounts receivable within one year"@en,
+        "Créances à un an au plus"@fr,
+        "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de,
+        "Vorderingen op ten hoogste één jaar"@nl;
+    skos:exactMatch xebr:hasAmountsReceivableWithinOneYear;
+    skos:prefLabel "Amounts receivable within one year"@en,
+        "Créances à un an au plus"@fr,
+        "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de,
+        "Vorderingen op ten hoogste één jaar"@nl;
+    owl:equivalentProperty xebr:hasAmountsReceivableWithinOneYear .
+
+xbrl_be:pfs_Assets skos:altLabel "Actif"@fr,
+        "Activa"@nl,
+        "Aktiva"@de,
+        "Assets"@en;
+    skos:exactMatch xebr:hasAssetsTotal;
+    skos:prefLabel "Summe der Aktiva"@de,
+        "Totaal van de activa"@nl,
+        "Total assets"@en,
+        "Total de l'actif"@fr;
+    owl:equivalentProperty xebr:hasAssetsTotal .
+
+xbrl_be:pfs_AssetsTitle skos:altLabel "Actif - Titre"@fr,
+        "Activa - Titel"@nl,
+        "Aktiva - Titel"@de,
+        "Assets - Title"@en;
+    skos:exactMatch xebr:AssetsPresentation;
+    skos:prefLabel "Actif"@fr,
+        "Activa"@nl,
+        "Aktiva"@de,
+        "Assets"@en;
+    owl:equivalentProperty xebr:AssetsPresentation .
+
+xbrl_be:pfs_BalanceSheet skos:altLabel "Balance sheet"@en,
+        "Balans"@nl,
+        "Bilan"@fr,
+        "Bilanz"@de;
+    skos:exactMatch xebr:KeyBalanceSheetFiguresReport;
+    skos:prefLabel "Balance sheet after appropriation"@en,
+        "Balans na winstverdeling"@nl,
+        "Bilan après répartition"@fr,
+        "Bilanz nach Ergebnisverwendung"@de;
+    owl:equivalentProperty xebr:KeyBalanceSheetFiguresReport .
+
+xbrl_be:pfs_Capital skos:altLabel "Capital"@en,
+        "Capital"@fr,
+        "Kapitaal"@nl,
+        "Kapital"@de;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "Capital"@en,
+        "Capital"@fr,
+        "Kapitaal"@nl,
+        "Kapital"@de;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_be:pfs_CurrentsAssets skos:altLabel "Actifs circulants"@fr,
+        "Current assets"@en,
+        "Umlaufvermögen"@de,
+        "Vlottende activa"@nl;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "Actifs circulants"@fr,
+        "Current assets"@en,
+        "Umlaufvermögen"@de,
+        "Vlottende activa"@nl;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_be:pfs_DeferredChargesAccruedIncome skos:altLabel "Comptes de régularisation - Actif"@fr,
+        "Deferred charges and accrued income"@en,
+        "Overlopende rekeningen - Activa"@nl,
+        "Rechnungsabgrenzungsposten - Aktiva"@de;
+    skos:exactMatch xebr:hasDeferredChargesAndAccruedIncomeTotal;
+    skos:prefLabel "Comptes de régularisation"@fr,
+        "Deferred charges and accrued income"@en,
+        "Overlopende rekeningen"@nl,
+        "Rechnungsabgrenzungsposten"@de;
+    owl:equivalentProperty xebr:hasDeferredChargesAndAccruedIncomeTotal .
+
+xbrl_be:pfs_DeferredTaxes skos:altLabel "Aufgeschobene Steuern"@de,
+        "Deferred taxes"@en,
+        "Impôts différés"@fr,
+        "Uitgestelde belastingen"@nl;
+    skos:exactMatch xebr:hasDeferredTaxes;
+    skos:prefLabel "Aufgeschobene Steuern"@de,
+        "Deferred taxes"@en,
+        "Impôts différés"@fr,
+        "Uitgestelde belastingen"@nl;
+    owl:equivalentProperty xebr:hasDeferredTaxes .
+
+xbrl_be:pfs_Equity skos:altLabel "Eigen vermogen"@nl,
+        "Eigenkapital"@de,
+        "Equity"@en,
+        "Fonds social"@fr;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "Eigen vermogen"@nl,
+        "Eigenkapital"@de,
+        "Equity"@en,
+        "Fonds social"@fr;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_be:pfs_EquityLiabilities skos:altLabel "Equity and Liabilities"@en,
+        "Passif"@fr,
+        "Passiva"@de,
+        "Passiva"@nl;
+    skos:exactMatch xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "Summe der Passiva"@de,
+        "Totaal van de passiva"@nl,
+        "Total du passif"@fr,
+        "Total liabilities"@en;
+    owl:equivalentProperty xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_be:pfs_EquityLiabilitiesTitle skos:altLabel "Equity and Liabilities - Title"@en,
+        "Passif - Titre"@fr,
+        "Passiva - Titel"@de,
+        "Passiva - Titel"@nl;
+    skos:exactMatch xebr:EquityAndLiabilitiesPresentation;
+    skos:prefLabel "Equity and Liabilities"@en,
+        "Passif"@fr,
+        "Passiva"@de,
+        "Passiva"@nl;
+    owl:equivalentProperty xebr:EquityAndLiabilitiesPresentation .
+
+xbrl_be:pfs_ExtraordinaryCharges skos:altLabel "Außerordentliche Aufwendungen"@de,
+        "Charges exceptionnelles"@fr,
+        "Extraordinary charges"@en,
+        "Uitzonderlijke kosten"@nl;
+    skos:exactMatch xebr:hasExtraordinaryChargesTotal;
+    skos:prefLabel "Außerordentliche Aufwendungen"@de,
+        "Charges exceptionnelles"@fr,
+        "Extraordinary charges"@en,
+        "Uitzonderlijke kosten"@nl;
+    owl:equivalentProperty xebr:hasExtraordinaryChargesTotal .
+
+xbrl_be:pfs_ExtraordinaryIncome skos:altLabel "Außerordentliche Erträge"@de,
+        "Extraordinary income"@en,
+        "Produits exceptionnels"@fr,
+        "Uitzonderlijke opbrengsten"@nl;
+    skos:exactMatch xebr:hasExtraordinaryIncomeTotal;
+    skos:prefLabel "Außerordentliche Erträge"@de,
+        "Extraordinary income"@en,
+        "Produits exceptionnels"@fr,
+        "Uitzonderlijke opbrengsten"@nl;
+    owl:equivalentProperty xebr:hasExtraordinaryIncomeTotal .
+
+xbrl_be:pfs_FinancialCharges skos:altLabel "Charges financières"@fr,
+        "Financial charges"@en,
+        "Financiële kosten"@nl,
+        "Finanzaufwendungen"@de;
+    skos:exactMatch xebr:hasFinancialChargesTotal;
+    skos:prefLabel "Charges financières"@fr,
+        "Financial charges"@en,
+        "Financiële kosten"@nl,
+        "Finanzaufwendungen"@de;
+    owl:equivalentProperty xebr:hasFinancialChargesTotal .
+
+xbrl_be:pfs_FinancialDebtsPayableWithinOneYear skos:altLabel "Dettes financières à un an au plus"@fr,
+        "Financial debts payable within one year"@en,
+        "Financiële schulden op ten hoogste één jaar"@nl,
+        "Finanzverbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de;
+    skos:exactMatch xebr:hasFinancialDebtsPayableWithinOneYear;
+    skos:prefLabel "Dettes financières"@fr,
+        "Financial debts"@en,
+        "Financiële schulden"@nl,
+        "Finanzverbindlichkeiten"@de;
+    owl:equivalentProperty xebr:hasFinancialDebtsPayableWithinOneYear .
+
+xbrl_be:pfs_FinancialDebtsRemainingTermMoreOneYear skos:altLabel "Dettes financières à plus d'un an"@fr,
+        "Financial debts with a remaining term of more than one year"@en,
+        "Financiële schulden op meer dan één jaar"@nl,
+        "Finanzverbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de;
+    skos:exactMatch xebr:hasFinancialDebtsPayableAfterMoreThanOneYear;
+    skos:prefLabel "Dettes financières"@fr,
+        "Financial debts"@en,
+        "Financiële schulden"@nl,
+        "Finanzverbindlichkeiten"@de;
+    owl:equivalentProperty xebr:hasFinancialDebtsPayableAfterMoreThanOneYear .
+
+xbrl_be:pfs_FinancialFixedAssets skos:altLabel "Financial fixed assets"@en,
+        "Financiële vaste activa"@nl,
+        "Finanzanlagen"@de,
+        "Immobilisations financières"@fr;
+    skos:exactMatch xebr:hasFinancialFixedAssetsTotal;
+    skos:prefLabel "Financial fixed assets"@en,
+        "Financiële vaste activa"@nl,
+        "Finanzanlagen"@de,
+        "Immobilisations financières"@fr;
+    owl:equivalentProperty xebr:hasFinancialFixedAssetsTotal .
+
+xbrl_be:pfs_FinancialIncome skos:altLabel "Financial income"@en,
+        "Financiële opbrengsten"@nl,
+        "Finanzerträge"@de,
+        "Produits financiers"@fr;
+    skos:exactMatch xebr:hasFinancialIncomeTotal;
+    skos:prefLabel "Financial income"@en,
+        "Financiële opbrengsten"@nl,
+        "Finanzerträge"@de,
+        "Produits financiers"@fr;
+    owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+
+xbrl_be:pfs_FixedAssets skos:altLabel "Actifs immobilisés"@fr,
+        "Anlagevermögen"@de,
+        "Fixed assets"@en,
+        "Vaste activa"@nl;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "Actifs immobilisés"@fr,
+        "Anlagevermögen"@de,
+        "Fixed assets"@en,
+        "Vaste activa"@nl;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_be:pfs_FurnitureVehicles skos:altLabel "Furniture and vehicles"@en,
+        "Geschäftsausstattung und Fuhrpark"@de,
+        "Meubilair en rollend materieel"@nl,
+        "Mobilier et matériel roulant"@fr;
+    skos:exactMatch xebr:hasFurnitureFixturesAndEquipment;
+    skos:prefLabel "Furniture and vehicles"@en,
+        "Geschäftsausstattung und Fuhrpark"@de,
+        "Meubilair en rollend materieel"@nl,
+        "Mobilier et matériel roulant"@fr;
+    owl:equivalentProperty xebr:hasFurnitureFixturesAndEquipment .
+
+xbrl_be:pfs_GainLossPeriod skos:altLabel "Bénéfice (Perte) de l'exercice"@fr,
+        "Gain (loss) of the period"@en,
+        "Gewinn (Verlust) des Geschäftsjahres"@de,
+        "Winst (Verlies) van het boekjaar"@nl;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "Bénéfice (Perte) de l'exercice"@fr,
+        "Gain (loss) of the period"@en,
+        "Gewinn (Verlust) des Geschäftsjahres"@de,
+        "Winst (Verlies) van het boekjaar"@nl;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_be:pfs_IncomeStatement skos:altLabel "Compte de résultats"@fr,
+        "Income statement"@en,
+        "Resultatenrekening"@nl,
+        "Schema der Ergebnisrechnung"@de;
+    skos:exactMatch xebr:IncomeStatementPresentation;
+    skos:prefLabel "Compte de résultats"@fr,
+        "Income statement"@en,
+        "Resultatenrekening"@nl,
+        "Schema der Ergebnisrechnung"@de;
+    owl:equivalentProperty xebr:IncomeStatementPresentation .
+
+xbrl_be:pfs_IncomeTaxes skos:altLabel "Belastingen op het resultaat"@nl,
+        "Impôts sur le résultat"@fr,
+        "Income taxes"@en,
+        "Steuern auf das Ergebnis"@de;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "Belastingen op het resultaat"@nl,
+        "Impôts sur le résultat"@fr,
+        "Income taxes"@en,
+        "Steuern auf das Ergebnis"@de;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_be:pfs_IntangibleFixedAssets skos:altLabel "Immaterielle Anlagewerte"@de,
+        "Immateriële vaste activa"@nl,
+        "Immobilisations incorporelles"@fr,
+        "Intangible fixed assets"@en;
+    skos:exactMatch xebr:hasIntangibleFixedAssetsTotal;
+    skos:prefLabel "Immaterielle Anlagewerte"@de,
+        "Immateriële vaste activa"@nl,
+        "Immobilisations incorporelles"@fr,
+        "Intangible fixed assets"@en;
+    owl:equivalentProperty xebr:hasIntangibleFixedAssetsTotal .
+
+xbrl_be:pfs_LandBuildings skos:altLabel "Grundstücke und Bauten"@de,
+        "Land and buildings"@en,
+        "Terrains et constructions"@fr,
+        "Terreinen en gebouwen"@nl;
+    skos:exactMatch xebr:hasLandAndBuildings;
+    skos:prefLabel "Grundstücke und Bauten"@de,
+        "Land and buildings"@en,
+        "Terrains et constructions"@fr,
+        "Terreinen en gebouwen"@nl;
+    owl:equivalentProperty xebr:hasLandAndBuildings .
+
+xbrl_be:pfs_LeasingSimilarRights skos:altLabel "Leasing and similar rights"@en,
+        "Leasing en soortgelijke rechten"@nl,
+        "Leasing und ähnliche Rechten"@de,
+        "Location-financement et droits similaires"@fr;
+    skos:exactMatch xebr:hasOtherPropertyPlantAndEquipment;
+    skos:prefLabel "Leasing and similar rights"@en,
+        "Leasing en soortgelijke rechten"@nl,
+        "Leasing und ähnliche Rechten"@de,
+        "Location-financement et droits similaires"@fr;
+    owl:equivalentProperty xebr:hasOtherPropertyPlantAndEquipment .
+
+xbrl_be:pfs_OperatingCharges skos:altLabel "Bedrijfskosten"@nl,
+        "Betriebliche Aufwendungen"@de,
+        "Coût des ventes et des prestations"@fr,
+        "Operating charges"@en;
+    skos:exactMatch xebr:hasOperatingChargesTotal;
+    skos:prefLabel "Bedrijfskosten"@nl,
+        "Betriebliche Aufwendungen"@de,
+        "Coût des ventes et des prestations"@fr,
+        "Operating charges"@en;
+    owl:equivalentProperty xebr:hasOperatingChargesTotal .
+
+xbrl_be:pfs_OperatingIncome skos:altLabel "Bedrijfsopbrengsten"@nl,
+        "Betriebliche Erträge"@de,
+        "Operating income"@en,
+        "Ventes et prestations"@fr;
+    skos:exactMatch xebr:hasOperatingIncomeTotal;
+    skos:prefLabel "Bedrijfsopbrengsten"@nl,
+        "Betriebliche Erträge"@de,
+        "Operating income"@en,
+        "Ventes et prestations"@fr;
+    owl:equivalentProperty xebr:hasOperatingIncomeTotal .
+
+xbrl_be:pfs_OperatingProfitLoss skos:altLabel "Bedrijfswinst (Bedrijfsverlies)"@nl,
+        "Betriebsgewinn (Betriebsverlust)"@de,
+        "Bénéfice (Perte) d'exploitation"@fr,
+        "Operating profit (loss)"@en;
+    skos:exactMatch xebr:hasOperatingProfitLossTotal;
+    skos:prefLabel "Bedrijfswinst (Bedrijfsverlies)"@nl,
+        "Betriebsgewinn (Betriebsverlust)"@de,
+        "Bénéfice (Perte) d'exploitation"@fr,
+        "Operating profit (loss)"@en;
+    owl:equivalentProperty xebr:hasOperatingProfitLossTotal .
+
+xbrl_be:pfs_OtherFinancialAssets skos:altLabel "Andere financiële vaste activa"@nl,
+        "Autres immobilisations financières"@fr,
+        "Other financial assets"@en,
+        "Sonstige Finanzanlagen"@de;
+    skos:exactMatch xebr:hasOtherFinancialAssets;
+    skos:prefLabel "Andere financiële vaste activa"@nl,
+        "Autres immobilisations financières"@fr,
+        "Other financial assets"@en,
+        "Sonstige Finanzanlagen"@de;
+    owl:equivalentProperty xebr:hasOtherFinancialAssets .
+
+xbrl_be:pfs_OtherTangibleAssets skos:altLabel "Autres immobilisations corporelles"@fr,
+        "Other tangible fixed assets"@en,
+        "Overige materiële vaste activa"@nl,
+        "Sonstige Sachanlagen"@de;
+    skos:exactMatch xebr:hasOtherTangibleFixedAssets;
+    skos:prefLabel "Autres immobilisations corporelles"@fr,
+        "Other tangible fixed assets"@en,
+        "Overige materiële vaste activa"@nl,
+        "Sonstige Sachanlagen"@de;
+    owl:equivalentProperty xebr:hasOtherTangibleFixedAssets .
+
+xbrl_be:pfs_ParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:altLabel "Beteiligungen und Forderungen an verbundenen Unternehmen"@de,
+        "Deelnemingen in en vorderingen op verbonden ondernemingen"@nl,
+        "Participating interests and amounts receivable in affiliated enterprises"@en,
+        "Participations et créances dans les entreprises liées"@fr;
+    skos:exactMatch xebr:hasAffiliatedEnterprises;
+    skos:prefLabel "Affiliated entities"@en,
+        "Entités liées"@fr,
+        "Verbonden ondernemingen"@nl,
+        "Verbundene Körperschaften"@de;
+    owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+
+xbrl_be:pfs_PlantMachineryEquipment skos:altLabel "Anlagen, Maschinen und Betriebsausstattung"@de,
+        "Installaties, machines en uitrusting"@nl,
+        "Installations, machines et outillage"@fr,
+        "Plant, machinery and equipment"@en;
+    skos:exactMatch xebr:hasPlantAndMachinery;
+    skos:prefLabel "Anlagen, Maschinen und Betriebsausstattung"@de,
+        "Installaties, machines en uitrusting"@nl,
+        "Installations, machines et outillage"@fr,
+        "Plant, machinery and equipment"@en;
+    owl:equivalentProperty xebr:hasPlantAndMachinery .
+
+xbrl_be:pfs_ProvisionsDeferredTaxes skos:altLabel "Provisions and deferred taxes"@en,
+        "Provisions et impôts différés"@fr,
+        "Rückstellungen"@de,
+        "Voorzieningen"@nl;
+    skos:exactMatch xebr:hasProvisionsAndDeferredTaxesTotal;
+    skos:prefLabel "Provisions and deferred taxes"@en,
+        "Provisions et impôts différés"@fr,
+        "Rückstellungen"@de,
+        "Voorzieningen"@nl;
+    owl:equivalentProperty xebr:hasProvisionsAndDeferredTaxesTotal .
+
+xbrl_be:pfs_RawMaterialsConsumables skos:altLabel "Approvisionnements et marchandises"@fr,
+        "Handelsgoederen, grond- en hulpstoffen"@nl,
+        "Raw materials, consumables"@en,
+        "Waren, Roh-, Hilfs- und Betriebsstoffe"@de;
+    skos:exactMatch xebr:hasRawMaterialsAndConsumables;
+    skos:prefLabel "Approvisionnements et marchandises"@fr,
+        "Handelsgoederen, grond- en hulpstoffen"@nl,
+        "Raw materials, consumables"@en,
+        "Waren, Roh-, Hilfs- und Betriebsstoffe"@de;
+    owl:equivalentProperty xebr:hasRawMaterialsAndConsumables .
+
+xbrl_be:pfs_Reserves skos:altLabel "Reserves"@en,
+        "Reserves"@nl,
+        "Réserves"@fr,
+        "Rücklagen"@de;
+    skos:exactMatch xebr:hasReserves;
+    skos:prefLabel "Reserves"@en,
+        "Reserves"@nl,
+        "Réserves"@fr,
+        "Rücklagen"@de;
+    owl:equivalentProperty xebr:hasReserves .
+
+xbrl_be:pfs_StockRawMaterialsConsumables skos:altLabel "Approvisionnements"@fr,
+        "Grond- en hulpstoffen"@nl,
+        "Raw materials and consumables"@en,
+        "Roh-, Hilfs- und Betriebsstoffe"@de;
+    skos:exactMatch xebr:hasRawMaterialsAndConsumables;
+    skos:prefLabel "Approvisionnements"@fr,
+        "Grond- en hulpstoffen"@nl,
+        "Raw materials and consumables"@en,
+        "Roh-, Hilfs- und Betriebsstoffe"@de;
+    owl:equivalentProperty xebr:hasRawMaterialsAndConsumables .
+
+xbrl_be:pfs_StockWorkProgress skos:altLabel "En-cours de fabrication"@fr,
+        "Goederen in bewerking"@nl,
+        "Unfertige Erzeugnisse"@de,
+        "Work in progress"@en;
+    skos:exactMatch xebr:hasWorkInProgress;
+    skos:prefLabel "En-cours de fabrication"@fr,
+        "Goederen in bewerking"@nl,
+        "Unfertige Erzeugnisse"@de,
+        "Work in progress"@en;
+    owl:equivalentProperty xebr:hasWorkInProgress .
+
+xbrl_be:pfs_StocksContractsProgress skos:altLabel "Stocks and contracts in progress"@en,
+        "Stocks et commandes en cours d'exécution"@fr,
+        "Voorraden en bestellingen in uitvoering"@nl,
+        "Vorräte und in Ausführung befindliche Bestellungen"@de;
+    skos:exactMatch xebr:hasStocksTotal;
+    skos:prefLabel "Stocks and contracts in progress"@en,
+        "Stocks et commandes en cours d'exécution"@fr,
+        "Voorraden en bestellingen in uitvoering"@nl,
+        "Vorräte und in Ausführung befindliche Bestellungen"@de;
+    owl:equivalentProperty xebr:hasStocksTotal .
+
+xbrl_be:pfs_TangibleFixedAssets skos:altLabel "Immobilisations corporelles"@fr,
+        "Materiële vaste activa"@nl,
+        "Sachanlagen"@de,
+        "Tangible fixed assets"@en;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "Immobilisations corporelles"@fr,
+        "Materiële vaste activa"@nl,
+        "Sachanlagen"@de,
+        "Tangible fixed assets"@en;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_be:pfs_TaxesRemunerationSocialSecurity skos:altLabel "Dettes fiscales, salariales et sociales"@fr,
+        "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl,
+        "Taxes, remuneration and social security"@en,
+        "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de;
+    skos:exactMatch xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear;
+    skos:prefLabel "Dettes fiscales, salariales et sociales"@fr,
+        "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl,
+        "Taxes, remuneration and social security"@en,
+        "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de;
+    owl:equivalentProperty xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear .
+
+xbrl_es:pgc-07-c-bs_ActivoCorriente skos:altLabel "Activo corriente"@es;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "B) ACTIVO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoCorrienteDeudoresComercialesOtrasCuentasCobrar skos:altLabel "Activo corriente deudores comerciales y otras cuentas a cobrar"@es;
+    skos:exactMatch xebr:hasAmountsReceivableTotal;
+    skos:prefLabel "III. Deudores comerciales y       otras cuentas a cobrar"@es;
+    owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes skos:altLabel "Activo corriente efectivo y otros activos líquidos equivalentes"@es;
+    skos:exactMatch xebr:hasLiquidAssetsTotal;
+    skos:prefLabel "efectivo y otros activos líquidos equivalentes"@es;
+    owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoCorrienteExistencias skos:altLabel "Activo corriente existencias"@es;
+    skos:exactMatch xebr:hasStocksTotal;
+    skos:prefLabel "II. Existencias"@es;
+    owl:equivalentProperty xebr:hasStocksTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoNoCorriente skos:altLabel "Activo no corriente"@es;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "A) ACTIVO NO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoNoCorrienteInmovilizadoIntangible skos:altLabel "Activo no corriente inmovilizado intangible"@es;
+    skos:exactMatch xebr:hasIntangibleFixedAssetsTotal;
+    skos:prefLabel "I. Inmovilizado intangible"@es;
+    owl:equivalentProperty xebr:hasIntangibleFixedAssetsTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoNoCorrienteInmovilizadoMaterial skos:altLabel "Activo no corriente inmovilizado material"@es;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "II. Inmovilizado material"@es;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_es:pgc-07-c-bs_ActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo skos:altLabel "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    skos:exactMatch xebr:hasAffiliatedEnterprises;
+    skos:prefLabel "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+
+xbrl_es:pgc-07-c-bs_ActivoNoCorrienteInversionesFinancierasLargoPlazo skos:altLabel "Activo no corriente inversiones financieras a largo plazo"@es;
+    skos:exactMatch xebr:hasOtherFinancialAssets;
+    skos:prefLabel "V. Inversiones financieras a largo plazo"@es;
+    owl:equivalentProperty xebr:hasOtherFinancialAssets .
+
+xbrl_es:pgc-07-c-bs_ActivoPresentacion skos:altLabel "Activo"@es;
+    skos:exactMatch xebr:AssetsPresentation;
+    skos:prefLabel "ACTIVO"@es;
+    owl:equivalentProperty xebr:AssetsPresentation .
+
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion skos:altLabel "BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION"@es;
+    skos:exactMatch xebr:KeyBalanceSheetFiguresReport;
+    skos:prefLabel "BALANCE DE SITUACIÓN NORMAL"@es;
+    owl:equivalentProperty xebr:KeyBalanceSheetFiguresReport .
+
+xbrl_es:pgc-07-c-bs_PasivoNoCorrientePasivosImpuestoDiferido skos:altLabel "Pasivo no corriente pasivos por impuesto diferido"@es;
+    skos:exactMatch xebr:hasDeferredTaxes;
+    skos:prefLabel "IV. Pasivos por impuesto diferido"@es;
+    owl:equivalentProperty xebr:hasDeferredTaxes .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropios skos:altLabel "Patrimonio neto fondos propios"@es;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "A-1) Fondos propios"@es;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropiosCapital skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropiosPrimaEmision skos:altLabel "Patrimonio neto fondos propios prima de emisión"@es;
+    skos:exactMatch xebr:hasSharePremiumAccount;
+    skos:prefLabel "II. Prima de emisión"@es;
+    owl:equivalentProperty xebr:hasSharePremiumAccount .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropiosReservas skos:altLabel "Patrimonio neto fondos propios reservas"@es;
+    skos:exactMatch xebr:hasReserves;
+    skos:prefLabel "III. Reservas"@es;
+    owl:equivalentProperty xebr:hasReserves .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropiosResultadoEjercicio skos:altLabel "Patrimonio neto fondos propios resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriod;
+    skos:prefLabel "VII. Resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores skos:altLabel "Patrimonio neto fondos propios resultados de ejercicios anteriores"@es;
+    skos:exactMatch xebr:hasProfitLossBroughtForward;
+    skos:prefLabel "V. Resultados de ejercicios anteriores"@es;
+    owl:equivalentProperty xebr:hasProfitLossBroughtForward .
+
+xbrl_es:pgc-07-c-bs_PatrimonioNetoPasivoTotal skos:altLabel "Patrimonio neto y pasivo total"@es;
+    skos:exactMatch xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasGastosFinancieros skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas gastos financieros"@es;
+    skos:exactMatch xebr:hasFinancialChargesTotal;
+    skos:prefLabel "gastos financieros"@es;
+    owl:equivalentProperty xebr:hasFinancialChargesTotal .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasImporteNetoCifraNegocios skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas importe neto de la cifra de negocios"@es;
+    skos:exactMatch xebr:hasNetTurnover;
+    skos:prefLabel "1. Importe neto de la cifra de negocios"@es;
+    owl:equivalentProperty xebr:hasNetTurnover .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "impuestos sobre beneficios"@es;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasIngresosFinancieros skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es;
+    skos:exactMatch xebr:hasFinancialIncomeTotal;
+    skos:prefLabel "ingresos financieros"@es;
+    owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasTrabajosRealizadosEmpresaActivo skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas trabajos realizados por la empresa para su activo"@es;
+    skos:exactMatch xebr:hasCapitalisedProduction;
+    skos:prefLabel "3. Trabajos realizados por la empresa para su activo"@es;
+    owl:equivalentProperty xebr:hasCapitalisedProduction .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasOperacionesContinuadasVariacionExistenciasProductosTerminadosProductosCursoFabricacion skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas variación de existencias de productos terminados y en curso de fabricación"@es;
+    skos:exactMatch xebr:hasVariationInStocksOfFinishedGoodsAndWorkInProgress;
+    skos:prefLabel "2. Variación de existencias de productos terminados y en curso de fabricación"@es;
+    owl:equivalentProperty xebr:hasVariationInStocksOfFinishedGoodsAndWorkInProgress .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion skos:altLabel "CUENTA DE PÉRDIDAS Y GANANCIAS CORRESPONDIENTE AL EJERCICIO"@es;
+    skos:exactMatch xebr:IncomeStatementPresentation;
+    skos:prefLabel "Perdidas y Ganancias Presentación"@es;
+    owl:equivalentProperty xebr:IncomeStatementPresentation .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasResultadoEjercicio skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasResultadoExplotacion skos:altLabel "Cuenta de pérdidas y ganancias resultado de explotación"@es;
+    skos:exactMatch xebr:hasGrossOperatingProfitT-6;
+    skos:prefLabel "resultado de explotación"@es;
+    owl:equivalentProperty xebr:hasGrossOperatingProfitT-6 .
+
+xbrl_es:pgc-07-c-bs_PerdidasGananciasResultadoFinanciero skos:altLabel "Cuenta de pérdidas y ganancias resultado financiero"@es;
+    skos:exactMatch xebr:hasFinancialProfitLossTotal;
+    skos:prefLabel "A.2) RESULTADO FINANCIERO       (14+15+16+17+18+19)"@es;
+    owl:equivalentProperty xebr:hasFinancialProfitLossTotal .
+
+xbrl_es:pgc-07-c-bs_TotalActivo skos:altLabel "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal .
+
+xbrl_es:pgc-07-n_ActivoCorrienteExistenciasAnticiposProveedores skos:altLabel "Activo corriente existencias       anticipos a proveedores"@es;
+    skos:exactMatch xebr:hasPaymentsOnAccount;
+    skos:prefLabel "6. Anticipos a proveedores"@es;
+    owl:equivalentProperty xebr:hasPaymentsOnAccount .
+
+xbrl_es:pgc-07-n_ActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos skos:altLabel "Activo corriente existencias de materias primas y otros aprovisionamientos"@es;
+    skos:exactMatch xebr:hasStockRawMaterialsAndConsumables;
+    skos:prefLabel "2.       Materias primas y otros aprovisionamientos"@es;
+    owl:equivalentProperty xebr:hasStockRawMaterialsAndConsumables .
+
+xbrl_es:pgc-07-n_ActivoCorrienteExistenciasProductosCurso skos:altLabel "Activo corriente existencias de       productos en curso"@es;
+    skos:exactMatch xebr:hasWorkInProgress;
+    skos:prefLabel "3. Productos en curso"@es;
+    owl:equivalentProperty xebr:hasWorkInProgress .
+
+xbrl_es:pgc-07-n_ActivoNoCorrienteInmovilizadoMaterialInmovilizadoEnCursoAnticipos skos:altLabel "Activo no corriente inmovilizado material inmovilizado en curso y anticipos"@es;
+    skos:exactMatch xebr:hasPaymentsOnAccountAndAssetsInConstruction;
+    skos:prefLabel "3. Inmovilizado en curso y anticipos"@es;
+    owl:equivalentProperty xebr:hasPaymentsOnAccountAndAssetsInConstruction .
+
+xbrl_es:pgc-07-n_ActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones skos:altLabel "Activo no corriente       inmovilizado material terrenos y construcciones"@es;
+    skos:exactMatch xebr:hasLandAndBuildings;
+    skos:prefLabel "1. Terrenos y construcciones"@es;
+    owl:equivalentProperty xebr:hasLandAndBuildings .
+
+xbrl_es:pgc-07-n_PerdidasGananciasOperacionesContinuadasDeterioroResultadoEnajenacionesInmovilizadoDeterioroPerdidas skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas deterioro y resultado por       enajenaciones del inmovilizado deterioro y pérdidas"@es;
+    skos:exactMatch xebr:hasDepreciationOnIntangibleAndTangibleFixedAssets;
+    skos:prefLabel "a) Deterioro y pérdidas"@es;
+    owl:equivalentProperty xebr:hasDepreciationOnIntangibleAndTangibleFixedAssets .
+
+xbrl_es:pgc-07-n_PerdidasGananciasOperacionesContinuadasGestionPersonalCargasSociales skos:altLabel "Cuenta de       pérdidas y ganancias operaciones continuadas gastos de personal cargas sociales"@es;
+    skos:exactMatch xebr:hasSocialSecurityCosts;
+    skos:prefLabel "b) Cargas sociales"@es;
+    owl:equivalentProperty xebr:hasSocialSecurityCosts .
+
+xbrl_es:pgc-07-n_PerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas gastos de personal sueldos, salarios y       asimilados"@es;
+    skos:exactMatch xebr:hasWagesAndSalaries;
+    skos:prefLabel "a) Sueldos, salarios y asimilados"@es;
+    owl:equivalentProperty xebr:hasWagesAndSalaries .
+
+xbrl_it:itcc-ci_Attivo skos:altLabel "Actif"@fr,
+        "Aktiva"@de,
+        "Assets"@en,
+        "Attivo"@it;
+    skos:exactMatch xebr:AssetsPresentation;
+    skos:prefLabel "Actif"@fr,
+        "Aktiva"@de,
+        "Assets"@en,
+        "Attivo"@it;
+    owl:equivalentProperty xebr:AssetsPresentation .
+
+xbrl_it:itcc-ci_AttivoCircolante skos:altLabel "Actif circulant"@fr,
+        "Attivo circolante"@it,
+        "Current assets"@en,
+        "Umlaufvermögen"@de;
+    skos:exactMatch xebr:CurrentAssetsPresentation;
+    skos:prefLabel "C) Actif circulant"@fr,
+        "C) Attivo circolante"@it,
+        "C) Current assets"@en,
+        "C) Umlaufvermögen"@de;
+    owl:equivalentProperty xebr:CurrentAssetsPresentation .
+
+xbrl_it:itcc-ci_AttivoRateiRisconti skos:altLabel "Actif, Comptes de régularisation"@fr,
+        "Aktiva, Antizipative und transitorische Rechungsabgrenzung"@de,
+        "Assets, Accrued income and prepayments"@en,
+        "Attivo, Ratei e risconti"@it;
+    skos:exactMatch xebr:DeferredChargesAndAccruedIncomePresentation;
+    skos:prefLabel "D) Accrued income and prepayments"@en,
+        "D) Antizipative und transitorische Rechungsabgrenzung"@de,
+        "D) Comptes de régularisation"@fr,
+        "D) Ratei e risconti"@it;
+    owl:equivalentProperty xebr:DeferredChargesAndAccruedIncomePresentation .
+
+xbrl_it:itcc-ci_AttivoRateiRiscontiTotaleRateiRisconti skos:altLabel "Actif, Comptes de régularisation, total comptes de régularisation"@fr,
+        "Aktiva, Antizipative und transitorische Rechungsabgrenzung, Gesamtbetrag der Rechnungsabgrenzungsposten"@de,
+        "Assets, Accrued income and prepayments, total accrued income and prepayments"@en,
+        "Attivo, Ratei e risconti, totale ratei e risconti"@it;
+    skos:exactMatch xebr:hasDeferredChargesAndAccruedIncomeTotal;
+    skos:prefLabel "Gesamtbetrag der Rechnungsabgrenzungsposten"@de,
+        "Total accrued income and prepayments (D)"@en,
+        "Total comptes de régularisation (D)"@fr,
+        "Totale ratei e risconti (D)"@it;
+    owl:equivalentProperty xebr:hasDeferredChargesAndAccruedIncomeTotal .
+
+xbrl_it:itcc-ci_ContoEconomico skos:altLabel "Compte de résultat"@fr,
+        "Conto economico"@it,
+        "Gewinn- und Verlustrechnung und Produktionskosten (Zivilrechtliches Schema)"@de,
+        "Income statement (value and cost of production)"@en;
+    skos:exactMatch xebr:IncomeStatementPresentation;
+    skos:prefLabel "Compte de résultat"@fr,
+        "Conto economico"@it,
+        "Gewinn- und Verlustrechnung und Produktionskosten (Zivilrechtliches Schema)"@de,
+        "Income statement (value and cost of production)"@en;
+    owl:equivalentProperty xebr:IncomeStatementPresentation .
+
+xbrl_it:itcc-ci_CostiProduzione skos:altLabel "Betriebliche Aufwendungen"@de,
+        "Charges d'exploitation"@fr,
+        "Cost of production"@en,
+        "Costi della produzione"@it;
+    skos:exactMatch xebr:OperatingChargesPresentation;
+    skos:prefLabel "B) Betriebliche Aufwendungen"@de,
+        "B) Charges d'exploitation:"@fr,
+        "B) Cost of production"@en,
+        "B) Costi della produzione:"@it;
+    owl:equivalentProperty xebr:OperatingChargesPresentation .
+
+xbrl_it:itcc-ci_CostiProduzioneAltriAccantonamenti skos:altLabel "Costi della produzione, altri accantonamenti"@it,
+        "Other provisions"@en,
+        "autres provisions"@fr,
+        "sonstige Rückstellungen"@de;
+    skos:exactMatch xebr:hasOtherOperatingChargesAndTaxesTotal;
+    skos:prefLabel "13) Other provisions"@en,
+        "13) altri accantonamenti"@it,
+        "13) autres provisions"@fr,
+        "13) sonstige Rückstellungen"@de;
+    owl:equivalentProperty xebr:hasOtherOperatingChargesAndTaxesTotal .
+
+xbrl_it:itcc-ci_CostiProduzioneMateriePrimeSussidiarieConsumoMerci skos:altLabel "Costi della produzione, per materie prime, sussidiarie, di consumo e di merci"@it,
+        "Raw, ancillary and consumable materials and goods for resale"@en,
+        "für Roh-, Hilfs- , und Betriebsstoffe sowie Waren"@de,
+        "matières premières et autres approvisionnements"@fr;
+    skos:exactMatch xebr:hasRawMaterialsAndConsumables;
+    skos:prefLabel "6) Raw, ancillary and consumable materials and goods for resale"@en,
+        "6) für Roh-, Hilfs- , und Betriebsstoffe sowie Waren"@de,
+        "6) matières premières et autres approvisionnements"@fr,
+        "6) per materie prime, sussidiarie, di consumo e di merci"@it;
+    owl:equivalentProperty xebr:hasRawMaterialsAndConsumables .
+
+xbrl_it:itcc-ci_CostiProduzionePersonaleSalariStipendi skos:altLabel "Costi della produzione, per il personale, salari e stipendi"@it,
+        "Löhne und Gehälter"@de,
+        "salaires et appointements"@fr,
+        "wages and salaries"@en;
+    skos:exactMatch xebr:hasWagesAndSalaries;
+    skos:prefLabel "a) Löhne und Gehälter"@de,
+        "a) salaires et appointements"@fr,
+        "a) salari e stipendi"@it,
+        "a) wages and salaries"@en;
+    owl:equivalentProperty xebr:hasWagesAndSalaries .
+
+xbrl_it:itcc-ci_CostiProduzionePersonaleTotaleCostiPersonale skos:altLabel "Costi della produzione, per il personale, totale costi per il personale"@it,
+        "Gesamtbetrag der Personalkosten"@de,
+        "Total charges de personnel"@fr,
+        "Total payroll and related costs"@en;
+    skos:exactMatch xebr:hasStaffCostsTotal;
+    skos:prefLabel "Gesamtbetrag der Personalkosten"@de,
+        "Total charges de personnel"@fr,
+        "Total payroll and related costs"@en,
+        "Totale costi per il personale"@it;
+    owl:equivalentProperty xebr:hasStaffCostsTotal .
+
+xbrl_it:itcc-ci_CostiProduzionePersonaleTrattamentoQuiescenzaSimili skos:altLabel "Costi della produzione, per il personale, trattamento di quiescenza e simili"@it,
+        "Ruhestandsbezuege und ähnliche Zahlungen"@de,
+        "pensions and similar commitments"@en,
+        "pensions et obligations similaires"@fr;
+    skos:exactMatch xebr:hasPensionsAndSimilarCommitments;
+    skos:prefLabel "d) Ruhestandsbezuege und ähnliche Zahlungen"@de,
+        "d) pensions and similar commitments"@en,
+        "d) pensions et obligations similaires"@fr,
+        "d) trattamento di quiescenza e simili"@it;
+    owl:equivalentProperty xebr:hasPensionsAndSimilarCommitments .
+
+xbrl_it:itcc-ci_Crediti skos:altLabel "Crediti"@it,
+        "Forderungen"@de,
+        "II Créances"@fr,
+        "Receivables"@en;
+    skos:exactMatch xebr:AmountsReceivablePresentation;
+    skos:prefLabel "II - Crediti"@it,
+        "II - Forderungen"@de,
+        "II - Receivables"@en,
+        "II Créances"@fr;
+    owl:equivalentProperty xebr:AmountsReceivablePresentation .
+
+xbrl_it:itcc-ci_CreditiEsigibiliEntroEsercizioSuccessivo skos:altLabel "Crediti, esigibili entro l'esercizio successivo"@it,
+        "Forderungen, fällig innerhalb des folgenden Geschäftsjahres"@de,
+        "II Créances, à moins d'un an"@fr,
+        "Receivables, due within the following year"@en;
+    skos:exactMatch xebr:hasAmountsReceivableWithinOneYear;
+    skos:prefLabel "due within the following year"@en,
+        "esigibili entro l'esercizio successivo"@it,
+        "fällig innerhalb des folgenden Geschäftsjahres"@de,
+        "à moins d'un an"@fr;
+    owl:equivalentProperty xebr:hasAmountsReceivableWithinOneYear .
+
+xbrl_it:itcc-ci_CreditiEsigibiliOltreEsercizioSuccessivo skos:altLabel "Crediti, esigibili oltre l'esercizio successivo"@it,
+        "Forderungen, fällig nach Ablauf des folgenden Geschäftjahres"@de,
+        "II Créances, à plus d'un an"@fr,
+        "Receivables, due beyond the following year"@en;
+    skos:exactMatch xebr:hasAmountsReceivableAfterMoreThanOneYear;
+    skos:prefLabel "due beyond the following year"@en,
+        "esigibili oltre l'esercizio successivo"@it,
+        "fällig nach Ablauf des folgenden Geschäftjahres"@de,
+        "à plus d'un an"@fr;
+    owl:equivalentProperty xebr:hasAmountsReceivableAfterMoreThanOneYear .
+
+xbrl_it:itcc-ci_Debiti skos:altLabel "Debiti"@it,
+        "Dettes"@fr,
+        "Payables"@en,
+        "Verbindlichkeiten"@de;
+    skos:exactMatch xebr:AmountsPayablePresentation;
+    skos:prefLabel "D) Debiti"@it,
+        "D) Dettes"@fr,
+        "D) Payables"@en,
+        "D) Verbindlichkeiten"@de;
+    owl:equivalentProperty xebr:AmountsPayablePresentation .
+
+xbrl_it:itcc-ci_DebitiEsigibiliEntroEsercizioSuccessivo skos:altLabel "Debiti, esigibili entro l'esercizio successivo"@it,
+        "Dettes, à moins d'un an"@fr,
+        "Payables, due within the following year"@en,
+        "Verbindlichkeiten, fällig innerhalb des folgenden Geschäftsjahres"@de;
+    skos:exactMatch xebr:hasAmountsPayableWithinOneYearTotal;
+    skos:prefLabel "due within the following year"@en,
+        "esigibili entro l'esercizio successivo"@it,
+        "fällig innerhalb des folgenden Geschäftsjahres"@de,
+        "à moins d'un an"@fr;
+    owl:equivalentProperty xebr:hasAmountsPayableWithinOneYearTotal .
+
+xbrl_it:itcc-ci_DebitiEsigibiliOltreEsercizioSuccessivo skos:altLabel "Debiti, esigibili oltre l'esercizio successivo"@it,
+        "Dettes, à plus d'un an"@fr,
+        "Payables, due beyond the following year"@en,
+        "Verbindlichkeiten, fällig nach Ablauf des folgenden Geschäftjahres"@de;
+    skos:exactMatch xebr:hasAmountsPayableAfterMoreThanOneYearTotal;
+    skos:prefLabel "due beyond the following year"@en,
+        "esigibili oltre l'esercizio successivo"@it,
+        "fällig nach Ablauf des folgenden Geschäftjahres"@de,
+        "à plus d'un an"@fr;
+    owl:equivalentProperty xebr:hasAmountsPayableAfterMoreThanOneYearTotal .
+
+xbrl_it:itcc-ci_DifferenzaValoreCostiProduzione skos:altLabel "Difference between value and cost of production"@en,
+        "Differenz zwischen betrieblichen Erträgen und Aufwendungen"@de,
+        "Differenza tra valore e costi della produzione"@it,
+        "Résultat d'exploitation"@fr;
+    skos:exactMatch xebr:hasOperatingProfitLossTotal;
+    skos:prefLabel "Difference between value and cost of production (A - B)"@en,
+        "Differenz zwischen betrieblichen Erträgen und Aufwendungen (A - B)"@de,
+        "Differenza tra valore e costi della produzione (A - B)"@it,
+        "Résultat d'exploitation (A - B)"@fr;
+    owl:equivalentProperty xebr:hasOperatingProfitLossTotal .
+
+xbrl_it:itcc-ci_DisponibilitaLiquide skos:altLabel "Disponibilità liquide"@it,
+        "Flüssige Mittel"@de,
+        "Liquid funds"@en,
+        "Liquidités"@fr;
+    skos:exactMatch xebr:LiquidAssetsPresentation;
+    skos:prefLabel "Flüssige Mittel"@de,
+        "IV - Disponibilità liquide"@it,
+        "IV - Liquid funds"@en,
+        "IV - Liquidités"@fr;
+    owl:equivalentProperty xebr:LiquidAssetsPresentation .
+
+xbrl_it:itcc-ci_FondiRischiOneri skos:altLabel "Fondi per rischi e oneri"@it,
+        "Provisions pour risques et charges"@fr,
+        "Reserves for contingencies and other charges"@en,
+        "Rücklagen für unvorhergesehene Auslagen und andere Verpflichtungen"@de;
+    skos:exactMatch xebr:ProvisionsAndDeferredTaxesPresentation;
+    skos:prefLabel "B) Fondi per rischi e oneri"@it,
+        "B) Provisions pour risques et charges"@fr,
+        "B) Reserves for contingencies and other charges"@en,
+        "B) Rücklagen für unvorhergesehene Auslagen und andere Verpflichtungen"@de;
+    owl:equivalentProperty xebr:ProvisionsAndDeferredTaxesPresentation .
+
+xbrl_it:itcc-ci_Immobilizzazioni skos:altLabel "Anlagevermögen"@de,
+        "Fixed assets"@en,
+        "Immobilisations"@fr,
+        "Immobilizzazioni"@it;
+    skos:exactMatch xebr:FixedAssetsPresentation;
+    skos:prefLabel "B) Anlagevermögen"@de,
+        "B) Fixed assets"@en,
+        "B) Immobilisations"@fr,
+        "B) Immobilizzazioni"@it;
+    owl:equivalentProperty xebr:FixedAssetsPresentation .
+
+xbrl_it:itcc-ci_ImmobilizzazioniFinanziarie skos:altLabel "Financial fixed assets"@en,
+        "Finanzanlagevermögen"@de,
+        "Immobilisations financières"@fr,
+        "Immobilizzazioni finanziarie"@it;
+    skos:exactMatch xebr:FinancialFixedAssetsPresentation;
+    skos:prefLabel "III - Financial fixed assets"@en,
+        "III - Finanzanlagevermögen"@de,
+        "III - Immobilisations financières"@fr,
+        "III - Immobilizzazioni finanziarie"@it;
+    owl:equivalentProperty xebr:FinancialFixedAssetsPresentation .
+
+xbrl_it:itcc-ci_ImmobilizzazioniImmateriali skos:altLabel "Immaterielles Anlagevermoegen"@de,
+        "Immobilisations incorporelles"@fr,
+        "Immobilizzazioni immateriali"@it,
+        "Intangible fixed assets"@en;
+    skos:exactMatch xebr:IntangibleFixedAssetsPresentation;
+    skos:prefLabel "I - Immaterielles Anlagevermoegen"@de,
+        "I - Immobilisations incorporelles"@fr,
+        "I - Immobilizzazioni immateriali"@it,
+        "I - Intangible fixed assets"@en;
+    owl:equivalentProperty xebr:IntangibleFixedAssetsPresentation .
+
+xbrl_it:itcc-ci_ImmobilizzazioniMateriali skos:altLabel "Immobilisations corporelles"@fr,
+        "Immobilizzazioni materiali"@it,
+        "Sachanlagvermögen"@de,
+        "Tangible fixed assets"@en;
+    skos:exactMatch xebr:TangibleFixedAssetsPresentation;
+    skos:prefLabel "II - Immobilisations corporelles"@fr,
+        "II - Immobilizzazioni materiali"@it,
+        "II - Tangible fixed assets"@en,
+        "Sachanlagvermögen"@de;
+    owl:equivalentProperty xebr:TangibleFixedAssetsPresentation .
+
+xbrl_it:itcc-ci_ImposteRedditoEsercizioCorrentiDifferiteAnticipateTotaleImposteRedditoEsercizioCorrentiDifferiteAnticipate skos:altLabel "Gesamtsumme der Einkommenssteuern auf das Geschäftsjahr(laufende, gestundete und vorausgezahlte)"@de,
+        "Imposte sul reddito dell'esercizio, correnti, differite e anticipate, totale delle imposte sul reddito dell'esercizio, correnti, differite e anticipate"@it,
+        "Total impôts courants, différés et payés d'avance sur le revenu de l'exercice"@fr,
+        "Total taxes on the income for the year"@en;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "Gesamtsumme der Einkommenssteuern auf das Geschäftsjahr(laufende, gestundete und vorausgezahlte)"@de,
+        "Total impôts courants, différés et payés d'avance sur le revenu de l'exercice"@fr,
+        "Total taxes on the income for the year"@en,
+        "Totale delle imposte sul reddito dell'esercizio, correnti, differite e anticipate"@it;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_it:itcc-ci_Passivo skos:altLabel "Liabilities and shareholders' equity"@en,
+        "Passif"@fr,
+        "Passiva und Nettovermögen"@de,
+        "Passivo"@it;
+    skos:exactMatch xebr:EquityAndLiabilitiesPresentation;
+    skos:prefLabel "Liabilities and shareholders' equity"@en,
+        "Passif"@fr,
+        "Passiva und Nettovermögen"@de,
+        "Passivo"@it;
+    owl:equivalentProperty xebr:EquityAndLiabilitiesPresentation .
+
+xbrl_it:itcc-ci_PassivoRateiRisconti skos:altLabel "Liabilities and shareholders' equity, Accrued liabilities and deferred income"@en,
+        "Passif, Comptes de régularisation"@fr,
+        "Passiva und Nettovermögen, Rechnungsabgrenzungsposten"@de,
+        "Passivo, Ratei e risconti"@it;
+    skos:exactMatch xebr:AccruedChargesAndDeferredIncomePresentation;
+    skos:prefLabel "E) Accrued liabilities and deferred income"@en,
+        "E) Comptes de régularisation"@fr,
+        "E) Ratei e risconti"@it,
+        "E) Rechnungsabgrenzungsposten"@de;
+    owl:equivalentProperty xebr:AccruedChargesAndDeferredIncomePresentation .
+
+xbrl_it:itcc-ci_PassivoRateiRiscontiTotaleRateiRisconti skos:altLabel "Liabilities and shareholders' equity, Accrued liabilities and deferred income, total accrued liabilities and deferred income"@en,
+        "Passif, Comptes de régularisation, total comptes de régularisation"@fr,
+        "Passiva und Nettovermögen, Rechnungsabgrenzungsposten, Gesamtbetrag antizipative und transitorische Regnungsabgrenzung"@de,
+        "Passivo, Ratei e risconti, totale ratei e risconti"@it;
+    skos:exactMatch xebr:hasAccruedChargesAndDeferredIncomeTotal;
+    skos:prefLabel "Gesamtbetrag antizipative und transitorische Regnungsabgrenzung"@de,
+        "Total accrued liabilities and deferred income"@en,
+        "Total comptes de régularisation"@fr,
+        "Totale ratei e risconti"@it;
+    owl:equivalentProperty xebr:hasAccruedChargesAndDeferredIncomeTotal .
+
+xbrl_it:itcc-ci_PatrimonioNetto skos:altLabel "Capitaux propres"@fr,
+        "Nettovermögen"@de,
+        "Patrimonio netto"@it,
+        "Shareholders' equity"@en;
+    skos:exactMatch xebr:EquityPresentation;
+    skos:prefLabel "A) Capitaux propres"@fr,
+        "A) Nettovermögen"@de,
+        "A) Patrimonio netto"@it,
+        "A) Shareholders' equity"@en;
+    owl:equivalentProperty xebr:EquityPresentation .
+
+xbrl_it:itcc-ci_PatrimonioNettoCapitale skos:altLabel "Capitaux propres, i-capital social"@fr,
+        "Nettovermögen, Kapital"@de,
+        "Patrimonio netto, capitale"@it,
+        "Shareholders' equity, share capital"@en;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I - Capitale"@it,
+        "I - Kapital"@de,
+        "I - Share capital"@en,
+        "I-Capital social"@fr;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_it:itcc-ci_PatrimonioNettoUtilePerditaEsercizioUtilePerditaResidua skos:altLabel "Capitaux propres, Résultat net de l'exercice, bénéfice (perte) résiduel"@fr,
+        "Nettovermögen, Gewinn (Verlust) des Geschäftsjahres, Restlicher Gewinn (Verlust)"@de,
+        "Patrimonio netto, Utile (perdita) dell'esercizio, utile (perdita) residua"@it,
+        "Shareholders' equity, Net profit (loss) for the year, residual net profit (loss) for the year"@en;
+    skos:exactMatch xebr:hasProfitLossForThePeriod;
+    skos:prefLabel "Bénéfice (perte) résiduel"@fr,
+        "Residual net profit (loss) for the year"@en,
+        "Restlicher Gewinn (Verlust)"@de,
+        "Utile (perdita) residua"@it;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+
+xbrl_it:itcc-ci_PatrimonioNettoUtiliPerditePortatiNuovo skos:altLabel "Capitaux propres, report à nouveau"@fr,
+        "Nettovermögen, Vorgetragener Gewinn (Verlust)"@de,
+        "Patrimonio netto, utili (perdite) portati a nuovo"@it,
+        "Shareholders' equity, retained earnings (accumulated losses)"@en;
+    skos:exactMatch xebr:hasProfitLossBroughtForward;
+    skos:prefLabel "VIII - Report à nouveau"@fr,
+        "VIII - Retained earnings (accumulated losses)"@en,
+        "VIII - Utili (perdite) portati a nuovo"@it,
+        "VIII - Vorgetragener Gewinn (Verlust)"@de;
+    owl:equivalentProperty xebr:hasProfitLossBroughtForward .
+
+xbrl_it:itcc-ci_ProventiOneriFinanziari skos:altLabel "Charges et produits financiers"@fr,
+        "Einnahmen aus Finanzanlagen und Finanzierungslasten"@de,
+        "Financial income and expense"@en,
+        "Proventi e oneri finanziari"@it;
+    skos:exactMatch xebr:FinancialIncomePresentation;
+    skos:prefLabel "C) Charges et produits financiers:"@fr,
+        "C) Einnahmen aus Finanzanlagen und Finanzierungslasten"@de,
+        "C) Financial income and expense"@en,
+        "C) Proventi e oneri finanziari:"@it;
+    owl:equivalentProperty xebr:FinancialIncomePresentation .
+
+xbrl_it:itcc-ci_ProventiOneriStraordinari skos:altLabel "Ausserordentliche Einnahmen und Lasten"@de,
+        "Non-recurring income and expense"@en,
+        "Produits et charges exceptionnels"@fr,
+        "Proventi e oneri straordinari"@it;
+    skos:exactMatch xebr:NetExtraordinaryIncomePresentation;
+    skos:prefLabel "E) Ausserordentliche Einnahmen und Lasten"@de,
+        "E) Non-recurring income and expense"@en,
+        "E) Produits et charges exceptionnels:"@fr,
+        "E) Proventi e oneri straordinari:"@it;
+    owl:equivalentProperty xebr:NetExtraordinaryIncomePresentation .
+
+xbrl_it:itcc-ci_ProventiOneriStraordinariOneri skos:altLabel "Expense"@en,
+        "Lasten"@de,
+        "Proventi e oneri straordinari, oneri"@it,
+        "charges exceptionnelles"@fr;
+    skos:exactMatch xebr:ExtraordinaryChargesPresentation;
+    skos:prefLabel "21) Expense"@en,
+        "21) Lasten"@de,
+        "21) charges exceptionnelles"@fr,
+        "21) oneri"@it;
+    owl:equivalentProperty xebr:ExtraordinaryChargesPresentation .
+
+xbrl_it:itcc-ci_ProventiOneriStraordinariOneriTotaleOneri skos:altLabel "Gesamtbetrag der Lasten"@de,
+        "Proventi e oneri straordinari, oneri, totale oneri"@it,
+        "Total charges exceptionnelles"@fr,
+        "Total expence"@en;
+    skos:exactMatch xebr:hasExtraordinaryChargesTotal;
+    skos:prefLabel "Gesamtbetrag der Lasten"@de,
+        "Total charges exceptionnelles"@fr,
+        "Total expence"@en,
+        "Totale oneri"@it;
+    owl:equivalentProperty xebr:hasExtraordinaryChargesTotal .
+
+xbrl_it:itcc-ci_ProventiOneriStraordinariProventi skos:altLabel "Einkünfte"@de,
+        "Income"@en,
+        "Proventi e oneri straordinari, proventi"@it,
+        "produits exceptionnels"@fr;
+    skos:exactMatch xebr:ExtraordinaryIncomePresentation;
+    skos:prefLabel "20) Einkünfte"@de,
+        "20) Income"@en,
+        "20) produits exceptionnels"@fr,
+        "20) proventi"@it;
+    owl:equivalentProperty xebr:ExtraordinaryIncomePresentation .
+
+xbrl_it:itcc-ci_ProventiOneriStraordinariProventiTotaleProventi skos:altLabel "Gesamtbetrag der Einkünfte"@de,
+        "Proventi e oneri straordinari, proventi, totale proventi"@it,
+        "Total income"@en,
+        "Total produits exceptionnels"@fr;
+    skos:exactMatch xebr:hasExtraordinaryIncomeTotal;
+    skos:prefLabel "Gesamtbetrag der Einkünfte"@de,
+        "Total income"@en,
+        "Total produits exceptionnels"@fr,
+        "Totale proventi"@it;
+    owl:equivalentProperty xebr:hasExtraordinaryIncomeTotal .
+
+xbrl_it:itcc-ci_Rimanenze skos:altLabel "I Stocks"@fr,
+        "Inventories"@en,
+        "Rimanenze"@it,
+        "Vorräte"@de;
+    skos:exactMatch xebr:StocksPresentation;
+    skos:prefLabel "I - Inventories"@en,
+        "I - Rimanenze"@it,
+        "I - Vorräte"@de,
+        "I Stocks"@fr;
+    owl:equivalentProperty xebr:StocksPresentation .
+
+xbrl_it:itcc-ci_StatoPatrimoniale skos:altLabel "Balance sheet (mandatory scheme)"@en,
+        "Bilan"@fr,
+        "Stato patrimoniale"@it,
+        "Vermögensstand"@de;
+    skos:exactMatch xebr:KeyBalanceSheetFiguresReport;
+    skos:prefLabel "Balance sheet (mandatory scheme)"@en,
+        "Bilan"@fr,
+        "Stato patrimoniale"@it,
+        "Vermögensstand"@de;
+    owl:equivalentProperty xebr:KeyBalanceSheetFiguresReport .
+
+xbrl_it:itcc-ci_TotaleAttivo skos:altLabel "Gesamtbetrag Aktiva"@de,
+        "Total actif"@fr,
+        "Total assets"@en,
+        "Totale attivo"@it;
+    skos:exactMatch xebr:hasAssetsTotal;
+    skos:prefLabel "Gesamtbetrag Aktiva"@de,
+        "Total actif"@fr,
+        "Total assets"@en,
+        "Totale attivo"@it;
+    owl:equivalentProperty xebr:hasAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleAttivoCircolante skos:altLabel "Gesamtbetrag des Umlaufvermögens"@de,
+        "Total actif circulant ( C )"@fr,
+        "Total current assets"@en,
+        "Totale attivo circolante"@it;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "Gesamtbetrag des Umlaufvermögens"@de,
+        "Total actif circulant ( C )"@fr,
+        "Total current assets (C)"@en,
+        "Totale attivo circolante (C)"@it;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleCostiProduzione skos:altLabel "Gesamtbetrag der Produktionskosten"@de,
+        "Total charges d'exploitation"@fr,
+        "Total cost of production"@en,
+        "Totale costi della produzione"@it;
+    skos:exactMatch xebr:hasOperatingChargesTotal;
+    skos:prefLabel "Gesamtbetrag der Produktionskosten"@de,
+        "Total charges d'exploitation"@fr,
+        "Total cost of production"@en,
+        "Totale costi della produzione"@it;
+    owl:equivalentProperty xebr:hasOperatingChargesTotal .
+
+xbrl_it:itcc-ci_TotaleCrediti skos:altLabel "Gesamtbetrag der Forderungen"@de,
+        "Total créances"@fr,
+        "Total receivables"@en,
+        "Totale crediti"@it;
+    skos:exactMatch xebr:hasAmountsReceivableTotal;
+    skos:prefLabel "Gesamtbetrag der Forderungen"@de,
+        "Total créances"@fr,
+        "Total receivables"@en,
+        "Totale crediti"@it;
+    owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+
+xbrl_it:itcc-ci_TotaleDebiti skos:altLabel "Gesamtbetrag Verbindlichkeiten"@de,
+        "Total dettes"@fr,
+        "Total payables"@en,
+        "Totale debiti"@it;
+    skos:exactMatch xebr:hasAmountsPayableTotal;
+    skos:prefLabel "Gesamtbetrag Verbindlichkeiten"@de,
+        "Total dettes"@fr,
+        "Total payables (D)"@en,
+        "Totale debiti"@it;
+    owl:equivalentProperty xebr:hasAmountsPayableTotal .
+
+xbrl_it:itcc-ci_TotaleDisponibilitaLiquide skos:altLabel "Gesamtbetrag der Bareinlagen"@de,
+        "Total liquid funds"@en,
+        "Total liquidités"@fr,
+        "Totale disponibilità liquide"@it;
+    skos:exactMatch xebr:hasLiquidAssetsTotal;
+    skos:prefLabel "Gesamtbetrag der Bareinlagen"@de,
+        "Total liquid funds"@en,
+        "Total liquidités"@fr,
+        "Totale disponibilità liquide"@it;
+    owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleFondiRischiOneri skos:altLabel "Gesamtbetrag der Fonds für unvorhergesehene Auslagen und andere Verpflichtungen"@de,
+        "Total provisions pour risques et charges"@fr,
+        "Total reserves for contingencies and other charges"@en,
+        "Totale fondi per rischi ed oneri"@it;
+    skos:exactMatch xebr:hasProvisionsAndDeferredTaxesTotal;
+    skos:prefLabel "Gesamtbetrag der Fonds für unvorhergesehene Auslagen und andere Verpflichtungen"@de,
+        "Total provisions pour risques et charges"@fr,
+        "Total reserves for contingencies and other charges"@en,
+        "Totale fondi per rischi ed oneri"@it;
+    owl:equivalentProperty xebr:hasProvisionsAndDeferredTaxesTotal .
+
+xbrl_it:itcc-ci_TotaleImmobilizzazioni skos:altLabel "Gesamtsumme Anlagevermögen"@de,
+        "Total fixed assets"@en,
+        "Total immobilisations"@fr,
+        "Totale immobilizzazioni"@it;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "Gesamtsumme Anlagevermögen (B)"@de,
+        "Total fixed assets (B)"@en,
+        "Total immobilisations (B)"@fr,
+        "Totale immobilizzazioni (B)"@it;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleImmobilizzazioniFinanziarie skos:altLabel "Gesamtbetrag Finanzanlagevermögen"@de,
+        "Total financial fixed assets"@en,
+        "Total immobilisations financières"@fr,
+        "Totale immobilizzazioni finanziarie"@it;
+    skos:exactMatch xebr:hasFinancialFixedAssetsTotal;
+    skos:prefLabel "Gesamtbetrag Finanzanlagevermögen"@de,
+        "Total financial fixed assets"@en,
+        "Total immobilisations financières"@fr,
+        "Totale immobilizzazioni finanziarie"@it;
+    owl:equivalentProperty xebr:hasFinancialFixedAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleImmobilizzazioniImmateriali skos:altLabel "Gesamtbetrag des immateriellen Anlagevermögens"@de,
+        "Total immobilisations incorporelles"@fr,
+        "Total intangible fixed assets"@en,
+        "Totale immobilizzazioni immateriali"@it;
+    skos:exactMatch xebr:hasIntangibleFixedAssetsTotal;
+    skos:prefLabel "Gesamtbetrag des immateriellen Anlagevermögens"@de,
+        "Total immobilisations incorporelles"@fr,
+        "Total intangible fixed assets"@en,
+        "Totale immobilizzazioni immateriali"@it;
+    owl:equivalentProperty xebr:hasIntangibleFixedAssetsTotal .
+
+xbrl_it:itcc-ci_TotaleImmobilizzazioniMateriali skos:altLabel "Gesamtbetrag Sachanlagen"@de,
+        "Total immobilisations corporelles"@fr,
+        "Total tangible fixed assets"@en,
+        "Totale immobilizzazioni materiali"@it;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "Gesamtbetrag Sachanlagen"@de,
+        "Total immobilisations corporelles"@fr,
+        "Total tangible fixed assets"@en,
+        "Totale immobilizzazioni materiali"@it;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_it:itcc-ci_TotalePartiteStraordinarie skos:altLabel "Gesamtsumme der außerordentlichen Posten"@de,
+        "Résultat exceptionnel (20-21)"@fr,
+        "Total non-recurring items"@en,
+        "Totale delle partite straordinarie"@it;
+    skos:exactMatch xebr:hasExtraordinaryProfitLossTotal;
+    skos:prefLabel "Gesamtsumme der außerordentlichen Posten (20 - 21)"@de,
+        "Résultat exceptionnel (20-21)"@fr,
+        "Total non-recurring items (20 - 21)"@en,
+        "Totale delle partite straordinarie (20 - 21)"@it;
+    owl:equivalentProperty xebr:hasExtraordinaryProfitLossTotal .
+
+xbrl_it:itcc-ci_TotalePassivo skos:altLabel "Gesamtsumme Passiva und Nettovermögen"@de,
+        "Total liabilities and shareholders' equity"@en,
+        "Total passif"@fr,
+        "Totale passivo"@it;
+    skos:exactMatch xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "Gesamtsumme Passiva und Nettovermögen"@de,
+        "Total liabilities and shareholders' equity"@en,
+        "Total passif"@fr,
+        "Totale passivo"@it;
+    owl:equivalentProperty xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_it:itcc-ci_TotalePatrimonioNetto skos:altLabel "Gesamtbetrag Eigenkapital"@de,
+        "Total Capitaux propres"@fr,
+        "Total shareholders' equity"@en,
+        "Totale patrimonio netto"@it;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "Gesamtbetrag Eigenkapital"@de,
+        "Total Capitaux propres"@fr,
+        "Total shareholders' equity"@en,
+        "Totale patrimonio netto"@it;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_it:itcc-ci_TotaleRettificheValoreAttivitaFinanziarie skos:altLabel "Gesamtsumme der Berichtigungen des Finanzvermögens"@de,
+        "Total adjustments to financial assets"@en,
+        "Total des corrections (18-19)"@fr,
+        "Totale delle rettifiche di valore di attività finanziarie"@it;
+    skos:exactMatch xebr:hasValueAdjustmentsOnFinancialAssets;
+    skos:prefLabel "Gesamtsumme der Berichtigungen des Finanzvermögens (18 - 19)"@de,
+        "Total adjustments to financial assets (18 - 19)"@en,
+        "Total des corrections (18-19)"@fr,
+        "Totale delle rettifiche di valore di attività finanziarie (18 - 19)"@it;
+    owl:equivalentProperty xebr:hasValueAdjustmentsOnFinancialAssets .
+
+xbrl_it:itcc-ci_TotaleRimanenze skos:altLabel "Gesamtbetrag der Vorräte"@de,
+        "Total inventories"@en,
+        "Total stocks"@fr,
+        "Totale rimanenze"@it;
+    skos:exactMatch xebr:hasStocksTotal;
+    skos:prefLabel "Gesamtbetrag der Vorräte"@de,
+        "Total inventories"@en,
+        "Total stocks"@fr,
+        "Totale rimanenze"@it;
+    owl:equivalentProperty xebr:hasStocksTotal .
+
+xbrl_it:itcc-ci_TotaleValoreProduzione skos:altLabel "Gesamtbetrag Betrieblicher Ertrag"@de,
+        "Total produits d'exploitation"@fr,
+        "Total value of production"@en,
+        "Totale valore della produzione"@it;
+    skos:exactMatch xebr:hasOperatingIncomeTotal;
+    skos:prefLabel "Gesamtbetrag Betrieblicher Ertrag"@de,
+        "Total produits d'exploitation"@fr,
+        "Total value of production"@en,
+        "Totale valore della produzione"@it;
+    owl:equivalentProperty xebr:hasOperatingIncomeTotal .
+
+xbrl_it:itcc-ci_UtilePerditaEsercizio skos:altLabel "Gewinn (Verlust) des Geschäftsjahres"@de,
+        "Net profit (loss) for the year"@en,
+        "Utile (perdita) dell'esercizio"@it,
+        "bénéfice (perte) de l'exercice"@fr;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "23) Gewinn (Verlust) des Geschäftsjahres"@de,
+        "23) Utile (perdita) dell'esercizio"@it,
+        "23) bénéfice (perte) de l'exercice"@fr,
+        "Net profit (loss) for the year"@en;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_it:itcc-ci_ValoreProduzione skos:altLabel "Betriebliche Erträge"@de,
+        "Produits d'exploitation"@fr,
+        "Valore della produzione"@it,
+        "Value of production"@en;
+    skos:exactMatch xebr:OperatingIncomePresentation;
+    skos:prefLabel "A) Betriebliche Erträge"@de,
+        "A) Produits d'exploitation:"@fr,
+        "A) Valore della produzione:"@it,
+        "A) Value of production"@en;
+    owl:equivalentProperty xebr:OperatingIncomePresentation .
+
+xbrl_it:itcc-ci_ValoreProduzioneAltriRicaviProventi skos:altLabel "Other income and revenues"@en,
+        "Valore della produzione, altri ricavi e proventi"@it,
+        "autres produits"@fr,
+        "sonstige Erträge und Einnahmen"@de;
+    skos:exactMatch xebr:OperatingIncomePresentation;
+    skos:prefLabel "5) Other income and revenues"@en,
+        "5) altri ricavi e proventi"@it,
+        "5) autres produits"@fr,
+        "5) sonstige Erträge und Einnahmen"@de;
+    owl:equivalentProperty xebr:OperatingIncomePresentation .
+
+xbrl_it:itcc-ci_ValoreProduzioneRicaviVenditePrestazioni skos:altLabel "Erträge aus Verkäufen und Leistungen"@de,
+        "Revenues from sales and services"@en,
+        "Valore della produzione, ricavi delle vendite e delle prestazioni"@it,
+        "production vendue (biens et services)"@fr;
+    skos:exactMatch xebr:hasNetTurnover;
+    skos:prefLabel "1) Erträge aus Verkäufen und Leistungen"@de,
+        "1) Revenues from sales and services"@en,
+        "1) production vendue (biens et services)"@fr,
+        "1) ricavi delle vendite e delle prestazioni"@it;
+    owl:equivalentProperty xebr:hasNetTurnover .
+
+xbrl_it:itcc-ci_ValoreProduzioneVariazioniLavoriCorsoOrdinazione skos:altLabel "Change in contract work in progress"@en,
+        "Valore della produzione, variazioni dei lavori in corso su ordinazione"@it,
+        "Veränderungen der in Ausführung befindlichen Arbeiten auf Bestellung"@de,
+        "variations des travaux en cours"@fr;
+    skos:exactMatch xebr:hasCapitalisedProduction;
+    skos:prefLabel "3) Change in contract work in progress"@en,
+        "3) Veränderungen der in Ausführung befindlichen Arbeiten auf Bestellung"@de,
+        "3) variations des travaux en cours"@fr,
+        "3) variazioni dei lavori in corso su ordinazione"@it;
+    owl:equivalentProperty xebr:hasCapitalisedProduction .
+

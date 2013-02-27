@@ -1,0 +1,944 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+@prefix xbrl_be: <http://www.dfki.de/lt/xbrl_be.owl#> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+@prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es.owl#> .
+@prefix skos: <http://www.dfki.de/lt/skos.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xbrl_es_cnmv: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
+
+xbrl_be: a xebr:LocalTaxonomy;
+    skos:prefLabel "Belgium PFS"@en ;
+    skos:prefLabel "België PFS"@nl ;
+    skos:prefLabel "Belgien PFS"@de ;
+    skos:prefLabel "Bélgica PFS"@es .
+xbrl_es: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain PGC"@en ;
+    skos:prefLabel "Spanje PGC"@nl ;
+    skos:prefLabel "Spanien PGC"@de ;
+    skos:prefLabel "España PGC"@es .
+xbrl_es_cnmv: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain IPP-GEN"@en ;
+    skos:prefLabel "Spanje IPP-GEN"@nl ;
+    skos:prefLabel "Spanien IPP-GEN"@de ;
+    skos:prefLabel "España IPP-GEN"@es .
+
+xbrl_es_cnmv:es-be-fs_CapitalFondoDotacion a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:es-be-fs_ResultadoEjercicioBalance a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriod;
+    skos:prefLabel "VII. Resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+
+xbrl_es_cnmv:ifrs-gp_CashAndCashEquivalents a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente efectivo y otros activos líquidos equivalentes"@es;
+    skos:exactMatch xebr:hasLiquidAssetsTotal;
+    skos:prefLabel "efectivo y otros activos líquidos equivalentes"@es;
+    owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_DeferredTaxLiabilities a owl:DatatypeProperty;
+    skos:altLabel "Pasivo no corriente pasivos por impuesto diferido"@es;
+    skos:exactMatch xebr:hasDeferredTaxes;
+    skos:prefLabel "IV. Pasivos por impuesto diferido"@es;
+    owl:equivalentProperty xebr:hasDeferredTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IncomeTaxExpenseIncome a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es;
+    skos:exactMatch xebr:hasIncomeTaxes;
+    skos:prefLabel "impuestos sobre beneficios"@es;
+    owl:equivalentProperty xebr:hasIncomeTaxes .
+
+xbrl_es_cnmv:ifrs-gp_IssuedCapital a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ifrs-gp_OtherFinancialAssetsNonCurrent a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inversiones financieras a largo plazo"@es;
+    skos:exactMatch xebr:hasOtherFinancialAssets;
+    skos:prefLabel "V. Inversiones financieras a largo plazo"@es;
+    owl:equivalentProperty xebr:hasOtherFinancialAssets .
+
+xbrl_es_cnmv:ifrs-gp_ProfitLoss a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ifrs-gp_PropertyPlantAndEquipmentNet a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inmovilizado material"@es;
+    skos:exactMatch xebr:hasTangibleFixedAssetsTotal;
+    skos:prefLabel "II. Inmovilizado material"@es;
+    owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+
+xbrl_es_cnmv:ifrs-gp_TradeAndOtherReceivablesNetCurrent a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente deudores comerciales y otras cuentas a cobrar"@es;
+    skos:exactMatch xebr:hasAmountsReceivableTotal;
+    skos:prefLabel "deudores comerciales y otras cuentas a cobrar"@es;
+    owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+
+xbrl_es_cnmv:ipp-com_CapitalPasivoPatrimonioNeto a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios capital"@es;
+    skos:exactMatch xebr:hasCapital;
+    skos:prefLabel "I. Capital"@es;
+    owl:equivalentProperty xebr:hasCapital .
+
+xbrl_es_cnmv:ipp-gen_ActivoCorrienteNacional a owl:DatatypeProperty;
+    skos:altLabel "Activo corriente"@es;
+    skos:exactMatch xebr:hasCurrentAssetsTotal;
+    skos:prefLabel "B) ACTIVO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_ActivoNoCorrienteNacional a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente"@es;
+    skos:exactMatch xebr:hasFixedAssetsTotal;
+    skos:prefLabel "A) ACTIVO NO CORRIENTE"@es;
+    owl:equivalentProperty xebr:hasFixedAssetsTotal .
+
+xbrl_es_cnmv:ipp-gen_FondosPropiosNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto fondos propios"@es;
+    skos:exactMatch xebr:hasEquityTotal;
+    skos:prefLabel "A-1) Fondos propios"@es;
+    owl:equivalentProperty xebr:hasEquityTotal .
+
+xbrl_es_cnmv:ipp-gen_IngresosFinancieros a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es;
+    skos:exactMatch xebr:hasFinancialIncomeTotal;
+    skos:prefLabel "ingresos financieros"@es;
+    owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+
+xbrl_es_cnmv:ipp-gen_InversionesEmpresasGrupoAsociadasLargoPlazo a owl:DatatypeProperty;
+    skos:altLabel "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo "@es;
+    skos:exactMatch xebr:hasAffiliatedEnterprises;
+    skos:prefLabel "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es;
+    owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioNacional a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoEjercicioProcedenteOperacionesContinuadasNacional a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es;
+    skos:exactMatch xebr:hasProfitLossForThePeriodTotal;
+    skos:prefLabel "resultado del ejercicio"@es;
+    owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+
+xbrl_es_cnmv:ipp-gen_ResultadoFinanciero a owl:DatatypeProperty;
+    skos:altLabel "Cuenta de pérdidas y ganancias resultado financiero"@es;
+    skos:exactMatch xebr:hasFinancialProfitLossTotal;
+    skos:prefLabel "resultado financiero"@es;
+    owl:equivalentProperty xebr:hasFinancialProfitLossTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalActivoNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
+xbrl_es_cnmv:ipp-gen_TotalPatrimonioNetoPasivoNacional a owl:DatatypeProperty;
+    skos:altLabel "Patrimonio neto y pasivo total"@es,
+        "Total activo"@es;
+    skos:exactMatch xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal;
+    skos:prefLabel "TOTAL ACTIVO (A + B)"@es,
+        "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es;
+    owl:equivalentProperty xebr:hasAssetsTotal,
+        xebr:hasEquityAndLiabilitiesTotal .
+
+
+skos:exactMatch rdf:type owl:ObjectProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty .
+skos:altLabel rdf:type owl:AnnotationProperty .
+xbrl_be:pfs_AssetsTitle rdf:type owl:Class .
+xebr:AssetsPresentation rdf:type owl:Class .
+xbrl_be:pfs_AssetsTitle owl:equivalentClass xebr:AssetsPresentation .
+xbrl_be:pfs_AssetsTitle skos:exactMatch xebr:AssetsPresentation .
+xbrl_be:pfs_AssetsTitle skos:prefLabel "Aktiva"@de .
+xbrl_be:pfs_AssetsTitle skos:altLabel "Aktiva - Titel"@de .
+xbrl_be:pfs_AssetsTitle skos:prefLabel "Assets"@en .
+xbrl_be:pfs_AssetsTitle skos:altLabel "Assets - Title"@en .
+xbrl_be:pfs_AssetsTitle skos:prefLabel "Actif"@fr .
+xbrl_be:pfs_AssetsTitle skos:altLabel "Actif - Titre"@fr .
+xbrl_be:pfs_AssetsTitle skos:prefLabel "Activa"@nl .
+xbrl_be:pfs_AssetsTitle skos:altLabel "Activa - Titel"@nl .
+xbrl_be:pfs_EquityLiabilitiesTitle rdf:type owl:Class .
+xebr:EquityAndLiabilitiesPresentation rdf:type owl:Class .
+xbrl_be:pfs_EquityLiabilitiesTitle owl:equivalentClass xebr:EquityAndLiabilitiesPresentation .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:exactMatch xebr:EquityAndLiabilitiesPresentation .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:prefLabel "Passiva"@de .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:altLabel "Passiva - Titel"@de .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:prefLabel "Equity and Liabilities"@en .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:altLabel "Equity and Liabilities - Title"@en .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:prefLabel "Passif"@fr .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:altLabel "Passif - Titre"@fr .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:prefLabel "Passiva"@nl .
+xbrl_be:pfs_EquityLiabilitiesTitle skos:altLabel "Passiva - Titel"@nl .
+xbrl_be:pfs_IncomeStatement rdf:type owl:Class .
+xebr:IncomeStatementPresentation rdf:type owl:Class .
+xbrl_be:pfs_IncomeStatement owl:equivalentClass xebr:IncomeStatementPresentation .
+xbrl_be:pfs_IncomeStatement skos:exactMatch xebr:IncomeStatementPresentation .
+xbrl_be:pfs_IncomeStatement skos:prefLabel "Schema der Ergebnisrechnung"@de .
+xbrl_be:pfs_IncomeStatement skos:altLabel "Schema der Ergebnisrechnung"@de .
+xbrl_be:pfs_IncomeStatement skos:prefLabel "Income statement"@en .
+xbrl_be:pfs_IncomeStatement skos:altLabel "Income statement"@en .
+xbrl_be:pfs_IncomeStatement skos:prefLabel "Compte de résultats"@fr .
+xbrl_be:pfs_IncomeStatement skos:altLabel "Compte de résultats"@fr .
+xbrl_be:pfs_IncomeStatement skos:prefLabel "Resultatenrekening"@nl .
+xbrl_be:pfs_IncomeStatement skos:altLabel "Resultatenrekening"@nl .
+xbrl_be:pfs_BalanceSheet rdf:type owl:Class .
+xebr:KeyBalanceSheetFiguresReport rdf:type owl:Class .
+xbrl_be:pfs_BalanceSheet owl:equivalentClass xebr:KeyBalanceSheetFiguresReport .
+xbrl_be:pfs_BalanceSheet skos:exactMatch xebr:KeyBalanceSheetFiguresReport .
+xbrl_be:pfs_BalanceSheet skos:prefLabel "Bilanz nach Ergebnisverwendung"@de .
+xbrl_be:pfs_BalanceSheet skos:altLabel "Bilanz"@de .
+xbrl_be:pfs_BalanceSheet skos:prefLabel "Balance sheet after appropriation"@en .
+xbrl_be:pfs_BalanceSheet skos:altLabel "Balance sheet"@en .
+xbrl_be:pfs_BalanceSheet skos:prefLabel "Bilan après répartition"@fr .
+xbrl_be:pfs_BalanceSheet skos:altLabel "Bilan"@fr .
+xbrl_be:pfs_BalanceSheet skos:prefLabel "Balans na winstverdeling"@nl .
+xbrl_be:pfs_BalanceSheet skos:altLabel "Balans"@nl .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome rdf:type owl:DatatypeProperty .
+xebr:hasAccruedChargesAndDeferredIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome owl:equivalentProperty xebr:hasAccruedChargesAndDeferredIncomeTotal .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:exactMatch xebr:hasAccruedChargesAndDeferredIncomeTotal .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:prefLabel "Rechnungsabgrenzungsposten"@de .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:altLabel "Rechnungsabgrenzungsposten - Passiva"@de .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:prefLabel "Accruals and deferred income"@en .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:altLabel "Accrued charges and deferred income"@en .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:prefLabel "Comptes de régularisation"@fr .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:altLabel "Comptes de régularisation - Passif"@fr .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:prefLabel "Overlopende rekeningen"@nl .
+xbrl_be:pfs_hasAccruedChargesDeferredIncome skos:altLabel "Overlopende rekeningen - Passiva"@nl .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises rdf:type owl:DatatypeProperty .
+xebr:hasAffiliatedEnterprises rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:exactMatch xebr:hasAffiliatedEnterprises .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:prefLabel "Verbundene Unternehmen"@de .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:altLabel "Beteiligungen und Forderungen an verbundenen Unternehmen"@de .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:prefLabel "Affiliated enterprises"@en .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:altLabel "Participating interests and amounts receivable in affiliated enterprises"@en .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:prefLabel "Entreprises liées"@fr .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:altLabel "Participations et créances dans les entreprises liées"@fr .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:prefLabel "Verbonden ondernemingen"@nl .
+xbrl_be:pfs_hasParticipatingInterestsAmountsReceivableAffiliatedEnterprises skos:altLabel "Deelnemingen in en vorderingen op verbonden ondernemingen"@nl .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear owl:equivalentProperty xebr:hasAmountsPayableAfterMoreThanOneYearTotal .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:exactMatch xebr:hasAmountsPayableAfterMoreThanOneYearTotal .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:prefLabel "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:altLabel "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:prefLabel "Amounts payable after more than one year"@en .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:altLabel "Amounts payable after more than one year"@en .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:prefLabel "Dettes à plus d'un an"@fr .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:altLabel "Dettes à plus d'un an"@fr .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:prefLabel "Schulden op meer dan één jaar"@nl .
+xbrl_be:pfs_hasAmountsPayableMoreOneYear skos:altLabel "Schulden op meer dan één jaar"@nl .
+xbrl_be:pfs_hasAmountsPayable rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAmountsPayable owl:equivalentProperty xebr:hasAmountsPayableTotal .
+xbrl_be:pfs_hasAmountsPayable skos:exactMatch xebr:hasAmountsPayableTotal .
+xbrl_be:pfs_hasAmountsPayable skos:prefLabel "Verbindlichkeiten"@de .
+xbrl_be:pfs_hasAmountsPayable skos:altLabel "Verbindlichkeiten"@de .
+xbrl_be:pfs_hasAmountsPayable skos:prefLabel "Amounts payable"@en .
+xbrl_be:pfs_hasAmountsPayable skos:altLabel "Amounts payable"@en .
+xbrl_be:pfs_hasAmountsPayable skos:prefLabel "Dettes"@fr .
+xbrl_be:pfs_hasAmountsPayable skos:altLabel "Dettes"@fr .
+xbrl_be:pfs_hasAmountsPayable skos:prefLabel "Schulden"@nl .
+xbrl_be:pfs_hasAmountsPayable skos:altLabel "Schulden"@nl .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsPayableWithinOneYearTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear owl:equivalentProperty xebr:hasAmountsPayableWithinOneYearTotal .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:exactMatch xebr:hasAmountsPayableWithinOneYearTotal .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:prefLabel "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:altLabel "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:prefLabel "Amounts payable within one year"@en .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:altLabel "Amounts payable within one year"@en .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:prefLabel "Dettes à un an au plus"@fr .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:altLabel "Dettes à un an au plus"@fr .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:prefLabel "Schulden op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasAmountsPayableWithinOneYear skos:altLabel "Schulden op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear owl:equivalentProperty xebr:hasAmountsReceivableAfterMoreThanOneYear .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:exactMatch xebr:hasAmountsReceivableAfterMoreThanOneYear .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:prefLabel "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:altLabel "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:prefLabel "Amounts receivable after more than one year"@en .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:altLabel "Amounts receivable after more than one year"@en .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:prefLabel "Créances à plus d'un an"@fr .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:altLabel "Créances à plus d'un an"@fr .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:prefLabel "Vorderingen op meer dan één jaar"@nl .
+xbrl_be:pfs_hasAmountsReceivableMoreOneYear skos:altLabel "Vorderingen op meer dan één jaar"@nl .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableWithinOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear owl:equivalentProperty xebr:hasAmountsReceivableWithinOneYear .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:exactMatch xebr:hasAmountsReceivableWithinOneYear .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:prefLabel "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:altLabel "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:prefLabel "Amounts receivable within one year"@en .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:altLabel "Amounts receivable within one year"@en .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:prefLabel "Créances à un an au plus"@fr .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:altLabel "Créances à un an au plus"@fr .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:prefLabel "Vorderingen op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasAmountsReceivableWithinOneYear skos:altLabel "Vorderingen op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasAssets rdf:type owl:DatatypeProperty .
+xebr:hasAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasAssets owl:equivalentProperty xebr:hasAssetsTotal .
+xbrl_be:pfs_hasAssets skos:exactMatch xebr:hasAssetsTotal .
+xbrl_be:pfs_hasAssets skos:prefLabel "Summe der Aktiva"@de .
+xbrl_be:pfs_hasAssets skos:altLabel "Aktiva"@de .
+xbrl_be:pfs_hasAssets skos:prefLabel "Total assets"@en .
+xbrl_be:pfs_hasAssets skos:altLabel "Assets"@en .
+xbrl_be:pfs_hasAssets skos:prefLabel "Total de l'actif"@fr .
+xbrl_be:pfs_hasAssets skos:altLabel "Actif"@fr .
+xbrl_be:pfs_hasAssets skos:prefLabel "Totaal van de activa"@nl .
+xbrl_be:pfs_hasAssets skos:altLabel "Activa"@nl .
+xbrl_be:pfs_hasCapital rdf:type owl:DatatypeProperty .
+xebr:hasCapital rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasCapital owl:equivalentProperty xebr:hasCapital .
+xbrl_be:pfs_hasCapital skos:exactMatch xebr:hasCapital .
+xbrl_be:pfs_hasCapital skos:prefLabel "Kapital"@de .
+xbrl_be:pfs_hasCapital skos:altLabel "Kapital"@de .
+xbrl_be:pfs_hasCapital skos:prefLabel "Capital"@en .
+xbrl_be:pfs_hasCapital skos:altLabel "Capital"@en .
+xbrl_be:pfs_hasCapital skos:prefLabel "Capital"@fr .
+xbrl_be:pfs_hasCapital skos:altLabel "Capital"@fr .
+xbrl_be:pfs_hasCapital skos:prefLabel "Kapitaal"@nl .
+xbrl_be:pfs_hasCapital skos:altLabel "Kapitaal"@nl .
+xbrl_be:pfs_hasCurrentsAssets rdf:type owl:DatatypeProperty .
+xebr:hasCurrentAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasCurrentsAssets owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+xbrl_be:pfs_hasCurrentsAssets skos:exactMatch xebr:hasCurrentAssetsTotal .
+xbrl_be:pfs_hasCurrentsAssets skos:prefLabel "Umlaufvermögen"@de .
+xbrl_be:pfs_hasCurrentsAssets skos:altLabel "Umlaufvermögen"@de .
+xbrl_be:pfs_hasCurrentsAssets skos:prefLabel "Current assets"@en .
+xbrl_be:pfs_hasCurrentsAssets skos:altLabel "Current assets"@en .
+xbrl_be:pfs_hasCurrentsAssets skos:prefLabel "Actifs circulants"@fr .
+xbrl_be:pfs_hasCurrentsAssets skos:altLabel "Actifs circulants"@fr .
+xbrl_be:pfs_hasCurrentsAssets skos:prefLabel "Vlottende activa"@nl .
+xbrl_be:pfs_hasCurrentsAssets skos:altLabel "Vlottende activa"@nl .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome rdf:type owl:DatatypeProperty .
+xebr:hasDeferredChargesAndAccruedIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome owl:equivalentProperty xebr:hasDeferredChargesAndAccruedIncomeTotal .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:exactMatch xebr:hasDeferredChargesAndAccruedIncomeTotal .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:prefLabel "Rechnungsabgrenzungsposten"@de .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:altLabel "Rechnungsabgrenzungsposten - Aktiva"@de .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:prefLabel "Deferred charges and accrued income"@en .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:altLabel "Deferred charges and accrued income"@en .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:prefLabel "Comptes de régularisation"@fr .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:altLabel "Comptes de régularisation - Actif"@fr .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:prefLabel "Overlopende rekeningen"@nl .
+xbrl_be:pfs_hasDeferredChargesAccruedIncome skos:altLabel "Overlopende rekeningen - Activa"@nl .
+xbrl_be:pfs_hasDeferredTaxes rdf:type owl:DatatypeProperty .
+xebr:hasDeferredTaxes rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasDeferredTaxes owl:equivalentProperty xebr:hasDeferredTaxes .
+xbrl_be:pfs_hasDeferredTaxes skos:exactMatch xebr:hasDeferredTaxes .
+xbrl_be:pfs_hasDeferredTaxes skos:prefLabel "Aufgeschobene Steuern"@de .
+xbrl_be:pfs_hasDeferredTaxes skos:altLabel "Aufgeschobene Steuern"@de .
+xbrl_be:pfs_hasDeferredTaxes skos:prefLabel "Deferred taxes"@en .
+xbrl_be:pfs_hasDeferredTaxes skos:altLabel "Deferred taxes"@en .
+xbrl_be:pfs_hasDeferredTaxes skos:prefLabel "Impôts différés"@fr .
+xbrl_be:pfs_hasDeferredTaxes skos:altLabel "Impôts différés"@fr .
+xbrl_be:pfs_hasDeferredTaxes skos:prefLabel "Uitgestelde belastingen"@nl .
+xbrl_be:pfs_hasDeferredTaxes skos:altLabel "Uitgestelde belastingen"@nl .
+xbrl_be:pfs_hasEquityLiabilities rdf:type owl:DatatypeProperty .
+xebr:hasEquityAndLiabilitiesTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasEquityLiabilities owl:equivalentProperty xebr:hasEquityAndLiabilitiesTotal .
+xbrl_be:pfs_hasEquityLiabilities skos:exactMatch xebr:hasEquityAndLiabilitiesTotal .
+xbrl_be:pfs_hasEquityLiabilities skos:prefLabel "Summe der Passiva"@de .
+xbrl_be:pfs_hasEquityLiabilities skos:altLabel "Passiva"@de .
+xbrl_be:pfs_hasEquityLiabilities skos:prefLabel "Total liabilities"@en .
+xbrl_be:pfs_hasEquityLiabilities skos:altLabel "Equity and Liabilities"@en .
+xbrl_be:pfs_hasEquityLiabilities skos:prefLabel "Total du passif"@fr .
+xbrl_be:pfs_hasEquityLiabilities skos:altLabel "Passif"@fr .
+xbrl_be:pfs_hasEquityLiabilities skos:prefLabel "Totaal van de passiva"@nl .
+xbrl_be:pfs_hasEquityLiabilities skos:altLabel "Passiva"@nl .
+xbrl_be:pfs_hasEquity rdf:type owl:DatatypeProperty .
+xebr:hasEquityTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasEquity owl:equivalentProperty xebr:hasEquityTotal .
+xbrl_be:pfs_hasEquity skos:exactMatch xebr:hasEquityTotal .
+xbrl_be:pfs_hasEquity skos:prefLabel "Eigenkapital"@de .
+xbrl_be:pfs_hasEquity skos:altLabel "Eigenkapital"@de .
+xbrl_be:pfs_hasEquity skos:prefLabel "Equity"@en .
+xbrl_be:pfs_hasEquity skos:altLabel "Equity"@en .
+xbrl_be:pfs_hasEquity skos:prefLabel "Capitaux propres"@fr .
+xbrl_be:pfs_hasEquity skos:altLabel "Capitaux propres"@fr .
+xbrl_be:pfs_hasEquity skos:prefLabel "Eigen vermogen"@nl .
+xbrl_be:pfs_hasEquity skos:altLabel "Eigen vermogen"@nl .
+xbrl_be:pfs_hasExtraordinaryCharges rdf:type owl:DatatypeProperty .
+xebr:hasExtraordinaryChargesTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasExtraordinaryCharges owl:equivalentProperty xebr:hasExtraordinaryChargesTotal .
+xbrl_be:pfs_hasExtraordinaryCharges skos:exactMatch xebr:hasExtraordinaryChargesTotal .
+xbrl_be:pfs_hasExtraordinaryCharges skos:prefLabel "Außerordentliche Aufwendungen"@de .
+xbrl_be:pfs_hasExtraordinaryCharges skos:altLabel "Außerordentliche Aufwendungen"@de .
+xbrl_be:pfs_hasExtraordinaryCharges skos:prefLabel "Extraordinary charges"@en .
+xbrl_be:pfs_hasExtraordinaryCharges skos:altLabel "Extraordinary charges"@en .
+xbrl_be:pfs_hasExtraordinaryCharges skos:prefLabel "Charges exceptionnelles"@fr .
+xbrl_be:pfs_hasExtraordinaryCharges skos:altLabel "Charges exceptionnelles"@fr .
+xbrl_be:pfs_hasExtraordinaryCharges skos:prefLabel "Uitzonderlijke kosten"@nl .
+xbrl_be:pfs_hasExtraordinaryCharges skos:altLabel "Uitzonderlijke kosten"@nl .
+xbrl_be:pfs_hasExtraordinaryIncome rdf:type owl:DatatypeProperty .
+xebr:hasExtraordinaryIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasExtraordinaryIncome owl:equivalentProperty xebr:hasExtraordinaryIncomeTotal .
+xbrl_be:pfs_hasExtraordinaryIncome skos:exactMatch xebr:hasExtraordinaryIncomeTotal .
+xbrl_be:pfs_hasExtraordinaryIncome skos:prefLabel "Außerordentliche Erträge"@de .
+xbrl_be:pfs_hasExtraordinaryIncome skos:altLabel "Außerordentliche Erträge"@de .
+xbrl_be:pfs_hasExtraordinaryIncome skos:prefLabel "Extraordinary income"@en .
+xbrl_be:pfs_hasExtraordinaryIncome skos:altLabel "Extraordinary income"@en .
+xbrl_be:pfs_hasExtraordinaryIncome skos:prefLabel "Produits exceptionnels"@fr .
+xbrl_be:pfs_hasExtraordinaryIncome skos:altLabel "Produits exceptionnels"@fr .
+xbrl_be:pfs_hasExtraordinaryIncome skos:prefLabel "Uitzonderlijke opbrengsten"@nl .
+xbrl_be:pfs_hasExtraordinaryIncome skos:altLabel "Uitzonderlijke opbrengsten"@nl .
+xbrl_be:pfs_hasFinancialCharges rdf:type owl:DatatypeProperty .
+xebr:hasFinancialChargesTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFinancialCharges owl:equivalentProperty xebr:hasFinancialChargesTotal .
+xbrl_be:pfs_hasFinancialCharges skos:exactMatch xebr:hasFinancialChargesTotal .
+xbrl_be:pfs_hasFinancialCharges skos:prefLabel "Finanzaufwendungen"@de .
+xbrl_be:pfs_hasFinancialCharges skos:altLabel "Finanzaufwendungen"@de .
+xbrl_be:pfs_hasFinancialCharges skos:prefLabel "Financial charges"@en .
+xbrl_be:pfs_hasFinancialCharges skos:altLabel "Financial charges"@en .
+xbrl_be:pfs_hasFinancialCharges skos:prefLabel "Charges financières"@fr .
+xbrl_be:pfs_hasFinancialCharges skos:altLabel "Charges financières"@fr .
+xbrl_be:pfs_hasFinancialCharges skos:prefLabel "Financiêle kosten"@nl .
+xbrl_be:pfs_hasFinancialCharges skos:altLabel "Financiêle kosten"@nl .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear rdf:type owl:DatatypeProperty .
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear owl:equivalentProperty xebr:hasFinancialDebtsPayableAfterMoreThanOneYear .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:exactMatch xebr:hasFinancialDebtsPayableAfterMoreThanOneYear .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:prefLabel "Finanzverbindlichkeiten"@de .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:altLabel "Finanzverbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:prefLabel "Financial debts"@en .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:altLabel "Financial debts with a remaining term of more than one year"@en .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:prefLabel "Dettes financières"@fr .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:altLabel "Dettes financières à plus d'un an"@fr .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:prefLabel "Financiêle schulden"@nl .
+xbrl_be:pfs_hasFinancialDebtsRemainingTermMoreOneYear skos:altLabel "Financiêle schulden op meer dan één jaar"@nl .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasFinancialDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear owl:equivalentProperty xebr:hasFinancialDebtsPayableWithinOneYear .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:exactMatch xebr:hasFinancialDebtsPayableWithinOneYear .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:prefLabel "Finanzverbindlichkeiten"@de .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:altLabel "Finanzverbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:prefLabel "Financial debts"@en .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:altLabel "Financial debts payable within one year"@en .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:prefLabel "Dettes financières"@fr .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:altLabel "Dettes financières à un an au plus"@fr .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:prefLabel "Financiêle schulden"@nl .
+xbrl_be:pfs_hasFinancialDebtsPayableWithinOneYear skos:altLabel "Financiêle schulden op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasFinancialFixedAssets rdf:type owl:DatatypeProperty .
+xebr:hasFinancialFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFinancialFixedAssets owl:equivalentProperty xebr:hasFinancialFixedAssetsTotal .
+xbrl_be:pfs_hasFinancialFixedAssets skos:exactMatch xebr:hasFinancialFixedAssetsTotal .
+xbrl_be:pfs_hasFinancialFixedAssets skos:prefLabel "Finanzanlagen"@de .
+xbrl_be:pfs_hasFinancialFixedAssets skos:altLabel "Finanzanlagen"@de .
+xbrl_be:pfs_hasFinancialFixedAssets skos:prefLabel "Financial fixed assets"@en .
+xbrl_be:pfs_hasFinancialFixedAssets skos:altLabel "Financial fixed assets"@en .
+xbrl_be:pfs_hasFinancialFixedAssets skos:prefLabel "Immobilisations financières"@fr .
+xbrl_be:pfs_hasFinancialFixedAssets skos:altLabel "Immobilisations financières"@fr .
+xbrl_be:pfs_hasFinancialFixedAssets skos:prefLabel "Financiêle vaste activa"@nl .
+xbrl_be:pfs_hasFinancialFixedAssets skos:altLabel "Financiêle vaste activa"@nl .
+xbrl_be:pfs_hasFinancialIncome rdf:type owl:DatatypeProperty .
+xebr:hasFinancialIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFinancialIncome owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+xbrl_be:pfs_hasFinancialIncome skos:exactMatch xebr:hasFinancialIncomeTotal .
+xbrl_be:pfs_hasFinancialIncome skos:prefLabel "Finanzerträge"@de .
+xbrl_be:pfs_hasFinancialIncome skos:altLabel "Finanzerträge"@de .
+xbrl_be:pfs_hasFinancialIncome skos:prefLabel "Financial income"@en .
+xbrl_be:pfs_hasFinancialIncome skos:altLabel "Financial income"@en .
+xbrl_be:pfs_hasFinancialIncome skos:prefLabel "Produits financiers"@fr .
+xbrl_be:pfs_hasFinancialIncome skos:altLabel "Produits financiers"@fr .
+xbrl_be:pfs_hasFinancialIncome skos:prefLabel "Financiêle opbrengsten"@nl .
+xbrl_be:pfs_hasFinancialIncome skos:altLabel "Financiêle opbrengsten"@nl .
+xbrl_be:pfs_hasFixedAssets rdf:type owl:DatatypeProperty .
+xebr:hasFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFixedAssets owl:equivalentProperty xebr:hasFixedAssetsTotal .
+xbrl_be:pfs_hasFixedAssets skos:exactMatch xebr:hasFixedAssetsTotal .
+xbrl_be:pfs_hasFixedAssets skos:prefLabel "Anlagevermögen"@de .
+xbrl_be:pfs_hasFixedAssets skos:altLabel "Anlagevermögen"@de .
+xbrl_be:pfs_hasFixedAssets skos:prefLabel "Fixed assets"@en .
+xbrl_be:pfs_hasFixedAssets skos:altLabel "Fixed assets"@en .
+xbrl_be:pfs_hasFixedAssets skos:prefLabel "Actifs immobilisés"@fr .
+xbrl_be:pfs_hasFixedAssets skos:altLabel "Actifs immobilisés"@fr .
+xbrl_be:pfs_hasFixedAssets skos:prefLabel "Vaste activa"@nl .
+xbrl_be:pfs_hasFixedAssets skos:altLabel "Vaste activa"@nl .
+xbrl_be:pfs_hasFurnitureVehicles rdf:type owl:DatatypeProperty .
+xebr:hasFurnitureFixturesAndEquipment rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasFurnitureVehicles owl:equivalentProperty xebr:hasFurnitureFixturesAndEquipment .
+xbrl_be:pfs_hasFurnitureVehicles skos:exactMatch xebr:hasFurnitureFixturesAndEquipment .
+xbrl_be:pfs_hasFurnitureVehicles skos:prefLabel "Geschäftsausstattung und Fuhrpark"@de .
+xbrl_be:pfs_hasFurnitureVehicles skos:altLabel "Geschäftsausstattung und Fuhrpark"@de .
+xbrl_be:pfs_hasFurnitureVehicles skos:prefLabel "Furniture and vehicles"@en .
+xbrl_be:pfs_hasFurnitureVehicles skos:altLabel "Furniture and vehicles"@en .
+xbrl_be:pfs_hasFurnitureVehicles skos:prefLabel "Mobilier et matériel roulant"@fr .
+xbrl_be:pfs_hasFurnitureVehicles skos:altLabel "Mobilier et matériel roulant"@fr .
+xbrl_be:pfs_hasFurnitureVehicles skos:prefLabel "Meubilair en rollend materieel"@nl .
+xbrl_be:pfs_hasFurnitureVehicles skos:altLabel "Meubilair en rollend materieel"@nl .
+xbrl_be:pfs_hasIncomeTaxes rdf:type owl:DatatypeProperty .
+xebr:hasIncomeTaxes rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasIncomeTaxes owl:equivalentProperty xebr:hasIncomeTaxes .
+xbrl_be:pfs_hasIncomeTaxes skos:exactMatch xebr:hasIncomeTaxes .
+xbrl_be:pfs_hasIncomeTaxes skos:prefLabel "Steuern auf das Ergebnis"@de .
+xbrl_be:pfs_hasIncomeTaxes skos:altLabel "Steuern auf das Ergebnis"@de .
+xbrl_be:pfs_hasIncomeTaxes skos:prefLabel "Income taxes"@en .
+xbrl_be:pfs_hasIncomeTaxes skos:altLabel "Income taxes"@en .
+xbrl_be:pfs_hasIncomeTaxes skos:prefLabel "Impôts sur le résultat"@fr .
+xbrl_be:pfs_hasIncomeTaxes skos:altLabel "Impôts sur le résultat"@fr .
+xbrl_be:pfs_hasIncomeTaxes skos:prefLabel "Belastingen op het resultaat"@nl .
+xbrl_be:pfs_hasIncomeTaxes skos:altLabel "Belastingen op het resultaat"@nl .
+xbrl_be:pfs_hasIntangibleFixedAssets rdf:type owl:DatatypeProperty .
+xebr:hasIntangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasIntangibleFixedAssets owl:equivalentProperty xebr:hasIntangibleFixedAssetsTotal .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:exactMatch xebr:hasIntangibleFixedAssetsTotal .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:prefLabel "Immaterielle Anlagewerte"@de .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:altLabel "Immaterielle Anlagewerte"@de .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:prefLabel "Intangible fixed assets"@en .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:altLabel "Intangible fixed assets"@en .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:prefLabel "Immobilisations incorporelles"@fr .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:altLabel "Immobilisations incorporelles"@fr .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:prefLabel "Immateriêle vaste activa"@nl .
+xbrl_be:pfs_hasIntangibleFixedAssets skos:altLabel "Immateriêle vaste activa"@nl .
+xbrl_be:pfs_hasLandBuildings rdf:type owl:DatatypeProperty .
+xebr:hasLandAndBuildings rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasLandBuildings owl:equivalentProperty xebr:hasLandAndBuildings .
+xbrl_be:pfs_hasLandBuildings skos:exactMatch xebr:hasLandAndBuildings .
+xbrl_be:pfs_hasLandBuildings skos:prefLabel "Grundstücke und Bauten"@de .
+xbrl_be:pfs_hasLandBuildings skos:altLabel "Grundstücke und Bauten"@de .
+xbrl_be:pfs_hasLandBuildings skos:prefLabel "Land and buildings"@en .
+xbrl_be:pfs_hasLandBuildings skos:altLabel "Land and buildings"@en .
+xbrl_be:pfs_hasLandBuildings skos:prefLabel "Terrains et constructions"@fr .
+xbrl_be:pfs_hasLandBuildings skos:altLabel "Terrains et constructions"@fr .
+xbrl_be:pfs_hasLandBuildings skos:prefLabel "Terreinen en gebouwen"@nl .
+xbrl_be:pfs_hasLandBuildings skos:altLabel "Terreinen en gebouwen"@nl .
+xbrl_be:pfs_hasOperatingCharges rdf:type owl:DatatypeProperty .
+xebr:hasOperatingChargesTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasOperatingCharges owl:equivalentProperty xebr:hasOperatingChargesTotal .
+xbrl_be:pfs_hasOperatingCharges skos:exactMatch xebr:hasOperatingChargesTotal .
+xbrl_be:pfs_hasOperatingCharges skos:prefLabel "Betriebliche Aufwendungen"@de .
+xbrl_be:pfs_hasOperatingCharges skos:altLabel "Betriebliche Aufwendungen"@de .
+xbrl_be:pfs_hasOperatingCharges skos:prefLabel "Operating charges"@en .
+xbrl_be:pfs_hasOperatingCharges skos:altLabel "Operating charges"@en .
+xbrl_be:pfs_hasOperatingCharges skos:prefLabel "Coût des ventes et des prestations"@fr .
+xbrl_be:pfs_hasOperatingCharges skos:altLabel "Coût des ventes et des prestations"@fr .
+xbrl_be:pfs_hasOperatingCharges skos:prefLabel "Bedrijfskosten"@nl .
+xbrl_be:pfs_hasOperatingCharges skos:altLabel "Bedrijfskosten"@nl .
+xbrl_be:pfs_hasOperatingIncome rdf:type owl:DatatypeProperty .
+xebr:hasOperatingIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasOperatingIncome owl:equivalentProperty xebr:hasOperatingIncomeTotal .
+xbrl_be:pfs_hasOperatingIncome skos:exactMatch xebr:hasOperatingIncomeTotal .
+xbrl_be:pfs_hasOperatingIncome skos:prefLabel "Betriebliche Erträge"@de .
+xbrl_be:pfs_hasOperatingIncome skos:altLabel "Betriebliche Erträge"@de .
+xbrl_be:pfs_hasOperatingIncome skos:prefLabel "Operating income"@en .
+xbrl_be:pfs_hasOperatingIncome skos:altLabel "Operating income"@en .
+xbrl_be:pfs_hasOperatingIncome skos:prefLabel "Ventes et prestations"@fr .
+xbrl_be:pfs_hasOperatingIncome skos:altLabel "Ventes et prestations"@fr .
+xbrl_be:pfs_hasOperatingIncome skos:prefLabel "Bedrijfsopbrengsten"@nl .
+xbrl_be:pfs_hasOperatingIncome skos:altLabel "Bedrijfsopbrengsten"@nl .
+xbrl_be:pfs_hasOperatingProfitLoss rdf:type owl:DatatypeProperty .
+xebr:hasOperatingProfitLossTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasOperatingProfitLoss owl:equivalentProperty xebr:hasOperatingProfitLossTotal .
+xbrl_be:pfs_hasOperatingProfitLoss skos:exactMatch xebr:hasOperatingProfitLossTotal .
+xbrl_be:pfs_hasOperatingProfitLoss skos:prefLabel "Betriebsgewinn (Betriebsverlust)"@de .
+xbrl_be:pfs_hasOperatingProfitLoss skos:altLabel "Betriebsgewinn (Betriebsverlust)"@de .
+xbrl_be:pfs_hasOperatingProfitLoss skos:prefLabel "Operating profit (loss)"@en .
+xbrl_be:pfs_hasOperatingProfitLoss skos:altLabel "Operating profit (loss)"@en .
+xbrl_be:pfs_hasOperatingProfitLoss skos:prefLabel "Bénéfice (Perte) d'exploitation"@fr .
+xbrl_be:pfs_hasOperatingProfitLoss skos:altLabel "Bénéfice (Perte) d'exploitation"@fr .
+xbrl_be:pfs_hasOperatingProfitLoss skos:prefLabel "Bedrijfswinst (Bedrijfsverlies)"@nl .
+xbrl_be:pfs_hasOperatingProfitLoss skos:altLabel "Bedrijfswinst (Bedrijfsverlies)"@nl .
+xbrl_be:pfs_hasOtherFinancialAssets rdf:type owl:DatatypeProperty .
+xebr:hasOtherFinancialAssets rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasOtherFinancialAssets owl:equivalentProperty xebr:hasOtherFinancialAssets .
+xbrl_be:pfs_hasOtherFinancialAssets skos:exactMatch xebr:hasOtherFinancialAssets .
+xbrl_be:pfs_hasOtherFinancialAssets skos:prefLabel "Sonstige Finanzanlagen"@de .
+xbrl_be:pfs_hasOtherFinancialAssets skos:altLabel "Sonstige Finanzanlagen"@de .
+xbrl_be:pfs_hasOtherFinancialAssets skos:prefLabel "Other financial assets"@en .
+xbrl_be:pfs_hasOtherFinancialAssets skos:altLabel "Other financial assets"@en .
+xbrl_be:pfs_hasOtherFinancialAssets skos:prefLabel "Autres immobilisations financières"@fr .
+xbrl_be:pfs_hasOtherFinancialAssets skos:altLabel "Autres immobilisations financières"@fr .
+xbrl_be:pfs_hasOtherFinancialAssets skos:prefLabel "Andere financiêle vaste activa"@nl .
+xbrl_be:pfs_hasOtherFinancialAssets skos:altLabel "Andere financiêle vaste activa"@nl .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges rdf:type owl:DatatypeProperty .
+xebr:hasOtherOperatingCharges rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges owl:equivalentProperty xebr:hasOtherOperatingCharges .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:exactMatch xebr:hasOtherOperatingCharges .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:prefLabel "Sonstige betriebliche Aufwendungen"@de .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:altLabel "Übrige betriebliche Aufwendungen"@de .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:prefLabel "Other operating charges"@en .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:altLabel "Miscellaneous operating charges"@en .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:prefLabel "Autres charges d'exploitation"@fr .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:altLabel "Charges d'exploitation diverses"@fr .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:prefLabel "Andere bedrijfskosten"@nl .
+xbrl_be:pfs_hasMiscellaneousOperatingCharges skos:altLabel "Diverse bedrijfskosten"@nl .
+xbrl_be:pfs_hasLeasingSimilarRights rdf:type owl:DatatypeProperty .
+xebr:hasOtherPropertyPlantAndEquipment rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasLeasingSimilarRights owl:equivalentProperty xebr:hasOtherPropertyPlantAndEquipment .
+xbrl_be:pfs_hasLeasingSimilarRights skos:exactMatch xebr:hasOtherPropertyPlantAndEquipment .
+xbrl_be:pfs_hasLeasingSimilarRights skos:prefLabel "Leasing und ähnliche Rechten"@de .
+xbrl_be:pfs_hasLeasingSimilarRights skos:altLabel "Leasing und ähnliche Rechten"@de .
+xbrl_be:pfs_hasLeasingSimilarRights skos:prefLabel "Leasing and similar rights"@en .
+xbrl_be:pfs_hasLeasingSimilarRights skos:altLabel "Leasing and similar rights"@en .
+xbrl_be:pfs_hasLeasingSimilarRights skos:prefLabel "Location-financement et droits similaires"@fr .
+xbrl_be:pfs_hasLeasingSimilarRights skos:altLabel "Location-financement et droits similaires"@fr .
+xbrl_be:pfs_hasLeasingSimilarRights skos:prefLabel "Leasing en soortgelijke rechten"@nl .
+xbrl_be:pfs_hasLeasingSimilarRights skos:altLabel "Leasing en soortgelijke rechten"@nl .
+xbrl_be:pfs_hasOtherTangibleAssets rdf:type owl:DatatypeProperty .
+xebr:hasOtherTangibleAssets rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasOtherTangibleAssets owl:equivalentProperty xebr:hasOtherTangibleAssets .
+xbrl_be:pfs_hasOtherTangibleAssets skos:exactMatch xebr:hasOtherTangibleAssets .
+xbrl_be:pfs_hasOtherTangibleAssets skos:prefLabel "Sonstige Sachanlagen"@de .
+xbrl_be:pfs_hasOtherTangibleAssets skos:altLabel "Sonstige Sachanlagen"@de .
+xbrl_be:pfs_hasOtherTangibleAssets skos:prefLabel "Other tangible fixed assets"@en .
+xbrl_be:pfs_hasOtherTangibleAssets skos:altLabel "Other tangible fixed assets"@en .
+xbrl_be:pfs_hasOtherTangibleAssets skos:prefLabel "Autres immobilisations corporelles"@fr .
+xbrl_be:pfs_hasOtherTangibleAssets skos:altLabel "Autres immobilisations corporelles"@fr .
+xbrl_be:pfs_hasOtherTangibleAssets skos:prefLabel "Overige materiêle vaste activa"@nl .
+xbrl_be:pfs_hasOtherTangibleAssets skos:altLabel "Overige materiêle vaste activa"@nl .
+xbrl_be:pfs_hasPlantMachineryEquipment rdf:type owl:DatatypeProperty .
+xebr:hasPlantAndMachinery rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasPlantMachineryEquipment owl:equivalentProperty xebr:hasPlantAndMachinery .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:exactMatch xebr:hasPlantAndMachinery .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:prefLabel "Anlagen, Maschinen und Betriebsausstattung"@de .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:altLabel "Anlagen, Maschinen und Betriebsausstattung"@de .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:prefLabel "Plant, machinery and equipment"@en .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:altLabel "Plant, machinery and equipment"@en .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:prefLabel "Installations, machines et outillage"@fr .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:altLabel "Installations, machines et outillage"@fr .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:prefLabel "Installaties, machines en uitrusting"@nl .
+xbrl_be:pfs_hasPlantMachineryEquipment skos:altLabel "Installaties, machines en uitrusting"@nl .
+xbrl_be:pfs_hasGainLossPeriod rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossForThePeriodTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasGainLossPeriod owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+xbrl_be:pfs_hasGainLossPeriod skos:exactMatch xebr:hasProfitLossForThePeriodTotal .
+xbrl_be:pfs_hasGainLossPeriod skos:prefLabel "Gewinn (Verlust) des Geschäftsjahres"@de .
+xbrl_be:pfs_hasGainLossPeriod skos:altLabel "Gewinn (Verlust) des Geschäftsjahres"@de .
+xbrl_be:pfs_hasGainLossPeriod skos:prefLabel "Gain (loss) of the period"@en .
+xbrl_be:pfs_hasGainLossPeriod skos:altLabel "Gain (loss) of the period"@en .
+xbrl_be:pfs_hasGainLossPeriod skos:prefLabel "Bénéfice (Perte) de l'exercice"@fr .
+xbrl_be:pfs_hasGainLossPeriod skos:altLabel "Bénéfice (Perte) de l'exercice"@fr .
+xbrl_be:pfs_hasGainLossPeriod skos:prefLabel "Winst (Verlies) van het boekjaar"@nl .
+xbrl_be:pfs_hasGainLossPeriod skos:altLabel "Winst (Verlies) van het boekjaar"@nl .
+xbrl_be:pfs_hasProvisionsDeferredTaxes rdf:type owl:DatatypeProperty .
+xebr:hasProvisionsAndDeferredTaxesTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasProvisionsDeferredTaxes owl:equivalentProperty xebr:hasProvisionsAndDeferredTaxesTotal .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:exactMatch xebr:hasProvisionsAndDeferredTaxesTotal .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:prefLabel "Rückstellungen und Aufgeschobene Steuern"@de .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:altLabel "Rückstellungen und Aufgeschobene Steuern"@de .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:prefLabel "Provisions and deferred taxes"@en .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:altLabel "Provisions and deferred taxes"@en .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:prefLabel "Provisions et impôts différés"@fr .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:altLabel "Provisions et impôts différés"@fr .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:prefLabel "Voorzieningen en uitgestelde belastingen"@nl .
+xbrl_be:pfs_hasProvisionsDeferredTaxes skos:altLabel "Voorzieningen en uitgestelde belastingen"@nl .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges rdf:type owl:DatatypeProperty .
+xebr:hasProvisionsForLiabilitiesAndCharges rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges owl:equivalentProperty xebr:hasProvisionsForLiabilitiesAndCharges .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:exactMatch xebr:hasProvisionsForLiabilitiesAndCharges .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:prefLabel "Rückstellungen für Risiken und Aufwendungen"@de .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:altLabel "Rückstellungen für Risiken und Aufwendungen"@de .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:prefLabel "Provisions for liabilities and charges"@en .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:altLabel "Provisions for liabilities and charges"@en .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:prefLabel "Provisions pour risques et charges"@fr .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:altLabel "Provisions pour risques et charges"@fr .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:prefLabel "Voorzieningen voor risico's en kosten"@nl .
+xbrl_be:pfs_hasProvisionLiabilitiesCharges skos:altLabel "Voorzieningen voor risico's en kosten"@nl .
+xbrl_be:pfs_hasRawMaterialsConsumables rdf:type owl:DatatypeProperty .
+xebr:hasRawMaterialsAndConsumables rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasRawMaterialsConsumables owl:equivalentProperty xebr:hasRawMaterialsAndConsumables .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:exactMatch xebr:hasRawMaterialsAndConsumables .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:prefLabel "Waren, Roh-, Hilfs- und Betriebsstoffe"@de .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:altLabel "Waren, Roh-, Hilfs- und Betriebsstoffe"@de .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:prefLabel "Raw materials, consumables"@en .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:altLabel "Raw materials, consumables"@en .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:prefLabel "Approvisionnements et marchandises"@fr .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:altLabel "Approvisionnements et marchandises"@fr .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:prefLabel "Handelsgoederen, grond- en hulpstoffen"@nl .
+xbrl_be:pfs_hasRawMaterialsConsumables skos:altLabel "Handelsgoederen, grond- en hulpstoffen"@nl .
+xbrl_be:pfs_hasReserves rdf:type owl:DatatypeProperty .
+xebr:hasReserves rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasReserves owl:equivalentProperty xebr:hasReserves .
+xbrl_be:pfs_hasReserves skos:exactMatch xebr:hasReserves .
+xbrl_be:pfs_hasReserves skos:prefLabel "Rücklagen"@de .
+xbrl_be:pfs_hasReserves skos:altLabel "Rücklagen"@de .
+xbrl_be:pfs_hasReserves skos:prefLabel "Reserves"@en .
+xbrl_be:pfs_hasReserves skos:altLabel "Reserves"@en .
+xbrl_be:pfs_hasReserves skos:prefLabel "Réserves"@fr .
+xbrl_be:pfs_hasReserves skos:altLabel "Réserves"@fr .
+xbrl_be:pfs_hasReserves skos:prefLabel "Reserves"@nl .
+xbrl_be:pfs_hasReserves skos:altLabel "Reserves"@nl .
+xbrl_be:pfs_hasStocksContractsProgress rdf:type owl:DatatypeProperty .
+xebr:hasStocksTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasStocksContractsProgress owl:equivalentProperty xebr:hasStocksTotal .
+xbrl_be:pfs_hasStocksContractsProgress skos:exactMatch xebr:hasStocksTotal .
+xbrl_be:pfs_hasStocksContractsProgress skos:prefLabel "Vorräte und in Ausführung befindliche Bestellungen"@de .
+xbrl_be:pfs_hasStocksContractsProgress skos:altLabel "Vorräte und in Ausführung befindliche Bestellungen"@de .
+xbrl_be:pfs_hasStocksContractsProgress skos:prefLabel "Stocks and contracts in progress"@en .
+xbrl_be:pfs_hasStocksContractsProgress skos:altLabel "Stocks and contracts in progress"@en .
+xbrl_be:pfs_hasStocksContractsProgress skos:prefLabel "Stocks et commandes en cours d'exécution"@fr .
+xbrl_be:pfs_hasStocksContractsProgress skos:altLabel "Stocks et commandes en cours d'exécution"@fr .
+xbrl_be:pfs_hasStocksContractsProgress skos:prefLabel "Voorraden en bestellingen in uitvoering"@nl .
+xbrl_be:pfs_hasStocksContractsProgress skos:altLabel "Voorraden en bestellingen in uitvoering"@nl .
+xbrl_be:pfs_hasTangibleFixedAssets rdf:type owl:DatatypeProperty .
+xebr:hasTangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasTangibleFixedAssets owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+xbrl_be:pfs_hasTangibleFixedAssets skos:exactMatch xebr:hasTangibleFixedAssetsTotal .
+xbrl_be:pfs_hasTangibleFixedAssets skos:prefLabel "Sachanlagen"@de .
+xbrl_be:pfs_hasTangibleFixedAssets skos:altLabel "Sachanlagen"@de .
+xbrl_be:pfs_hasTangibleFixedAssets skos:prefLabel "Tangible fixed assets"@en .
+xbrl_be:pfs_hasTangibleFixedAssets skos:altLabel "Tangible fixed assets"@en .
+xbrl_be:pfs_hasTangibleFixedAssets skos:prefLabel "Immobilisations corporelles"@fr .
+xbrl_be:pfs_hasTangibleFixedAssets skos:altLabel "Immobilisations corporelles"@fr .
+xbrl_be:pfs_hasTangibleFixedAssets skos:prefLabel "Materiêle vaste activa"@nl .
+xbrl_be:pfs_hasTangibleFixedAssets skos:altLabel "Materiêle vaste activa"@nl .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity rdf:type owl:DatatypeProperty .
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity owl:equivalentProperty xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:exactMatch xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:prefLabel "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:altLabel "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:prefLabel "Taxes, remuneration and social security"@en .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:altLabel "Taxes, remuneration and social security"@en .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:prefLabel "Dettes fiscales, salariales et sociales"@fr .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:altLabel "Dettes fiscales, salariales et sociales"@fr .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:prefLabel "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl .
+xbrl_be:pfs_hasTaxesRemunerationSocialSecurity skos:altLabel "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTradeDebtsPayableAfterMoreThanOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear owl:equivalentProperty xebr:hasTradeDebtsPayableAfterMoreThanOneYear .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:exactMatch xebr:hasTradeDebtsPayableAfterMoreThanOneYear .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:prefLabel "Verbindlichkeiten aus Lieferungen und Leistungen"@de .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:altLabel "Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit von mehr als einem Jahr"@de .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:prefLabel "Trade debts"@en .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:altLabel "Trade debts on more than one year"@en .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:prefLabel "Dettes commerciales"@fr .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:altLabel "Dettes commerciales à plus d'un an"@fr .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:prefLabel "Handelsschulden"@nl .
+xbrl_be:pfs_hasTradeDebtsMoreOneYear skos:altLabel "Handelsschulden op meer dan één jaar"@nl .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xebr:hasTradeDebtsPayableWithinOneYear rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear owl:equivalentProperty xebr:hasTradeDebtsPayableWithinOneYear .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:exactMatch xebr:hasTradeDebtsPayableWithinOneYear .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:prefLabel "Verbindlichkeiten aus Lieferungen und Leistungen"@de .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:altLabel "Verbindlichkeiten aus Lieferungen und Leistungen mit einer Restlaufzeit bis zu einem Jahr"@de .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:prefLabel "Trade debts"@en .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:altLabel "Trade debts payable within one year"@en .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:prefLabel "Dettes commerciales"@fr .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:altLabel "Dettes commerciales à un an au plus"@fr .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:prefLabel "Handelsschulden"@nl .
+xbrl_be:pfs_hasTradeDebtsPayableWithinOneYear skos:altLabel "Handelsschulden op ten hoogste één jaar"@nl .
+xbrl_be:pfs_hasStockWorkProgress rdf:type owl:DatatypeProperty .
+xebr:hasWorkInProgress rdf:type owl:DatatypeProperty .
+xbrl_be:pfs_hasStockWorkProgress owl:equivalentProperty xebr:hasWorkInProgress .
+xbrl_be:pfs_hasStockWorkProgress skos:exactMatch xebr:hasWorkInProgress .
+xbrl_be:pfs_hasStockWorkProgress skos:prefLabel "Unfertige Erzeugnisse"@de .
+xbrl_be:pfs_hasStockWorkProgress skos:altLabel "Unfertige Erzeugnisse"@de .
+xbrl_be:pfs_hasStockWorkProgress skos:prefLabel "Work in progress"@en .
+xbrl_be:pfs_hasStockWorkProgress skos:altLabel "Work in progress"@en .
+xbrl_be:pfs_hasStockWorkProgress skos:prefLabel "En-cours de fabrication"@fr .
+xbrl_be:pfs_hasStockWorkProgress skos:altLabel "En-cours de fabrication"@fr .
+xbrl_be:pfs_hasStockWorkProgress skos:prefLabel "Goederen in bewerking"@nl .
+xbrl_be:pfs_hasStockWorkProgress skos:altLabel "Goederen in bewerking"@nl .
+xbrl_be:pfs_hasBalanceSheet rdf:type owl:ObjectProperty .
+xebr:hasKeyBalanceSheetFiguresReport rdf:type owl:ObjectProperty .
+xbrl_be:pfs_hasBalanceSheet owl:equivalentProperty xebr:hasKeyBalanceSheetFiguresReport .
+xbrl_be:pfs_hasBalanceSheet skos:exactMatch xebr:hasKeyBalanceSheetFiguresReport .
+xbrl_be:pfs_hasBalanceSheet skos:prefLabel "Bilanz nach Ergebnisverwendung"@de .
+xbrl_be:pfs_hasBalanceSheet skos:altLabel "Bilanz"@de .
+xbrl_be:pfs_hasBalanceSheet skos:prefLabel "Balance sheet after appropriation"@en .
+xbrl_be:pfs_hasBalanceSheet skos:altLabel "Balance sheet"@en .
+xbrl_be:pfs_hasBalanceSheet skos:prefLabel "Bilan après répartition"@fr .
+xbrl_be:pfs_hasBalanceSheet skos:altLabel "Bilan"@fr .
+xbrl_be:pfs_hasBalanceSheet skos:prefLabel "Balans na winstverdeling"@nl .
+xbrl_be:pfs_hasBalanceSheet skos:altLabel "Balans"@nl .
+xbrl_es:pgc-07-c-bs_ActivoPresentacion rdf:type owl:Class .
+xebr:AssetsPresentation rdf:type owl:Class .
+xbrl_es:pgc-07-c-bs_ActivoPresentacion owl:equivalentClass xebr:AssetsPresentation .
+xbrl_es:pgc-07-c-bs_ActivoPresentacion skos:exactMatch xebr:AssetsPresentation .
+xbrl_es:pgc-07-c-bs_ActivoPresentacion skos:prefLabel "ACTIVO"@es .
+xbrl_es:pgc-07-c-bs_ActivoPresentacion skos:altLabel "Activo"@es .
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion rdf:type owl:Class .
+xebr:IncomeStatementPresentation rdf:type owl:Class .
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion owl:equivalentClass xebr:IncomeStatementPresentation .
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion skos:exactMatch xebr:IncomeStatementPresentation .
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion skos:prefLabel "Perdidas y Ganancias Presentaciòn"@es .
+xbrl_es:pgc-07-c-bs_PerdidasGananciasPresentacion skos:altLabel "CUENTA DE PÈRDIDAS Y GANANCIAS CORRESPONDIENTE AL EJERCICIO"@es .
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion rdf:type owl:Class .
+xebr:KeyBalanceSheetFiguresReport rdf:type owl:Class .
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion owl:equivalentClass xebr:KeyBalanceSheetFiguresReport .
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion skos:exactMatch xebr:KeyBalanceSheetFiguresReport .
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion skos:prefLabel "Balance Situaciòn Presentaciòn"@es .
+xbrl_es:pgc-07-c-bs_BalanceSituacionPresentacion skos:altLabel "BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo rdf:type owl:DatatypeProperty .
+xebr:hasAffiliatedEnterprises rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo owl:equivalentProperty xebr:hasAffiliatedEnterprises .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo skos:exactMatch xebr:hasAffiliatedEnterprises .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo skos:prefLabel "IV. Inversiones en empresas del grupo y asociadas a largo plazo"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesEmpresasGrupoEmpresasAsociadasLargoPlazo skos:altLabel "Activo no corriente inversiones en empresas del grupo y asociadas a largo plazo "@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar rdf:type owl:DatatypeProperty .
+xebr:hasAmountsReceivableTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar owl:equivalentProperty xebr:hasAmountsReceivableTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar skos:exactMatch xebr:hasAmountsReceivableTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar skos:prefLabel "deudores comerciales y otras cuentas a cobrar"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteDeudoresComercialesOtrasCuentasCobrar skos:altLabel "Activo corriente deudores comerciales y otras cuentas a cobrar"@es .
+xbrl_es:pgc-07-c-bs_hasTotalActivo rdf:type owl:DatatypeProperty .
+xebr:hasAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasTotalActivo owl:equivalentProperty xebr:hasAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasTotalActivo skos:exactMatch xebr:hasAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasTotalActivo skos:prefLabel "TOTAL ACTIVO (A + B)"@es .
+xbrl_es:pgc-07-c-bs_hasTotalActivo skos:altLabel "Total activo"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital rdf:type owl:DatatypeProperty .
+xebr:hasCapital rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital owl:equivalentProperty xebr:hasCapital .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital skos:exactMatch xebr:hasCapital .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital skos:prefLabel "I. Capital"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosCapital skos:altLabel "Patrimonio neto fondos propios capital"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorriente rdf:type owl:DatatypeProperty .
+xebr:hasCurrentAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoCorriente owl:equivalentProperty xebr:hasCurrentAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorriente skos:exactMatch xebr:hasCurrentAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorriente skos:prefLabel "B) ACTIVO CORRIENTE"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorriente skos:altLabel "Activo corriente"@es .
+xbrl_es:pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido rdf:type owl:DatatypeProperty .
+xebr:hasDeferredTaxes rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido owl:equivalentProperty xebr:hasDeferredTaxes .
+xbrl_es:pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido skos:exactMatch xebr:hasDeferredTaxes .
+xbrl_es:pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido skos:prefLabel "IV. Pasivos por impuesto diferido"@es .
+xbrl_es:pgc-07-c-bs_hasPasivoNoCorrientePasivosImpuestoDiferido skos:altLabel "Pasivo no corriente pasivos por impuesto diferido"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoPasivoTotal rdf:type owl:DatatypeProperty .
+xebr:hasEquityAndLiabilitiesTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoPasivoTotal owl:equivalentProperty xebr:hasEquityAndLiabilitiesTotal .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoPasivoTotal skos:exactMatch xebr:hasEquityAndLiabilitiesTotal .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoPasivoTotal skos:prefLabel "TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoPasivoTotal skos:altLabel "Patrimonio neto y pasivo total"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropios rdf:type owl:DatatypeProperty .
+xebr:hasEquityTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropios owl:equivalentProperty xebr:hasEquityTotal .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropios skos:exactMatch xebr:hasEquityTotal .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropios skos:prefLabel "A-1) Fondos propios"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropios skos:altLabel "Patrimonio neto fondos propios"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros rdf:type owl:DatatypeProperty .
+xebr:hasFinancialChargesTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros owl:equivalentProperty xebr:hasFinancialChargesTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros skos:exactMatch xebr:hasFinancialChargesTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros skos:prefLabel "gastos financieros"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasGastosFinancieros skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas gastos financieros"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros rdf:type owl:DatatypeProperty .
+xebr:hasFinancialIncomeTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros owl:equivalentProperty xebr:hasFinancialIncomeTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros skos:exactMatch xebr:hasFinancialIncomeTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros skos:prefLabel "ingresos financieros"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasIngresosFinancieros skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas ingresos financieros"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero rdf:type owl:DatatypeProperty .
+xebr:hasFinancialProfitLossTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero owl:equivalentProperty xebr:hasFinancialProfitLossTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero skos:exactMatch xebr:hasFinancialProfitLossTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero skos:prefLabel "resultado financiero"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoFinanciero skos:altLabel "Cuenta de pérdidas y ganancias resultado financiero"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorriente rdf:type owl:DatatypeProperty .
+xebr:hasFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorriente owl:equivalentProperty xebr:hasFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorriente skos:exactMatch xebr:hasFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorriente skos:prefLabel "A) ACTIVO NO CORRIENTE"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorriente skos:altLabel "Activo no corriente"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios rdf:type owl:DatatypeProperty .
+xebr:hasIncomeTaxes rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios owl:equivalentProperty xebr:hasIncomeTaxes .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios skos:exactMatch xebr:hasIncomeTaxes .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios skos:prefLabel "impuestos sobre beneficios"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasOperacionesContinuadasImpuestosSobreBeneficios skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas impuestos sobre beneficios"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible rdf:type owl:DatatypeProperty .
+xebr:hasIntangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible owl:equivalentProperty xebr:hasIntangibleFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible skos:exactMatch xebr:hasIntangibleFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible skos:prefLabel "I. Inmovilizado intangible"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoIntangible skos:altLabel "Activo no corriente inmovilizado intangible"@es .
+xbrl_es:pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones rdf:type owl:DatatypeProperty .
+xebr:hasLandAndBuildings rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones owl:equivalentProperty xebr:hasLandAndBuildings .
+xbrl_es:pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones skos:exactMatch xebr:hasLandAndBuildings .
+xbrl_es:pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones skos:prefLabel "1. Terrenos y construcciones"@es .
+xbrl_es:pgc-07-n_hasActivoNoCorrienteInmovilizadoMaterialTerrenosConstrucciones skos:altLabel "Activo no corriente inmovilizado material terrenos y construcciones"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes rdf:type owl:DatatypeProperty .
+xebr:hasLiquidAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes owl:equivalentProperty xebr:hasLiquidAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes skos:exactMatch xebr:hasLiquidAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes skos:prefLabel "efectivo y otros activos líquidos equivalentes"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteEfectivoOtrosActivosLiquidosEquivalentes skos:altLabel "Activo corriente efectivo y otros activos líquidos equivalentes"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo rdf:type owl:DatatypeProperty .
+xebr:hasOtherFinancialAssets rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo owl:equivalentProperty xebr:hasOtherFinancialAssets .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo skos:exactMatch xebr:hasOtherFinancialAssets .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo skos:prefLabel "V. Inversiones financieras a largo plazo"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInversionesFinancierasLargoPlazo skos:altLabel "Activo no corriente inversiones financieras a largo plazo"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossBroughtForward rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores owl:equivalentProperty xebr:hasProfitLossBroughtForward .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores skos:exactMatch xebr:hasProfitLossBroughtForward .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores skos:prefLabel "V. Resultados de ejercicios anteriores"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadosEjerciciosAnteriores skos:altLabel "Patrimonio neto fondos propios resultados de ejercicios anteriores"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossForThePeriod rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio owl:equivalentProperty xebr:hasProfitLossForThePeriod .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio skos:exactMatch xebr:hasProfitLossForThePeriod .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio skos:prefLabel "VII. Resultado del ejercicio"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosResultadoEjercicio skos:altLabel "Patrimonio neto fondos propios resultado del ejercicio"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio rdf:type owl:DatatypeProperty .
+xebr:hasProfitLossForThePeriodTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio owl:equivalentProperty xebr:hasProfitLossForThePeriodTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio skos:exactMatch xebr:hasProfitLossForThePeriodTotal .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio skos:prefLabel "resultado del ejercicio"@es .
+xbrl_es:pgc-07-c-bs_hasPerdidasGananciasResultadoEjercicio skos:altLabel "Cuenta de pérdidas y ganancias resultado del ejercicio"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas rdf:type owl:DatatypeProperty .
+xebr:hasReserves rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas owl:equivalentProperty xebr:hasReserves .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas skos:exactMatch xebr:hasReserves .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas skos:prefLabel "III. Reservas"@es .
+xbrl_es:pgc-07-c-bs_hasPatrimonioNetoFondosPropiosReservas skos:altLabel "Patrimonio neto fondos propios reservas"@es .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos rdf:type owl:DatatypeProperty .
+xebr:hasStockRawMaterialsAndConsumables rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos owl:equivalentProperty xebr:hasStockRawMaterialsAndConsumables .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos skos:exactMatch xebr:hasStockRawMaterialsAndConsumables .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos skos:prefLabel "2. Materias primas y otros aprovisionamientos"@es .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasMateriasPrimasOtrosAprovisionamientos skos:altLabel "Activo corriente existencias de materias primas y otros aprovisionamientos"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteExistencias rdf:type owl:DatatypeProperty .
+xebr:hasStocksTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteExistencias owl:equivalentProperty xebr:hasStocksTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteExistencias skos:exactMatch xebr:hasStocksTotal .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteExistencias skos:prefLabel "II. Existencias"@es .
+xbrl_es:pgc-07-c-bs_hasActivoCorrienteExistencias skos:altLabel "Activo corriente existencias"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial rdf:type owl:DatatypeProperty .
+xebr:hasTangibleFixedAssetsTotal rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial owl:equivalentProperty xebr:hasTangibleFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial skos:exactMatch xebr:hasTangibleFixedAssetsTotal .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial skos:prefLabel "II. Inmovilizado material"@es .
+xbrl_es:pgc-07-c-bs_hasActivoNoCorrienteInmovilizadoMaterial skos:altLabel "Activo no corriente inmovilizado material"@es .
+xbrl_es:pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados rdf:type owl:DatatypeProperty .
+xebr:hasWagesAndSalaries rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados owl:equivalentProperty xebr:hasWagesAndSalaries .
+xbrl_es:pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados skos:exactMatch xebr:hasWagesAndSalaries .
+xbrl_es:pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados skos:prefLabel "a) Sueldos, salarios y asimilados"@es .
+xbrl_es:pgc-07-n_hasPerdidasGananciasOperacionesContinuadasGestionPersonalSueldosSalariosAsimilados skos:altLabel "Cuenta de pérdidas y ganancias operaciones continuadas gastos de personal sueldos, salarios y asimilados"@es .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasProductosCurso rdf:type owl:DatatypeProperty .
+xebr:hasWorkInProgress rdf:type owl:DatatypeProperty .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasProductosCurso owl:equivalentProperty xebr:hasWorkInProgress .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasProductosCurso skos:exactMatch xebr:hasWorkInProgress .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasProductosCurso skos:prefLabel "3. Productos en curso"@es .
+xbrl_es:pgc-07-n_hasActivoCorrienteExistenciasProductosCurso skos:altLabel "Activo corriente existencias de productos en curso"@es .
+xbrl_es:pgc-07-c-bs_hasBalanceSituacionPresentacion rdf:type owl:ObjectProperty .
+xebr:hasKeyBalanceSheetFiguresReport rdf:type owl:ObjectProperty .
+xbrl_es:pgc-07-c-bs_hasBalanceSituacionPresentacion owl:equivalentProperty xebr:hasKeyBalanceSheetFiguresReport .
+xbrl_es:pgc-07-c-bs_hasBalanceSituacionPresentacion skos:exactMatch xebr:hasKeyBalanceSheetFiguresReport .
+xbrl_es:pgc-07-c-bs_hasBalanceSituacionPresentacion skos:prefLabel "Balance Situaciòn Presentaciòn"@es .
+xbrl_es:pgc-07-c-bs_hasBalanceSituacionPresentacion skos:altLabel "BALANCE DE SITUACION AL CIERRE DEL EJERCICIO PRESENTACION"@es .

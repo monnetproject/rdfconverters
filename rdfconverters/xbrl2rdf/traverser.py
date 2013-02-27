@@ -9,7 +9,7 @@ class XEBRConceptTraverser:
     See the "xEBR Matrix" sheet in "xEBR v7.0-Financial Figures-rdf-mappings.xls" file for the
     report taxonomy. Run `cat notes/structure` for the MFO version of that excel sheet.
     '''
-    XEBR_PATH = resource_stream(__name__, '/schemas/xebr_v1.2.n3')
+    XEBR_PATH = resource_stream('rdfconverters.resources', 'mfo/XEBRv7.0/xebr.n3')
 
     def __init__(self):
         # Load XEBR schema

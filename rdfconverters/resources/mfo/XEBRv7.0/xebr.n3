@@ -1,0 +1,1867 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/xebr.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger"^^xsd:string;
+    owl:versionInfo "v7.0"^^xsd:string .
+
+xebr:belongsTo a owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:domain xebr:Class;
+    rdfs:range xebr:Class .
+
+xebr:end a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:date .
+
+xebr:hasAccruedChargesAndDeferredIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Accrued charges and deferred income [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:AccruedChargesAndDeferredIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasActivityCode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Activity, Code"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyActivityList;
+    rdfs:range xsd:string .
+
+xebr:hasActivityLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Activity, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyActivityList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasActivityText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Activity, Text"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyActivityList;
+    rdfs:range xsd:string .
+
+xebr:hasActivityType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Activity, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyActivityList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasAddedValueBachS-5-8 a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Added value BACH (S - 5 - 8)"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingBachRatiosPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAffiliatedEnterprises a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Affiliated enterprises"@en;
+    xebr:version "V2"^^xsd:string;
+    rdfs:domain xebr:FinancialFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsOwedToCreditInstitutionsAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts owed to credit institutions after more than one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsOwedToCreditInstitutionsWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts owed to credit institutions within one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsPayableAfterMoreThanOneYearTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts payable after more than one year [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsPayableTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts Payable [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:AmountsPayablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsPayableWithinOneYearTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts payable within one year [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsReceivableAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts receivable after more than one year"@en;
+    xebr:version "V2"^^xsd:string;
+    rdfs:domain xebr:AmountsReceivablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsReceivableTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts receivable [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AmountsReceivablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAmountsReceivableWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Amounts receivable within one year "@en;
+    xebr:version "V2"^^xsd:string;
+    rdfs:domain xebr:AmountsReceivablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Assets [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasBalanceSheetDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Balance sheet date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasCapital a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Capital"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCapitalisedProduction a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Capitalised production"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCashAtBankAndInHandTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Cash at bank and in hand [Total]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CashAtBankAndInHandPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCategoryOfEventCode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Category of event, Code"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventCategoryPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCategoryOfEventType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Category of event, Type"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventCategoryPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCategoryOfEventValue a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Category of event, Value"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventCategoryPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Charges [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:IncomeStatementPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCollectiveProcedureDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Collective procedure, Date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CollectiveProcedurePresentation;
+    rdfs:range xsd:date .
+
+xebr:hasCollectiveProcedureIndicator a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Collective procedure, Indicator"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CollectiveProcedurePresentation;
+    rdfs:range xsd:boolean .
+
+xebr:hasCompanyAddressComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company address complement"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressComplementPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyAddressCountry a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company address, Country"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyAddressCountyOrState a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company address, County or State"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyAddressLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company address, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyAddressType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company address, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyContactPointDescription a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company contact point, Description"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyContactPointList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyContactPointLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company contact point, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyContactPointList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyContactPointType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company contact point, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyContactPointList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyContactPointValue a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company contact point, Value"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyContactPointList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyEventInformationSource a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company event, Information source"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDescriptionPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyEventLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company event, Language"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDescriptionPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyEventText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company event, Text"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDescriptionPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyHistoryReport a owl:ObjectProperty;
+    rdfs:label "COMPANY HISTORY [Report]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:Report;
+    rdfs:range xebr:CompanyHistoryReport .
+
+xebr:hasCompanyIdProfileUrl a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company ID, Profile URL"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CompanyIdNumberList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyIdType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company ID, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdNumberList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyIdValue a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company ID, Value"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdNumberList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyIdentificationEndingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company identification, Ending date"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyDataValidityPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasCompanyIdentificationReport a owl:ObjectProperty;
+    rdfs:label "COMPANY IDENTIFICATION [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:Report;
+    rdfs:range xebr:CompanyIdentificationReport .
+
+xebr:hasCompanyIdentificationStartingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company identification, Starting date"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyDataValidityPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasCompanyNameLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company name, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyNameList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyNameText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company name, Text"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyNameList;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyNameType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company name, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyNameList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasCompanyOfficialsReport a owl:ObjectProperty;
+    rdfs:label "COMPANY OFFICIALS [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:Report;
+    rdfs:range xebr:CompanyOfficialsReport .
+
+xebr:hasCompanyPostalBox a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company postal box"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyPostcode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company postcode"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyStreetComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company street complement"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyStreetName a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company street name"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyStreetNumber a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company street number"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyStreetType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company street type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyTown a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company town"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCompanyTownComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Company town complement"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasCostOfMaterialsAndConsumablesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Cost of materials and consumables [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCurrentAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Current assets [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CurrentAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCurrentInvestmentsPresentation a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Current investments [Presentation]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:CurrentAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasCurrentInvestmentsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Current investments [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:CurrentAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasDateOfEvent a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Date of event"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDatePresentation;
+    rdfs:range xsd:date .
+
+xebr:hasDebentureLoansAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Debenture loans after more than one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasDeferredChargesAndAccruedIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Deferred charges and accrued income [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:DeferredChargesAndAccruedIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasDeferredTaxes a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Deferred taxes"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:ProvisionsAndDeferredTaxesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasDepreciationOnIntangibleAndTangibleFixedAssets a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Depreciation on intangible and tangible fixed assets"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasDescriptionOfSharesOrDebentures a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Description of shares or debentures"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialShareholdingPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasDirector a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Director"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:MainOfficialPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasEquityAndLiabilitiesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Equity and Liabilities [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:EquityAndLiabilitiesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasEquityTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Equity [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasExtraordinaryChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Extraordinary charges [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:ExtraordinaryChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasExtraordinaryIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Extraordinary income [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:ExtraordinaryIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasExtraordinaryProfitLossTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Extraordinary profit (loss) [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:NetExtraordinaryIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial charges [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:FinancialChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialDebtsPayableAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial debts payable after more than one year"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialDebtsPayableWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial debts payable within one year"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialFixedAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial fixed assets [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:FinancialFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial income [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:FinancialIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFinancialProfitLossTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Financial profit (loss) [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:NetFinancialIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFixedAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Fixed assets [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:FixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFormationPreliminaryExpenses a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Formation (preliminary) expenses"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:IntangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasFurnitureFixturesAndEquipment a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Furniture, fixtures, and equipment"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasGrossOperatingProfitT-6 a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Gross operating profit (T - 6)"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingBachRatiosPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasIncomeTaxes a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Income taxes"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:IncomeStatementPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Income [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:IncomeStatementPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasIncorporationDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Incorporation date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasIncorporationPlace a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Incorporation place"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasIntangibleFixedAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Intangible fixed assets [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:IntangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasInterestAndSimilarChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Interest and similar charges [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:InterestAndSimilarChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasInterestPaidOnFinancialDebts a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Interest paid on financial debts"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:InterestAndSimilarChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasKeyBalanceSheetFiguresReport a owl:ObjectProperty;
+    rdfs:label "KEY BALANCE SHEET FIGURES [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:Report;
+    rdfs:range xebr:KeyBalanceSheetFiguresReport .
+
+xebr:hasLandAndBuildings a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Land and buildings"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasLastBalanceSheetPublished a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Last balance sheet published"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasLegalFormCode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal form, Code"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:string .
+
+xebr:hasLegalFormLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal form, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:string .
+
+xebr:hasLegalFormText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal form, Text"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:string .
+
+xebr:hasLegalFormType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal form, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasLegalStatusCode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal status, Code"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:string .
+
+xebr:hasLegalStatusType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Legal status, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasLiquidAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Liquid assets [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:LiquidAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasLiquidationDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Liquidation date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasMainActivityFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Main activity [Flag]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyActivityList;
+    rdfs:range xsd:boolean .
+
+xebr:hasMainCompanyAddressFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Main company address [Flag]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyAddressList;
+    rdfs:range xsd:boolean .
+
+xebr:hasMainFormFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Main form [Flag]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyLegalFormList;
+    rdfs:range xsd:boolean .
+
+xebr:hasMainNameFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Main name [Flag]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyNameList;
+    rdfs:range xsd:boolean .
+
+xebr:hasNetTurnover a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Net turnover"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasNumberOfShares a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Number of shares"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialShareholdingPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialAddressComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official address complement"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressComplementPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialAddressCountry a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official address, Country"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CompanyOfficialList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialAddressCountyState a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official address, County/State"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:CompanyOfficialList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialCityComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official city complement"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressCityOrTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialCityOfBirth a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official city of birth"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialPlaceOfBirthPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialCityOrTown a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official city or town"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressCityOrTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialCountryOfBirth a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official country of birth"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialPlaceOfBirthPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialDateOfBirth a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official date of birth"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialNamePresentation;
+    rdfs:range xsd:date .
+
+xebr:hasOfficialFamilyName a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official family name"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialNamePresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialFirstName a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official first name"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFirstAndMiddleNamesList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialFunctionEndingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official function, Ending date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:date .
+
+xebr:hasOfficialFunctionLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official function, Language"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialFunctionStartingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official function, Starting date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:date .
+
+xebr:hasOfficialFunctionText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official function, Text"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialFunctionType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official function, Type"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialIdType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official ID, Type"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialIdNumberList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialIdValue a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official ID, Value"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialIdNumberList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialIdentificationEndingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official identification, Ending date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialDataValidityPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasOfficialIdentificationStartingDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official identification, Starting date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialDataValidityPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasOfficialIsACompanyFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official is a company [Flag]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialIdNumberList;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialMarriedName a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official married name"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialNamePresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialNationality a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official nationality"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialPlaceOfBirthPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialPostalBox a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official postal box"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialPostcode a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official postcode"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressCityOrTownPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialStreetComplement a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official street complement"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialStreetName a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official street name"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialStreetNumber a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official street number"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialStreetType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official street type"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialAddressDetailsPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOfficialTitleOrGender a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Official title or gender"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialNamePresentation;
+    rdfs:range xsd:string .
+
+xebr:hasOperatingChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Operating charges [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:OperatingChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOperatingIncomeTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Operating income [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:OperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOperatingProfitLossTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Operating profit (loss) [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:NetOperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other creditors after more than one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherCreditorsWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other creditors  within one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherDebtors a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other debtors"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsReceivablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherExternalCharges a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other external charges"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherFinancialAssets a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other financial assets"@en;
+    xebr:version "V2"^^xsd:string;
+    rdfs:domain xebr:FinancialFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherFinancialCharges a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other financial charges"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:InterestAndSimilarChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherFinancialCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other financial creditors after more than one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherFinancialCreditorsWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other financial creditors  within one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherFixtures a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other fixtures"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherIntangibleFixedAssets a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other intangible fixed assets"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:IntangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherNonFinancialCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other non financial creditors after more than one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherNonFinancialCreditorsWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other non financial creditors  within one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherOperatingChargesAndTaxesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other operating charges and taxes [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OtherOperatingChargesAndTaxesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherOperatingIncome a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other operating income"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherPropertyPlantAndEquipment a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other property, plant, and equipment"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherProvisions a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other provisions"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherStocks a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other stocks"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherTangibleFixedAssets a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other tangible fixed assets"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:TangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasOtherValueAdjustmentsAndProvisions a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Other value adjustments and provisions"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPaymentsOnAccount a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Payments on account"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPaymentsOnAccountAndAssetsInConstruction a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Payments on account and assets in construction"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPaymentsReceivedOnAccountsOfOrderWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Payments received on accounts of order within one year"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPensionsAndSimilarCommitments a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Pensions and similar commitments"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StaffCostsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPlantAndMachinery a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Plant and machinery"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPresident a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "President"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:MainOfficialPresentation;
+    rdfs:range xsd:string .
+
+xebr:hasProfitLossBroughtForward a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Profit (loss) brought forward"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProfitLossForThePeriod a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Profit (loss) for the period"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProfitLossForThePeriodTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Profit (loss) for the period [Total]"@en;
+    xebr:version "V3"^^xsd:string;
+    rdfs:domain xebr:IncomeStatementPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProfitOrLossOnOrdinaryActivitiesBeforeTaxes a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Profit or loss on ordinary activities before taxes"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:IncomeStatementPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPropertyPlantAndEquipmentTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Property, plant, and equipment [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProvisionsAndDeferredTaxesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Provisions and deferred taxes [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:ProvisionsAndDeferredTaxesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProvisionsForLiabilitiesAndChargesTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Provisions for liabilities and charges [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasProvisionsForPensionsAndSimilarObligations a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Provisions for pensions and similar obligations"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasPublicationDateOfEvent a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Publication date of event"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDatePresentation;
+    rdfs:range xsd:date .
+
+xebr:hasRawMaterialsAndConsumables a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Raw materials and consumables"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasRegistrationDate a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Registration date"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:MainEventsPresentation;
+    rdfs:range xsd:date .
+
+xebr:hasRegistrationDateOfEvent a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Registration date of event"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:EventDatePresentation;
+    rdfs:range xsd:date .
+
+xebr:hasReserves a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Reserves"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasRevaluationReserve a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Revaluation reserve"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasSharePremiumAccount a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Share premium account"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:EquityPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasSigningAuthorityFlag a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Signing authority [Flag]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:OfficialFunctionList;
+    rdfs:range xsd:boolean .
+
+xebr:hasSocialSecurityCosts a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Social security costs"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:StaffCostsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasStaffCostsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Staff costs [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:StaffCostsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasStockRawMaterialsAndConsumables a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Stock Raw materials and consumables"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasStocksTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Stocks [Total]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasSubscribedCapitalUnpaidTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Subscribed capital unpaid [Total]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:domain xebr:SubscribedCapitalUnpaidPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTangibleFixedAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Tangible fixed assets [Total]"@en;
+    xebr:version "V2"^^xsd:string;
+    rdfs:domain xebr:TangibleFixedAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Taxes, remuneration, and social security payable after more than one year"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Taxes, remuneration and social security payable within one year"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTownCodeType a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Town code, Type"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdTownOfRegistrationList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasTownCodeValue a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Town code, Value"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdTownOfRegistrationList;
+    rdfs:range xsd:string .
+
+xebr:hasTownNameLanguage a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Town name, Language"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdTownOfRegistrationList;
+    rdfs:range xsd:anyURI .
+
+xebr:hasTownNameText a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Town name, Text"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:CompanyIdTownOfRegistrationList;
+    rdfs:range xsd:string .
+
+xebr:hasTradeDebtors a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Trade debtors"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:AmountsReceivablePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTradeDebtsPayableAfterMoreThanOneYearTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Trade debts payable after more than one year [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasTradeDebtsPayableWithinOneYearTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Trade debts payable within one year [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasValueAdjustmentsOnFinancialAssets a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Value adjustments on financial assets"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:FinancialChargesPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasValueAdjustmentsOnNonFinancialAssetsTotal a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Value adjustments on non financial assets [Total]"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasVariationInStocksOfFinishedGoodsAndWorkInProgress a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Variation in stocks of finished goods and work in progress"@en;
+    xebr:version "V4"^^xsd:string;
+    rdfs:domain xebr:OperatingIncomePresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasWagesAndSalaries a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Wages and salaries"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StaffCostsPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:hasWorkInProgress a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:label "Work in progress"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:partOf a owl:ObjectProperty;
+    rdfs:domain owl:Class;
+    rdfs:range owl:Class .
+
+xebr:start a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:date .
+
+xebr:version a owl:AnnotationProperty .
+
+xebr:AccruedChargesAndDeferredIncomePresentation a owl:Class;
+    rdfs:label "Accrued charges and deferred income [Presentation]"@en;
+    xebr:partOf xebr:AmountsPayablePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CashAtBankAndInHandPresentation a owl:Class;
+    rdfs:label "Cash at bank and in hand [Presentation]"@en;
+    xebr:partOf xebr:LiquidAssetsPresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyAddressComplementPresentation a owl:Class;
+    rdfs:label "Company address, Complement [Presentation]"@en;
+    xebr:partOf xebr:CompanyAddressList;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:DeferredChargesAndAccruedIncomePresentation a owl:Class;
+    rdfs:label "Deferred charges and accrued income [Presentation]"@en;
+    xebr:partOf xebr:CurrentAssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:ExtraordinaryChargesPresentation a owl:Class;
+    rdfs:label "Extraordinary charges [Presentation]"@en;
+    xebr:partOf xebr:NetExtraordinaryIncomePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:ExtraordinaryIncomePresentation a owl:Class;
+    rdfs:label "Extraordinary income [Presentation]"@en;
+    xebr:partOf xebr:NetExtraordinaryIncomePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:FinancialIncomePresentation a owl:Class;
+    rdfs:label "Financial income [Presentation]"@en;
+    xebr:partOf xebr:NetFinancialIncomePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialAddressComplementPresentation a owl:Class;
+    rdfs:label "Official address, Complement [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialFirstAndMiddleNamesList a owl:Class;
+    rdfs:label "Official first and middle names [List]"@en;
+    xebr:partOf xebr:OfficialNamePresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OtherOperatingChargesAndTaxesPresentation a owl:Class;
+    rdfs:label "Other operating charges and taxes [Presentation]"@en;
+    xebr:partOf xebr:OperatingChargesPresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:SubscribedCapitalUnpaidPresentation a owl:Class;
+    rdfs:label "Subscribed capital unpaid [Presentation]"@en;
+    xebr:partOf xebr:AssetsPresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CollectiveProcedurePresentation a owl:Class;
+    rdfs:label "Collective procedure [Presentation]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:CompanyDataValidityPresentation a owl:Class;
+    rdfs:label "Company data validity [Presentation]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:LiquidAssetsPresentation a owl:Class;
+    rdfs:label "Liquid assets [Presentation]"@en;
+    xebr:partOf xebr:CurrentAssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:MainOfficialPresentation a owl:Class;
+    rdfs:label "Main official [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialsReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyOfficialsReport .
+
+xebr:OfficialDataValidityPresentation a owl:Class;
+    rdfs:label "Official data validity [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialShareholdingPresentation a owl:Class;
+    rdfs:label "Official shareholding [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OperatingBachRatiosPresentation a owl:Class;
+    rdfs:label "Operating Bach Ratios [Presentation]"@en;
+    xebr:partOf xebr:NetOperatingIncomePresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyAddressTownPresentation a owl:Class;
+    rdfs:label "Company address, Town [Presentation]"@en;
+    xebr:partOf xebr:CompanyAddressList;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyHistoryEventList a owl:Class;
+    rdfs:label "Company history event [List]"@en;
+    xebr:partOf xebr:CompanyHistoryReport;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:CompanyHistoryReport .
+
+xebr:CostOfMaterialsAndConsumablesPresentation a owl:Class;
+    rdfs:label "Cost of materials and consumables [Presentation]"@en;
+    xebr:partOf xebr:OperatingChargesPresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:EventCategoryPresentation a owl:Class;
+    rdfs:label "Event category [Presentation]"@en;
+    xebr:partOf xebr:CompanyHistoryEventList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:EventDatePresentation a owl:Class;
+    rdfs:label "Event date [Presentation]"@en;
+    xebr:partOf xebr:CompanyHistoryEventList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:EventDescriptionPresentation a owl:Class;
+    rdfs:label "Event description [Presentation]"@en;
+    xebr:partOf xebr:CompanyHistoryEventList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:FinancialChargesPresentation a owl:Class;
+    rdfs:label "Financial charges [Presentation]"@en;
+    xebr:partOf xebr:NetFinancialIncomePresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:FinancialFixedAssetsPresentation a owl:Class;
+    rdfs:label "Financial fixed assets [Presentation]"@en;
+    xebr:partOf xebr:FixedAssetsPresentation;
+    xebr:version "V2"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:IntangibleFixedAssetsPresentation a owl:Class;
+    rdfs:label "Intangible fixed assets [Presentation]"@en;
+    xebr:partOf xebr:FixedAssetsPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:InterestAndSimilarChargesPresentation a owl:Class;
+    rdfs:label "Interest and similar charges [Presentation]"@en;
+    xebr:partOf xebr:FinancialChargesPresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:NetExtraordinaryIncomePresentation a owl:Class;
+    rdfs:label "Net extraordinary income [Presentation]"@en;
+    xebr:partOf xebr:IncomeStatementPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:NetFinancialIncomePresentation a owl:Class;
+    rdfs:label "Net financial income [Presentation]"@en;
+    xebr:partOf xebr:IncomeStatementPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialAddressCityOrTownPresentation a owl:Class;
+    rdfs:label "Official address, City or town [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialIdNumberList a owl:Class;
+    rdfs:label "Official ID number [List]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialPlaceOfBirthPresentation a owl:Class;
+    rdfs:label "Official place of birth [Presentation]"@en;
+    xebr:partOf xebr:OfficialNamePresentation;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:ProvisionsAndDeferredTaxesPresentation a owl:Class;
+    rdfs:label "Provisions and deferred taxes [Presentation]"@en;
+    xebr:partOf xebr:EquityAndLiabilitiesPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:ProvisionsForLiabilitiesAndChargesPresentation a owl:Class;
+    rdfs:label "Provisions for liabilities and charges  [Presentation]"@en;
+    xebr:partOf xebr:ProvisionsAndDeferredTaxesPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation a owl:Class;
+    rdfs:label "Value adjustments on non financial assets [Presentation]"@en;
+    xebr:partOf xebr:NetOperatingIncomePresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:AmountsPayablePresentation a owl:Class;
+    rdfs:label "Amounts payable [Presentation]"@en;
+    xebr:partOf xebr:EquityAndLiabilitiesPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:AssetsPresentation a owl:Class;
+    rdfs:label "Assets [Presentation]"@en;
+    xebr:partOf xebr:KeyBalanceSheetFiguresReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:KeyBalanceSheetFiguresReport .
+
+xebr:CompanyContactPointList a owl:Class;
+    rdfs:label "Company contact point [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:CompanyIdNumberList a owl:Class;
+    rdfs:label "Company ID number [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:CompanyIdentificationReport .
+
+xebr:CompanyIdTownOfRegistrationList a owl:Class;
+    rdfs:label "Company ID, Town of registration [List]"@en;
+    xebr:partOf xebr:CompanyIdNumberList;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyNameList a owl:Class;
+    rdfs:label "Company name [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:EquityAndLiabilitiesPresentation a owl:Class;
+    rdfs:label "Equity and Liabilities [Presentation]"@en;
+    xebr:partOf xebr:KeyBalanceSheetFiguresReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:KeyBalanceSheetFiguresReport .
+
+xebr:FixedAssetsPresentation a owl:Class;
+    rdfs:label "Fixed assets [Presentation]"@en;
+    xebr:partOf xebr:AssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OperatingChargesPresentation a owl:Class;
+    rdfs:label "Operating charges [Presentation]"@en;
+    xebr:partOf xebr:NetOperatingIncomePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:StaffCostsPresentation a owl:Class;
+    rdfs:label "Staff costs [Presentation]"@en;
+    xebr:partOf xebr:OperatingChargesPresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:TangibleFixedAssetsPresentation a owl:Class;
+    rdfs:label "Tangible fixed assets [Presentation]"@en;
+    xebr:partOf xebr:FixedAssetsPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation a owl:Class;
+    rdfs:label "Trade debts payable after more than one year [Presentation]"@en;
+    xebr:partOf xebr:AmountsPayableAfterMoreThanOneYearPresentation;
+    xebr:version "V4"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:TradeDebtsPayableWithinOneYearPresentation a owl:Class;
+    rdfs:label "Trade debts payable within one year [Presentation]"@en;
+    xebr:partOf xebr:AmountsPayableWithinOneYearPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:AmountsReceivablePresentation a owl:Class;
+    rdfs:label "Amounts receivable [Presentation]"@en;
+    xebr:partOf xebr:CurrentAssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyActivityList a owl:Class;
+    rdfs:label "Company activity [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:CompanyAddressDetailsPresentation a owl:Class;
+    rdfs:label "Company address, Details [Presentation]"@en;
+    xebr:partOf xebr:CompanyAddressList;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyHistoryReport a owl:Class;
+    rdfs:label "COMPANY HISTORY [Report]"@en;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyOfficialsReport a owl:Class;
+    rdfs:label "COMPANY OFFICIALS [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:NetOperatingIncomePresentation a owl:Class;
+    rdfs:label "Net operating income [Presentation]"@en;
+    xebr:partOf xebr:IncomeStatementPresentation;
+    xebr:version "V3"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialAddressDetailsPresentation a owl:Class;
+    rdfs:label "Official address, Details [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OperatingIncomePresentation a owl:Class;
+    rdfs:label "Operating income [Presentation]"@en;
+    xebr:partOf xebr:NetOperatingIncomePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:StocksPresentation a owl:Class;
+    rdfs:label "Stocks [Presentation]"@en;
+    xebr:partOf xebr:CurrentAssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:AmountsPayableAfterMoreThanOneYearPresentation a owl:Class;
+    rdfs:label "Amounts payable after more than one year [Presentation]"@en;
+    xebr:partOf xebr:AmountsPayablePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:AmountsPayableWithinOneYearPresentation a owl:Class;
+    rdfs:label "Amounts payable within one year [Presentation]"@en;
+    xebr:partOf xebr:AmountsPayablePresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:MainEventsPresentation a owl:Class;
+    rdfs:label "Main events [Presentation]"@en;
+    xebr:partOf xebr:CompanyHistoryReport;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyHistoryReport .
+
+xebr:OfficialFunctionList a owl:Class;
+    rdfs:label "Official function [List]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:OfficialNamePresentation a owl:Class;
+    rdfs:label "Official name [Presentation]"@en;
+    xebr:partOf xebr:CompanyOfficialList;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:PropertyPlantAndEquipmentPresentation a owl:Class;
+    rdfs:label "Property, plant, and equipment [Presentation]"@en;
+    xebr:partOf xebr:TangibleFixedAssetsPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:Report a owl:Class .
+
+xebr:CompanyLegalFormList a owl:Class;
+    rdfs:label "Company legal form [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:CompanyIdentificationReport .
+
+xebr:CurrentAssetsPresentation a owl:Class;
+    rdfs:label "Current assets [Presentation]"@en;
+    xebr:partOf xebr:AssetsPresentation;
+    xebr:version "V2"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:EquityPresentation a owl:Class;
+    rdfs:label "Equity [Presentation]"@en;
+    xebr:partOf xebr:EquityAndLiabilitiesPresentation;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:KeyBalanceSheetFiguresReport a owl:Class;
+    rdfs:label "KEY BALANCE SHEET FIGURES [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:CompanyAddressList a owl:Class;
+    rdfs:label "Company address [List]"@en;
+    xebr:partOf xebr:CompanyIdentificationReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:CompanyIdentificationReport .
+
+xebr:IncomeStatementPresentation a owl:Class;
+    rdfs:label "Income statement [Presentation]"@en;
+    xebr:partOf xebr:KeyBalanceSheetFiguresReport;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:KeyBalanceSheetFiguresReport .
+
+xebr:CompanyOfficialList a owl:Class;
+    rdfs:label "Company Official [List]"@en;
+    xebr:partOf xebr:CompanyOfficialsReport;
+    xebr:version "V5"^^xsd:string;
+    rdfs:subClassOf xebr:Class,
+        xebr:CompanyOfficialsReport .
+
+xebr:CompanyIdentificationReport a owl:Class;
+    rdfs:label "COMPANY IDENTIFICATION [Report]"@en;
+    xebr:version "V1"^^xsd:string;
+    rdfs:subClassOf xebr:Class .
+
+xebr:Class a owl:Class .
+
+xsd:monetary a rdfs:Datatype .
+
