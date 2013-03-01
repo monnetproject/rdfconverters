@@ -1,0 +1,16 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/time.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+<http://www.dfki.de/lt/time.owl#DiachronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property;
+    owl:disjointWith <http://www.dfki.de/lt/time.owl#SynchronicProperty> .
+
+<http://www.dfki.de/lt/time.owl#SynchronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property;
+    owl:disjointWith <http://www.dfki.de/lt/time.owl#DiachronicProperty> .
+

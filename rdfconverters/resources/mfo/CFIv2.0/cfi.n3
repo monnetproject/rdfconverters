@@ -1,0 +1,43 @@
+@prefix cfi: <http://www.dfki.de/lt/cfi.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/cfi.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+cfi:category a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:first a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:fourth a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:group a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:second a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:third a owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain cfi:CFI;
+    rdfs:range xsd:string .
+
+cfi:CFI a owl:Class;
+    rdfs:comment """CFI = Classification of Financial Instruments (see ISO 10962);
+class instances of class CFI represent companies which do NOT come with a code = XXXXXX;
+I have created a singleton instance for each CFI class that should always be used in ABox data"""^^xsd:string .
+

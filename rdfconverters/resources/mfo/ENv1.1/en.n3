@@ -297,8 +297,7 @@ en:worksFor a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     owl:disjointWith <http://www.dfki.de/lt/time.owl#DiachronicProperty> .
 
 en:ShareholderValue a owl:Class;
-    rdfs:comment """shareholders of a company are Actors, and the number of shares is given in %;
-in case a name is specified, it should be attached to the actor's property "name""""^^xsd:string .
+    rdfs:comment "shareholders of a company are Actors, and the number of shares is given in %; in case a name is specified, it should be attached to the actor's property name"^^xsd:string .
 
 en:State a owl:Class;
     rdfs:subClassOf en:Actor;

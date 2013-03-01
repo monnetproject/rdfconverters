@@ -1,5 +1,4 @@
 import os
-import argparse
 import traceback
 from datetime import datetime
 from rdflib import Namespace, Graph
@@ -15,8 +14,13 @@ NS = {
    'xsd': Namespace("http://www.w3.org/2001/XMLSchema#"),
    'cp': Namespace("http://www.dfki.de/lt/companyprofile.owl#"),
    'icb': Namespace("http://www.dfki.de/lt/icb.owl#"),
+   'nace': Namespace("http://www.dfki.de/lt/nace.owl#"),
+   'time': Namespace("http://www.dfki.de/lt/time.owl#"),
+   'xebr2xbrl': Namespace("http://www.dfki.de/lt/xebr2xbrl.owl#"),
    'dc': Namespace("http://www.dfki.de/lt/dc.owl#"),
    'xebr': Namespace('http://www.dfki.de/lt/xebr.owl#'),
+   'xebr_data': Namespace('http://www.dfki.de/data/xebr.owl#'),
+   'cp_data': Namespace('http://www.dfki.de/data/companyprofile.owl#'),
    'xbrl_be': Namespace('http://www.dfki.de/lt/xbrl_be.owl#'),
    'xbrl_es': Namespace('http://www.dfki.de/lt/xbrl_es.owl#'),
    'xbrl_it': Namespace('http://www.dfki.de/lt/xbrl_it.owl#'),

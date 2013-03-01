@@ -1,0 +1,42 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.dfki.de/lt/skos.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/skos.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+skos:altLabel a owl:AnnotationProperty .
+
+skos:hiddenLabel a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty .
+
+skos:broadMatch a owl:ObjectProperty;
+    rdfs:subPropertyOf skos:mappingRelation;
+    owl:inverseOf skos:narrowMatch .
+
+skos:exactMatch a owl:ObjectProperty,
+        owl:SymmetricProperty,
+        owl:TransitiveProperty;
+    rdfs:subPropertyOf skos:closeMatch;
+    owl:inverseOf skos:exactMatch .
+
+skos:narrowMatch a owl:ObjectProperty;
+    rdfs:subPropertyOf skos:mappingRelation;
+    owl:inverseOf skos:broadMatch .
+
+skos:relatedMatch a owl:ObjectProperty,
+        owl:SymmetricProperty;
+    rdfs:subPropertyOf skos:mappingRelation;
+    owl:inverseOf skos:relatedMatch .
+
+skos:closeMatch a owl:ObjectProperty,
+        owl:SymmetricProperty;
+    rdfs:subPropertyOf skos:mappingRelation;
+    owl:inverseOf skos:closeMatch .
+
+skos:mappingRelation a owl:ObjectProperty;
+    rdfs:domain owl:Class;
+    rdfs:range owl:Class .
+

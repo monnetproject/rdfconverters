@@ -1,0 +1,22 @@
+@prefix dc: <http://www.dfki.de/lt/dc.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/dc.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+dc:Resource a owl:Class .
+
+dc:date a owl:AnnotationProperty;
+    rdfs:comment "value should usually be an atom of type xsd:date"^^xsd:string .
+
+dc:publisher a owl:AnnotationProperty;
+    rdfs:comment "value should usually be an atom of type xsd:string"^^xsd:string .
+
+dc:source a owl:AnnotationProperty;
+    rdfs:comment "value should usually be an atom of type xsd:anyURI"^^xsd:string .
+
+<http://www.dfki.de/lt/tei.owl#segment> a owl:AnnotationProperty;
+    rdfs:comment "value should usually be an atom of type xsd:string"^^xsd:string .
+
