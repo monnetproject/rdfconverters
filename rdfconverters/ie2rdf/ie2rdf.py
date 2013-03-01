@@ -54,7 +54,7 @@ class IE2RDF:
             elif el.tag == 'activity':
                 id_ = pop(el, 'id')
                 label = pop(el, 'label')
-                attr = {'sectorValue': NS['if']['GICS' + id_]}
+                attr = {'sectorValue': NS['icb'][id_]}
                 node = self.__make_bnode('sector', 'SectorValue', attr)
             elif el.tag == 'location':
                 value = pop(el, 'value')

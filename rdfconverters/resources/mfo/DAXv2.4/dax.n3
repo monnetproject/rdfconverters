@@ -472,6 +472,7 @@ dax:admissionDate a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
 dax:city a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "City"@en;
     rdfs:comment "a multi-lingual property"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
@@ -479,6 +480,7 @@ dax:city a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:country a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "Country"@en;
     rdfs:comment "a multi-lingual property"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
@@ -520,6 +522,7 @@ dax:fax a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:firstName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "First Name";
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
@@ -536,6 +539,7 @@ dax:foundedIn a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
 
 dax:function a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty;
+    rdfs:label "Role"@en;
     rdfs:comment "e.g., \"chairman\" or \"vice chairman\" or \"Vorsitzender\"; use language tag to have multilingual information"^^xsd:string;
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
@@ -557,7 +561,8 @@ dax:ifrs_singleton a dax:IFRS .
 dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "international securities identification number"@en;
+    rdfs:label "ISIN"@en,
+        "international securities identification number"@en;
     rdfs:comment "should not change over time, but who knows ..."^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
@@ -565,12 +570,14 @@ dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:lastName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "Last Name"@en;
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
 dax:marketSegment a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
+    rdfs:label "Market Segment"@en;
     rdfs:comment "I do assume that this is a temporal functional property"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range dax:MarketSegment .
@@ -619,6 +626,7 @@ dax:shortName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:source a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "Data Source"@en;
     rdfs:comment """although an http address, we use xsd:string here to address the fact that the pages are language-specific;
 a multi-lingual property"""^^xsd:string;
     rdfs:domain dax:Company;
@@ -627,6 +635,7 @@ a multi-lingual property"""^^xsd:string;
 dax:street a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "Street"@en;
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
 
@@ -649,6 +658,7 @@ dax:symbol a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 
 dax:title a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty;
+    rdfs:label "Title";
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
@@ -674,28 +684,35 @@ dax:transparency_standard_singleton a dax:TransparencyStandard .
 dax:wkn a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
+    rdfs:label "WKN";
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
 
 rdfs:definition a owl:AnnotationProperty .
 
 dax:EntryStandard a owl:Class;
+    rdfs:label "Entry Standard"@en;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:FirstQuotationBoard a owl:Class;
+    rdfs:label "First Quotation Board"@en;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:GAAP a owl:Class;
+    rdfs:label "GAAP"@en;
     rdfs:subClassOf dax:AccountingStandard .
 
 dax:IFRS a owl:Class;
+    rdfs:label "IFRS"@en;
     rdfs:subClassOf dax:AccountingStandard .
 
 dax:PrimeStandard a owl:Class;
+    rdfs:label "Prime Standard"@en;
     rdfs:subClassOf dax:GeneralStandard .
 
 dax:worksFor a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:ObjectProperty;
+    rdfs:label "Works For"@en;
     rdfs:domain dax:Person;
     rdfs:range dax:Company;
     owl:inverseOf dax:hasEmployed .
@@ -723,6 +740,7 @@ dax:FoodAndBeverages a owl:Class;
     rdfs:subClassOf dax:Company .
 
 dax:GeneralStandard a owl:Class;
+    rdfs:label "General Standard"@en;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:Insurance a owl:Class;
@@ -775,7 +793,8 @@ dax:hasEmployed a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:range dax:Person;
     owl:inverseOf dax:worksFor .
 
-dax:AccountingStandard a owl:Class .
+dax:AccountingStandard a owl:Class;
+    rdfs:label "Accounting Standard"@en .
 
 dax:BasicResources a owl:Class;
     rdfs:label "Basic Resources"@en,
@@ -811,7 +830,8 @@ dax:Retail a owl:Class;
         "Retail"@en;
     rdfs:subClassOf dax:Company .
 
-dax:TransparencyStandard a owl:Class .
+dax:TransparencyStandard a owl:Class;
+    rdfs:label "Transparency Standard"@en .
 
 dax:Consumer a owl:Class;
     rdfs:label "Consumer"@en,

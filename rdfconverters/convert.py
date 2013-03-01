@@ -17,4 +17,4 @@ with open(out, 'wb') as f:
 
 t2 = int(round(time.time() * 1000))
 
-print("Completed in %sms %s" % (t2-t1))
+print("Completed in %sms" % (t2-t1))

@@ -2,7 +2,7 @@
 @prefix skos: <http://www.dfki.de/lt/skos.owl#> .
 @prefix xbrl_be: <http://www.dfki.de/lt/xbrl_be.owl#> .
 @prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es.owl#> .
-@prefix xbrl_es: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
+@prefix xbrl_es_cnmv: <http://www.dfki.de/lt/xbrl_es_cnmv.owl#> .
 @prefix xbrl_it: <http://www.dfki.de/lt/xbrl_it.owl#> .
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 

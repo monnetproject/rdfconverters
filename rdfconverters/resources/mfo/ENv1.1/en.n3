@@ -1,0 +1,344 @@
+@prefix en: <http://www.dfki.de/lt/en.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.dfki.de/lt/en.owl> a owl:Ontology;
+    rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
+
+en:accountStandard-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:accountStandard-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:accountStandard-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:activity a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a multi-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:cfi a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:comment "cfi should be linked to a properly defined CFI ontology"^^xsd:string;
+    rdfs:domain en:Company .
+
+en:city a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a multi-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:companyName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:range xsd:string .
+
+en:consistsOf a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain en:Group;
+    rdfs:range en:Actor .
+
+en:country a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a multilingual-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:email a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:fax a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:firstName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Person;
+    rdfs:range xsd:string .
+
+en:fiscalYearEnd-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:gYearMonth .
+
+en:fiscalYearEnd-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:gYearMonth .
+
+en:fiscalYearEnd-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:gYearMonth .
+
+en:function a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "maps to a string at the moment"^^xsd:string;
+    rdfs:domain en:Person;
+    rdfs:range xsd:string .
+
+en:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:lastName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Person;
+    rdfs:range xsd:string .
+
+en:lengthOfFiscalYear-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:duration .
+
+en:lengthOfFiscalYear-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:duration .
+
+en:lengthOfFiscalYear-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:duration .
+
+en:mnemo a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:name a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "name is the general name attached to an actor, even though the name of a person might be decomposed into firstName and lastName"^^xsd:string;
+    rdfs:domain en:Actor;
+    rdfs:range xsd:string .
+
+en:netProfit-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:netProfit-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:netProfit-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:operatingProfit-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:operatingProfit-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:operatingProfit-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:phoneNumber a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:revenue-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:revenue-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:revenue-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:shareholder a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:FunctionalProperty,
+        owl:ObjectProperty;
+    rdfs:domain en:ShareholderValue;
+    rdfs:range en:Actor .
+
+en:shareholderValue a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain en:Company;
+    rdfs:range en:ShareholderValue .
+
+en:shareholdersEquity-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:shareholdersEquity-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:shareholdersEquity-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:source a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a multi-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:street a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a mono-lingual property"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:title a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "maps to a string at the moment"^^xsd:string;
+    rdfs:domain en:Person;
+    rdfs:range xsd:string .
+
+en:topManagement a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain en:Company;
+    rdfs:range en:Person .
+
+en:totalAssets-1 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:totalAssets-2 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:totalAssets-3 a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:Company;
+    rdfs:range xsd:monetary .
+
+en:value a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty,
+        owl:FunctionalProperty;
+    rdfs:domain en:ShareholderValue;
+    rdfs:range xsd:float .
+
+en:website a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:DatatypeProperty;
+    rdfs:comment "a mono-lingual property (at the moment)"^^xsd:string;
+    rdfs:domain en:Company;
+    rdfs:range xsd:string .
+
+en:worksFor a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
+        owl:ObjectProperty;
+    rdfs:domain en:Actor;
+    rdfs:range en:Actor .
+
+<http://www.dfki.de/lt/time.owl#SynchronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property;
+    owl:disjointWith <http://www.dfki.de/lt/time.owl#DiachronicProperty> .
+
+en:ShareholderValue a owl:Class;
+    rdfs:comment """shareholders of a company are Actors, and the number of shares is given in %;
+in case a name is specified, it should be attached to the actor's property "name""""^^xsd:string .
+
+en:State a owl:Class;
+    rdfs:subClassOf en:Actor;
+    owl:disjointWith en:Company,
+        en:Group,
+        en:Person .
+
+en:Group a owl:Class;
+    rdfs:subClassOf en:Actor;
+    owl:disjointWith en:Company,
+        en:Person,
+        en:State .
+
+en:Person a owl:Class;
+    rdfs:subClassOf en:Actor;
+    owl:disjointWith en:Company,
+        en:Group,
+        en:State .
+
+en:Actor a owl:Class;
+    rdfs:comment "the superclass of Person, Company, State, and Group"^^xsd:string .
+
+xsd:monetary a rdfs:Datatype .
+
+en:Company a owl:Class;
+    rdfs:comment """the Euronext pages come with a specified ICB subsector value;
+we have decided to make these ICB classes subclasses of en:Company, but this needs to be specified separately and is NOT part of THIS ontology;
+we would recommend to have an "interfacing" ontology that links an ICB ontology to EN, although an extension of THIS ontology which add about 200 subclasses to en:Company might also be fine;
+at the moment, only
+  activity
+  city
+  country
+  source
+are regarded as MULTI-lingual properties (use language tag!)"""^^xsd:string;
+    rdfs:subClassOf en:Actor;
+    owl:disjointWith en:Group,
+        en:Person,
+        en:State .
+
+<http://www.dfki.de/lt/time.owl#DiachronicProperty> a owl:Class;
+    rdfs:subClassOf rdf:Property;
+    owl:disjointWith <http://www.dfki.de/lt/time.owl#SynchronicProperty> .
+
