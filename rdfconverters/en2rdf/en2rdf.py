@@ -354,7 +354,7 @@ class RDFConverter:
     def to_rdf(self):
         a = NS['rdf']['type']
 
-        self.g.add((self.id_node, a, NS['en']['Company']))
+        self.g.add((self.id_node, a, NS['cp']['CompanyProfile']))
         self.g.add((self.id_node, NS['cp']['stockExchange'], NS['if']['euronext_singleton']))
         # Use both cp:stockExchange and if:origin while transitioning to cp: ontology
         self.g.add((self.id_node, NS['if']['origin'], NS['if']['euronext_singleton']))

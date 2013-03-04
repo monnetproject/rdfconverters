@@ -6,6 +6,22 @@
 @prefix xbrl_it: <http://www.dfki.de/lt/xbrl_it.owl#> .
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 
+xbrl_be: a xebr:LocalTaxonomy;
+    skos:prefLabel "Belgium PFS"@en ;
+    skos:prefLabel "België PFS"@nl ;
+    skos:prefLabel "Belgien PFS"@de ;
+    skos:prefLabel "Bélgica PFS"@es .
+xbrl_es: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain PGC"@en ;
+    skos:prefLabel "Spanje PGC"@nl ;
+    skos:prefLabel "Spanien PGC"@de ;
+    skos:prefLabel "España PGC"@es .
+xbrl_es_cnmv: a xebr:LocalTaxonomy;
+    skos:prefLabel "Spain IPP-GEN"@en ;
+    skos:prefLabel "Spanje IPP-GEN"@nl ;
+    skos:prefLabel "Spanien IPP-GEN"@de ;
+    skos:prefLabel "España IPP-GEN"@es .
+
 xbrl_es_cnmv:es-be-fs_CapitalFondoDotacion skos:altLabel "Patrimonio neto fondos propios capital"@es;
     skos:exactMatch xebr:hasCapital;
     skos:prefLabel "I. Capital"@es;

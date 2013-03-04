@@ -47,6 +47,12 @@ def write_graph(graph, outputfile=None, format='n3'):
         with open(outputfile, "wb") as f:
             f.write(rdf)
 
+def merge_graphs(sources, format='n3'):
+    graph = Graph()
+    for source in sources:
+        graph.parse(data=source.read(), format=format)
+    return graph
+
 def merge_graphs_in_directory(directory, outputfile, format='n3'):
     with open(outputfile, "wb+") as f:
         graph=Graph()

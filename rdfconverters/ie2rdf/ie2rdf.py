@@ -23,8 +23,9 @@ class IE2RDF:
 
         # Note: Filename is used as the identifier of the node, so filename should be
         # the same as the structured instance cp: identifier.
-        self.cp = NS['cp'][os.path.splitext(os.path.basename(file_))[0]]
-        self.g.add((self.cp, NS['rdf']['type'], NS['cp']['CompanyProfile']))
+        if len(self.root) > 0:
+            self.cp = NS['cp'][os.path.splitext(os.path.basename(file_))[0]]
+            self.g.add((self.cp, NS['rdf']['type'], NS['cp']['CompanyProfile']))
 
     def __make_bnode(self, cpname, cptype, attr):
         b = BNode()
@@ -53,7 +54,7 @@ class IE2RDF:
                 node = self.__make_bnode('companyName', 'StringValue', attr)
             elif el.tag == 'activity':
                 id_ = pop(el, 'id')
-                label = pop(el, 'label')
+                pop(el, 'label')
                 attr = {'sectorValue': NS['icb'][id_]}
                 node = self.__make_bnode('sector', 'SectorValue', attr)
             elif el.tag == 'location':
@@ -102,16 +103,16 @@ def main():
         g = IE2RDF(inputfile, args.lang)
         graph = g.convert()
         return graph
-    
+
     parser = argparse.ArgumentParser(description='Convert XML files from information extraction to the CP ontology RDF format')
-    
+
     command_builder = util.CommandBuilder(parser)
     convert_command = command_builder.add_convert(convert)
     convert_command.add_argument('lang', help="xml:lang code to be used for annotations")
 
     batchconvert_command = command_builder.add_batch_convert(convert, 'xml')
     batchconvert_command.add_argument('lang', help="xml:lang code to be used for annotations")
-    
+
     args = parser.parse_args()
     command_builder.execute(args)
 
