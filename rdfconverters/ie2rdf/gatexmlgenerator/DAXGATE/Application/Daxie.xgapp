@@ -8,13 +8,16 @@
         <urlString>$gatehome$plugins/Tools/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/Tagger_Framework/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$gatehome$plugins/Parser_Stanford/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Tagger_Framework/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$gatehome$plugins/Tagger_NP_Chunking/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Learning/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$gatehome$plugins/JAPE_Plus/</urlString>
@@ -318,7 +321,7 @@
             </localMap>
           </runtimeParams>
           <resourceType>gate.creole.gazetteer.FlexibleGazetteer</resourceType>
-          <resourceName>Flexible Gazetteer_000A2</resourceName>
+          <resourceName>FlexiGaz for ANNIE_GAZETTEERS_LIST</resourceName>
           <initParams class="gate.util.persistence.MapPersistence">
             <mapType>gate.util.SimpleFeatureMapImpl</mapType>
             <localMap>
@@ -356,7 +359,7 @@
                     </localMap>
                   </runtimeParams>
                   <resourceType>gate.creole.gazetteer.DefaultGazetteer</resourceType>
-                  <resourceName>ANNIE Gazetteer_00091</resourceName>
+                  <resourceName>ANNIE_GAZETTEERS_LIST</resourceName>
                   <initParams class="gate.util.persistence.MapPersistence">
                     <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                     <localMap>
@@ -367,12 +370,12 @@
                       <entry>
                         <string>listsURL</string>
                         <gate.util.persistence.PersistenceManager-URLHolder>
-                          <urlString>$gatehome$plugins/ANNIE/resources/gazetteer/lists.def</urlString>
+                          <urlString>$relpath$../ANNIE_GAZZETTEER_list/lists.def</urlString>
                         </gate.util.persistence.PersistenceManager-URLHolder>
                       </entry>
                       <entry>
                         <string>caseSensitive</string>
-                        <boolean>false</boolean>
+                        <boolean>true</boolean>
                       </entry>
                       <entry>
                         <string>encoding</string>
