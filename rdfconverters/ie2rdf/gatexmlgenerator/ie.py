@@ -111,7 +111,8 @@ def convert(document):
       companyName = ""
 
   # Activity - ------------------------------------------------------------------------
-  activities = {a: icbnltk.icb_matches(a) for a in activityList}
+  activitySet = set(activityList)
+  activities = icbnltk.icb_matches(' '.join(activitySet))
 
 
   # Employee - number ----------------------------------------------------------------------
@@ -239,18 +240,19 @@ def convert(document):
 
   def make_annotation(value):
       annotation = doc.createElement("annotation")
-      annotationText = doc.createTextNode(source_text)
+      annotationText = doc.createTextNode(value)
       annotation.appendChild(annotationText)
       return annotation
 
   #Activity
-  if len(activities) > 0:
-      for source_text, matches in activities.items():
-          for icb_number, icb_activity in matches:
-              el = make_element("activity", label=icb_activity, id=icb_number)
-              annotation = make_annotation(source_text)
+  if activities is not None and len(activities) > 0:
+      for icb_number, icb_activity in activities:
+          el = make_element("activity", label=icb_activity, id=icb_number)
+
+          for activity in activitySet:
+              annotation = make_annotation(activity)
               el.appendChild(annotation)
-              cp.appendChild(el)
+          cp.appendChild(el)
 
   # Location
   if locResult != "":

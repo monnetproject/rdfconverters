@@ -73,7 +73,8 @@ def remove_parents(icb, uris):
 
 def remove_business_gunk(phrase):
     gunk = ['wide range', 'company', 'companies', 'industry', 'international',
-        'services?', 'product(?!ion)s?', 'solutions', 'leading', 'sales', 'sector', 'integrated']
+        'services?', 'product(?!ion)s?', 'solutions', 'leading', 'sales', 'sector', 'integrated',
+        'largest', 'business', 'industr(y|ies)', 'systems?', 'innovat(e|ive)', 'markets?']
     for g in gunk:
         phrase = re.sub(g, '', phrase)
     return phrase
@@ -98,7 +99,7 @@ def stem(word):
 
 
 def tokenize_words(text):
-    words = tokenize.word_tokenize(text.lower())
+    words = tokenize.word_tokenize(text.lower().replace('-', ' '))
     # Remove stopwords and punctuation
     stop = stopwords.words("english") + list(";:'\".,&()")
     words = (w for w in words if w not in stop)

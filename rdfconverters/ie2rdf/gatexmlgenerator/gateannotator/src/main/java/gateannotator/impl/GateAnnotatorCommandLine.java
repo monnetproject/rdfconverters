@@ -13,9 +13,7 @@ public class GateAnnotatorCommandLine {
 	}
 
 	public static void main(String[] args) throws Exception {
-		// It is better to batch convert because Gate.init() takes a few seconds
-		// to run.
-		// Yes, this process is tied together with string.
+		// It is better to batch convert because Gate.init() takes a few seconds to run.
 
 		if (args.length <= 2) {
 			usage();
@@ -23,9 +21,6 @@ public class GateAnnotatorCommandLine {
 		}
 
 		String gappFile = args[0];
-		System.out.println(args[0]);
-		System.out.println(args[1]);
-		System.out.println(args[2]);
 		GATEAnnotator batchProcessApp = new GATEAnnotatorImpl();
 		batchProcessApp.loadGappFile(new File(gappFile));
 
