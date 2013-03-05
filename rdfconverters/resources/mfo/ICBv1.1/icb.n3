@@ -7,6 +7,7 @@
     rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
 
 icb:ICB0533 a owl:Class;
+    icb:code "0533";
     rdfs:label "Exploración y producción"@es,
         "Exploration & Production"@en,
         "Exploration und Produktion"@de;
@@ -16,6 +17,7 @@ icb:ICB0533 a owl:Class;
     rdfs:subClassOf icb:ICB0530 .
 
 icb:ICB0537 a owl:Class;
+    icb:code "0537";
     rdfs:label "Integrated Oil & Gas"@en,
         "Integrierte Erdöl- und Erdgasgesellschaften"@de,
         "Petróleo y gas integrado"@es;
@@ -25,6 +27,7 @@ icb:ICB0537 a owl:Class;
     rdfs:subClassOf icb:ICB0530 .
 
 icb:ICB0573 a owl:Class;
+    icb:code "0573";
     rdfs:label "Ausrüstung und Dienstleistungen"@de,
         "Equipos y servicios petroleros"@es,
         "Oil Equipment & Services"@en;
@@ -34,6 +37,7 @@ icb:ICB0573 a owl:Class;
     rdfs:subClassOf icb:ICB0570 .
 
 icb:ICB0577 a owl:Class;
+    icb:code "0577";
     rdfs:label "Ductos"@es,
         "Pipelines"@de,
         "Pipelines"@en;
@@ -43,6 +47,7 @@ icb:ICB0577 a owl:Class;
     rdfs:subClassOf icb:ICB0570 .
 
 icb:ICB0583 a owl:Class;
+    icb:code "0583";
     rdfs:label "Equipos de energías renovables"@es,
         "Erneuerbare Energieanlagen"@de,
         "Renewable Energy Equipment"@en;
@@ -52,6 +57,7 @@ icb:ICB0583 a owl:Class;
     rdfs:subClassOf icb:ICB0580 .
 
 icb:ICB0587 a owl:Class;
+    icb:code "0587";
     rdfs:label "Alternative Fuels"@en,
         "Alternative Kraftstoffe"@de,
         "Combustibles alternativos"@es;
@@ -61,6 +67,7 @@ icb:ICB0587 a owl:Class;
     rdfs:subClassOf icb:ICB0580 .
 
 icb:ICB1353 a owl:Class;
+    icb:code "1353";
     rdfs:label "Commodity Chemicals"@en,
         "Gebrauchschemikalien"@de,
         "Productos químicos básicos"@es;
@@ -71,6 +78,7 @@ icb:ICB1353 a owl:Class;
     rdfs:subClassOf icb:ICB1350 .
 
 icb:ICB1357 a owl:Class;
+    icb:code "1357";
     rdfs:label "Productos químicosespecializados"@es,
         "Specialty Chemicals"@en,
         "Spezielle Chemikalien"@de;
@@ -80,6 +88,7 @@ icb:ICB1357 a owl:Class;
     rdfs:subClassOf icb:ICB1350 .
 
 icb:ICB1733 a owl:Class;
+    icb:code "1733";
     rdfs:label "Forestry"@en,
         "Forstwirtschaft"@de,
         "Silvicultura"@es;
@@ -89,6 +98,7 @@ icb:ICB1733 a owl:Class;
     rdfs:subClassOf icb:ICB1730 .
 
 icb:ICB1737 a owl:Class;
+    icb:code "1737";
     rdfs:label "Papel"@es,
         "Paper"@en,
         "Papierindustrie"@de;
@@ -99,6 +109,7 @@ icb:ICB1737 a owl:Class;
     rdfs:subClassOf icb:ICB1730 .
 
 icb:ICB1753 a owl:Class;
+    icb:code "1753";
     rdfs:label "Aluminio"@es,
         "Aluminium"@de,
         "Aluminium"@en;
@@ -108,6 +119,7 @@ icb:ICB1753 a owl:Class;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1755 a owl:Class;
+    icb:code "1755";
     rdfs:label "Metales no ferrosos"@es,
         "Nichteisenhaltige Metalle"@de,
         "Nonferrous Metals"@en;
@@ -117,6 +129,7 @@ icb:ICB1755 a owl:Class;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1757 a owl:Class;
+    icb:code "1757";
     rdfs:label "Eisen und Stahl"@de,
         "Hierro y acero"@es,
         "Iron & Steel"@en;
@@ -126,6 +139,7 @@ icb:ICB1757 a owl:Class;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1771 a owl:Class;
+    icb:code "1771";
     rdfs:label "Carbón"@es,
         "Coal"@en,
         "Kohle"@de;
@@ -135,6 +149,7 @@ icb:ICB1771 a owl:Class;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1773 a owl:Class;
+    icb:code "1773";
     rdfs:label "Diamanten und Edelsteine"@de,
         "Diamantes y piedras preciosas"@es,
         "Diamonds & Gemstones"@en;
@@ -145,6 +160,7 @@ icb:ICB1773 a owl:Class;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1775 a owl:Class;
+    icb:code "1775";
     rdfs:label "Allgemeiner Bergbau"@de,
         "General Mining"@en,
         "Minería general"@es;
@@ -155,6 +171,7 @@ icb:ICB1775 a owl:Class;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1777 a owl:Class;
+    icb:code "1777";
     rdfs:label "Gold"@de,
         "Gold Mining"@en,
         "Minería de oro"@es;
@@ -164,6 +181,7 @@ icb:ICB1777 a owl:Class;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1779 a owl:Class;
+    icb:code "1779";
     rdfs:label "Platin und Edelmetalle"@de,
         "Platino y metales preciosos"@es,
         "Platinum & Precious Metals"@en;
@@ -173,6 +191,7 @@ icb:ICB1779 a owl:Class;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB2353 a owl:Class;
+    icb:code "2353";
     rdfs:label "Baustoffe und Befestigungen"@de,
         "Building Materials & Fixtures"@en,
         "Materiales de construcción einstalaciones fijas"@es;
@@ -182,6 +201,7 @@ icb:ICB2353 a owl:Class;
     rdfs:subClassOf icb:ICB2350 .
 
 icb:ICB2357 a owl:Class;
+    icb:code "2357";
     rdfs:label "Construcción pesada"@es,
         "Heavy Construction"@en,
         "Hoch- und Tiefbau"@de;
@@ -191,6 +211,7 @@ icb:ICB2357 a owl:Class;
     rdfs:subClassOf icb:ICB2350 .
 
 icb:ICB2713 a owl:Class;
+    icb:code "2713";
     rdfs:label "Aeroespacial"@es,
         "Aerospace"@en,
         "Luftfahrt"@de;
@@ -201,6 +222,7 @@ icb:ICB2713 a owl:Class;
     rdfs:subClassOf icb:ICB2710 .
 
 icb:ICB2717 a owl:Class;
+    icb:code "2717";
     rdfs:label "Defensa"@es,
         "Defense"@en,
         "Verteidigung"@de;
@@ -210,6 +232,7 @@ icb:ICB2717 a owl:Class;
     rdfs:subClassOf icb:ICB2710 .
 
 icb:ICB2723 a owl:Class;
+    icb:code "2723";
     rdfs:label "Container und Verpackungen"@de,
         "Containers & Packaging"@en,
         "Envases y embalajes"@es;
@@ -219,6 +242,7 @@ icb:ICB2723 a owl:Class;
     rdfs:subClassOf icb:ICB2720 .
 
 icb:ICB2727 a owl:Class;
+    icb:code "2727";
     rdfs:label "Actividad industrial diversificada"@es,
         "Diversified Industrials"@en,
         "Diversifizierte Gewerbe"@de;
@@ -228,6 +252,7 @@ icb:ICB2727 a owl:Class;
     rdfs:subClassOf icb:ICB2720 .
 
 icb:ICB2733 a owl:Class;
+    icb:code "2733";
     rdfs:label "Componentes y equiposeléctricos"@es,
         "Electrical Components & Equipment"@en,
         "Elektrische Bauteile und Ausrüstungselemente"@de;
@@ -237,6 +262,7 @@ icb:ICB2733 a owl:Class;
     rdfs:subClassOf icb:ICB2730 .
 
 icb:ICB2737 a owl:Class;
+    icb:code "2737";
     rdfs:label "Electronic Equipment"@en,
         "Elektronische Ausrüstungselemente"@de,
         "Equipos electrónicos"@es;
@@ -246,6 +272,7 @@ icb:ICB2737 a owl:Class;
     rdfs:subClassOf icb:ICB2730 .
 
 icb:ICB2753 a owl:Class;
+    icb:code "2753";
     rdfs:label "Commercial Vehicles & Trucks"@en,
         "Nutzfahrzeuge und LKW"@de,
         "Vehículos y camionescomerciales"@es;
@@ -255,6 +282,7 @@ icb:ICB2753 a owl:Class;
     rdfs:subClassOf icb:ICB2750 .
 
 icb:ICB2757 a owl:Class;
+    icb:code "2757";
     rdfs:label "Industrial Machinery"@en,
         "Industriemaschinen"@de,
         "Maquinaria industrial"@es;
@@ -264,6 +292,7 @@ icb:ICB2757 a owl:Class;
     rdfs:subClassOf icb:ICB2750 .
 
 icb:ICB2771 a owl:Class;
+    icb:code "2771";
     rdfs:label "Delivery Services"@en,
         "Servicios de entrega"@es,
         "Versanddienst"@de;
@@ -273,6 +302,7 @@ icb:ICB2771 a owl:Class;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2773 a owl:Class;
+    icb:code "2773";
     rdfs:label "Marine Transportation"@en,
         "Seetransport"@de,
         "Transporte marítimo"@es;
@@ -282,6 +312,7 @@ icb:ICB2773 a owl:Class;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2775 a owl:Class;
+    icb:code "2775";
     rdfs:label "Eisenbahn"@de,
         "Ferrocarriles"@es,
         "Railroads"@en;
@@ -291,6 +322,7 @@ icb:ICB2775 a owl:Class;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2777 a owl:Class;
+    icb:code "2777";
     rdfs:label "Servicios de transporte"@es,
         "Transportation Services"@en,
         "Transportdienstleistungen"@de;
@@ -300,6 +332,7 @@ icb:ICB2777 a owl:Class;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2779 a owl:Class;
+    icb:code "2779";
     rdfs:label "LKW-Transport"@de,
         "Transporte en camión"@es,
         "Trucking"@en;
@@ -309,6 +342,7 @@ icb:ICB2779 a owl:Class;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2791 a owl:Class;
+    icb:code "2791";
     rdfs:label "Business Support Services"@en,
         "Business-Supportleistungen"@de,
         "Servicios de apoyo empresarial"@es;
@@ -318,6 +352,7 @@ icb:ICB2791 a owl:Class;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2793 a owl:Class;
+    icb:code "2793";
     rdfs:label "Agencias de formaciónempresarial y de colocaciones"@es,
         "Anbieter von Business-Lehrgängen und private Arbeitsvermittler"@de,
         "Business Training & Employment Agencies"@en;
@@ -327,6 +362,7 @@ icb:ICB2793 a owl:Class;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2795 a owl:Class;
+    icb:code "2795";
     rdfs:label "Administración financiera"@es,
         "Financial Administration"@en,
         "Finanzverwaltung"@de;
@@ -336,6 +372,7 @@ icb:ICB2795 a owl:Class;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2797 a owl:Class;
+    icb:code "2797";
     rdfs:label "Industrial Suppliers"@en,
         "Industrielieferanten"@de,
         "Proveedores industriales"@es;
@@ -345,6 +382,7 @@ icb:ICB2797 a owl:Class;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2799 a owl:Class;
+    icb:code "2799";
     rdfs:label "Abfall- und Entsorgungsdienstleister"@de,
         "Servicios de eliminaciónde desechos"@es,
         "Waste & Disposal Services"@en;
@@ -354,6 +392,7 @@ icb:ICB2799 a owl:Class;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB3353 a owl:Class;
+    icb:code "3353";
     rdfs:label "Automobile"@de,
         "Automobiles"@en,
         "Automóviles"@es;
@@ -363,6 +402,7 @@ icb:ICB3353 a owl:Class;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3355 a owl:Class;
+    icb:code "3355";
     rdfs:label "Auto Parts"@en,
         "Autoteile"@de,
         "Repuestos de automóviles"@es;
@@ -372,6 +412,7 @@ icb:ICB3355 a owl:Class;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3357 a owl:Class;
+    icb:code "3357";
     rdfs:label "Neumáticos"@es,
         "Reifen"@de,
         "Tires"@en;
@@ -381,6 +422,7 @@ icb:ICB3357 a owl:Class;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3533 a owl:Class;
+    icb:code "3533";
     rdfs:label "Brauereien"@de,
         "Brewers"@en,
         "Cerveceras"@es;
@@ -390,6 +432,7 @@ icb:ICB3533 a owl:Class;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3535 a owl:Class;
+    icb:code "3535";
     rdfs:label "Brennereien und Winzer"@de,
         "Destilerías y vinicultores"@es,
         "Distillers & Vintners"@en;
@@ -399,6 +442,7 @@ icb:ICB3535 a owl:Class;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3537 a owl:Class;
+    icb:code "3537";
     rdfs:label "Alkoholfreie Getränke"@de,
         "Bebidas no alcohólicas"@es,
         "Soft Drinks"@en;
@@ -408,6 +452,7 @@ icb:ICB3537 a owl:Class;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3573 a owl:Class;
+    icb:code "3573";
     rdfs:label "Agricultura y ganadería eindustria pesquera"@es,
         "Farming & Fishing"@en,
         "Land- und Fischwirtschaft"@de;
@@ -417,6 +462,7 @@ icb:ICB3573 a owl:Class;
     rdfs:subClassOf icb:ICB3570 .
 
 icb:ICB3577 a owl:Class;
+    icb:code "3577";
     rdfs:label "Food Products"@en,
         "Nahrungsmittel"@de,
         "Productos alimenticios"@es;
@@ -426,6 +472,7 @@ icb:ICB3577 a owl:Class;
     rdfs:subClassOf icb:ICB3570 .
 
 icb:ICB3722 a owl:Class;
+    icb:code "3722";
     rdfs:label "Durable Household Products"@en,
         "Langlebige Haushaltsprodukte"@de,
         "Productos para el hogarduraderos"@es;
@@ -435,6 +482,7 @@ icb:ICB3722 a owl:Class;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3724 a owl:Class;
+    icb:code "3724";
     rdfs:label "Artículos para el hogar noduraderos"@es,
         "Kurzlebige Haushaltsprodukte Hersteller"@de,
         "Nondurable Household Products"@en;
@@ -445,6 +493,7 @@ icb:ICB3724 a owl:Class;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3726 a owl:Class;
+    icb:code "3726";
     rdfs:label "Furnishings"@en,
         "Muebles"@es,
         "Möbel"@de;
@@ -454,6 +503,7 @@ icb:ICB3726 a owl:Class;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3728 a owl:Class;
+    icb:code "3728";
     rdfs:label "Construcción de viviendas"@es,
         "Hausbau"@de,
         "Home Construction"@en;
@@ -463,6 +513,7 @@ icb:ICB3728 a owl:Class;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3743 a owl:Class;
+    icb:code "3743";
     rdfs:label "Bienes de consumo electrónicos"@es,
         "Consumer Electronics"@en,
         "Unterhaltungselektronik"@de;
@@ -472,6 +523,7 @@ icb:ICB3743 a owl:Class;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3745 a owl:Class;
+    icb:code "3745";
     rdfs:label "Freizeitprodukte"@de,
         "Productos recreativos"@es,
         "Recreational Products"@en;
@@ -481,6 +533,7 @@ icb:ICB3745 a owl:Class;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3747 a owl:Class;
+    icb:code "3747";
     rdfs:label "Juguetes"@es,
         "Spielzeug"@de,
         "Toys"@en;
@@ -490,6 +543,7 @@ icb:ICB3747 a owl:Class;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3763 a owl:Class;
+    icb:code "3763";
     rdfs:label "Bekleidung und Accessoires"@de,
         "Clothing & Accessories"@en,
         "Ropa y accesorios"@es;
@@ -499,6 +553,7 @@ icb:ICB3763 a owl:Class;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3765 a owl:Class;
+    icb:code "3765";
     rdfs:label "Calzado"@es,
         "Footwear"@en,
         "Schuhe"@de;
@@ -508,6 +563,7 @@ icb:ICB3765 a owl:Class;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3767 a owl:Class;
+    icb:code "3767";
     rdfs:label "Personal Products"^^xsd:string;
     rdfs:definition "Fabricantes y distribuidores de cosméticos, artículos detocador y productos para el cuidado personal y la higiene, loque incluye desodorantes, jabones, pastas dentales, perfumes,pañales, champúes, maquinillas de afeitar y productos dehigiene femenina. Incluye fabricantes de anticonceptivos,excepto anticonceptivos orales, que están clasificados bajoProductos farmacéuticos"@es,
         "Hersteller und Händler von Kosmetika, Toilettenartikeln und persönlichen Pflege- und Hygieneprodukten, z.B. Deodorants, Zahnpasta, Parfum, Windeln, Seife, Shampoo, Rasierklingen und Intimpflegeprodukte. Dazu zählen Hersteller von Empfängnisverhütungsmitteln. Dies gilt nicht für orale Kontrazeptiva (siehe: Arzneimittel)."@de,
@@ -515,6 +571,7 @@ icb:ICB3767 a owl:Class;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3785 a owl:Class;
+    icb:code "3785";
     rdfs:label "Tabaco"@es,
         "Tabakwaren"@de,
         "Tobacco"@en;
@@ -524,6 +581,7 @@ icb:ICB3785 a owl:Class;
     rdfs:subClassOf icb:ICB3780 .
 
 icb:ICB4533 a owl:Class;
+    icb:code "4533";
     rdfs:label "Health Care Providers"@en,
         "Medizinische Leistungen"@de,
         "Proveedores de atenciónde la salud"@es;
@@ -533,6 +591,7 @@ icb:ICB4533 a owl:Class;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4535 a owl:Class;
+    icb:code "4535";
     rdfs:label "Equipo médico"@es,
         "Medical Equipment"@en,
         "Medizinische Geräte"@de;
@@ -542,6 +601,7 @@ icb:ICB4535 a owl:Class;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4537 a owl:Class;
+    icb:code "4537";
     rdfs:label "Insumos médicos"@es,
         "Medical Supplies"@en,
         "Medizinische Produkte"@de;
@@ -551,6 +611,7 @@ icb:ICB4537 a owl:Class;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4573 a owl:Class;
+    icb:code "4573";
     rdfs:label "Biotechnologie"@de,
         "Biotechnology"@en,
         "Biotecnología"@es;
@@ -560,6 +621,7 @@ icb:ICB4573 a owl:Class;
     rdfs:subClassOf icb:ICB4570 .
 
 icb:ICB4577 a owl:Class;
+    icb:code "4577";
     rdfs:label "Arzneimittel"@de,
         "Fármacos"@es,
         "Pharmaceuticals"@en;
@@ -569,6 +631,7 @@ icb:ICB4577 a owl:Class;
     rdfs:subClassOf icb:ICB4570 .
 
 icb:ICB5333 a owl:Class;
+    icb:code "5333";
     rdfs:label "Arzneimitteleinzelhändler"@de,
         "Drug Retailers"@en,
         "Minoristas de medicamentos"@es;
@@ -578,6 +641,7 @@ icb:ICB5333 a owl:Class;
     rdfs:subClassOf icb:ICB5330 .
 
 icb:ICB5337 a owl:Class;
+    icb:code "5337";
     rdfs:label "Einzel- und Großhändler für Nahrungsmittel"@de,
         "Food Retailers & Wholesalers"@en,
         "Minoristas y mayoristasde alimentos"@es;
@@ -587,6 +651,7 @@ icb:ICB5337 a owl:Class;
     rdfs:subClassOf icb:ICB5330 .
 
 icb:ICB5371 a owl:Class;
+    icb:code "5371";
     rdfs:label "Apparel Retailers"@en,
         "Einzelhändler für Bekleidung und Accessoires"@de,
         "Minoristas de ropa"@es;
@@ -596,6 +661,7 @@ icb:ICB5371 a owl:Class;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5373 a owl:Class;
+    icb:code "5373";
     rdfs:label "Broadline Retailers"@en,
         "Einzelhändler ohne Spezialisierung"@de,
         "Minoristas diversificados"@es;
@@ -605,6 +671,7 @@ icb:ICB5373 a owl:Class;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5375 a owl:Class;
+    icb:code "5375";
     rdfs:label "Heimwerkermärkte"@de,
         "Home Improvement Retailers"@en,
         "Minoristas de materiales paramejoras en el hogar"@es;
@@ -614,6 +681,7 @@ icb:ICB5375 a owl:Class;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5377 a owl:Class;
+    icb:code "5377";
     rdfs:label "Servicios al consumidorespecializados"@es,
         "Specialized Consumer Services"@en,
         "Spezielle Dienstleistungen"@de;
@@ -623,6 +691,7 @@ icb:ICB5377 a owl:Class;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5379 a owl:Class;
+    icb:code "5379";
     rdfs:label "Facheinzelhändler"@de,
         "Minoristas especializados"@es,
         "Specialty Retailers"@en;
@@ -632,6 +701,7 @@ icb:ICB5379 a owl:Class;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5553 a owl:Class;
+    icb:code "5553";
     rdfs:label "Broadcasting & Entertainment"@en,
         "Programación y entretenimiento"@es,
         "Radio, TV und Unterhaltung"@de;
@@ -641,6 +711,7 @@ icb:ICB5553 a owl:Class;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5555 a owl:Class;
+    icb:code "5555";
     rdfs:label "Agencias de medios"@es,
         "Media Agencies"@en,
         "Medienagenturen"@de;
@@ -650,6 +721,7 @@ icb:ICB5555 a owl:Class;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5557 a owl:Class;
+    icb:code "5557";
     rdfs:label "Editoriales"@es,
         "Publishing"@en,
         "Verlagswesen"@de;
@@ -659,6 +731,7 @@ icb:ICB5557 a owl:Class;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5751 a owl:Class;
+    icb:code "5751";
     rdfs:label "Airlines"@en,
         "Fluggesellschaften"@de,
         "Líneas aéreas"@es;
@@ -668,6 +741,7 @@ icb:ICB5751 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5752 a owl:Class;
+    icb:code "5752";
     rdfs:label "Gambling"@en,
         "Juegos de azar"@es,
         "Spielhallen"@de;
@@ -677,6 +751,7 @@ icb:ICB5752 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5753 a owl:Class;
+    icb:code "5753";
     rdfs:label "Hoteles"@es,
         "Hotels"@de,
         "Hotels"@en;
@@ -686,6 +761,7 @@ icb:ICB5753 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5755 a owl:Class;
+    icb:code "5755";
     rdfs:label "Freizeitanlagen"@de,
         "Recreational Services"@en,
         "Servicios recreativos"@es;
@@ -695,6 +771,7 @@ icb:ICB5755 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5757 a owl:Class;
+    icb:code "5757";
     rdfs:label "Restaurantes y bares"@es,
         "Restaurants & Bars"@en,
         "Restaurants und Bars"@de;
@@ -704,6 +781,7 @@ icb:ICB5757 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5759 a owl:Class;
+    icb:code "5759";
     rdfs:label "Reisen und Tourismus"@de,
         "Travel & Tourism"@en,
         "Viajes y turismo"@es;
@@ -713,6 +791,7 @@ icb:ICB5759 a owl:Class;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB6535 a owl:Class;
+    icb:code "6535";
     rdfs:label "Festnetz-Telekommunikation"@de,
         "Fixed Line Telecommunications"@en,
         "Telecomunicaciones de línea fija"@es;
@@ -722,6 +801,7 @@ icb:ICB6535 a owl:Class;
     rdfs:subClassOf icb:ICB6530 .
 
 icb:ICB6575 a owl:Class;
+    icb:code "6575";
     rdfs:label "Mobil-Telekommunikation"@de,
         "Mobile Telecommunications"@en,
         "Telecomunicaciones móviles"@es;
@@ -731,6 +811,7 @@ icb:ICB6575 a owl:Class;
     rdfs:subClassOf icb:ICB6570 .
 
 icb:ICB7535 a owl:Class;
+    icb:code "7535";
     rdfs:label "Conventional Electricity"@en,
         "Electricidad convencional"@es,
         "Herkömmliche Stromerzeugung"@de;
@@ -740,6 +821,7 @@ icb:ICB7535 a owl:Class;
     rdfs:subClassOf icb:ICB7530 .
 
 icb:ICB7537 a owl:Class;
+    icb:code "7537";
     rdfs:label "Alternative Electricity"@en,
         "Alternative Stromerzeugung"@de,
         "Electricidad alternativa"@es;
@@ -749,6 +831,7 @@ icb:ICB7537 a owl:Class;
     rdfs:subClassOf icb:ICB7530 .
 
 icb:ICB7573 a owl:Class;
+    icb:code "7573";
     rdfs:label "Distribución de gas"@es,
         "Gas Distribution"@en,
         "Gasversorgung"@de;
@@ -758,6 +841,7 @@ icb:ICB7573 a owl:Class;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB7575 a owl:Class;
+    icb:code "7575";
     rdfs:label "Kombinierte Energieerzeugung"@de,
         "Multi-utilities"@en,
         "Multiservicios"@es;
@@ -767,6 +851,7 @@ icb:ICB7575 a owl:Class;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB7577 a owl:Class;
+    icb:code "7577";
     rdfs:label "Agua"@es,
         "Wasser"@de,
         "Water"@en;
@@ -776,6 +861,7 @@ icb:ICB7577 a owl:Class;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB8355 a owl:Class;
+    icb:code "8355";
     rdfs:label "Bancos"@es,
         "Banken"@de,
         "Banks"@en;
@@ -785,6 +871,7 @@ icb:ICB8355 a owl:Class;
     rdfs:subClassOf icb:ICB8350 .
 
 icb:ICB8532 a owl:Class;
+    icb:code "8532";
     rdfs:label "Full Line Insurance"@en,
         "Globalversicherungsgesellschaften"@de,
         "Seguros diversificados"@es;
@@ -794,6 +881,7 @@ icb:ICB8532 a owl:Class;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8534 a owl:Class;
+    icb:code "8534";
     rdfs:label "Agentes de seguros"@es,
         "Insurance Brokers"@en,
         "Versicherungsmakler"@de;
@@ -803,6 +891,7 @@ icb:ICB8534 a owl:Class;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8536 a owl:Class;
+    icb:code "8536";
     rdfs:label "Property & Casualty Insurance"@en,
         "Sach- und Unfallversicherungen"@de,
         "Seguros de propiedad y dañosa terceros"@es;
@@ -812,6 +901,7 @@ icb:ICB8536 a owl:Class;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8538 a owl:Class;
+    icb:code "8538";
     rdfs:label "Reaseguro"@es,
         "Reinsurance"@en,
         "Rückversicherungen"@de;
@@ -821,6 +911,7 @@ icb:ICB8538 a owl:Class;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8575 a owl:Class;
+    icb:code "8575";
     rdfs:label "Lebensversicherungen"@de,
         "Life Insurance"@en,
         "Seguros de vida"@es;
@@ -830,6 +921,7 @@ icb:ICB8575 a owl:Class;
     rdfs:subClassOf icb:ICB8570 .
 
 icb:ICB8633 a owl:Class;
+    icb:code "8633";
     rdfs:label "Besitz und Erschließung von Immobilien"@de,
         "Propiedad y desarrolloinmobiliario"@es,
         "Real Estate Holding & Development"@en;
@@ -839,6 +931,7 @@ icb:ICB8633 a owl:Class;
     rdfs:subClassOf icb:ICB8630 .
 
 icb:ICB8637 a owl:Class;
+    icb:code "8637";
     rdfs:label "Dienstleistungen für Immobilien"@de,
         "Real Estate Services"@en,
         "Servicios inmobiliarios"@es;
@@ -848,6 +941,7 @@ icb:ICB8637 a owl:Class;
     rdfs:subClassOf icb:ICB8630 .
 
 icb:ICB8671 a owl:Class;
+    icb:code "8671";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) industrial y de oficinas"@es,
         "Industrial & Office REITs"@en,
         "Industrielle und Büro-REITs"@de;
@@ -857,6 +951,7 @@ icb:ICB8671 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8672 a owl:Class;
+    icb:code "8672";
     rdfs:label "Einzelhandels-REITs"@de,
         "Fondos de inversión inmobiliaria(REIT) minoristas"@es,
         "Retail REITs"@en;
@@ -866,6 +961,7 @@ icb:ICB8672 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8673 a owl:Class;
+    icb:code "8673";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) residenciales"@es,
         "Residential REITs"@en,
         "Wohnungs-REITs"@de;
@@ -875,6 +971,7 @@ icb:ICB8673 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8674 a owl:Class;
+    icb:code "8674";
     rdfs:label "Diversified REITs"@en,
         "Diversifizierte REITs"@de,
         "Fondos de inversión inmobiliaria(REIT) diversificados"@es;
@@ -884,6 +981,7 @@ icb:ICB8674 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8675 a owl:Class;
+    icb:code "8675";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) especializados"@es,
         "Specialty REITs"@en,
         "Spezielle REITs"@de;
@@ -893,6 +991,7 @@ icb:ICB8675 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8676 a owl:Class;
+    icb:code "8676";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) hipotecarios"@es,
         "Hypotheken-REITs"@de,
         "Mortgage REITs"@en;
@@ -902,6 +1001,7 @@ icb:ICB8676 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8677 a owl:Class;
+    icb:code "8677";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) hoteleros y de alojamiento"@es,
         "Hotel & Lodging REITs"@en,
         "Hotel- und Beherbergungs-REITs"@de;
@@ -911,6 +1011,7 @@ icb:ICB8677 a owl:Class;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8771 a owl:Class;
+    icb:code "8771";
     rdfs:label "Administradores de activos"@es,
         "Asset Managers"@en,
         "Vermögensverwaltung"@de;
@@ -920,6 +1021,7 @@ icb:ICB8771 a owl:Class;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8773 a owl:Class;
+    icb:code "8773";
     rdfs:label "Consumer Finance"@en,
         "Financiamiento del consumo"@es,
         "Privatkundengeschäft"@de;
@@ -929,6 +1031,7 @@ icb:ICB8773 a owl:Class;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8775 a owl:Class;
+    icb:code "8775";
     rdfs:label "Finanzas especializadas"@es,
         "Specialty Finance"@en,
         "Spezielle Finanzdienste"@de;
@@ -938,6 +1041,7 @@ icb:ICB8775 a owl:Class;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8777 a owl:Class;
+    icb:code "8777";
     rdfs:label "Investment Services"@en,
         "Investment-Dienstleistungen"@de,
         "Servicios de inversión"@es;
@@ -947,6 +1051,7 @@ icb:ICB8777 a owl:Class;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8779 a owl:Class;
+    icb:code "8779";
     rdfs:label "Finanzas hipotecarias"@es,
         "Hypothekenfinanzierung"@de,
         "Mortgage Finance"@en;
@@ -956,6 +1061,7 @@ icb:ICB8779 a owl:Class;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8985 a owl:Class;
+    icb:code "8985";
     rdfs:label "Equity Investment Instruments"@en,
         "Instrumentos de inversión derenta variable"@es,
         "Kapitalinvestitionen"@de;
@@ -965,6 +1071,7 @@ icb:ICB8985 a owl:Class;
     rdfs:subClassOf icb:ICB8980 .
 
 icb:ICB8995 a owl:Class;
+    icb:code "8995";
     rdfs:label "Instrumentos de inversión derenta fija"@es,
         "Investitionen ohne Kapitalbeteiligung"@de,
         "Nonequity Investment Instruments"@en;
@@ -974,6 +1081,7 @@ icb:ICB8995 a owl:Class;
     rdfs:subClassOf icb:ICB8990 .
 
 icb:ICB9533 a owl:Class;
+    icb:code "9533";
     rdfs:label "Computer Services"@en,
         "Computer-Dienstleister"@de,
         "Servicios informáticos"@es;
@@ -983,6 +1091,7 @@ icb:ICB9533 a owl:Class;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9535 a owl:Class;
+    icb:code "9535";
     rdfs:label "Internet"@de,
         "Internet"@en,
         "Internet"@es;
@@ -992,6 +1101,7 @@ icb:ICB9535 a owl:Class;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9537 a owl:Class;
+    icb:code "9537";
     rdfs:label "Software"@de,
         "Software"@en,
         "Software"@es;
@@ -1001,6 +1111,7 @@ icb:ICB9537 a owl:Class;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9572 a owl:Class;
+    icb:code "9572";
     rdfs:label "Computer Hardware"@en,
         "Hardware"@de,
         "Hardware"@es;
@@ -1010,6 +1121,7 @@ icb:ICB9572 a owl:Class;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9574 a owl:Class;
+    icb:code "9574";
     rdfs:label "Electronic Office Equipment"@en,
         "Elektronische Büroausstattung"@de,
         "Equipo electrónico de oficina"@es;
@@ -1019,6 +1131,7 @@ icb:ICB9574 a owl:Class;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9576 a owl:Class;
+    icb:code "9576";
     rdfs:label "Halbleiter"@de,
         "Semiconductores"@es,
         "Semiconductors"@en;
@@ -1028,6 +1141,7 @@ icb:ICB9576 a owl:Class;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9578 a owl:Class;
+    icb:code "9578";
     rdfs:label "Equipo de telecomunicaciones"@es,
         "Telecommunications Equipment"@en,
         "Telekommunikationsausrüstung"@de;
@@ -1044,6 +1158,7 @@ rdfs:definition a owl:AnnotationProperty;
     rdfs:definition ""^^xsd:string .
 
 icb:ICB0001 a owl:Class;
+    icb:code "0001";
     rdfs:label "Erdöl und Erdgas"@de,
         "Oil & Gas"@en,
         "Petróleo y gas"@es;
@@ -1051,30 +1166,35 @@ icb:ICB0001 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB1300 a owl:Class;
+    icb:code "1300";
     rdfs:label "Chemicals"@en,
         "Chemie"@de,
         "Productos químicos"@es;
     rdfs:subClassOf icb:ICB1000 .
 
 icb:ICB2300 a owl:Class;
+    icb:code "2300";
     rdfs:label "Bauwesen und Materialien"@de,
         "Construcción y materiales"@es,
         "Construction & Materials"@en;
     rdfs:subClassOf icb:ICB2000 .
 
 icb:ICB3300 a owl:Class;
+    icb:code "3300";
     rdfs:label "Automobiles & Parts"@en,
         "Automobilhersteller und Zulieferer"@de,
         "Automóviles y repuestos"@es;
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3780 a owl:Class;
+    icb:code "3780";
     rdfs:label "Tabaco"@es,
         "Tabakwaren"@de,
         "Tobacco"@en;
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB4000 a owl:Class;
+    icb:code "4000";
     rdfs:label "Atención de la salud"@es,
         "Gesundheitswesen"@de,
         "Health Care"@en;
@@ -1082,18 +1202,21 @@ icb:ICB4000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB5500 a owl:Class;
+    icb:code "5500";
     rdfs:label "Media"@en,
         "Medien"@de,
         "Medios de comunicación"@es;
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB5700 a owl:Class;
+    icb:code "5700";
     rdfs:label "Reisen und Freizeit"@de,
         "Travel & Leisure"@en,
         "Viajes y ocio"@es;
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB6000 a owl:Class;
+    icb:code "6000";
     rdfs:label "Telecommunicaciones"@es,
         "Telecommunications"@en,
         "Telekommunikation"@de;
@@ -1101,18 +1224,21 @@ icb:ICB6000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB6530 a owl:Class;
+    icb:code "6530";
     rdfs:label "Festnetz-Telekommunikation"@de,
         "Fixed Line Telecommunications"@en,
         "Telecomunicaciones de línea fija"@es;
     rdfs:subClassOf icb:ICB6500 .
 
 icb:ICB6570 a owl:Class;
+    icb:code "6570";
     rdfs:label "Mobil-Telekommunikation"@de,
         "Mobile Telecommunications"@en,
         "Telecomunicaciones móviles"@es;
     rdfs:subClassOf icb:ICB6500 .
 
 icb:ICB7000 a owl:Class;
+    icb:code "7000";
     rdfs:label "Servicios públicos"@es,
         "Utilities"@en,
         "Versorger"@de;
@@ -1120,41 +1246,48 @@ icb:ICB7000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB8300 a owl:Class;
+    icb:code "8300";
     rdfs:label "Bancos"@es,
         "Banken"@de,
         "Banks"@en;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8350 a owl:Class;
+    icb:code "8350";
     rdfs:label "Bancos"@es,
         "Banken"@de,
         "Banks"@en;
     rdfs:subClassOf icb:ICB8300 .
 
 icb:ICB8570 a owl:Class;
+    icb:code "8570";
     rdfs:label "Lebensversicherungen"@de,
         "Life Insurance"@en,
         "Seguros de vida"@es;
     rdfs:subClassOf icb:ICB8500 .
 
 icb:ICB8700 a owl:Class;
+    icb:code "8700";
     rdfs:label "Financial Services"@en,
         "Servicios financieros"@es;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8980 a owl:Class;
+    icb:code "8980";
     rdfs:label "Equity Investment Instruments"@en,
         "Instrumentos de inversión derenta variable"@es,
         "Kapitalinvestitionen"@de;
     rdfs:subClassOf icb:ICB8900 .
 
 icb:ICB8990 a owl:Class;
+    icb:code "8990";
     rdfs:label "Instrumentos de inversión derenta fija"@es,
         "Investitionen ohne Kapitalbeteiligung"@de,
         "Nonequity Investment Instruments"@en;
     rdfs:subClassOf icb:ICB8900 .
 
 icb:ICB9000 a owl:Class;
+    icb:code "9000";
     rdfs:label "Technologie"@de,
         "Technology"@en,
         "Tecnología"@es;
@@ -1162,12 +1295,14 @@ icb:ICB9000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB0530 a owl:Class;
+    icb:code "0530";
     rdfs:label "Erdöl- und Erdgasproduzenten"@de,
         "Oil & Gas Producers"@en,
         "Productores de petróleo y gas"@es;
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB0570 a owl:Class;
+    icb:code "0570";
     rdfs:label "Ausrüstung, Dienstleistungen und Versorgung"@de,
         "Equipos, servicios ydistribución petrolera"@es,
         "Oil Equipment, Services & Distribution"@en;
@@ -1176,12 +1311,14 @@ icb:ICB0570 a owl:Class;
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB0580 a owl:Class;
+    icb:code "0580";
     rdfs:label "Alternative Energiequellen"@es,
         "Alternative Energy"@en,
         "Energía alternativa"@es;
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB1000 a owl:Class;
+    icb:code "1000";
     rdfs:label "Basic Materials"@en,
         "Grundstoffe"@de,
         "Materias básicas"@es;
@@ -1189,18 +1326,21 @@ icb:ICB1000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB1350 a owl:Class;
+    icb:code "1350";
     rdfs:label "Chemicals"@en,
         "Chemie"@de,
         "Productos químicos"@es;
     rdfs:subClassOf icb:ICB1300 .
 
 icb:ICB1730 a owl:Class;
+    icb:code "1730";
     rdfs:label "Forestry & Paper"@en,
         "Forstwirtschaft und Papierindustrie"@de,
         "Silvicultura y papel"@es;
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB2000 a owl:Class;
+    icb:code "2000";
     rdfs:label "Industrials"@en,
         "Industrieunternehmen"@de,
         "Productos industriales"@es;
@@ -1208,12 +1348,14 @@ icb:ICB2000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB2350 a owl:Class;
+    icb:code "2350";
     rdfs:label "Bauwesen und Materialien"@de,
         "Construcción y materiales"@es,
         "Construction & Materials"@en;
     rdfs:subClassOf icb:ICB2300 .
 
 icb:ICB2710 a owl:Class;
+    icb:code "2710";
     rdfs:label "Aeroespacial y defensa"@es,
         "Aerospace & Defense"@en,
         "Luftfahrt und Verteidigung"@de;
@@ -1221,105 +1363,123 @@ icb:ICB2710 a owl:Class;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2720 a owl:Class;
+    icb:code "2720";
     rdfs:label "Allgemeine Industrieunternehmen"@de,
         "General Industrials"@en,
         "Productos industriales generales"@es;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2730 a owl:Class;
+    icb:code "2730";
     rdfs:label "Electronic & Electrical Equipment"@en,
         "Elektronische und elektrische Ausrüstungselemente"@de,
         "Equipos eléctricos yelectrónicos"@es;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2750 a owl:Class;
+    icb:code "2750";
     rdfs:label "Industrial Engineering"@en,
         "Ingeniería industrial"@es,
         "Produktionstechnik"@de;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB3500 a owl:Class;
+    icb:code "3500";
     rdfs:label "Alimentos y bebidas"@es,
         "Food & Beverage"@en,
         "Nahrungsmittel und Getränke"@de;
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3570 a owl:Class;
+    icb:code "3570";
     rdfs:label "Food Producers"@en,
         "Nahrungsmittelproduktion"@de;
     rdfs:subClassOf icb:ICB3500 .
 
 icb:ICB4500 a owl:Class;
+    icb:code "4500";
     rdfs:label "Atención de la salud"@es,
         "Gesundheit"@de,
         "Health Care"@en;
     rdfs:subClassOf icb:ICB4000 .
 
 icb:ICB4570 a owl:Class;
+    icb:code "4570";
     rdfs:label "Arzneimittel und Biotechnologie"@de,
         "Fármacos y biotecnología"@es,
         "Pharmaceuticals & Biotechnology"@en;
     rdfs:subClassOf icb:ICB4500 .
 
 icb:ICB5300 a owl:Class;
+    icb:code "5300";
     rdfs:label "Einzelhandel"@de,
         "Minoristas"@es,
         "Retail"@en;
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB5330 a owl:Class;
+    icb:code "5330";
     rdfs:label "Food & Drug Retailers"@en,
         "Minoristas de alimentos ymedicamentos"@es,
         "Nahrungsmittel- und Arzneimitteleinzelhändler"@de;
     rdfs:subClassOf icb:ICB5300 .
 
 icb:ICB6500 a owl:Class;
+    icb:code "6500";
     rdfs:label "Telecommunications"@en,
         "Telecomunicaciones"@es,
         "Telekommunikation"@de;
     rdfs:subClassOf icb:ICB6000 .
 
 icb:ICB7500 a owl:Class;
+    icb:code "7500";
     rdfs:label "Energieversorgung"@de,
         "Servicios públicos"@es,
         "Utilities"@en;
     rdfs:subClassOf icb:ICB7000 .
 
 icb:ICB7530 a owl:Class;
+    icb:code "7530";
     rdfs:label "Electricidad"@es,
         "Electricity"@en,
         "Elektrizität"@de;
     rdfs:subClassOf icb:ICB7500 .
 
 icb:ICB8500 a owl:Class;
+    icb:code "8500";
     rdfs:label "Insurance"@en,
         "Seguros"@es,
         "Versicherungen"@de;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8600 a owl:Class;
+    icb:code "8600";
     rdfs:label "Bienes raíces"@es,
         "Immobilien"@de,
         "Real Estate"@en;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8630 a owl:Class;
+    icb:code "8630";
     rdfs:label "Immobilienanlagen und Dienstleistungen"@de,
         "Inversiones y serviciosinmobiliarios"@es,
         "Real Estate Investment & Services"@en;
     rdfs:subClassOf icb:ICB8600 .
 
 icb:ICB8900 a owl:Class;
+    icb:code "8900";
     rdfs:label "Equity/Non-Equity Investment Instruments"@en;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB9500 a owl:Class;
+    icb:code "9500";
     rdfs:label "Technologie"@de,
         "Technology"@en,
         "Tecnología"@es;
     rdfs:subClassOf icb:ICB9000 .
 
 icb:ICB0500 a owl:Class;
+    icb:code "0500";
     rdfs:label "Erdöl und Erdgas"@de,
         "Oil & Gas"@en,
         "Petróleo y gas"@es;
@@ -1327,18 +1487,21 @@ icb:ICB0500 a owl:Class;
     rdfs:subClassOf icb:ICB0001 .
 
 icb:ICB1700 a owl:Class;
+    icb:code "1700";
     rdfs:label "Basic Resources"@en,
         "Recursos básicos"@es,
         "Rohstoffe"@de;
     rdfs:subClassOf icb:ICB1000 .
 
 icb:ICB1750 a owl:Class;
+    icb:code "1750";
     rdfs:label "Industrial Metals & Mining"@en,
         "Industrielle Metalle und Bergbau"@de,
         "Metales industriales y minería"@es;
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB3000 a owl:Class;
+    icb:code "3000";
     rdfs:label "Bienes de consumo"@es,
         "Consumer Goods"@en,
         "Vverbrauchsgüter"@de;
@@ -1346,36 +1509,42 @@ icb:ICB3000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB3350 a owl:Class;
+    icb:code "3350";
     rdfs:label "Automobiles & Parts"@en,
         "Automobilhersteller und Zulieferer"@de,
         "Automóviles y repuestos"@es;
     rdfs:subClassOf icb:ICB3300 .
 
 icb:ICB3530 a owl:Class;
+    icb:code "3530";
     rdfs:label "Bebidas"@es,
         "Beverages"@en,
         "Getränke"@de;
     rdfs:subClassOf icb:ICB3500 .
 
 icb:ICB3740 a owl:Class;
+    icb:code "3740";
     rdfs:label "Freizeitgüter"@de,
         "Leisure Goods"@en,
         "Productos de ocio"@es;
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB3760 a owl:Class;
+    icb:code "3760";
     rdfs:label "Artículos personales"@es,
         "Personal Goods"@en,
         "Persönliche Güter"@de;
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB4530 a owl:Class;
+    icb:code "4530";
     rdfs:label "Health Care Equipment & Services"@en,
         "Pflegeausstattung und Dienstleistungen"@de,
         "Servicios y equipos de atenciónde la salud"@es;
     rdfs:subClassOf icb:ICB4500 .
 
 icb:ICB5000 a owl:Class;
+    icb:code "5000";
     rdfs:label "Consumer Services"@en,
         "Servicios al consumidor"@es,
         "Verbraucherservice"@de;
@@ -1383,72 +1552,84 @@ icb:ICB5000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB5550 a owl:Class;
+    icb:code "5550";
     rdfs:label "Media"@en,
         "Medien"@de,
         "Medios de comunicación"@es;
     rdfs:subClassOf icb:ICB5500 .
 
 icb:ICB7570 a owl:Class;
+    icb:code "7570";
     rdfs:label "Erdgas, Wasser und kombinierte Energieerzeugung"@de,
         "Gas, Water & Multi-utilities"@en,
         "Gas, agua y servicios múltiples"@es;
     rdfs:subClassOf icb:ICB7500 .
 
 icb:ICB9530 a owl:Class;
+    icb:code "9530";
     rdfs:label "Software & Computer Services"@en,
         "Software y serviciosinformáticos"@es,
         "Software- und Computer-Dienstleister"@de;
     rdfs:subClassOf icb:ICB9500 .
 
 icb:ICB3700 a owl:Class;
+    icb:code "3700";
     rdfs:label "Artículos personales y parael hogar"@es,
         "Personal & Household Goods"@en,
         "Persönliche und Haushaltsgegenstände"@de;
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3720 a owl:Class;
+    icb:code "3720";
     rdfs:label "Artículos para el hogar yconstrucción de viviendas"@es,
         "Haushaltsgeräte und Wohnbau"@de,
         "Household Goods & Home Construction"@en;
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB8530 a owl:Class;
+    icb:code "8530";
     rdfs:label "Andere Versicherungen als Lebensversicherungen"@de,
         "Nonlife Insurance"@en,
         "Seguros de no vida"@es;
     rdfs:subClassOf icb:ICB8500 .
 
 icb:ICB9570 a owl:Class;
+    icb:code "9570";
     rdfs:label "Hardware und Ausrüstung"@de,
         "Hardware y equipo dealtatecnología"@es,
         "Technology Hardware & Equipment"@en;
     rdfs:subClassOf icb:ICB9500 .
 
 icb:ICB1770 a owl:Class;
+    icb:code "1770";
     rdfs:label "Bergbau"@de,
         "Minería"@es,
         "Mining"@en;
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB2770 a owl:Class;
+    icb:code "2770";
     rdfs:label "Industrial Transportation"@en,
         "Transport"@de,
         "Transporte industrial"@es;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2790 a owl:Class;
+    icb:code "2790";
     rdfs:label "Servicios de apoyo"@es,
         "Support Services"@en,
         "Supportleistungen"@de;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB5370 a owl:Class;
+    icb:code "5370";
     rdfs:label "Allgemeine Einzelhändler"@de,
         "General Retailers"@en,
         "Minoristas generales"@es;
     rdfs:subClassOf icb:ICB5300 .
 
 icb:ICB8000 a owl:Class;
+    icb:code "8000";
     rdfs:label "Financials"@en,
         "Finanz-Dienstleistungen"@de,
         "Servicios financieros"@es;
@@ -1456,24 +1637,28 @@ icb:ICB8000 a owl:Class;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB8770 a owl:Class;
+    icb:code "8770";
     rdfs:label "Financial Services"@en,
         "Finanzdienstleistungen"@de,
         "Servicios financieros"@es;
     rdfs:subClassOf icb:ICB8700 .
 
 icb:ICB2700 a owl:Class;
+    icb:code "2700";
     rdfs:label "Bienes y servicios industriales"@es,
         "Industrial Goods & Services"@en,
         "Industriegüter und Dienstleistungen"@de;
     rdfs:subClassOf icb:ICB2000 .
 
 icb:ICB5750 a owl:Class;
+    icb:code "5750";
     rdfs:label "Reisen und Freizeit"@de,
         "Travel & Leisure"@en,
         "Viajes y ocio"@es;
     rdfs:subClassOf icb:ICB5700 .
 
 icb:ICB8670 a owl:Class;
+    icb:code "8670";
     rdfs:label "Fondos de inversión inmobiliaria"@es,
         "Immobilienfonds"@de,
         "Real Estate Investment Trusts"@en;
