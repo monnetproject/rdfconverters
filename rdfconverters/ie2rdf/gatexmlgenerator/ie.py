@@ -78,37 +78,17 @@ def convert(document):
   location = document.findall('.//Location')
   customer = document.findall('.//Customer')
 
-  activityList = []
-  [activityList.append(act.text) for act in activity]
-
-  companyList = []
-  [companyList.append(com.text) for com in company]
-  companySet = set(companyList)
-
-  employeeList = []
-  [employeeList.append(emp.text) for emp in employee]
-
-  monetaryValueList = []
-  [monetaryValueList.append(mv.text) for mv in monetaryValue]
-
-  locationList = []
-  [locationList.append(loc.text) for loc in location]
+  activityList = [act.text for act in activity]
+  companyList = [com.text for com in company]
+  employeeList = [emp.text for emp in employee]
+  monetaryValueList = [mv.text for mv in monetaryValue]
+  locationList = [loc.text for loc in location]
   locationString = ", ".join(locationList)
-
-  customerList = []
-  [customerList.append(cus.text) for cus in customer]
+  customerList = [cus.text for cus in customer]
 
 
   # Company - Name -------------------------------------------------------------------------
-  comDict = defaultdict(int)
-  for co in companyList:
-      comDict[co] += 1
-  if len(companyList) > 0 and max(comDict.items(), key=operator.itemgetter(1))[1] == 1:
-      companyName = companyList[0]
-  elif len(companyList) > 0 and max(comDict.items(), key=operator.itemgetter(1))[1] != 0:
-      companyName = max(comDict.items(), key=operator.itemgetter(1))[0]
-  else:
-      companyName = ""
+  companySet = set(companyList)
 
   # Activity - ------------------------------------------------------------------------
   activitySet = set(activityList)
@@ -182,7 +162,7 @@ def convert(document):
 
   # print output on standard output	
   print("ANNOTATIONS-----------------------------------------------")
-  print("{0: <20}{1}".format("Company:", companyList))
+  print("{0: <20}{1}".format("Company:", companySet))
   print("{0: <20}{1}".format("Activity:", activityList))
   print("{0: <20}{1}".format("Location:", locationList))
   print("{0: <20}{1}".format("MonetaryValue:", monetaryValueList))
@@ -190,7 +170,6 @@ def convert(document):
   print("{0: <20}{1}".format("Customer:", customerList))
 
   print("TEMPLATE--------------------------------------------------")
-  print("{0: <30}{1}".format("Company:", companyName))
   print("{0: <30}{1}".format("Activity:", activities))
   print("{0: <30}{1}".format("Location:", locResult))
   if len(resultDict) > 0:
@@ -219,19 +198,6 @@ def convert(document):
   cp = doc.createElement("companyprofile")
   doc.appendChild(cp)
 
-  #Company
-  if companyName != "":
-      company = doc.createElement("company")
-      company.setAttribute("name", companyName)
-      cp.appendChild(company)
-      for element in companySet:
-          annotation = doc.createElement("annotation")
-          company.appendChild(annotation)
-          #annotation.setAttribute("start", "250")
-          #annotation.setAttribute("end", "257")
-          annotationText = doc.createTextNode(element)
-          annotation.appendChild(annotationText)
-
   def make_element(tag_name, **attributes):
       el = doc.createElement(tag_name)
       for att, val in attributes.items():
@@ -243,6 +209,13 @@ def convert(document):
       annotationText = doc.createTextNode(value)
       annotation.appendChild(annotationText)
       return annotation
+
+  #Company
+  for company in companySet:
+      el = make_element("company", name=company)
+      annotation = make_annotation(company)
+      el.appendChild(annotation)
+      cp.appendChild(el)
 
   #Activity
   if activities is not None and len(activities) > 0:
