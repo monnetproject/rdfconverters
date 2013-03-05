@@ -1,13 +1,15 @@
 from nltk import tokenize
 import itertools
 import logging
+from nltk.stem import PorterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem.lancaster import LancasterStemmer
 from nltk.corpus import stopwords
-from rdflib import Graph
+from rdflib import Graph, URIRef
 from rdfconverters.util import NS
 from pkg_resources import resource_stream
 from pprint import pprint as pp
+import re
 
 logging.basicConfig(format='%(module)s %(levelname)s: %(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -47,13 +49,33 @@ def get_icb_label(icb, icb_uri):
 def get_icb_definition(icb, icb_uri):
     return str(_get([i for i in icb.objects(icb_uri, NS['rdfs']['definition']) if i.language=="en"],0))
 
+def get_parents(icb, uri):
+    parents = set()
+    def __get_parents(node):
+        parent = icb.value(subject=node, predicate=NS['rdfs']['subClassOf'])
+        if parent is not None:
+            parents.add(parent)
+            __get_parents(parent)
+
+    __get_parents(URIRef(uri))
+    return parents
+
+
+def remove_parents(icb, uris):
+    orphans = set(uris)
+    for uri in uris:
+        if uri in orphans:
+            orphans -= get_parents(icb, uri)
+    return orphans
+
 #----------------
 # Tokenising
 
 def remove_business_gunk(phrase):
-    gunk = ['wide range', 'company']
+    gunk = ['wide range', 'company', 'companies', 'industry', 'international',
+        'services?', 'product(?!ion)s?', 'solutions', 'leading', 'sales', 'sector', 'integrated']
     for g in gunk:
-        phrase = phrase.replace(g, '')
+        phrase = re.sub(g, '', phrase)
     return phrase
 
 def split_excluded(words):
@@ -70,7 +92,7 @@ lmtzr = WordNetLemmatizer()
 def lemmatize(word):
     return lmtzr.lemmatize(word)
 
-stemmer = LancasterStemmer()
+stemmer = PorterStemmer()
 def stem(word):
     return stemmer.stem(word)
 
@@ -121,11 +143,13 @@ def icb_matches(phrase, exclude_labels=False):
     returns: tuple containing ICB code and english label
     '''
 
+    logger.debug("*******%s" % phrase)
+
     phrase = remove_business_gunk(phrase)
 
     word_list = tokenize_words(phrase)
     word_set = set(word_list)
-    print("Words:", word_set)
+    print("Words: %s" % word_set)
 
     scores = {}
     for icb_uri, label in labels.items():
@@ -139,20 +163,21 @@ def icb_matches(phrase, exclude_labels=False):
         scores[icb_uri] = icb_score
 
     max_score = max(v for k, v in scores.items())
+    logger.debug("Max score: %d" % max_score)
     if max_score <= 0:
         return None
 
-    max_values = [k for k, v in scores.items() if v == max_score]
+    max_values = set(k for k, v in scores.items() if v == max_score)
+    # e.g. if get 0500 and 0530 keep 0530 because it is more specific
+    max_values = remove_parents(icb, max_values)
+    logger.debug ("(%d) %s" % (len(max_values), [m[-4:] + " " + get_icb_label(icb, m) for m in max_values]))
 
-    logger.debug ("---------------")
-    logger.debug("Max score: %d" % max_score)
-    for m in max_values:
-        logger.debug(m)
-        logger.debug (get_icb_label(icb, m))
-        logger.debug (get_icb_definition(icb, m))
-        logger.debug (labels.get(m))
-        logger.debug (definitions.get(m))
-        logger.debug ("---------------")
+    # Check if too many results to reasonably say we have an accurate match
+    if len(max_values) > 2:
+        return None
+
+    #for m in max_values:
+        #logger.debug ("%s - %s" % (get_icb_label(icb, m), get_icb_definition(icb, m)))
 
     matches = [(mv.rsplit('#',1)[1], get_icb_label(icb, mv)) for mv in max_values]
     return matches
