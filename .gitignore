@@ -7,10 +7,10 @@ temp
 cached*
 *.py~
 __pycache__
-
+.settings
 # Ninja IDE
 *.nja
-
+target
 # C extensions
 *.so
 

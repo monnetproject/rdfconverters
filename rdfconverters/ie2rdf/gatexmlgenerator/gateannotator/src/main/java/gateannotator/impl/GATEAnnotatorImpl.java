@@ -12,6 +12,7 @@ import gateannotator.GATEAnnotator;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
@@ -22,7 +23,8 @@ public class GATEAnnotatorImpl implements GATEAnnotator {
 	public GATEAnnotatorImpl() throws GateException, IOException {
 		if (!Gate.isInitialised()) {
 			Properties prop = new Properties();
-			prop.load(GATEAnnotatorImpl.class.getClassLoader().getResourceAsStream("gateannotator.properties"));
+			prop.load(getClass().getClassLoader().getResourceAsStream("gateannotator.properties"));
+			System.out.println("GATE Home: " + prop.getProperty("gateHome"));
 			System.setProperty("gate.home", prop.getProperty("gateHome"));
 			Gate.init();
 		}
@@ -74,7 +76,7 @@ public class GATEAnnotatorImpl implements GATEAnnotator {
 	private Set<Annotation> getAnnotations(Document doc, String... annotationTypes) {
 		Set<Annotation> annotations = new HashSet<Annotation>();
 		for (String annotation : annotationTypes) {
-			AnnotationSet annotsOfThisType = doc.getAnnotations().get((String) annotation);
+			AnnotationSet annotsOfThisType = doc.getAnnotations().get(annotation);
 
 			if (annotsOfThisType != null) {
 				annotations.addAll(annotsOfThisType);
