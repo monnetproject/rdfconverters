@@ -14,6 +14,8 @@ from rdfconverters import util
 from rdfconverters.cputil import CPNodeBuilder
 from rdfconverters.util import NS
 from pkg_resources import resource_stream
+import re
+
 
 logging.basicConfig(format='%(module)s %(levelname)s: %(message)s', level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -148,7 +150,7 @@ class Scraper:
         company_table = soup.select('.halfsingle.companyGrid')[0]
         company = self._table_to_2d_array(company_table)
         for title, value in company:
-            if title=='Established' or title=='Gründungsjahr':
+            if title=='Established':
                 data['foundedIn'] = value
             elif title=='Transparancy Level':
                 data['marketSegment'] = value
@@ -242,6 +244,18 @@ class RDFConverter:
             if key in data:
                 segment = data[key].lower().replace(' ', '_') + '_singleton'
                 g.add((id_node, NS['dax'][key], NS['dax'][segment] ))
+
+        key = 'totalCapitalStock'
+        if key in data:
+            if '\u20ac' not in data[key]:
+                print("WARNING: Ignoring total capital stock. No euro sign in: %s" % data[key])
+            else:
+                monetary = re.sub('[^0-9.]', '', data[key]) + "EUR"
+                g.add((id_node, NS['dax'][key], Literal(monetary, lang='en')))
+
+        key = 'endOfBusinessYear'
+        if key in data:
+           g.add((id_node, NS['dax'][key], Literal(data[key], lang='en')))
 
         if 'subsector' in data:
             daxname = data['subsector'].replace(' ', '').replace('+', 'And').replace('-','')
