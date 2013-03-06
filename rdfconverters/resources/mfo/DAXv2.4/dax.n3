@@ -502,6 +502,7 @@ dax:endOfBusinessYear a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:range xsd:gMonthDay .
 
 dax:entry_standard_singleton a dax:EntryStandard;
+    rdfs:label "Entry Standard"@en;
     rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
 
 dax:executiveBoard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -544,7 +545,8 @@ dax:function a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
-dax:gaap_singleton a dax:GAAP .
+dax:hgb_singleton a dax:GAAP ;
+    rdfs:label "HGB GAAP" .
 
 dax:general_standard_singleton a dax:GeneralStandard;
     rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
@@ -556,7 +558,8 @@ dax:homepage a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
 
-dax:ifrs_singleton a dax:IFRS .
+dax:ifrs_singleton a dax:IFRS ;
+    rdfs:label "IFRS" .
 
 dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
@@ -577,12 +580,12 @@ dax:lastName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:marketSegment a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
-    rdfs:label "Market Segment"@en;
     rdfs:comment "I do assume that this is a temporal functional property"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range dax:MarketSegment .
 
-dax:market_segment_singleton a dax:MarketSegment .
+dax:market_segment_singleton a dax:MarketSegment ;
+    rdfs:label "Market Segment" .
 
 dax:name a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
@@ -593,6 +596,7 @@ dax:name a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:range xsd:string .
 
 dax:open_market_singleton a dax:OpenMarket;
+    rdfs:label "Open Market"@en ;
     rdfs:comment "we need to have only one instance for each market segment"^^xsd:string .
 
 dax:phone a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -691,7 +695,6 @@ dax:wkn a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 rdfs:definition a owl:AnnotationProperty .
 
 dax:EntryStandard a owl:Class;
-    rdfs:label "Entry Standard"@en;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:FirstQuotationBoard a owl:Class;

@@ -61,6 +61,9 @@ class XBRLReport:
       should be True for 2010 and False for 2011.
     """
 
+    def get_identifier(self): raise NotImplementedError()
+    def extract_company_info(self): raise NotImplementedError()
+
     def __init__(self, xmltree, source_taxonomy, only_year_boundaries=False):
         self.source_taxonomy = source_taxonomy
         self.root = xmltree.getroot()
@@ -73,12 +76,6 @@ class XBRLReport:
         self.items = self.__extract_financial_items()
 
         self.x2x = XBRL2XEBR(source_taxonomy)
-
-    def get_identifier(self):
-        raise NotImplementedError()
-
-    def extract_company_info(self):
-        raise NotImplementedError()
 
     def parse_filings(self):
         filings = []
@@ -116,7 +113,7 @@ class XBRLReport:
             else:
                 c['start'] = context.find('.//{http://www.xbrl.org/2003/instance}startDate', namespaces=self.ns).text
                 c['end'] = context.find('.//{http://www.xbrl.org/2003/instance}endDate', namespaces=self.ns).text
-            
+
             if (not only_year_boundaries) or c.get('instant','').endswith("12-31") or (c.get('start','').endswith("01-01") and c.get('end','').endswith("12-31")):
                 contexts[context.attrib['id']] = c
 

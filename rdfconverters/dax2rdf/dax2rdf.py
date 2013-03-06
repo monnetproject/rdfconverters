@@ -217,7 +217,7 @@ class RDFConverter:
         id_ = "%s__%s" % (data['isin'], data['timestamp'])
         id_node = NS['cp'][id_]
 
-        g.add((id_node, a, NS['cp']['companyProfile']))
+        g.add((id_node, a, NS['cp']['CompanyProfile']))
         g.add((id_node, NS['cp']['stockExchange'], NS['if']['dax_singleton']))
 
         dt = util.timestamp_to_datetime(data['timestamp'])
@@ -242,7 +242,7 @@ class RDFConverter:
 
         for key in 'marketSegment', 'transparencyStandard', 'accountingStandard':
             if key in data:
-                segment = data[key].lower().replace(' ', '_') + '_singleton'
+                segment = re.sub(r'[\(\)#]', '', data[key]).lower().replace('german gaap', '').replace(' ', '_').strip('_') + '_singleton'
                 g.add((id_node, NS['dax'][key], NS['dax'][segment] ))
 
         key = 'totalCapitalStock'

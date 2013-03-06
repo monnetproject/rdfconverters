@@ -1,7 +1,7 @@
 import unittest
-import lxml._elementpath
 from lxml import etree
 from rdfconverters.xbrl2rdf.xbrl import XBRLFactory, XBRLBelgium, XBRLSpainPGC, XBRLSpainCNMV
+from rdfconverters.xbrl2rdf.metrics import Metrics
 from pprint import pprint as pp
 from pkg_resources import resource_stream
 
@@ -11,6 +11,33 @@ ES_CNMV_REPORT = 'cnmvreport.xbrl'
 
 def get_fixture_file(report):
     return resource_stream(__name__, 'fixtures/'+report)
+
+class TestMetrics(unittest.TestCase):
+
+    def setUp(self):
+        self.metrics = Metrics({
+            'hasOperatingProfitLossTotal': '120.01EUR',
+            'hasProfitLossForThePeriodTotal': '243EUR',
+            'hasEquityTotal': '7.07EUR',
+            'hasOperatingIncomeTotal': '400EUR',
+            'hasRawMaterialsAndConsumablesTotal': '31EUR',
+            'hasOtherOperatingCharges': '123.45EUR',
+            'hasCurrentAssetsTotal': '140.23EUR',
+            'hasAmountsPayableWithinOneYearTotal': '17EUR'
+        })
+
+    def test_ebit(self):
+        self.assertEqual(str(self.metrics.ebit()), '120.01EUR')
+    def test_netResult(self):
+        self.assertEqual(str(self.metrics.netResult()), '243.00EUR')
+    def test_ownFunds(self):
+        self.assertEqual(str(self.metrics.ownFunds()), '7.07EUR')
+    def test_addedValue(self):
+        self.assertEqual(str(self.metrics.addedValue()), '245.55EUR')
+    def test_currentRatio(self):
+        self.assertEqual(str(self.metrics.currentRatio()), '8.25')
+    def test_netWorkingCapital(self):
+        self.assertEqual(str(self.metrics.netWorkingCapital()), '123.23EUR')
 
 class TestXBRLAutoDetect(unittest.TestCase):
 

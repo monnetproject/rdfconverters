@@ -1,6 +1,5 @@
 from rdflib import Graph
 from rdfconverters.util import NS
-from os.path import dirname, abspath
 from pkg_resources import resource_stream
 
 XEBR2XBRL_PATH = resource_stream('rdfconverters.resources', 'mfo/XEBR2XBRLv1.0/xebr2xbrl.n3')

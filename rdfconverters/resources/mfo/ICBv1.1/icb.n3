@@ -1147,10 +1147,7 @@ icb:ICB9578 a owl:Class;
         "Telekommunikationsausrüstung"@de;
     rdfs:definition "Fabricantes y distribuidores de productos de telecomunicaciones dealta tecnología, lo que incluye satélites, teléfonos celulares, fibraóptica, dispositivos de conmutación, redes de área local y de áreaamplia, equipo de teleconferencias y dispositivos de conectividadpara computadoras, incluidos los nodos y enrutadores."@es,
         "Hersteller und Händler von Hightech-Kommunikationsprodukten, wie z.B. Satelliten, Mobiltelefone, Lichtwellenleiter, Schaltzentralen, LAN und WAN, Telekonferenz-Ausrüstung und Verbindungselemente für Computer, einschließlich Hubs und Router."@de,
-        """Makers and distributors of high-technology communication products, 
-    including satellites, mobile telephones, fibres optics, switching devices, 
-    local and wide-area networks, teleconferencing equipment and connectivity 
-    devices for computers, including hubs and routers."""@en;
+        "Makers and distributors of high-technology communication products, including satellites, mobile telephones, fibres optics, switching devices, local and wide-area networks, teleconferencing equipment and connectivity devices for computers, including hubs and routers."@en;
     rdfs:subClassOf icb:ICB9570 .
 
 rdfs:definition a owl:AnnotationProperty;

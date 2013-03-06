@@ -31,7 +31,7 @@ def convert(inputfile, taxonomy=None):
     else:
         xbrl_instance = XBRLFactory.from_autodetected(tree)
         if xbrl_instance is None:
-            raise Exception("Could not detect taxonomy in %s" % inputfile)
+            raise Exception("Could not detect taxonomy")
         print("Detected %s as '%s':" % (os.path.basename(inputfile), xbrl_instance))
 
     xbrl_instance.parse_filings()

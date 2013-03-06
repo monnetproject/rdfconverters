@@ -17,6 +17,36 @@ xebr:end a owl:DatatypeProperty,
     rdfs:domain xebr:Report;
     rdfs:range xsd:date .
 
+xebr:ebit a xebr:Metric;
+    rdfs:label "Earnings before interest, taxes, depreciation and amortization (EBIT)"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:netResult a xebr:Metric;
+    rdfs:label "Net Result"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:ownFunds a xebr:Metric;
+    rdfs:label "Own Funds"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:addedValue a xebr:Metric;
+    rdfs:label "Added Value"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:currentRatio a xebr:Metric;
+    rdfs:label "Current Ratio (Measurement of Liquidity)"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:float .
+
+xebr:netWorkingCapital a xebr:Metric;
+    rdfs:label "Net Working Capital"@en;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
 xebr:hasAccruedChargesAndDeferredIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
     rdfs:label "Accrued charges and deferred income [Total]"@en;

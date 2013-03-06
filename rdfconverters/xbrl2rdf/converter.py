@@ -1,7 +1,10 @@
 from rdfconverters.xbrl2rdf.traverser import XEBRConceptTraverser
-from rdflib import Graph, URIRef, Literal, XSD
+from rdfconverters.xbrl2rdf import xebr
+from rdfconverters.xbrl2rdf.metrics import Metrics
+from rdflib import Graph, URIRef, Literal, XSD, BNode
 import re
 from rdfconverters.util import NS
+
 
 class RDFConverter:
     def __init__(self):
@@ -10,14 +13,27 @@ class RDFConverter:
     def _abbreviate(self, s):
         return re.sub('[^A-Z]', r'', s).lower()
 
+    def _write_metrics(self, g, rep, identifier, filing):
+        metrics = Metrics(filing['items'])
+
+        for concept_name, function in metrics.get_metrics().items():
+            concept = NS['xebr'][concept_name]
+            datatype = xebr.graph.value(subject=concept, predicate=NS['rdfs']['range'])
+            assert datatype is not None
+            value = function()
+
+            if value is not None:
+                metric_id = NS['xebr']["%s_%s" % (concept_name, identifier)]
+                g.add((metric_id, NS['xebr'][concept_name], Literal(value, datatype=datatype)))
+                g.add((rep, NS['xebr']['hasMetric'], metric_id))
+
     def convert(self, xbrl_instance):
         g = Graph()
         for n in NS:
             g.bind(n, NS[n])
 
         for filing in xbrl_instance.get_filings_list():
-            id = filing['metadata']['id']
-            identifier = "%s_%s" % ( id, filing['metadata']['end'] )
+            identifier = "%s_%s" % ( filing['metadata']['id'], filing['metadata']['end'] )
 
             # Add report instance to graph, with start/end metadata
             rep = NS['xebr']['rep_'+identifier]
@@ -29,6 +45,9 @@ class RDFConverter:
             if 'source' in metadata:
                 datatype = metadata['source'][1]
                 g.add((rep, NS['dc']['source'], Literal(metadata['source'][0],datatype=datatype)))
+
+            # Metrics
+            self._write_metrics(g, rep, identifier, filing)
 
             # Traverse concepts and add to graph
             for report_type in self.traverser.report_type_iterator():
