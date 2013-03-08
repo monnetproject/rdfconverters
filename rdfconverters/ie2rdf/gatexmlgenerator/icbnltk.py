@@ -72,7 +72,7 @@ def remove_parents(icb, uris):
 # Tokenising
 
 def remove_business_gunk(phrase):
-    gunk = ['wide range', 'company', 'companies', 'industry', 'international',
+    gunk = ['wide range', 'company', 'companies', 'international',
         'services?', 'product(?!ion)s?', 'solutions', 'leading', 'sales', 'sector', 'integrated',
         'largest', 'business', 'industr(y|ies)', 'systems?', 'innovat(e|ive)', 'markets?']
     for g in gunk:

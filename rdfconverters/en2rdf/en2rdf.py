@@ -331,10 +331,11 @@ class RDFConverter:
             # Shareholders - only English as nothing useful is translated
             if lang=='en':
                 for shareholder in self.scraped['profile'][lang]['shareholders']:
-                    node = NS[lang]["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])]
-                    self.g.add((self.id_node, NS[lang]['shareholderValue'], node))
-                    self.g.add((node, NS[lang]['name'], Literal(shareholder['name'])))
-                    self.g.add((node, NS[lang]['value'], Literal(shareholder['value'], datatype=XSD.float)))
+                    if len(shareholder['name'].strip()) > 0:
+                        node = NS[lang]["%s_%d" % (shareholder['name'].replace(' ', '_'), self.scraped['timestamp'])]
+                        self.g.add((self.id_node, NS[lang]['shareholderValue'], node))
+                        self.g.add((node, NS[lang]['name'], Literal(shareholder['name'])))
+                        self.g.add((node, NS[lang]['value'], Literal(shareholder['value'], datatype=XSD.float)))
 
     def _write_factsheet(self):
         factsheet = self.scraped['factsheet']

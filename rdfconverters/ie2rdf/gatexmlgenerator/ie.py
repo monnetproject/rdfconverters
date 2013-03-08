@@ -13,7 +13,7 @@ import re
 from pprint import pprint as pp
 import sys
 import operator
-import icbnltk
+from rdfconverters.ie2rdf.gatexmlgenerator import icbnltk
 from xml.dom.minidom import Document
 
 def convert_string(s):
