@@ -70,12 +70,15 @@ class RDFConverter:
                             for concept in concepts_in_filing:
                                 value = filing['items'][concept]
                                 if value is not None:
-                                    # Treat strings as plain literals
-                                    if str(concepts[concept]) == "http://www.w3.org/2001/XMLSchema#string":
-                                        datatype=None
+                                    if isinstance(value, URIRef):
+                                        g.add( (ab, NS['xebr'][concept], value) )
                                     else:
-                                        datatype=concepts[concept]
-                                    g.add( (ab, NS['xebr'][concept], Literal(value, datatype=datatype)) )
+                                        # Treat strings as plain literals
+                                        if str(concepts[concept]) == "http://www.w3.org/2001/XMLSchema#string":
+                                            datatype=None
+                                        else:
+                                            datatype=concepts[concept]
+                                        g.add( (ab, NS['xebr'][concept], Literal(value, datatype=datatype)) )
 
                     # Only add metadata for the report if it has values for associated
                     # concepts below it in the tree

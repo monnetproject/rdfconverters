@@ -1,4 +1,5 @@
 from rdfconverters.xbrl2rdf.xbrl2xebr import XBRL2XEBR
+from rdfconverters.util import NS
 from lxml import etree
 from pprint import pprint as pp
 
@@ -38,7 +39,8 @@ class XBRLReport:
     Each implementation of XBRLReport must implement get_identifier, which uniquely identifies the
     company (can generally be obtained through an XPath expression), and extract_company_info,
     which extracts xEBR fields such as company name, address (which have no formal mapping system
-    at the time of writing).
+    at the time of writing). Note: "hasCompanyAddressCountry" should just be the ISO-3166-1 country
+    code.
 
     Filings are of the following format:
     {
@@ -263,8 +265,15 @@ class XBRLBelgium(XBRLReport):
         info = {
             'hasCompanyIdValue': __get("pfs-gcd:EntityInformation//pfs-gcd:IdentifierValue"),
             'hasCompanyNameText': self._humanize_name(__get("pfs-gcd:EntityInformation//pfs-gcd:EntityCurrentLegalName")),
-            'hasLegalFormCode': __get('pfs-gcd:EntityForm/*')
+            'hasLegalFormCode': __get('pfs-gcd:EntityForm/*'),
         }
+        try:
+            country_code = self.root.find(".//pfs-gcd:EntityInformation/pfs-gcd:EntityAddress/pfs-gcd:CountryCode", namespaces=self.ns).getchildren()[0].text
+
+            info['hasCompanyAddressCountry'] = NS['if'][country_code.strip().upper()]
+        except Exception as e:
+            print("Getting country code failed:", str(e))
+
         return info
 
     def __str__(self):
@@ -291,8 +300,9 @@ class XBRLSpainPGC(XBRLReport):
         info = {
             'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalNameValue")),
             'hasCompanyPostcode': __get("dgi-est-gen:ZipPostalCode"),
-            'hasCompanyContactPointValue': __get("dgi-est-gen:CommunicationValue")
+            'hasCompanyContactPointValue': __get("dgi-est-gen:CommunicationValue"),
         }
+
         for i in range(10):
             x = __get("dgi-lc-es:Xcode_LFC.%.2d" % (i))
             if x is not None:
@@ -323,6 +333,7 @@ class XBRLSpainCNMV(XBRLReport):
 
         info = {
             'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalName/dgi-est-gen:LegalNameValue")),
+            'hasCompanyAddressCountry': NS['if']['ES']
         }
 
         return info

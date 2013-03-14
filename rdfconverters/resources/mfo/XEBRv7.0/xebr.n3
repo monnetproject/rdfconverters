@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix if: <http://www.dfki.de/lt/if.owl#> .
 
 <http://www.dfki.de/lt/xebr.owl> a owl:Ontology;
     rdfs:comment "(C) Hans-Ulrich Krieger"^^xsd:string;
@@ -241,7 +242,7 @@ xebr:hasCompanyAddressCountry a owl:DatatypeProperty,
     rdfs:label "Company address, Country"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:CompanyAddressList;
-    rdfs:range xsd:string .
+    rdfs:range if:Country .
 
 xebr:hasCompanyAddressCountyOrState a owl:DatatypeProperty,
         owl:FunctionalProperty;

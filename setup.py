@@ -1,14 +1,19 @@
 from setuptools import setup, find_packages
+from os import walk
+from os.path import join
+
+def all_files(*paths):
+    files = []
+    for path in paths:
+        files += [(w[0], [join(w[0],f) for f in w[2]]) for w in walk(path)]
+    return files
+
 setup(
     name = "rdfconverters",
     version = "0.1",
     packages = find_packages(),
 
-    include_package_data = True,
-    package_data = {
-        'rdfconverters.xbrl2rdf': ['schemas/*.n3'],
-        'rdfconverters.ie2rdf.gatexmlgenerator': ['*.txt', 'GATEAnnotator'],
-    },
+    data_files = all_files('rdfconverters/resources'),
 
     install_requires = [
         'setuptools',

@@ -1,5 +1,30 @@
-from rdflib import BNode, Literal
+from rdflib import BNode, Literal, Graph, URIRef
 from rdfconverters.util import NS
+from pkg_resources import resource_string, resource_stream
+
+f = resource_string('rdfconverters.resources', 'isin_companyid_map.txt').decode('utf-8')
+isin_companyid_map = {}
+for entry in f.split('\n'):
+    if len(entry.strip()) > 0:
+        isin, companyid = entry.split(' ')
+        isin_companyid_map[isin] = companyid
+
+def companyid(isin):
+    if isin in isin_companyid_map.keys():
+        return isin_companyid_map[isin]
+    return None
+
+
+IF_PATH = resource_stream('rdfconverters.resources', 'mfo/IFv1.3/if.n3')
+if_graph = Graph()
+if_graph.parse(IF_PATH, format="n3")
+for n in NS:
+    if_graph.bind(n, NS[n])
+
+def country_from_name(name, lang='en'):
+    return if_graph.value(predicate=NS['rdfs']['label'], object=Literal(name, lang=lang))
+
+
 
 class CPNodeBuilder:
     '''Helps to create bnodes for CompanyProfile ontology'''

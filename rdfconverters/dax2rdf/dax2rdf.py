@@ -12,6 +12,7 @@ from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import XSD
 from rdfconverters import util
 from rdfconverters.cputil import CPNodeBuilder
+from rdfconverters import cputil
 from rdfconverters.util import NS
 from pkg_resources import resource_stream
 import re
@@ -97,7 +98,8 @@ class Scraper:
         metadata = soup.select('.info h4')[0].text.strip().split()
         data['isin'] = metadata[2].rstrip(',')
         data['wkn'] = metadata[4].rstrip(',')
-        data['symbol'] = metadata[5].strip()
+        if len(metadata) == 5:
+            data['symbol'] = metadata[5].strip()
         return data
 
     def _scrape_master_data(self, isin, lang):
@@ -223,7 +225,14 @@ class RDFConverter:
         dt = util.timestamp_to_datetime(data['timestamp'])
         g.add((id_node, NS['cp']['instant'], Literal(dt, datatype=XSD.dateTime)))
 
-        g.add((id_node, NS['dax']['admissionDate'], Literal(dt, datatype=XSD.dateTime)))
+        if 'admissionDate' in data:
+            g.add((id_node, NS['dax']['admissionDate'], Literal(data['admissionDate'], datatype=XSD.date)))
+
+        # Add companyId, falling back to ISIN if unavailable
+        companyid = cputil.companyid(data['isin'])
+        if companyid is None:
+            companyid = data['isin']
+        g.add((id_node, NS['cp']['companyId'], Literal(companyid)))
 
         standard = {
             'cp': ('email', 'fax', 'phone', 'isin', 'symbol', 'website', 'street', 'city'),
@@ -234,7 +243,11 @@ class RDFConverter:
                 if key in data:
                     g.add((id_node, NS[ns][key], Literal(data[key]) ))
 
-        for key in ('country', 'profile', 'source'):
+        if 'country' in data:
+            country = cputil.country_from_name(data['country'])
+            g.add((id_node, NS['cp']['country'], country))
+
+        for key in ('profile', 'source'):
             if key in data:
                 g.add((id_node, NS['cp'][key], Literal(data[key], lang='en')))
             if key in data['de']:
@@ -364,7 +377,7 @@ def main():
             try:
                 scrape(isin, outputfile, args.pickle, timestamp=timestamp)
             except Exception as e:
-                logger.exception("Failed to scrape " + isin)
+                logger.exception("Failed to scrape %s: %s", isin, str(e))
             time.sleep(1)
     elif args.command == 'rdfconvert':
         if args.batch:
@@ -381,4 +394,3 @@ def main():
 
 if __name__=='__main__':
     main()
-

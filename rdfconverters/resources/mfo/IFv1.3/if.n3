@@ -10,6 +10,35 @@
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+if:Country a owl:Class .
+if:BE a if:Country;
+    if:iso1Code "BE";
+    rdfs:label "Belgium"@en, "Bélgica"@es, "België"@nl, "Belgien"@de .
+if:AT a if:Country;
+    if:iso1Code "AT";
+    rdfs:label "Austria"@en, "Austria"@es, "Österreich"@de, "Oostenrijk"@nl .
+if:CH a if:Country;
+    if:iso1Code "CH";
+    rdfs:label "Switzerland"@en, "Suiza"@es, "Schweiz"@de, "Zwitserland"@nl . 
+if:DE a if:Country;
+    if:iso1Code "DE";
+    rdfs:label "Germany"@en, "Alemania"@es, "Deutschland"@de, "Duitsland"@nl .
+if:FR a if:Country;
+    if:iso1Code "FR";
+    rdfs:label "France"@en, "Francia"@es, "Frankreich"@de, "Frankrijk"@nl .
+if:ES a if:Country;
+    if:iso1Code "ES";
+    rdfs:label "Spain"@en, "España"@es, "Spanien"@de, "Spanje"@nl.
+if:GB a if:Country;
+    if:iso1Code "GB";
+    rdfs:label "United Kingdom"@en, "Reino Unido"@es, "Vereinigtes Königreich"@de, "Verenigd Koninkrijk"@nl .
+if:NL a if:Country;
+    if:iso1Code "NL";
+    rdfs:label "Netherlands"@en, "Países Bajos"@es, "Niederlande"@de, "Nederland"@nl .
+if:PT a if:Country;
+    if:iso1Code "PT";
+    rdfs:label "Portugal"@en, "Portugal"@es, "Portugal"@de, "Portugal"@es .
+
 dax:Person a owl:Class;
     owl:equivalentClass en:Person .
 
