@@ -2,6 +2,7 @@ from rdfconverters.xbrl2rdf.xbrl2xebr import XBRL2XEBR
 from rdfconverters.util import NS
 from lxml import etree
 from pprint import pprint as pp
+from urllib.parse import unquote
 
 class XBRLFactory:
 
@@ -331,8 +332,9 @@ class XBRLSpainCNMV(XBRLReport):
                 return n.text
             raise Exception("Couldn't find " + s)
 
+        # Need unquote() because some reports have percent-encoded company names
         info = {
-            'hasCompanyNameText': self._humanize_name(__get("dgi-est-gen:LegalName/dgi-est-gen:LegalNameValue")),
+            'hasCompanyNameText': self._humanize_name(unquote(__get("dgi-est-gen:LegalName/dgi-est-gen:LegalNameValue"))),
             'hasCompanyAddressCountry': NS['if']['ES']
         }
 
