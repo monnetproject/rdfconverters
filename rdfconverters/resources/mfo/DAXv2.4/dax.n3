@@ -454,18 +454,26 @@ dax:WirelessTelecommunication a owl:Class;
 dax:accountingStandard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
-    rdfs:label "Rechnungslegungsart"@de,
-        "accounting standard"@en;
+    rdfs:label "Boekhoudeisen standaardsoftware"@nl,
+        "La norma contable"@es,
+        "Rechnungslegungsart"@de,
+        "Accounting Standard"@en;
     rdfs:domain dax:Company;
     rdfs:range dax:AccountingStandard .
 
-dax:accounting_standard_singleton a dax:AccountingStandard .
+dax:accounting_standard_singleton a dax:AccountingStandard;
+    rdfs:label "Boekhoudeisen standaardsoftware"@nl,
+        "La norma contable"@es,
+        "Rechnungslegungsart"@de,
+        "Accounting Standard"@en .
 
 dax:admissionDate a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Beginn der Börsennotierung"@de,
-        "admission date"@en;
+    rdfs:label "Aanwaarding afgiftedatum"@nl,
+        "Beginn der Börsennotierung"@de,
+        "Fecha de admisión"@es,
+        "Admission Date"@en;
     rdfs:domain dax:Company;
     rdfs:range xsd:date .
 
@@ -495,19 +503,23 @@ dax:email a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:endOfBusinessYear a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Ende des Geschäftsjahres"@de,
-        "end of business year"@en;
+    rdfs:label "A finales de año"@es,
+        "Aan het einde van het jaar"@nl,
+        "Ende des Geschäftsjahres"@de,
+        "End of Business Year"@en;
     rdfs:comment "only month and day information is relevant"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range xsd:gMonthDay .
 
 dax:entry_standard_singleton a dax:EntryStandard;
-    rdfs:label "Entry Standard"@en;
+    rdfs:label "Entry Standard"@en, "Entrada Estándar"@es, "Die Eintragung Standard"@de, "Standaard vermelding"@nl;
     rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
 
 dax:executiveBoard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:ObjectProperty;
-    rdfs:label "Vorstand"@de,
+    rdfs:label "Consejo Ejecutivo"@es,
+        "Dagelijks bestuur"@nl,
+        "Vorstand"@de,
         "executive board"@en;
     rdfs:domain dax:Company;
     rdfs:range dax:Person;
@@ -523,7 +535,11 @@ dax:fax a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:firstName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "First Name";
+    rdfs:label "Erste Name"@de,
+        "First Name"@en,
+        "Primera Nombre"@es,
+        "Ten eerste Naam"@nl,
+        "First Name";
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
@@ -533,23 +549,29 @@ dax:first_quotation_board_singleton a dax:FirstQuotationBoard;
 dax:foundedIn a <http://www.dfki.de/lt/time.owl#SynchronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Gründungsjahr"@de,
-        "established"@en;
+    rdfs:label "Establecido"@es,
+        "Gründungsjahr"@de,
+        "Vastgesteld"@nl,
+        "Established"@en;
     rdfs:domain dax:Company;
     rdfs:range xsd:gYear .
 
 dax:function a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty;
-    rdfs:label "Role"@en;
+    rdfs:label "Aufgaben"@de,
+        "Funciones"@es,
+        "Function"@nl,
+        "Role"@en;
     rdfs:comment "e.g., \"chairman\" or \"vice chairman\" or \"Vorsitzender\"; use language tag to have multilingual information"^^xsd:string;
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
-dax:hgb_singleton a dax:GAAP ;
-    rdfs:label "HGB GAAP" .
-
 dax:general_standard_singleton a dax:GeneralStandard;
+    rdfs:label "General Standard"@en, "La Norma General"@es, "General Standard"@de, "Algemene Norm"@nl;
     rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
+
+dax:hgb_singleton a dax:GAAP;
+    rdfs:label "HGB GAAP" .
 
 dax:homepage a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty;
@@ -558,7 +580,7 @@ dax:homepage a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
 
-dax:ifrs_singleton a dax:IFRS ;
+dax:ifrs_singleton a dax:IFRS;
     rdfs:label "IFRS" .
 
 dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -573,7 +595,10 @@ dax:isin a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:lastName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Last Name"@en;
+    rdfs:label "Laatste Naam"@nl,
+        "Last Name"@en,
+        "Letzten Name"@de,
+        "Última Nombre"@es;
     rdfs:domain dax:Person;
     rdfs:range xsd:string .
 
@@ -581,22 +606,34 @@ dax:marketSegment a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
     rdfs:comment "I do assume that this is a temporal functional property"^^xsd:string;
+    rdfs:label "Marktsegment"@nl,
+        "Marktsegment"@de,
+        "Segmento de Mercado"@es,
+        "Market Segment"@en ;
     rdfs:domain dax:Company;
     rdfs:range dax:MarketSegment .
 
-dax:market_segment_singleton a dax:MarketSegment ;
-    rdfs:label "Market Segment" .
+dax:market_segment_singleton a dax:MarketSegment;
+    rdfs:label "Marktsegment"@nl,
+        "Marktsegment"@de,
+        "Segmento de Mercado"@es,
+        "Market Segment"@en .
 
 dax:name a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Name"@de,
-        "name"@en;
+    rdfs:label "Laatste Naam"@nl,
+        "Name"@de,
+        "name"@en,
+        "Última Nombre"@es;
     rdfs:domain dax:Company;
     rdfs:range xsd:string .
 
 dax:open_market_singleton a dax:OpenMarket;
-    rdfs:label "Open Market"@en ;
+    rdfs:label "Apertura del Mercado"@es,
+        "Freiverkehr"@de,
+        "Open Markt"@nl,
+        "Open Market"@en;
     rdfs:comment "we need to have only one instance for each market segment"^^xsd:string .
 
 dax:phone a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -614,9 +651,14 @@ dax:portrait a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
     rdfs:range xsd:string .
 
 dax:prime_standard_singleton a dax:PrimeStandard;
+    rdfs:label "Prime Standard"@en, "Prime Standard"@de, "Principal Estándar"@es, "Prime Standard"@nl;
     rdfs:comment "we need to have only one instance for each transparency standard"^^xsd:string .
 
 dax:regulated_market_singleton a dax:RegulatedMarket;
+    rdfs:label "Geregelten Markt"@de,
+        "Gereguleerde Markt"@nl,
+        "Mercados Regulados"@es,
+        "Regulated Market"@en;
     rdfs:comment "we need to have only one instance for each market segment"^^xsd:string .
 
 dax:shortName a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -646,7 +688,9 @@ dax:street a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 dax:supervisoryBoard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:ObjectProperty;
     rdfs:label "Aufsichtsrat"@de,
-        "supervisory board"@en;
+        "De raad van toezicht"@nl,
+        "Supervisión"@es,
+        "Supervisory Board"@en;
     rdfs:domain dax:Company;
     rdfs:range dax:Person;
     rdfs:subPropertyOf dax:hasEmployed .
@@ -670,7 +714,9 @@ dax:totalCapitalStock a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
         owl:FunctionalProperty;
     rdfs:label "Gesamtes Grundkapital"@de,
-        "total capital stock"@en;
+        "Het Totale Kapitaal"@nl,
+        "Total Capital"@es,
+        "Total Capital Stock"@en;
     rdfs:comment "the value needs to be normalized"^^xsd:string;
     rdfs:domain dax:Company;
     rdfs:range xsd:monetary .
@@ -679,11 +725,17 @@ dax:transparencyStandard a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
     rdfs:label "Aktueller Transparenzstandard"@de,
-        "current transparency standard"@en;
+        "De huidige prijsdoorzichtigheid standaardsoftware"@nl,
+        "La norma de transparencia actuales"@es,
+        "Current Transparency Standard"@en;
     rdfs:domain dax:Company;
     rdfs:range dax:TransparencyStandard .
 
-dax:transparency_standard_singleton a dax:TransparencyStandard .
+dax:transparency_standard_singleton a dax:TransparencyStandard;
+    rdfs:label "Aktueller Transparenzstandard"@de,
+        "De huidige prijsdoorzichtigheid standaardsoftware"@nl,
+        "La norma de transparencia actuales"@es,
+        "Current Transparency Standard"@en .
 
 dax:wkn a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:DatatypeProperty,
@@ -695,6 +747,7 @@ dax:wkn a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 rdfs:definition a owl:AnnotationProperty .
 
 dax:EntryStandard a owl:Class;
+    rdfs:label "Entry Standard"@en, "Entrada Estándar"@es, "Die Eintragung Standard"@de, "Standaard vermelding"@nl;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:FirstQuotationBoard a owl:Class;
@@ -710,7 +763,7 @@ dax:IFRS a owl:Class;
     rdfs:subClassOf dax:AccountingStandard .
 
 dax:PrimeStandard a owl:Class;
-    rdfs:label "Prime Standard"@en;
+    rdfs:label "Prime Standard"@en, "Prime Standard"@de, "Principal Estándar"@es, "Prime Standaard"@nl;
     rdfs:subClassOf dax:GeneralStandard .
 
 dax:worksFor a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -743,7 +796,7 @@ dax:FoodAndBeverages a owl:Class;
     rdfs:subClassOf dax:Company .
 
 dax:GeneralStandard a owl:Class;
-    rdfs:label "General Standard"@en;
+    rdfs:label "General Standard"@en, "La Norma General"@es, "General Standard"@de, "Algemene Norm"@nl;
     rdfs:subClassOf dax:TransparencyStandard .
 
 dax:Insurance a owl:Class;
@@ -752,13 +805,18 @@ dax:Insurance a owl:Class;
     rdfs:subClassOf dax:Company .
 
 dax:OpenMarket a owl:Class;
-    rdfs:label "Freiverkehr"@de,
+    rdfs:label "Apertura del mercado"@es,
+        "Freiverkehr"@de,
+        "Open markt"@nl,
         "open market"@en;
     rdfs:subClassOf dax:MarketSegment;
     owl:disjointWith dax:RegulatedMarket .
 
 dax:RegulatedMarket a owl:Class;
-    rdfs:label "regulated market"@en;
+    rdfs:label "Geregelten Markt"@de,
+        "Gereguleerde markt"@nl,
+        "Mercados regulados"@es,
+        "regulated market"@en;
     rdfs:subClassOf dax:MarketSegment;
     owl:disjointWith dax:OpenMarket .
 
@@ -810,7 +868,9 @@ dax:FinancialServices a owl:Class;
     rdfs:subClassOf dax:Company .
 
 dax:MarketSegment a owl:Class;
-    rdfs:label "Börsensegment"@de,
+    rdfs:label "Marktsegment"@nl,
+        "Börsensegment"@de,
+        "Segmento de mercado"@es,
         "market segment"@en .
 
 dax:Media a owl:Class;

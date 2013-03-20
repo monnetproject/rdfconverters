@@ -4,6 +4,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://www.dfki.de/lt/dax.owl#function> rdfs:label "Aufgaben"@de,
+        "Funciones"@es,
+        "Function"@en,
+        "Function"@nl .
+
 <http://www.dfki.de/lt/en.owl> a owl:Ontology;
     rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
 
@@ -35,6 +40,7 @@ en:cfi a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:FunctionalProperty,
         owl:ObjectProperty;
     rdfs:comment "cfi should be linked to a properly defined CFI ontology"^^xsd:string;
+    rdfs:label "CFI";
     rdfs:domain en:Company .
 
 en:city a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
@@ -213,6 +219,10 @@ en:shareholder a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 
 en:shareholderValue a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:ObjectProperty;
+    rdfs:label "Aktionär Wert"@de,
+        "Deelgerechtigde Bedrag"@nl,
+        "Shareholder Value"@en,
+        "Valor accionista"@es;
     rdfs:domain en:Company;
     rdfs:range en:ShareholderValue .
 
@@ -254,6 +264,10 @@ en:title a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
 
 en:topManagement a <http://www.dfki.de/lt/time.owl#DiachronicProperty>,
         owl:ObjectProperty;
+    rdfs:label "Además de gestión"@es,
+        "Struisgras Beheersmatige"@nl,
+        "Top Management"@en,
+        "Top-Management"@de;
     rdfs:domain en:Company;
     rdfs:range en:Person .
 

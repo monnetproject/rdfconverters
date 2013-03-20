@@ -1,56 +1,53 @@
+@prefix if: <http://www.dfki.de/lt/if.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xebr: <http://www.dfki.de/lt/xebr.owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix if: <http://www.dfki.de/lt/if.owl#> .
 
 <http://www.dfki.de/lt/xebr.owl> a owl:Ontology;
     rdfs:comment "(C) Hans-Ulrich Krieger"^^xsd:string;
     owl:versionInfo "v7.0"^^xsd:string .
+
+xebr:addedValue a xebr:Metric;
+    rdfs:label "Added Value"@en,
+        "Toegevoegde waarde"@nl,
+        "Valor añadido"@es,
+        "Zusätzlichen Wert"@de;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
 
 xebr:belongsTo a owl:FunctionalProperty,
         owl:ObjectProperty;
     rdfs:domain xebr:Class;
     rdfs:range xebr:Class .
 
+xebr:currentRatio a xebr:Metric;
+    rdfs:label "Current Ratio (Measurement of Liquidity)"@en,
+        "De huidige overbrengingsverhouding"@nl,
+        "Derzeitige Verhältnis"@de,
+        "La proporción actual"@es;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:float .
+
+xebr:ebit a xebr:Metric;
+    rdfs:label "De lonen voor rente en aflossing, belastingen, afschrijvingsprofielen EBIT) ("@nl,
+        "Earnings before interest, taxes, depreciation and amortization (EBIT)"@en,
+        "Einnahmen vor Zinsen, Steuern, Abschreibungen und Abschreibung (EBIT)"@de,
+        "Los ingresos antes de intereses, impuestos y amortizaciones y amortización (EBIT)"@es;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
 xebr:end a owl:DatatypeProperty,
         owl:FunctionalProperty;
     rdfs:domain xebr:Report;
     rdfs:range xsd:date .
 
-xebr:ebit a xebr:Metric;
-    rdfs:label "Earnings before interest, taxes, depreciation and amortization (EBIT)"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:monetary .
-
-xebr:netResult a xebr:Metric;
-    rdfs:label "Net Result"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:monetary .
-
-xebr:ownFunds a xebr:Metric;
-    rdfs:label "Own Funds"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:monetary .
-
-xebr:addedValue a xebr:Metric;
-    rdfs:label "Added Value"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:monetary .
-
-xebr:currentRatio a xebr:Metric;
-    rdfs:label "Current Ratio (Measurement of Liquidity)"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:float .
-
-xebr:netWorkingCapital a xebr:Metric;
-    rdfs:label "Net Working Capital"@en;
-    rdfs:domain xebr:Report;
-    rdfs:range xsd:monetary .
-
 xebr:hasAccruedChargesAndDeferredIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Accrued charges and deferred income [Total]"@en;
+    rdfs:label "Accrued charges and deferred income"@en,
+        "Overlopende rekeningen - Passiva"@nl,
+        "Pagos Diferidos Y Cobros Diferidos Total"@es,
+        "Rechnungsabgrenzungsposten - Passiva"@de;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:AccruedChargesAndDeferredIncomePresentation;
     rdfs:range xsd:monetary .
@@ -85,77 +82,110 @@ xebr:hasActivityType a owl:DatatypeProperty,
 
 xebr:hasAddedValueBachS-5-8 a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Added value BACH (S - 5 - 8)"@en;
+    rdfs:label "Added value BACH (S - 5 - 8)"@en,
+        "De toegevoegde waarde van Bach (S - 5 - 8)"@nl,
+        "Mehrwert Bach (S - 5 bis 8)"@de,
+        "Valor Añadido Bach (S - 5 - 8)"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingBachRatiosPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAffiliatedEnterprises a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Affiliated enterprises"@en;
+    rdfs:label "Activo No Corriente Inversiones En Empresas Del Grupo Y Asociadas A Largo Plazo"@es,
+        "Affiliated enterprises"@en,
+        "Beteiligungen und Forderungen an verbundenen Unternehmen"@de,
+        "Deelnemingen in en vorderingen op verbonden ondernemingen"@nl;
     xebr:version "V2"^^xsd:string;
     rdfs:domain xebr:FinancialFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsOwedToCreditInstitutionsAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts owed to credit institutions after more than one year"@en;
+    rdfs:label "Amounts owed to credit institutions after more than one year"@en,
+        "Deudas Con Entidades De Crédito Después De Más De Un Año,"@es,
+        "Schulden aan kredietinstellingen na meer dan een jaar"@nl,
+        "Verbindlichkeiten gegenüber Kreditinstituten nach mehr als ein Jahr"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsOwedToCreditInstitutionsWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts owed to credit institutions within one year"@en;
+    rdfs:label "Amounts owed to credit institutions within one year"@en,
+        "Deudas Con Entidades De Crédito Dentro De Un Año,"@es,
+        "Schulden aan kredietinstellingen binnen één jaar"@nl,
+        "Verbindlichkeiten gegenüber Kreditinstituten innerhalb eines Jahres"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsPayableAfterMoreThanOneYearTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts payable after more than one year [Total]"@en;
+    rdfs:label "Amounts payable after more than one year"@en,
+        "Importes Exigibles, Después De Más De Un Año Total"@es,
+        "Schulden op meer dan één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsPayableTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts Payable [Total]"@en;
+    rdfs:label "Amounts Payable"@en,
+        "Schulden"@nl,
+        "Total Importes Deudas"@es,
+        "Verbindlichkeiten"@de;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:AmountsPayablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsPayableWithinOneYearTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts payable within one year [Total]"@en;
+    rdfs:label "Amounts payable within one year"@en,
+        "Los Importes Pagaderos En El Plazo De Un Año A Total"@es,
+        "Schulden op ten hoogste één jaar"@nl,
+        "Verbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsReceivableAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts receivable after more than one year"@en;
+    rdfs:label "Amounts receivable after more than one year"@en,
+        "Forderungen mit einer Restlaufzeit von mehr als einem Jahr"@de,
+        "Títulos De Crédito Después De Más De Un Año,"@es,
+        "Vorderingen op meer dan één jaar"@nl;
     xebr:version "V2"^^xsd:string;
     rdfs:domain xebr:AmountsReceivablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsReceivableTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts receivable [Total]"@en;
+    rdfs:label "Activo Corriente Deudores Comerciales Y Otras Cuentas A Cobrar"@es,
+        "Amounts kredietverzekeringsbranche Totaal"@nl,
+        "Amounts receivable"@en,
+        "Gesamtbetrag der Forderungen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AmountsReceivablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAmountsReceivableWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Amounts receivable within one year "@en;
+    rdfs:label "Amounts receivable within one year "@en,
+        "Forderungen mit einer Restlaufzeit bis zu einem Jahr"@de,
+        "Importes Exigibles Dentro De Un Año,"@es,
+        "Vorderingen op ten hoogste één jaar"@nl;
     xebr:version "V2"^^xsd:string;
     rdfs:domain xebr:AmountsReceivablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Assets [Total]"@en;
+    rdfs:label "Activa"@nl,
+        "Aktiva"@de,
+        "Assets"@en,
+        "Patrimonio Neto Y Pasivo Total"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AssetsPresentation;
     rdfs:range xsd:monetary .
@@ -169,21 +199,30 @@ xebr:hasBalanceSheetDate a owl:DatatypeProperty,
 
 xebr:hasCapital a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Capital"@en;
+    rdfs:label "Capital"@en,
+        "Kapitaal"@nl,
+        "Kapital"@de,
+        "Patrimonio Neto Fondos Propios Capital"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasCapitalisedProduction a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Capitalised production"@en;
+    rdfs:label "Capitalised production"@en,
+        "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Trabajos Realizados Por La Empresa Para Su Activo"@es,
+        "Gekapitaliseerd gebruiksdier"@nl,
+        "Veränderungen der in Ausführung befindlichen Arbeiten auf Bestellung"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasCashAtBankAndInHandTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Cash at bank and in hand [Total]"@en;
+    rdfs:label "Banksaldi en girosaldi Totaal"@nl,
+        "Cash at bank and in hand"@en,
+        "Haberes En Bancos Y En Caja Total"@es,
+        "Laufende Guthaben bei Kreditinstituten und Kassenbestand Insgesamt"@de;
     xebr:version "V5"^^xsd:string;
     rdfs:domain xebr:CashAtBankAndInHandPresentation;
     rdfs:range xsd:monetary .
@@ -211,7 +250,10 @@ xebr:hasCategoryOfEventValue a owl:DatatypeProperty,
 
 xebr:hasChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Charges [Total]"@en;
+    rdfs:label "-gebruikskosten Totaal"@nl,
+        "Charges"@en,
+        "Gebühren Insgesamt"@de,
+        "Los Gastos Totales"@es;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:IncomeStatementPresentation;
     rdfs:range xsd:monetary .
@@ -315,7 +357,7 @@ xebr:hasCompanyEventText a owl:DatatypeProperty,
     rdfs:range xsd:string .
 
 xebr:hasCompanyHistoryReport a owl:ObjectProperty;
-    rdfs:label "COMPANY HISTORY [Report]"@en;
+    rdfs:label "COMPANY HISTORY"@en;
     xebr:version "V5"^^xsd:string;
     rdfs:domain xebr:Report;
     rdfs:range xebr:CompanyHistoryReport .
@@ -349,7 +391,7 @@ xebr:hasCompanyIdentificationEndingDate a owl:DatatypeProperty,
     rdfs:range xsd:date .
 
 xebr:hasCompanyIdentificationReport a owl:ObjectProperty;
-    rdfs:label "COMPANY IDENTIFICATION [Report]"@en;
+    rdfs:label "COMPANY IDENTIFICATION"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:Report;
     rdfs:range xebr:CompanyIdentificationReport .
@@ -383,7 +425,7 @@ xebr:hasCompanyNameType a owl:DatatypeProperty,
     rdfs:range xsd:anyURI .
 
 xebr:hasCompanyOfficialsReport a owl:ObjectProperty;
-    rdfs:label "COMPANY OFFICIALS [Report]"@en;
+    rdfs:label "COMPANY OFFICIALS"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:Report;
     rdfs:range xebr:CompanyOfficialsReport .
@@ -446,28 +488,40 @@ xebr:hasCompanyTownComplement a owl:DatatypeProperty,
 
 xebr:hasCostOfMaterialsAndConsumablesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Cost of materials and consumables [Total]"@en;
+    rdfs:label "Cost of materials and consumables"@en,
+        "De kosten van grondstoffen en -materiaal Totaal"@nl,
+        "El Coste De Las Materias Primas Y Los Bienes Fungibles Total"@es,
+        "Kosten der Rohstoffe und Betriebsstoffe Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasCurrentAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Current assets [Total]"@en;
+    rdfs:label "Activo Corriente"@es,
+        "Current assets"@en,
+        "Umlaufvermögen"@de,
+        "Vlottende activa"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:CurrentAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasCurrentInvestmentsPresentation a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Current investments [Presentation]"@en;
+    rdfs:label "Current investments"@en,
+        "De huidige investeringsanalyses"@nl,
+        "Investitionen"@de,
+        "Las Inversiones En Curso"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:CurrentAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasCurrentInvestmentsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Current investments [Total]"@en;
+    rdfs:label "Actuales Inversiones Total"@es,
+        "Current investments"@en,
+        "De huidige investeringsanalyses Totaal"@nl,
+        "Investitionen Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:CurrentAssetsPresentation;
     rdfs:range xsd:monetary .
@@ -481,28 +535,40 @@ xebr:hasDateOfEvent a owl:DatatypeProperty,
 
 xebr:hasDebentureLoansAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Debenture loans after more than one year"@en;
+    rdfs:label "Anleihen nach mehr als ein Jahr"@de,
+        "Debenture loans after more than one year"@en,
+        "Empréstitos Obligacionales Después De Más De Un Año,"@es,
+        "Obligatieleningen na meer dan een jaar"@nl;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasDeferredChargesAndAccruedIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Deferred charges and accrued income [Total]"@en;
+    rdfs:label "Deferred charges and accrued income"@en,
+        "Gastos Diferidos Y Cobros Diferidos Total"@es,
+        "Overlopende rekeningen - Activa"@nl,
+        "Rechnungsabgrenzungsposten - Aktiva"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:DeferredChargesAndAccruedIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasDeferredTaxes a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Deferred taxes"@en;
+    rdfs:label "Aufgeschobene Steuern"@de,
+        "Deferred taxes"@en,
+        "Pasivo No Corriente Pasivos Por Impuesto Diferido"@es,
+        "Uitgestelde belastingen"@nl;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:ProvisionsAndDeferredTaxesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasDepreciationOnIntangibleAndTangibleFixedAssets a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Depreciation on intangible and tangible fixed assets"@en;
+    rdfs:label "Abschreibungen auf immaterielle Anlagewerte, Sachanlagen"@de,
+        "Afschrijving van materiële en immateriële vaste activa"@nl,
+        "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Deterioro Y Resultado Por Enajenaciones Del Inmovilizado Deterioro Y Pérdidas"@es,
+        "Depreciation on intangible and tangible fixed assets"@en;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
     rdfs:range xsd:monetary .
@@ -523,119 +589,170 @@ xebr:hasDirector a owl:DatatypeProperty,
 
 xebr:hasEquityAndLiabilitiesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Equity and Liabilities [Total]"@en;
+    rdfs:label "Equity and Liabilities"@en,
+        "Passiva"@de,
+        "Passiva"@nl,
+        "Patrimonio Neto Y Pasivo Total"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:EquityAndLiabilitiesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasEquityTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Equity [Total]"@en;
+    rdfs:label "Eigen vermogen"@nl,
+        "Eigenkapital"@de,
+        "Equity"@en,
+        "Patrimonio Neto Fondos Propios"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasExtraordinaryChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Extraordinary charges [Total]"@en;
+    rdfs:label "Außerordentliche Aufwendungen"@de,
+        "Extraordinary charges"@en,
+        "Gastos Extraordinarios Total"@es,
+        "Uitzonderlijke kosten"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:ExtraordinaryChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasExtraordinaryIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Extraordinary income [Total]"@en;
+    rdfs:label "Außerordentliche Erträge"@de,
+        "Extraordinary income"@en,
+        "Total Ingresos Extraordinarios"@es,
+        "Uitzonderlijke opbrengsten"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:ExtraordinaryIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasExtraordinaryProfitLossTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Extraordinary profit (loss) [Total]"@en;
+    rdfs:label "Buitengewone winstbepalende (-verlies) Totaal"@nl,
+        "Extraordinary profit (loss)"@en,
+        "Gesamtsumme der außerordentlichen Posten"@de,
+        "Resultados Extraordinarios (Pérdidas) Total"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:NetExtraordinaryIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial charges [Total]"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Gastos Financieros"@es,
+        "Financial charges"@en,
+        "Financiële kosten"@nl,
+        "Finanzaufwendungen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:FinancialChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialDebtsPayableAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial debts payable after more than one year"@en;
+    rdfs:label "Deudas Financieras Superior A Un Año"@es,
+        "Financial debts payable after more than one year"@en,
+        "Financiële schulden op meer dan één jaar"@nl,
+        "Finanzverbindlichkeiten mit einer Restlaufzeit von mehr als einem Jahr"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialDebtsPayableWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial debts payable within one year"@en;
+    rdfs:label "Deudas Financieras A Un Año"@es,
+        "Financial debts payable within one year"@en,
+        "Financiële schulden op ten hoogste één jaar"@nl,
+        "Finanzverbindlichkeiten mit einer Restlaufzeit bis zu einem Jahr"@de;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialFixedAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial fixed assets [Total]"@en;
+    rdfs:label "Financial fixed assets"@en,
+        "Financiële vaste activa"@nl,
+        "Finanzanlagen"@de,
+        "Inmovilizaciones Financieras Total"@es;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:FinancialFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial income [Total]"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Ingresos Financieros"@es,
+        "Financial income"@en,
+        "Financiële opbrengsten"@nl,
+        "Finanzerträge"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:FinancialIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFinancialProfitLossTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Financial profit (loss) [Total]"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Resultado Financiero"@es,
+        "Financial profit (loss)"@en,
+        "Financiële winstbepalende (-verlies) Totaal"@nl,
+        "Finanzielle Rentabilität (Verlust) Insgesamt"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:NetFinancialIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFixedAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Fixed assets [Total]"@en;
+    rdfs:label "Activo No Corriente"@es,
+        "Anlagevermögen"@de,
+        "Fixed assets"@en,
+        "Vaste activa"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:FixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFormationPreliminaryExpenses a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Formation (preliminary) expenses"@en;
+    rdfs:label "Bildung (vorläufiger)"@de,
+        "Formation (preliminary)"@nl,
+        "Formation (preliminary) expenses"@en,
+        "Los Gastos De Formación (Prejudicial)"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:IntangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasFurnitureFixturesAndEquipment a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Furniture, fixtures, and equipment"@en;
+    rdfs:label "Furniture, fixtures, and equipment"@en,
+        "Geschäftsausstattung und Fuhrpark"@de,
+        "Meubilair en rollend materieel"@nl,
+        "Mobiliario Y Enseres Y Equipos"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasGrossOperatingProfitT-6 a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Gross operating profit (T - 6)"@en;
+    rdfs:label "Brutobedrag exploitatiewinst T - 6)"@nl,
+        "Cuenta De Pérdidas Y Ganancias Resultado De Explotación"@es,
+        "Das Betriebsergebnis (T - 6)"@de,
+        "Gross operating profit (T - 6)"@en;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingBachRatiosPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasIncomeTaxes a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Income taxes"@en;
+    rdfs:label "Belastingen op het resultaat"@nl,
+        "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Impuestos Sobre Beneficios"@es,
+        "Income taxes"@en,
+        "Steuern auf das Ergebnis"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:IncomeStatementPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Income [Total]"@en;
+    rdfs:label "Einnahmen insgesamt"@de,
+        "Income"@en,
+        "Ingresos Totales"@es,
+        "Inkomen Totaal"@nl;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:IncomeStatementPresentation;
     rdfs:range xsd:monetary .
@@ -656,34 +773,46 @@ xebr:hasIncorporationPlace a owl:DatatypeProperty,
 
 xebr:hasIntangibleFixedAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Intangible fixed assets [Total]"@en;
+    rdfs:label "Activo No Corriente Inmovilizado Intangible"@es,
+        "Immaterielle Anlagewerte"@de,
+        "Immateriële vaste activa"@nl,
+        "Intangible fixed assets"@en;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:IntangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasInterestAndSimilarChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Interest and similar charges [Total]"@en;
+    rdfs:label "Belangstelling en soortgelijke -gebruikskosten Totaal"@nl,
+        "Intereses Y Cargas Asimiladas Total"@es,
+        "Interest and similar charges"@en,
+        "Zinsen und ähnliche Aufwendungen Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:InterestAndSimilarChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasInterestPaidOnFinancialDebts a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Interest paid on financial debts"@en;
+    rdfs:label "Betaalde rente op financiële schulden"@nl,
+        "Interest paid on financial debts"@en,
+        "Los Intereses Pagados Sobre Deudas Financieras"@es,
+        "Verzugszinsen auf finanzielle Forderungen"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:InterestAndSimilarChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasKeyBalanceSheetFiguresReport a owl:ObjectProperty;
-    rdfs:label "KEY BALANCE SHEET FIGURES [Report]"@en;
+    rdfs:label "Key Balance Sheet Figures"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:Report;
     rdfs:range xebr:KeyBalanceSheetFiguresReport .
 
 xebr:hasLandAndBuildings a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Land and buildings"@en;
+    rdfs:label "Activo No Corriente Inmovilizado Material Terrenos Y Construcciones"@es,
+        "Grundstücke und Bauten"@de,
+        "Land and buildings"@en,
+        "Terreinen en gebouwen"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
@@ -739,7 +868,10 @@ xebr:hasLegalStatusType a owl:DatatypeProperty,
 
 xebr:hasLiquidAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Liquid assets [Total]"@en;
+    rdfs:label "Activo Corriente Efectivo Y Otros Activos Líquidos Equivalentes"@es,
+        "Gesamtbetrag der Bareinlagen"@de,
+        "Liquid assets"@en,
+        "Vloeistofvolume nettovermogen Totaal"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:LiquidAssetsPresentation;
     rdfs:range xsd:monetary .
@@ -781,7 +913,10 @@ xebr:hasMainNameFlag a owl:DatatypeProperty,
 
 xebr:hasNetTurnover a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Net turnover"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Importe Neto De La Cifra De Negocios"@es,
+        "Erträge aus Verkäufen und Leistungen"@de,
+        "Net turnover"@en,
+        "Nettoprijs turnover"@nl;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingIncomePresentation;
     rdfs:range xsd:monetary .
@@ -998,189 +1133,270 @@ xebr:hasOfficialTitleOrGender a owl:DatatypeProperty,
 
 xebr:hasOperatingChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Operating charges [Total]"@en;
+    rdfs:label "Bedrijfskosten"@nl,
+        "Betriebliche Aufwendungen"@de,
+        "Operating charges"@en,
+        "Total Gastos De Explotación"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:OperatingChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOperatingIncomeTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Operating income [Total]"@en;
+    rdfs:label "Bedrijfsopbrengsten"@nl,
+        "Betriebliche Erträge"@de,
+        "Operating income"@en,
+        "Total Ingresos De Explotación"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:OperatingIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOperatingProfitLossTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Operating profit (loss) [Total]"@en;
+    rdfs:label "Bedrijfswinst (Bedrijfsverlies)"@nl,
+        "Betriebsgewinn (Betriebsverlust)"@de,
+        "Operating profit (loss)"@en,
+        "Resultado De Explotación (Pérdidas) Total"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:NetOperatingIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other creditors after more than one year"@en;
+    rdfs:label "Andere Gläubiger nach mehr als ein Jahr"@de,
+        "Andere crediteuren na meer dan een jaar"@nl,
+        "Other creditors after more than one year"@en,
+        "Otros Acreedores Después De Más De Un Año,"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherCreditorsWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other creditors  within one year"@en;
+    rdfs:label "Andere Gläubiger innerhalb eines Jahres"@de,
+        "Andere schuldeisers binnen één jaar"@nl,
+        "Other creditors  within one year"@en,
+        "Otros Acreedores Dentro De Un Año,"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherDebtors a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other debtors"@en;
+    rdfs:label "Andere belastingschuldigen"@nl,
+        "Other debtors"@en,
+        "Otros Deudores"@es,
+        "Sonstige Schuldner"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsReceivablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherExternalCharges a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other external charges"@en;
+    rdfs:label "Andere externe Aufwendungen"@de,
+        "Andere externe kosten"@nl,
+        "Other external charges"@en,
+        "Otros Gastos Externos"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherFinancialAssets a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other financial assets"@en;
+    rdfs:label "Activo No Corriente Inversiones Financieras A Largo Plazo"@es,
+        "Andere financiële vaste activa"@nl,
+        "Other financial assets"@en,
+        "Sonstige Finanzanlagen"@de;
     xebr:version "V2"^^xsd:string;
     rdfs:domain xebr:FinancialFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherFinancialCharges a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other financial charges"@en;
+    rdfs:label "Andere financiële -gebruikskosten"@nl,
+        "Other financial charges"@en,
+        "Otros Gastos Financieros"@es,
+        "Sonstige Finanzkosten"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:InterestAndSimilarChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherFinancialCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other financial creditors after more than one year"@en;
+    rdfs:label "Andere financiële schuldeisers na meer dan een jaar"@nl,
+        "Die anderen Gläubiger nach mehr als ein Jahr"@de,
+        "Other financial creditors after more than one year"@en,
+        "Otros Acreedores Financieros Después De Más De Un Año,"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherFinancialCreditorsWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other financial creditors  within one year"@en;
+    rdfs:label "Andere financiële schuldeisers binnen één jaar"@nl,
+        "Die anderen Gläubiger innerhalb eines Jahres"@de,
+        "Other financial creditors  within one year"@en,
+        "Otros Acreedores Financieros Dentro De Un Año,"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherFixtures a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other fixtures"@en;
+    rdfs:label "Andere Einrichtung"@de,
+        "Andere ontmoetingen"@nl,
+        "Other fixtures"@en,
+        "Otros Acontecimientos"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherIntangibleFixedAssets a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other intangible fixed assets"@en;
+    rdfs:label "Andere Sachanlagen"@de,
+        "Andere immateriële"@nl,
+        "Other intangible fixed assets"@en,
+        "Otro Inmovilizado Material"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:IntangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherNonFinancialCreditorsAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other non financial creditors after more than one year"@en;
+    rdfs:label "Andere niet financiële schuldeisers na meer dan een jaar"@nl,
+        "Los Demás Acreedores Financieros Después De Más De Un Año,"@es,
+        "Other non financial creditors after more than one year"@en,
+        "Sonstige finanzielle Gläubiger nach mehr als ein Jahr"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherNonFinancialCreditorsWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other non financial creditors  within one year"@en;
+    rdfs:label "Andere niet financiële schuldeisers binnen één jaar"@nl,
+        "Other non financial creditors  within one year"@en,
+        "Otros Acreedores Financieros No Dentro De Un Año,"@es,
+        "Sonstige finanzielle Gläubiger innerhalb eines Jahres"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherOperatingChargesAndTaxesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other operating charges and taxes [Total]"@en;
+    rdfs:label "Andere voedingsnet heffingen en belastingen Totaal"@nl,
+        "Other operating charges and taxes"@en,
+        "Otros Gastos De Funcionamiento Y Los Impuestos Total"@es,
+        "sonstige Rückstellungen"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OtherOperatingChargesAndTaxesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherOperatingIncome a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other operating income"@en;
+    rdfs:label "Andere bedrijfsopbrengsten"@nl,
+        "Other operating income"@en,
+        "Otros Ingresos De Explotación"@es,
+        "Sonstige operative Erträge"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherPropertyPlantAndEquipment a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other property, plant, and equipment"@en;
+    rdfs:label "Leasing en soortgelijke rechten"@nl,
+        "Leasing und ähnliche Rechten"@de,
+        "Other property, plant, and equipment"@en,
+        "Otros Bienes, Instalaciones Y Equipos"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherProvisions a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other provisions"@en;
+    rdfs:label "Andere bepalingen"@nl,
+        "Other provisions"@en,
+        "Otras Disposiciones"@es,
+        "Sonstige Bestimmungen"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherStocks a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other stocks"@en;
+    rdfs:label "Andere Bestände"@de,
+        "Andere visbestanden"@nl,
+        "Other stocks"@en,
+        "Otras Poblaciones"@es;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StocksPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherTangibleFixedAssets a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other tangible fixed assets"@en;
+    rdfs:label "Other tangible fixed assets"@en,
+        "Otro Inmovilizado Material"@es,
+        "Overige materiële vaste activa"@nl,
+        "Sonstige Sachanlagen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:TangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasOtherValueAdjustmentsAndProvisions a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Other value adjustments and provisions"@en;
+    rdfs:label "Andere Wertberichtigungen und Rückstellungen"@de,
+        "Andere waardecorrecties en bepalingen"@nl,
+        "Other value adjustments and provisions"@en,
+        "Otros Los Ajustes De Valor Y Provisiones"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPaymentsOnAccount a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Payments on account"@en;
+    rdfs:label "Activo Corriente Existencias Anticipos A Proveedores"@es,
+        "De vooruitbetalingen"@nl,
+        "Payments on account"@en,
+        "Vorauszahlungen"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:StocksPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPaymentsOnAccountAndAssetsInConstruction a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Payments on account and assets in construction"@en;
+    rdfs:label "Activo No Corriente Inmovilizado Material Inmovilizado En Curso Y Anticipos"@es,
+        "De vooruitbetalingen en nettovermogen in de bouw"@nl,
+        "Payments on account and assets in construction"@en,
+        "Zahlungen für Rechnung und Anlagen im Bau"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPaymentsReceivedOnAccountsOfOrderWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Payments received on accounts of order within one year"@en;
+    rdfs:label "Betalingen ontvangen op rekeningen van orde binnen één jaar"@nl,
+        "Los Pagos Recibidos En Las Cuentas De Orden Dentro De Un Año,"@es,
+        "Payments received on accounts of order within one year"@en,
+        "Zahlungen für Rechnung der Geschäftsordnung innerhalb eines Jahres"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPensionsAndSimilarCommitments a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Pensions and similar commitments"@en;
+    rdfs:label "Las Pensiones Y Compromisos Similares"@es,
+        "Pensioenen en soortgelijke toezeggingen"@nl,
+        "Pensions and similar commitments"@en,
+        "Ruhestandsbezuege und ähnliche Zahlungen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StaffCostsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPlantAndMachinery a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Plant and machinery"@en;
+    rdfs:label "Anlagen, Maschinen und Betriebsausstattung"@de,
+        "Instalaciones Y Maquinaria"@es,
+        "Installaties, machines en uitrusting"@nl,
+        "Plant and machinery"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
@@ -1194,56 +1410,80 @@ xebr:hasPresident a owl:DatatypeProperty,
 
 xebr:hasProfitLossBroughtForward a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Profit (loss) brought forward"@en;
+    rdfs:label "Nettovermögen, Vorgetragener Gewinn (Verlust)"@de,
+        "Patrimonio Neto Fondos Propios Resultados De Ejercicios Anteriores"@es,
+        "Profit (loss) brought forward"@en,
+        "Winstbepalende (-verlies),"@nl;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProfitLossForThePeriod a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Profit (loss) for the period"@en;
+    rdfs:label "Nettovermögen, Gewinn (Verlust) des Geschäftsjahres, Restlicher Gewinn (Verlust)"@de,
+        "Patrimonio Neto Fondos Propios Resultado Del Ejercicio"@es,
+        "Profit (loss) for the period"@en,
+        "Winstbepalende (-verlies) voor de periode"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProfitLossForThePeriodTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Profit (loss) for the period [Total]"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Resultado Del Ejercicio"@es,
+        "Gewinn (Verlust) des Geschäftsjahres"@de,
+        "Profit (loss) for the period"@en,
+        "Winst (Verlies) van het boekjaar"@nl;
     xebr:version "V3"^^xsd:string;
     rdfs:domain xebr:IncomeStatementPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProfitOrLossOnOrdinaryActivitiesBeforeTaxes a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Profit or loss on ordinary activities before taxes"@en;
+    rdfs:label "Ergebnis der gewöhnlichen Tätigkeiten vor Steuern"@de,
+        "Omzetresultaat op gewone activiteiten voor belastingen"@nl,
+        "Profit or loss on ordinary activities before taxes"@en,
+        "Resultado De Las Actividades Ordinarias Antes De Impuestos"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:IncomeStatementPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasPropertyPlantAndEquipmentTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Property, plant, and equipment [Total]"@en;
+    rdfs:label "Eigendom, fabrieksinstallatie en equipment Totaal"@nl,
+        "Eigentum, Anlagen und Ausrüstungen Insgesamt"@de,
+        "La Propiedad, Instalaciones Y Equipos Total"@es,
+        "Property, plant, and equipment"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:PropertyPlantAndEquipmentPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProvisionsAndDeferredTaxesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Provisions and deferred taxes [Total]"@en;
+    rdfs:label "Disposiciones Y Aplace Impuestos Total"@es,
+        "Provisions and deferred taxes"@en,
+        "Rückstellungen"@de,
+        "Voorzieningen"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:ProvisionsAndDeferredTaxesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProvisionsForLiabilitiesAndChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Provisions for liabilities and charges [Total]"@en;
+    rdfs:label "Bepalingen voor ontmantelingsverplichtingen en -gebruikskosten Totaal"@nl,
+        "Provisiones Para Riesgos Y Cargas Total"@es,
+        "Provisions for liabilities and charges"@en,
+        "Rückstellungen Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasProvisionsForPensionsAndSimilarObligations a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Provisions for pensions and similar obligations"@en;
+    rdfs:label "Bepalingen voor pensioenen en soortgelijke verplichtingen"@nl,
+        "Provisiones Para Pensiones Y Obligaciones Similares"@es,
+        "Provisions for pensions and similar obligations"@en,
+        "Rückstellungen für Pensionen und ähnliche Verpflichtungen"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ProvisionsForLiabilitiesAndChargesPresentation;
     rdfs:range xsd:monetary .
@@ -1257,7 +1497,10 @@ xebr:hasPublicationDateOfEvent a owl:DatatypeProperty,
 
 xebr:hasRawMaterialsAndConsumables a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Raw materials and consumables"@en;
+    rdfs:label "Handelsgoederen, grond- en hulpstoffen"@nl,
+        "Las Materias Primas Y Los Bienes Fungibles"@es,
+        "Raw materials and consumables"@en,
+        "Waren, Roh-, Hilfs- und Betriebsstoffe"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:CostOfMaterialsAndConsumablesPresentation;
     rdfs:range xsd:monetary .
@@ -1278,21 +1521,30 @@ xebr:hasRegistrationDateOfEvent a owl:DatatypeProperty,
 
 xebr:hasReserves a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Reserves"@en;
+    rdfs:label "Patrimonio Neto Fondos Propios Reservas"@es,
+        "Reserves"@en,
+        "Reserves"@nl,
+        "Rücklagen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasRevaluationReserve a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Revaluation reserve"@en;
+    rdfs:label "Herwaarderingsreserve"@nl,
+        "Neubewertungsrücklage"@de,
+        "Reserva De Revaluación"@es,
+        "Revaluation reserve"@en;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasSharePremiumAccount a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Share premium account"@en;
+    rdfs:label "Agio"@de,
+        "Agio"@nl,
+        "Patrimonio Neto Fondos Propios Prima De Emisión"@es,
+        "Share premium account"@en;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:EquityPresentation;
     rdfs:range xsd:monetary .
@@ -1306,56 +1558,80 @@ xebr:hasSigningAuthorityFlag a owl:DatatypeProperty,
 
 xebr:hasSocialSecurityCosts a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Social security costs"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Gastos De Personal Cargas Sociales"@es,
+        "Social security costs"@en,
+        "Sociale zekerheid"@nl,
+        "Soziale Sicherheit Kosten"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:StaffCostsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasStaffCostsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Staff costs [Total]"@en;
+    rdfs:label "De personeelskosten Totaal"@nl,
+        "Gesamtbetrag der Personalkosten"@de,
+        "Staff costs"@en,
+        "Total Costes De Personal"@es;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:StaffCostsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasStockRawMaterialsAndConsumables a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Stock Raw materials and consumables"@en;
+    rdfs:label "Activo Corriente Existencias De Materias Primas Y Otros Aprovisionamientos"@es,
+        "Aus Materialaufwand"@de,
+        "Stock Raw materials and consumables"@en,
+        "Voorraad- Ruwe vanmateriaal en -materiaal"@nl;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StocksPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasStocksTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Stocks [Total]"@en;
+    rdfs:label "Activo Corriente Existencias"@es,
+        "Stocks"@en,
+        "Voorraden en bestellingen in uitvoering"@nl,
+        "Vorräte und in Ausführung befindliche Bestellungen"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StocksPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasSubscribedCapitalUnpaidTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Subscribed capital unpaid [Total]"@en;
+    rdfs:label "Capital Suscrito No Total"@es,
+        "Gezeichnetes Kapital unbezahlte Insgesamt"@de,
+        "INGETEKENDE kapitaalrecht onbetaalde Totaal"@nl,
+        "Subscribed capital unpaid"@en;
     xebr:version "V5"^^xsd:string;
     rdfs:domain xebr:SubscribedCapitalUnpaidPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasTangibleFixedAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Tangible fixed assets [Total]"@en;
+    rdfs:label "Activo No Corriente Inmovilizado Material"@es,
+        "Materiële vaste activa"@nl,
+        "Sachanlagen"@de,
+        "Tangible fixed assets"@en;
     xebr:version "V2"^^xsd:string;
     rdfs:domain xebr:TangibleFixedAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasTaxesRemunerationAndSocialSecurityPayableAfterMoreThanOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Taxes, remuneration, and social security payable after more than one year"@en;
+    rdfs:label "Belastingen, loon en sociale zekerheid van meer dan één jaar."@nl,
+        "Los Impuestos, La Remuneración Y La Seguridad Social A Pagar Después De Más De Un Año,"@es,
+        "Steuern, Entlohnung und Sozialversicherung mehr als ein Jahr"@de,
+        "Taxes, remuneration, and social security payable after more than one year"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasTaxesRemunerationAndSocialSecurityPayableWithinOneYear a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Taxes, remuneration and social security payable within one year"@en;
+    rdfs:label "Los Impuestos, La Remuneración Y La Seguridad Social A Un Año"@es,
+        "Schulden met betrekking tot belastingen, bezoldigingen en sociale lasten"@nl,
+        "Taxes, remuneration and social security payable within one year"@en,
+        "Verbindlichkeiten aufgrund von Steuern, Arbeitsentgelten und Soziallasten"@de;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:AmountsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
@@ -1390,58 +1666,106 @@ xebr:hasTownNameText a owl:DatatypeProperty,
 
 xebr:hasTradeDebtors a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Trade debtors"@en;
+    rdfs:label "Den Schuldner"@de,
+        "Handelsdebiteuren"@nl,
+        "Los Deudores"@es,
+        "Trade debtors"@en;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:AmountsReceivablePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasTradeDebtsPayableAfterMoreThanOneYearTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Trade debts payable after more than one year [Total]"@en;
+    rdfs:label "De schulden van meer dan een jaar Totaal"@nl,
+        "El Comercio Deudas Exigibles, Después De Más De Un Año Total"@es,
+        "Trade debts payable after more than one year"@en,
+        "Zu den Forderungen nach mehr als einem Jahr Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasTradeDebtsPayableWithinOneYearTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Trade debts payable within one year [Total]"@en;
+    rdfs:label "El Comercio Deudas Exigibles En El Plazo De Un Año A Total"@es,
+        "Handel debts lossingsdocument binnen één jaar Totaal"@nl,
+        "Trade debts payable within one year"@en,
+        "Zu den Schulden innerhalb eines Jahres Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:TradeDebtsPayableWithinOneYearPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasValueAdjustmentsOnFinancialAssets a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Value adjustments on financial assets"@en;
+    rdfs:label "Correcciones De Valor Sobre Inmovilizaciones Financieras"@es,
+        "Gesamtsumme der Berichtigungen des Finanzvermögens"@de,
+        "Value adjustments on financial assets"@en,
+        "Waardecorrecties op financiële activa"@nl;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:FinancialChargesPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasValueAdjustmentsOnNonFinancialAssetsTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Value adjustments on non financial assets [Total]"@en;
+    rdfs:label "Correcciones De Valor Sobre Inmovilizaciones Financieras Total"@es,
+        "Value adjustments on non financial assets"@en,
+        "Waardecorrecties niet financiële activa Totaal"@nl,
+        "Wertberichtigungen auf Forderungen Insgesamt"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasVariationInStocksOfFinishedGoodsAndWorkInProgress a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Variation in stocks of finished goods and work in progress"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Variación De Existencias De Productos Terminados Y En Curso De Fabricación"@es,
+        "Variation in stocks of finished goods and work in progress"@en,
+        "Variation voorraadverandering van eindproducten en werk in uitvoering"@nl,
+        "Änderung des Bestandes an fertigen und die laufenden Arbeiten"@de;
     xebr:version "V4"^^xsd:string;
     rdfs:domain xebr:OperatingIncomePresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasWagesAndSalaries a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Wages and salaries"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Operaciones Continuadas Gastos De Personal Sueldos, Salarios Y Asimilados"@es,
+        "De lonen en salarissen"@nl,
+        "Löhne und Gehälter"@de,
+        "Wages and salaries"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StaffCostsPresentation;
     rdfs:range xsd:monetary .
 
 xebr:hasWorkInProgress a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "Work in progress"@en;
+    rdfs:label "Activo Corriente Existencias De Productos En Curso"@es,
+        "Goederen in bewerking"@nl,
+        "Unfertige Erzeugnisse"@de,
+        "Work in progress"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:domain xebr:StocksPresentation;
+    rdfs:range xsd:monetary .
+
+xebr:netResult a xebr:Metric;
+    rdfs:label "Net Result"@en,
+        "Netto Ergebnis"@de,
+        "Nettoprijs Resultaat"@nl,
+        "Resultado neto"@es;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:netWorkingCapital a xebr:Metric;
+    rdfs:label "Net Working Capital"@en,
+        "Netto Working Capital"@de,
+        "Nettoprijs Be- Capital"@nl,
+        "Red Working Capital"@es;
+    rdfs:domain xebr:Report;
+    rdfs:range xsd:monetary .
+
+xebr:ownFunds a xebr:Metric;
+    rdfs:label "Eigen middelen"@nl,
+        "Eigene Mittel"@de,
+        "Fondos propios"@es,
+        "Own Funds"@en;
+    rdfs:domain xebr:Report;
     rdfs:range xsd:monetary .
 
 xebr:partOf a owl:ObjectProperty;
@@ -1456,49 +1780,67 @@ xebr:start a owl:DatatypeProperty,
 xebr:version a owl:AnnotationProperty .
 
 xebr:AccruedChargesAndDeferredIncomePresentation a owl:Class;
-    rdfs:label "Accrued charges and deferred income [Presentation]"@en;
+    rdfs:label "Accrued charges and deferred income"@en,
+        "Overlopende"@nl,
+        "Pagos Diferidos Y Cobros Diferidos"@es,
+        "Passiva und Nettovermögen, Rechnungsabgrenzungsposten"@de;
     xebr:partOf xebr:AmountsPayablePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CashAtBankAndInHandPresentation a owl:Class;
-    rdfs:label "Cash at bank and in hand [Presentation]"@en;
+    rdfs:label "Banksaldi en girosaldi"@nl,
+        "Cash at bank and in hand"@en,
+        "Haberes En Bancos Y En Caja"@es,
+        "Laufende Guthaben bei Kreditinstituten und Kassenbestand"@de;
     xebr:partOf xebr:LiquidAssetsPresentation;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CompanyAddressComplementPresentation a owl:Class;
-    rdfs:label "Company address, Complement [Presentation]"@en;
+    rdfs:label "Company address, Complement"@en;
     xebr:partOf xebr:CompanyAddressList;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:DeferredChargesAndAccruedIncomePresentation a owl:Class;
-    rdfs:label "Deferred charges and accrued income [Presentation]"@en;
+    rdfs:label "Aktiva, Antizipative und transitorische Rechungsabgrenzung"@de,
+        "Deferred charges and accrued income"@en,
+        "Gastos Diferidos Y Cobros Diferidos"@es,
+        "Uitgestelde uitgaven en inkomsten toerekenbare"@nl;
     xebr:partOf xebr:CurrentAssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:ExtraordinaryChargesPresentation a owl:Class;
-    rdfs:label "Extraordinary charges [Presentation]"@en;
+    rdfs:label "Buitengewone -gebruikskosten"@nl,
+        "Extraordinary charges"@en,
+        "Gastos Extraordinarios"@es,
+        "Lasten"@de;
     xebr:partOf xebr:NetExtraordinaryIncomePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:ExtraordinaryIncomePresentation a owl:Class;
-    rdfs:label "Extraordinary income [Presentation]"@en;
+    rdfs:label "Buitengewone baten."@nl,
+        "Einkünfte"@de,
+        "Extraordinary income"@en,
+        "Ingresos Excepcionales"@es;
     xebr:partOf xebr:NetExtraordinaryIncomePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:FinancialIncomePresentation a owl:Class;
-    rdfs:label "Financial income [Presentation]"@en;
+    rdfs:label "Einnahmen aus Finanzanlagen und Finanzierungslasten"@de,
+        "Financial income"@en,
+        "Financiële baten"@nl,
+        "Ingresos Financieros"@es;
     xebr:partOf xebr:NetFinancialIncomePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialAddressComplementPresentation a owl:Class;
-    rdfs:label "Official address, Complement [Presentation]"@en;
+    rdfs:label "Official address, Complement"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
@@ -1510,61 +1852,73 @@ xebr:OfficialFirstAndMiddleNamesList a owl:Class;
     rdfs:subClassOf xebr:Class .
 
 xebr:OtherOperatingChargesAndTaxesPresentation a owl:Class;
-    rdfs:label "Other operating charges and taxes [Presentation]"@en;
+    rdfs:label "Andere voedingsnet heffingen en belastingen"@nl,
+        "Other operating charges and taxes"@en,
+        "Otros Gastos De Funcionamiento Y Los Impuestos"@es,
+        "Sonstige betriebliche und Abgaben"@de;
     xebr:partOf xebr:OperatingChargesPresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:SubscribedCapitalUnpaidPresentation a owl:Class;
-    rdfs:label "Subscribed capital unpaid [Presentation]"@en;
+    rdfs:label "Capital Suscrito No Desembolsado"@es,
+        "Gezeichnetes Kapital unbezahlte"@de,
+        "INGETEKENDE kapitaalrecht onbetaalde"@nl,
+        "Subscribed capital unpaid"@en;
     xebr:partOf xebr:AssetsPresentation;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CollectiveProcedurePresentation a owl:Class;
-    rdfs:label "Collective procedure [Presentation]"@en;
+    rdfs:label "Collective procedure"@en;
     xebr:partOf xebr:CompanyIdentificationReport;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:CompanyIdentificationReport .
 
 xebr:CompanyDataValidityPresentation a owl:Class;
-    rdfs:label "Company data validity [Presentation]"@en;
+    rdfs:label "Company data validity"@en;
     xebr:partOf xebr:CompanyIdentificationReport;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:CompanyIdentificationReport .
 
 xebr:LiquidAssetsPresentation a owl:Class;
-    rdfs:label "Liquid assets [Presentation]"@en;
+    rdfs:label "Activos Líquidos"@es,
+        "Flüssige Mittel"@de,
+        "Liquid assets"@en,
+        "Vloeistofvolume nettovermogen"@nl;
     xebr:partOf xebr:CurrentAssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:MainOfficialPresentation a owl:Class;
-    rdfs:label "Main official [Presentation]"@en;
+    rdfs:label "Main official"@en;
     xebr:partOf xebr:CompanyOfficialsReport;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:CompanyOfficialsReport .
 
 xebr:OfficialDataValidityPresentation a owl:Class;
-    rdfs:label "Official data validity [Presentation]"@en;
+    rdfs:label "Official data validity"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialShareholdingPresentation a owl:Class;
-    rdfs:label "Official shareholding [Presentation]"@en;
+    rdfs:label "Official shareholding"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OperatingBachRatiosPresentation a owl:Class;
-    rdfs:label "Operating Bach Ratios [Presentation]"@en;
+    rdfs:label "Die Bach Verhältnisse"@de,
+        "Los Coeficientes De Bach"@es,
+        "Operating Bach Ratios"@en,
+        "Voedingsnet Bach ratios"@nl;
     xebr:partOf xebr:NetOperatingIncomePresentation;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CompanyAddressTownPresentation a owl:Class;
-    rdfs:label "Company address, Town [Presentation]"@en;
+    rdfs:label "Company address, Town"@en;
     xebr:partOf xebr:CompanyAddressList;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
@@ -1577,67 +1931,88 @@ xebr:CompanyHistoryEventList a owl:Class;
         xebr:CompanyHistoryReport .
 
 xebr:CostOfMaterialsAndConsumablesPresentation a owl:Class;
-    rdfs:label "Cost of materials and consumables [Presentation]"@en;
+    rdfs:label "Cost of materials and consumables"@en,
+        "De kosten van grondstoffen en -materiaal"@nl,
+        "El Coste De Los Materiales Y Productos De Consumo"@es,
+        "Kosten der Rohstoffe und Betriebsstoffe"@de;
     xebr:partOf xebr:OperatingChargesPresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:EventCategoryPresentation a owl:Class;
-    rdfs:label "Event category [Presentation]"@en;
+    rdfs:label "Event category"@en;
     xebr:partOf xebr:CompanyHistoryEventList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:EventDatePresentation a owl:Class;
-    rdfs:label "Event date [Presentation]"@en;
+    rdfs:label "Event date"@en;
     xebr:partOf xebr:CompanyHistoryEventList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:EventDescriptionPresentation a owl:Class;
-    rdfs:label "Event description [Presentation]"@en;
+    rdfs:label "Event description"@en;
     xebr:partOf xebr:CompanyHistoryEventList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:FinancialChargesPresentation a owl:Class;
-    rdfs:label "Financial charges [Presentation]"@en;
+    rdfs:label "Financial charges"@en,
+        "Financiële -gebruikskosten"@nl,
+        "Finanzkosten"@de,
+        "Gastos Financieros"@es;
     xebr:partOf xebr:NetFinancialIncomePresentation;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:FinancialFixedAssetsPresentation a owl:Class;
-    rdfs:label "Financial fixed assets [Presentation]"@en;
+    rdfs:label "De financiële vaste activa"@nl,
+        "Financial fixed assets"@en,
+        "Finanzanlagevermögen"@de,
+        "Inmovilizaciones Financieras"@es;
     xebr:partOf xebr:FixedAssetsPresentation;
     xebr:version "V2"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:IntangibleFixedAssetsPresentation a owl:Class;
-    rdfs:label "Intangible fixed assets [Presentation]"@en;
+    rdfs:label "Immaterielles Anlagevermoegen"@de,
+        "Immateriële"@nl,
+        "Inmovilizado Inmaterial"@es,
+        "Intangible fixed assets"@en;
     xebr:partOf xebr:FixedAssetsPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:InterestAndSimilarChargesPresentation a owl:Class;
-    rdfs:label "Interest and similar charges [Presentation]"@en;
+    rdfs:label "Belangstelling en soortgelijke lasten."@nl,
+        "Intereses Y Cargas Asimiladas."@es,
+        "Interest and similar charges"@en,
+        "Zinsen und ähnliche Aufwendungen"@de;
     xebr:partOf xebr:FinancialChargesPresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:NetExtraordinaryIncomePresentation a owl:Class;
-    rdfs:label "Net extraordinary income [Presentation]"@en;
+    rdfs:label "Ausserordentliche Einnahmen und Lasten"@de,
+        "Net extraordinary income"@en,
+        "Nettoprijs buitengewone baten."@nl,
+        "Red Ingresos Excepcionales"@es;
     xebr:partOf xebr:IncomeStatementPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:NetFinancialIncomePresentation a owl:Class;
-    rdfs:label "Net financial income [Presentation]"@en;
+    rdfs:label "Finanzielle Erträge abzüglich"@de,
+        "Net financial income"@en,
+        "Nettoprijs financiële baten"@nl,
+        "Renta Financiera Neta"@es;
     xebr:partOf xebr:IncomeStatementPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialAddressCityOrTownPresentation a owl:Class;
-    rdfs:label "Official address, City or town [Presentation]"@en;
+    rdfs:label "Official address, City or town"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
@@ -1649,37 +2024,52 @@ xebr:OfficialIdNumberList a owl:Class;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialPlaceOfBirthPresentation a owl:Class;
-    rdfs:label "Official place of birth [Presentation]"@en;
+    rdfs:label "Official place of birth"@en;
     xebr:partOf xebr:OfficialNamePresentation;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:ProvisionsAndDeferredTaxesPresentation a owl:Class;
-    rdfs:label "Provisions and deferred taxes [Presentation]"@en;
+    rdfs:label "Bepalingen en uitgesteld straatbelasting"@nl,
+        "Disposiciones Y Los Impuestos Diferidos"@es,
+        "Provisions and deferred taxes"@en,
+        "Rücklagen für unvorhergesehene Auslagen und andere Verpflichtungen"@de;
     xebr:partOf xebr:EquityAndLiabilitiesPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:ProvisionsForLiabilitiesAndChargesPresentation a owl:Class;
-    rdfs:label "Provisions for liabilities and charges  [Presentation]"@en;
+    rdfs:label "Bepalingen voor ontmantelingsverplichtingen en -gebruikskosten"@nl,
+        "Provisiones Para Riesgos Y Cargas"@es,
+        "Provisions for liabilities and charges "@en,
+        "Rückstellungen"@de;
     xebr:partOf xebr:ProvisionsAndDeferredTaxesPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:ValueAdjustmentsOnNonFinancialAssetsPresentation a owl:Class;
-    rdfs:label "Value adjustments on non financial assets [Presentation]"@en;
+    rdfs:label "Correcciones De Valor De Los Activos Financieros"@es,
+        "Value adjustments on non financial assets"@en,
+        "Waardecorrecties niet financiële activa"@nl,
+        "Wertberichtigungen auf Forderungen"@de;
     xebr:partOf xebr:NetOperatingIncomePresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:AmountsPayablePresentation a owl:Class;
-    rdfs:label "Amounts payable [Presentation]"@en;
+    rdfs:label "Amounts payable"@en,
+        "Amounts transitrekeningen"@nl,
+        "Los Importes A Pagar"@es,
+        "Verbindlichkeiten"@de;
     xebr:partOf xebr:EquityAndLiabilitiesPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:AssetsPresentation a owl:Class;
-    rdfs:label "Assets [Presentation]"@en;
+    rdfs:label "Activa - Titel"@nl,
+        "Activo"@es,
+        "Aktiva - Titel"@de,
+        "Assets"@en;
     xebr:partOf xebr:KeyBalanceSheetFiguresReport;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class,
@@ -1711,50 +2101,74 @@ xebr:CompanyNameList a owl:Class;
     rdfs:subClassOf xebr:CompanyIdentificationReport .
 
 xebr:EquityAndLiabilitiesPresentation a owl:Class;
-    rdfs:label "Equity and Liabilities [Presentation]"@en;
+    rdfs:label "Equity and Liabilities"@en,
+        "La Equidad Y Pasivo"@es,
+        "Passiva - Titel"@de,
+        "Passiva - Titel"@nl;
     xebr:partOf xebr:KeyBalanceSheetFiguresReport;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class,
         xebr:KeyBalanceSheetFiguresReport .
 
 xebr:FixedAssetsPresentation a owl:Class;
-    rdfs:label "Fixed assets [Presentation]"@en;
+    rdfs:label "Anlagevermögen"@de,
+        "Fixed assets"@en,
+        "Inmovilizaciones"@es,
+        "Vaste activa"@nl;
     xebr:partOf xebr:AssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OperatingChargesPresentation a owl:Class;
-    rdfs:label "Operating charges [Presentation]"@en;
+    rdfs:label "Bedrijfslasten."@nl,
+        "Betriebliche Aufwendungen"@de,
+        "Gastos De Explotación"@es,
+        "Operating charges"@en;
     xebr:partOf xebr:NetOperatingIncomePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:StaffCostsPresentation a owl:Class;
-    rdfs:label "Staff costs [Presentation]"@en;
+    rdfs:label "De personeelskosten"@nl,
+        "Gastos De Personal"@es,
+        "Personalkosten"@de,
+        "Staff costs"@en;
     xebr:partOf xebr:OperatingChargesPresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:TangibleFixedAssetsPresentation a owl:Class;
-    rdfs:label "Tangible fixed assets [Presentation]"@en;
+    rdfs:label "Inmovilizado Material"@es,
+        "Sachanlagvermögen"@de,
+        "Tangible fixed assets"@en,
+        "Vaste activa"@nl;
     xebr:partOf xebr:FixedAssetsPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:TradeDebtsPayableAfterMoreThanOneYearPresentation a owl:Class;
-    rdfs:label "Trade debts payable after more than one year [Presentation]"@en;
+    rdfs:label "De schulden van meer dan één jaar."@nl,
+        "Deuda Comercial Superior A Un Año"@es,
+        "Trade debts payable after more than one year"@en,
+        "Zu den Forderungen nach mehr als ein Jahr"@de;
     xebr:partOf xebr:AmountsPayableAfterMoreThanOneYearPresentation;
     xebr:version "V4"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:TradeDebtsPayableWithinOneYearPresentation a owl:Class;
-    rdfs:label "Trade debts payable within one year [Presentation]"@en;
+    rdfs:label "Der Schulden innerhalb eines Jahres fällig"@de,
+        "Deuda Comercial A Un Año"@es,
+        "Handel debts transitrekeningen binnen één jaar"@nl,
+        "Trade debts payable within one year"@en;
     xebr:partOf xebr:AmountsPayableWithinOneYearPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:AmountsReceivablePresentation a owl:Class;
-    rdfs:label "Amounts receivable [Presentation]"@en;
+    rdfs:label "Amounts kredietverzekeringsbranche"@nl,
+        "Amounts receivable"@en,
+        "Forderungen"@de,
+        "Títulos De Crédito"@es;
     xebr:partOf xebr:CurrentAssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
@@ -1766,59 +2180,74 @@ xebr:CompanyActivityList a owl:Class;
     rdfs:subClassOf xebr:CompanyIdentificationReport .
 
 xebr:CompanyAddressDetailsPresentation a owl:Class;
-    rdfs:label "Company address, Details [Presentation]"@en;
+    rdfs:label "Company address, Details"@en;
     xebr:partOf xebr:CompanyAddressList;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CompanyHistoryReport a owl:Class;
-    rdfs:label "COMPANY HISTORY [Report]"@en;
+    rdfs:label "COMPANY HISTORY"@en;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:CompanyOfficialsReport a owl:Class;
-    rdfs:label "COMPANY OFFICIALS [Report]"@en;
+    rdfs:label "COMPANY OFFICIALS"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:NetOperatingIncomePresentation a owl:Class;
-    rdfs:label "Net operating income [Presentation]"@en;
+    rdfs:label "Ingresos De Explotación Netos"@es,
+        "Net operating income"@en,
+        "Nettobetriebskosten Erträge"@de,
+        "Nettoprijs bedrijfsopbrengsten"@nl;
     xebr:partOf xebr:IncomeStatementPresentation;
     xebr:version "V3"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialAddressDetailsPresentation a owl:Class;
-    rdfs:label "Official address, Details [Presentation]"@en;
+    rdfs:label "Official address, Details"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:OperatingIncomePresentation a owl:Class;
-    rdfs:label "Operating income [Presentation]"@en;
+    rdfs:label "Bedrijfsopbrengsten"@nl,
+        "Betriebliche Erträge"@de,
+        "Ingresos De Explotación"@es,
+        "Operating income"@en;
     xebr:partOf xebr:NetOperatingIncomePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:StocksPresentation a owl:Class;
-    rdfs:label "Stocks [Presentation]"@en;
+    rdfs:label "Eindejaarsvoorraden"@nl,
+        "Existencias"@es,
+        "Stocks"@en,
+        "Vorräte"@de;
     xebr:partOf xebr:CurrentAssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:AmountsPayableAfterMoreThanOneYearPresentation a owl:Class;
-    rdfs:label "Amounts payable after more than one year [Presentation]"@en;
+    rdfs:label "Amounts payable after more than one year"@en,
+        "Amounts transitrekeningen na meer dan een jaar"@nl,
+        "Ausstehende Forderungen nach mehr als ein Jahr"@de,
+        "Importes Exigibles, Después De Más De Un Año,"@es;
     xebr:partOf xebr:AmountsPayablePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:AmountsPayableWithinOneYearPresentation a owl:Class;
-    rdfs:label "Amounts payable within one year [Presentation]"@en;
+    rdfs:label "Amounts payable within one year"@en,
+        "Amounts transitrekeningen binnen één jaar"@nl,
+        "Importes Exigibles Dentro De Un Año,"@es,
+        "Innerhalb eines Jahres zu zahlenden Beträge"@de;
     xebr:partOf xebr:AmountsPayablePresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:MainEventsPresentation a owl:Class;
-    rdfs:label "Main events [Presentation]"@en;
+    rdfs:label "Main events"@en;
     xebr:partOf xebr:CompanyHistoryReport;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:CompanyHistoryReport .
@@ -1830,18 +2259,19 @@ xebr:OfficialFunctionList a owl:Class;
     rdfs:subClassOf xebr:Class .
 
 xebr:OfficialNamePresentation a owl:Class;
-    rdfs:label "Official name [Presentation]"@en;
+    rdfs:label "Official name"@en;
     xebr:partOf xebr:CompanyOfficialList;
     xebr:version "V5"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:PropertyPlantAndEquipmentPresentation a owl:Class;
-    rdfs:label "Property, plant, and equipment [Presentation]"@en;
+    rdfs:label "Eigendom, kwekersrechten en apparatuur."@nl,
+        "Eigentum, Anlagen und Ausrüstung,"@de,
+        "La Propiedad, Instalaciones Y Equipos"@es,
+        "Property, plant, and equipment"@en;
     xebr:partOf xebr:TangibleFixedAssetsPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
-
-xebr:Report a owl:Class .
 
 xebr:CompanyLegalFormList a owl:Class;
     rdfs:label "Company legal form [List]"@en;
@@ -1850,19 +2280,28 @@ xebr:CompanyLegalFormList a owl:Class;
     rdfs:subClassOf xebr:CompanyIdentificationReport .
 
 xebr:CurrentAssetsPresentation a owl:Class;
-    rdfs:label "Current assets [Presentation]"@en;
+    rdfs:label "Current assets"@en,
+        "De huidige nettovermogen"@nl,
+        "Derechos De Crédito Corrientes"@es,
+        "Umlaufvermögen"@de;
     xebr:partOf xebr:AssetsPresentation;
     xebr:version "V2"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:EquityPresentation a owl:Class;
-    rdfs:label "Equity [Presentation]"@en;
+    rdfs:label "Aandelenkapitaal-"@nl,
+        "Equidad"@es,
+        "Equity"@en,
+        "Nettovermögen"@de;
     xebr:partOf xebr:EquityAndLiabilitiesPresentation;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
 xebr:KeyBalanceSheetFiguresReport a owl:Class;
-    rdfs:label "KEY BALANCE SHEET FIGURES [Report]"@en;
+    rdfs:label "Balance De Situacion Al Cierre Del Ejercicio Presentacion"@es,
+        "Balans"@nl,
+        "Bilanz"@de,
+        "KEY BALANCE SHEET FIGURES"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 
@@ -1874,7 +2313,10 @@ xebr:CompanyAddressList a owl:Class;
         xebr:CompanyIdentificationReport .
 
 xebr:IncomeStatementPresentation a owl:Class;
-    rdfs:label "Income statement [Presentation]"@en;
+    rdfs:label "Cuenta De Pérdidas Y Ganancias Correspondiente Al Ejercicio"@es,
+        "Income statement"@en,
+        "Resultatenrekening"@nl,
+        "Schema der Ergebnisrechnung"@de;
     xebr:partOf xebr:KeyBalanceSheetFiguresReport;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class,
@@ -1887,8 +2329,10 @@ xebr:CompanyOfficialList a owl:Class;
     rdfs:subClassOf xebr:Class,
         xebr:CompanyOfficialsReport .
 
+xebr:Report a owl:Class .
+
 xebr:CompanyIdentificationReport a owl:Class;
-    rdfs:label "COMPANY IDENTIFICATION [Report]"@en;
+    rdfs:label "COMPANY IDENTIFICATION"@en;
     xebr:version "V1"^^xsd:string;
     rdfs:subClassOf xebr:Class .
 

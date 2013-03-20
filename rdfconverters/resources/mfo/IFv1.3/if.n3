@@ -71,8 +71,8 @@ en:cfi rdfs:range cfi:CFI .
 <http://www.dfki.de/lt/if.owl> a owl:Ontology;
     rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
 
-if:dax_singleton a if:DAX;
-    rdfs:label "DAX"^^xsd:string .
+if:deutsche_borse_singleton a if:DAX;
+    rdfs:label "Deutsche Börse"^^xsd:string .
 
 if:euronext_singleton a if:Euronext;
     rdfs:label "Euronext"^^xsd:string .

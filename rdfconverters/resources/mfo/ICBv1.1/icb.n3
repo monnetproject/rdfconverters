@@ -7,1145 +7,1372 @@
     rdfs:comment "(C) Hans-Ulrich Krieger, DFKI-LT"^^xsd:string .
 
 icb:ICB0533 a owl:Class;
-    icb:code "0533";
     rdfs:label "Exploración y producción"@es,
+        "Exploratiedoeleinden & Production"@nl,
         "Exploration & Production"@en,
         "Exploration und Produktion"@de;
-    rdfs:definition "Companies engaged in the exploration for and drilling, production, refining and supply of oil and gas products."@en,
+    icb:code "0533";
+    rdfs:definition "Bedrijven die actief zijn in de exploratie en winning van, de productie, de raffinage en het aanbod van olie en gas."@nl,
+        "Companies engaged in the exploration for and drilling, production, refining and supply of oil and gas products."@en,
         "Empresas dedicadas a la exploración y extracción, producción,refinación y abastecimiento de productos petroleros y de gas."@es,
         "Unternehmen, die in der Erdöl- und Erdgasexploration tätig sind (Bohrung, Produktion, Raffinerierung von und Versorgung mit Erdöl- und Erdgasprodukten)."@de;
     rdfs:subClassOf icb:ICB0530 .
 
 icb:ICB0537 a owl:Class;
-    icb:code "0537";
-    rdfs:label "Integrated Oil & Gas"@en,
+    rdfs:label "Geïntegreerde Oliehoudende & Identificatie"@nl,
+        "Integrated Oil & Gas"@en,
         "Integrierte Erdöl- und Erdgasgesellschaften"@de,
         "Petróleo y gas integrado"@es;
+    icb:code "0537";
     rdfs:definition "Empresas integradas de petróleo y gas dedicadas a la exploracióny extracción, producción, refinación, distribución y ventasminoristas de productos petroleros y de gas."@es,
+        "Geïntegreerde olie en gas bedrijven die actief zijn in de exploratie en winning van, de productie, de raffinage, distributie en detailhandelverkoop van olie en gas."@nl,
         "Integrated oil and gas companies engaged in the exploration for and drilling, production, refining, distribution and retail sales of oil and gas products."@en,
         "Mit der Suche nach und der Bohrung, Produktion und Raffinierung sowie dem Vertrieb und Einzelhandelsverkauf von Öl und Gasprodukten befasste integrierte Öl- und Gasgesellschaften."@de;
     rdfs:subClassOf icb:ICB0530 .
 
 icb:ICB0573 a owl:Class;
-    icb:code "0573";
     rdfs:label "Ausrüstung und Dienstleistungen"@de,
         "Equipos y servicios petroleros"@es,
-        "Oil Equipment & Services"@en;
+        "Oil Equipment & Services"@en,
+        "Olie Uitrusting & intesa"@nl;
+    icb:code "0573";
     rdfs:definition "Anbieter von Ausrüstung und Dienstleistungen für Ölfelder und Offshore-Plattformen (Bohrung, Exploration, Erdbebeninformationen und Plattformbau)."@de,
+        "De leveranciers van apparatuur en diensten olievelden en offshore platforms, zoals proefboringen, exploratiedoeleinden, seismische-informatiediensten en webplatform Constructiewijze."@nl,
         "Proveedores de equipos y servicios para yacimientos petroleros yplataformas marinas, tales como extracción, exploración,servicios de información sísmica y construcción de plataformas."@es,
         "Suppliers of equipment and services to oil fields and offshore platforms, such as drilling, exploration, seismic-information services and platform construction."@en;
     rdfs:subClassOf icb:ICB0570 .
 
 icb:ICB0577 a owl:Class;
-    icb:code "0577";
     rdfs:label "Ductos"@es,
         "Pipelines"@de,
-        "Pipelines"@en;
+        "Pipelines"@en,
+        "Transportleiding"@nl;
+    icb:code "0577";
     rdfs:definition "Betreiber von Pipelines für den Transport von Erdöl, Erdgas und anderen Brennstoffarten. Ausgeschlossen sind Pipeline- Betreiber, die ihren Umsatz hauptsächlich aus dem Direktverkauf an Endverbraucher erzielen (siehe: Gasversorgung)."@de,
+        "Exploitanten van transportleiding lastdragende olie, gas of andere vormen van brandstof. Sluit pijpleiding Operators die het grootste deel van hun inkomsten uit de directe verkoop aan eindgebruikers, die zijn ingedeeld in Identificatie Distribution."@nl,
         "Operadores de ductos para el transporte de petróleo, gasu otras formas de combustible. Excluye los operadores deductos que obtienen la mayor parte de sus ingresos de lasventas directas a usuarios finales, los que están clasificadosbajo Distribución de gas."@es,
         "Operators of pipelines carrying oil, gas or other forms of fuel. Excludes pipeline operators that derive the majority of their revenues from direct sales to end users, which are classified under Gas Distribution."@en;
     rdfs:subClassOf icb:ICB0570 .
 
 icb:ICB0583 a owl:Class;
-    icb:code "0583";
     rdfs:label "Equipos de energías renovables"@es,
         "Erneuerbare Energieanlagen"@de,
+        "Hernieuwbare energie Uitrusting"@nl,
         "Renewable Energy Equipment"@en;
-    rdfs:definition "Companies that develop or manufacture renewable energy equipment utilizing sources such as solar, wind, tidal, geothermal, hydro and waves."@en,
+    icb:code "0583";
+    rdfs:definition "Bedrijven die ontwikkelen of vervaardigings- stromingsenergie equipment gebruikmaken van de bronnen, zoals zonne-energie, windenergie, getijdenenergie, geothermische, waterkrachtcapaciteit en golven."@nl,
+        "Companies that develop or manufacture renewable energy equipment utilizing sources such as solar, wind, tidal, geothermal, hydro and waves."@en,
         "Empresas que desarrollan o fabrican equipos de energíasrenovables, los cuales utilizan fuentes como la energía solar,eólica, mareomotriz, geotérmica, hídrica y de las olas."@es,
         "Firmen, die erneuerbare, auf Solar-, Wind-, Gezeiten-, Wasser- und Wellenkraft sowie geothermischer Energie beruhende Anlagen entwickeln oder herstellen."@de;
     rdfs:subClassOf icb:ICB0580 .
 
 icb:ICB0587 a owl:Class;
-    icb:code "0587";
-    rdfs:label "Alternative Fuels"@en,
+    rdfs:label "Alternatieve brandstoffen"@nl,
+        "Alternative Fuels"@en,
         "Alternative Kraftstoffe"@de,
         "Combustibles alternativos"@es;
-    rdfs:definition "Companies that produce alternative fuels such as ethanol, methanol, hydrogen and bio-fuels that are mainly used to power vehicles, and companies that are involved in the production of vehicle fuel cells and/or the development of alternative fuelling infrastructure."@en,
+    icb:code "0587";
+    rdfs:definition "Bedrijven die alternatieve brandstoffen zoals ethanol, methanol, waterstof en biobrandstoffen die hoofdzakelijk worden gebruikt om de macht van de voertuigen en bedrijven die betrokken zijn bij de productie van wegvoertuig brandstofcellen en / of de ontwikkeling van alternatieve aan infrastructuur."@nl,
+        "Companies that produce alternative fuels such as ethanol, methanol, hydrogen and bio-fuels that are mainly used to power vehicles, and companies that are involved in the production of vehicle fuel cells and/or the development of alternative fuelling infrastructure."@en,
         "Empresas que producen combustibles alternativos, comoetanol, metanol, hidrógeno y biocombustibles, que se utilizanprincipalmente en vehículos (Strichpunkt) y empresas que se dedican ala producción de celdas de combustible para vehículos y aldesarrollo de infraestructura para combustibles alternativos."@es,
         "Firmen, die alternative Kraftstoffe wie Ethanol, Methanol, Wasserstoff und Bio-Kraftstoffe produzieren, die hauptsächlich zum Antrieb von Fahrzeugen benutzt werden und Firmen, die mit der Produktion von Kraftstoffzellen und/ oder mit der Entwicklung der Infrastruktur für alternative Kraftstoffe befasst sind."@de;
     rdfs:subClassOf icb:ICB0580 .
 
 icb:ICB1353 a owl:Class;
-    icb:code "1353";
     rdfs:label "Commodity Chemicals"@en,
         "Gebrauchschemikalien"@de,
+        "Grondstoffenontwikkeling rubberchemicaliën"@nl,
         "Productos químicos básicos"@es;
+    icb:code "1353";
     rdfs:comment ""^^xsd:string;
     rdfs:definition "Erzeuger und Händler von einfachen chemischen Produkten, die in erster Linie für die Herstellung komplexer Chemikalien oder Produkte genutzt werden. Dazu zählen Kunststoffe und Gummi in ihrer Rohform, Glasfasern und Synthetikfasern."@de,
+        "Producenten en distributeurs van eenvoudige chemische producten die hoofdzakelijk worden gebruikt om formulate complexer chemicals of producten, waaronder plastic- en siliconenrubber in hun raw vorm, glasvezel en synthetische vezels."@nl,
         "Producers and distributors of simple chemical products that are primarily used to formulate more complex chemicals or products, including plastics and rubber in their raw form, fibreglass and synthetic fibres."@en,
         "Productores y distribuidores de productos químicos simples queson usados principalmente para formular químicos o productosmás complejos, lo que incluye plásticos y goma en bruto, fibra devidrio y fibras sintéticas."@es;
     rdfs:subClassOf icb:ICB1350 .
 
 icb:ICB1357 a owl:Class;
-    icb:code "1357";
     rdfs:label "Productos químicosespecializados"@es,
         "Specialty Chemicals"@en,
+        "Specialty rubberchemicaliën"@nl,
         "Spezielle Chemikalien"@de;
+    icb:code "1357";
     rdfs:definition "Erzeuger und Händler von Fertigchemikalien für Industrie oder Endverbraucher, einschließlich Farben, zellulare Polymere, Beschichtungen, Spezialkunststoffe und andere Chemikalien für spezielle Anwendungen. Dazu zählen Hersteller von Farb-, Aroma- und Duftstoffen, Düngemitteln, Pestiziden, Chemikalien für die Medikamentenherstellung, Farbe in pigmentierter Form und Glas in unbearbeiteter Form. Ausgeschlossen sind Hersteller von Farb- und Glasprodukten für das Baugewerbe (siehe: Baustoffe und Befestigungen)."@de,
+        "Producenten en distributeurs van nabewerken chemicals voor industrieën en eindgebruikers, waaronder tannine Gevulcaniseerde polymeren, beschermlagen, speciale plastic- en andere chemische stoffen voor gespecialiseerde certificaataanvragen. Ook bereiders van kleurstoffen, smaak en geurstoffen, meststoffen en pesticiden, chemische stoffen die worden gebruikt om drugs, verf in haar pigment vorm en glass in haar vorm. Dat producenten van verf en glass producten die gebruikt worden voor de bouw, die zijn ingedeeld in Voortbouwend Materials & Vaste inrichting."@nl,
         "Producers and distributors of finished chemicals for industries or end users, including dyes, cellular polymers, coatings, special plastics and other chemicals for specialized applications. Includes makers of colourings, flavours and fragrances, fertilizers, pesticides, chemicals used to make drugs, paint in its pigment form and glass in its unfinished form. Excludes producers of paint and glass products used for construction, which are classified under Building Materials & Fixtures."@en,
         "Productores y distribuidores de productos químicos terminadospara industrias o usuarios finales, incluidas tinturas, polímeroscelulares, revestimientos de protección, plásticos especialesy otros productos químicos para aplicaciones especializadas.Incluye a los fabricantes de colorantes, saborizantes y fragancias,fertilizantes, pesticidas, productos químicos utilizadospara fabricar medicamentos, pintura en su forma de pigmentoy vidrio en su forma no terminada. Excluye productores depintura y productos de vidrio utilizados en la construcción, quese encuentran clasificados bajo Materiales de construcción einstalaciones fijas."@es;
     rdfs:subClassOf icb:ICB1350 .
 
 icb:ICB1733 a owl:Class;
-    icb:code "1733";
-    rdfs:label "Forestry"@en,
+    rdfs:label "Bosbouwgronden"@nl,
+        "Forestry"@en,
         "Forstwirtschaft"@de,
         "Silvicultura"@es;
-    rdfs:definition "Eigentümer und Betreiber von Nutzwaldflächen, Baumschulen und Sägemühlen. Ausgeschlossen sind Lieferanten von Holzfertigprodukten, wie Holzbalken (siehe: Baustoffe und Befestigungen)."@de,
+    icb:code "1733";
+    rdfs:definition "De eigenaren en exploitanten van hout geschriften, bosvarken tree boomkwekerijproducten en sawmills. Sluit aanbieders van nabewerken houtprodukten zoals houten bomen, die zijn ingedeeld in Voortbouwend Materials & Vaste inrichting."@nl,
+        "Eigentümer und Betreiber von Nutzwaldflächen, Baumschulen und Sägemühlen. Ausgeschlossen sind Lieferanten von Holzfertigprodukten, wie Holzbalken (siehe: Baustoffe und Befestigungen)."@de,
         "Owners and operators of timber tracts, forest tree nurseries and sawmills. Excludes providers of finished wood products such as wooden beams, which are classified under Building Materials & Fixtures."@en,
         "Propietarios y operadores de plantaciones forestales, viverosde árboles forestales y aserraderos. Excluye proveedores deproductos de madera terminados tales como vigas de madera,que están clasificadas bajo Materiales de construcción einstalaciones fijas."@es;
     rdfs:subClassOf icb:ICB1730 .
 
 icb:ICB1737 a owl:Class;
-    icb:code "1737";
     rdfs:label "Papel"@es,
         "Paper"@en,
-        "Papierindustrie"@de;
+        "Papierindustrie"@de,
+        "Ref"@nl;
+    icb:code "1737";
     rdfs:comment ""^^xsd:string;
     rdfs:definition "Hersteller, Verarbeiter, Händler und Vertriebshändler für alle Papiersorten. Ausgeschlossen sind Hersteller von gedruckten Produkten (siehe: Business Support Services) sowie Hersteller von Papierprodukten, wie z.B. Pappbecher und Papierservietten (siehe: Kurzlebige Haushaltwaren)."@de,
+        "Producenten, converters, Merchants en distributeurs van alle handelsklassen papier. Sluit bereiders van geguillocheerde vormen, die zijn ingedeeld in Zakelijke Ondersteunende diensten, en fabrikanten van onderdelen zoals cups en napkins, die zijn ingedeeld in Nondurable Household Produkten."@nl,
         "Producers, converters, merchants and distributors of all grades of paper. Excludes makers of printed forms, which are classified under Business Support Services, and manufacturers of paper items such as cups and napkins, which are classified under Nondurable Household Products."@en,
         "Productores, convertidores, comerciantes y distribuidores depapeles de todos los grados. Excluye fabricantes de formulariosimpresos, que están clasificados bajo Servicios de apoyoempresarial, y fabricantes de artículos de papel como vasosy servilletas, que están clasificados bajo Artículos para el hogarno duraderos."@es;
     rdfs:subClassOf icb:ICB1730 .
 
 icb:ICB1753 a owl:Class;
-    icb:code "1753";
     rdfs:label "Aluminio"@es,
         "Aluminium"@de,
-        "Aluminium"@en;
-    rdfs:definition "Companies that mine or process bauxite or manufacture and distribute aluminium bars, rods and other products for use by other industries. Excludes manufacturers of finished aluminium products, such as siding, which are categorized according to the type of end product."@en,
+        "Aluminium"@en,
+        "Aluminiumcoating"@nl;
+    icb:code "1753";
+    rdfs:definition "Bedrijven die mijn of proces bauxiet of de productie en distributie van aluminiumcoating staven, staven en andere producten voor gebruik door andere sectoren. Dat fabrikanten van nabewerken aluminiumproducten, zoals de kant kiezen, die zijn ingedeeld volgens de aard van het eindproduct."@nl,
+        "Companies that mine or process bauxite or manufacture and distribute aluminium bars, rods and other products for use by other industries. Excludes manufacturers of finished aluminium products, such as siding, which are categorized according to the type of end product."@en,
         "Empresas que extraen o procesan bauxita o fabrican ydistribuyen barras, varillas y otros productos para su uso enotras industrias. Excluye a fabricantes de productos de aluminioterminados, tales como revestimientos, que se clasificansegún el tipo de producto final."@es,
         "Unternehmen, die Bauxit abbauen oder verarbeiten sowie Aluminiumträger, -stangen oder andere Produkte für die Nutzung in anderen Industriezweigen herstellen oder vertreiben. Ausgeschlossen sind Hersteller von Fertigprodukten aus Aluminium, z.B. Gleise, die in der Kategorie des jeweiligen Endprodukts aufgeführt sind."@de;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1755 a owl:Class;
-    icb:code "1755";
     rdfs:label "Metales no ferrosos"@es,
         "Nichteisenhaltige Metalle"@de,
-        "Nonferrous Metals"@en;
-    rdfs:definition "Producers and traders of metals and primary metal products other than iron, aluminium and steel. Excludes companies that make finished products, which are categorized according to the type of end product."@en,
+        "Nonferrous Metals"@en,
+        "Nonferrous Metals"@nl;
+    icb:code "1755";
+    rdfs:definition "Producenten en handelaars van metalen en primary metaalsoort andere producten dan ijzer en staal, aluminium. Sluit bedrijven die de eindproducten die zijn ingedeeld volgens de aard van het eindproduct."@nl,
+        "Producers and traders of metals and primary metal products other than iron, aluminium and steel. Excludes companies that make finished products, which are categorized according to the type of end product."@en,
         "Productores y comerciantes de metales y productos metálicosprimarios, excluidos el hierro, el aluminio y el acero. Excluye aempresas que fabrican productos terminados, que se clasificansegún el tipo de producto final."@es,
         "Produzenten und Händler von Metallen und Neumetallen mit Ausnahme von Eisen, Aluminium und Stahl. Ausgeschlossen sind Hersteller von Fertigprodukten: diese werden nach Endprodukttyp klassifiziert."@de;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1757 a owl:Class;
-    icb:code "1757";
     rdfs:label "Eisen und Stahl"@de,
         "Hierro y acero"@es,
+        "Ijzer en staal"@nl,
         "Iron & Steel"@en;
+    icb:code "1757";
     rdfs:definition "Fabricantes y accionistas de productos primarios de hierro yacero, como tubos, alambres, láminas y barras, incluidos todoslos procesos desde la fundición en altos hornos hasta laminadorasy fundiciones. Incluye empresas que extraen principalmenteminerales de hierro."@es,
+        "Fabrikanten en stockholders van primary ijzer en staal producten zoals buizen, magneetdraad, hoeslakens en bars, waarin alle processen van omsmelting in hoogovens van warmwalsen en gieterijen. Ook bedrijven die primarily mijnbestrijdingsoutillage ijzererts."@nl,
         "Hersteller und Aktionäre von primären Eisen- und Stahlprodukten wie z.B. Rohre, Leitungsdrähte, Blechteile und Eisenbarren, die alle Prozesse von der Schmelze in Hochöfen bis zu den Walzwerken und Gießereien umfassen. Einschließlich Firmen, deren Hauptgeschäft der Abbau von Eisenerz ist."@de,
         "Manufacturers and stockholders of primary iron and steel products such as pipes, wires, sheets and bars, encompassing all processes from smelting in blast furnaces to rolling mills and foundries. Includes companies that primarily mine iron ores."@en;
     rdfs:subClassOf icb:ICB1750 .
 
 icb:ICB1771 a owl:Class;
-    icb:code "1771";
     rdfs:label "Carbón"@es,
         "Coal"@en,
-        "Kohle"@de;
-    rdfs:definition "Companies engaged in the exploration for or mining of coal."@en,
+        "Kohle"@de,
+        "Steenkool"@nl;
+    icb:code "1771";
+    rdfs:definition "Bedrijven die actief zijn in de exploratie en winning van steenkool."@nl,
+        "Companies engaged in the exploration for or mining of coal."@en,
         "Empresas dedicadas a la exploración o extracción de carbón."@es,
         "Unternehmen, die in der Kohleexploration oder -gewinnung tätig sind."@de;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1773 a owl:Class;
-    icb:code "1773";
-    rdfs:label "Diamanten und Edelsteine"@de,
+    rdfs:label "Diamanten & edelstenen"@nl,
+        "Diamanten und Edelsteine"@de,
         "Diamantes y piedras preciosas"@es,
         "Diamonds & Gemstones"@en;
+    icb:code "1773";
     rdfs:comment ""^^xsd:string;
-    rdfs:definition "Companies engaged in the exploration for and production of diamonds and other gemstones."@en,
+    rdfs:definition "Bedrijven die actief zijn in de exploratie en de productie van diamanten en andere edelstenen."@nl,
+        "Companies engaged in the exploration for and production of diamonds and other gemstones."@en,
         "Empresas dedicadas a la exploración y producción de diamantesy otras piedras preciosas."@es,
         "Unternehmen, die in der Exploration und Gewinnung von Diamanten und anderen Edelsteinen tätig sind."@de;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1775 a owl:Class;
-    icb:code "1775";
-    rdfs:label "Allgemeiner Bergbau"@de,
+    rdfs:label "Algemene Mijnbouw"@nl,
+        "Allgemeiner Bergbau"@de,
         "General Mining"@en,
         "Minería general"@es;
+    icb:code "1775";
     rdfs:comment ""^^xsd:string;
-    rdfs:definition "Companies engaged in the exploration, extraction or refining of minerals not defined elsewhere within the Mining sector."@en,
+    rdfs:definition "Bedrijven die werkzaam zijn in de exploratie en winning of refining van mineralen niet gedefinieerd in de Mijnbouw sector."@nl,
+        "Companies engaged in the exploration, extraction or refining of minerals not defined elsewhere within the Mining sector."@en,
         "Empresas dedicadas a la exploración, extracción o refinaciónde minerales no definidos en otras categorías dentro del sectorMinería."@es,
         "Unternehmen, die in der Exploration, Gewinnung oder Veredelung von Mineralien tätig und in keinem anderen Bereich unter Bergbau definiert sind."@de;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1777 a owl:Class;
-    icb:code "1777";
     rdfs:label "Gold"@de,
         "Gold Mining"@en,
+        "Goudtransacties Mijnbouw"@nl,
         "Minería de oro"@es;
+    icb:code "1777";
     rdfs:definition "Exploradores y extractores o refinadores de minerales auríferos."@es,
+        "Prospectors en extractors of de raffinaderijen van goudtransacties-conische ertsen."@nl,
         "Prospectors for and extractors or refiners of gold-bearing ores."@en,
         "Prospektoren, Abbauer oder Veredler von goldhaltigen Erzen."@de;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB1779 a owl:Class;
-    icb:code "1779";
     rdfs:label "Platin und Edelmetalle"@de,
         "Platino y metales preciosos"@es,
-        "Platinum & Precious Metals"@en;
-    rdfs:definition "Companies engaged in the exploration for and production of platinum, silver and other precious metals not defined elsewhere."@en,
+        "Platinum & Precious Metals"@en,
+        "Platinum & edele Metals"@nl;
+    icb:code "1779";
+    rdfs:definition "Bedrijven die actief zijn in de exploratie en de productie van platinum, zilver en andere edele metalen niet gedefinieerd."@nl,
+        "Companies engaged in the exploration for and production of platinum, silver and other precious metals not defined elsewhere."@en,
         "Empresas dedicadas a la exploración y producción de platino,plata y otros metales preciosos no definidos en otras categorías."@es,
         "Unternehmen, die in der Exploration und Produktion von Platin, Silber und anderen Edelmetallen tätig und nicht an anderer Stelle definiert sind."@de;
     rdfs:subClassOf icb:ICB1770 .
 
 icb:ICB2353 a owl:Class;
-    icb:code "2353";
     rdfs:label "Baustoffe und Befestigungen"@de,
         "Building Materials & Fixtures"@en,
-        "Materiales de construcción einstalaciones fijas"@es;
-    rdfs:definition "Hersteller von Materialien, die für Bau und Sanierung von Gebäuden und Komplexen genutzt werden. Dazu zählen Zement und andere Zuschlagstoffe, Holzbalken und Rahmen, Farbe, Glas, Dach- und Fußbodenmaterial mit Ausnahme von Teppichboden. Einschließlich der Hersteller von Badezimmer- und Küchenbefestigungen, Klempnermaterial sowie Elementen für Klima- und Heizungsanlagen. Ausgeschlossen sind Rohholzproduzenten (siehe: Fortwirtschaft)."@de,
+        "Materiales de construcción einstalaciones fijas"@es,
+        "Voorbouwt Materials & Vaste inrichting"@nl;
+    icb:code "2353";
+    rdfs:definition "De producenten van grondstoffen in de bouw en de renovatie van gebouwen en structuren, met inbegrip van cement en andere toeslagmaterialen, houten balken en frames, verf, glas, dakbedekkingen en vloeren andere materialen dan tapijten. Ook de producenten van de badkamer en keuken ontmoetingen, sanitair bedrijfsbenodigdheden en centrale klimaatregelings- en verwarmingsapparaten. Sluit bedrijfsproducenten raw algemeen, die zijn ingedeeld in de bosbouw."@nl,
+        "Hersteller von Materialien, die für Bau und Sanierung von Gebäuden und Komplexen genutzt werden. Dazu zählen Zement und andere Zuschlagstoffe, Holzbalken und Rahmen, Farbe, Glas, Dach- und Fußbodenmaterial mit Ausnahme von Teppichboden. Einschließlich der Hersteller von Badezimmer- und Küchenbefestigungen, Klempnermaterial sowie Elementen für Klima- und Heizungsanlagen. Ausgeschlossen sind Rohholzproduzenten (siehe: Fortwirtschaft)."@de,
         "Producers of materials used in the construction and refurbishment of buildings and structures, including cement and other aggregates, wooden beams and frames, paint, glass, roofing and flooring materials other than carpets. Includes producers of bathroom and kitchen fixtures, plumbing supplies and central air-conditioning and heating equipment. Excludes producers of raw lumber, which are classified under Forestry."@en,
         "Productores de materiales usados en la construcción yrenovación de edificios y estructuras, incluidos el cementoy otros agregados, vigas y marcos de madera, pintura, vidrio,materiales para techos y pisos, excluidas las alfombras. Incluyeproductores de instalaciones fijas de baño y cocina, materialesde plomería y equipos de aire acondicionado y calefaccióncentral. Excluye productores de madera en bruto, que estánclasificados bajo Silvicultura."@es;
     rdfs:subClassOf icb:ICB2350 .
 
 icb:ICB2357 a owl:Class;
-    icb:code "2357";
     rdfs:label "Construcción pesada"@es,
         "Heavy Construction"@en,
-        "Hoch- und Tiefbau"@de;
-    rdfs:definition "Companies engaged in the construction of commercial buildings, infrastructure such as roads and bridges, residential apartment buildings, and providers of services to construction companies, such as architects, masons, plumbers and electrical contractors."@en,
+        "Hoch- und Tiefbau"@de,
+        "Zware Construction"@nl;
+    icb:code "2357";
+    rdfs:definition "Bedrijven die betrokken zijn bij de bouw van gebouwen, infrastructuur, wegen en bruggen, residentieel appartement buildings en aanbieders van diensten te bedrijven, zoals de architecten, masons, loodgieters en elektrotechnisch aannemingsbedrijven."@nl,
+        "Companies engaged in the construction of commercial buildings, infrastructure such as roads and bridges, residential apartment buildings, and providers of services to construction companies, such as architects, masons, plumbers and electrical contractors."@en,
         "Empresas dedicadas a la construcción de edificios comerciales,infraestructura del tipo de caminos y puentes, edificios deapartamentos residenciales y proveedores de servicios paraempresas de construcción, tales como arquitectos, albañiles,plomeros y contratistas eléctricos."@es,
         "Unternehmen, die im Bau von Geschäftsgebäuden und der Schaffung von Infrastrukturen wie Straßen, Brücken und Wohngebäuden tätig sind, sowie Unternehmen, die Dienstleistungen für Baufirmen anbieten, z.B. Architekten, Handwerker, Klempner und Elektriker."@de;
     rdfs:subClassOf icb:ICB2350 .
 
 icb:ICB2713 a owl:Class;
-    icb:code "2713";
     rdfs:label "Aeroespacial"@es,
         "Aerospace"@en,
+        "De ruimtevaart"@nl,
         "Luftfahrt"@de;
+    icb:code "2713";
     rdfs:comment ""^^xsd:string;
     rdfs:definition "Fabricantes, ensambladores y distribuidores de aviones ypartes de aviones utilizadas principalmente en el transporteaéreo comercial y privado. Excluye a fabricantes de satélitesde comunicaciones, que están clasificados bajo Equipos detelecomunicaciones."@es,
+        "Fabrikanten, assembleurs en distributeurs van vliegtuigen en vliegtuigonderdelen primarily gebruikt in commerciële of particuliere luchtvervoer. Sluit fabrikanten van gegevenstoezending satellieten, die zijn ingedeeld in Telephone Uitrusting."@nl,
         "Hersteller, Montagefirmen und Händler von Flugzeugen und Flugzeugteilen, die in erster Linie im kommerziellen oder privaten Lufttransport eingesetzt werden. Ausgeschlossen sind Hersteller von Kommunikationssatelliten (siehe: Telekommunikationsausrüstung)."@de,
         "Manufacturers, assemblers and distributors of aircraft and aircraft parts primarily used in commercial or private air transport. Excludes manufacturers of communications satellites, which are classified under Telecommunications Equipment."@en;
     rdfs:subClassOf icb:ICB2710 .
 
 icb:ICB2717 a owl:Class;
-    icb:code "2717";
     rdfs:label "Defensa"@es,
         "Defense"@en,
+        "Defense"@nl,
         "Verteidigung"@de;
-    rdfs:definition "Hersteller von Bauteilen und Ausrüstung für die Verteidigungsindustrie, einschließlich Militärflugzeuge, Radarausrüstung und Waffen."@de,
+    icb:code "2717";
+    rdfs:definition "De producenten van onderdelen en apparatuur voor de defensie-industrie, met inbegrip van militaire vliegtuigen, Radarapparatuur en wapens."@nl,
+        "Hersteller von Bauteilen und Ausrüstung für die Verteidigungsindustrie, einschließlich Militärflugzeuge, Radarausrüstung und Waffen."@de,
         "Producers of components and equipment for the defense industry, including military aircraft, radar equipment and weapons."@en,
         "Productores de componentes y equipo para la industria de ladefensa, incluidos los aviones militares, equipos de radary armas."@es;
     rdfs:subClassOf icb:ICB2710 .
 
 icb:ICB2723 a owl:Class;
-    icb:code "2723";
-    rdfs:label "Container und Verpackungen"@de,
+    rdfs:label "Benzinetanks & Packaging"@nl,
+        "Container und Verpackungen"@de,
         "Containers & Packaging"@en,
         "Envases y embalajes"@es;
+    icb:code "2723";
     rdfs:definition "Fabricantes y distribuidores de cajas de cartón, bolsas, cajas, latas,tambores, botellas y frascos, y vidrio usados para embalaje."@es,
+        "Fabrikanten en distributeurs van karton, bags, kartons fusten, flessen, blikjes, en potten en glass gebruikt voor verpakkingen."@nl,
         "Hersteller und Händler von Verpackungsmaterialien wie Kartons, Taschen, Schac, Schachteln, Dosen, Fässern, Flaschen, Gläsern und Glas als Verpackungsmaterial."@de,
         "Makers and distributors of cardboard, bags, boxes, cans, drums, bottles and jars and glass used for packaging."@en;
     rdfs:subClassOf icb:ICB2720 .
 
 icb:ICB2727 a owl:Class;
-    icb:code "2727";
     rdfs:label "Actividad industrial diversificada"@es,
         "Diversified Industrials"@en,
-        "Diversifizierte Gewerbe"@de;
+        "Diversifizierte Gewerbe"@de,
+        "Gediversifieerde Industrials"@nl;
+    icb:code "2727";
     rdfs:definition "Empresas industriales dedicadas a tres o más clases denegocios dentro del sector industrial que difieren de manerasustancial entre sí."@es,
         "Industrial companies engaged in three or more classes of business within the Industrial industry that differ substantially from each other."@en,
-        "Industrieunternehmen, die in drei oder mehr, verschiedenen Geschäftszweigen innerhalb einer Branche tätig sind."@de;
+        "Industrieunternehmen, die in drei oder mehr, verschiedenen Geschäftszweigen innerhalb einer Branche tätig sind."@de,
+        "Industriële bedrijven die zich bezighouden met drie of meer klassen van de werkzaamheden binnen de industriële sector die sterk van elkaar verschillen."@nl;
     rdfs:subClassOf icb:ICB2720 .
 
 icb:ICB2733 a owl:Class;
-    icb:code "2733";
     rdfs:label "Componentes y equiposeléctricos"@es,
         "Electrical Components & Equipment"@en,
-        "Elektrische Bauteile und Ausrüstungselemente"@de;
+        "Elektrische Bauteile und Ausrüstungselemente"@de,
+        "Elektrotechnisch Onderdelen & Uitrusting"@nl;
+    icb:code "2733";
     rdfs:definition "Fabricantes y distribuidores de partes eléctricas de productosterminados, como las tarjetas de circuitos impresos para radios,televisores y otros bienes de consumo electrónicos. Incluyefabricantes de cables, alambres, cerámica, transistores, adaptadoreseléctricos, pilas de combustible y cámaras de seguridad."@es,
+        "Fabrikanten en distributeurs van elektrotechnisch interventieonderdelen voor afgewerkte producten, zoals geguillocheerde Circuit trawlborden voor radio, televisie en andere consumentenelektronika. Ook bereiders van cables, magneetdraad, keramiek, transistors, elektrische adapters vormen en de veiligheidscamera 's."@nl,
         "Hersteller und Händler von elektrischen Bauteilen für Endprodukte, Ausrüstungselemente z.B. gedruckte Leiterplatten für Radios, Fernseher und andere Elektronikgeräte. Dazu zählen zudem Hersteller von Kabeln, Drähten, Keramikkondensatoren, Transistoren, elektrischen Adaptern, Brennstoffzellen und Sicherheitskameras."@de,
         "Makers and distributors of electrical parts for finished products, such as printed circuit boards for radios, televisions and other consumer electronics. Includes makers of cables, wires, ceramics, transistors, electric adapters and security cameras."@en;
     rdfs:subClassOf icb:ICB2730 .
 
 icb:ICB2737 a owl:Class;
-    icb:code "2737";
     rdfs:label "Electronic Equipment"@en,
         "Elektronische Ausrüstungselemente"@de,
+        "Elektronische Uitrusting"@nl,
         "Equipos electrónicos"@es;
+    icb:code "2737";
     rdfs:definition "Fabricantes y distribuidores de productos electrónicos usadosen distintas industrias. Incluye fabricantes de láseres, tarjetasinteligentes, lectores de código de barras, lectores de huellasdigitales y otros equipos de fábrica electrónicos."@es,
+        "Fabrikanten en distributeurs van elektronische producten gebruikt in verschillende sectoren. Ook bereiders van laserwapens, slimme kaarten bedieningsstang scanners, vingerafdrukken equipment productiecontrolesysteem en andere elektronische apparatuur."@nl,
         "Hersteller und Händler von elektronischen Produkten, die in verschiedenen Industriezweigen genutzt werden. Dazu zählen u.a. Hersteller von Laser-, Chipkarten- und Barcodescanner, Ausrüstung zur Erkennung von Fingerabdrücken und anderen elektronischen Werksausrüstungen."@de,
         "Manufacturers and distributors of electronic products used in different industries. Includes makers of lasers, smart cards, bar scanners, fingerprinting equipment and other electronic factory equipment."@en;
     rdfs:subClassOf icb:ICB2730 .
 
 icb:ICB2753 a owl:Class;
-    icb:code "2753";
     rdfs:label "Commercial Vehicles & Trucks"@en,
+        "Commerciële Voertuigen & Trucks"@nl,
         "Nutzfahrzeuge und LKW"@de,
         "Vehículos y camionescomerciales"@es;
+    icb:code "2753";
     rdfs:definition "Fabricantes y distribuidores de vehículos comerciales ymaquinaria pesada agrícola y para la construcción, lo queincluye vagones de ferrocarril, tractores, máquinas excavadoras,grúas, autobuses y cortadoras de césped industriales. Incluyeconstructores de buques no militares, tales como constructoresde buques para cruceros y transbordadores."@es,
+        "Fabrikanten en distributeurs van commerciële voertuigen en zware landbouw- en bouwmachines, met inbegrip van het spoor auto 's, trekkers, bulldozers, hijskranen, bussen en industriële hand laadmachines. Ook de niet-militaire scheepsbouwbedrijven, zoals bouwlieren van passagiersschepen en veerboten."@nl,
         "Hersteller und Vertreiber von Nutzfahrzeugen und schweren landwirtschaftlichen Maschinen und Baumaschinen, einschließlich Schienenfahrzeuge, Traktoren, Planierraupen, Kräne, Busse und industrielle Rasenmäher. Einschließlich nichtmilitärische Schiffbauer wie z. B. Erbauer von Kreuzfahrtschiffen und Fähren."@de,
         "Manufacturers and distributors of commercial vehicles and heavy agricultural and construction machinery, including rail cars, tractors, bulldozers, cranes, buses and industrial lawn mowers. Includes non-military shipbuilders, such as builders of cruise ships and ferries."@en;
     rdfs:subClassOf icb:ICB2750 .
 
 icb:ICB2757 a owl:Class;
-    icb:code "2757";
     rdfs:label "Industrial Machinery"@en,
         "Industriemaschinen"@de,
+        "Industriële Installaties"@nl,
         "Maquinaria industrial"@es;
+    icb:code "2757";
     rdfs:definition "Designers, manufacturers, distributors and installers of industrial machinery and factory equipment, such as machine tools, lathes, presses and assembly line equipment. Includes makers of pollution control equipment, castings, pressings, welded shapes, structural steelwork, compressors, pumps, bearings, elevators and escalators."@en,
         "Diseñadores, fabricantes, distribuidores e instaladoresde maquinaria industrial y equipo de fábrica, tales comomáquinas herramienta, tornos, prensas y equipos de líneasde ensamblaje. Incluye fabricantes de equipos de control dela polución, fundición, prensado, uniones soldadas, aceroestructural, compresores, bombas, rodamientos, elevadoresy escaleras mecánicas."@es,
-        "Entwickler, Hersteller und Händler von sowie Montagefirmen für Industriemaschinen und Werksausrüstungen, z.B. Werkzeugmaschinen, Drehmaschinen, Pressen und Montagestraßenausrüstung. Dazu zählen zudem Hersteller von Steuerausrüstung zur Regulierung der Schadstoffemission, Gussformen, Pressformen, geschmiedeten Formen, Strukturstahlarbeiten, Kompressoren, Pumpen, Lagern, Fahrstühlen und Rolltreppen."@de;
+        "Entwickler, Hersteller und Händler von sowie Montagefirmen für Industriemaschinen und Werksausrüstungen, z.B. Werkzeugmaschinen, Drehmaschinen, Pressen und Montagestraßenausrüstung. Dazu zählen zudem Hersteller von Steuerausrüstung zur Regulierung der Schadstoffemission, Gussformen, Pressformen, geschmiedeten Formen, Strukturstahlarbeiten, Kompressoren, Pumpen, Lagern, Fahrstühlen und Rolltreppen."@de,
+        "Ontwerpers, producenten, distributeurs en installateurs productiecontrolesysteem industriële machines en apparatuur, zoals gereedschapsmachines, lathes, dehydratiepersen en assemblage- bestelpost equipment. Ook bereiders van vervuiling Verkeersregelinstallaties, gietstukken pressings, gelast dierfiguren, structural steelwork, Compressoren, pompen, opleggingen, liften en roltrappen."@nl;
     rdfs:subClassOf icb:ICB2750 .
 
 icb:ICB2771 a owl:Class;
-    icb:code "2771";
-    rdfs:label "Delivery Services"@en,
+    rdfs:label "Belevering intesa"@nl,
+        "Delivery Services"@en,
         "Servicios de entrega"@es,
         "Versanddienst"@de;
+    icb:code "2771";
     rdfs:definition "Betreiber von Post- und Paketlieferdiensten für Handel und Privatkunden. Dazu zählen zudem Zustell- und Logistikdienstleistungen, die hauptsächlich durch Lufttransport realisiert werden."@de,
+        "Exploitanten van koeriersdienst en verpakkingseenheid belevering diensten voor commerciële en consument gebruik. Ook koerier- en logistieke diensten hoofdzakelijk met het luchtvervoer."@nl,
         "Operadores de servicios de correo y entrega de paquetes parauso comercial y de consumo. Incluye servicios de mensajería ylogística que involucran principalmente el transporte aéreo."@es,
         "Operators of mail and package delivery services for commercial and consumer use. Includes courier and logistic services primarily involving air transportation."@en;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2773 a owl:Class;
-    icb:code "2773";
-    rdfs:label "Marine Transportation"@en,
+    rdfs:label "De mariene TRANSPORTATION"@nl,
+        "Marine Transportation"@en,
         "Seetransport"@de,
         "Transporte marítimo"@es;
+    icb:code "2773";
     rdfs:definition "Anbieter im kommerziellen Seefrachtversand, z.B. Containerversand. Ausgeschlossen sind Häfen (siehe: Transportdienstleistungen) und Werften (siehe: Nutzfahrzeuge und LKW)."@de,
+        "De aanbieders van het vervoer voor commerciële markten, zoals bergingsmiddel scheepvaartlanden. Sluit havens, die zijn ingedeeld in TRANSPORTATION intesa en scheepsbouwbedrijven, die zijn ingedeeld in Zakelijk Voertuigen & Trucks."@nl,
         "Proveedores de transporte por agua para mercados comerciales,tales como transporte de contenedores. Excluye puertos, queestán clasificados bajo Servicios de transporte, y constructoresde buques, que están clasificados bajo Vehículos y camionescomerciales."@es,
         "Providers of on-water transportation for commercial markets, such as container shipping. Excludes ports, which are classified under Transportation Services, and shipbuilders, which are classified under Commercial Vehicles & Trucks."@en;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2775 a owl:Class;
-    icb:code "2775";
     rdfs:label "Eisenbahn"@de,
         "Ferrocarriles"@es,
-        "Railroads"@en;
+        "Railroads"@en,
+        "Spoorwegnetten"@nl;
+    icb:code "2775";
     rdfs:definition "Anbieter von Gütertransporten auf Schienen und Bahnlinien. Ausgeschlossen sind Bahngesellschaften für den Personentransport (siehe: Reisen und Tourismus) sowie Schienenfahrzeughersteller (siehe: Nutzfahrzeuge und LKW)."@de,
+        "De aanbieders van industriële spoorvoorzieningen transportation en spoorlijnen. Sluit passenger spoorwegmaatschappijen, die zijn ingedeeld in Reis- & toerisme, en fabrikanten van auto 's, die zijn ingedeeld in Zakelijk Voertuigen & Trucks."@nl,
         "Proveedores de transporte ferroviario industrial y líneasferroviarias. Excluye empresas de ferrocarriles de pasajeros,que están clasificadas bajo Viajes y turismo, y fabricantesde vagones de trenes, que están clasificados bajo Vehículosy camiones comerciales."@es,
         "Providers of industrial railway transportation and railway lines. Excludes passenger railway companies, which are classified under Travel & Tourism, and manufacturers of rail cars, which are classified under Commercial Vehicles & Trucks."@en;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2777 a owl:Class;
-    icb:code "2777";
     rdfs:label "Servicios de transporte"@es,
         "Transportation Services"@en,
+        "Transportation intesa"@nl,
         "Transportdienstleistungen"@de;
-    rdfs:definition "Companies providing services to the Industrial Transportation sector, including companies that manage airports, train depots, roads, bridges, tunnels, ports, and providers of logistic services to shippers of goods. Includes companies that provide aircraft and vehicle maintenance services."@en,
+    icb:code "2777";
+    rdfs:definition "Bedrijven die diensten verlenen aan de Gemotoriseerde TRANSPORTATION sector, met inbegrip van de beheerders van luchthavens, trein opslagplaatsen, wegen, bruggen en tunnels, havens en aanbieders van logistic diensten aan vervoerders van goederen. Ook dat ondernemingen vliegtuigen en wegvoertuig onderhoudsprogramma diensten."@nl,
+        "Companies providing services to the Industrial Transportation sector, including companies that manage airports, train depots, roads, bridges, tunnels, ports, and providers of logistic services to shippers of goods. Includes companies that provide aircraft and vehicle maintenance services."@en,
         "Empresas proveedoras de servicios para el sector de transporteindustrial, incluidas las que administran aeropuertos, estacionesde ferrocarriles, caminos, puentes, túneles, puertos y proveedoresde servicios de logística a despachantes de productos. Incluyeempresas que proveen servicios de mantenimiento de avionesy vehículos."@es,
         "Unternehmen, die Dienstleistungen für den kommerziellen Transport anbieten. Dazu zählen Unternehmen, die Flughäfen, Zugbetriebshöfe, Straßen, Brücken, Tunnel sowie Häfen verwalten, und sowohl solche, die Logistikdienstleistungen für den Gütertransport anbieten, als auch Unternehmen, die Flugzeug- und Fahrzeugwartungsdienstleistungen erbringen."@de;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2779 a owl:Class;
-    icb:code "2779";
     rdfs:label "LKW-Transport"@de,
         "Transporte en camión"@es,
-        "Trucking"@en;
-    rdfs:definition "Companies that provide commercial trucking services. Excludes road and tunnel operators, which are classified under Transportation Services, and vehicle rental and taxi companies, which are classified under Travel & Tourism."@en,
+        "Trucking"@en,
+        "Trucking"@nl;
+    icb:code "2779";
+    rdfs:definition "Bedrijven die provide commerciele trucking diensten. Sluit wegen en tunnels exploitanten die zijn ingedeeld in TRANSPORTATION intesa en wegvoertuig verhuur- en taxi bedrijven, die zijn ingedeeld in Reis- & toerisme."@nl,
+        "Companies that provide commercial trucking services. Excludes road and tunnel operators, which are classified under Transportation Services, and vehicle rental and taxi companies, which are classified under Travel & Tourism."@en,
         "Empresas que proveen servicios de transporte comercial encamión. Excluye operadores de caminos y túneles, que estánclasificados bajo Servicios de transporte, y empresas dearriendo de vehículos y taxis, que están clasificadas bajoViajes y turismo."@es,
         "Unternehmen, die LKW-Transportleistungen für den Handel anbieten. Ausgeschlossen sind Betreiber von Straßen und Tunnel (siehe: Transportdienstleistungen) sowie Mietwagenund Fuhrunternehmen (siehe: Reisen und Tourismus)."@de;
     rdfs:subClassOf icb:ICB2770 .
 
 icb:ICB2791 a owl:Class;
-    icb:code "2791";
     rdfs:label "Business Support Services"@en,
         "Business-Supportleistungen"@de,
+        "De Ondersteunende intesa"@nl,
         "Servicios de apoyo empresarial"@es;
+    icb:code "2791";
     rdfs:definition "Anbieter von nichtfinanziellen Dienstleistungen für ein breites Spektrum von Industrieunternehmen und Behörden. Dazu zählen Unternehmen im Druckgewerbe, Management-Consultants, Reinigungsunternehmen und Unternehmen, die Alarm- und Sicherheitssysteme installieren, warten und überwachen."@de,
+        "De aanbieders van financiële diensten aan een breed scala van industriële ondernemingen en regeringen. Ook aanbieders van diensten, print- beheermethodes ketenprojecten, kantoorapparaten Reinigen diensten en bedrijven die te installeren, en toezicht op de onrust en zekerheid."@nl,
         "Proveedores de servicios no financieros a una amplia gamade empresas industriales y gobiernos. Incluye proveedores deservicios de impresión, consultores de gestión, serviciosde limpieza de oficinas y empresas que instalan, mantienen ymonitorizan sistemas de alarma y seguridad."@es,
         "Providers of nonfinancial services to a wide range of industrial enterprises and governments. Includes providers of printing services, management consultants, office cleaning services, and companies that install, service and monitor alarm and security systems."@en;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2793 a owl:Class;
-    icb:code "2793";
     rdfs:label "Agencias de formaciónempresarial y de colocaciones"@es,
         "Anbieter von Business-Lehrgängen und private Arbeitsvermittler"@de,
-        "Business Training & Employment Agencies"@en;
-    rdfs:definition "Proveedores de cursos de formación empresarial o administrativay servicios de colocación de personal."@es,
+        "Business Training & Employment Agencies"@en,
+        "De Vorming & Emploi agentschappen"@nl;
+    icb:code "2793";
+    rdfs:definition "De aanbieders van bedrijven of managementopleiding cursussen en tewerkstellingsdiensten."@nl,
+        "Proveedores de cursos de formación empresarial o administrativay servicios de colocación de personal."@es,
         "Providers of business or management training courses and employment services."@en,
         "Unternehmen, die Business- und Management-Schulungen anbieten, sowie Arbeitsvermittler."@de;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2795 a owl:Class;
-    icb:code "2795";
     rdfs:label "Administración financiera"@es,
         "Financial Administration"@en,
+        "Financiële Huishoudelijke"@nl,
         "Finanzverwaltung"@de;
-    rdfs:definition "Proveedores de procesamiento computarizado de transacciones,y servicios de comunicación de datos e información, incluidoslos servicios de pagos de nómina, facturas y prestaciones paraempleados."@es,
+    icb:code "2795";
+    rdfs:definition "De aanbieders van geautomatiseerde effectenleningstransactie verwerkingen, communicatie en informatie, met inbegrip van salarismassa, zeevrachtbrief Betaling en werknemer baten- diensten."@nl,
+        "Proveedores de procesamiento computarizado de transacciones,y servicios de comunicación de datos e información, incluidoslos servicios de pagos de nómina, facturas y prestaciones paraempleados."@es,
         "Providers of computerized transaction processing, data communication and information services, including payroll, bill payment and employee benefit services."@en,
         "Unternehmen, die Transaktionsverarbeitung, Datenübertragungs- und Informationsdienste anbieten, u.a. auch Gehaltsabrechnung, Zahlungssysteme und Vorsorgeleistungen für Beschäftigte."@de;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2797 a owl:Class;
-    icb:code "2797";
     rdfs:label "Industrial Suppliers"@en,
         "Industrielieferanten"@de,
+        "Industriële Toeleveranciers"@nl,
         "Proveedores industriales"@es;
+    icb:code "2797";
     rdfs:definition "Distribuidores y mayoristas de productos diversificadosy equipos utilizados principalmente en los sectorescomercial e industrial. Incluye distribuidores demateriales de construcción."@es,
         "Distributors and wholesalers of diversified products and equipment primarily used in the commercial and industrial sectors. Includes builders merchants."@en,
-        "Händler und Großhändler, einschließlich Bauhändler, verschiedener Produkte und Ausrüstungen, die hauptsächlich im Handel und in der Industrie genutzt werden."@de;
+        "Händler und Großhändler, einschließlich Bauhändler, verschiedener Produkte und Ausrüstungen, die hauptsächlich im Handel und in der Industrie genutzt werden."@de,
+        "Producenten en groothandelaren van verschillende producten en apparatuur primarily gebruikt in de commerciële en industriële sector. Ook bouwlieren Merchants."@nl;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB2799 a owl:Class;
-    icb:code "2799";
     rdfs:label "Abfall- und Entsorgungsdienstleister"@de,
+        "Afval & Afzet intesa"@nl,
         "Servicios de eliminaciónde desechos"@es,
         "Waste & Disposal Services"@en;
+    icb:code "2799";
     rdfs:definition "Anbieter von Dienstleistungen für Schadstoffbegrenzung und Umweltschutz im Bereich Verwaltung, Rückgewinnung und Entsorgung von festen Abfällen und Gefahrstoffen, wie z.B. Mülldeponien und Recyclinghöfe. Ausgeschlossen sind Hersteller von industriellen Luft- und Wasserfiltersystemen (siehe: Industriemaschinen)."@de,
+        "De aanbieders van milieuverontreiniging en de diensten voor het beheer, de nuttige toepassing en verwijdering van solide en gevaarlijke afvalstoffen, zoals landfills en recycling -stations. Sluit fabrikanten van industriële lucht en water filterverwerking equipment, die zijn ingedeeld in Gemotoriseerde Installaties."@nl,
         "Proveedores de servicios ambientales y de control de la poluciónpara el manejo, recuperación y eliminación de materiales dedesecho sólidos y peligrosos, tales como vertederos y centrosde reciclaje. Excluye fabricantes de equipo de filtración industrialde aire y agua, que están clasificados bajo Maquinaria industrial."@es,
         "Providers of pollution control and environmental services for the management, recovery and disposal of solid and hazardous waste materials, such as landfills and recycling centres. Excludes manufacturers of industrial air and water filtration equipment, which are classified under Industrial Machinery."@en;
     rdfs:subClassOf icb:ICB2790 .
 
 icb:ICB3353 a owl:Class;
-    icb:code "3353";
     rdfs:label "Automobile"@de,
         "Automobiles"@en,
+        "Automobiles"@nl,
         "Automóviles"@es;
-    rdfs:definition "Fabricantes de motocicletas y vehículos de pasajeros, incluidosautomóviles, vehículos utilitarios deportivos (SUV) y camionesligeros. Excluye fabricantes de camiones pesados, que estánclasificados bajo Vehículos y camiones comerciales, y fabricantesde vehículos recreativos como caravanas y todoterrenos (RV yATV), que están clasificados bajo Productos recreativos."@es,
+    icb:code "3353";
+    rdfs:definition "Bereiders van motorfietsen en dieselpersonenvoertuigen, met inbegrip van auto 's, sport nutsonderneming transportmaterieel (SUV' s) en lichte vrachtwagens. Sluit bereiders van zware vrachtwagens, die zijn ingedeeld in Zakelijk Voertuigen en Trucks en bereiders van recreatievoertuigen (RVS en ATVs), die zijn ingedeeld in de zogeheten Recreational Produkten."@nl,
+        "Fabricantes de motocicletas y vehículos de pasajeros, incluidosautomóviles, vehículos utilitarios deportivos (SUV) y camionesligeros. Excluye fabricantes de camiones pesados, que estánclasificados bajo Vehículos y camiones comerciales, y fabricantesde vehículos recreativos como caravanas y todoterrenos (RV yATV), que están clasificados bajo Productos recreativos."@es,
         "Hersteller von Motorrädern, Personenkraftwagen, inklusive Automobile, Geländelimousinen (SUV) und leichte Nutzfahrzeuge. Ausgeschlossen sind Hersteller von Schwerfahrzeugen, die als Lastkraftwagen klassifiziert werden, sowie Hersteller von Freizeitfahrzeugen (Wohnmobile und Geländewagen), die unter Freizeitprodukte zu klassifizieren sind."@de,
         "Makers of motorcycles and passenger vehicles, including cars, sport utility vehicles (SUVs) and light trucks. Excludes makers of heavy trucks, which are classified under Commercial Vehicles &amp; Trucks, and makers of recreational vehicles (RVs and ATVs), which are classified under Recreational Products."@en;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3355 a owl:Class;
-    icb:code "3355";
-    rdfs:label "Auto Parts"@en,
+    rdfs:label "Auto Delen"@nl,
+        "Auto Parts"@en,
         "Autoteile"@de,
         "Repuestos de automóviles"@es;
+    icb:code "3355";
     rdfs:definition "Fabricantes y distribuidores de piezas nuevas y repuestos paramotocicletas y automóviles, tales como motores, carburadoresy baterías. Excluye productores de neumáticos, que estánclasificadas bajo Neumáticos."@es,
+        "Fabrikanten en distributeurs van nieuwe en reserveonderdelen voor motorfietsen en auto 's, zoals Motoren, carburettors en batterijen. Dat producenten van banden, die zijn ingedeeld."@nl,
         "Manufacturers and distributors of new and replacement parts for motorcycles and automobiles, such as engines, carburettors and batteries. Excludes producers of tires, which are classified under Tires."@en,
         "Vertriebsgesellschaften und Hersteller von Neu- und Ersatzteilen für Motorräder und Automobile wie Motoren, Vergaser und Batterien. Ausgeschlossen sind Reifenhersteller. Diese werden unter Reifen klassifiziert."@de;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3357 a owl:Class;
-    icb:code "3357";
-    rdfs:label "Neumáticos"@es,
+    rdfs:label "Banden"@nl,
+        "Neumáticos"@es,
         "Reifen"@de,
         "Tires"@en;
-    rdfs:definition "Fabricantes, distribuidores y recauchadoras de neumáticos paraautomóviles, camiones y motocicletas."@es,
+    icb:code "3357";
+    rdfs:definition "De producenten, distributeurs en retreaders van auto 's, vrachtwagens en motorrijders."@nl,
+        "Fabricantes, distribuidores y recauchadoras de neumáticos paraautomóviles, camiones y motocicletas."@es,
         "Manufacturers, distributors and retreaders of automobile, truck and motorcycle tires."@en,
         "Vertriebsgesellschaften, Zwischenhändler und Hersteller von Motorrad- und Automobilreifen."@de;
     rdfs:subClassOf icb:ICB3350 .
 
 icb:ICB3533 a owl:Class;
-    icb:code "3533";
     rdfs:label "Brauereien"@de,
         "Brewers"@en,
+        "Brouwers"@nl,
         "Cerveceras"@es;
+    icb:code "3533";
     rdfs:definition "Fabricantes y transportadores de productos de cidra y malta,tales como cerveza, ale y stout."@es,
+        "Fabrikanten en verladers van appelcider of moutmarkt producten zoals bier ale en besliste."@nl,
         "Hersteller und Transporteure von Apfelwein- und Malzprodukten, z.B. helles und dunkles Bier."@de,
         "Manufacturers and shippers of cider or malt products such as beer, ale and stout."@en;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3535 a owl:Class;
-    icb:code "3535";
     rdfs:label "Brennereien und Winzer"@de,
+        "De distilleerder & Vintners"@nl,
         "Destilerías y vinicultores"@es,
         "Distillers & Vintners"@en;
-    rdfs:definition "Erzeuger, Brennereien, Winzer, Mischer und Transporteure von Wein und Spirituosen, wie Whisky, Brandy, Rum, Gin oder Liköre."@de,
+    icb:code "3535";
+    rdfs:definition "De producenten, de distilleerder, de wijnboeren, mengers en verladers van wijn en gedistilleerde dranken zoals whisky, rum, egreneren granen-, of spumanti."@nl,
+        "Erzeuger, Brennereien, Winzer, Mischer und Transporteure von Wein und Spirituosen, wie Whisky, Brandy, Rum, Gin oder Liköre."@de,
         "Producers, distillers, vintners, blenders and shippers of wine and spirits such as whisky, brandy, rum, gin or liqueurs."@en,
         "Productores, destiladores, vinicultores y transportadores de vinoy licores, tales como whisky, brandy, ron, ginebra y licores."@es;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3537 a owl:Class;
-    icb:code "3537";
-    rdfs:label "Alkoholfreie Getränke"@de,
+    rdfs:label "Alcoholvrije dranken"@nl,
+        "Alkoholfreie Getränke"@de,
         "Bebidas no alcohólicas"@es,
         "Soft Drinks"@en;
-    rdfs:definition "Fabricantes, embotelladoras y distribuidores de bebidas noalcohólicas, tales como refrescos, jugo de frutas, té, café yagua embotellada."@es,
+    icb:code "3537";
+    rdfs:definition "De fabrikanten, de bottelaars en distributeurs van niet-alcoholische dranken, zoals soda, vruchtensappen, TEA, koffie en gebotteld water."@nl,
+        "Fabricantes, embotelladoras y distribuidores de bebidas noalcohólicas, tales como refrescos, jugo de frutas, té, café yagua embotellada."@es,
         "Hersteller, Abfüller und Händler von alkoholfreien Getränken, z.B. Limonaden, Fruchtsäfte, Tee, Kaffee und Mineralwasser."@de,
         "Manufacturers, bottlers and distributors of non-alcoholic beverages, such as soda, fruit juices, tea, coffee and bottled water."@en;
     rdfs:subClassOf icb:ICB3530 .
 
 icb:ICB3573 a owl:Class;
-    icb:code "3573";
     rdfs:label "Agricultura y ganadería eindustria pesquera"@es,
         "Farming & Fishing"@en,
+        "Farming & Visserijinspanning"@nl,
         "Land- und Fischwirtschaft"@de;
-    rdfs:definition "Companies that grow crops or raise livestock, operate fisheries or own nontobacco plantations. Includes manufacturers of livestock feeds and seeds and other agricultural products but excludes manufacturers of fertilizers or pesticides, which are classified under Specialty Chemicals."@en,
+    icb:code "3573";
+    rdfs:definition "Bedrijven die gewassen verbouwen of raise dierlĳke, operate -visbedrijven of eigen nontobacco plantations. Ook de fabrikanten van diervoeder en seeds en andere landbouwproducten, maar sluit fabrikanten van meststoffen en pesticiden, die zijn ingedeeld in Specialty rubberchemicaliën."@nl,
+        "Companies that grow crops or raise livestock, operate fisheries or own nontobacco plantations. Includes manufacturers of livestock feeds and seeds and other agricultural products but excludes manufacturers of fertilizers or pesticides, which are classified under Specialty Chemicals."@en,
         "Empresas que se dedican al cultivo y la crianza de ganado,operan pesquerías o son dueñas de plantaciones no tabacaleras.Incluye productores de forraje para ganado y semillas y otrosproductos agrícolas (Strichpunkt) pero excluye fabricantes de fertilizantesy pesticidas, que están clasificados bajo Productos químicosespecializados."@es,
         "Unternehmen, die Getreide anbauen oder Nutzvieh züchten, Fischereien betreiben oder Pflanzungen (keine Tabakplantagen) besitzen. Dazu zählen Hersteller von Tierfutter und Saatgut sowie anderen Agrarprodukten. Ausgeschlossen sind Düngemittel- oder Pestizidhersteller (siehe: Spezielle Chemikalien)."@de;
     rdfs:subClassOf icb:ICB3570 .
 
 icb:ICB3577 a owl:Class;
-    icb:code "3577";
     rdfs:label "Food Products"@en,
         "Nahrungsmittel"@de,
-        "Productos alimenticios"@es;
-    rdfs:definition "Empresas que se dedican al cultivo y la crianza de ganado,operan pesquerías o son dueñas de plantaciones no tabacaleras.Incluye productores de forraje para ganado y semillas y otrosproductos agrícolas (Strichpunkt) pero excluye fabricantes de fertilizantesy pesticidas, que están clasificados bajo Productos químicosespecializados."@es,
+        "Productos alimenticios"@es,
+        "Voedsel Produkten"@nl;
+    icb:code "3577";
+    rdfs:definition "De producenten van levensmiddelen, met inbegrip van meatpacking, snacks, groente, fruit, zuivelprodukten en bevroren Seafood. Ook de producenten van huisdiervoedsel en de producenten van voedingssupplementen, vitaminen en aanverwante onderwerpen. Dat producenten van vruchtensappen, TEA, koffie, gebotteld water en andere niet-alcoholische dranken, die zijn ingedeeld in Zachte dranken."@nl,
+        "Empresas que se dedican al cultivo y la crianza de ganado,operan pesquerías o son dueñas de plantaciones no tabacaleras.Incluye productores de forraje para ganado y semillas y otrosproductos agrícolas (Strichpunkt) pero excluye fabricantes de fertilizantesy pesticidas, que están clasificados bajo Productos químicosespecializados."@es,
         "Food producers, including meatpacking, snacks, fruits, vegetables, dairy products and frozen seafood. Includes producers of pet food and manufacturers of dietary supplements, vitamins and related items. Excludes producers of fruit juices, tea, coffee, bottled water and other non-alcoholic beverages, which are classified under Soft Drinks."@en,
         "Nahrungsmittelproduzenten für u.a. Fleischwaren, Snacks, Obst, Gemüse, Milchprodukte und gefrorene Meeresprodukte. Dazu zählen Hersteller von Tierfutter und Nahrungsergänzungsmitteln, Vitaminen und ähnlichen Produkten. Ausgeschlossen sind Hersteller von Fruchtsäften, Tee, Kaffee, Mineralwasser und anderen alkoholfreien Getränken (siehe: Softdrinks)."@de;
     rdfs:subClassOf icb:ICB3570 .
 
 icb:ICB3722 a owl:Class;
-    icb:code "3722";
     rdfs:label "Durable Household Products"@en,
+        "Durable Household Produkten"@nl,
         "Langlebige Haushaltsprodukte"@de,
         "Productos para el hogarduraderos"@es;
+    icb:code "3722";
     rdfs:definition "Fabricantes y distribuidores de aparatos electrodomésticos,iluminación, herramientas manuales y eléctricas, artículos deferretería, cubiertos, vajillas, equipos de jardinería, valijas, toallasy ropa de cama y mantelería."@es,
+        "Fabrikanten en distributeurs van huishoudelijke apparaten, verlichtingsinstallaties, gereedschap en gereedschappen, sluitwerk, eetgerei, tafelgerei, tuin equipment, bagage, towels en linens."@nl,
         "Hersteller und Händler von Haushaltsgeräten, Beleuchtungselementen, Handwerkzeugen und Maschinen, Haushaltwaren, Essbesteck, Tischwaren, Gartenausstattung, Gepäck, Handtücher und Bettwäsche."@de,
         "Manufacturers and distributors of domestic appliances, lighting, hand tools and power tools, hardware, cutlery, tableware, garden equipment, luggage, towels and linens."@en;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3724 a owl:Class;
-    icb:code "3724";
     rdfs:label "Artículos para el hogar noduraderos"@es,
         "Kurzlebige Haushaltsprodukte Hersteller"@de,
-        "Nondurable Household Products"@en;
+        "Nondurable Household Products"@en,
+        "Nondurable Household Produkten"@nl;
+    icb:code "3724";
     rdfs:comment ""^^xsd:string;
     rdfs:definition "Hersteller und Händler von Schreibutensilien, Papierwaren, Batterien, Glühlampen, Stoffen, Toilettenpapier und Reinigungsprodukten wie Seife und Poliermittel."@de,
+        "Producenten en distributeurs van hokken, papier, batterijen, lampen, tissues, toiletpapier en reinigingsproducten zoals zepen en polishes."@nl,
         "Producers and distributors of pens, paper goods, batteries, light bulbs, tissues, toilet paper and cleaning products such as soaps and polishes."@en,
         "Productores y distribuidores de lápices, artículos de papel,baterías, bombillas eléctricas, pañuelos de papel, papel higiénicoy productos de limpieza, como jabones y cera para muebles."@es;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3726 a owl:Class;
-    icb:code "3726";
     rdfs:label "Furnishings"@en,
+        "Meubilair"@nl,
         "Muebles"@es,
         "Möbel"@de;
+    icb:code "3726";
     rdfs:definition "Fabricantes y distribuidores de muebles, lo que incluye sillas,mesas, escritorios, alfombras, papel tapiz y muebles de oficina."@es,
+        "Fabrikanten en distributeurs van -meubilering, met inbegrip van de voorzitters, tabellen Desks, vloerbedekking, wallpaper en kantoormeubilair."@nl,
         "Hersteller und Händler von Möbeln (einschließlich Stühle, Tische, Schreibtische, Teppichboden, Tapete und Büromöbel)."@de,
         "Manufacturers and distributors of furniture, including chairs, tables, desks, carpeting, wallpaper and office furniture."@en;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3728 a owl:Class;
-    icb:code "3728";
-    rdfs:label "Construcción de viviendas"@es,
+    rdfs:label "Binnenlandse Construction"@nl,
+        "Construcción de viviendas"@es,
         "Hausbau"@de,
         "Home Construction"@en;
+    icb:code "3728";
     rdfs:definition "Bauunternehmen für Wohnhäuser, z.B. Fertighäuser und “Mobile Homes”."@de,
         "Constructores de viviendas, lo que incluye fabricantes decasas móviles y prefabricadas diseñadas para ser usadas enun lugar fijo."@es,
-        "Constructors of residential homes, including manufacturers of mobile and prefabricated homes intended for use in one place."@en;
+        "Constructors of residential homes, including manufacturers of mobile and prefabricated homes intended for use in one place."@en,
+        "De constructeurs van residentieel homes, met inbegrip van de producenten van mobiele en geprefabriceerde homes bestemd is voor gebruik in één plaats."@nl;
     rdfs:subClassOf icb:ICB3720 .
 
 icb:ICB3743 a owl:Class;
-    icb:code "3743";
     rdfs:label "Bienes de consumo electrónicos"@es,
         "Consumer Electronics"@en,
+        "De consument Electronics"@nl,
         "Unterhaltungselektronik"@de;
+    icb:code "3743";
     rdfs:definition "Fabricantes y distribuidores de artículos electrónicos de consumo,tales como televisores, videograbadoras, reproductores deDVD, equipos de audio, sintonizadores de televisión por cable,calculadoras y cámaras de vídeo."@es,
+        "Fabrikanten en distributeurs van consumentenelektronika, zoals televisies, VCRs, dvd-spelers, audiovisuele apparatuur, cable kartons, rekenmachines en camcorders."@nl,
         "Hersteller und Händler von Unterhaltungselektronik, wie z.B Fernseher, Videorecorder, DVD-Player, HiFi-Geräte, Kabelanschlussgeräte, Taschenrechner und Camcorder"@de,
         "Manufacturers and distributors of consumer electronics, such as TVs, VCRs, DVD players, audio equipment, cable boxes, calculators and camcorders."@en;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3745 a owl:Class;
-    icb:code "3745";
     rdfs:label "Freizeitprodukte"@de,
         "Productos recreativos"@es,
-        "Recreational Products"@en;
+        "Recreational Products"@en,
+        "Recreationeel Produkten"@nl;
+    icb:code "3745";
     rdfs:definition "Fabricantes y distribuidores de equipos recreativos.Incluye instrumentos musicales, equipos y suministros fotográficos,caravanas, vehículos todoterreno y vehículos recreativosmarinos, tales como yates, botes y lanchas a motor."@es,
+        "Fabrikanten en distributeurs van recreationeel equipment. Ook musical instrumenten fotografische equipment en schrijfmateriaal, RVS, ATVs en mariene recreatievoertuigen zoals plezierjachten, bootjes en speedboten."@nl,
         "Hersteller und Händler von Freizeitprodukten, wie z.B. Musikinstrumente, Fotoausrüstung und -material, Wohnmobile, vierrädrige Motorräder und Wasserfahrzeuge, z.B. Jachten, Schlauchboote und Schnellboote."@de,
         "Manufacturers and distributors of recreational equipment. Includes musical instruments, photographic equipment and supplies, RVs, ATVs and marine recreational vehicles such as yachts, dinghies and speedboats."@en;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3747 a owl:Class;
-    icb:code "3747";
     rdfs:label "Juguetes"@es,
+        "Speelgoed"@nl,
         "Spielzeug"@de,
         "Toys"@en;
+    icb:code "3747";
     rdfs:definition "Fabricantes y distribuidores de juguetes y juegos de video/computadora,lo que incluye juguetes y juegos como barajas, juegosde mesa, animales de peluche y muñecas."@es,
+        "Fabrikanten en distributeurs van speelgoed en video / computerspelletjes, waaronder speelgoed en spelletjes te spelen, zoals BOVEN Examencommissie wildkwekerijen, gevuld dieren en poppen."@nl,
         "Hersteller und Händler von Spielzeug und Video- bzw. Computerspielen, u.a. auch Kartenspiele, Brettspiele, Plüschtiere und Puppen."@de,
         "Manufacturers and distributors of toys and video/computer games, including such toys and games as playing cards, board games, stuffed animals and dolls."@en;
     rdfs:subClassOf icb:ICB3740 .
 
 icb:ICB3763 a owl:Class;
-    icb:code "3763";
     rdfs:label "Bekleidung und Accessoires"@de,
         "Clothing & Accessories"@en,
+        "Kledingproducerende & Toebehoren"@nl,
         "Ropa y accesorios"@es;
+    icb:code "3763";
     rdfs:definition "Fabricantes y distribuidores de todo tipo de ropa, joyas, relojeso textiles. Incluye ropa deportiva, anteojos de sol, monturaspara anteojos, ropa y otros artículos de cuero, y procesadoresde pieles y cueros."@es,
+        "Fabrikanten en distributeurs van alle soorten van kleding, juwelierswaren, horloges of textielstoffen. Ook sportkleding, zonnebrillen, eyeglass frames, zeemleder kleding en goederen, en loonwerkers van hides vliezen."@nl,
         "Hersteller und Händler von Bekleidung, Schmuck, Uhren und Textilien, u.a. Sportbekleidung, Sonnenbrillen, Brillengestelle, Lederbekleidung und Lederwaren Strichpunkt sowie andere, lederverarbeitende Betriebe."@de,
         "Manufacturers and distributors of all types of clothing, jewellery, watches or textiles. Includes sportswear, sunglasses, eyeglass frames, leather clothing and goods, and processors of hides and skins."@en;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3765 a owl:Class;
-    icb:code "3765";
     rdfs:label "Calzado"@es,
         "Footwear"@en,
+        "Schoenen"@nl,
         "Schuhe"@de;
+    icb:code "3765";
     rdfs:definition "Fabricantes y distribuidores de zapatos, botas, sandalias, zapatillasdeportivas y otros tipos de calzado."@es,
+        "Fabrikanten en distributeurs van schoenen en laarzen sandalen, sneakers en andere soorten schoeisel."@nl,
         "Hersteller und Händler von Schuhen, Stiefeln, Sandalen, Turnschuhen und anderen Formen von Schuhen."@de,
         "Manufacturers and distributors of shoes, boots, sandals, sneakers and other types of footwear."@en;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3767 a owl:Class;
-    icb:code "3767";
     rdfs:label "Personal Products"^^xsd:string;
+    icb:code "3767";
     rdfs:definition "Fabricantes y distribuidores de cosméticos, artículos detocador y productos para el cuidado personal y la higiene, loque incluye desodorantes, jabones, pastas dentales, perfumes,pañales, champúes, maquinillas de afeitar y productos dehigiene femenina. Incluye fabricantes de anticonceptivos,excepto anticonceptivos orales, que están clasificados bajoProductos farmacéuticos"@es,
+        "Fabrikanten en distributeurs van cosmetica en toiletartikelen en persoonlijke zorg en hygiënische producten, waaronder deodorant, zeep, tandpasta, parfums, diapers, shampoos, scheerapparaten en vrouwelijke-bedrijfshygiëne aquicultuurproducten. Ook bereiders van anticonceptivum m.u.v. oral anticonceptivum, die zijn ingedeeld in Pharmaceuticals."@nl,
         "Hersteller und Händler von Kosmetika, Toilettenartikeln und persönlichen Pflege- und Hygieneprodukten, z.B. Deodorants, Zahnpasta, Parfum, Windeln, Seife, Shampoo, Rasierklingen und Intimpflegeprodukte. Dazu zählen Hersteller von Empfängnisverhütungsmitteln. Dies gilt nicht für orale Kontrazeptiva (siehe: Arzneimittel)."@de,
         "Makers and distributors of cosmetics, toiletries and personal-care and hygiene products, including deodorants, soaps, toothpaste, perfumes, diapers, shampoos, razors and feminine-hygiene products. Includes makers of contraceptives other than oral contraceptives, which are classified under Pharmaceuticals."@en;
     rdfs:subClassOf icb:ICB3760 .
 
 icb:ICB3785 a owl:Class;
-    icb:code "3785";
     rdfs:label "Tabaco"@es,
+        "Tabak"@nl,
         "Tabakwaren"@de,
         "Tobacco"@en;
+    icb:code "3785";
     rdfs:definition "Fabricantes y distribuidores de cigarrillos, puros y otros productosde tabaco. Incluye plantaciones de tabaco."@es,
+        "Fabrikanten en distributeurs van sigaretten, sigaretten en andere tabaksproducten. Ook tobacco plantations."@nl,
         "Hersteller und Händler (einschließlich Tabakplantagen) von Zigaretten, Zigarren und anderen Tabakprodukten."@de,
         "Manufacturers and distributors of cigarettes, cigars and other tobacco products. Includes tobacco plantations."@en;
     rdfs:subClassOf icb:ICB3780 .
 
 icb:ICB4533 a owl:Class;
-    icb:code "4533";
-    rdfs:label "Health Care Providers"@en,
+    rdfs:label "Gezondheid Care Providers"@nl,
+        "Health Care Providers"@en,
         "Medizinische Leistungen"@de,
         "Proveedores de atenciónde la salud"@es;
-    rdfs:definition "Eigentümer und Betreiber von Gesundheitseinrichtungen, Krankenhäusern sowie Kliniken, Zahnärzte, Augenoptiker, Pflegeheime, Rehabilitationszentren und Altersheime. Ausgeschlossen sind veterinärmedizinische Einrichtungen (siehe: Spezielle Dienstleistungen)."@de,
+    icb:code "4533";
+    rdfs:definition "De eigenaren en exploitanten van quot onderhoudsprogramma organisaties, ziekenhuizen en klinieken, tandartsen, opticiens, ziekenverpleging homes, rehabilitatie en afboeking -stations. Sluit de veterinaire diensten, die zijn ingedeeld in intesa Specialized consumentenbescherming."@nl,
+        "Eigentümer und Betreiber von Gesundheitseinrichtungen, Krankenhäusern sowie Kliniken, Zahnärzte, Augenoptiker, Pflegeheime, Rehabilitationszentren und Altersheime. Ausgeschlossen sind veterinärmedizinische Einrichtungen (siehe: Spezielle Dienstleistungen)."@de,
         "Owners and operators of health maintenance organizations, hospitals, clinics, dentists, opticians, nursing homes, rehabilitation and retirement centres. Excludes veterinary services, which are classified under Specialized Consumer Services."@en,
         "Propietarios y operadores de organizaciones de mantenimientode la salud, hospitales, clínicas, dentistas, oculistas, casasde reposo, centros de rehabilitación y hogares para jubilados.Excluye servicios veterinarios, que están clasificados bajoServicios al consumidor especializados."@es;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4535 a owl:Class;
-    icb:code "4535";
     rdfs:label "Equipo médico"@es,
         "Medical Equipment"@en,
+        "Medische Uitrusting"@nl,
         "Medizinische Geräte"@de;
+    icb:code "4535";
     rdfs:definition "Fabricantes y distribuidores de aparatos médicos tales comoequipos para imágenes por resonancia magnética, prótesis,marcapasos, aparatos de rayos X y otros dispositivos médicosno desechables."@es,
+        "Fabrikanten en distributeurs van medische hulpmiddelen zoals MRI-scanners prosthetics, hartritmeregelaars, röntgenapparaten mengmachines en andere niet-wegwerpaanstekers medische hulpmiddelen."@nl,
         "Hersteller und Händler von medizinischen Geräten und Produkten, wie z.B. Kernspintomographen, Prothesen, Herzschrittmacher, Röntgengeräte und andere medizinische Geräte für den Mehrfachgebrauch."@de,
         "Manufacturers and distributors of medical devices such as MRI scanners, prosthetics, pacemakers, X-ray machines and other non-disposable medical devices."@en;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4537 a owl:Class;
-    icb:code "4537";
     rdfs:label "Insumos médicos"@es,
         "Medical Supplies"@en,
+        "Medische Supplies"@nl,
         "Medizinische Produkte"@de;
+    icb:code "4537";
     rdfs:definition "Fabricantes y distribuidores de insumos médicos empleados porproveedores de atención de la salud y público general. Incluyefabricantes de lentes de contacto, lentes para anteojos, vendasy otros insumos médicos desechables."@es,
+        "Fabrikanten en distributeurs van medische benodigdheden voor de gezondheidszorg en het algemene publiek. Ook bereiders van contactlenzen, eyeglass brillenglazen, bandages en andere wegwerpaanstekers medische benodigdheden."@nl,
         "Hersteller und Händler von medizinischen Produkten, die vom medizinischen Personal und den Patienten benutzt werden. Dazu zählen Hersteller von Kontaktlinsen, Brillengläsern und anderenmedizinischen Einwegartikeln."@de,
         "Manufacturers and distributors of medical supplies used by health care providers and the general public. Includes makers of contact lenses, eyeglass lenses, bandages and other disposable medical supplies."@en;
     rdfs:subClassOf icb:ICB4530 .
 
 icb:ICB4573 a owl:Class;
-    icb:code "4573";
     rdfs:label "Biotechnologie"@de,
         "Biotechnology"@en,
-        "Biotecnología"@es;
-    rdfs:definition "Companies engaged in research into and development of biological substances for the purposes of drug discovery and diagnostic development, and which derive the majority of their revenue from either the sale or licensing of these drugs and diagnostic tools."@en,
+        "Biotecnología"@es,
+        "De biotechnologie"@nl;
+    icb:code "4573";
+    rdfs:definition "Bedrijven die betrokken zijn bij het onderzoek naar en de ontwikkeling van de biologische stoffen voor de toepassing van de Discovery en diagnostiche ontwikkeling, en die de meerderheid van hun inkomsten uit de verkoop of licentieverlenende van deze drugs en de diagnostische instrumenten."@nl,
+        "Companies engaged in research into and development of biological substances for the purposes of drug discovery and diagnostic development, and which derive the majority of their revenue from either the sale or licensing of these drugs and diagnostic tools."@en,
         "Empresas que se dedican a la investigación y desarrollo desustancias biológicas para propósitos de descubrimiento demedicamentos y desarrollo de métodos de diagnóstico, y queobtienen la mayor parte de sus ingresos de la venta o licenciade estos medicamentos o herramientas de diagnóstico."@es,
         "Unternehmen, die in der Erforschung und Entwicklung von biologischen Substanzen für die Neuentwicklung von Arzneimitteln und Diagnoseverfahren tätig sind und die ihren Umsatz hauptsächlich aus dem Verkauf oder der Lizenzvergabe dieser Arzneimittel oder Diagnosemittel erzielen."@de;
     rdfs:subClassOf icb:ICB4570 .
 
 icb:ICB4577 a owl:Class;
-    icb:code "4577";
     rdfs:label "Arzneimittel"@de,
+        "De farmaceutische industrie"@nl,
         "Fármacos"@es,
         "Pharmaceuticals"@en;
-    rdfs:definition "Fabricantes de medicamentos de venta con y sin recetamédica, tales como la Aspirina, remedios para el resfrío ypíldoras anticonceptivas. Incluye productores de vacunas (Strichpunkt) pero excluye productores de vitaminas, que están clasificadosbajo Productos alimenticios."@es,
+    icb:code "4577";
+    rdfs:definition "De fabrikanten van receptvrije geneesmiddelen, zoals aspirine frigorieën redresvoorzieningen en geboortebeperking pillen. Ook vaccine uitbrengers maar sluit Vitamin producenten, die zijn ingedeeld in voedingsproducten."@nl,
+        "Fabricantes de medicamentos de venta con y sin recetamédica, tales como la Aspirina, remedios para el resfrío ypíldoras anticonceptivas. Incluye productores de vacunas (Strichpunkt) pero excluye productores de vitaminas, que están clasificadosbajo Productos alimenticios."@es,
         "Hersteller von verschreibungspflichtigen oder frei verkäuflichen Arzneimitteln, wie z.B. Aspirin, Erkältungsmittel und die Antibabypille. Dazu zählen auch Hersteller von Impfstoffen, nicht aber Hersteller von Vitaminpräparaten (siehe: Nahrungsmittel)."@de,
         "Manufacturers of prescription or over-the-counter drugs, such as aspirin, cold remedies and birth control pills. Includes vaccine producers but excludes vitamin producers, which are classified under Food Products."@en;
     rdfs:subClassOf icb:ICB4570 .
 
 icb:ICB5333 a owl:Class;
-    icb:code "5333";
     rdfs:label "Arzneimitteleinzelhändler"@de,
+        "De Detailhandelaar"@nl,
         "Drug Retailers"@en,
         "Minoristas de medicamentos"@es;
+    icb:code "5333";
     rdfs:definition "Betreiber von Apotheken, einschließlich Großhändler und Händler, die diese Geschäfte beliefern."@de,
+        "Exploitanten van apotheken, met inbegrip van de groothandel en mestschudders restaurantbedrijven aan deze bedrijven."@nl,
         "Operadores de farmacias, lo que incluye mayoristas ydistribuidores que atienden a estos negocios."@es,
         "Operators of pharmacies, including wholesalers and distributors catering to these businesses."@en;
     rdfs:subClassOf icb:ICB5330 .
 
 icb:ICB5337 a owl:Class;
-    icb:code "5337";
     rdfs:label "Einzel- und Großhändler für Nahrungsmittel"@de,
         "Food Retailers & Wholesalers"@en,
-        "Minoristas y mayoristasde alimentos"@es;
-    rdfs:definition "Supermarkets, food-oriented convenience stores and other food retailers and distributors. Includes retailers of dietary supplements and vitamins."@en,
+        "Minoristas y mayoristasde alimentos"@es,
+        "Voedsel Detailhandelaar & groothandelaren"@nl;
+    icb:code "5337";
+    rdfs:definition "Goedkope supermarkten, voedselhulpverleningen toerismegeoriënteerde vrieshuizen en andere levensmiddelen detailhandelaren en distributeurs. Ook de detailhandelaren van voedingssupplementen en vitaminen."@nl,
+        "Supermarkets, food-oriented convenience stores and other food retailers and distributors. Includes retailers of dietary supplements and vitamins."@en,
         "Supermercados, tiendas de barrio orientadas a laalimentación y otros minoristas y distribuidores de alimentos.Incluye minoristas de suplementos dietéticos y vitaminas."@es,
         "Supermärkte, Einzelhandelsgeschäfte und andere Einzelhändler und Vertriebshändler, die Nahrungsmittel anbieten. Dazu zählen auch Einzelhändler für Nahrungsergänzungsmittel und Vitamine."@de;
     rdfs:subClassOf icb:ICB5330 .
 
 icb:ICB5371 a owl:Class;
-    icb:code "5371";
-    rdfs:label "Apparel Retailers"@en,
+    rdfs:label "Apparel Detailhandelaar"@nl,
+        "Apparel Retailers"@en,
         "Einzelhändler für Bekleidung und Accessoires"@de,
         "Minoristas de ropa"@es;
+    icb:code "5371";
     rdfs:definition "Einzelhändler und Großhändler, die sich hauptsächlich auf Bekleidung, Schuhe, Schmuck, Sonnenbrillen und andere Accessoires spezialisiert haben."@de,
+        "Handelaren en groothandelaren gespecialiseerd in kleding, schoeisel, juwelierswaren, zonnebrillen en andere installatiematerieel."@nl,
         "Minoristas y mayoristas especializados principalmente en ropa,calzado, joyas, anteojos de sol y otros accesorios."@es,
         "Retailers and wholesalers specializing mainly in clothing, shoes, jewellery, sunglasses and other accessories."@en;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5373 a owl:Class;
-    icb:code "5373";
-    rdfs:label "Broadline Retailers"@en,
+    rdfs:label "Broadline Detailhandelaar"@nl,
+        "Broadline Retailers"@en,
         "Einzelhändler ohne Spezialisierung"@de,
         "Minoristas diversificados"@es;
-    rdfs:definition "Einzelhandelsgeschäfte oder Großhändler, die eine große Produktvielfalt anbieten, die von Gebrauchsgütern bis hin zu Textilien reicht."@de,
+    icb:code "5373";
+    rdfs:definition "De detailhandel en groothandelaren offering een breed scala van producten, met inbegrip van zowel de harde en zachte goederen."@nl,
+        "Einzelhandelsgeschäfte oder Großhändler, die eine große Produktvielfalt anbieten, die von Gebrauchsgütern bis hin zu Textilien reicht."@de,
         "Minoristas de descuento y mayoristas que ofrecen una ampliagama de productos, lo que incluye bienes de consumo duraderosy no duraderos."@es,
         "Retail outlets and wholesalers offering a wide variety of products including both hard goods and soft goods."@en;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5375 a owl:Class;
-    icb:code "5375";
-    rdfs:label "Heimwerkermärkte"@de,
+    rdfs:label "Binnenlandse Kwaliteitsverbetering Detailhandelaar"@nl,
+        "Heimwerkermärkte"@de,
         "Home Improvement Retailers"@en,
         "Minoristas de materiales paramejoras en el hogar"@es;
+    icb:code "5375";
     rdfs:definition "Einzelhändler und Großhändler, die sich auf den Verkauf von Produkten, wie z. B. Gartengeräte und -materialien, Teppiche, Tapeten, Farbe, Möbel, Gardinen und Vorhänge sowie Baustoffe, spezialisiert haben."@de,
+        "Handelaren en groothandelaren concentreren op de verkoop van binnenlandse verbetering producten, met inbegrip van de tuin equipment, water, wallpaper, verf, binnenlandse -meubilering, zonneschermen en gordijnen en bouwmaterialen."@nl,
         "Minoristas y mayoristas concentrados en la venta de productospara mejoras en el hogar, lo que incluye equipos de jardinería,alfombras, papel tapiz, pintura, muebles para el hogar, persianasy cortinas, y materiales de construcción."@es,
         "Retailers and wholesalers concentrating on the sale of home improvement products, including garden equipment, carpets, wallpaper, paint, home furniture, blinds and curtains, and building materials."@en;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5377 a owl:Class;
-    icb:code "5377";
-    rdfs:label "Servicios al consumidorespecializados"@es,
+    rdfs:label "De gespecialiseerde diensten van de consumentenbescherming"@nl,
+        "Servicios al consumidorespecializados"@es,
         "Specialized Consumer Services"@en,
         "Spezielle Dienstleistungen"@de;
+    icb:code "5377";
     rdfs:definition "Anbieter von Verbraucherdiensten, wie z.B. Auktionshäuser, Tagespflegeeinrichtungen, Anbieter für chemische Reinigung, Schulen, Vermietungsunternehmen, veterinärmedizinische Einrichtungen, Friseursalons, Bestattungsunternehmer, Landschaftsbau- sowie Lagerunternehmen, Dienstleister für Heizungs- und Klimaanlagenbau sowie Klempnerarbeiten."@de,
+        "De aanbieders van diensten zoals afslagen huizen, kinderdagverblijven, dry schoners, scholen, bedrijven, consumenten verhuur- Geneesmiddelen klinieken, haarverzorging salons en aanbieders van begrafenis, de hand-onderhoudsprogramma, de opslag, verwarming en koeling inrichtingsvergoedingen en sanitair diensten."@nl,
         "Proveedores de servicios para el consumidor, tales como casasde subastas, guarderías, tintorerías, escuelas, empresas dealquiler de bienes de consumo, clínicas veterinarias, salones debelleza y proveedores de servicios funerarios, mantenimiento dejardines, almacenamiento para el consumidor, servicios de instalaciónde calefacción y refrigeración, y servicios de plomería."@es,
         "Providers of consumer services such as auction houses, day-care centres, dry cleaners, schools, consumer rental companies, veterinary clinics, hair salons and providers of funeral, lawn-maintenance, consumer-storage, heating and cooling installation and plumbing services."@en;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5379 a owl:Class;
-    icb:code "5379";
     rdfs:label "Facheinzelhändler"@de,
         "Minoristas especializados"@es,
+        "Specialty Detailhandelaar"@nl,
         "Specialty Retailers"@en;
+    icb:code "5379";
     rdfs:definition "Einzelhändler und Großhändler, die sich auf eine Art von Gütern, wie z.B. Elektrogeräte, Bücher, Autoersatzteile oder Ausverkäufe spezialisiert haben. Dazu zählen Autohändler, Videoverleiher, Discounter, Duty-free-Shops und Tankstellen, deren Eigentümer keine Ölgesellschaft ist."@de,
+        "Handelaren en groothandelaren concentreren op één categorie goederen, zoals elektronica, bibliotheekbezit, auto-onderdelen of closeouts. Ook de dealers, video verhuur- vrieshuizen, dollar vrieshuizen, belastingvrije winkels en automobielonderdelen vluchtkosten -stations niet owned door oliemaatschappijen."@nl,
         "Minoristas y mayoristas concentrados en un solo tipo de producto,tales como electrónica, libros, repuestos de automóviles yliquidaciones. Incluye concesionarios automotrices, tiendas dearriendo de videos, tiendas de dólar, tiendas libres de impuestosy estaciones de servicio que no son propiedad de compañíaspetroleras."@es,
         "Retailers and wholesalers concentrating on a single class of goods, such as electronics, books, automotive parts or closeouts. Includes automobile dealerships, video rental stores, dollar stores, duty-free shops and automotive fuel stations not owned by oil companies."@en;
     rdfs:subClassOf icb:ICB5370 .
 
 icb:ICB5553 a owl:Class;
-    icb:code "5553";
     rdfs:label "Broadcasting & Entertainment"@en,
         "Programación y entretenimiento"@es,
-        "Radio, TV und Unterhaltung"@de;
-    rdfs:definition "Producers, operators and broadcasters of radio, television, music and filmed entertainment. Excludes movie theatres, which are classified under Recreational Services."@en,
+        "Radio, TV und Unterhaltung"@de,
+        "Uitzendings- & Ontvangst-"@nl;
+    icb:code "5553";
+    rdfs:definition "Producenten, exploitanten en omroepmaatschappijen van radio, televisie, muziek en films Ontvangst-. Sluit film theaters, die zijn ingedeeld in de zogeheten Recreational diensten."@nl,
+        "Producers, operators and broadcasters of radio, television, music and filmed entertainment. Excludes movie theatres, which are classified under Recreational Services."@en,
         "Productores, operadores y difusores de radio, televisión, músicay entretenimiento filmado. Excluye salas de cine, que estánclasificados bajo Servicios recreativos."@es,
         "Produzenten, Betreiber und Sender von Radio- und Fernsehprogrammen, Unterhaltungsmusik und -filmen. Ausgeschlossen sind Kinos (siehe: Freizeitanlagen)."@de;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5555 a owl:Class;
-    icb:code "5555";
     rdfs:label "Agencias de medios"@es,
         "Media Agencies"@en,
+        "Media agentschappen"@nl,
         "Medienagenturen"@de;
-    rdfs:definition "Companies providing advertising, public relations and marketing services. Includes billboard providers and telemarketers."@en,
+    icb:code "5555";
+    rdfs:definition "Bedrijven die reclame en marketing diensten. Ook plakkaat aanbieders en telemarketers."@nl,
+        "Companies providing advertising, public relations and marketing services. Includes billboard providers and telemarketers."@en,
         "Empresas que proveen servicios publicitarios, de relacionespúblicas y marketing. Incluye proveedores de vallas publicitariasy empresas dedicadas a las ventas por teléfono."@es,
         "Unternehmen, die Dienstleistungen in den Bereichen Werbung, Public Relations und Marketing anbieten. Dazu zählen u.a. Anbieter von Werbetafeln sowie Telemarketingunternehmen"@de;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5557 a owl:Class;
-    icb:code "5557";
-    rdfs:label "Editoriales"@es,
+    rdfs:label "-uitgeverij"@nl,
+        "Editoriales"@es,
         "Publishing"@en,
         "Verlagswesen"@de;
+    icb:code "5557";
     rdfs:definition "Editores de información a través de medios impresoso electrónicos."@es,
         "Herausgeber von Informationen über Print- oder elektronische Medien."@de,
-        "Publishers of information via printed or electronic media."@en;
+        "Publishers of information via printed or electronic media."@en,
+        "Uitgevers van informatie via geguillocheerde of elektronische media."@nl;
     rdfs:subClassOf icb:ICB5550 .
 
 icb:ICB5751 a owl:Class;
-    icb:code "5751";
     rdfs:label "Airlines"@en,
         "Fluggesellschaften"@de,
+        "Luchtvaartmaatschappijen"@nl,
         "Líneas aéreas"@es;
-    rdfs:definition "Companies providing primarily passenger air transport. Excludes airports, which are classified under Transportation Services."@en,
+    icb:code "5751";
+    rdfs:definition "Bedrijven die primarily passenger luchtvervoer. Sluit airports, die zijn ingedeeld in TRANSPORTATION diensten."@nl,
+        "Companies providing primarily passenger air transport. Excludes airports, which are classified under Transportation Services."@en,
         "Empresas que proveen principalmente transporte aéreo depasajeros. Excluye aeropuertos, que están clasificados bajoServicios de transporte."@es,
         "Unternehmen für den Personentransport per Flugzeug Strichpunkt ausgeschlossen sind Flughäfen ( siehe: Transportdienstleistungen)."@de;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5752 a owl:Class;
-    icb:code "5752";
     rdfs:label "Gambling"@en,
+        "Gokkerij"@nl,
         "Juegos de azar"@es,
         "Spielhallen"@de;
+    icb:code "5752";
     rdfs:definition "Betreiber von Spielhallen und Kasinos Strichpunkt dazu zählen Online- Kasinos, Rennbahnen sowie Hersteller von Flipperautomaten und Kasinosowie Lotterieausrüstung."@de,
+        "De aanbieders van kansspelen en casino. Ook de onlinecasino 's, renbanen en de fabrikanten van pachinko mengmachines en casino en loterij equipment."@nl,
         "Proveedores de juegos de azar y casinos. Incluye casinos enlínea, hipódromos y fabricantes de máquinas de pachinko yequipos para casinos y loterías."@es,
         "Providers of gambling and casino facilities. Includes online casinos, racetracks and the manufacturers of pachinko machines and casino and lottery equipment."@en;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5753 a owl:Class;
-    icb:code "5753";
     rdfs:label "Hoteles"@es,
         "Hotels"@de,
-        "Hotels"@en;
+        "Hotels"@en,
+        "Hotels"@nl;
+    icb:code "5753";
     rdfs:definition "Betreiber und Geschäftsführer von Hotels, Motels, Gasthäusern, Ferienanlagen, Wellness-Centern und Campingplätzen."@de,
+        "Ondernemers en bestuurders van hotels, motels, groepsaccommodatie neemt, kuuroorden en campgrounds."@nl,
         "Operadores y administradores de hoteles, moteles, posadas,centros turísticos, balnearios y áreas para acampar."@es,
         "Operators and managers of hotels, motels, lodges, resorts, spas and campgrounds."@en;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5755 a owl:Class;
-    icb:code "5755";
     rdfs:label "Freizeitanlagen"@de,
         "Recreational Services"@en,
+        "Recreationeel intesa"@nl,
         "Servicios recreativos"@es;
-    rdfs:definition "Fitness-Center, Kreuzfahrtgesellschaften, Kinos und Sportvereine."@de,
+    icb:code "5755";
+    rdfs:definition "De aanbieders van plezier- faciliteiten en diensten, met inbegrip van geschiktheid -stations, zeecruises -buizen, film theaters en sports teams."@nl,
+        "Fitness-Center, Kreuzfahrtgesellschaften, Kinos und Sportvereine."@de,
         "Proveedores de instalaciones y servicios para el ocio, incluidosgimnasios, empresas de cruceros, salas de cine y equiposdeportivos."@es,
         "Providers of leisure facilities and services, including fitness centres, cruise lines, movie theatres and sports teams."@en;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5757 a owl:Class;
-    icb:code "5757";
     rdfs:label "Restaurantes y bares"@es,
         "Restaurants & Bars"@en,
+        "Restaurants & Bars"@nl,
         "Restaurants und Bars"@de;
+    icb:code "5757";
     rdfs:definition "Betreiber von Restaurants, Fast-Food-Restaurants, Cafés und Bars. Dazu zählen auch angeschlossene Brauereien und Bringdienste."@de,
+        "Exploitanten van restaurants, fast food-faciliteiten in de cafés en bars. Ook geïntegreerd brouwerij restaurantbedrijven bedrijven en ondernemingen."@nl,
         "Operadores de restaurantes, instalaciones de comida rápida,cafeterías y bares. Incluye empresas cerveceras integradas y decatering."@es,
         "Operators of restaurants, fast-food facilities, coffee shops and bars. Includes integrated brewery companies and catering companies."@en;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB5759 a owl:Class;
-    icb:code "5759";
     rdfs:label "Reisen und Tourismus"@de,
+        "Reizen en toerisme"@nl,
         "Travel & Tourism"@en,
         "Viajes y turismo"@es;
-    rdfs:definition "Companies providing travel and tourism related services, including travel agents, online travel reservation services, automobile rental firms and companies that primarily provide passenger transportation, such as buses, taxis, passenger rail and ferry companies."@en,
+    icb:code "5759";
+    rdfs:definition "Bedrijven die reizen en toerisme gerelateerde diensten, met inbegrip van de reisbureaus, online-reisbereidheid reserveringsinformatie, auto-verhuur- firms en bedrijven die primarily provide passenger transportation, zoals bussen, taxi 's, passenger spoorweg- en ferrymaatschappijen."@nl,
+        "Companies providing travel and tourism related services, including travel agents, online travel reservation services, automobile rental firms and companies that primarily provide passenger transportation, such as buses, taxis, passenger rail and ferry companies."@en,
         "Empresas que proveen viajes y servicios de turismo relacionados,lo que incluye agencias de viaje, servicios de reservas de viajespor Internet, compañías de arriendo de automóviles y empresasque principalmente ofrecen transporte de pasajeros, tales comoempresas de autobuses, taxis, ferrocarriles y transbordadores."@es,
         "Unternehmen, die Reise- und Tourismusdienstleistungen anbieten, u.a. Reisebüros, Online-Reservierungsdienste, Mietwagenfirmen und Unternehmen, die hauptsächlich im Personenverkehr tätig sind, z.B. Bus-, Taxi-, Bahn- und Fährunternehmen."@de;
     rdfs:subClassOf icb:ICB5750 .
 
 icb:ICB6535 a owl:Class;
-    icb:code "6535";
     rdfs:label "Festnetz-Telekommunikation"@de,
         "Fixed Line Telecommunications"@en,
-        "Telecomunicaciones de línea fija"@es;
-    rdfs:definition "Dienstleister für telefonische Festnetze, einschließlich Regional- und Ferngespräche. Einschließlich Firmen, die hauptsächlich Telefondienste über das Internet anbieten. Ausgeschlossen sind Firmen, deren primäres Geschäft der Zugang zum Internet ist und die unter Internet zu klassifizieren sind."@de,
+        "Telecomunicaciones de línea fija"@es,
+        "Vaste Lijnvormige Telephone"@nl;
+    icb:code "6535";
+    rdfs:definition "De aanbieders van vaste bestelpost Tél diensten, met inbegrip van regionale en lange afstanden. Ook bedrijven die primarily provides Tél diensten via het internet. Sluit bedrijven waarvan de primaire onderneming is de toegang tot het Internet, die zijn ingedeeld op internet."@nl,
+        "Dienstleister für telefonische Festnetze, einschließlich Regional- und Ferngespräche. Einschließlich Firmen, die hauptsächlich Telefondienste über das Internet anbieten. Ausgeschlossen sind Firmen, deren primäres Geschäft der Zugang zum Internet ist und die unter Internet zu klassifizieren sind."@de,
         "Proveedores de servicios de telefonía de línea fija,incluida la regional y de larga distancia. Incluye empresas queproveen principalmente servicios telefónicos a través de Internet.Excluye empresas cuyo principal negocio es el acceso a Internet,que se encuentran clasificadas bajo Internet."@es,
         "Providers of fixed-line telephone services, including regional and long-distance. Includes companies that primarily provides telephone services through the internet. Excludes companies whose primary business is Internet access, which are classified under Internet."@en;
     rdfs:subClassOf icb:ICB6530 .
 
 icb:ICB6575 a owl:Class;
-    icb:code "6575";
-    rdfs:label "Mobil-Telekommunikation"@de,
+    rdfs:label "Mobiele Telephone"@nl,
+        "Mobil-Telekommunikation"@de,
         "Mobile Telecommunications"@en,
         "Telecomunicaciones móviles"@es;
+    icb:code "6575";
     rdfs:definition "Anbieter von Mobiltelefondienstleistungen, einschließlich Handy-, Satelliten- und Paging-Dienste. Einschließlich Betreiber von drahtlosen Sendemasten, die Mobilfunk- Sendemasten besitzen und betreiben, die an mehrere Drahtlos-Dienste vermietet werden."@de,
+        "De aanbieders van mobiele telefoniediensten, waaronder Gevulcaniseerde, satellietgrondstations en semafoonsystemen diensten. Ook draadloze torenweegschalen bedrijven die eigen operate en verhuurcontract beweegbare grondoppervlakte torens van meervoudige draadloze dienstverleners."@nl,
         "Proveedores de servicios de telefonía móvil, lo que incluye telefoníacelular y satelital y servicios de buscapersonas. Incluyeempresas de torres de telecomunicaciones inalámbricasque son propietarias, operan y arriendan torres paramúltiples proveedores de servicios inalámbricos."@es,
         "Providers of mobile telephone services, including cellular, satellite and paging services. Includes wireless tower companies that own, operate and lease mobile site towers to multiple wireless service providers."@en;
     rdfs:subClassOf icb:ICB6570 .
 
 icb:ICB7535 a owl:Class;
-    icb:code "7535";
     rdfs:label "Conventional Electricity"@en,
+        "Conventionele elektriciteit"@nl,
         "Electricidad convencional"@es,
         "Herkömmliche Stromerzeugung"@de;
-    rdfs:definition "Companies generating and distributing electricity through the burning of fossil fuels such as coal, petroleum and natural gas, and through nuclear energy."@en,
+    icb:code "7535";
+    rdfs:definition "Bedrijven en distribuerende electricity door verbranding van fossiele brandstoffen zoals steenkool, aardolie en aardgas, en door middel van kernenergie."@nl,
+        "Companies generating and distributing electricity through the burning of fossil fuels such as coal, petroleum and natural gas, and through nuclear energy."@en,
         "Empresas que generan y distribuyen electricidad mediante lacombustión de combustibles fósiles, como carbón, petróleo ygas natural, y mediante energía nuclear."@es,
         "Firmen, die Strom durch Verbrennung von fossilen Brennstoffen wie z. B. Kohle, Erdöl und Erdgas und mittels Atomenergie erzeugen und vertreiben."@de;
     rdfs:subClassOf icb:ICB7530 .
 
 icb:ICB7537 a owl:Class;
-    icb:code "7537";
-    rdfs:label "Alternative Electricity"@en,
+    rdfs:label "Alternatieve elektriciteit"@nl,
+        "Alternative Electricity"@en,
         "Alternative Stromerzeugung"@de,
         "Electricidad alternativa"@es;
-    rdfs:definition "Companies generating and distributing electricity from a renewable source. Includes companies that produce solar, water, wind and geothermal electricity."@en,
+    icb:code "7537";
+    rdfs:definition "Bedrijven en distribuerende elektriciteit uit hernieuwbare bron. Ook bedrijven die water-, wind- en zonne-energie, geothermische energie."@nl,
+        "Companies generating and distributing electricity from a renewable source. Includes companies that produce solar, water, wind and geothermal electricity."@en,
         "Empresas que generan y distribuyen electricidad proveniente deuna fuente renovable. Incluye empresas que producen energíasolar, hidroeléctrica, eólica y geotérmica."@es,
         "Firmen, die Strom aus erneuerbaren Quellen erzeugen und vertreiben. Einschließlich Firmen, die Solar-, Wasser- und Windenergie sowie geothermische Energie erzeugen."@de;
     rdfs:subClassOf icb:ICB7530 .
 
 icb:ICB7573 a owl:Class;
-    icb:code "7573";
     rdfs:label "Distribución de gas"@es,
         "Gas Distribution"@en,
-        "Gasversorgung"@de;
-    rdfs:definition "Distribuidores de gas a usuarios finales. Excluye proveedores degas natural como materia prima, que se encuentra clasificadobajo Petróleo y gas."@es,
+        "Gasversorgung"@de,
+        "Gasverwarmingstoestellen Distribution"@nl;
+    icb:code "7573";
+    rdfs:definition "De distributeurs van gas aan eindgebruikers. Sluit aanbieders van aardgas als handelswaar, die zijn ingedeeld volgens de Oliehoudende & Afsluiters voor de industrie."@nl,
+        "Distribuidores de gas a usuarios finales. Excluye proveedores degas natural como materia prima, que se encuentra clasificadobajo Petróleo y gas."@es,
         "Distributors of gas to end users. Excludes providers of natural gas as a commodity, which are classified under the Oil & Gas industry."@en,
         "Unternehmen, die Endverbraucher mit Erdgas versorgen. Energieerzeugung Ausgeschlossen sind Lieferanten von Erdgas als Betriebsmittel (siehe: Erdöl und Erdgas)."@de;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB7575 a owl:Class;
-    icb:code "7575";
     rdfs:label "Kombinierte Energieerzeugung"@de,
+        "Multi-nutbedrijven"@nl,
         "Multi-utilities"@en,
         "Multiservicios"@es;
+    icb:code "7575";
     rdfs:definition "Empresas de servicios públicos con presencia significativa enmás de un servicio."@es,
+        "Nutsonderneming bedrijven met grote aanwezigheid in meer dan één nutsonderneming."@nl,
         "Utility companies with significant presence in more than one utility."@en,
         "Versorgungsunternehmen mit starker Präsenz in mehr als nur einem Bereich der Energiegewinnung."@de;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB7577 a owl:Class;
-    icb:code "7577";
     rdfs:label "Agua"@es,
         "Wasser"@de,
-        "Water"@en;
-    rdfs:definition "Companies providing water to end users, including water treatment plants."@en,
+        "Water"@en,
+        "Water"@nl;
+    icb:code "7577";
+    rdfs:definition "Bedrijven die water aan eindgebruikers, met inbegrip van waterzuiveringsinstallaties."@nl,
+        "Companies providing water to end users, including water treatment plants."@en,
         "Empresas que proveen agua a usuarios finales, lo que incluyeplantas de tratamiento de agua."@es,
         "Unternehmen, die Endverbraucher mit Wasser versorgen, u.a. auch Wasseraufbereitungsanlagen."@de;
     rdfs:subClassOf icb:ICB7570 .
 
 icb:ICB8355 a owl:Class;
-    icb:code "8355";
     rdfs:label "Bancos"@es,
         "Banken"@de,
+        "Banken"@nl,
         "Banks"@en;
+    icb:code "8355";
     rdfs:definition "Bancos que proporcionan una amplia gama de serviciosfinancieros, lo que incluye banca minorista, préstamos ytransferencias de dinero."@es,
         "Banken, die ein großes Angebot an Finanzdienstleistungen bieten, u.a. Privatkundengeschäfte, Kredite und Geldtransfer."@de,
-        "Banks providing a broad range of financial services, including retail banking, loans and money transmissions."@en;
+        "Banks providing a broad range of financial services, including retail banking, loans and money transmissions."@en,
+        "De banken die een breed scala aan financiële diensten, met inbegrip van retailbankieren, leningen en geld -transmissie."@nl;
     rdfs:subClassOf icb:ICB8350 .
 
 icb:ICB8532 a owl:Class;
-    icb:code "8532";
     rdfs:label "Full Line Insurance"@en,
         "Globalversicherungsgesellschaften"@de,
-        "Seguros diversificados"@es;
+        "Seguros diversificados"@es,
+        "Volledige Lijnvormige Verzekerings-"@nl;
+    icb:code "8532";
     rdfs:definition "Aseguradoras con participaciones en seguros de vida, salud,bienes y accidentes, y en reaseguro, sin predominio de ninguno."@es,
         "Insurance companies with life, health, property & casualty and reinsurance interests, no one of which predominates."@en,
-        "Versicherungsgesellschaften, die ein ausgeglichenes Verhältnis von Lebens-, Kranken-, Sach- und Unfall- sowie Rückversicherungen anbieten."@de;
+        "Versicherungsgesellschaften, die ein ausgeglichenes Verhältnis von Lebens-, Kranken-, Sach- und Unfall- sowie Rückversicherungen anbieten."@de,
+        "Verzekeringsmaatschappijen met leven, gezondheid, eigendom & ongeval en herverzekeringstransacties belangen, niet een van die overheerst."@nl;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8534 a owl:Class;
-    icb:code "8534";
     rdfs:label "Agentes de seguros"@es,
         "Insurance Brokers"@en,
+        "Insurance assurantiemakelaar"@nl,
         "Versicherungsmakler"@de;
+    icb:code "8534";
     rdfs:definition "Corredores y agentes de seguros."@es,
+        "Insurance assurantiemakelaar en agentschappen."@nl,
         "Insurance brokers and agencies."@en,
         "Versicherungsmakler und -agenturen."@de;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8536 a owl:Class;
-    icb:code "8536";
     rdfs:label "Property & Casualty Insurance"@en,
         "Sach- und Unfallversicherungen"@de,
-        "Seguros de propiedad y dañosa terceros"@es;
-    rdfs:definition "Companies engaged principally in accident, fire, automotive, marine, malpractice and other classes of nonlife insurance."@en,
+        "Seguros de propiedad y dañosa terceros"@es,
+        "Spoorgebied & Casualty Verzekerings-"@nl;
+    icb:code "8536";
+    rdfs:definition "Bedrijven die zich bezighouden met name ongevallenanalyse, bosbranden, de automobielindustrie, de mariene, fraude en andere categorieën nonlife insurance."@nl,
+        "Companies engaged principally in accident, fire, automotive, marine, malpractice and other classes of nonlife insurance."@en,
         "Empresas dedicadas principalmente a seguros contra accidentes,incendio, automotrices, marítimos, de responsabilidad civil yotras clases de seguros distintos a los de vida."@es,
         "Unternehmen, die hauptsächlich Unfall-, Feuer- und Autoversicherungen sowie Versicherungen gegen Schiffsunfälle, Kunstfehler- und andere Arten von Versicherungen (keine Lebensversicherungen) anbieten."@de;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8538 a owl:Class;
-    icb:code "8538";
-    rdfs:label "Reaseguro"@es,
+    rdfs:label "Herverzekeringswerkzaamheden"@nl,
+        "Reaseguro"@es,
         "Reinsurance"@en,
         "Rückversicherungen"@de;
-    rdfs:definition "Companies engaged principally in reinsurance."@en,
+    icb:code "8538";
+    rdfs:definition "Bedrijven die zich bezighouden met name herverzekeringstransacties."@nl,
+        "Companies engaged principally in reinsurance."@en,
         "Empresas dedicadas principalmente al reaseguro."@es,
         "Unternehmen, die hauptsächlich im Bereich Rückversicherung tätig sind."@de;
     rdfs:subClassOf icb:ICB8530 .
 
 icb:ICB8575 a owl:Class;
-    icb:code "8575";
-    rdfs:label "Lebensversicherungen"@de,
+    rdfs:label "Het leven Verzekerings-"@nl,
+        "Lebensversicherungen"@de,
         "Life Insurance"@en,
         "Seguros de vida"@es;
+    icb:code "8575";
     rdfs:definition "Companies engaged principally in life and health insurance."@en,
         "Empresas dedicadas principalmente a seguros de vida y salud."@es,
+        "Ondernemingen die zich voornamelijk in het leven en de gezondheid."@nl,
         "Unternehmen, die in erster Linie Lebens- und Krankenversicherungen anbieten."@de;
     rdfs:subClassOf icb:ICB8570 .
 
 icb:ICB8633 a owl:Class;
-    icb:code "8633";
     rdfs:label "Besitz und Erschließung von Immobilien"@de,
+        "Echte Estate Holding & ontwikkeling"@nl,
         "Propiedad y desarrolloinmobiliario"@es,
         "Real Estate Holding & Development"@en;
-    rdfs:definition "Companies that invest directly or indirectly in real estate through development, investment or ownership. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts."@en,
+    icb:code "8633";
+    rdfs:definition "Bedrijven die investeren in onroerend goed, direct of indirect, via de ontwikkeling van investeringen of eigendomswisseling. Sluit vastgoedfinanciering beleggingsfondsen en soortgelijke entiteiten, die zijn aangemerkt als Real Estate Investering trusts."@nl,
+        "Companies that invest directly or indirectly in real estate through development, investment or ownership. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts."@en,
         "Empresas que invierten directa o indirectamente en bienes raícesa través de la construcción, la inversión o la propiedad. Excluyefondos de inversión inmobiliaria y entidades similares, que seclasifican como Fondos de inversión inmobiliaria."@es,
         "Firmen, die direkt oder indirekt in Immobilien investieren durch: Erschließung, Investition oder Besitz. Ausgeschlossen sind Immobilienfonds und ähnliche Gebilde, die als Immobilienfonds zu klassifizieren sind."@de;
     rdfs:subClassOf icb:ICB8630 .
 
 icb:ICB8637 a owl:Class;
-    icb:code "8637";
     rdfs:label "Dienstleistungen für Immobilien"@de,
+        "Echte Estate intesa"@nl,
         "Real Estate Services"@en,
         "Servicios inmobiliarios"@es;
-    rdfs:definition "Companies that provide services to real estate companies but do not own the properties themselves. Includes agencies, brokers, leasing companies, management companies and advisory services. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts."@en,
+    icb:code "8637";
+    rdfs:definition "Bedrijven die diensten verlenen aan echte estate ondernemingen, maar niet de properties zelf. Ook interventiebureaus, makelaars, leasebedrijven, van beheermaatschappijen en bedrijfsadviseringsdiensten. Sluit vastgoedfinanciering beleggingsfondsen en soortgelijke entiteiten, die zijn aangemerkt als Real Estate Investering trusts."@nl,
+        "Companies that provide services to real estate companies but do not own the properties themselves. Includes agencies, brokers, leasing companies, management companies and advisory services. Excludes real estate investment trusts and similar entities, which are classified as Real Estate Investment Trusts."@en,
         "Empresas que prestan servicios a empresas de bienes raíces, peroque no son dueñas de las propiedades. Incluye agencias, agentes,empresas de arrendamiento, de administración y servicios deasesoría. Excluye fondos de inversión inmobiliaria y entidadessimilares, clasificados como Fondos de inversión inmobiliaria."@es,
         "Firmen, die Dienstleistungen an Immobilienfirmen erbringen, ohne diese selbst zu besitzen. Einschließlich Agenturen, Vermittler, Leasinggesellschaften, Verwaltungsgesellschaften und Beratungsdienste. Ausgeschlossen sind Immobilienfonds und ähnliche Gebilde, die als Immobilienfonds zu klassifizieren sind."@de;
     rdfs:subClassOf icb:ICB8630 .
 
 icb:ICB8671 a owl:Class;
-    icb:code "8671";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) industrial y de oficinas"@es,
         "Industrial & Office REITs"@en,
-        "Industrielle und Büro-REITs"@de;
-    rdfs:definition "Fondos de inversión inmobiliaria (Real Estate Investment Trust,REIT) o fondos de inversión cotizados en bolsa (Listed PropertyTrusts, LPT) que invierten principalmente en oficinas, propiedadesindustriales y espacios modulares flexibles."@es,
+        "Industrielle und Büro-REITs"@de,
+        "Industriële & kantooradres REIT 's"@nl;
+    icb:code "8671";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat vooral investeren in functie, industriële en flex properties."@nl,
+        "Fondos de inversión inmobiliaria (Real Estate Investment Trust,REIT) o fondos de inversión cotizados en bolsa (Listed PropertyTrusts, LPT) que invierten principalmente en oficinas, propiedadesindustriales y espacios modulares flexibles."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Büro-, Industrie- und flexible Immobilien investieren."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in office, industrial and flex properties."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8672 a owl:Class;
-    icb:code "8672";
     rdfs:label "Einzelhandels-REITs"@de,
         "Fondos de inversión inmobiliaria(REIT) minoristas"@es,
+        "Kleinhandelsverkoop REIT 's"@nl,
         "Retail REITs"@en;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades minoristas. Incluye grandes superficies comerciales,centros comerciales, minicentros comerciales y tiendas defábrica (outlets)."@es,
+    icb:code "8672";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat vooral investeren in kleinhandelsverkoop properties. Ook malls, winkelcentra, transformatorplaat -stations en factory afzetmogelijkheden."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades minoristas. Incluye grandes superficies comerciales,centros comerciales, minicentros comerciales y tiendas defábrica (outlets)."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Einzelhandelsimmobilien investieren. Einschließlich Malls, Einkaufszentren, Einkaufspassagen und Fabrik-Outlets."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in retail properties. Includes malls, shopping centres, strip centres and factory outlets."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8673 a owl:Class;
-    icb:code "8673";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) residenciales"@es,
         "Residential REITs"@en,
+        "Residentieel REIT 's"@nl,
         "Wohnungs-REITs"@de;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades residenciales. Incluye edificios de apartamentos ycomunidades residenciales."@es,
+    icb:code "8673";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat vooral investeren in residentieel ontdekkings- properties. Zijn appartement buildings en residentieel gemeenschappen."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente enpropiedades residenciales. Incluye edificios de apartamentos ycomunidades residenciales."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in private Wohnimmobilien investieren. Einschließlich Wohnanlagen und Wohngemeinschaften."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in residential home properties. Includes apartment buildings and residential communities."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8674 a owl:Class;
-    icb:code "8674";
     rdfs:label "Diversified REITs"@en,
         "Diversifizierte REITs"@de,
-        "Fondos de inversión inmobiliaria(REIT) diversificados"@es;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en diversos tipos depropiedades sin concentrarse en un tipo específico."@es,
+        "Fondos de inversión inmobiliaria(REIT) diversificados"@es,
+        "Gediversifieerde REIT 's"@nl;
+    icb:code "8674";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat investeren in allerlei goederen bedrijfstypen zonder een concentratie op een zelfde soort."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en diversos tipos depropiedades sin concentrarse en un tipo específico."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die in eine Vielzahl von Immobilien investieren, ohne sich auf irgendeinen bestimmten Typ zu konzentrieren."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that invest in a variety of property types without a concentration on any single type."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8675 a owl:Class;
-    icb:code "8675";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) especializados"@es,
+        "Specialty REIT 's"@nl,
         "Specialty REITs"@en,
         "Spezielle REITs"@de;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en propiedades deminibodegas para consumidores (Strichpunkt) propiedades en el sector dela atención de la salud, como hospitales, centros con asistenciay laboratorios clínicos, y otras propiedades especializadas, comoinstalaciones para concesionarios automotrices, propiedadesmadereras y propiedades en régimen de alquiler neto."@es,
+    icb:code "8675";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat investeren in levensmiddelenzaken opslagbureaus properties, properties in de gezondheidszorg industrie zoals ziekenhuizen, bijgestaan die voorzieningen en gezondheidszorg laboratories en andere gespecialiseerde properties zoals auto verkoper faciliteiten, houtconstructies properties en nettoprijs verhuurcontract properties."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten en propiedades deminibodegas para consumidores (Strichpunkt) propiedades en el sector dela atención de la salud, como hospitales, centros con asistenciay laboratorios clínicos, y otras propiedades especializadas, comoinstalaciones para concesionarios automotrices, propiedadesmadereras y propiedades en régimen de alquiler neto."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die in Selbstlagerzentren, Immobilien der Gesundheitsfürsorge wie z. B. Krankenhäuser, Langzeitbetreuungsanlagen und Pflegelabors sowie andere Spezialimmobilien wie z. B. Autohändlerimmobilien, Bauholzimmobilien und Netzvermietungsimmobilien investieren."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that invest in self storage properties, properties in the health care industry such as hospitals, assisted living facilities and health care laboratories, and other specialized properties such as auto dealership facilities, timber properties and net lease properties."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8676 a owl:Class;
-    icb:code "8676";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) hipotecarios"@es,
         "Hypotheken-REITs"@de,
+        "Mortgage REIT 's"@nl,
         "Mortgage REITs"@en;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) dedicados directamente al préstamo dedinero a propietarios y operadores de bienes raíces, o indirectamentea través de la compra de hipotecas o valores respaldadoscon hipotecas."@es,
+    icb:code "8676";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) die rechtstreeks betrokken zijn bij leningverstrekkende geld vastgoedfinanciering owners en exploitanten of middellijk door de aankoop van hypotheken of mortgage backed securities."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) dedicados directamente al préstamo dedinero a propietarios y operadores de bienes raíces, o indirectamentea través de la compra de hipotecas o valores respaldadoscon hipotecas."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die sich direkt mit Darlehen an Immobilieneigentümer und -betreiber oder indirekt mit dem Kauf von Hypotheken oder Hypothekenpfandbriefen befassen."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that are directly involved in lending money to real estate owners and operators or indirectly through the purchase of mortgages or mortgage backed securities."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8677 a owl:Class;
-    icb:code "8677";
     rdfs:label "Fondos de inversión inmobiliaria(REIT) hoteleros y de alojamiento"@es,
         "Hotel & Lodging REITs"@en,
+        "Hotel & Voor de indiening REIT 's"@nl,
         "Hotel- und Beherbergungs-REITs"@de;
-    rdfs:definition "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente en propiedadeshoteleras o de alojamiento."@es,
+    icb:code "8677";
+    rdfs:definition "Echte estate beleggingsfondsen of ondernemingen (REIT 's) of listed spoorgebied trusts (LPTs) dat vooral investeren in hotels of certificatenregeling properties."@nl,
+        "Fondos de inversión inmobiliaria (REIT) o fondos de inversióncotizados en bolsa (LPT) que invierten principalmente en propiedadeshoteleras o de alojamiento."@es,
         "Immobilienfonds oder -gesellschaften (REITs) oder börsengehandelte Immobilienfonds (LPTs), die hauptsächlich in Hotels oder in Immobilien der Beherbergungsbranche investieren."@de,
         "Real estate investment trusts or corporations (REITs) or listed property trusts (LPTs) that primarily invest in hotels or lodging properties."@en;
     rdfs:subClassOf icb:ICB8670 .
 
 icb:ICB8771 a owl:Class;
-    icb:code "8771";
     rdfs:label "Administradores de activos"@es,
         "Asset Managers"@en,
+        "Asset Managers"@nl,
         "Vermögensverwaltung"@de;
-    rdfs:definition "Companies that provide custodial, trustee and other related fiduciary services. Includes mutual fund management companies."@en,
+    icb:code "8771";
+    rdfs:definition "Bedrijven die provide bewaarnemings-, trustee en andere aanverwante fiduciaire diensten. Ook de wederzijdse fonds beheermaatschappijen."@nl,
+        "Companies that provide custodial, trustee and other related fiduciary services. Includes mutual fund management companies."@en,
         "Empresas que proporcionan servicios de custodia, fiduciarios yotros servicios fideicomisarios relacionados. Incluye empresas deadministración de fondos de inversión."@es,
         "Unternehmen, die Vermögensverwaltungs-, Treuhand- und andere treuhänderische Dienstleistungen anbieten, u.a. auch Gesellschaften für die Investmentfondsverwaltung."@de;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8773 a owl:Class;
-    icb:code "8773";
     rdfs:label "Consumer Finance"@en,
+        "De consument financieringswet"@nl,
         "Financiamiento del consumo"@es,
         "Privatkundengeschäft"@de;
+    icb:code "8773";
     rdfs:definition "Credit card companies and providers of personal finance services such as personal loans and check cashing companies."@en,
+        "Creditcardmaatschappijen en aanbieders van financiële diensten zoals persoonlijke leningen en controleren, mega-bedrijven."@nl,
         "Empresas de tarjetas de crédito y proveedores de servicios definanzas personales, tales como empresas de créditos personalesy de cobro de cheques."@es,
         "Kreditkartengesellschaften und Anbieter von individuellen Finanzdiensten, wie z.B. Kreditunternehmen."@de;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8775 a owl:Class;
-    icb:code "8775";
     rdfs:label "Finanzas especializadas"@es,
         "Specialty Finance"@en,
+        "Specialty financieringswet"@nl,
         "Spezielle Finanzdienste"@de;
+    icb:code "8775";
     rdfs:definition "Alle Unternehmen, die in anderen, noch nicht beschriebenen Finanzbereichen tätig sind. Dazu zählen Unternehmen, die nicht unter Kapitalinvestitionen oder Investionen ohne Kapitalbeteiligung aufgeführt sind und die hauptsächlich Anteile an verschiedenen Unternehmen halten."@de,
+        "Bedrijven die zich bezighouden met economische activiteiten niet gespecifieerd elders. Ook bedrijven die niet onder part.mech. Investering Instrumenten of Nonequity Investering Instrumenten engaged primarily in het bezit medeborgen in een gevarieerd scala van bedrijven."@nl,
         "Companies engaged in financial activities not specified elsewhere. Includes companies not classified under Equity Investment Instruments or Nonequity Investment Instruments engaged primarily in owning stakes in a diversified range of companies."@en,
         "Empresas dedicadas a actividades financieras no especificadasen otra parte. Incluye las empresas que no están clasificadas bajoInstrumentos de inversión de renta variable e Instrumentos deinversión de renta fija, dedicadas principalmente a tener participacionesen una gama diversa de empresas."@es;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8777 a owl:Class;
-    icb:code "8777";
-    rdfs:label "Investment Services"@en,
+    rdfs:label "Investeringen intesa"@nl,
+        "Investment Services"@en,
         "Investment-Dienstleistungen"@de,
         "Servicios de inversión"@es;
-    rdfs:definition "Companies providing a range of specialized financial services, including securities brokers and dealers, online brokers and security or commodity exchanges."@en,
+    icb:code "8777";
+    rdfs:definition "Bedrijven die een reeks gespecialiseerde financiële diensten, met inbegrip van de effectenhandel en dealers, online-assurantiemakelaar en veiligheid of grondstoffenontwikkeling exchanges."@nl,
+        "Companies providing a range of specialized financial services, including securities brokers and dealers, online brokers and security or commodity exchanges."@en,
         "Empresas que proporcionan una gama de servicios financierosespecializados, lo que incluye corredores y agentes de valores,corredores en línea y bolsas de valores o materias primas."@es,
         "Unternehmen, die eine Reihe von speziellen Finanzdiensten anbieten, u.a. Wertpapierbroker und - händler, Online-Broker und Wertpapier- sowie Warenbörsen."@de;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8779 a owl:Class;
-    icb:code "8779";
     rdfs:label "Finanzas hipotecarias"@es,
         "Hypothekenfinanzierung"@de,
-        "Mortgage Finance"@en;
-    rdfs:definition "Companies that provide mortgages, mortgage insurance and other related services."@en,
+        "Mortgage Finance"@en,
+        "Mortgage financieringswet"@nl;
+    icb:code "8779";
+    rdfs:definition "Bedrijven die provide hypotheken mortgage insurance en andere aanverwante diensten."@nl,
+        "Companies that provide mortgages, mortgage insurance and other related services."@en,
         "Empresas que proporcionan hipotecas, seguros hipotecarios yotros servicios relacionados."@es,
         "Unternehmen, die Hypotheken, Hypothekenversicherungen und ähnliche Dienstleistungen anbieten."@de;
     rdfs:subClassOf icb:ICB8770 .
 
 icb:ICB8985 a owl:Class;
-    icb:code "8985";
-    rdfs:label "Equity Investment Instruments"@en,
+    rdfs:label "Aandelenkapitaal- Investering Instrumenten"@nl,
+        "Equity Investment Instruments"@en,
         "Instrumentos de inversión derenta variable"@es,
         "Kapitalinvestitionen"@de;
+    icb:code "8985";
     rdfs:definition "Corporate closed-ended investment entities identified under distinguishing legislation, such as investment trusts and venture capital trusts."@en,
+        "De gesloten-eindsteun beleggingsgebied visserijentiteiten identified onder onderscheidende wetgeving, zoals beleggingsfondsen en risicokapitaalverschaffers trusts."@nl,
         "Entidades de inversión cerrada corporativas identificadas bajouna legislación distintiva, tales como fondos fiduciarios de inversióny fondos de capital de riesgo."@es,
         "Unternehmensinvestmentfonds mit begrenzter Emissionshöhe, die verschiedenen Gesetzgebungen unterliegen, z.B. Investmentfonds und Risikokapitalanlagen."@de;
     rdfs:subClassOf icb:ICB8980 .
 
 icb:ICB8995 a owl:Class;
-    icb:code "8995";
     rdfs:label "Instrumentos de inversión derenta fija"@es,
         "Investitionen ohne Kapitalbeteiligung"@de,
+        "Nonequity Investering Instrumenten"@nl,
         "Nonequity Investment Instruments"@en;
+    icb:code "8995";
     rdfs:definition "Instrumentos de inversión abiertos no corporativos, tales comoempresas y fondos de inversión abiertos, fondos comunes,fondos cotizados en bolsa (Exchange Traded Fund, ETF), fondosunitarios y fondos de capital mixto."@es,
         "Nicht-unternehmensbezogene Investmentanlagen mit unbegrenzter Emissionshöhe, z.B. Investmentgesellschaften und -fonds mit unbegrenzter Emissionshöhe, Anlagefonds, börsengehandelte Fonds, Währungsfonds und Split-Capital-Trusts."@de,
+        "Noncorporate, open beleggingsgebied instrumenten zoals open beleggingsmaatschappijen en fondsen, beleggingsfondsen, ETFs en munt fondsen en kapitaal trusts."@nl,
         "Noncorporate, open-ended investment instruments such as open-ended investment companies and funds, unit trusts, ETFs and currency funds and split capital trusts."@en;
     rdfs:subClassOf icb:ICB8990 .
 
 icb:ICB9533 a owl:Class;
-    icb:code "9533";
     rdfs:label "Computer Services"@en,
         "Computer-Dienstleister"@de,
+        "Computerprinters intesa"@nl,
         "Servicios informáticos"@es;
-    rdfs:definition "Companies that provide consulting services to other businesses relating to information technology. Includes providers of computer-system design, systems integration, network and systems operations, data management and storage, repair services and technical support."@en,
+    icb:code "9533";
+    rdfs:definition "Bedrijven die provide consultantsdiensten diensten aan andere ondernemingen met betrekking tot informatietechnologie. Ook aanbieders van computerprinters-systeem projectontwerp stortgoedtransporteurs integratie, netwerken en stortgoedtransporteurs interventieverrichtingen, het beheer en de opslag van gegevens, herstellings- diensten en technische ondersteuning."@nl,
+        "Companies that provide consulting services to other businesses relating to information technology. Includes providers of computer-system design, systems integration, network and systems operations, data management and storage, repair services and technical support."@en,
         "Empresas que proveen servicios de consultoría a otrasempresas en relación con la tecnología de la información.Incluye a proveedores de diseño de sistemas computacionales,integración de sistemas, operaciones de redes y sistemas,administración y almacenamiento de datos, servicios dereparación y asistencia técnica."@es,
         "Unternehmen, die IT-Consulting für andere Firmen anbieten. Dies umfasst Unternehmen mit folgendem Angebot: Entwicklung von Computersystemen, Systemintegration, Netzwerk- und Systembetrieb, Datenverwaltung und -archivierung, Reparatur und technischer Support."@de;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9535 a owl:Class;
-    icb:code "9535";
     rdfs:label "Internet"@de,
         "Internet"@en,
-        "Internet"@es;
-    rdfs:definition "Companies providing Internet-related services, such as Internet access providers and search engines and providers of Web site design, Web hosting, domain-name registration and e-mail services."@en,
+        "Internet"@es,
+        "Internet"@nl;
+    icb:code "9535";
+    rdfs:definition "Bedrijven die Internet gerelateerde diensten, zoals de internetproviders en zoekmotoren en aanbieders van Website grondoppervlakte projectontwerp Website hosten, activiteitsgebied-NAAM inschrijvings- en e-mail."@nl,
+        "Companies providing Internet-related services, such as Internet access providers and search engines and providers of Web site design, Web hosting, domain-name registration and e-mail services."@en,
         "Empresas que proveen servicios relacionados con Internet, talescomo proveedores de acceso a Internet y motores de búsqueda,y proveedores de diseño de sitios web, servicios de servidoresweb (web hosting), registro de nombres de dominio y serviciosde correo electrónico."@es,
         "Unternehmen, die Internetdienste anbieten, u.a. Internetprovider und Suchmaschinen, sowie Anbieter von Website-Design, Webhosting, Domainregistrierung sowie E-Mail-Dienste."@de;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9537 a owl:Class;
-    icb:code "9537";
-    rdfs:label "Software"@de,
+    rdfs:label "-programmatuur"@nl,
+        "Software"@de,
         "Software"@en,
         "Software"@es;
+    icb:code "9537";
     rdfs:definition "Compañías editoras y distribuidoras de software computacionalpara uso doméstico y empresarial. Excluye productores de juegoscomputacionales, clasificados bajo Juguetes."@es,
         "Herausgeber und Händler von Computersoftware für den Privat- und Geschäftsgebrauch. Ausgeschlossen sind Hersteller von Computerspielen (siehe: Spielzeug)."@de,
-        "Publishers and distributors of computer software for home or corporate use. Excludes computer game producers, which are classified under Toys."@en;
+        "Publishers and distributors of computer software for home or corporate use. Excludes computer game producers, which are classified under Toys."@en,
+        "Uitgevers en distributeurs van software voor binnenlandse of Ondernemingsverklaringen gebruik. Sluit computerprinters vederwild producenten, die zijn ingedeeld in speelgoed."@nl;
     rdfs:subClassOf icb:ICB9530 .
 
 icb:ICB9572 a owl:Class;
-    icb:code "9572";
     rdfs:label "Computer Hardware"@en,
+        "Computerprinters Hardware"@nl,
         "Hardware"@de,
         "Hardware"@es;
+    icb:code "9572";
     rdfs:definition "Fabricantes y distribuidores de computadores, servidores,mainframes, estaciones de trabajo y otro tipo de hardware ysubsistemas, tales como unidades de almacenamiento masivo,ratones, teclados e impresoras."@es,
+        "Fabrikanten en distributeurs van computers, -servers, mainware, werkplekken en andere computerhardware en subsystemen, zoals massale opslag geheugeneenheden kauwschoenen, keyboards en afdrukmachines."@nl,
         "Hersteller und Händler von Computern, Servern, Mainframes, Workstations sowie anderer Computer-Hardware und Teilsysteme, wie z.B. Massenspeichersysteme, Tastaturen, Drucker und andere Peripheriegeräte."@de,
         "Manufacturers and distributors of computers, servers, mainframes, workstations and other computer hardware and subsystems, such as mass-storage drives, mice, keyboards and printers."@en;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9574 a owl:Class;
-    icb:code "9574";
     rdfs:label "Electronic Office Equipment"@en,
         "Elektronische Büroausstattung"@de,
+        "Elektronische kantooradres Uitrusting"@nl,
         "Equipo electrónico de oficina"@es;
+    icb:code "9574";
     rdfs:definition "Fabricantes y distribuidores de equipo electrónico de oficina, lo queincluye fotocopiadoras y aparatos de fax."@es,
+        "Fabrikanten en distributeurs van kantoorautomatisering, waaronder fotokopieerapparaten en faxen."@nl,
         "Hersteller und Händler von elektronischer Büroausstattung, einschließlich Fotokopierer und Faxgeräte."@de,
         "Manufacturers and distributors of electronic office equipment, including photocopiers and fax machines."@en;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9576 a owl:Class;
-    icb:code "9576";
     rdfs:label "Halbleiter"@de,
         "Semiconductores"@es,
-        "Semiconductors"@en;
+        "Semiconductors"@en,
+        "Semiconductors"@nl;
+    icb:code "9576";
     rdfs:definition "Hersteller und Händler von Halbleitern und anderen integrierten Chips, einschließlich anderer Produkte für die Halbleiterindustrie, wie z.B. Basiselemente für die Halbleiterindustrie sowie Hauptplatinen. Ausgeschlossen sind Leiterplatten (siehe: Elektrische Bauteile und Ausrüstungselemente)."@de,
+        "Producenten en distributeurs van metaaloxidehalfgeleider en andere geïntegreerde schilfers, met inbegrip van andere producten voor de halfgeleidersindustrie, zoals halfgeleiders kapitaalrecht equipment en motherboards. Sluit bereiders van geguillocheerde Circuit boards: INGEDEELD Elektrische Onderdelen & Uitrusting."@nl,
         "Producers and distributors of semiconductors and other integrated chips, including other products related to the semiconductor industry, such as semiconductor capital equipment and motherboards. Excludes makers of printed circuit boards, which are classified under Electrical Components & Equipment."@en,
         "Productores y distribuidores de semiconductores y otros chipsintegrados, lo que incluye otros productos relacionados con laindustria de semiconductores, tales como bienes de capital para laproducción de semiconductores y tarjetas madre. Excluye fabricantesde tarjetas de circuitos impresos, clasificados bajo Componentes yequipos eléctricos."@es;
     rdfs:subClassOf icb:ICB9570 .
 
 icb:ICB9578 a owl:Class;
-    icb:code "9578";
     rdfs:label "Equipo de telecomunicaciones"@es,
+        "Telecommunicatie Uitrusting"@nl,
         "Telecommunications Equipment"@en,
         "Telekommunikationsausrüstung"@de;
+    icb:code "9578";
     rdfs:definition "Fabricantes y distribuidores de productos de telecomunicaciones dealta tecnología, lo que incluye satélites, teléfonos celulares, fibraóptica, dispositivos de conmutación, redes de área local y de áreaamplia, equipo de teleconferencias y dispositivos de conectividadpara computadoras, incluidos los nodos y enrutadores."@es,
+        "Fabrikanten en distributeurs van hoogwaardige technologie communicatieproducten, met inbegrip van satellieten, mobiele telefoons, glasvezels Optics, schakelings- aardlekschakelaars, lokale en breed gebied netwerken, televergaderen equipment en connectiviteit aardlekschakelaars voor computers, met inbegrip van hubs en bovenhandfrezers."@nl,
         "Hersteller und Händler von Hightech-Kommunikationsprodukten, wie z.B. Satelliten, Mobiltelefone, Lichtwellenleiter, Schaltzentralen, LAN und WAN, Telekonferenz-Ausrüstung und Verbindungselemente für Computer, einschließlich Hubs und Router."@de,
         "Makers and distributors of high-technology communication products, including satellites, mobile telephones, fibres optics, switching devices, local and wide-area networks, teleconferencing equipment and connectivity devices for computers, including hubs and routers."@en;
     rdfs:subClassOf icb:ICB9570 .
@@ -1155,510 +1382,586 @@ rdfs:definition a owl:AnnotationProperty;
     rdfs:definition ""^^xsd:string .
 
 icb:ICB0001 a owl:Class;
-    icb:code "0001";
     rdfs:label "Erdöl und Erdgas"@de,
         "Oil & Gas"@en,
+        "Olie en gas"@nl,
         "Petróleo y gas"@es;
+    icb:code "0001";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB1300 a owl:Class;
-    icb:code "1300";
     rdfs:label "Chemicals"@en,
         "Chemie"@de,
+        "Chemische stoffen"@nl,
         "Productos químicos"@es;
+    icb:code "1300";
     rdfs:subClassOf icb:ICB1000 .
 
 icb:ICB2300 a owl:Class;
-    icb:code "2300";
     rdfs:label "Bauwesen und Materialien"@de,
         "Construcción y materiales"@es,
+        "Constructiewijze & Materials"@nl,
         "Construction & Materials"@en;
+    icb:code "2300";
     rdfs:subClassOf icb:ICB2000 .
 
 icb:ICB3300 a owl:Class;
-    icb:code "3300";
-    rdfs:label "Automobiles & Parts"@en,
+    rdfs:label "Automobiles & Delen"@nl,
+        "Automobiles & Parts"@en,
         "Automobilhersteller und Zulieferer"@de,
         "Automóviles y repuestos"@es;
+    icb:code "3300";
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3780 a owl:Class;
-    icb:code "3780";
     rdfs:label "Tabaco"@es,
+        "Tabak"@nl,
         "Tabakwaren"@de,
         "Tobacco"@en;
+    icb:code "3780";
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB4000 a owl:Class;
-    icb:code "4000";
     rdfs:label "Atención de la salud"@es,
         "Gesundheitswesen"@de,
+        "Gezondheid Care"@nl,
         "Health Care"@en;
+    icb:code "4000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB5500 a owl:Class;
-    icb:code "5500";
     rdfs:label "Media"@en,
+        "Media"@nl,
         "Medien"@de,
         "Medios de comunicación"@es;
+    icb:code "5500";
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB5700 a owl:Class;
-    icb:code "5700";
     rdfs:label "Reisen und Freizeit"@de,
+        "Reizen & Leisure"@nl,
         "Travel & Leisure"@en,
         "Viajes y ocio"@es;
+    icb:code "5700";
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB6000 a owl:Class;
-    icb:code "6000";
     rdfs:label "Telecommunicaciones"@es,
+        "Telecommunicatie"@nl,
         "Telecommunications"@en,
         "Telekommunikation"@de;
+    icb:code "6000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB6530 a owl:Class;
-    icb:code "6530";
     rdfs:label "Festnetz-Telekommunikation"@de,
         "Fixed Line Telecommunications"@en,
-        "Telecomunicaciones de línea fija"@es;
+        "Telecomunicaciones de línea fija"@es,
+        "Vaste Lijnvormige Telephone"@nl;
+    icb:code "6530";
     rdfs:subClassOf icb:ICB6500 .
 
 icb:ICB6570 a owl:Class;
-    icb:code "6570";
-    rdfs:label "Mobil-Telekommunikation"@de,
+    rdfs:label "Mobiele Telephone"@nl,
+        "Mobil-Telekommunikation"@de,
         "Mobile Telecommunications"@en,
         "Telecomunicaciones móviles"@es;
+    icb:code "6570";
     rdfs:subClassOf icb:ICB6500 .
 
 icb:ICB7000 a owl:Class;
-    icb:code "7000";
-    rdfs:label "Servicios públicos"@es,
+    rdfs:label "Nutbedrijven"@nl,
+        "Servicios públicos"@es,
         "Utilities"@en,
         "Versorger"@de;
+    icb:code "7000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB8300 a owl:Class;
-    icb:code "8300";
     rdfs:label "Bancos"@es,
         "Banken"@de,
+        "Banken"@nl,
         "Banks"@en;
+    icb:code "8300";
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8350 a owl:Class;
-    icb:code "8350";
     rdfs:label "Bancos"@es,
         "Banken"@de,
+        "Banken"@nl,
         "Banks"@en;
+    icb:code "8350";
     rdfs:subClassOf icb:ICB8300 .
 
 icb:ICB8570 a owl:Class;
-    icb:code "8570";
-    rdfs:label "Lebensversicherungen"@de,
+    rdfs:label "Het leven Verzekerings-"@nl,
+        "Lebensversicherungen"@de,
         "Life Insurance"@en,
         "Seguros de vida"@es;
+    icb:code "8570";
     rdfs:subClassOf icb:ICB8500 .
 
 icb:ICB8700 a owl:Class;
-    icb:code "8700";
     rdfs:label "Financial Services"@en,
+        "Financiële diensten"@nl,
+        "Finanzielle Dienstleistungen"@de,
         "Servicios financieros"@es;
+    icb:code "8700";
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8980 a owl:Class;
-    icb:code "8980";
-    rdfs:label "Equity Investment Instruments"@en,
+    rdfs:label "Aandelenkapitaal- Investering Instrumenten"@nl,
+        "Equity Investment Instruments"@en,
         "Instrumentos de inversión derenta variable"@es,
         "Kapitalinvestitionen"@de;
+    icb:code "8980";
     rdfs:subClassOf icb:ICB8900 .
 
 icb:ICB8990 a owl:Class;
-    icb:code "8990";
     rdfs:label "Instrumentos de inversión derenta fija"@es,
         "Investitionen ohne Kapitalbeteiligung"@de,
+        "Nonequity Investering Instrumenten"@nl,
         "Nonequity Investment Instruments"@en;
+    icb:code "8990";
     rdfs:subClassOf icb:ICB8900 .
 
 icb:ICB9000 a owl:Class;
-    icb:code "9000";
     rdfs:label "Technologie"@de,
+        "Technologie"@nl,
         "Technology"@en,
         "Tecnología"@es;
+    icb:code "9000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB0530 a owl:Class;
-    icb:code "0530";
     rdfs:label "Erdöl- und Erdgasproduzenten"@de,
         "Oil & Gas Producers"@en,
+        "Olie en gas Producent"@nl,
         "Productores de petróleo y gas"@es;
+    icb:code "0530";
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB0570 a owl:Class;
-    icb:code "0570";
     rdfs:label "Ausrüstung, Dienstleistungen und Versorgung"@de,
         "Equipos, servicios ydistribución petrolera"@es,
-        "Oil Equipment, Services & Distribution"@en;
+        "Oil Equipment, Services & Distribution"@en,
+        "Olie Uitrusting, intesa & Distribution"@nl;
+    icb:code "0570";
     rdfs:comment ""@en;
     rdfs:definition ""^^xsd:string;
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB0580 a owl:Class;
-    icb:code "0580";
-    rdfs:label "Alternative Energiequellen"@es,
+    rdfs:label "Alternatieve energie"@nl,
+        "Alternative Energiequellen"@es,
         "Alternative Energy"@en,
+        "Alternativer Energie"@de,
         "Energía alternativa"@es;
+    icb:code "0580";
     rdfs:subClassOf icb:ICB0500 .
 
 icb:ICB1000 a owl:Class;
-    icb:code "1000";
     rdfs:label "Basic Materials"@en,
+        "Basiszaad Materials"@nl,
         "Grundstoffe"@de,
         "Materias básicas"@es;
+    icb:code "1000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB1350 a owl:Class;
-    icb:code "1350";
     rdfs:label "Chemicals"@en,
         "Chemie"@de,
+        "Chemische stoffen"@nl,
         "Productos químicos"@es;
+    icb:code "1350";
     rdfs:subClassOf icb:ICB1300 .
 
 icb:ICB1730 a owl:Class;
-    icb:code "1730";
     rdfs:label "Forestry & Paper"@en,
+        "Forestry & Ref"@nl,
         "Forstwirtschaft und Papierindustrie"@de,
         "Silvicultura y papel"@es;
+    icb:code "1730";
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB2000 a owl:Class;
-    icb:code "2000";
     rdfs:label "Industrials"@en,
+        "Industrials"@nl,
         "Industrieunternehmen"@de,
         "Productos industriales"@es;
+    icb:code "2000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB2350 a owl:Class;
-    icb:code "2350";
     rdfs:label "Bauwesen und Materialien"@de,
         "Construcción y materiales"@es,
+        "Constructiewijze & Materials"@nl,
         "Construction & Materials"@en;
+    icb:code "2350";
     rdfs:subClassOf icb:ICB2300 .
 
 icb:ICB2710 a owl:Class;
-    icb:code "2710";
     rdfs:label "Aeroespacial y defensa"@es,
         "Aerospace & Defense"@en,
+        "De lucht- en ruimtevaartsector & Defense"@nl,
         "Luftfahrt und Verteidigung"@de;
+    icb:code "2710";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2720 a owl:Class;
-    icb:code "2720";
-    rdfs:label "Allgemeine Industrieunternehmen"@de,
+    rdfs:label "Algemene Industrials"@nl,
+        "Allgemeine Industrieunternehmen"@de,
         "General Industrials"@en,
         "Productos industriales generales"@es;
+    icb:code "2720";
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2730 a owl:Class;
-    icb:code "2730";
     rdfs:label "Electronic & Electrical Equipment"@en,
+        "Elektronische & Elektrische Uitrusting"@nl,
         "Elektronische und elektrische Ausrüstungselemente"@de,
         "Equipos eléctricos yelectrónicos"@es;
+    icb:code "2730";
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2750 a owl:Class;
-    icb:code "2750";
     rdfs:label "Industrial Engineering"@en,
+        "Industriële Bautechnikgesetz"@nl,
         "Ingeniería industrial"@es,
         "Produktionstechnik"@de;
+    icb:code "2750";
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB3500 a owl:Class;
-    icb:code "3500";
     rdfs:label "Alimentos y bebidas"@es,
         "Food & Beverage"@en,
-        "Nahrungsmittel und Getränke"@de;
+        "Nahrungsmittel und Getränke"@de,
+        "Voedsel en drank"@nl;
+    icb:code "3500";
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3570 a owl:Class;
-    icb:code "3570";
     rdfs:label "Food Producers"@en,
-        "Nahrungsmittelproduktion"@de;
+        "Los productores"@es,
+        "Nahrungsmittelproduktion"@de,
+        "Voedsel Producent"@nl;
+    icb:code "3570";
     rdfs:subClassOf icb:ICB3500 .
 
 icb:ICB4500 a owl:Class;
-    icb:code "4500";
     rdfs:label "Atención de la salud"@es,
         "Gesundheit"@de,
+        "Gezondheid Care"@nl,
         "Health Care"@en;
+    icb:code "4500";
     rdfs:subClassOf icb:ICB4000 .
 
 icb:ICB4570 a owl:Class;
-    icb:code "4570";
     rdfs:label "Arzneimittel und Biotechnologie"@de,
         "Fármacos y biotecnología"@es,
+        "Geneesmiddelen en biotechnologie"@nl,
         "Pharmaceuticals & Biotechnology"@en;
+    icb:code "4570";
     rdfs:subClassOf icb:ICB4500 .
 
 icb:ICB5300 a owl:Class;
-    icb:code "5300";
     rdfs:label "Einzelhandel"@de,
+        "Kleinhandelsverkoop"@nl,
         "Minoristas"@es,
         "Retail"@en;
+    icb:code "5300";
     rdfs:subClassOf icb:ICB5000 .
 
 icb:ICB5330 a owl:Class;
-    icb:code "5330";
     rdfs:label "Food & Drug Retailers"@en,
         "Minoristas de alimentos ymedicamentos"@es,
-        "Nahrungsmittel- und Arzneimitteleinzelhändler"@de;
+        "Nahrungsmittel- und Arzneimitteleinzelhändler"@de,
+        "Voedsel & Drugs Detailhandelaar"@nl;
+    icb:code "5330";
     rdfs:subClassOf icb:ICB5300 .
 
 icb:ICB6500 a owl:Class;
-    icb:code "6500";
-    rdfs:label "Telecommunications"@en,
+    rdfs:label "Telecommunicatie"@nl,
+        "Telecommunications"@en,
         "Telecomunicaciones"@es,
         "Telekommunikation"@de;
+    icb:code "6500";
     rdfs:subClassOf icb:ICB6000 .
 
 icb:ICB7500 a owl:Class;
-    icb:code "7500";
     rdfs:label "Energieversorgung"@de,
+        "Nutbedrijven"@nl,
         "Servicios públicos"@es,
         "Utilities"@en;
+    icb:code "7500";
     rdfs:subClassOf icb:ICB7000 .
 
 icb:ICB7530 a owl:Class;
-    icb:code "7530";
     rdfs:label "Electricidad"@es,
         "Electricity"@en,
+        "Elektriciteit"@nl,
         "Elektrizität"@de;
+    icb:code "7530";
     rdfs:subClassOf icb:ICB7500 .
 
 icb:ICB8500 a owl:Class;
-    icb:code "8500";
     rdfs:label "Insurance"@en,
+        "Insurance"@nl,
         "Seguros"@es,
         "Versicherungen"@de;
+    icb:code "8500";
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8600 a owl:Class;
-    icb:code "8600";
     rdfs:label "Bienes raíces"@es,
+        "Echte Estate"@nl,
         "Immobilien"@de,
         "Real Estate"@en;
+    icb:code "8600";
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB8630 a owl:Class;
-    icb:code "8630";
-    rdfs:label "Immobilienanlagen und Dienstleistungen"@de,
+    rdfs:label "Echte Estate Investering & intesa"@nl,
+        "Immobilienanlagen und Dienstleistungen"@de,
         "Inversiones y serviciosinmobiliarios"@es,
         "Real Estate Investment & Services"@en;
+    icb:code "8630";
     rdfs:subClassOf icb:ICB8600 .
 
 icb:ICB8900 a owl:Class;
+    rdfs:label "Aandelenkapitaal- / Niet-part.mech. Investering Instrumenten"@nl,
+        "Capital de riesgo o no de instrumentos propios de Inversiones"@es,
+        "Equity / Nicht-Equity Investment Urkunden"@de,
+        "Equity/Non-Equity Investment Instruments"@en;
     icb:code "8900";
-    rdfs:label "Equity/Non-Equity Investment Instruments"@en;
     rdfs:subClassOf icb:ICB8000 .
 
 icb:ICB9500 a owl:Class;
-    icb:code "9500";
     rdfs:label "Technologie"@de,
+        "Technologie"@nl,
         "Technology"@en,
         "Tecnología"@es;
+    icb:code "9500";
     rdfs:subClassOf icb:ICB9000 .
 
 icb:ICB0500 a owl:Class;
-    icb:code "0500";
     rdfs:label "Erdöl und Erdgas"@de,
         "Oil & Gas"@en,
+        "Olie en gas"@nl,
         "Petróleo y gas"@es;
+    icb:code "0500";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB0001 .
 
 icb:ICB1700 a owl:Class;
-    icb:code "1700";
     rdfs:label "Basic Resources"@en,
+        "Basiszaad Maatregel"@nl,
         "Recursos básicos"@es,
         "Rohstoffe"@de;
+    icb:code "1700";
     rdfs:subClassOf icb:ICB1000 .
 
 icb:ICB1750 a owl:Class;
-    icb:code "1750";
     rdfs:label "Industrial Metals & Mining"@en,
         "Industrielle Metalle und Bergbau"@de,
+        "Industriële Metals & Mijnbouw"@nl,
         "Metales industriales y minería"@es;
+    icb:code "1750";
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB3000 a owl:Class;
-    icb:code "3000";
     rdfs:label "Bienes de consumo"@es,
         "Consumer Goods"@en,
+        "De consument STRUCTUUR"@nl,
         "Vverbrauchsgüter"@de;
+    icb:code "3000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB3350 a owl:Class;
-    icb:code "3350";
-    rdfs:label "Automobiles & Parts"@en,
+    rdfs:label "Automobiles & Delen"@nl,
+        "Automobiles & Parts"@en,
         "Automobilhersteller und Zulieferer"@de,
         "Automóviles y repuestos"@es;
+    icb:code "3350";
     rdfs:subClassOf icb:ICB3300 .
 
 icb:ICB3530 a owl:Class;
-    icb:code "3530";
     rdfs:label "Bebidas"@es,
         "Beverages"@en,
+        "Beverages"@nl,
         "Getränke"@de;
+    icb:code "3530";
     rdfs:subClassOf icb:ICB3500 .
 
 icb:ICB3740 a owl:Class;
-    icb:code "3740";
     rdfs:label "Freizeitgüter"@de,
         "Leisure Goods"@en,
+        "Plezier- STRUCTUUR"@nl,
         "Productos de ocio"@es;
+    icb:code "3740";
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB3760 a owl:Class;
-    icb:code "3760";
     rdfs:label "Artículos personales"@es,
         "Personal Goods"@en,
+        "Persoonlijke STRUCTUUR"@nl,
         "Persönliche Güter"@de;
+    icb:code "3760";
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB4530 a owl:Class;
-    icb:code "4530";
-    rdfs:label "Health Care Equipment & Services"@en,
+    rdfs:label "Gezondheid Care Uitrusting & intesa"@nl,
+        "Health Care Equipment & Services"@en,
         "Pflegeausstattung und Dienstleistungen"@de,
         "Servicios y equipos de atenciónde la salud"@es;
+    icb:code "4530";
     rdfs:subClassOf icb:ICB4500 .
 
 icb:ICB5000 a owl:Class;
-    icb:code "5000";
     rdfs:label "Consumer Services"@en,
+        "De diensten"@nl,
         "Servicios al consumidor"@es,
         "Verbraucherservice"@de;
+    icb:code "5000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB5550 a owl:Class;
-    icb:code "5550";
     rdfs:label "Media"@en,
+        "Media"@nl,
         "Medien"@de,
         "Medios de comunicación"@es;
+    icb:code "5550";
     rdfs:subClassOf icb:ICB5500 .
 
 icb:ICB7570 a owl:Class;
-    icb:code "7570";
     rdfs:label "Erdgas, Wasser und kombinierte Energieerzeugung"@de,
+        "Gas, Afvalwaterzuivering & Meervoudige-nutbedrijven"@nl,
         "Gas, Water & Multi-utilities"@en,
         "Gas, agua y servicios múltiples"@es;
+    icb:code "7570";
     rdfs:subClassOf icb:ICB7500 .
 
 icb:ICB9530 a owl:Class;
-    icb:code "9530";
-    rdfs:label "Software & Computer Services"@en,
+    rdfs:label "-programmatuur & Computer intesa"@nl,
+        "Software & Computer Services"@en,
         "Software y serviciosinformáticos"@es,
         "Software- und Computer-Dienstleister"@de;
+    icb:code "9530";
     rdfs:subClassOf icb:ICB9500 .
 
 icb:ICB3700 a owl:Class;
-    icb:code "3700";
     rdfs:label "Artículos personales y parael hogar"@es,
         "Personal & Household Goods"@en,
+        "Persoonlijke & Household STRUCTUUR"@nl,
         "Persönliche und Haushaltsgegenstände"@de;
+    icb:code "3700";
     rdfs:subClassOf icb:ICB3000 .
 
 icb:ICB3720 a owl:Class;
-    icb:code "3720";
     rdfs:label "Artículos para el hogar yconstrucción de viviendas"@es,
         "Haushaltsgeräte und Wohnbau"@de,
-        "Household Goods & Home Construction"@en;
+        "Household Goods & Home Construction"@en,
+        "Kostwinners- STRUCTUUR & binnenlandse Construction"@nl;
+    icb:code "3720";
     rdfs:subClassOf icb:ICB3700 .
 
 icb:ICB8530 a owl:Class;
-    icb:code "8530";
     rdfs:label "Andere Versicherungen als Lebensversicherungen"@de,
         "Nonlife Insurance"@en,
+        "Nonlife Verzekerings-"@nl,
         "Seguros de no vida"@es;
+    icb:code "8530";
     rdfs:subClassOf icb:ICB8500 .
 
 icb:ICB9570 a owl:Class;
-    icb:code "9570";
-    rdfs:label "Hardware und Ausrüstung"@de,
+    rdfs:label "De technologie Hardware & Uitrusting"@nl,
+        "Hardware und Ausrüstung"@de,
         "Hardware y equipo dealtatecnología"@es,
         "Technology Hardware & Equipment"@en;
+    icb:code "9570";
     rdfs:subClassOf icb:ICB9500 .
 
 icb:ICB1770 a owl:Class;
-    icb:code "1770";
     rdfs:label "Bergbau"@de,
+        "De mijnbouw"@nl,
         "Minería"@es,
         "Mining"@en;
+    icb:code "1770";
     rdfs:subClassOf icb:ICB1700 .
 
 icb:ICB2770 a owl:Class;
-    icb:code "2770";
     rdfs:label "Industrial Transportation"@en,
+        "Industriële TRANSPORTATION"@nl,
         "Transport"@de,
         "Transporte industrial"@es;
+    icb:code "2770";
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB2790 a owl:Class;
-    icb:code "2790";
     rdfs:label "Servicios de apoyo"@es,
+        "Steun intesa"@nl,
         "Support Services"@en,
         "Supportleistungen"@de;
+    icb:code "2790";
     rdfs:subClassOf icb:ICB2700 .
 
 icb:ICB5370 a owl:Class;
-    icb:code "5370";
-    rdfs:label "Allgemeine Einzelhändler"@de,
+    rdfs:label "Algemene Detailhandelaar"@nl,
+        "Allgemeine Einzelhändler"@de,
         "General Retailers"@en,
         "Minoristas generales"@es;
+    icb:code "5370";
     rdfs:subClassOf icb:ICB5300 .
 
 icb:ICB8000 a owl:Class;
-    icb:code "8000";
     rdfs:label "Financials"@en,
+        "Financials"@nl,
         "Finanz-Dienstleistungen"@de,
         "Servicios financieros"@es;
+    icb:code "8000";
     rdfs:comment ""^^xsd:string;
     rdfs:subClassOf icb:ICB .
 
 icb:ICB8770 a owl:Class;
-    icb:code "8770";
     rdfs:label "Financial Services"@en,
+        "Financiële diensten"@nl,
         "Finanzdienstleistungen"@de,
         "Servicios financieros"@es;
+    icb:code "8770";
     rdfs:subClassOf icb:ICB8700 .
 
 icb:ICB2700 a owl:Class;
-    icb:code "2700";
     rdfs:label "Bienes y servicios industriales"@es,
         "Industrial Goods & Services"@en,
-        "Industriegüter und Dienstleistungen"@de;
+        "Industriegüter und Dienstleistungen"@de,
+        "Industriële goederen en diensten"@nl;
+    icb:code "2700";
     rdfs:subClassOf icb:ICB2000 .
 
 icb:ICB5750 a owl:Class;
-    icb:code "5750";
     rdfs:label "Reisen und Freizeit"@de,
+        "Reizen & Leisure"@nl,
         "Travel & Leisure"@en,
         "Viajes y ocio"@es;
+    icb:code "5750";
     rdfs:subClassOf icb:ICB5700 .
 
 icb:ICB8670 a owl:Class;
-    icb:code "8670";
-    rdfs:label "Fondos de inversión inmobiliaria"@es,
+    rdfs:label "Echte nauwkeurige"@nl,
+        "Fondos de inversión inmobiliaria"@es,
         "Immobilienfonds"@de,
         "Real Estate Investment Trusts"@en;
+    icb:code "8670";
     rdfs:subClassOf icb:ICB8600 .
 
 icb:ICB a owl:Class;

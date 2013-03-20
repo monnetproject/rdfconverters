@@ -220,7 +220,7 @@ class RDFConverter:
         id_node = NS['cp'][id_]
 
         g.add((id_node, a, NS['cp']['CompanyProfile']))
-        g.add((id_node, NS['cp']['stockExchange'], NS['if']['dax_singleton']))
+        g.add((id_node, NS['cp']['stockExchange'], NS['if']['deutsche_borse_singleton']))
 
         dt = util.timestamp_to_datetime(data['timestamp'])
         g.add((id_node, NS['cp']['instant'], Literal(dt, datatype=XSD.dateTime)))
