@@ -250,7 +250,7 @@ xebr:hasCategoryOfEventValue a owl:DatatypeProperty,
 
 xebr:hasChargesTotal a owl:DatatypeProperty,
         owl:FunctionalProperty;
-    rdfs:label "-gebruikskosten Totaal"@nl,
+    rdfs:label "Gebruikskosten Totaal"@nl,
         "Charges"@en,
         "Gebühren Insgesamt"@de,
         "Los Gastos Totales"@es;

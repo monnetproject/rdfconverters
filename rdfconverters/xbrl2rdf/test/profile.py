@@ -6,7 +6,7 @@ import sys
 
 t1 = int(round(time.time() * 1000))
 
-inf = dirname(abspath( __file__ )) + "/data"
+inf = dirname(abspath( __file__ )) + "/fixtures"
 sys.argv = ['xbrl2rdf', 'batchconvert', inf, inf+'/temp']
 
 cProfile.run('xbrl2rdf.main()', 'xbrl2rdf.profile')
@@ -17,4 +17,4 @@ import pstats
 p = pstats.Stats('xbrl2rdf.profile')
 p.sort_stats(2).print_stats()
 
-print("Time (ms): %s" % (t2-t1))
+print ("Time (ms): %s" % (t2-t1))
