@@ -1,6 +1,18 @@
+print("""
+=====================================
+Important! lxml installation depends on libraries installed on your system.
+If you get an error relating to lxml compilation, try installing its
+dependencies first:
+
+  sudo apt-get install libxml2-dev libxslt-dev
+
+=====================================
+""")
+
 from setuptools import setup, find_packages
 from os import walk
 from os.path import join
+import sys
 
 def all_files(*paths):
     files = []
@@ -16,13 +28,12 @@ setup(
     data_files = all_files('rdfconverters/resources'),
 
     install_requires = [
-        'setuptools',
+        'distribute',
         'requests',
         'rdflib >= 3.2.3',
         'beautifulsoup4',
         'lxml',
-        'distribute',
-        'nltk >= 2.0.4'
+        'nltk '
     ],
 
     dependency_links = [
@@ -41,3 +52,7 @@ setup(
         ]
     }
 )
+
+if 'install' in sys.argv or 'develop' in sys.argv:
+    import nltk;
+    nltk.download('stopwords')
